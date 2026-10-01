@@ -1,0 +1,49 @@
+{
+  "method": "adam",
+  "smoke": true,
+  "status": "completed",
+  "optimizer_steps": 2,
+  "noise_steps": 0,
+  "bandinvmf_steps": 0,
+  "planned_total_steps": 250,
+  "calibration": null,
+  "final": {
+    "epoch": 1,
+    "logical_steps": 2,
+    "train_examples": 2000,
+    "train_loss": 4.590932632446289,
+    "test_loss": 4.6333551025390625,
+    "test_top1": 0.01,
+    "clip_fraction": 0.0,
+    "gdp_mu": null,
+    "gdp_epsilon": null,
+    "target_mu": null,
+    "target_epsilon": null,
+    "delta": null,
+    "noise_std": 0.0,
+    "noise_std_space": "gradient",
+    "innovation_std_sum": 0.0,
+    "seconds": 19.497356295585632
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "logical_steps": 2,
+      "train_examples": 2000,
+      "train_loss": 4.590932632446289,
+      "test_loss": 4.6333551025390625,
+      "test_top1": 0.01,
+      "clip_fraction": 0.0,
+      "gdp_mu": null,
+      "gdp_epsilon": null,
+      "target_mu": null,
+      "target_epsilon": null,
+      "delta": null,
+      "noise_std": 0.0,
+      "noise_std_space": "gradient",
+      "innovation_std_sum": 0.0,
+      "seconds": 19.497356295585632
+    }
+  ],
+  "wall_seconds": 19.497991900891066
+}

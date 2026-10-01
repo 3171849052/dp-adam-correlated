@@ -1,0 +1,25 @@
+.................                                                        [100%]
+=============================== warnings summary ===============================
+tests/test_experiment.py::test_scaled_unit_norm_equals_opacus_ghost_norm
+  /media/data/data/lt/dp-adam-correlated/exp1/tests/test_experiment.py:94: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    nn.functional.cross_entropy(model(x), y, reduction='sum').backward()
+
+tests/test_experiment.py::test_arbitrary_scaled_norm_and_clipped_sum_are_exact
+tests/test_experiment.py::test_vit_scaled_norm_includes_tokens_and_sequence_linear
+tests/test_experiment.py::test_no_noise_unbounded_scale_matches_adam_over_multiple_steps
+  /media/data/data/lt/dp-adam-correlated/exp1/scale.py:53: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    losses.sum().backward(retain_graph=True)
+
+tests/test_experiment.py::test_arbitrary_scaled_norm_and_clipped_sum_are_exact
+tests/test_experiment.py::test_vit_scaled_norm_includes_tokens_and_sequence_linear
+tests/test_experiment.py::test_no_noise_unbounded_scale_matches_adam_over_multiple_steps
+  /media/data/data/lt/dp-adam-correlated/exp1/scale.py:58: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    (losses * coefficients).sum().backward()
+
+tests/test_experiment.py::test_vit_unit_scale_matches_ghost_sequence_norms
+  /media/data/data/lt/dp-adam-correlated/exp1/tests/test_experiment.py:137: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    nn.functional.cross_entropy(model(x), y, reduction='sum').backward()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+17 passed, 8 warnings in 15.61s
+

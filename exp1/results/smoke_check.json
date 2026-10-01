@@ -1,0 +1,70 @@
+{
+  "adam": {
+    "gpu": 0,
+    "optimizer_steps": 2,
+    "noise_steps": 0,
+    "bandinvmf_steps": 0,
+    "artifacts_verified": [
+      "train.log",
+      "config.yaml",
+      "metrics.csv",
+      "summary.json",
+      "matrices.npz",
+      "train_order.npy",
+      "final.pt"
+    ],
+    "test_top1": 0.01,
+    "status": "passed"
+  },
+  "dp_adam": {
+    "gpu": 1,
+    "optimizer_steps": 2,
+    "noise_steps": 2,
+    "bandinvmf_steps": 0,
+    "artifacts_verified": [
+      "train.log",
+      "config.yaml",
+      "metrics.csv",
+      "summary.json",
+      "matrices.npz",
+      "train_order.npy",
+      "final.pt"
+    ],
+    "test_top1": 0.0,
+    "status": "passed"
+  },
+  "dp_adam_bandinvmf_momentum": {
+    "gpu": 2,
+    "optimizer_steps": 2,
+    "noise_steps": 2,
+    "bandinvmf_steps": 2,
+    "artifacts_verified": [
+      "train.log",
+      "config.yaml",
+      "metrics.csv",
+      "summary.json",
+      "matrices.npz",
+      "train_order.npy",
+      "final.pt"
+    ],
+    "test_top1": 0.0,
+    "status": "passed"
+  },
+  "dp_adam_bandinvmf_scale": {
+    "gpu": 3,
+    "optimizer_steps": 2,
+    "noise_steps": 2,
+    "bandinvmf_steps": 2,
+    "artifacts_verified": [
+      "train.log",
+      "config.yaml",
+      "metrics.csv",
+      "summary.json",
+      "matrices.npz",
+      "train_order.npy",
+      "final.pt"
+    ],
+    "test_top1": 0.0,
+    "status": "passed"
+  }
+}
