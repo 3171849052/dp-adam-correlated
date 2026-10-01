@@ -2,8 +2,13 @@
   "method": "dp_adam",
   "smoke": true,
   "status": "completed",
-  "optimizer_steps": 2,
-  "noise_steps": 2,
+  "lr": 1e-05,
+  "eps_scale": null,
+  "max_grad_norm": 1.0,
+  "seed": 20261001,
+  "initialization_sha256": "32174ab45c6778646193838fe7b8f83343d50d42359835e98c8a1c13b16a3cf7",
+  "optimizer_steps": 1,
+  "noise_steps": 1,
   "bandinvmf_steps": 0,
   "planned_total_steps": 250,
   "calibration": {
@@ -17,11 +22,11 @@
   },
   "final": {
     "epoch": 1,
-    "logical_steps": 2,
-    "train_examples": 2000,
-    "train_loss": 4.633295356750488,
-    "test_loss": 4.641116638183593,
-    "test_top1": 0.0,
+    "logical_steps": 1,
+    "train_examples": 1000,
+    "train_loss": 5.1288727874755855,
+    "test_loss": 5.206434173583984,
+    "test_top1": 0.03,
     "clip_fraction": 1.0,
     "gdp_mu": 0.7450715338755283,
     "gdp_epsilon": 3.1232925162148555,
@@ -31,16 +36,16 @@
     "noise_std": 0.0013421530075084847,
     "noise_std_space": "gradient",
     "innovation_std_sum": 1.3421530075084847,
-    "seconds": 23.19383012317121
+    "seconds": 24.601805304177105
   },
   "epochs": [
     {
       "epoch": 1,
-      "logical_steps": 2,
-      "train_examples": 2000,
-      "train_loss": 4.633295356750488,
-      "test_loss": 4.641116638183593,
-      "test_top1": 0.0,
+      "logical_steps": 1,
+      "train_examples": 1000,
+      "train_loss": 5.1288727874755855,
+      "test_loss": 5.206434173583984,
+      "test_top1": 0.03,
       "clip_fraction": 1.0,
       "gdp_mu": 0.7450715338755283,
       "gdp_epsilon": 3.1232925162148555,
@@ -50,8 +55,8 @@
       "noise_std": 0.0013421530075084847,
       "noise_std_space": "gradient",
       "innovation_std_sum": 1.3421530075084847,
-      "seconds": 23.19383012317121
+      "seconds": 24.601805304177105
     }
   ],
-  "wall_seconds": 23.194588471204042
+  "wall_seconds": 33.257707331329584
 }

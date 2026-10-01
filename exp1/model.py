@@ -1,4 +1,12 @@
-"""CIFAR-native ViT-Tiny, built from Opacus-supported parameterized layers."""
+"""timm-equivalent ViT-Tiny with Opacus-compatible token embeddings."""
+import hashlib
+import os
+from pathlib import Path
+
+# Keep downloaded pretrained assets inside this experiment.
+os.environ['HF_HOME'] = str(Path(__file__).resolve().parent / 'cache/huggingface')
+os.environ['TORCH_HOME'] = str(Path(__file__).resolve().parent / 'cache/torch')
+import timm
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -22,9 +30,9 @@ class Attention(nn.Module):
 class Block(nn.Module):
     def __init__(self, dim, heads, mlp_ratio):
         super().__init__()
-        self.norm1 = nn.LayerNorm(dim)
+        self.norm1 = nn.LayerNorm(dim, eps=1e-6)
         self.attn = Attention(dim, heads)
-        self.norm2 = nn.LayerNorm(dim)
+        self.norm2 = nn.LayerNorm(dim, eps=1e-6)
         self.mlp = nn.Sequential(nn.Linear(dim, dim * mlp_ratio), nn.GELU(),
                                  nn.Linear(dim * mlp_ratio, dim))
 
@@ -34,26 +42,20 @@ class Block(nn.Module):
 
 
 class ViTTiny(nn.Module):
-    def __init__(self, patch_size=4, embed_dim=192, depth=12, heads=3,
-                 mlp_ratio=4, num_classes=100):
+    def __init__(self, patch_size=16, embed_dim=192, depth=12, heads=3,
+                 mlp_ratio=4, num_classes=100, image_size=224):
         super().__init__()
         self.patch_size = patch_size
-        self.tokens = (32 // patch_size) ** 2 + 1
+        self.tokens = (image_size // patch_size) ** 2 + 1
         self.patch = nn.Linear(3 * patch_size ** 2, embed_dim)
         self.cls = nn.Embedding(1, embed_dim)
         self.position = nn.Embedding(self.tokens, embed_dim)
         self.blocks = nn.Sequential(*[Block(embed_dim, heads, mlp_ratio)
                                       for _ in range(depth)])
-        self.norm = nn.LayerNorm(embed_dim)
+        self.norm = nn.LayerNorm(embed_dim, eps=1e-6)
         self.head = nn.Linear(embed_dim, num_classes)
-        self.apply(self._init)
-
-    @staticmethod
-    def _init(module):
-        if isinstance(module, (nn.Linear, nn.Embedding)):
-            nn.init.trunc_normal_(module.weight, std=0.02)
-        if isinstance(module, nn.Linear) and module.bias is not None:
-            nn.init.zeros_(module.bias)
+        nn.init.trunc_normal_(self.head.weight, std=0.02)
+        nn.init.zeros_(self.head.bias)
 
     def forward(self, images):
         n = images.shape[0]
@@ -63,3 +65,39 @@ class ViTTiny(nn.Module):
         positions = torch.arange(self.tokens, device=images.device).repeat(n, 1)
         x = torch.cat((cls, x), dim=1) + self.position(positions)
         return self.head(self.norm(self.blocks(x))[:, 0])
+
+    def load_backbone(self, reference):
+        """Map every timm backbone tensor exactly; retain the random 100-way head."""
+        mapped = {}
+        for name, tensor in reference.state_dict().items():
+            if name.startswith('head.'):
+                continue
+            if name == 'cls_token':
+                name, tensor = 'cls.weight', tensor.reshape(1, -1)
+            elif name == 'pos_embed':
+                name, tensor = 'position.weight', tensor.squeeze(0)
+            elif name == 'patch_embed.proj.weight':
+                name, tensor = 'patch.weight', tensor.flatten(1)
+            elif name == 'patch_embed.proj.bias':
+                name = 'patch.bias'
+            name = name.replace('.mlp.fc1.', '.mlp.0.').replace('.mlp.fc2.', '.mlp.2.')
+            mapped[name] = tensor
+        mapped.update({name: value for name, value in self.state_dict().items()
+                       if name.startswith('head.')})
+        self.load_state_dict(mapped, strict=True)
+
+
+def pretrained_vit():
+    reference = timm.create_model('vit_tiny_patch16_224', pretrained=True)
+    model = ViTTiny()
+    model.load_backbone(reference)
+    cfg = reference.pretrained_cfg
+    return model, {key: cfg[key] for key in ('mean', 'std', 'crop_pct', 'interpolation', 'hf_hub_id')}
+
+
+def initialization_digest(model):
+    digest = hashlib.sha256()
+    for name, value in model.state_dict().items():
+        digest.update(name.encode())
+        digest.update(value.detach().cpu().numpy().tobytes())
+    return digest.hexdigest()

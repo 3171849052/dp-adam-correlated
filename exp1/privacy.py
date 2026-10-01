@@ -28,7 +28,7 @@ def fixed_epoch_sensitivity(strategy, k, b_participation, steps=None):
     Uses the absolute Gram bound (Eq. 5 of BandMF), allowing different
     bounded gradient directions on each participation. For our nonnegative
     strategies it is exact. Adjacency is add/remove with a zeroed contribution.
-    A prefix retains the original 250-column participation schedule.
+    A prefix retains the original full-trajectory participation schedule.
     """
     strategy = np.asarray(strategy, dtype=np.float64)
     assert strategy.shape == (k * b_participation, k * b_participation)

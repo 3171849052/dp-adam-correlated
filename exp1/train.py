@@ -18,7 +18,7 @@ import yaml
 from opacus.grad_sample import GradSampleModuleFastGradientClipping
 
 from exp1.bandinvmf import BandInvMFNoise, build_matrices
-from exp1.model import ViTTiny
+from exp1.model import pretrained_vit, initialization_digest
 from exp1.privacy import calibrate, epsilon_from_mu, fixed_epoch_sensitivity
 from exp1.scale import LogicalBatch, ScaledGhostModule, clipped_microbatch
 
@@ -29,17 +29,30 @@ METHODS = ('adam', 'dp_adam', 'dp_adam_bandinvmf_momentum', 'dp_adam_bandinvmf_s
 def load_config(path):
     with open(path) as f:
         config = yaml.safe_load(f)
-    assert config['dataset_size'] == 50000
-    assert config['epochs'] == config['privacy']['k'] == 5
-    assert config['logical_batch_size'] == 1000
-    assert config['physical_batch_size'] == 50
-    assert config['gradient_accumulation'] == 20
-    assert config['logical_batch_size'] == config['physical_batch_size'] * config['gradient_accumulation']
-    assert config['dataset_size'] // config['logical_batch_size'] == config['privacy']['b_participation'] == 50
-    assert config['total_steps'] == config['epochs'] * config['privacy']['b_participation'] == 250
+    for key in ('physical_batch_size', 'gradient_accumulation'):
+        value = config[key]
+        if type(value) is not int or value <= 0:
+            raise ValueError(f'{key} must be a positive integer; got {value!r}')
+    if config['logical_batch_size'] != config['physical_batch_size'] * config['gradient_accumulation']:
+        raise ValueError('physical_batch_size * gradient_accumulation must equal '
+                         f"logical_batch_size ({config['logical_batch_size']})")
+    assert config['dataset_size'] % config['logical_batch_size'] == 0
+    config['privacy']['k'] = config['epochs']
+    config['privacy']['b_participation'] = config['dataset_size'] // config['logical_batch_size']
+    config['total_steps'] = config['epochs'] * config['privacy']['b_participation']
     assert config['privacy']['sampling_amplification'] is False
     assert config['privacy']['adjacency'] == 'add_remove_zero_out'
     return config
+
+
+def image_transforms(cfg):
+    interpolation = transforms.InterpolationMode.BICUBIC
+    normalize = transforms.Normalize(cfg['mean'], cfg['std'])
+    train = transforms.Compose([transforms.RandomResizedCrop(224, interpolation=interpolation),
+                                transforms.RandomHorizontalFlip(), transforms.ToTensor(), normalize])
+    test = transforms.Compose([transforms.Resize(int(224 / cfg['crop_pct']), interpolation=interpolation),
+                               transforms.CenterCrop(224), transforms.ToTensor(), normalize])
+    return train, test
 
 
 def seed_all(seed):
@@ -67,6 +80,7 @@ def evaluate(model, loader, device):
 
 
 def run(args):
+    started = time.monotonic()
     config = load_config(args.config)
     seed_all(config['seed'])
     torch.set_num_threads(2)
@@ -74,7 +88,19 @@ def run(args):
     torch.cuda.set_device(device)
     is_dp = args.method != 'adam'
     scaled = args.method == 'dp_adam_bandinvmf_scale'
-    result_dir = (ROOT / 'exp1/results' / ('smoke' if args.smoke else '') / args.method)
+    result_dir = args.result_dir or (ROOT / 'exp1/results' / ('smoke' if args.smoke else '') / args.method)
+    result_dir = result_dir.resolve()
+    assert result_dir.is_relative_to(ROOT / 'exp1')
+    for value, section, key in ((args.lr, 'optimizer', 'lr'),
+                                (args.eps_scale, 'scale', 'eps_scale'),
+                                (args.max_grad_norm, 'privacy', 'max_grad_norm')):
+        if value is not None:
+            config[section][key] = value
+    assert config['model'] == dict(architecture='vit_tiny_patch16_224', pretrained=True,
+                                   num_classes=100, image_size=224)
+    model, pretrained_cfg = pretrained_vit()
+    init_digest = initialization_digest(model)
+    model = model.to(device)
     result_dir.mkdir(parents=True, exist_ok=True)
     coefficients, strategy, workload = build_matrices(
         args.method, config['total_steps'], config['bandinvmf']['num_bands'],
@@ -84,31 +110,31 @@ def run(args):
                     visible_devices=os.environ['CUDA_VISIBLE_DEVICES'],
                     device_name=torch.cuda.get_device_name(),
                     effective_epochs=1 if args.smoke else config['epochs'],
-                    effective_steps_per_epoch=2 if args.smoke else 50,
+                    effective_steps_per_epoch=1 if args.smoke else config['privacy']['b_participation'],
+                    initialization_sha256=init_digest, pretrained_cfg=pretrained_cfg,
                     test_examples=100 if args.smoke else 10000,
                     fixed_epoch_order=True, download=False,
                     dtype='float32', privacy_calibration=privacy,
                     noising_coefficients=coefficients.tolist(),
                     versions={package: version(package) for package in
                               ('torch', 'torchvision', 'opacus', 'jax', 'jax_privacy',
-                               'numpy', 'scipy', 'PyYAML')})
+                               'numpy', 'scipy', 'PyYAML', 'timm')})
     with open(result_dir / 'config.yaml', 'w') as f:
         yaml.safe_dump(resolved, f, sort_keys=False)
     np.savez(result_dir / 'matrices.npz', noising_coefficients=coefficients,
              strategy=strategy, workload_coefficients=workload)
 
-    transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize(
-        (0.5071, 0.4867, 0.4408), (0.2675, 0.2565, 0.2761))])
+    train_transform, test_transform = image_transforms(pretrained_cfg)
     train = datasets.CIFAR100(ROOT / config['data_root'], train=True,
-                              transform=transform, download=False)
+                              transform=train_transform, download=False)
     test = datasets.CIFAR100(ROOT / config['data_root'], train=False,
-                             transform=transform, download=False)
+                             transform=test_transform, download=False)
     assert len(train) == config['dataset_size'] and len(test) == 10000
     # Shuffle ONCE, identically for all methods. Reuse exact logical batches
     # across epochs, implementing fixed-epoch (k,b), rather than random reshuffles.
     permutation = torch.randperm(len(train), generator=torch.Generator().manual_seed(config['seed']))
     np.save(result_dir / 'train_order.npy', permutation.numpy())
-    order = permutation[:2000] if args.smoke else permutation
+    order = permutation[:config['logical_batch_size']] if args.smoke else permutation
     train_loader = DataLoader(Subset(train, order.tolist()),
                               batch_size=config['physical_batch_size'], shuffle=False,
                               num_workers=config['num_workers'], pin_memory=True,
@@ -118,13 +144,14 @@ def run(args):
     test_loader = DataLoader(test_data, batch_size=config['physical_batch_size'],
                              shuffle=False, num_workers=config['num_workers'], pin_memory=True,
                              multiprocessing_context='spawn')
-    model = ViTTiny(**config['model']).to(device)
     if scaled:
         model = ScaledGhostModule(model, config['privacy']['max_grad_norm'])
     elif is_dp:
         model = GradSampleModuleFastGradientClipping(
             model, loss_reduction='sum', max_grad_norm=config['privacy']['max_grad_norm'],
             use_ghost_clipping=True)
+    if is_dp:
+        assert {id(p) for p in model.parameters() if p.requires_grad} == {id(p) for p in model.trainable_parameters}
     opt = config['optimizer']
     optimizer = torch.optim.Adam(model.parameters(), lr=opt['lr'],
                                  betas=(opt['beta1'], opt['beta2']), eps=opt['eps'],
@@ -142,9 +169,8 @@ def run(args):
               'target_epsilon', 'delta', 'noise_std', 'noise_std_space',
               'innovation_std_sum', 'seconds']
     records = []
-    started = time.monotonic()
     with open(result_dir / 'metrics.csv', 'w', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=fields)
+        writer = csv.DictWriter(f, fieldnames=fields, lineterminator='\n')
         writer.writeheader()
         for epoch in range(resolved['effective_epochs']):
             epoch_start = time.monotonic()
@@ -192,11 +218,14 @@ def run(args):
             writer.writerow(record)
             f.flush()
             print(json.dumps(record), flush=True)
-    expected_steps = 2 if args.smoke else config['total_steps']
+    expected_steps = 1 if args.smoke else config['total_steps']
     assert logical.optimizer_steps == expected_steps
     if is_dp:
         assert noise.step_count == expected_steps
     summary = dict(method=args.method, smoke=args.smoke, status='completed',
+                   lr=opt['lr'], eps_scale=config['scale']['eps_scale'] if scaled else None,
+                   max_grad_norm=config['privacy']['max_grad_norm'] if is_dp else None,
+                   seed=config['seed'], initialization_sha256=init_digest,
                    optimizer_steps=logical.optimizer_steps,
                    noise_steps=noise.step_count if is_dp else 0,
                    bandinvmf_steps=noise.step_count if 'bandinvmf' in args.method else 0,
@@ -214,5 +243,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--method', choices=METHODS, required=True)
     parser.add_argument('--config', type=Path, default=ROOT / 'exp1/config.yaml')
-    parser.add_argument('--smoke', action='store_true', help='2 logical steps, full-size microbatches/model; test 100 examples')
+    parser.add_argument('--result-dir', type=Path)
+    parser.add_argument('--lr', type=float)
+    parser.add_argument('--eps-scale', type=float)
+    parser.add_argument('--max-grad-norm', type=float)
+    parser.add_argument('--smoke', action='store_true', help='1 logical step, 20 full-size microbatches; test 100 examples')
     run(parser.parse_args())

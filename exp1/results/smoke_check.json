@@ -1,70 +1,39 @@
 {
-  "adam": {
-    "gpu": 0,
-    "optimizer_steps": 2,
-    "noise_steps": 0,
-    "bandinvmf_steps": 0,
-    "artifacts_verified": [
-      "train.log",
-      "config.yaml",
-      "metrics.csv",
-      "summary.json",
-      "matrices.npz",
-      "train_order.npy",
-      "final.pt"
-    ],
-    "test_top1": 0.01,
-    "status": "passed"
+  "methods": {
+    "adam": {
+      "status": "completed",
+      "optimizer_steps": 1,
+      "noise_steps": 0,
+      "bandinvmf_steps": 0,
+      "initialization_sha256": "32174ab45c6778646193838fe7b8f83343d50d42359835e98c8a1c13b16a3cf7",
+      "wall_seconds": 32.873010211624205
+    },
+    "dp_adam": {
+      "status": "completed",
+      "optimizer_steps": 1,
+      "noise_steps": 1,
+      "bandinvmf_steps": 0,
+      "initialization_sha256": "32174ab45c6778646193838fe7b8f83343d50d42359835e98c8a1c13b16a3cf7",
+      "wall_seconds": 33.257707331329584
+    },
+    "dp_adam_bandinvmf_momentum": {
+      "status": "completed",
+      "optimizer_steps": 1,
+      "noise_steps": 1,
+      "bandinvmf_steps": 1,
+      "initialization_sha256": "32174ab45c6778646193838fe7b8f83343d50d42359835e98c8a1c13b16a3cf7",
+      "wall_seconds": 34.46724205557257
+    },
+    "dp_adam_bandinvmf_scale": {
+      "status": "completed",
+      "optimizer_steps": 1,
+      "noise_steps": 1,
+      "bandinvmf_steps": 1,
+      "initialization_sha256": "32174ab45c6778646193838fe7b8f83343d50d42359835e98c8a1c13b16a3cf7",
+      "wall_seconds": 35.66359904780984
+    }
   },
-  "dp_adam": {
-    "gpu": 1,
-    "optimizer_steps": 2,
-    "noise_steps": 2,
-    "bandinvmf_steps": 0,
-    "artifacts_verified": [
-      "train.log",
-      "config.yaml",
-      "metrics.csv",
-      "summary.json",
-      "matrices.npz",
-      "train_order.npy",
-      "final.pt"
-    ],
-    "test_top1": 0.0,
-    "status": "passed"
-  },
-  "dp_adam_bandinvmf_momentum": {
-    "gpu": 2,
-    "optimizer_steps": 2,
-    "noise_steps": 2,
-    "bandinvmf_steps": 2,
-    "artifacts_verified": [
-      "train.log",
-      "config.yaml",
-      "metrics.csv",
-      "summary.json",
-      "matrices.npz",
-      "train_order.npy",
-      "final.pt"
-    ],
-    "test_top1": 0.0,
-    "status": "passed"
-  },
-  "dp_adam_bandinvmf_scale": {
-    "gpu": 3,
-    "optimizer_steps": 2,
-    "noise_steps": 2,
-    "bandinvmf_steps": 2,
-    "artifacts_verified": [
-      "train.log",
-      "config.yaml",
-      "metrics.csv",
-      "summary.json",
-      "matrices.npz",
-      "train_order.npy",
-      "final.pt"
-    ],
-    "test_top1": 0.0,
-    "status": "passed"
-  }
+  "shared_initialization": true,
+  "shared_permutation": true,
+  "shared_initial_loss": true
 }
