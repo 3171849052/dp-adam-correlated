@@ -3,8 +3,8 @@ data_root: data
 epochs: 5
 dataset_size: 50000
 logical_batch_size: 1000
-physical_batch_size: 50
-gradient_accumulation: 20
+physical_batch_size: 250
+gradient_accumulation: 4
 num_workers: 2
 optimizer:
   lr: 1.0e-5

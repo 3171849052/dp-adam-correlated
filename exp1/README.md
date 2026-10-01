@@ -23,7 +23,7 @@ requires dataset divisibility. Defaults yield (5,50,250). All matrix constructio
 noise horizons and whole-trajectory GDP calibration use the derived schedule.
 
 Adam uses beta1=0.9, beta2=0.999, eps=1e-8, no weight decay and FP32 arithmetic.
-Each logical batch has 1000 examples: 20 physical microbatches of 50. Each DP
+Each logical batch has 1000 examples: 4 physical microbatches of 250. Each DP
 microbatch is clipped separately. Each logical batch advances noise/BandInvMF
 and Adam exactly once. A seeded initial permutation is reused across epochs.
 Every trial uses the same seed, pretrained initialization and permutation;
@@ -83,7 +83,7 @@ conda run --no-capture-output -n curve bash exp1/run_all.sh --smoke
 ```
 
 Smoke runs all four methods on separate GPUs, one logical step each, with the
-complete pretrained model, 20×50 training examples and 100 test examples. It
+complete pretrained model, 4×250 training examples and 100 test examples. It
 retains full-schedule calibration and writes to `exp1/results/smoke/<method>/`.
 It does not launch the 36-trial sweep. Logs are `results/unit_tests.log` and
 `results/smoke_launcher.log`; validated smoke metadata is `results/smoke_check.json`.
