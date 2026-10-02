@@ -1,0 +1,25 @@
+seed: 20261001
+data_root: data
+epochs: 5
+dataset_size: 50000
+logical_batch_size: 1000
+physical_batch_size: 50
+gradient_accumulation: 20
+num_workers: 2
+optimizer:
+  lr: 1.0e-4
+  beta1: 0.9
+  beta2: 0.999
+  eps: 1.0e-8
+  weight_decay: 0.0
+privacy:
+  epsilon: 8.0
+  delta: 1.0e-5
+  max_grad_norm: 1.0
+  adjacency: add_remove_zero_out
+  sampling_amplification: false
+model:
+  architecture: vit_tiny_patch16_224
+  pretrained: true
+  num_classes: 100
+  image_size: 224

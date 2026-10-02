@@ -1,0 +1,18 @@
+..............                                                           [100%]
+=============================== warnings summary ===============================
+tests/test_experiment.py::test_exact_preclipping_norms_and_quantiles
+tests/test_experiment.py::test_zero_noise_dp_equals_clipped_path
+tests/test_experiment.py::test_initialization_matches_exp1_and_all_methods
+tests/test_experiment.py::test_pretrained_exact_norms_against_individual_gradients
+  /media/data/data/lt/dp-adam-correlated/exp1a/clipping.py:18: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    losses.sum().backward(retain_graph=True)
+
+tests/test_experiment.py::test_exact_preclipping_norms_and_quantiles
+tests/test_experiment.py::test_zero_noise_dp_equals_clipped_path
+tests/test_experiment.py::test_initialization_matches_exp1_and_all_methods
+tests/test_experiment.py::test_pretrained_exact_norms_against_individual_gradients
+  /media/data/data/lt/dp-adam-correlated/exp1a/clipping.py:23: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    (losses * coefficients).sum().backward()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+14 passed, 8 warnings in 9.61s

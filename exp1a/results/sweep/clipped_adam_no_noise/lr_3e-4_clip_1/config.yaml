@@ -1,0 +1,50 @@
+seed: 20261001
+data_root: data
+epochs: 5
+dataset_size: 50000
+logical_batch_size: 1000
+physical_batch_size: 50
+gradient_accumulation: 20
+num_workers: 2
+optimizer:
+  lr: 0.0003
+  beta1: 0.9
+  beta2: 0.999
+  eps: 1.0e-08
+  weight_decay: 0.0
+privacy:
+  epsilon: 8.0
+  delta: 1.0e-05
+  max_grad_norm: 1.0
+  adjacency: add_remove_zero_out
+  sampling_amplification: false
+  k: 5
+  b_participation: 50
+model:
+  architecture: vit_tiny_patch16_224
+  pretrained: true
+  num_classes: 100
+  image_size: 224
+total_steps: 250
+method: clipped_adam_no_noise
+smoke: false
+initialization_sha256: 32174ab45c6778646193838fe7b8f83343d50d42359835e98c8a1c13b16a3cf7
+pretrained_cfg:
+  mean:
+  - 0.5
+  - 0.5
+  - 0.5
+  std:
+  - 0.5
+  - 0.5
+  - 0.5
+  crop_pct: 0.9
+  interpolation: bicubic
+  hf_hub_id: timm/vit_tiny_patch16_224.augreg_in21k_ft_in1k
+privacy_calibration: null
+dtype: float32
+download: false
+fixed_epoch_order: true
+device_name: NVIDIA GeForce RTX 3080 Ti
+effective_epochs: 5
+effective_steps_per_epoch: 50
