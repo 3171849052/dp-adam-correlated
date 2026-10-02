@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/media/data/data/lt/dp-adam-correlated/exp1c/verify_smoke.py", line 50, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp1c/verify_smoke.py", line 40, in main
+    assert summary['final_scale_stats']['scale']['p50']==1000
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+ERROR conda.cli.main_run:execute(127): `conda run python -m exp1c.verify_smoke` failed. (See above for error)
