@@ -1,0 +1,47 @@
+{
+  "method": "adam",
+  "lr": 0.0003,
+  "max_grad_norm": null,
+  "seed": 20261001,
+  "smoke": true,
+  "status": "completed",
+  "exit_code": 0,
+  "initialization_sha256": "32174ab45c6778646193838fe7b8f83343d50d42359835e98c8a1c13b16a3cf7",
+  "calibration": null,
+  "epochs": [
+    {
+      "epoch": 1,
+      "logical_steps": 1,
+      "train_examples": 1000,
+      "train_loss": 5.1288727874755855,
+      "test_loss": 4.691694183349609,
+      "test_top1": 0.01,
+      "clip_fraction": null,
+      "gdp_mu": null,
+      "gdp_epsilon": null,
+      "target_mu": null,
+      "delta": null,
+      "noise_std": 0.0,
+      "seconds": 25.370338398963213
+    }
+  ],
+  "final": {
+    "epoch": 1,
+    "logical_steps": 1,
+    "train_examples": 1000,
+    "train_loss": 5.1288727874755855,
+    "test_loss": 4.691694183349609,
+    "test_top1": 0.01,
+    "clip_fraction": null,
+    "gdp_mu": null,
+    "gdp_epsilon": null,
+    "target_mu": null,
+    "delta": null,
+    "noise_std": 0.0,
+    "seconds": 25.370338398963213
+  },
+  "final_norm_stats": null,
+  "optimizer_steps": 1,
+  "noise_steps": 0,
+  "wall_seconds": 30.505970341153443
+}

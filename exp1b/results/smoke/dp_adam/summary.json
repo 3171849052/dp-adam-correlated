@@ -1,0 +1,86 @@
+{
+  "method": "dp_adam",
+  "lr": 0.0005,
+  "max_grad_norm": 1.0,
+  "seed": 20261001,
+  "smoke": true,
+  "status": "completed",
+  "exit_code": 0,
+  "initialization_sha256": "32174ab45c6778646193838fe7b8f83343d50d42359835e98c8a1c13b16a3cf7",
+  "calibration": {
+    "target_mu": 1.6660305978457184,
+    "sensitivity": 2.23606797749979,
+    "innovation_std_sum": 1.3421530075084847,
+    "adjacency": "add_remove_zero_out",
+    "k": 5,
+    "b_participation": 50,
+    "sampling_amplification": false
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "logical_steps": 1,
+      "train_examples": 1000,
+      "train_loss": 5.1288727874755855,
+      "test_loss": 5.130159454345703,
+      "test_top1": 0.03,
+      "clip_fraction": 1.0,
+      "gdp_mu": 0.7450715338755283,
+      "gdp_epsilon": 3.1232925162148555,
+      "target_mu": 1.6660305978457184,
+      "delta": 1e-05,
+      "noise_std": 0.0013421530075084847,
+      "seconds": 25.788732217624784
+    }
+  ],
+  "final": {
+    "epoch": 1,
+    "logical_steps": 1,
+    "train_examples": 1000,
+    "train_loss": 5.1288727874755855,
+    "test_loss": 5.130159454345703,
+    "test_top1": 0.03,
+    "clip_fraction": 1.0,
+    "gdp_mu": 0.7450715338755283,
+    "gdp_epsilon": 3.1232925162148555,
+    "target_mu": 1.6660305978457184,
+    "delta": 1e-05,
+    "noise_std": 0.0013421530075084847,
+    "seconds": 25.788732217624784
+  },
+  "final_norm_stats": {
+    "full_model_norm": {
+      "p10": 72.57621383666992,
+      "p25": 80.34405899047852,
+      "p50": 88.57471084594727,
+      "p75": 95.75482940673828,
+      "p90": 103.99736633300782,
+      "p99": 123.11380393981933,
+      "mean": 88.60897064208984,
+      "clip_fraction": 1.0
+    },
+    "backbone_norm": {
+      "p10": 53.73789405822754,
+      "p25": 60.786376953125,
+      "p50": 69.23865127563477,
+      "p75": 78.32196235656738,
+      "p90": 88.85051879882812,
+      "p99": 112.045380859375,
+      "mean": 70.3051528930664,
+      "clip_fraction": 1.0
+    },
+    "head_norm": {
+      "p10": 45.94836540222168,
+      "p25": 49.7210054397583,
+      "p50": 54.18113899230957,
+      "p75": 57.72414970397949,
+      "p90": 59.46721878051758,
+      "p99": 61.689192314147945,
+      "mean": 53.326175689697266,
+      "clip_fraction": 1.0
+    }
+  },
+  "optimizer_steps": 1,
+  "noise_steps": 1,
+  "wall_seconds": 32.42068792227656
+}

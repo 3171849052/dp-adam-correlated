@@ -1,0 +1,27 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.15, pytest-9.1.1, pluggy-1.6.0
+cachedir: results/pytest_cache
+rootdir: /media/data/data/lt/dp-adam-correlated/exp1b
+configfile: pytest.ini
+plugins: hypothesis-6.163.0, anyio-4.14.2
+collected 12 items
+
+exp1b/tests/test_experiment.py ............                              [100%]
+
+=============================== warnings summary ===============================
+tests/test_experiment.py::test_exact_preclipping_norms_and_quantiles
+tests/test_experiment.py::test_zero_noise_dp_equals_clipped_path
+tests/test_experiment.py::test_initialization_matches_exp1a_and_all_trials
+tests/test_experiment.py::test_pretrained_exact_norms_against_individual_gradients
+  /media/data/data/lt/dp-adam-correlated/exp1b/clipping.py:18: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    losses.sum().backward(retain_graph=True)
+
+tests/test_experiment.py::test_exact_preclipping_norms_and_quantiles
+tests/test_experiment.py::test_zero_noise_dp_equals_clipped_path
+tests/test_experiment.py::test_initialization_matches_exp1a_and_all_trials
+tests/test_experiment.py::test_pretrained_exact_norms_against_individual_gradients
+  /media/data/data/lt/dp-adam-correlated/exp1b/clipping.py:23: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    (losses * coefficients).sum().backward()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 12 passed, 8 warnings in 9.22s ========================
