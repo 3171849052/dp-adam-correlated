@@ -1,0 +1,8 @@
+method,lr,eps_scale,max_grad_norm,num_bands,seed,test_top1_epoch_1,test_top1_epoch_2,test_top1_epoch_3,test_top1_epoch_4,test_top1_epoch_5,final_test_top1,train_loss,clip_fraction,epsilon,delta,target_mu,strategy_sensitivity,innovation_std_sum,final_marginal_noise_std,scaled_norm_p50,scaled_norm_p90,scaled_norm_p99,unscaled_norm_p50,sqrt_vhat_p50,sqrt_vhat_p90,scale_p50,wall_seconds,status,exit_code,initialization_sha256,result_dir
+dp_adam_bandinvmf_momentum,0.002,,1.0,4,20261001,,,,,,,,,8.0,1e-05,,,,,,,,,,,,,running,,,/media/data/data/lt/dp-adam-correlated/exp1d/results/sweep/dp_adam_bandinvmf_momentum/lr_2e-3
+dp_adam_bandinvmf_momentum,0.004,,1.0,4,20261001,,,,,,,,,8.0,1e-05,,,,,,,,,,,,,running,,,/media/data/data/lt/dp-adam-correlated/exp1d/results/sweep/dp_adam_bandinvmf_momentum/lr_4e-3
+dp_adam_bandinvmf_momentum,0.005,,1.0,4,20261001,,,,,,,,,8.0,1e-05,,,,,,,,,,,,,running,,,/media/data/data/lt/dp-adam-correlated/exp1d/results/sweep/dp_adam_bandinvmf_momentum/lr_5e-3
+dp_adam_bandinvmf_momentum,0.007,,1.0,4,20261001,,,,,,,,,8.0,1e-05,,,,,,,,,,,,,running,,,/media/data/data/lt/dp-adam-correlated/exp1d/results/sweep/dp_adam_bandinvmf_momentum/lr_7e-3
+dp_adam_bandinvmf_scale,0.001,0.1,10.0,4,20261001,,,,,,,,,8.0,1e-05,,,,,,,,,,,,,pending,,,/media/data/data/lt/dp-adam-correlated/exp1d/results/sweep/dp_adam_bandinvmf_scale/lr_1e-3_eps_1e-1_clip_10
+dp_adam_bandinvmf_scale,0.001,0.1,100.0,4,20261001,,,,,,,,,8.0,1e-05,,,,,,,,,,,,,pending,,,/media/data/data/lt/dp-adam-correlated/exp1d/results/sweep/dp_adam_bandinvmf_scale/lr_1e-3_eps_1e-1_clip_100
+dp_adam_bandinvmf_scale,0.001,0.1,1000.0,4,20261001,,,,,,,,,8.0,1e-05,,,,,,,,,,,,,pending,,,/media/data/data/lt/dp-adam-correlated/exp1d/results/sweep/dp_adam_bandinvmf_scale/lr_1e-3_eps_1e-1_clip_1000

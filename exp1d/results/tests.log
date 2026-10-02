@@ -1,0 +1,25 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.15, pytest-9.1.1, pluggy-1.6.0
+cachedir: results/pytest_cache
+rootdir: /media/data/data/lt/dp-adam-correlated/exp1d
+configfile: pytest.ini
+plugins: hypothesis-6.163.0, anyio-4.14.2
+collected 10 items
+
+exp1d/tests/test_experiment.py ..........                                [100%]
+
+=============================== warnings summary ===============================
+tests/test_experiment.py::test_scale_norms_clipping_and_statistics[10.0]
+tests/test_experiment.py::test_scale_norms_clipping_and_statistics[100.0]
+tests/test_experiment.py::test_scale_norms_clipping_and_statistics[1000.0]
+  /media/data/data/lt/dp-adam-correlated/exp1d/scale.py:56: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    losses.sum().backward(retain_graph=True)
+
+tests/test_experiment.py::test_scale_norms_clipping_and_statistics[10.0]
+tests/test_experiment.py::test_scale_norms_clipping_and_statistics[100.0]
+tests/test_experiment.py::test_scale_norms_clipping_and_statistics[1000.0]
+  /media/data/data/lt/dp-adam-correlated/exp1d/scale.py:64: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    (losses * coefficients).sum().backward()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================= 10 passed, 6 warnings in 22.52s ========================
