@@ -1,0 +1,81 @@
+{
+  "comparison": "matched-clipping geometry comparison",
+  "units": "absolute top1 fraction",
+  "paired": [
+    {
+      "seed": 20261011,
+      "G_iid_matched": 0.0013999999999999568,
+      "G_prefix_matched": 0.002100000000000102,
+      "G_momentum_matched": 0.009500000000000064,
+      "I_prefix_matched": 0.000700000000000145,
+      "I_momentum_matched": 0.008100000000000107
+    },
+    {
+      "seed": 20261012,
+      "G_iid_matched": 0.000500000000000056,
+      "G_prefix_matched": 0.0031999999999999806,
+      "G_momentum_matched": 0.010499999999999954,
+      "I_prefix_matched": 0.0026999999999999247,
+      "I_momentum_matched": 0.009999999999999898
+    },
+    {
+      "seed": 20261013,
+      "G_iid_matched": 0.0017999999999999128,
+      "G_prefix_matched": 0.0022000000000000908,
+      "G_momentum_matched": 0.00869999999999993,
+      "I_prefix_matched": 0.000400000000000178,
+      "I_momentum_matched": 0.006900000000000017
+    }
+  ],
+  "aggregate": {
+    "G_iid_matched": {
+      "mean": 0.0012333333333333085,
+      "sample_std": 0.0006658328118478659
+    },
+    "G_prefix_matched": {
+      "mean": 0.0025000000000000577,
+      "sample_std": 0.000608276253029755
+    },
+    "G_momentum_matched": {
+      "mean": 0.009566666666666649,
+      "sample_std": 0.0009018499505645863
+    },
+    "I_prefix_matched": {
+      "mean": 0.0012666666666667492,
+      "sample_std": 0.0012503332889005991
+    },
+    "I_momentum_matched": {
+      "mean": 0.00833333333333334,
+      "sample_std": 0.0015631165450257104
+    }
+  },
+  "standard_configs": {
+    "iid_standard_matched": {
+      "lr": 0.0005,
+      "max_grad_norm": 10.0
+    },
+    "prefix_standard_matched": {
+      "lr": 0.002,
+      "max_grad_norm": 30.0,
+      "num_bands": 4
+    },
+    "momentum_standard_matched": {
+      "lr": 0.005,
+      "max_grad_norm": 30.0,
+      "num_bands": 4
+    }
+  },
+  "target_clip_fractions": {
+    "iid": 0.9772533333333332,
+    "prefix": 0.7276333333333334,
+    "momentum": 0.79034
+  },
+  "matching_seed": 20261001,
+  "matching_epochs": [
+    3,
+    4,
+    5
+  ],
+  "interpretation": "reduces tuning and clipping saturation confounding; not a strict causal geometry effect",
+  "scale_trials_reused": true
+}

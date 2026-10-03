@@ -1,82 +1,160 @@
-# exp2: Scale geometry × noise mechanism
+# exp2: geometry × noise mechanism
 
-独立 CIFAR-100 / ViT-Tiny 全参数 FP32 实验。六个 cell 为 IID、Prefix
-BandInvMF、Momentum-workload BandInvMF 各自配对 Standard/Scale geometry。
-`exp1*` 不被修改。数据只从仓库 `data/` 读取，`download=False`；模型只从
-仓库 `cache/` 的固定 timm HF snapshot 读取。缺失 checkpoint 直接失败。
-沿用 exp1e 的严格 backbone 映射，保留按 seed 初始化的 100 类 classifier。
-各 trial 的 config/summary 记录 checkpoint、初始模型和 classifier 的 SHA256。
+CIFAR-100 / pretrained ViT-Tiny 全参数 FP32 实验。只修改 `exp2/`。
+数据只读仓库 `data/`，`download=False`；预训练 checkpoint 只读仓库 `cache/`，
+不下载。保持 5 epochs、logical batch=1000、physical batch=250、accumulation=4、
+(k,b,T)=(5,50,250)，Adam betas=(0.9,0.999)、eps=1e-8、weight_decay=0。
+隐私按固定 epoch GDP 校准：epsilon=8、delta=1e-5、add/remove zero-out、
+无 sampling amplification。每个 logical batch 精确逐样本 clipping、
+一次 private noise release、一次 Adam step。
 
-固定 5 epochs、logical batch=1000、physical batch=250，自动导出 accumulation=4、
-(k,b,T)=(5,50,250)。固定同一 seed 的训练 permutation，每 epoch 重用同一分组。
-这样参与间隔为 50，不作 sampling amplification。隐私使用固定 epoch GDP 校准，
-add/remove zero-out、epsilon=8、delta=1e-5；任何 clip 都单独重新校准 innovation std。
-每个 logical batch 精确逐样本 clipping、一次 private noise output、一次 Adam step。
-Scale 在 logical batch 开始冻结 `1/(sqrt(vhat_previous)+0.1)`，在该空间
-clip/noise，然后除以实际冻结的 scale 再交给 Adam。
+Scale 使用 previous completed vhat：`s_t=1/(sqrt(vhat_{t-1})+0.1)`，
+在该空间 clip/noise，除以同一步实际使用的 s 后交给 Adam。Standard 为 s=1。
+6 factorial cells 为 IID、Prefix BandInvMF、Momentum BandInvMF 的 Standard/Scale。
+factorization 只依赖 noise family、T、bands=4、beta1，geometry 不参与。
+同 family 的 workload、strategy、noising coefficients 完全一致；clip 变化时
+单独重新 GDP calibration，仅实际 `M=innovation_std_sum*D` 的标量改变。
 
-同一噪声行 Standard/Scale 的 factorization 函数只接受噪声类型，不接受 geometry。
-Prefix workload 系数为 ones；Momentum workload 完全沿用 exp1e 的
-`toeplitz.multiply(ones, beta1**arange(T))`。trial 的 `matrices.npz` 存储
-factorization、workload coefficients、`W` 和实际 `M=innovation_std*D`。
-clip 会改变 `M` 的校准标量，始终保留相同 `D=C^-1`。
+固定 anchors：IID Standard (lr=5e-4,C=1)、Prefix Scale
+(lr=2e-3,C=200,eps_scale=0.1)、Momentum Standard (lr=5e-3,C=1)。
+search seed=20261001，按 final_test_top1 最大选择，tie 依次选较小 C、较小 lr。
 
-搜索 seed=20261001；三个 anchor 固定。搜索 23 个 unique trials：
-IID Scale 5 clips + 3 个新增 LR；Prefix Standard 6 LR；Momentum Scale
-5 clips + 4 个新增 LR。第一阶段共 16 个 trial；全部完成后选择两行最佳 clip，
-第二阶段运行 7 个新增 LR，复用 lr=2e-3 的 clip winner。按 final_test_top1
-选择，完全相同选择较小 clip/LR。搜索完成后冻结 selected_configs.json，
-再运行 seeds 20261011/12/13 下全部六个 cell，共 18 个 final trials。
+1. Stage 1：IID/Momentum Scale 各搜索 C={50,100,200,300,500}，固定
+   lr=2e-3、eps_scale=0.1；Prefix Standard C=1 搜索
+   lr={5e-4,1e-3,2e-3,3e-3,5e-3,7e-3}。共 16 trials。
+2. Stage 2：分别固定 Stage 1 胜出 C，IID Scale LR grid 为
+   {5e-4,1e-3,2e-3,3e-3}，Momentum Scale 为
+   {1e-3,2e-3,3e-3,5e-3,7e-3}。新增 7 trials，复用两个 lr=2e-3 点。
+   stage2 CSV 有 9 行，复用行标记 `stage2_reused`。
+3. Stage 3：以 Stage 2 固定 C 的 LR winner 为中心，分别取原 C/LR grids
+   的当前值及存在的左/右邻居，生成局部 Cartesian grid，排除 Stage 1/2
+   已完成点。IID 新增 1–4、Momentum 新增 1–6，合计 2–10 trials，
+   实际数量由搜索结果决定。从 Stage 1+2+3 **全部**方法结果选择最佳配置，
+   冻结 `selected_configs.json`。
+4. Prefix Scale 固定 anchor 在 search seed 额外运行 1 个 reference trial；
+   不参与 tuning。IID/Momentum Scale 复用全局胜出搜索 trial。
+5. matched clipping：三个 family 取最终 Scale 的 epochs 3–5 clip_fraction
+   均值为 target；Standard 使用相同 lr，搜索 C={1,3,10,30,100,300}，
+   共 18 trials，各自重新 GDP calibration。按 epochs 3–5 mean clip fraction
+   与 target 的绝对差最小选择，tie 选较小 C，冻结 `matched_configs.json`。
+6. 所有配置确定后运行 seeds=20261011/12/13 的六个主 cell，共 18 trials。
+   matched final 复用其中九个 Scale，只新增三个 matched Standard × 三 seeds，
+   共 9 trials。完整 pipeline 共 `69 + Stage3` 个 unique trials（71–79）。
 
-四个 worker 分别使用 GPU 0/1/2/3，每 trial 单 GPU，无 DDP。GPU 完成后
-立即取当前阶段下一 trial，stdout/stderr 写该 trial 的 train.log。
-任一 trial 返回非零，则当前队列结束后 pipeline 非零退出，下一阶段不启动。
-已完成的 trial 按配置和必要产物验证后复用，绝不重新写入其目录；不完整目录
-直接失败。最终汇总文件可由已完成 trial 重新生成。shell 使用调用者的 curve 环境。
+四个 worker 使用 GPU 0/1/2/3，每 trial 单 GPU，不用 DDP、Slurm 或 GNU parallel。
+当前 stage 的空闲 GPU 立即取下一个 trial；每个 stage 完成才进入下一 stage。
+stdout/stderr 写 trial `train.log`。任一 worker 失败则 drain 当前队列后非零退出，
+后续 stage 不启动。不自动删除、修复或重跑失败 trial。
+目录不存在则 launch；目录存在且通过 `read_completed()` 则 reuse；
+缺失产物或未完成直接失败，提示：
 
-配对 RNG 使用相同的 seed、初始模型、固定 permutation 和独立的 seeded
-train DataLoader generator；workers 使用 PyTorch 的 worker seed 规则。
-噪声使用独立 generator(seed+1)，test loader 使用独立 generator(seed+2)。
-每 epoch 还记录首个 physical batch 前四张实际增强图像的 SHA256，用于
-检查相同 seed 的增强指纹；最终配对检查也比较 classifier、模型、checkpoint、
-训练顺序、坐标和 MF factorization。
-
-机制分析使用 flattened trainable parameter 顺序，NumPy default_rng(0)
-不放回采样并排序 2048 个坐标；全 cell/seed 共用它们。Adam.step 后读取
-当前 completed vhat，计算 `p=1/(sqrt(vhat_current)+adam_eps)`、`r=p/s`；
-`s` 是本 step 实际使用的 previous-state Scale，Standard 为 ones。
-`mechanism_trace.npz` 保存 coordinate_indices、r_trace、s_trace。
-`mechanism_metrics.csv` 的分位数、mean/std、CV、anisotropy 和 drift 均基于
-这 2048 个坐标；coordinate std 为 population std，首步 drift 留空。
-这些是 linearized effective noise multipliers，不是 Adam 精确 Jacobian。
-
-MF distortion 读取各 final trial 实际保存的 `M`、对应 `W` 和完整 r_trace，
-使用 `H=(W.T@W)*(M@M.T)` 的指定公式；每 trial 2048 坐标的 ratio
-p10/p50/p90、logabs mean/median 写入 mf_distortion.csv。
-mechanism_summary.json 的 step 指标先对每 trial 求均值，再等权对三个 seed
-求均值；drift 不含第一步。MF ratio median 为三个 trial median 的 median，
-logabs mean 为三个 trial coordinate mean 的平均。它是线性化 diagnostic，
-不是精确 Adam noise variance。结果不自动作因果结论。
-
-final_multiseed.csv / final_summary.json 保存 accuracy（fraction）及 seed sample
-std（ddof=1）。factorial_effects.csv / json 保存每 seed 的 G_iid、G_prefix、
-G_momentum、I_prefix、I_momentum，及其跨 seed mean/sample_std。
-mechanism_summary.json 显式列出三个 Standard/Scale pair。
-所有新代码、临时文件、测试产物、日志和 checkpoints 位于 exp2/。
-
-从仓库根目录启动完整 pipeline 的唯一命令：
-
-```bash
-conda run --no-capture-output -n curve bash exp2/run_sweep.sh
+```text
+Incomplete trial directory: <path>
+Remove it manually before restarting.
 ```
 
-正式实验前验证：
+每个同 seed 方法共享 pretrained checkpoint、classifier/model initialization、
+固定 training order 和 augmentation RNG convention。固定 permutation 每 epoch
+重复分组；train/test DataLoader 分别使用独立 seeded generators；噪声 RNG 独立。
+每个 logical batch 取前四张实际 transformed examples，在 CPU 更新 rolling SHA256，
+每 epoch 重置并记录 `augmentation_trace_sha256`，不保存原始图像。
+最终检查全部 factorial/matched 同 seed 的每 epoch hash、模型初值、顺序、坐标和
+同 family MF factorization 完全配对。
+
+固定 flattened parameter order；NumPy default_rng(0) 不放回选择并排序 2048 坐标。
+全部方法/seeds 使用相同 indices。`mechanism_trace.npz` 保存：
+
+- `coordinate_indices`: [2048]
+- `p_trace`: [250,2048]，`p_t=1/(sqrt(vhat_t)+adam_eps)`，在 Adam.step 后读取
+- `s_trace`: [250,2048]，本 step 实际使用的 previous-state Scale 或 Standard ones
+- `r_trace`: [250,2048]，`r_t=p_t/s_t`
+
+mechanism_metrics.csv 保留 r 分位数、mean/std、CV、p90/p10 anisotropy、
+相邻时间 median absolute log drift；首步 drift 留空。smoke 的时间维度为 1。
+
+`paper_approx_mf_distortion` 保留 `W diag(r) M` 的原诊断，使用实际保存的 W/M。
+标记为 **paper-style approximation; not exact Adam Jacobian**。
+
+frozen-v 使用 0-indexed `A[t,j]=(1-beta1)*beta1**(t-j)/(1-beta1**(t+1))`
+（j<=t，否则 0），`L[t,j]=1[j<=t]`。对坐标 q：
+
+```python
+K_q = L @ diag(p_q) @ A @ diag(1/s_q) @ M
+r_rms_q = sqrt(mean((p_q/s_q)**2))
+K_ideal_q = r_rms_q * L @ A @ M
+frozen_ratio_q = norm(K_q, 'fro') / norm(K_ideal_q, 'fro')
+```
+
+这是 **frozen-observed-v linearized noise operator**：固定观察到的 v 轨迹，
+不包含 infinitesimal noise 对未来 v 的反馈，不是 exact Adam Jacobian。
+实现用 Adam moment 和 prefix 的逐行 recurrence，计算同一 Frobenius norm，
+无需存储 [2048,250,250] operator。tests 与显式矩阵乘法核对。
+p 和 s 分别在时间上恒定时 frozen distortion=1；仅 r=p/s 恒定但 p、s
+共同随时间变化时，A 与 diag(s) 一般不交换，公式不保证 distortion=1。
+
+MF cancellation efficiency 的 baseline 定义为：
+
+```python
+K_iid_q = r_rms_q * L @ A @ (innovation_std_sum * I)
+rmse_actual_q = norm(K_q, 'fro') / sqrt(T)
+rmse_iid_q = norm(K_iid_q, 'fro') / sqrt(T)
+efficiency_q = rmse_actual_q / rmse_iid_q
+```
+
+baseline 保持该坐标 effective RMS、同一 trial GDP 校准的 innovation std，以及
+变换前 `T*innovation_std_sum**2` 创新能量；只把 temporal transform D 改为 identity。
+不另作 IID calibration，也不匹配变换后 output energy。共同的 lr/logical_batch_size
+在比值中抵消。**Lower = more effective temporal noise cancellation**。
+此定义写入代码注释及 `mechanism_summary.json` metadata。
+
+tuned 六个 cells 的 G/I 仍使用 Scale-minus-Standard 及 difference-in-differences，
+输出明确标记 `tuned_system_effects`，各 cell 独立 tuning 的结果不能当成纯几何因果效应。
+matched 输出称 `matched-clipping geometry comparison`，保留相同 LR 并匹配 late clipping，
+减少混淆但不宣称严格因果效应。top1 以 fraction 表示，跨 seeds 使用 sample std(ddof=1)。
+机制 step 指标先 trial 内均值再 seed 等权均值；ratio 汇总为 trial medians 的 median。
+IID 的 MF fields 显式为 null。mechanism summary 包括六主 cells 和三个 matched cells。
+
+完整实验生成：
+
+```text
+exp2/results/
+  search_stage1_summary.csv
+  search_stage2_summary.csv
+  search_stage3_summary.csv
+  search_summary.csv
+  selected_configs.json
+  matched_search_summary.csv
+  matched_configs.json
+  final_multiseed.csv
+  final_summary.json
+  factorial_effects.csv
+  factorial_effects.json
+  matched_multiseed.csv
+  matched_effects.csv
+  matched_effects.json
+  paper_approx_mf_distortion.csv
+  frozen_v_mf_distortion.csv
+  mf_cancellation_efficiency.csv
+  mechanism_summary.json
+```
+
+每 trial 保存 config.yaml、train.log、metrics.csv、summary.json、train_order.npy、
+final.pt、matrices.npz、mechanism_trace.npz、mechanism_metrics.csv。
+matched_multiseed.csv 包含九个原 Scale 路径及九个新 matched Standard 路径。
+MF diagnostic CSV 包含主和 matched MF trials，并按 method/seed 区分。
+
+正式实验前验证（curve 环境）：
 
 ```bash
-PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/exp2/cache/tmp" conda run --no-capture-output -n curve python -m pytest -c exp2/pytest.ini exp2/tests --basetemp=exp2/results/pytest_tmp
+PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/exp2/cache/tmp" OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 conda run --no-capture-output -n curve python -m pytest -c exp2/pytest.ini exp2/tests --basetemp=exp2/results/pytest_tmp
 conda run --no-capture-output -n curve bash exp2/run_sweep.sh --smoke
 PYTHONDONTWRITEBYTECODE=1 conda run --no-capture-output -n curve python -m exp2.verify_smoke
 ```
 
-smoke 每 cell 只训练一个完整 logical batch、测试 100 张图，依然按完整
-250-step strategy 校准。smoke 不参与搜索、冻结配置或最终汇总。
+六 cell smoke 各训练一个完整 logical batch（250×4），测试 100 张，仍按完整
+250-step strategy 校准；不参与搜索、配置冻结或最终汇总。代码变更后只运行 tests
+和 smoke，不自动启动正式实验。完整新实验的唯一启动命令：
+
+```bash
+conda run --no-capture-output -n curve bash exp2/run_sweep.sh
+```

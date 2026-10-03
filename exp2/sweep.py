@@ -1,4 +1,4 @@
-"""Four single-GPU workers; two search barriers, frozen selection, paired finals."""
+"""Four single-GPU workers; three search barriers, matched clipping, paired finals."""
 import argparse
 from collections import deque
 import csv
@@ -11,26 +11,36 @@ import time
 import numpy as np
 import torch
 import yaml
-from exp2.cells import (CELLS, ANCHORS, FINAL_SEEDS, first_search_trials,
-                        second_search_trials, final_trials)
+from exp2.cells import (CELLS, ANCHORS, FINAL_SEEDS, FAMILIES, cell_for,
+                        first_search_trials, second_search_trials, third_search_trials,
+                        final_trials, matched_search_trials, matched_final_trials,
+                        scale_reference_trials, trial_key)
 from exp2.diagnostics import (save_json, write_csv, mean_std, factorial_effects,
-                             mf_distortion)
+                             paper_approx_mf_distortion, frozen_v_diagnostics,
+                             PAPER_APPROX_METADATA, FROZEN_V_METADATA, CANCELLATION_BASELINE)
 from exp2.train import ROOT, load_config
 from exp2.model import checkpoint_path, checkpoint_sha256
 
 GPUS = (0, 1, 2, 3)
+TRIAL_FILES = ('summary.json', 'config.yaml', 'train.log', 'metrics.csv', 'train_order.npy',
+               'final.pt', 'matrices.npz', 'mechanism_trace.npz', 'mechanism_metrics.csv')
+
+
+def incomplete(directory):
+    raise RuntimeError(f'Incomplete trial directory: {directory}\nRemove it manually before restarting.')
 
 
 def read_completed(directory, job, config_path, smoke=False):
+    if not all((directory / filename).is_file() for filename in TRIAL_FILES):
+        incomplete(directory)
     summary = json.loads((directory / 'summary.json').read_text())
-    assert summary['status'] == 'completed' and summary['smoke'] == smoke
+    if summary['status'] != 'completed':
+        incomplete(directory)
+    assert summary['smoke'] == smoke
     for key in ('method', 'seed', 'lr', 'max_grad_norm', 'eps_scale', 'num_bands'):
         assert summary[key] == job.get(key), (directory, key)
-    for key, value in CELLS[job['method']].items():
+    for key, value in cell_for(job['method']).items():
         assert summary[key] == value
-    for filename in ('config.yaml', 'train.log', 'metrics.csv', 'train_order.npy',
-                     'final.pt', 'matrices.npz', 'mechanism_trace.npz', 'mechanism_metrics.csv'):
-        assert (directory / filename).is_file(), (directory, filename)
     expected_config = load_config(config_path)
     expected_config['seed'] = job['seed']
     expected_config['optimizer']['lr'] = job['lr']
@@ -40,9 +50,20 @@ def read_completed(directory, job, config_path, smoke=False):
         assert resolved[key] == value, (directory, key)
     assert summary['planned_total_steps'] == 250
     assert summary['pretrained_checkpoint_sha256'] == checkpoint_sha256(checkpoint_path())
-    assert summary['optimizer_steps'] == summary['noise_steps'] == (1 if smoke else 250)
+    steps, epochs = (1, 1) if smoke else (250, 5)
+    assert summary['optimizer_steps'] == summary['noise_steps'] == steps
+    assert summary['physical_batches'] == steps * 4
+    assert len(summary['epochs']) == len(summary['augmentation_trace_sha256']) == epochs
+    with (directory / 'metrics.csv').open() as f:
+        metrics = list(csv.DictReader(f))
+    assert len(metrics) == epochs
+    assert [row['augmentation_trace_sha256'] for row in metrics] == summary['augmentation_trace_sha256']
     with np.load(directory / 'mechanism_trace.npz') as trace:
-        assert trace['r_trace'].shape == trace['s_trace'].shape == ((1 if smoke else 250), 2048)
+        assert trace['p_trace'].shape == trace['r_trace'].shape == trace['s_trace'].shape == (steps, 2048)
+        assert trace['coordinate_indices'].shape == (2048,)
+        for key in ('p_trace', 's_trace', 'r_trace'):
+            assert np.isfinite(trace[key]).all() and (trace[key] > 0).all()
+        np.testing.assert_allclose(trace['r_trace'], trace['p_trace'] / trace['s_trace'], rtol=1e-6)
     return summary
 
 
@@ -55,7 +76,7 @@ def run_queue(jobs, base, config_path, smoke=False):
             results.append((job, directory, read_completed(directory, job, config_path, smoke)))
         else:
             pending.append(job)
-    failed = False
+    failed, completed = False, []
     while pending or active:
         for gpu in GPUS:
             if gpu in active:
@@ -69,7 +90,7 @@ def run_queue(jobs, base, config_path, smoke=False):
                 if code:
                     failed = True
                 else:
-                    results.append((job, directory, read_completed(directory, job, config_path, smoke)))
+                    completed.append((job, directory))
             if pending:
                 job = pending.popleft()
                 directory = base / job['name']
@@ -93,45 +114,90 @@ def run_queue(jobs, base, config_path, smoke=False):
             time.sleep(.1)
     if failed:
         raise RuntimeError('Trial failed; see train.log. Pipeline stopped before next stage.')
+    # Drain every worker before validating outputs, so invalid artifacts cannot
+    # leave other GPU workers running after this stage fails.
+    results.extend((job, directory, read_completed(directory, job, config_path, smoke))
+                   for job, directory in completed)
     return results
 
 
 def result_rows(results):
     return [dict(stage=job['stage'], **{k: job.get(k) for k in
                  ('method', 'seed', 'lr', 'eps_scale', 'max_grad_norm', 'num_bands')},
-                 **CELLS[job['method']], final_test_top1=summary['final']['test_top1'],
+                 **cell_for(job['method']), final_test_top1=summary['final']['test_top1'],
                  initialization_sha256=summary['initialization_sha256'], result_dir=str(directory))
             for job, directory, summary in sorted(results, key=lambda item: item[0]['name'])]
 
 
-def best(results, key):
-    return min(results, key=lambda item: (-item[2]['final']['test_top1'], item[0][key]))
+def best(results):
+    return min(results, key=lambda item: (-item[2]['final']['test_top1'],
+                                         item[0]['max_grad_norm'], item[0]['lr']))
 
 
-def select_configs(first, second):
+def select_configs(results):
+    """Freeze only after Stage 3; consider ALL Stage 1+2+3 points per method."""
     configs = {method: dict(values) for method, values in ANCHORS.items()}
-    configs['prefix_standard'] = {key: value for key, value in
-        best([r for r in first if r[0]['method'] == 'prefix_standard'], 'lr')[0].items()
-        if key in ('lr', 'max_grad_norm', 'num_bands')}
-    for method in ('iid_scale', 'momentum_scale'):
-        clip_winner = best([r for r in first if r[0]['method'] == method], 'max_grad_norm')
-        candidates = [clip_winner] + [r for r in second if r[0]['method'] == method]
-        winner = best(candidates, 'lr')[0]
+    for method in ('prefix_standard', 'iid_scale', 'momentum_scale'):
+        winner = best([r for r in results if r[0]['method'] == method])[0]
         configs[method] = {k: winner[k] for k in ('lr', 'max_grad_norm', 'eps_scale', 'num_bands')
                            if k in winner}
     return {method: configs[method] for method in CELLS}
 
 
-def verify_pairing(results):
-    """Check actual saved artifacts rather than relying only on RNG promises."""
+def late_clip_fraction(summary):
+    epochs = {row['epoch']: row for row in summary['epochs']}
+    assert set(epochs) == {1, 2, 3, 4, 5}
+    return float(np.mean([epochs[epoch]['clip_fraction'] for epoch in (3, 4, 5)]))
+
+
+def scale_targets(results, configs):
+    targets = {}
+    for family in FAMILIES:
+        method = f'{family}_scale'
+        cfg = configs[method]
+        key = trial_key(dict(cfg, method=method, seed=20261001))
+        matches = [s for j, _, s in results if trial_key(j) == key]
+        assert len(matches) == 1
+        targets[family] = late_clip_fraction(matches[0])
+    return targets
+
+
+def select_matched_configs(results, targets):
+    configs = {}
+    for family in FAMILIES:
+        method = f'{family}_standard_matched'
+        candidates = [r for r in results if r[0]['method'] == method]
+        winner = min(candidates, key=lambda r: (abs(late_clip_fraction(r[2]) - targets[family]),
+                                                r[0]['max_grad_norm']))[0]
+        configs[method] = {k: winner[k] for k in ('lr', 'max_grad_norm', 'num_bands') if k in winner}
+    return configs
+
+
+def matched_search_rows(results, targets):
+    rows = result_rows(results)
+    by_directory = {str(d): s for _, d, s in results}
+    for row in rows:
+        family = row['method'].removesuffix('_standard_matched')
+        measured = late_clip_fraction(by_directory[row['result_dir']])
+        row.update(target_clip_fraction=targets[family],
+                   mean_clip_fraction_epochs_3_5=measured,
+                   clip_fraction_absolute_difference=abs(measured - targets[family]))
+    return rows
+
+
+def verify_pairing(results, expected_methods=None):
+    """Check saved artifacts across factorial and matched methods, within seed."""
+    expected_methods = set(CELLS) if expected_methods is None else set(expected_methods)
     assert len({s['pretrained_checkpoint_sha256'] for _, _, s in results}) == 1
-    expected_indices = np.load(results[0][1] / 'mechanism_trace.npz')['coordinate_indices']
+    with np.load(results[0][1] / 'mechanism_trace.npz') as trace:
+        expected_indices = trace['coordinate_indices']
     for seed in sorted({j['seed'] for j, _, _ in results}):
         paired = [(j, d, s) for j, d, s in results if j['seed'] == seed]
-        assert {j['method'] for j, _, _ in paired} == set(CELLS)
+        assert {j['method'] for j, _, _ in paired} == expected_methods
+        assert len(paired) == len(expected_methods)
         for key in ('initialization_sha256', 'classifier_initialization_sha256'):
             assert len({s[key] for _, _, s in paired}) == 1
-        assert len({tuple(s['augmentation_first_batch_sha256']) for _, _, s in paired}) == 1
+        assert len({tuple(s['augmentation_trace_sha256']) for _, _, s in paired}) == 1
         order = np.load(paired[0][1] / 'train_order.npy')
         conventions = set()
         for _, directory, _ in paired:
@@ -141,15 +207,21 @@ def verify_pairing(results):
             cfg = yaml.safe_load((directory / 'config.yaml').read_text())
             conventions.add((cfg['augmentation_rng_convention'], cfg['num_workers']))
         assert len(conventions) == 1
-        for noise in ('prefix', 'momentum'):
-            directories = {j['method']: d for j, d, _ in paired}
-            with np.load(directories[f'{noise}_standard'] / 'matrices.npz') as a, \
-                 np.load(directories[f'{noise}_scale'] / 'matrices.npz') as b:
-                for key in ('noising_coefficients', 'strategy', 'workload_coefficients', 'W'):
-                    np.testing.assert_array_equal(a[key], b[key])
-                # Clip changes the calibrated scalar, never the factorization.
-                np.testing.assert_allclose(a['M'] / a['innovation_std_sum'],
-                                           b['M'] / b['innovation_std_sum'], atol=1e-15)
+        for family in FAMILIES:
+            directories = [d for j, d, _ in paired if j['method'].startswith(f'{family}_')]
+            with np.load(directories[0] / 'matrices.npz') as reference:
+                for directory in directories[1:]:
+                    with np.load(directory / 'matrices.npz') as other:
+                        for key in ('noising_coefficients', 'strategy', 'workload_coefficients', 'W'):
+                            np.testing.assert_array_equal(reference[key], other[key])
+                        # Only clip-dependent GDP scalar changes; D stays identical.
+                        np.testing.assert_allclose(reference['M'] / reference['innovation_std_sum'],
+                            other['M'] / other['innovation_std_sum'], rtol=1e-14, atol=1e-15)
+
+
+def effects_json(effects, comparison):
+    return dict(comparison=comparison, units='absolute top1 fraction', paired=effects,
+        aggregate={key: mean_std([r[key] for r in effects]) for key in effects[0] if key != 'seed'})
 
 
 def aggregate_final(results, configs, base):
@@ -160,43 +232,104 @@ def aggregate_final(results, configs, base):
     for seed in FINAL_SEEDS:
         accuracy = {j['method']: s['final']['test_top1'] for j, _, s in results if j['seed'] == seed}
         effects.append(dict(seed=seed, **factorial_effects(accuracy)))
-    write_csv(base / 'factorial_effects.csv', effects)
-    save_json(base / 'factorial_effects.json', dict(units='absolute top1 fraction', paired=effects,
-        aggregate={key: mean_std([r[key] for r in effects]) for key in effects[0] if key != 'seed'}))
-    final_summary, mechanism_summary, distortions = {}, {}, []
+    write_csv(base / 'factorial_effects.csv', [dict(comparison='tuned_system_effects', **row) for row in effects])
+    save_json(base / 'factorial_effects.json', effects_json(effects, 'tuned_system_effects'))
+    final_summary = {}
     for method in CELLS:
-        trials = sorted((j['seed'], d, s) for j, d, s in results if j['method'] == method)
-        assert [seed for seed, _, _ in trials] == list(FINAL_SEEDS)
-        top1 = [s['final']['test_top1'] for _, _, s in trials]
+        trials = sorted((j['seed'], s) for j, _, s in results if j['method'] == method)
+        assert [seed for seed, _ in trials] == list(FINAL_SEEDS)
+        top1 = [s['final']['test_top1'] for _, s in trials]
         stats = mean_std(top1)
         final_summary[method] = dict(chosen_hyperparameters=configs[method], seeds=list(FINAL_SEEDS),
             top1_each_seed=top1, top1_mean=stats['mean'], top1_std=stats['sample_std'])
-        per_trial = []
-        per_distortion = []
+    save_json(base / 'final_summary.json', dict(comparison='tuned_system_effects', cells=final_summary))
+    aggregate_mechanisms(results, base)
+
+
+def aggregate_matched(final, matched, configs, targets, base):
+    assert len(final) == 18 and len(matched) == 9
+    methods = set(CELLS) | {f'{family}_standard_matched' for family in FAMILIES}
+    verify_pairing(final + matched, methods)
+    scale = [r for r in final if cell_for(r[0]['method'])['geometry'] == 'scale']
+    rows = result_rows(scale + matched)
+    for row in rows:
+        row['comparison'] = 'matched-clipping geometry comparison'
+    write_csv(base / 'matched_multiseed.csv', rows)
+    effects = []
+    for seed in FINAL_SEEDS:
+        accuracy = {j['method'].removesuffix('_matched'): s['final']['test_top1']
+                    for j, _, s in scale + matched if j['seed'] == seed}
+        effects.append(dict(seed=seed, **{key + '_matched': value for key, value in
+                                         factorial_effects(accuracy).items()}))
+    write_csv(base / 'matched_effects.csv', [dict(comparison='matched-clipping geometry comparison', **row)
+                                           for row in effects])
+    output = effects_json(effects, 'matched-clipping geometry comparison')
+    output.update(standard_configs=configs, target_clip_fractions=targets,
+                  matching_seed=20261001, matching_epochs=[3, 4, 5],
+                  interpretation='reduces tuning and clipping saturation confounding; not a strict causal geometry effect',
+                  scale_trials_reused=True)
+    save_json(base / 'matched_effects.json', output)
+    aggregate_mechanisms(final + matched, base)
+
+
+def aggregate_mechanisms(results, base):
+    mechanism_summary, papers, frozens, cancellations = {}, [], [], []
+    for method in sorted({j['method'] for j, _, _ in results}):
+        trials = sorted((j['seed'], d, s) for j, d, s in results if j['method'] == method)
+        stats = mean_std([s['final']['test_top1'] for _, _, s in trials])
+        per_trial, per_paper, per_frozen, per_cancellation = [], [], [], []
         for seed, directory, _ in trials:
             with (directory / 'mechanism_metrics.csv').open() as f:
                 metrics = list(csv.DictReader(f))
             per_trial.append({key: float(np.mean([float(row[key]) for row in metrics if row[key] != '']))
                               for key in ('r_cv', 'r_anisotropy', 'temporal_drift')})
-            if CELLS[method]['noise'] != 'iid':
+            if cell_for(method)['noise'] != 'iid':
                 with np.load(directory / 'mechanism_trace.npz') as trace, \
                      np.load(directory / 'matrices.npz') as matrices:
-                    diagnostic = mf_distortion(trace['r_trace'], matrices['M'], matrices['W'])
-                distortions.append(dict(method=method, seed=seed, **diagnostic))
-                per_distortion.append(diagnostic)
+                    paper = paper_approx_mf_distortion(trace['r_trace'], matrices['M'], matrices['W'])
+                    cfg = yaml.safe_load((directory / 'config.yaml').read_text())
+                    diagnostics = frozen_v_diagnostics(trace['p_trace'], trace['s_trace'], matrices['M'],
+                        float(matrices['innovation_std_sum']), cfg['optimizer']['beta1'])
+                frozen = diagnostics['frozen_v_mf_distortion']
+                cancellation = diagnostics['mf_cancellation_efficiency']
+                papers.append(dict(method=method, seed=seed, **paper))
+                frozens.append(dict(method=method, seed=seed, **frozen))
+                cancellations.append(dict(method=method, seed=seed, **cancellation))
+                per_paper.append(paper)
+                per_frozen.append(frozen)
+                per_cancellation.append(cancellation)
         entry = dict(top1_mean=stats['mean'], top1_std=stats['sample_std'],
-            **{key + '_mean': float(np.mean([r[key] for r in per_trial])) for key in per_trial[0]})
-        if per_distortion:
-            entry.update(mf_distortion_ratio_median=float(np.median([r['ratio_p50'] for r in per_distortion])),
-                         mf_distortion_logabs_mean=float(np.mean([r['logabs_mean'] for r in per_distortion])))
+            **{key + '_mean': float(np.mean([r[key] for r in per_trial])) for key in per_trial[0]},
+            paper_approx_ratio_median=None, paper_approx_logabs_mean=None,
+            frozen_v_ratio_median=None, frozen_v_logabs_mean=None,
+            mf_cancellation_efficiency_median=None)
+        if per_paper:
+            entry.update(paper_approx_ratio_median=float(np.median([r['paper_approx_ratio_p50'] for r in per_paper])),
+                         paper_approx_logabs_mean=float(np.mean([r['paper_approx_logabs_mean'] for r in per_paper])),
+                         frozen_v_ratio_median=float(np.median([r['frozen_ratio_p50'] for r in per_frozen])),
+                         frozen_v_logabs_mean=float(np.mean([r['frozen_logabs_mean'] for r in per_frozen])),
+                         mf_cancellation_efficiency_median=float(np.median([r['p50'] for r in per_cancellation])))
         mechanism_summary[method] = entry
-    write_csv(base / 'mf_distortion.csv', distortions)
-    save_json(base / 'final_summary.json', final_summary)
+    write_csv(base / 'paper_approx_mf_distortion.csv', papers)
+    write_csv(base / 'frozen_v_mf_distortion.csv', frozens)
+    write_csv(base / 'mf_cancellation_efficiency.csv', cancellations)
     save_json(base / 'mechanism_summary.json', dict(cells=mechanism_summary,
-        pairs={noise: [f'{noise}_standard', f'{noise}_scale'] for noise in ('iid', 'prefix', 'momentum')},
-        diagnostic_scope='2048 fixed sampled coordinates; linearized multiplier, not exact Adam noise variance',
-        aggregation='equal trial means of step metrics; drift excludes first step; MF ratio is median of trial medians',
+        pairs={family: [f'{family}_standard', f'{family}_scale'] for family in FAMILIES},
+        matched_pairs={family: [f'{family}_standard_matched', f'{family}_scale'] for family in FAMILIES},
+        diagnostic_scope='2048 fixed sampled coordinates; full observed trajectory and saved M',
+        paper_approx_mf_distortion=PAPER_APPROX_METADATA,
+        frozen_v_mf_distortion=FROZEN_V_METADATA,
+        mf_cancellation_efficiency_baseline=CANCELLATION_BASELINE,
+        aggregation='equal trial means of step metrics; drift excludes first step; ratios are median of trial medians',
         top1_units='fraction', top1_std='sample std across three seeds (ddof=1)'))
+
+
+def freeze(path, configs):
+    if path.exists():
+        assert json.loads(path.read_text()) == configs, f'Frozen configs differ: {path}'
+    else:
+        save_json(path, configs)
+    return json.loads(path.read_text())
 
 
 def main(args):
@@ -205,7 +338,7 @@ def main(args):
     load_config(args.config)
     checkpoint_path()
     base = ROOT / 'exp2/results'
-    (base / 'search').mkdir(parents=True, exist_ok=True)
+    base.mkdir(parents=True, exist_ok=True)
     (ROOT / 'exp2/cache/tmp').mkdir(parents=True, exist_ok=True)
     if args.smoke:
         configs = dict(ANCHORS, iid_scale=dict(lr=2e-3, max_grad_norm=200., eps_scale=.1),
@@ -216,23 +349,36 @@ def main(args):
         verify_pairing(results)
         save_json(base / 'smoke_summary.json', dict(status='passed', cells=6,
             logical_steps_per_cell=1, physical_batches_per_cell=4, physical_batch_size=250,
-            paired_initialization_order_and_coordinates=True, pipeline_stage='smoke only'))
+            paired_initialization_order_augmentation_and_coordinates=True, pipeline_stage='smoke only'))
         return 0
     first = run_queue(first_search_trials(), base / 'search', args.config)
-    best_clips = {method: best([r for r in first if r[0]['method'] == method], 'max_grad_norm')[0]['max_grad_norm']
-                  for method in ('iid_scale', 'momentum_scale')}
-    second = run_queue(second_search_trials(best_clips), base / 'search', args.config)
-    assert len(first) + len(second) == 23
-    write_csv(base / 'search_summary.csv', result_rows(first + second))
-    configs = select_configs(first, second)
-    selected_path = base / 'selected_configs.json'
-    if selected_path.exists():
-        assert json.loads(selected_path.read_text()) == configs, 'Frozen configs differ from search'
-    else:
-        save_json(selected_path, configs)
-    frozen = json.loads(selected_path.read_text())
-    final = run_queue(final_trials(frozen), base / 'final', args.config)
-    aggregate_final(final, frozen, base)
+    write_csv(base / 'search_stage1_summary.csv', result_rows(first))
+    clip_winners = {method: best([r for r in first if r[0]['method'] == method])
+                    for method in ('iid_scale', 'momentum_scale')}
+    second = run_queue(second_search_trials({m: r[0]['max_grad_norm'] for m, r in clip_winners.items()}),
+                       base / 'search', args.config)
+    assert len(first) == 16 and len(second) == 7
+    reused = [(dict(j, stage='stage2_reused'), d, s) for j, d, s in clip_winners.values()]
+    write_csv(base / 'search_stage2_summary.csv', result_rows(second + reused))
+    # Local grid center is the winner among Stage 2's fixed-clip LR grid only.
+    current = {method: best([r for r in second + reused if r[0]['method'] == method])[0]
+               for method in clip_winners}
+    third = run_queue(third_search_trials(current, [j for j, _, _ in first + second]),
+                      base / 'search', args.config)
+    write_csv(base / 'search_stage3_summary.csv', result_rows(third))
+    all_search = first + second + third
+    write_csv(base / 'search_summary.csv', result_rows(all_search))
+    configs = freeze(base / 'selected_configs.json', select_configs(all_search))
+    # Prefix Scale is a fixed anchor, but its epochs 3-5 target needs a search-seed run.
+    reference = run_queue(scale_reference_trials(configs), base / 'search', args.config)
+    targets = scale_targets(all_search + reference, configs)
+    matched_search = run_queue(matched_search_trials(configs), base / 'matched_search', args.config)
+    write_csv(base / 'matched_search_summary.csv', matched_search_rows(matched_search, targets))
+    matched_configs = freeze(base / 'matched_configs.json', select_matched_configs(matched_search, targets))
+    final = run_queue(final_trials(configs), base / 'final', args.config)
+    aggregate_final(final, configs, base)
+    matched = run_queue(matched_final_trials(matched_configs), base / 'matched_final', args.config)
+    aggregate_matched(final, matched, matched_configs, targets, base)
     return 0
 
 

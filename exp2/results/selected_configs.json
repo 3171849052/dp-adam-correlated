@@ -1,0 +1,33 @@
+{
+  "iid_standard": {
+    "lr": 0.0005,
+    "max_grad_norm": 1.0
+  },
+  "iid_scale": {
+    "lr": 0.0005,
+    "max_grad_norm": 100.0,
+    "eps_scale": 0.1
+  },
+  "prefix_standard": {
+    "lr": 0.002,
+    "max_grad_norm": 1.0,
+    "num_bands": 4
+  },
+  "prefix_scale": {
+    "lr": 0.002,
+    "max_grad_norm": 200.0,
+    "eps_scale": 0.1,
+    "num_bands": 4
+  },
+  "momentum_standard": {
+    "lr": 0.005,
+    "max_grad_norm": 1.0,
+    "num_bands": 4
+  },
+  "momentum_scale": {
+    "lr": 0.005,
+    "max_grad_norm": 100.0,
+    "eps_scale": 0.1,
+    "num_bands": 4
+  }
+}

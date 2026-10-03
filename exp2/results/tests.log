@@ -4,8 +4,9 @@ cachedir: results/pytest_cache
 rootdir: /media/data/data/lt/dp-adam-correlated/exp2
 configfile: pytest.ini
 plugins: hypothesis-6.163.0, anyio-4.14.2
-collected 33 items
+collected 56 items
 
+exp2/tests/test_design.py .......................                        [ 41%]
 exp2/tests/test_experiment.py .................................          [100%]
 
 =============================== warnings summary ===============================
@@ -24,4 +25,4 @@ tests/test_experiment.py::test_exact_clipping_matches_per_example_reference[True
     (losses * coefficients).sum().backward()
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-======================= 33 passed, 5 warnings in 29.64s ========================
+======================= 56 passed, 5 warnings in 27.90s ========================

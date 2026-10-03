@@ -1,0 +1,10 @@
+stage,method,seed,lr,eps_scale,max_grad_norm,num_bands,geometry,noise,final_test_top1,initialization_sha256,result_dir
+stage2_reused,iid_scale,20261001,0.002,0.1,50.0,,scale,iid,0.2847,32174ab45c6778646193838fe7b8f83343d50d42359835e98c8a1c13b16a3cf7,/media/data/data/lt/dp-adam-correlated/exp2/results/search/iid_scale/clip_50
+stage2,iid_scale,20261001,0.0005,0.1,50.0,,scale,iid,0.5911,32174ab45c6778646193838fe7b8f83343d50d42359835e98c8a1c13b16a3cf7,/media/data/data/lt/dp-adam-correlated/exp2/results/search/iid_scale/lr_0.0005_clip_50
+stage2,iid_scale,20261001,0.001,0.1,50.0,,scale,iid,0.5684,32174ab45c6778646193838fe7b8f83343d50d42359835e98c8a1c13b16a3cf7,/media/data/data/lt/dp-adam-correlated/exp2/results/search/iid_scale/lr_0.001_clip_50
+stage2,iid_scale,20261001,0.003,0.1,50.0,,scale,iid,0.1432,32174ab45c6778646193838fe7b8f83343d50d42359835e98c8a1c13b16a3cf7,/media/data/data/lt/dp-adam-correlated/exp2/results/search/iid_scale/lr_0.003_clip_50
+stage2_reused,momentum_scale,20261001,0.002,0.1,100.0,4,scale,momentum_bandinvmf,0.6397,32174ab45c6778646193838fe7b8f83343d50d42359835e98c8a1c13b16a3cf7,/media/data/data/lt/dp-adam-correlated/exp2/results/search/momentum_scale/clip_100
+stage2,momentum_scale,20261001,0.001,0.1,100.0,4,scale,momentum_bandinvmf,0.4437,32174ab45c6778646193838fe7b8f83343d50d42359835e98c8a1c13b16a3cf7,/media/data/data/lt/dp-adam-correlated/exp2/results/search/momentum_scale/lr_0.001_clip_100
+stage2,momentum_scale,20261001,0.003,0.1,100.0,4,scale,momentum_bandinvmf,0.7071,32174ab45c6778646193838fe7b8f83343d50d42359835e98c8a1c13b16a3cf7,/media/data/data/lt/dp-adam-correlated/exp2/results/search/momentum_scale/lr_0.003_clip_100
+stage2,momentum_scale,20261001,0.005,0.1,100.0,4,scale,momentum_bandinvmf,0.745,32174ab45c6778646193838fe7b8f83343d50d42359835e98c8a1c13b16a3cf7,/media/data/data/lt/dp-adam-correlated/exp2/results/search/momentum_scale/lr_0.005_clip_100
+stage2,momentum_scale,20261001,0.007,0.1,100.0,4,scale,momentum_bandinvmf,0.7381,32174ab45c6778646193838fe7b8f83343d50d42359835e98c8a1c13b16a3cf7,/media/data/data/lt/dp-adam-correlated/exp2/results/search/momentum_scale/lr_0.007_clip_100

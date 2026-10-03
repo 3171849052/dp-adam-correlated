@@ -62,8 +62,10 @@ augmentation_rng_convention: seeded train DataLoader generator + torch worker se
   fixed permutation each epoch
 diagnostic_coordinates: 2048
 coordinate_seed: 0
-mechanism_note: r is a sampled linearized effective noise multiplier, not an exact
-  Adam Jacobian or variance
+mechanism_note: p from completed current vhat; s is actual previous-vhat scale; r=p/s;
+  not exact Adam Jacobian
+augmentation_trace_convention: rolling SHA256 of first 4 CPU transformed examples
+  of every logical batch, reset each epoch
 dtype: float32
 privacy_calibration:
   target_mu: 1.6660305978457184

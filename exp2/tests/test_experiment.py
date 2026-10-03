@@ -14,8 +14,8 @@ from safetensors.torch import load_file
 from exp2 import model as models
 from exp2.bandinvmf import BandInvMFNoise, build_matrices, materialize
 from exp2.cells import (CELLS, ANCHORS, CLIPS, LR_GRIDS, FINAL_SEEDS, SEARCH_SEED,
-                        first_search_trials, second_search_trials, final_trials)
-from exp2.diagnostics import (coordinate_indices, MechanismTrace, mf_distortion,
+                        MATCHED_CLIPS, first_search_trials, second_search_trials, final_trials)
+from exp2.diagnostics import (coordinate_indices, MechanismTrace, paper_approx_mf_distortion,
                               factorial_effects, mechanism_metrics)
 from exp2.privacy import calibrate, gdp_delta
 from exp2.scale import LogicalBatch, ScaledGhostModule, clipped_microbatch
@@ -73,13 +73,13 @@ def test_selection_uses_final_top1_ties_smaller_clip_lr():
     first = [(j, Path(j['name']), {'final': {'test_top1': .5}}) for j in first_search_trials()]
     second = [(j, Path(j['name']), {'final': {'test_top1': .5}})
               for j in second_search_trials({'iid_scale': 50., 'momentum_scale': 50.})]
-    selected = sweep.select_configs(first, second)
+    selected = sweep.select_configs(first + second)
     assert selected['iid_scale'] == dict(lr=.0005, max_grad_norm=50., eps_scale=.1)
     assert selected['momentum_scale'] == dict(lr=.001, max_grad_norm=50., eps_scale=.1, num_bands=4)
     assert selected['prefix_standard']['lr'] == .0005
     assert all(selected[k] == v for k, v in ANCHORS.items())
     second[-1][2]['final']['test_top1'] = .6
-    assert sweep.select_configs(first, second)['momentum_scale']['lr'] == .007
+    assert sweep.select_configs(first + second)['momentum_scale']['lr'] == .007
 
 
 @pytest.mark.parametrize('noise,original_method', [('iid', 'dp_adam'),
@@ -109,7 +109,8 @@ def test_factorization_matches_exp1e_and_geometry_invariant(noise, original_meth
 def test_privacy_recalibrates_for_every_clip(noise):
     _, c, _ = build_matrices(noise, 250, 4, .9)
     deviations = []
-    for clip in (1, *CLIPS):
+    clips = tuple(dict.fromkeys((1, *CLIPS, *MATCHED_CLIPS)))
+    for clip in clips:
         cfg = copy.deepcopy(CONFIG)
         cfg['privacy']['max_grad_norm'] = clip
         result = calibrate(c, cfg)
@@ -117,7 +118,7 @@ def test_privacy_recalibrates_for_every_clip(noise):
         assert gdp_delta(result['target_mu'], 8.) == pytest.approx(1e-5)
         assert result['sampling_amplification'] is False
         deviations.append(result['innovation_std_sum'])
-    np.testing.assert_allclose(np.array(deviations) / deviations[0], [1, *CLIPS])
+    np.testing.assert_allclose(np.array(deviations) / deviations[0], clips)
 
 
 def test_dataset_local_download_false(monkeypatch):
@@ -228,12 +229,14 @@ def test_four_microbatches_once_noise_once_adam_previous_vhat_and_current_r(meth
             assert noise.step_count == logical.optimizer_steps == step + int(completed)
             if completed:
                 trace.record(opt)
-        actual_r, actual_s = [], []
+        actual_p, actual_r, actual_s = [], [], []
         for p, prev in zip(model.parameters(), expected):
             vhat = opt.state[p]['exp_avg_sq'] / (1 - .999 ** (step + 1))
             scale = 1 / (prev.sqrt() + .1) if scaled else torch.ones_like(p)
+            actual_p.append((1 / (vhat.sqrt() + 1e-8)).flatten().detach().numpy())
             actual_r.append((1 / (vhat.sqrt() + 1e-8) / scale).flatten().detach().numpy())
             actual_s.append(scale.flatten().detach().numpy())
+        np.testing.assert_allclose(trace.p_trace[-1], np.concatenate(actual_p)[trace.indices], rtol=1e-6)
         np.testing.assert_allclose(trace.r_trace[-1], np.concatenate(actual_r)[trace.indices], rtol=1e-6)
         np.testing.assert_allclose(trace.s_trace[-1], np.concatenate(actual_s)[trace.indices], rtol=1e-6)
     assert all(int(opt.state[p]['step']) == 3 for p in model.parameters())
@@ -264,21 +267,21 @@ def test_coordinate_indices_and_mechanism_metrics():
 
 
 @pytest.mark.parametrize('noise_kind', ['prefix_bandinvmf', 'momentum_bandinvmf'])
-def test_mf_distortion_matches_explicit_frobenius_actual_workload(noise_kind):
+def test_paper_approx_mf_distortion_matches_explicit_frobenius_actual_workload(noise_kind):
     d, _, w = build_matrices(noise_kind, 8, 4, .9)
     M, W = materialize(d, 8) * 1.37, materialize(w, 8)
     r = np.exp(np.random.default_rng(1).normal(size=(8, 9)))
-    result = mf_distortion(r, M, W)
+    result = paper_approx_mf_distortion(r, M, W)
     ratios = [np.linalg.norm(W @ np.diag(r[:, j]) @ M, 'fro') /
               (np.sqrt(np.mean(r[:, j] ** 2)) * np.linalg.norm(W @ M, 'fro')) for j in range(9)]
-    assert result['ratio_p50'] == pytest.approx(np.median(ratios), rel=1e-12)
-    assert result['ratio_p10'] == pytest.approx(np.quantile(ratios, .1), rel=1e-12)
-    assert result['ratio_p90'] == pytest.approx(np.quantile(ratios, .9), rel=1e-12)
-    assert result['logabs_mean'] == pytest.approx(np.abs(np.log(ratios)).mean(), rel=1e-12)
-    assert result['logabs_median'] == pytest.approx(np.median(np.abs(np.log(ratios))), rel=1e-12)
-    constant = mf_distortion(np.ones((8, 9)) * 2, M, W)
-    assert constant['ratio_p50'] == pytest.approx(1.)
-    assert constant['logabs_mean'] == pytest.approx(0., abs=1e-14)
+    assert result['paper_approx_ratio_p50'] == pytest.approx(np.median(ratios), rel=1e-12)
+    assert result['paper_approx_ratio_p10'] == pytest.approx(np.quantile(ratios, .1), rel=1e-12)
+    assert result['paper_approx_ratio_p90'] == pytest.approx(np.quantile(ratios, .9), rel=1e-12)
+    assert result['paper_approx_logabs_mean'] == pytest.approx(np.abs(np.log(ratios)).mean(), rel=1e-12)
+    assert result['paper_approx_logabs_median'] == pytest.approx(np.median(np.abs(np.log(ratios))), rel=1e-12)
+    constant = paper_approx_mf_distortion(np.ones((8, 9)) * 2, M, W)
+    assert constant['paper_approx_ratio_p50'] == pytest.approx(1.)
+    assert constant['paper_approx_logabs_mean'] == pytest.approx(0., abs=1e-14)
 
 
 def test_factorial_formulas():
@@ -330,19 +333,27 @@ def test_search_selection_and_final_barriers(tmp_path, monkeypatch):
     phases = []
     def queue(jobs, base, config_path, smoke=False):
         phases.append(len(jobs))
-        if len(phases) == 1:
-            assert len(jobs) == 16
-        elif len(phases) == 2:
-            assert len(jobs) == 7 and not (tmp_path / 'exp2/results/selected_configs.json').exists()
+        selected = tmp_path / 'exp2/results/selected_configs.json'
+        matched = tmp_path / 'exp2/results/matched_configs.json'
+        if len(phases) <= 3:
+            assert not selected.exists() and not matched.exists()
+        elif len(phases) <= 5:
+            assert selected.is_file() and not matched.exists()
         else:
-            assert phases == [16, 7, 18]
-            assert (tmp_path / 'exp2/results/selected_configs.json').is_file()
-        return [(j, base / j['name'], {'final': {'test_top1': .5}, 'initialization_sha256': 'same'}) for j in jobs]
+            assert selected.is_file() and matched.is_file()
+        return [(j, base / j['name'], {'final': {'test_top1': .5}, 'initialization_sha256': 'same',
+                'epochs': [dict(epoch=e, clip_fraction=.2) for e in range(1, 6)]}) for j in jobs]
     monkeypatch.setattr(sweep, 'run_queue', queue)
     monkeypatch.setattr(sweep, 'aggregate_final', lambda *a: None)
+    monkeypatch.setattr(sweep, 'aggregate_matched', lambda *a: None)
     sweep.main(SimpleNamespace(config=ROOT / 'exp2/config.yaml', smoke=False))
-    assert phases == [16, 7, 18]
-    assert len(list(csv.DictReader((tmp_path / 'exp2/results/search_summary.csv').open()))) == 23
+    assert phases == [16, 7, 3, 1, 18, 18, 9]
+    base = tmp_path / 'exp2/results'
+    assert len(list(csv.DictReader((base / 'search_summary.csv').open()))) == 26
+    assert len(list(csv.DictReader((base / 'search_stage1_summary.csv').open()))) == 16
+    assert len(list(csv.DictReader((base / 'search_stage2_summary.csv').open()))) == 9
+    assert len(list(csv.DictReader((base / 'search_stage3_summary.csv').open()))) == 3
+    assert len(list(csv.DictReader((base / 'matched_search_summary.csv').open()))) == 18
     phases.clear()
     def failure(*a, **kw):
         phases.append('failed')
@@ -371,43 +382,81 @@ def test_final_aggregation_actual_trial_matrices_and_paired_statistics(tmp_path)
         r = np.exp(np.arange(8)[:, None] * (.02 if cell['geometry'] == 'scale' else .2))
         r = np.repeat(r, 2048, axis=1)
         np.savez(directory / 'mechanism_trace.npz', coordinate_indices=np.arange(2048),
-                 r_trace=r, s_trace=np.ones_like(r))
+                 p_trace=r, r_trace=r, s_trace=np.ones_like(r))
         write_csv(directory / 'mechanism_metrics.csv', [dict(step=i + 1, **mechanism_metrics(row, r[i-1] if i else None))
                                                          for i, row in enumerate(r)])
         np.save(directory / 'train_order.npy', np.arange(50000))
-        (directory / 'config.yaml').write_text(yaml.safe_dump(dict(num_workers=2, augmentation_rng_convention='paired')))
+        (directory / 'config.yaml').write_text(yaml.safe_dump(dict(num_workers=2, augmentation_rng_convention='paired', optimizer=dict(beta1=.9))))
         idx = list(CELLS).index(method)
         accuracy = .3 + .02 * idx + .01 * (seed - FINAL_SEEDS[0]) * (idx + 1)
         summary = dict(initialization_sha256=f'init_{seed}', classifier_initialization_sha256=f'head_{seed}',
-                       pretrained_checkpoint_sha256='checkpoint', augmentation_first_batch_sha256=[f'aug_{seed}'],
+                       pretrained_checkpoint_sha256='checkpoint', augmentation_trace_sha256=[f'aug_{seed}'],
                        final=dict(test_top1=accuracy))
         results.append((job, directory, summary))
     sweep.aggregate_final(results, chosen, tmp_path)
     final = json.loads((tmp_path / 'final_summary.json').read_text())
-    assert final['iid_standard']['top1_mean'] == pytest.approx(.31)
-    assert final['iid_standard']['top1_std'] == pytest.approx(.01)
+    assert final['cells']['iid_standard']['top1_mean'] == pytest.approx(.31)
+    assert final['cells']['iid_standard']['top1_std'] == pytest.approx(.01)
     effects = json.loads((tmp_path / 'factorial_effects.json').read_text())
     assert len(effects['paired']) == 3
     assert effects['aggregate']['G_iid']['mean'] == pytest.approx(.03)
     assert effects['aggregate']['G_iid']['sample_std'] == pytest.approx(.01)
     assert effects['aggregate']['I_prefix']['mean'] == pytest.approx(0., abs=1e-15)
     assert len(list(csv.DictReader((tmp_path / 'final_multiseed.csv').open()))) == 18
-    distortions = list(csv.DictReader((tmp_path / 'mf_distortion.csv').open()))
+    distortions = list(csv.DictReader((tmp_path / 'paper_approx_mf_distortion.csv').open()))
     assert len(distortions) == 12
     for job, directory, _ in results:
         if CELLS[job['method']]['noise'] == 'iid':
             continue
         with np.load(directory / 'mechanism_trace.npz') as trace, np.load(directory / 'matrices.npz') as matrices:
-            expected = mf_distortion(trace['r_trace'], matrices['M'], matrices['W'])
+            expected = paper_approx_mf_distortion(trace['r_trace'], matrices['M'], matrices['W'])
         row = next(r for r in distortions if r['method'] == job['method'] and int(r['seed']) == job['seed'])
-        assert float(row['ratio_p50']) == pytest.approx(expected['ratio_p50'])
-        assert float(row['logabs_mean']) == pytest.approx(expected['logabs_mean'])
+        assert float(row['paper_approx_ratio_p50']) == pytest.approx(expected['paper_approx_ratio_p50'])
+        assert float(row['paper_approx_logabs_mean']) == pytest.approx(expected['paper_approx_logabs_mean'])
     mechanisms = json.loads((tmp_path / 'mechanism_summary.json').read_text())
     assert len(mechanisms['pairs']) == 3 and len(mechanisms['cells']) == 6
     for method, cell in mechanisms['cells'].items():
         assert all(key in cell for key in ('top1_mean', 'top1_std', 'r_cv_mean', 'r_anisotropy_mean', 'temporal_drift_mean'))
         assert cell['temporal_drift_mean'] == pytest.approx(.02 if CELLS[method]['geometry'] == 'scale' else .2)
-        assert ('mf_distortion_logabs_mean' in cell) == (CELLS[method]['noise'] != 'iid')
+        assert (cell['paper_approx_logabs_mean'] is not None) == (CELLS[method]['noise'] != 'iid')
+    assert effects['comparison'] == final['comparison'] == 'tuned_system_effects'
+    assert len(list(csv.DictReader((tmp_path / 'frozen_v_mf_distortion.csv').open()))) == 12
+    assert len(list(csv.DictReader((tmp_path / 'mf_cancellation_efficiency.csv').open()))) == 12
+    # Reuse the nine Scale artifacts, and add only nine paired Standard trials.
+    import shutil
+    from exp2.cells import matched_final_trials, matched_search_trials, FAMILIES
+    targets = dict.fromkeys(FAMILIES, .25)
+    candidates = [(j, Path(j['name']), dict(epochs=[dict(epoch=e, clip_fraction=.25)
+                  for e in range(1, 6)])) for j in matched_search_trials(chosen)]
+    matched_configs = sweep.select_matched_configs(candidates, targets)
+    matched = []
+    for job in matched_final_trials(matched_configs):
+        standard = job['method'].removesuffix('_matched')
+        source = next(r for r in results if r[0]['method'] == standard and r[0]['seed'] == job['seed'])
+        directory = tmp_path / job['name']
+        directory.mkdir(parents=True)
+        for filename in ('mechanism_trace.npz', 'matrices.npz', 'mechanism_metrics.csv', 'train_order.npy', 'config.yaml'):
+            shutil.copy2(source[1] / filename, directory / filename)
+        summary = copy.deepcopy(source[2])
+        summary['final']['test_top1'] += .01
+        matched.append((job, directory, summary))
+    sweep.aggregate_matched(results, matched, matched_configs, targets, tmp_path)
+    paired = list(csv.DictReader((tmp_path / 'matched_multiseed.csv').open()))
+    assert len(paired) == 18
+    assert sum(row['method'].endswith('_matched') for row in paired) == 9
+    matched_effects = json.loads((tmp_path / 'matched_effects.json').read_text())
+    assert matched_effects['comparison'] == 'matched-clipping geometry comparison'
+    assert matched_effects['scale_trials_reused'] is True
+    assert matched_effects['aggregate']['G_iid_matched']['mean'] == pytest.approx(.02)
+    assert matched_effects['aggregate']['I_prefix_matched']['mean'] == pytest.approx(0., abs=1e-15)
+    mechanisms = json.loads((tmp_path / 'mechanism_summary.json').read_text())
+    assert len(mechanisms['cells']) == 9
+    assert mechanisms['cells']['iid_standard_matched']['frozen_v_ratio_median'] is None
+    assert len(list(csv.DictReader((tmp_path / 'frozen_v_mf_distortion.csv').open()))) == 18
+    assert 'innovation_std_sum' in mechanisms['mf_cancellation_efficiency_baseline']
+    matched[0][2]['augmentation_trace_sha256'] = ['different']
+    with pytest.raises(AssertionError):
+        sweep.verify_pairing(results + matched, set(CELLS) | set(matched_configs))
     # Saved artifacts must fail verification if pairing breaks.
     results[1][2]['initialization_sha256'] = 'wrong'
     with pytest.raises(AssertionError):
@@ -416,10 +465,12 @@ def test_final_aggregation_actual_trial_matrices_and_paired_statistics(tmp_path)
 
 def test_completed_validation_rejects_incomplete_and_conflicting_trial(tmp_path):
     job = final_trials(configs())[0]
-    with pytest.raises(FileNotFoundError):
+    with pytest.raises(RuntimeError, match='Incomplete trial directory'):
         sweep.read_completed(tmp_path, job, ROOT / 'exp2/config.yaml')
     summary = dict(status='completed', smoke=False, method=job['method'], seed=job['seed'],
                    lr=job['lr'] * 2, max_grad_norm=job['max_grad_norm'], eps_scale=None, num_bands=None)
+    for name in sweep.TRIAL_FILES:
+        (tmp_path / name).touch()
     (tmp_path / 'summary.json').write_text(json.dumps(summary))
     with pytest.raises(AssertionError):
         sweep.read_completed(tmp_path, job, ROOT / 'exp2/config.yaml')

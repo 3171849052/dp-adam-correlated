@@ -16,7 +16,7 @@
   "noise_steps": 1,
   "bandinvmf_steps": 1,
   "planned_total_steps": 250,
-  "augmentation_first_batch_sha256": [
+  "augmentation_trace_sha256": [
     "8b976967b7bb6277dee7d2786dbd1b07d5791ad51865b258b13b1afc73d67aeb"
   ],
   "physical_batches": 4,
@@ -45,7 +45,8 @@
     "noise_std": 0.0017095501675135814,
     "noise_std_space": "gradient",
     "innovation_std_sum": 1.7095501675135814,
-    "seconds": 24.000452685169876
+    "augmentation_trace_sha256": "8b976967b7bb6277dee7d2786dbd1b07d5791ad51865b258b13b1afc73d67aeb",
+    "seconds": 23.743775161914527
   },
   "epochs": [
     {
@@ -64,8 +65,9 @@
       "noise_std": 0.0017095501675135814,
       "noise_std_space": "gradient",
       "innovation_std_sum": 1.7095501675135814,
-      "seconds": 24.000452685169876
+      "augmentation_trace_sha256": "8b976967b7bb6277dee7d2786dbd1b07d5791ad51865b258b13b1afc73d67aeb",
+      "seconds": 23.743775161914527
     }
   ],
-  "wall_seconds": 27.876562976278365
+  "wall_seconds": 27.968277196399868
 }

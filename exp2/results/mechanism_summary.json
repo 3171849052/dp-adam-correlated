@@ -1,0 +1,147 @@
+{
+  "cells": {
+    "iid_scale": {
+      "top1_mean": 0.5837,
+      "top1_std": 0.03566062254083623,
+      "r_cv_mean": 0.16078210750057445,
+      "r_anisotropy_mean": 1.307613997514586,
+      "temporal_drift_mean": 0.00975058006958208,
+      "paper_approx_ratio_median": null,
+      "paper_approx_logabs_mean": null,
+      "frozen_v_ratio_median": null,
+      "frozen_v_logabs_mean": null,
+      "mf_cancellation_efficiency_median": null
+    },
+    "iid_standard": {
+      "top1_mean": 0.5779333333333333,
+      "top1_std": 0.03527567622786747,
+      "r_cv_mean": 0.15910114717206184,
+      "r_anisotropy_mean": 1.3132912019287744,
+      "temporal_drift_mean": 0.009586631024736099,
+      "paper_approx_ratio_median": null,
+      "paper_approx_logabs_mean": null,
+      "frozen_v_ratio_median": null,
+      "frozen_v_logabs_mean": null,
+      "mf_cancellation_efficiency_median": null
+    },
+    "iid_standard_matched": {
+      "top1_mean": 0.5824666666666667,
+      "top1_std": 0.03518583995492128,
+      "r_cv_mean": 0.16189990109669455,
+      "r_anisotropy_mean": 1.3132966080106867,
+      "temporal_drift_mean": 0.00958672253885738,
+      "paper_approx_ratio_median": null,
+      "paper_approx_logabs_mean": null,
+      "frozen_v_ratio_median": null,
+      "frozen_v_logabs_mean": null,
+      "mf_cancellation_efficiency_median": null
+    },
+    "momentum_scale": {
+      "top1_mean": 0.7298666666666667,
+      "top1_std": 0.023208044582285117,
+      "r_cv_mean": 0.13822851309476616,
+      "r_anisotropy_mean": 1.352733709353453,
+      "temporal_drift_mean": 0.010430791307110549,
+      "paper_approx_ratio_median": 2.540207631953529,
+      "paper_approx_logabs_mean": 1.1445463987534101,
+      "frozen_v_ratio_median": 1.4611366689940164,
+      "frozen_v_logabs_mean": 0.7073673793624461,
+      "mf_cancellation_efficiency_median": 0.15513261900920183
+    },
+    "momentum_standard": {
+      "top1_mean": 0.7088333333333333,
+      "top1_std": 0.029171447227268905,
+      "r_cv_mean": 0.14621482255985363,
+      "r_anisotropy_mean": 1.385302089156833,
+      "temporal_drift_mean": 0.009657909578733954,
+      "paper_approx_ratio_median": 2.123500687895766,
+      "paper_approx_logabs_mean": 1.022592960137546,
+      "frozen_v_ratio_median": 1.7560395300237857,
+      "frozen_v_logabs_mean": 0.7985474133923812,
+      "mf_cancellation_efficiency_median": 0.1864432103834864
+    },
+    "momentum_standard_matched": {
+      "top1_mean": 0.7203,
+      "top1_std": 0.02392739016274024,
+      "r_cv_mean": 0.14637397457794407,
+      "r_anisotropy_mean": 1.385303890144533,
+      "temporal_drift_mean": 0.009657932032122897,
+      "paper_approx_ratio_median": 2.1235141958957993,
+      "paper_approx_logabs_mean": 1.022597237979228,
+      "frozen_v_ratio_median": 1.7560238282614034,
+      "frozen_v_logabs_mean": 0.7985501264407283,
+      "mf_cancellation_efficiency_median": 0.18644154328719548
+    },
+    "prefix_scale": {
+      "top1_mean": 0.7356,
+      "top1_std": 0.01097406032423736,
+      "r_cv_mean": 0.13867550018351774,
+      "r_anisotropy_mean": 1.335828221449387,
+      "temporal_drift_mean": 0.00971755961807233,
+      "paper_approx_ratio_median": 1.0805586882056841,
+      "paper_approx_logabs_mean": 0.2217864246171309,
+      "frozen_v_ratio_median": 1.0875727019692718,
+      "frozen_v_logabs_mean": 0.2600199963928506,
+      "mf_cancellation_efficiency_median": 0.3770011784728727
+    },
+    "prefix_standard": {
+      "top1_mean": 0.7268666666666667,
+      "top1_std": 0.013824012924376718,
+      "r_cv_mean": 0.14106446314785448,
+      "r_anisotropy_mean": 1.3465535475429284,
+      "temporal_drift_mean": 0.009568126290199803,
+      "paper_approx_ratio_median": 1.063951338746828,
+      "paper_approx_logabs_mean": 0.2164540540698808,
+      "frozen_v_ratio_median": 1.1393926119480482,
+      "frozen_v_logabs_mean": 0.2901900453796144,
+      "mf_cancellation_efficiency_median": 0.39496426921152616
+    },
+    "prefix_standard_matched": {
+      "top1_mean": 0.7331,
+      "top1_std": 0.011558114033007251,
+      "r_cv_mean": 0.141480500587204,
+      "r_anisotropy_mean": 1.346548234614856,
+      "temporal_drift_mean": 0.009568264026436265,
+      "paper_approx_ratio_median": 1.0639552691966792,
+      "paper_approx_logabs_mean": 0.21645949872246759,
+      "frozen_v_ratio_median": 1.1393611247323208,
+      "frozen_v_logabs_mean": 0.2901945202062383,
+      "mf_cancellation_efficiency_median": 0.3949533543389715
+    }
+  },
+  "pairs": {
+    "iid": [
+      "iid_standard",
+      "iid_scale"
+    ],
+    "prefix": [
+      "prefix_standard",
+      "prefix_scale"
+    ],
+    "momentum": [
+      "momentum_standard",
+      "momentum_scale"
+    ]
+  },
+  "matched_pairs": {
+    "iid": [
+      "iid_standard_matched",
+      "iid_scale"
+    ],
+    "prefix": [
+      "prefix_standard_matched",
+      "prefix_scale"
+    ],
+    "momentum": [
+      "momentum_standard_matched",
+      "momentum_scale"
+    ]
+  },
+  "diagnostic_scope": "2048 fixed sampled coordinates; full observed trajectory and saved M",
+  "paper_approx_mf_distortion": "paper-style approximation; not exact Adam Jacobian",
+  "frozen_v_mf_distortion": "frozen-observed-v linearized noise operator; holds observed second-moment trajectory fixed; excludes infinitesimal noise feedback into future v; not exact Adam Jacobian",
+  "mf_cancellation_efficiency_baseline": "K_iid_q = r_rms_q * L @ A @ (innovation_std_sum * I); r_rms_q = sqrt(mean((p_q/s_q)^2)); identity temporal transform, with the same trial privacy-calibrated innovation_std_sum and T * innovation_std_sum^2 pre-transform innovation energy. No new IID privacy calibration and no matching of post-transform output energy. Common lr/logical_batch_size cancels in ratios. Lower = more effective temporal noise cancellation.",
+  "aggregation": "equal trial means of step metrics; drift excludes first step; ratios are median of trial medians",
+  "top1_units": "fraction",
+  "top1_std": "sample std across three seeds (ddof=1)"
+}

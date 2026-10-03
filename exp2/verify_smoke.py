@@ -36,21 +36,25 @@ def main():
         assert all(int(state[index]['step']) == 1 for index in parameters)
         with np.load(directory / 'mechanism_trace.npz') as trace:
             indices = trace['coordinate_indices']
-            assert trace['r_trace'].shape == trace['s_trace'].shape == (1, 2048)
+            assert trace['p_trace'].shape == trace['r_trace'].shape == trace['s_trace'].shape == (1, 2048)
             scale = 10. if cell['geometry'] == 'scale' else 1.
             np.testing.assert_array_equal(trace['s_trace'], np.full((1, 2048), scale))
-            expected_r = 1 / (np.sqrt(vhat[indices]) + 1e-8) / scale
+            expected_p = 1 / (np.sqrt(vhat[indices]) + 1e-8)
+            expected_r = expected_p / scale
+            np.testing.assert_allclose(trace['p_trace'][0], expected_p, rtol=2e-6)
             np.testing.assert_allclose(trace['r_trace'][0], expected_r, rtol=2e-6)
-            assert np.isfinite(trace['r_trace']).all()
+            np.testing.assert_allclose(trace['r_trace'], trace['p_trace'] / trace['s_trace'], rtol=1e-6)
+            for key in ('p_trace', 's_trace', 'r_trace'):
+                assert np.isfinite(trace[key]).all()
         results.append((dict(method=method, seed=FINAL_SEEDS[0]), directory, summary))
     verify_pairing(results)
     save_json(base / 'smoke_verification.json', dict(status='passed', trials=6,
         logical_steps_per_trial=1, train_examples_per_trial=1000,
         checkpoint_sha256=results[0][2]['pretrained_checkpoint_sha256'],
-        checks=['one noise and Adam output per 4 physical batches', 'saved current r matches completed Adam state',
+        checks=['one noise and Adam output per 4 physical batches', 'saved current p/s/r matches completed Adam state',
                 'previous vhat_0 gives Scale s=10', 'actual M/W match noise coefficients and workload',
-                'paired backbone/classifier/model/order/augmentation fingerprints/coordinates']))
-    print('PASS: 6 smoke trials; physical 250 × 4; one noise/Adam step; paired artifacts and r/M/W verified.')
+                'paired backbone/classifier/model/order/rolling augmentation hash/coordinates']))
+    print('PASS: 6 smoke trials; physical 250 × 4; one noise/Adam step; paired artifacts and p/s/r/M/W verified.')
 
 
 if __name__ == '__main__':

@@ -22,11 +22,29 @@ from exp2.bandinvmf import BandInvMFNoise, build_matrices, materialize
 from exp2.model import pretrained_vit, initialization_digest
 from exp2.privacy import calibrate, epsilon_from_mu, fixed_epoch_sensitivity
 from exp2.diagnostics import MechanismTrace
-from exp2.cells import CELLS
+from exp2.cells import CELLS, FAMILIES, cell_for
 from exp2.scale import LogicalBatch, ScaledGhostModule, clipped_microbatch
 
 ROOT = Path(__file__).resolve().parents[1]
-METHODS = tuple(CELLS)
+METHODS = tuple(CELLS) + tuple(f'{family}_standard_matched' for family in FAMILIES)
+
+
+class AugmentationTrace:
+    """Hash four CPU transformed examples from the start of every logical batch."""
+    def __init__(self, accumulation):
+        self.accumulation = accumulation
+        self.physical_batches = 0
+        self.digest = hashlib.sha256()
+
+    def update(self, inputs):
+        if self.physical_batches % self.accumulation == 0:
+            assert inputs.device.type == 'cpu'
+            self.digest.update(inputs[:4].contiguous().numpy().tobytes())
+        self.physical_batches += 1
+
+    def hexdigest(self):
+        assert self.physical_batches % self.accumulation == 0
+        return self.digest.hexdigest()
 
 
 def load_config(path):
@@ -95,7 +113,7 @@ def run(args):
     torch.set_num_threads(2)
     device = torch.device('cuda:0')
     torch.cuda.set_device(device)
-    cell = CELLS[args.method]
+    cell = cell_for(args.method)
     scaled = cell['geometry'] == 'scale'
     result_dir = args.result_dir or (ROOT / 'exp2/results' / ('smoke' if args.smoke else '') / args.method)
     result_dir = result_dir.resolve()
@@ -113,7 +131,8 @@ def run(args):
     head_digest = initialization_digest(model.head)
     model = model.to(device)
     if result_dir.exists():
-        assert {p.name for p in result_dir.iterdir()} == {'train.log'}, f'Refusing to overwrite: {result_dir}'
+        if {p.name for p in result_dir.iterdir()} != {'train.log'}:
+            raise RuntimeError(f'Incomplete trial directory: {result_dir}\nRemove it manually before restarting.')
     else:
         result_dir.mkdir(parents=True)
     coefficients, strategy, workload = build_matrices(
@@ -132,7 +151,8 @@ def run(args):
                     fixed_epoch_order=True, download=False,
                     augmentation_rng_convention='seeded train DataLoader generator + torch worker seeds; fixed permutation each epoch',
                     diagnostic_coordinates=2048, coordinate_seed=0,
-                    mechanism_note='r is a sampled linearized effective noise multiplier, not an exact Adam Jacobian or variance',
+                    mechanism_note='p from completed current vhat; s is actual previous-vhat scale; r=p/s; not exact Adam Jacobian',
+                    augmentation_trace_convention='rolling SHA256 of first 4 CPU transformed examples of every logical batch, reset each epoch',
                     dtype='float32', privacy_calibration=privacy,
                     noising_coefficients=coefficients.tolist(),
                     versions={package: version(package) for package in
@@ -191,7 +211,7 @@ def run(args):
     fields = ['epoch', 'logical_steps', 'train_examples', 'train_loss', 'test_loss',
               'test_top1', 'clip_fraction', 'gdp_mu', 'gdp_epsilon', 'target_mu',
               'target_epsilon', 'delta', 'noise_std', 'noise_std_space',
-              'innovation_std_sum', 'seconds']
+              'innovation_std_sum', 'augmentation_trace_sha256', 'seconds']
     records = []
     augmentation_digests = []
     with open(result_dir / 'metrics.csv', 'w', newline='') as f:
@@ -201,9 +221,9 @@ def run(args):
             epoch_start = time.monotonic()
             model.train()
             loss_sum, clipped_count, count = 0.0, 0, 0
+            augmentation_trace = AugmentationTrace(config['gradient_accumulation'])
             for inputs, targets in train_loader:
-                if count == 0:
-                    augmentation_digests.append(hashlib.sha256(inputs[:4].numpy().tobytes()).hexdigest())
+                augmentation_trace.update(inputs)
                 inputs, targets = inputs.to(device), targets.to(device)
                 logical.begin_microbatch()
                 loss, clipped = clipped_microbatch(model, inputs, targets,
@@ -222,6 +242,7 @@ def run(args):
             mu = config['privacy']['max_grad_norm'] * sens / privacy['innovation_std_sum']
             epsilon = epsilon_from_mu(mu, config['privacy']['delta'])
             assert noise.step_count == logical.optimizer_steps
+            augmentation_digests.append(augmentation_trace.hexdigest())
             record = dict(epoch=epoch + 1, logical_steps=logical.optimizer_steps,
                           train_examples=count, train_loss=loss_sum/count,
                           test_loss=test_loss, test_top1=top1,
@@ -233,6 +254,7 @@ def run(args):
                           noise_std=noise.marginal_std(logical.optimizer_steps - 1)/config['logical_batch_size'],
                           noise_std_space='scaled' if scaled else 'gradient',
                           innovation_std_sum=privacy['innovation_std_sum'],
+                          augmentation_trace_sha256=augmentation_digests[-1],
                           seconds=time.monotonic() - epoch_start)
             records.append(record)
             writer.writerow(record)
@@ -253,7 +275,7 @@ def run(args):
                    noise_steps=noise.step_count,
                    bandinvmf_steps=noise.step_count if cell['noise'] != 'iid' else 0,
                    planned_total_steps=config['total_steps'],
-                   augmentation_first_batch_sha256=augmentation_digests,
+                   augmentation_trace_sha256=augmentation_digests,
                    physical_batches=logical.optimizer_steps * config['gradient_accumulation'],
                    calibration=privacy, final=records[-1], epochs=records,
                    wall_seconds=time.monotonic() - started)

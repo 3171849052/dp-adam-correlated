@@ -1,0 +1,92 @@
+seed: 20261001
+data_root: data
+epochs: 5
+dataset_size: 50000
+logical_batch_size: 1000
+physical_batch_size: 250
+num_workers: 2
+optimizer:
+  lr: 0.007
+  beta1: 0.9
+  beta2: 0.999
+  eps: 1.0e-08
+  weight_decay: 0.0
+privacy:
+  epsilon: 8.0
+  delta: 1.0e-05
+  max_grad_norm: 1.0
+  adjacency: add_remove_zero_out
+  sampling_amplification: false
+  k: 5
+  b_participation: 50
+bandinvmf:
+  num_bands: 4
+scale:
+  eps_scale: 0.1
+model:
+  architecture: vit_tiny_patch16_224
+  pretrained: true
+  num_classes: 100
+  image_size: 224
+gradient_accumulation: 4
+total_steps: 250
+method: prefix_standard
+geometry: standard
+noise: prefix_bandinvmf
+smoke: false
+visible_devices: '0'
+device_name: NVIDIA GeForce RTX 3080 Ti
+effective_epochs: 5
+effective_steps_per_epoch: 50
+initialization_sha256: 32174ab45c6778646193838fe7b8f83343d50d42359835e98c8a1c13b16a3cf7
+classifier_initialization_sha256: 94d86daf116060908048dcb9e9eaaf1b2e9575f5ff316459ae0fbd7ee237c592
+pretrained_checkpoint_sha256: fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed
+pretrained_cfg:
+  mean:
+  - 0.5
+  - 0.5
+  - 0.5
+  std:
+  - 0.5
+  - 0.5
+  - 0.5
+  crop_pct: 0.9
+  interpolation: bicubic
+  hf_hub_id: timm/vit_tiny_patch16_224.augreg_in21k_ft_in1k
+  checkpoint_path: cache/huggingface/hub/models--timm--vit_tiny_patch16_224.augreg_in21k_ft_in1k/snapshots/7d3afdd0cf93ad84d986eb2d6bcc5812ebd0b106/model.safetensors
+  checkpoint_sha256: fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed
+test_examples: 10000
+fixed_epoch_order: true
+download: false
+augmentation_rng_convention: seeded train DataLoader generator + torch worker seeds;
+  fixed permutation each epoch
+diagnostic_coordinates: 2048
+coordinate_seed: 0
+mechanism_note: p from completed current vhat; s is actual previous-vhat scale; r=p/s;
+  not exact Adam Jacobian
+augmentation_trace_convention: rolling SHA256 of first 4 CPU transformed examples
+  of every logical batch, reset each epoch
+dtype: float32
+privacy_calibration:
+  target_mu: 1.6660305978457184
+  sensitivity: 2.8481628876299
+  innovation_std_sum: 1.7095501675135814
+  adjacency: add_remove_zero_out
+  k: 5
+  b_participation: 50
+  sampling_amplification: false
+noising_coefficients:
+- 1.0
+- -0.5
+- -0.125
+- -0.0625
+versions:
+  torch: 2.13.0+cu126
+  torchvision: 0.28.0+cu126
+  opacus: 1.6.0
+  jax: 0.10.2
+  jax_privacy: 2.3.0.dev0
+  numpy: 2.4.4
+  scipy: 1.17.1
+  PyYAML: 6.0.3
+  timm: 1.0.29

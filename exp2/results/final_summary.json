@@ -1,0 +1,120 @@
+{
+  "comparison": "tuned_system_effects",
+  "cells": {
+    "iid_standard": {
+      "chosen_hyperparameters": {
+        "lr": 0.0005,
+        "max_grad_norm": 1.0
+      },
+      "seeds": [
+        20261011,
+        20261012,
+        20261013
+      ],
+      "top1_each_seed": [
+        0.6118,
+        0.5414,
+        0.5806
+      ],
+      "top1_mean": 0.5779333333333333,
+      "top1_std": 0.03527567622786747
+    },
+    "iid_scale": {
+      "chosen_hyperparameters": {
+        "lr": 0.0005,
+        "max_grad_norm": 100.0,
+        "eps_scale": 0.1
+      },
+      "seeds": [
+        20261011,
+        20261012,
+        20261013
+      ],
+      "top1_each_seed": [
+        0.6181,
+        0.5469,
+        0.5861
+      ],
+      "top1_mean": 0.5837,
+      "top1_std": 0.03566062254083623
+    },
+    "prefix_standard": {
+      "chosen_hyperparameters": {
+        "lr": 0.002,
+        "max_grad_norm": 1.0,
+        "num_bands": 4
+      },
+      "seeds": [
+        20261011,
+        20261012,
+        20261013
+      ],
+      "top1_each_seed": [
+        0.7395,
+        0.7121,
+        0.729
+      ],
+      "top1_mean": 0.7268666666666667,
+      "top1_std": 0.013824012924376718
+    },
+    "prefix_scale": {
+      "chosen_hyperparameters": {
+        "lr": 0.002,
+        "max_grad_norm": 200.0,
+        "eps_scale": 0.1,
+        "num_bands": 4
+      },
+      "seeds": [
+        20261011,
+        20261012,
+        20261013
+      ],
+      "top1_each_seed": [
+        0.7455,
+        0.7238,
+        0.7375
+      ],
+      "top1_mean": 0.7356,
+      "top1_std": 0.01097406032423736
+    },
+    "momentum_standard": {
+      "chosen_hyperparameters": {
+        "lr": 0.005,
+        "max_grad_norm": 1.0,
+        "num_bands": 4
+      },
+      "seeds": [
+        20261011,
+        20261012,
+        20261013
+      ],
+      "top1_each_seed": [
+        0.7297,
+        0.6755,
+        0.7213
+      ],
+      "top1_mean": 0.7088333333333333,
+      "top1_std": 0.029171447227268905
+    },
+    "momentum_scale": {
+      "chosen_hyperparameters": {
+        "lr": 0.005,
+        "max_grad_norm": 100.0,
+        "eps_scale": 0.1,
+        "num_bands": 4
+      },
+      "seeds": [
+        20261011,
+        20261012,
+        20261013
+      ],
+      "top1_each_seed": [
+        0.7476,
+        0.7036,
+        0.7384
+      ],
+      "top1_mean": 0.7298666666666667,
+      "top1_std": 0.023208044582285117
+    }
+  }
+}
