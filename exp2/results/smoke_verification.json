@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "trials": 6,
+  "logical_steps_per_trial": 1,
+  "train_examples_per_trial": 1000,
+  "checkpoint_sha256": "fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed",
+  "checks": [
+    "one noise and Adam output per 4 physical batches",
+    "saved current r matches completed Adam state",
+    "previous vhat_0 gives Scale s=10",
+    "actual M/W match noise coefficients and workload",
+    "paired backbone/classifier/model/order/augmentation fingerprints/coordinates"
+  ]
+}

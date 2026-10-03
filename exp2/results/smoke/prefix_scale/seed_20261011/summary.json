@@ -1,0 +1,71 @@
+{
+  "method": "prefix_scale",
+  "geometry": "scale",
+  "noise": "prefix_bandinvmf",
+  "smoke": true,
+  "status": "completed",
+  "lr": 0.002,
+  "eps_scale": 0.1,
+  "max_grad_norm": 200.0,
+  "seed": 20261011,
+  "initialization_sha256": "5e739eccb2e49a92566729de108795c632ddc338952fd340009da64cc5f03767",
+  "classifier_initialization_sha256": "20bdedd702aabb61443d1c4e5c93dbd738189541892f59c3149ed1db8bb7e754",
+  "pretrained_checkpoint_sha256": "fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed",
+  "num_bands": 4,
+  "optimizer_steps": 1,
+  "noise_steps": 1,
+  "bandinvmf_steps": 1,
+  "planned_total_steps": 250,
+  "augmentation_first_batch_sha256": [
+    "8b976967b7bb6277dee7d2786dbd1b07d5791ad51865b258b13b1afc73d67aeb"
+  ],
+  "physical_batches": 4,
+  "calibration": {
+    "target_mu": 1.6660305978457184,
+    "sensitivity": 2.8481628876299,
+    "innovation_std_sum": 341.91003350271626,
+    "adjacency": "add_remove_zero_out",
+    "k": 5,
+    "b_participation": 50,
+    "sampling_amplification": false
+  },
+  "final": {
+    "epoch": 1,
+    "logical_steps": 1,
+    "train_examples": 1000,
+    "train_loss": 5.155953735351562,
+    "test_loss": 5.081364135742188,
+    "test_top1": 0.0,
+    "clip_fraction": 1.0,
+    "gdp_mu": 0.5849491983346874,
+    "gdp_epsilon": 2.3760755443714783,
+    "target_mu": 1.6660305978457184,
+    "target_epsilon": 8.0,
+    "delta": 1e-05,
+    "noise_std": 0.34191003350271626,
+    "noise_std_space": "scaled",
+    "innovation_std_sum": 341.91003350271626,
+    "seconds": 24.173043829388916
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "logical_steps": 1,
+      "train_examples": 1000,
+      "train_loss": 5.155953735351562,
+      "test_loss": 5.081364135742188,
+      "test_top1": 0.0,
+      "clip_fraction": 1.0,
+      "gdp_mu": 0.5849491983346874,
+      "gdp_epsilon": 2.3760755443714783,
+      "target_mu": 1.6660305978457184,
+      "target_epsilon": 8.0,
+      "delta": 1e-05,
+      "noise_std": 0.34191003350271626,
+      "noise_std_space": "scaled",
+      "innovation_std_sum": 341.91003350271626,
+      "seconds": 24.173043829388916
+    }
+  ],
+  "wall_seconds": 28.208097234368324
+}
