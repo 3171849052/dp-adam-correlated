@@ -1,0 +1,28 @@
+bandinvmf:
+  num_bands: 3
+data_root: data
+dataset_size: 50000
+epochs: 5
+logical_batch_size: 1000
+model:
+  architecture: vit_tiny_patch16_224
+  image_size: 224
+  num_classes: 100
+  pretrained: true
+num_workers: 2
+optimizer:
+  beta1: 0.9
+  beta2: 0.999
+  eps: 1.0e-08
+  lr: 0.001
+  weight_decay: 0.0
+physical_batch_size: 250
+privacy:
+  adjacency: add_remove_zero_out
+  delta: 1.0e-05
+  epsilon: 8.0
+  max_grad_norm: 1.0
+  sampling_amplification: false
+scale:
+  eps_scale: 0.1
+seed: 20261001

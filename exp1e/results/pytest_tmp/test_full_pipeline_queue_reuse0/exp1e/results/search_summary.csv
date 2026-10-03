@@ -1,0 +1,10 @@
+stage,method,seed,lr,eps_scale,max_grad_norm,num_bands,final_test_top1,train_loss,initialization_sha256,result_dir
+stage1,dp_adam_bandinvmf_scale,20261001,0.001,0.1,100.0,4,0.3,1.0,20261001,/media/data/data/lt/dp-adam-correlated/exp1e/results/pytest_tmp/test_full_pipeline_queue_reuse0/exp1e/results/search/stage1/clip_100
+stage1,dp_adam_bandinvmf_scale,20261001,0.001,0.1,150.0,4,0.3,1.0,20261001,/media/data/data/lt/dp-adam-correlated/exp1e/results/pytest_tmp/test_full_pipeline_queue_reuse0/exp1e/results/search/stage1/clip_150
+stage1,dp_adam_bandinvmf_scale,20261001,0.001,0.1,200.0,4,0.3,1.0,20261001,/media/data/data/lt/dp-adam-correlated/exp1e/results/pytest_tmp/test_full_pipeline_queue_reuse0/exp1e/results/search/stage1/clip_200
+stage1,dp_adam_bandinvmf_scale,20261001,0.001,0.1,300.0,4,0.3,1.0,20261001,/media/data/data/lt/dp-adam-correlated/exp1e/results/pytest_tmp/test_full_pipeline_queue_reuse0/exp1e/results/search/stage1/clip_300
+stage1,dp_adam_bandinvmf_scale,20261001,0.001,0.1,500.0,4,0.3,1.0,20261001,/media/data/data/lt/dp-adam-correlated/exp1e/results/pytest_tmp/test_full_pipeline_queue_reuse0/exp1e/results/search/stage1/clip_500
+stage2,dp_adam_bandinvmf_scale,20261001,0.0005,0.1,100.0,4,0.2,1.0,20261001,/media/data/data/lt/dp-adam-correlated/exp1e/results/pytest_tmp/test_full_pipeline_queue_reuse0/exp1e/results/search/stage2/lr_0.0005
+stage2,dp_adam_bandinvmf_scale,20261001,0.002,0.1,100.0,4,0.2,1.0,20261001,/media/data/data/lt/dp-adam-correlated/exp1e/results/pytest_tmp/test_full_pipeline_queue_reuse0/exp1e/results/search/stage2/lr_0.002
+stage2,dp_adam_bandinvmf_scale,20261001,0.003,0.1,100.0,4,0.2,1.0,20261001,/media/data/data/lt/dp-adam-correlated/exp1e/results/pytest_tmp/test_full_pipeline_queue_reuse0/exp1e/results/search/stage2/lr_0.003
+stage2,dp_adam_bandinvmf_scale,20261001,0.001,0.1,100.0,4,0.3,1.0,20261001,/media/data/data/lt/dp-adam-correlated/exp1e/results/pytest_tmp/test_full_pipeline_queue_reuse0/exp1e/results/search/stage1/clip_100

@@ -1,0 +1,120 @@
+[
+  {
+    "method": "adam",
+    "chosen_hyperparameters": {
+      "lr": 0.0003
+    },
+    "seeds": [
+      20261011,
+      20261012,
+      20261013
+    ],
+    "test_top1_each_seed": [
+      0.8398,
+      0.8389,
+      0.8306
+    ],
+    "test_top1_mean": 0.8364333333333334,
+    "test_top1_std": 0.005071817557181372,
+    "train_loss_each_seed": [
+      0.8867429122924805,
+      0.8905005868530274,
+      0.8879500643920898
+    ],
+    "train_loss_mean": 0.8883978545125325,
+    "train_loss_std": 0.0019184411692100148,
+    "epsilon": null,
+    "delta": null,
+    "num_bands": null
+  },
+  {
+    "method": "dp_adam",
+    "chosen_hyperparameters": {
+      "lr": 0.0005,
+      "max_grad_norm": 1.0
+    },
+    "seeds": [
+      20261011,
+      20261012,
+      20261013
+    ],
+    "test_top1_each_seed": [
+      0.6118,
+      0.5414,
+      0.5806
+    ],
+    "test_top1_mean": 0.5779333333333333,
+    "test_top1_std": 0.03527567622786747,
+    "train_loss_each_seed": [
+      1.9638276696777344,
+      2.1815330859375,
+      2.0646888665771486
+    ],
+    "train_loss_mean": 2.070016540730794,
+    "train_loss_std": 0.10895044814559068,
+    "epsilon": 8.0,
+    "delta": 1e-05,
+    "num_bands": null
+  },
+  {
+    "method": "dp_adam_bandinvmf_momentum",
+    "chosen_hyperparameters": {
+      "lr": 0.005,
+      "max_grad_norm": 1.0,
+      "num_bands": 4
+    },
+    "seeds": [
+      20261011,
+      20261012,
+      20261013
+    ],
+    "test_top1_each_seed": [
+      0.7297,
+      0.6755,
+      0.7213
+    ],
+    "test_top1_mean": 0.7088333333333333,
+    "test_top1_std": 0.029171447227268905,
+    "train_loss_each_seed": [
+      1.4979929345703125,
+      1.6637526428222655,
+      1.5180042498779296
+    ],
+    "train_loss_mean": 1.5599166090901693,
+    "train_loss_std": 0.09047958118269007,
+    "epsilon": 8.0,
+    "delta": 1e-05,
+    "num_bands": 4
+  },
+  {
+    "method": "dp_adam_bandinvmf_scale",
+    "chosen_hyperparameters": {
+      "lr": 0.002,
+      "max_grad_norm": 200.0,
+      "eps_scale": 0.1,
+      "num_bands": 4
+    },
+    "seeds": [
+      20261011,
+      20261012,
+      20261013
+    ],
+    "test_top1_each_seed": [
+      0.7455,
+      0.7238,
+      0.7375
+    ],
+    "test_top1_mean": 0.7356,
+    "test_top1_std": 0.01097406032423736,
+    "train_loss_each_seed": [
+      1.4092803356933594,
+      1.5046984582519531,
+      1.4314079663085937
+    ],
+    "train_loss_mean": 1.4484622534179687,
+    "train_loss_std": 0.04994287796831947,
+    "epsilon": 8.0,
+    "delta": 1e-05,
+    "num_bands": 4
+  }
+]

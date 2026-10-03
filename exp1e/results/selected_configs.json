@@ -1,0 +1,20 @@
+{
+  "adam": {
+    "lr": 0.0003
+  },
+  "dp_adam": {
+    "lr": 0.0005,
+    "max_grad_norm": 1.0
+  },
+  "dp_adam_bandinvmf_momentum": {
+    "lr": 0.005,
+    "max_grad_norm": 1.0,
+    "num_bands": 4
+  },
+  "dp_adam_bandinvmf_scale": {
+    "lr": 0.002,
+    "max_grad_norm": 200.0,
+    "eps_scale": 0.1,
+    "num_bands": 4
+  }
+}

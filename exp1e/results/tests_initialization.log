@@ -1,0 +1,11 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.15, pytest-9.1.1, pluggy-1.6.0
+cachedir: results/pytest_cache
+rootdir: /media/data/data/lt/dp-adam-correlated/exp1e
+configfile: pytest.ini
+plugins: hypothesis-6.163.0, anyio-4.14.2
+collected 13 items / 9 deselected / 4 selected
+
+exp1e/tests/test_experiment.py ....                                      [100%]
+
+======================= 4 passed, 9 deselected in 11.76s =======================
