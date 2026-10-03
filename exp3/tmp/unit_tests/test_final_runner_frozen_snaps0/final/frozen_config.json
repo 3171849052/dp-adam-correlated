@@ -1,0 +1,7 @@
+{
+  "nonprivate_hybrid": {"muon_lr": 0.01, "adam_lr": 0.0005, "max_grad_norm": 100},
+  "iid_dp_hybrid": {"muon_lr": 0.01, "adam_lr": 0.0005, "max_grad_norm": 100},
+  "mf_muon_standard": {"muon_lr": 0.01, "adam_lr": 0.0005, "max_grad_norm": 100},
+  "mf_muon_normscale": {"muon_lr": 0.01, "adam_lr": 0.0005, "max_grad_norm": 100, "lambda_parallel": 0.25},
+  "mf_muon_spectralscale": {"muon_lr": 0.01, "adam_lr": 0.0005, "max_grad_norm": 100, "kappa": 4, "rho": 0.1}
+}

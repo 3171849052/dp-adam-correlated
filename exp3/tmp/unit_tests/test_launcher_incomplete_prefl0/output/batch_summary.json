@@ -1,0 +1,48 @@
+{
+  "status": "failed",
+  "gpus": [
+    1,
+    2,
+    3
+  ],
+  "trials": [
+    {
+      "spec": {
+        "method": "mf_muon_standard",
+        "result_dir": "exp3/tmp/unit_tests/test_launcher_incomplete_prefl0/invalid",
+        "seed": 20261001,
+        "muon_lr": 0.01,
+        "adam_lr": 0.0005,
+        "max_grad_norm": 100.0,
+        "lambda_parallel": 1.0,
+        "kappa": 4.0,
+        "rho": 0.1,
+        "smoke": false,
+        "diagnostic_interval": 25,
+        "diagnostic_probes": 4
+      },
+      "reused": false,
+      "returncode": 1,
+      "error": "Incomplete trial: /media/data/data/lt/dp-adam-correlated/exp3/tmp/unit_tests/test_launcher_incomplete_prefl0/invalid; missing or empty config.yaml"
+    },
+    {
+      "spec": {
+        "method": "iid_dp_hybrid",
+        "result_dir": "exp3/tmp/unit_tests/test_launcher_incomplete_prefl0/pending",
+        "seed": 20261001,
+        "muon_lr": 0.01,
+        "adam_lr": 0.0005,
+        "max_grad_norm": 100.0,
+        "lambda_parallel": 1.0,
+        "kappa": 4.0,
+        "rho": 0.1,
+        "smoke": false,
+        "diagnostic_interval": 25,
+        "diagnostic_probes": 4
+      },
+      "status": "not_started",
+      "reused": false,
+      "returncode": null
+    }
+  ]
+}

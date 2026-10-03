@@ -1,0 +1,30 @@
+[
+  {
+    "method": "nonprivate_hybrid",
+    "seed": 20261001,
+    "muon_lr": 0.01,
+    "adam_lr": 0.0005,
+    "max_grad_norm": 100.0,
+    "lambda_parallel": 0.25,
+    "kappa": 4.0,
+    "rho": 0.1,
+    "smoke": true,
+    "diagnostic_interval": 1,
+    "diagnostic_probes": 2,
+    "result_dir": "exp3/results/smoke/nonprivate_hybrid"
+  },
+  {
+    "method": "iid_dp_hybrid",
+    "seed": 20261001,
+    "muon_lr": 0.01,
+    "adam_lr": 0.0005,
+    "max_grad_norm": 100.0,
+    "lambda_parallel": 0.25,
+    "kappa": 4.0,
+    "rho": 0.1,
+    "smoke": true,
+    "diagnostic_interval": 1,
+    "diagnostic_probes": 2,
+    "result_dir": "exp3/results/smoke/iid_dp_hybrid"
+  }
+]

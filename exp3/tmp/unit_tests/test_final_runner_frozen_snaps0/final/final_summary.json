@@ -1,0 +1,58 @@
+{
+  "status": "completed",
+  "paired": true,
+  "seeds": [
+    20261011,
+    20261012,
+    20261013
+  ],
+  "trials": 15,
+  "frozen_config_sha256": "9e38cb86b3ae3cff7dc6ed931aa240073856ee4428df86ec819f8210a40b6c3f",
+  "methods": {
+    "nonprivate_hybrid": {
+      "final_test_top1_mean": 0.20099999999999998,
+      "final_test_top1_sample_std": 0.0010000000000000009,
+      "per_seed": {
+        "20261013": 0.202,
+        "20261012": 0.201,
+        "20261011": 0.2
+      }
+    },
+    "iid_dp_hybrid": {
+      "final_test_top1_mean": 0.211,
+      "final_test_top1_sample_std": 0.0010000000000000009,
+      "per_seed": {
+        "20261013": 0.21200000000000002,
+        "20261012": 0.21100000000000002,
+        "20261011": 0.21000000000000002
+      }
+    },
+    "mf_muon_standard": {
+      "final_test_top1_mean": 0.221,
+      "final_test_top1_sample_std": 0.0010000000000000009,
+      "per_seed": {
+        "20261013": 0.222,
+        "20261012": 0.221,
+        "20261011": 0.22
+      }
+    },
+    "mf_muon_normscale": {
+      "final_test_top1_mean": 0.231,
+      "final_test_top1_sample_std": 0.0010000000000000009,
+      "per_seed": {
+        "20261013": 0.232,
+        "20261012": 0.231,
+        "20261011": 0.23
+      }
+    },
+    "mf_muon_spectralscale": {
+      "final_test_top1_mean": 0.24100000000000002,
+      "final_test_top1_sample_std": 0.0010000000000000009,
+      "per_seed": {
+        "20261013": 0.24200000000000002,
+        "20261012": 0.24100000000000002,
+        "20261011": 0.24000000000000002
+      }
+    }
+  }
+}

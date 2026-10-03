@@ -1,0 +1,10 @@
+{
+  "muon": {
+    "url": "https://raw.githubusercontent.com/KellerJordan/Muon/master/muon.py",
+    "checked_on": "2026-10-03",
+    "used": "NS5 coefficients (3.4445,-4.7750,2.0315); Frobenius normalization with 1e-7; EMA momentum .95; Nesterov lerp; shape factor sqrt(max(1,rows/cols))",
+    "numerical_choice": "FP32 consistently in actual optimizer and JVP; upstream uses BF16"
+  },
+  "local_design": ["exp2/model.py", "exp2/privacy.py", "exp2/bandinvmf.py", "exp2/scale.py"],
+  "independence": "exp3 holds its own copies and imports no exp1/exp2 modules"
+}
