@@ -1,0 +1,1318 @@
+{
+  "status": "completed",
+  "steps": 2,
+  "methods": [
+    "MF-Momentum",
+    "MF-Adam",
+    "MF-Adam-Scale",
+    "MF-Muon"
+  ],
+  "rows": 8,
+  "nonlinear_support": [
+    "blocks.0.attn.qkv.weight",
+    "blocks.0.attn.proj.weight",
+    "blocks.0.mlp.0.weight",
+    "blocks.0.mlp.2.weight",
+    "blocks.1.attn.qkv.weight",
+    "blocks.1.attn.proj.weight",
+    "blocks.1.mlp.0.weight",
+    "blocks.1.mlp.2.weight",
+    "blocks.2.attn.qkv.weight",
+    "blocks.2.attn.proj.weight",
+    "blocks.2.mlp.0.weight",
+    "blocks.2.mlp.2.weight",
+    "blocks.3.attn.qkv.weight",
+    "blocks.3.attn.proj.weight",
+    "blocks.3.mlp.0.weight",
+    "blocks.3.mlp.2.weight",
+    "blocks.4.attn.qkv.weight",
+    "blocks.4.attn.proj.weight",
+    "blocks.4.mlp.0.weight",
+    "blocks.4.mlp.2.weight",
+    "blocks.5.attn.qkv.weight",
+    "blocks.5.attn.proj.weight",
+    "blocks.5.mlp.0.weight",
+    "blocks.5.mlp.2.weight",
+    "blocks.6.attn.qkv.weight",
+    "blocks.6.attn.proj.weight",
+    "blocks.6.mlp.0.weight",
+    "blocks.6.mlp.2.weight",
+    "blocks.7.attn.qkv.weight",
+    "blocks.7.attn.proj.weight",
+    "blocks.7.mlp.0.weight",
+    "blocks.7.mlp.2.weight",
+    "blocks.8.attn.qkv.weight",
+    "blocks.8.attn.proj.weight",
+    "blocks.8.mlp.0.weight",
+    "blocks.8.mlp.2.weight",
+    "blocks.9.attn.qkv.weight",
+    "blocks.9.attn.proj.weight",
+    "blocks.9.mlp.0.weight",
+    "blocks.9.mlp.2.weight",
+    "blocks.10.attn.qkv.weight",
+    "blocks.10.attn.proj.weight",
+    "blocks.10.mlp.0.weight",
+    "blocks.10.mlp.2.weight",
+    "blocks.11.attn.qkv.weight",
+    "blocks.11.attn.proj.weight",
+    "blocks.11.mlp.0.weight",
+    "blocks.11.mlp.2.weight"
+  ],
+  "nonlinear_dimension": 6144,
+  "metric": "delta_u = complete noisy pre-LR update - complete clean pre-LR update; E_t=sum(delta_u); RMSE=sqrt(sum(E_t^2)/d)",
+  "cancellation": "per paired seed C_t=RMSE_MF/RMSE_IID; reported mean/std across replay seeds",
+  "relative_to_momentum": "mean(C_t_optimizer) / exact(C_t_momentum)",
+  "momentum": "exact row norms of W D and W, W=L H_0.9, T=250, num_bands=4; RMSE uses unit innovation scale",
+  "iid": "cancellation control only; exactly the MF innovation scale, no IID privacy calibration",
+  "adam_scale": "clean = q^S / S; common realized clipped signal; inverse S only on added noise",
+  "muon": "Nesterov beta=.95, Frobenius normalization, NS5, shape factor; only 48 hidden matrices",
+  "secondary": "parameter RMSE = pre-LR RMSE * fixed actual source LR; Momentum theoretical LR=1",
+  "sources": {
+    "MF-Adam": {
+      "status": "completed",
+      "source": "/media/data/data/lt/dp-adam-correlated/exp3b/results/smoke/momentum_standard/signals",
+      "source_manifest": {
+        "status": "completed",
+        "method": "momentum_standard",
+        "steps": 2,
+        "support": [
+          "blocks.0.attn.qkv.weight",
+          "blocks.0.attn.proj.weight",
+          "blocks.0.mlp.0.weight",
+          "blocks.0.mlp.2.weight",
+          "blocks.1.attn.qkv.weight",
+          "blocks.1.attn.proj.weight",
+          "blocks.1.mlp.0.weight",
+          "blocks.1.mlp.2.weight",
+          "blocks.2.attn.qkv.weight",
+          "blocks.2.attn.proj.weight",
+          "blocks.2.mlp.0.weight",
+          "blocks.2.mlp.2.weight",
+          "blocks.3.attn.qkv.weight",
+          "blocks.3.attn.proj.weight",
+          "blocks.3.mlp.0.weight",
+          "blocks.3.mlp.2.weight",
+          "blocks.4.attn.qkv.weight",
+          "blocks.4.attn.proj.weight",
+          "blocks.4.mlp.0.weight",
+          "blocks.4.mlp.2.weight",
+          "blocks.5.attn.qkv.weight",
+          "blocks.5.attn.proj.weight",
+          "blocks.5.mlp.0.weight",
+          "blocks.5.mlp.2.weight",
+          "blocks.6.attn.qkv.weight",
+          "blocks.6.attn.proj.weight",
+          "blocks.6.mlp.0.weight",
+          "blocks.6.mlp.2.weight",
+          "blocks.7.attn.qkv.weight",
+          "blocks.7.attn.proj.weight",
+          "blocks.7.mlp.0.weight",
+          "blocks.7.mlp.2.weight",
+          "blocks.8.attn.qkv.weight",
+          "blocks.8.attn.proj.weight",
+          "blocks.8.mlp.0.weight",
+          "blocks.8.mlp.2.weight",
+          "blocks.9.attn.qkv.weight",
+          "blocks.9.attn.proj.weight",
+          "blocks.9.mlp.0.weight",
+          "blocks.9.mlp.2.weight",
+          "blocks.10.attn.qkv.weight",
+          "blocks.10.attn.proj.weight",
+          "blocks.10.mlp.0.weight",
+          "blocks.10.mlp.2.weight",
+          "blocks.11.attn.qkv.weight",
+          "blocks.11.attn.proj.weight",
+          "blocks.11.mlp.0.weight",
+          "blocks.11.mlp.2.weight"
+        ],
+        "shapes": {
+          "blocks.0.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.0.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.0.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.0.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.1.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.1.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.1.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.1.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.2.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.2.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.2.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.2.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.3.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.3.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.3.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.3.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.4.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.4.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.4.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.4.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.5.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.5.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.5.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.5.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.6.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.6.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.6.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.6.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.7.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.7.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.7.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.7.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.8.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.8.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.8.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.8.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.9.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.9.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.9.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.9.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.10.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.10.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.10.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.10.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.11.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.11.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.11.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.11.mlp.2.weight": [
+            8,
+            16
+          ]
+        },
+        "dimension": 6144,
+        "coordinates": "post-clipping pre-noise average gradient",
+        "scale_signal": "g = q / S; q = S * clipped_sum / logical_batch_size",
+        "files": [
+          {
+            "file": "step_001.pt",
+            "sha256": "b9412255a117b041749198f8ad9b10fb7b3c06dd7409c99b68d238f6b8947007"
+          },
+          {
+            "file": "step_002.pt",
+            "sha256": "465abfe32f4c7721780e5e8e1dd071755ca45c585d7ed5f97fb0b5a0ae2bf32b"
+          }
+        ],
+        "coefficients": [
+          1.0,
+          -0.95,
+          -0.0012500000000000844,
+          -0.001187499999999897
+        ],
+        "innovation_std_sum": 4.713449632189119,
+        "innovation_std_gradient": 0.5891812040236398,
+        "logical_batch_size": 8,
+        "actual_lr": 0.005,
+        "source_seed": 20261001,
+        "source_noise_seed": 20261002,
+        "source_spec": {
+          "method": "momentum_standard",
+          "result_dir": "exp3b/results/smoke/momentum_standard",
+          "seed": 20261001,
+          "muon_lr": 0.006,
+          "adam_lr": 0.012,
+          "max_grad_norm": 1.0,
+          "lambda_parallel": 1.0,
+          "kappa": 4.0,
+          "rho": 0.1,
+          "lr": 0.005,
+          "eps_scale": 0.1,
+          "capture": true,
+          "smoke": true,
+          "data_root": "data",
+          "cache_root": "cache"
+        },
+        "initialization_sha256": "71fe9a6fb88065d33b5bbf98688b7f81d12f18cc0e46f7e162b1e0474ae6aaed",
+        "checkpoint_sha256": "fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed",
+        "initial_optimizer_state": "zero",
+        "smoke": true
+      },
+      "replay_seeds": [
+        20261101,
+        20261102,
+        20261103,
+        20261104,
+        20261105,
+        20261106,
+        20261107,
+        20261108
+      ],
+      "steps": 2,
+      "support_count": 48,
+      "support": [
+        "blocks.0.attn.qkv.weight",
+        "blocks.0.attn.proj.weight",
+        "blocks.0.mlp.0.weight",
+        "blocks.0.mlp.2.weight",
+        "blocks.1.attn.qkv.weight",
+        "blocks.1.attn.proj.weight",
+        "blocks.1.mlp.0.weight",
+        "blocks.1.mlp.2.weight",
+        "blocks.2.attn.qkv.weight",
+        "blocks.2.attn.proj.weight",
+        "blocks.2.mlp.0.weight",
+        "blocks.2.mlp.2.weight",
+        "blocks.3.attn.qkv.weight",
+        "blocks.3.attn.proj.weight",
+        "blocks.3.mlp.0.weight",
+        "blocks.3.mlp.2.weight",
+        "blocks.4.attn.qkv.weight",
+        "blocks.4.attn.proj.weight",
+        "blocks.4.mlp.0.weight",
+        "blocks.4.mlp.2.weight",
+        "blocks.5.attn.qkv.weight",
+        "blocks.5.attn.proj.weight",
+        "blocks.5.mlp.0.weight",
+        "blocks.5.mlp.2.weight",
+        "blocks.6.attn.qkv.weight",
+        "blocks.6.attn.proj.weight",
+        "blocks.6.mlp.0.weight",
+        "blocks.6.mlp.2.weight",
+        "blocks.7.attn.qkv.weight",
+        "blocks.7.attn.proj.weight",
+        "blocks.7.mlp.0.weight",
+        "blocks.7.mlp.2.weight",
+        "blocks.8.attn.qkv.weight",
+        "blocks.8.attn.proj.weight",
+        "blocks.8.mlp.0.weight",
+        "blocks.8.mlp.2.weight",
+        "blocks.9.attn.qkv.weight",
+        "blocks.9.attn.proj.weight",
+        "blocks.9.mlp.0.weight",
+        "blocks.9.mlp.2.weight",
+        "blocks.10.attn.qkv.weight",
+        "blocks.10.attn.proj.weight",
+        "blocks.10.mlp.0.weight",
+        "blocks.10.mlp.2.weight",
+        "blocks.11.attn.qkv.weight",
+        "blocks.11.attn.proj.weight",
+        "blocks.11.mlp.0.weight",
+        "blocks.11.mlp.2.weight"
+      ],
+      "dimension": 6144,
+      "paired_noise": "MF = D z, IID = z, exact same Gaussian tensors; same MF innovation scale",
+      "metric": "pre-LR complete optimizer update; cumulative sum of noisy minus clean updates",
+      "std": "sample standard deviation across paired replay seeds, ddof=1",
+      "cancellation": "mean of paired RMSE_MF / RMSE_IID ratios",
+      "source_trajectory_modified": false,
+      "forward_backward_in_replay": false,
+      "mf_workload_beta": 0.9,
+      "muon_nesterov_beta": null,
+      "final": {
+        "step": 2,
+        "method": "MF-Adam",
+        "rmse_mf_mean": 1.994385657426686,
+        "rmse_mf_std": 0.008854858368925881,
+        "rmse_iid_mean": 2.190219964416246,
+        "rmse_iid_std": 0.011460358365134914,
+        "cancellation_mean": 0.9105918247939535,
+        "cancellation_std": 0.0019670101211190167,
+        "instant_rmse_mf_mean": 0.9126223748906019,
+        "instant_rmse_mf_std": 0.00628977728669652,
+        "instant_rmse_iid_mean": 1.0095140679681311,
+        "instant_rmse_iid_std": 0.005366011684491772,
+        "parameter_rmse_mf_mean": 0.00997192828713343,
+        "parameter_rmse_mf_std": 4.42742918446292e-05,
+        "parameter_rmse_iid_mean": 0.010951099822081228,
+        "parameter_rmse_iid_std": 5.730179182567463e-05,
+        "relative_to_momentum": 1.4174634751278314
+      }
+    },
+    "MF-Adam-Scale": {
+      "status": "completed",
+      "source": "/media/data/data/lt/dp-adam-correlated/exp3b/results/smoke/momentum_scale/signals",
+      "source_manifest": {
+        "status": "completed",
+        "method": "momentum_scale",
+        "steps": 2,
+        "support": [
+          "blocks.0.attn.qkv.weight",
+          "blocks.0.attn.proj.weight",
+          "blocks.0.mlp.0.weight",
+          "blocks.0.mlp.2.weight",
+          "blocks.1.attn.qkv.weight",
+          "blocks.1.attn.proj.weight",
+          "blocks.1.mlp.0.weight",
+          "blocks.1.mlp.2.weight",
+          "blocks.2.attn.qkv.weight",
+          "blocks.2.attn.proj.weight",
+          "blocks.2.mlp.0.weight",
+          "blocks.2.mlp.2.weight",
+          "blocks.3.attn.qkv.weight",
+          "blocks.3.attn.proj.weight",
+          "blocks.3.mlp.0.weight",
+          "blocks.3.mlp.2.weight",
+          "blocks.4.attn.qkv.weight",
+          "blocks.4.attn.proj.weight",
+          "blocks.4.mlp.0.weight",
+          "blocks.4.mlp.2.weight",
+          "blocks.5.attn.qkv.weight",
+          "blocks.5.attn.proj.weight",
+          "blocks.5.mlp.0.weight",
+          "blocks.5.mlp.2.weight",
+          "blocks.6.attn.qkv.weight",
+          "blocks.6.attn.proj.weight",
+          "blocks.6.mlp.0.weight",
+          "blocks.6.mlp.2.weight",
+          "blocks.7.attn.qkv.weight",
+          "blocks.7.attn.proj.weight",
+          "blocks.7.mlp.0.weight",
+          "blocks.7.mlp.2.weight",
+          "blocks.8.attn.qkv.weight",
+          "blocks.8.attn.proj.weight",
+          "blocks.8.mlp.0.weight",
+          "blocks.8.mlp.2.weight",
+          "blocks.9.attn.qkv.weight",
+          "blocks.9.attn.proj.weight",
+          "blocks.9.mlp.0.weight",
+          "blocks.9.mlp.2.weight",
+          "blocks.10.attn.qkv.weight",
+          "blocks.10.attn.proj.weight",
+          "blocks.10.mlp.0.weight",
+          "blocks.10.mlp.2.weight",
+          "blocks.11.attn.qkv.weight",
+          "blocks.11.attn.proj.weight",
+          "blocks.11.mlp.0.weight",
+          "blocks.11.mlp.2.weight"
+        ],
+        "shapes": {
+          "blocks.0.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.0.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.0.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.0.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.1.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.1.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.1.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.1.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.2.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.2.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.2.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.2.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.3.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.3.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.3.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.3.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.4.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.4.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.4.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.4.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.5.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.5.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.5.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.5.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.6.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.6.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.6.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.6.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.7.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.7.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.7.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.7.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.8.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.8.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.8.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.8.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.9.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.9.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.9.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.9.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.10.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.10.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.10.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.10.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.11.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.11.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.11.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.11.mlp.2.weight": [
+            8,
+            16
+          ]
+        },
+        "dimension": 6144,
+        "coordinates": "post-clipping pre-noise average gradient",
+        "scale_signal": "g = q / S; q = S * clipped_sum / logical_batch_size",
+        "files": [
+          {
+            "file": "step_001.pt",
+            "sha256": "2b527c2cd9db183978b2cb8091c3a0de018054ed064b4d65312a0a340de638c8"
+          },
+          {
+            "file": "step_002.pt",
+            "sha256": "a895b32748ce2c824e7fd34cf24d0fcd2b0470cab13baf3d740404a9ee35a8df"
+          }
+        ],
+        "coefficients": [
+          1.0,
+          -0.95,
+          -0.0012500000000000844,
+          -0.001187499999999897
+        ],
+        "innovation_std_sum": 471.34496321891186,
+        "innovation_std_gradient": 58.91812040236398,
+        "logical_batch_size": 8,
+        "actual_lr": 0.005,
+        "source_seed": 20261001,
+        "source_noise_seed": 20261002,
+        "source_spec": {
+          "method": "momentum_scale",
+          "result_dir": "exp3b/results/smoke/momentum_scale",
+          "seed": 20261001,
+          "muon_lr": 0.006,
+          "adam_lr": 0.012,
+          "max_grad_norm": 100.0,
+          "lambda_parallel": 1.0,
+          "kappa": 4.0,
+          "rho": 0.1,
+          "lr": 0.005,
+          "eps_scale": 0.1,
+          "capture": true,
+          "smoke": true,
+          "data_root": "data",
+          "cache_root": "cache"
+        },
+        "initialization_sha256": "71fe9a6fb88065d33b5bbf98688b7f81d12f18cc0e46f7e162b1e0474ae6aaed",
+        "checkpoint_sha256": "fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed",
+        "initial_optimizer_state": "zero",
+        "smoke": true
+      },
+      "replay_seeds": [
+        20261101,
+        20261102,
+        20261103,
+        20261104,
+        20261105,
+        20261106,
+        20261107,
+        20261108
+      ],
+      "steps": 2,
+      "support_count": 48,
+      "support": [
+        "blocks.0.attn.qkv.weight",
+        "blocks.0.attn.proj.weight",
+        "blocks.0.mlp.0.weight",
+        "blocks.0.mlp.2.weight",
+        "blocks.1.attn.qkv.weight",
+        "blocks.1.attn.proj.weight",
+        "blocks.1.mlp.0.weight",
+        "blocks.1.mlp.2.weight",
+        "blocks.2.attn.qkv.weight",
+        "blocks.2.attn.proj.weight",
+        "blocks.2.mlp.0.weight",
+        "blocks.2.mlp.2.weight",
+        "blocks.3.attn.qkv.weight",
+        "blocks.3.attn.proj.weight",
+        "blocks.3.mlp.0.weight",
+        "blocks.3.mlp.2.weight",
+        "blocks.4.attn.qkv.weight",
+        "blocks.4.attn.proj.weight",
+        "blocks.4.mlp.0.weight",
+        "blocks.4.mlp.2.weight",
+        "blocks.5.attn.qkv.weight",
+        "blocks.5.attn.proj.weight",
+        "blocks.5.mlp.0.weight",
+        "blocks.5.mlp.2.weight",
+        "blocks.6.attn.qkv.weight",
+        "blocks.6.attn.proj.weight",
+        "blocks.6.mlp.0.weight",
+        "blocks.6.mlp.2.weight",
+        "blocks.7.attn.qkv.weight",
+        "blocks.7.attn.proj.weight",
+        "blocks.7.mlp.0.weight",
+        "blocks.7.mlp.2.weight",
+        "blocks.8.attn.qkv.weight",
+        "blocks.8.attn.proj.weight",
+        "blocks.8.mlp.0.weight",
+        "blocks.8.mlp.2.weight",
+        "blocks.9.attn.qkv.weight",
+        "blocks.9.attn.proj.weight",
+        "blocks.9.mlp.0.weight",
+        "blocks.9.mlp.2.weight",
+        "blocks.10.attn.qkv.weight",
+        "blocks.10.attn.proj.weight",
+        "blocks.10.mlp.0.weight",
+        "blocks.10.mlp.2.weight",
+        "blocks.11.attn.qkv.weight",
+        "blocks.11.attn.proj.weight",
+        "blocks.11.mlp.0.weight",
+        "blocks.11.mlp.2.weight"
+      ],
+      "dimension": 6144,
+      "paired_noise": "MF = D z, IID = z, exact same Gaussian tensors; same MF innovation scale",
+      "metric": "pre-LR complete optimizer update; cumulative sum of noisy minus clean updates",
+      "std": "sample standard deviation across paired replay seeds, ddof=1",
+      "cancellation": "mean of paired RMSE_MF / RMSE_IID ratios",
+      "source_trajectory_modified": false,
+      "forward_backward_in_replay": false,
+      "mf_workload_beta": 0.9,
+      "muon_nesterov_beta": null,
+      "final": {
+        "step": 2,
+        "method": "MF-Adam-Scale",
+        "rmse_mf_mean": 1.835817064563136,
+        "rmse_mf_std": 0.00942998821327238,
+        "rmse_iid_mean": 2.0387678796842703,
+        "rmse_iid_std": 0.008334564947992206,
+        "cancellation_mean": 0.9004613709892835,
+        "cancellation_std": 0.004763980916968697,
+        "instant_rmse_mf_mean": 1.0231351210092816,
+        "instant_rmse_mf_std": 0.007577411147995369,
+        "instant_rmse_iid_mean": 1.036426481453857,
+        "instant_rmse_iid_std": 0.005787577405799599,
+        "parameter_rmse_mf_mean": 0.00917908532281568,
+        "parameter_rmse_mf_std": 4.7149941066361846e-05,
+        "parameter_rmse_iid_mean": 0.010193839398421351,
+        "parameter_rmse_iid_std": 4.167282473996116e-05,
+        "relative_to_momentum": 1.4016940075534452
+      }
+    },
+    "MF-Muon": {
+      "status": "completed",
+      "source": "/media/data/data/lt/dp-adam-correlated/exp3b/results/smoke/mf_muon_standard/signals",
+      "source_manifest": {
+        "status": "completed",
+        "method": "mf_muon_standard",
+        "steps": 2,
+        "support": [
+          "blocks.0.attn.qkv.weight",
+          "blocks.0.attn.proj.weight",
+          "blocks.0.mlp.0.weight",
+          "blocks.0.mlp.2.weight",
+          "blocks.1.attn.qkv.weight",
+          "blocks.1.attn.proj.weight",
+          "blocks.1.mlp.0.weight",
+          "blocks.1.mlp.2.weight",
+          "blocks.2.attn.qkv.weight",
+          "blocks.2.attn.proj.weight",
+          "blocks.2.mlp.0.weight",
+          "blocks.2.mlp.2.weight",
+          "blocks.3.attn.qkv.weight",
+          "blocks.3.attn.proj.weight",
+          "blocks.3.mlp.0.weight",
+          "blocks.3.mlp.2.weight",
+          "blocks.4.attn.qkv.weight",
+          "blocks.4.attn.proj.weight",
+          "blocks.4.mlp.0.weight",
+          "blocks.4.mlp.2.weight",
+          "blocks.5.attn.qkv.weight",
+          "blocks.5.attn.proj.weight",
+          "blocks.5.mlp.0.weight",
+          "blocks.5.mlp.2.weight",
+          "blocks.6.attn.qkv.weight",
+          "blocks.6.attn.proj.weight",
+          "blocks.6.mlp.0.weight",
+          "blocks.6.mlp.2.weight",
+          "blocks.7.attn.qkv.weight",
+          "blocks.7.attn.proj.weight",
+          "blocks.7.mlp.0.weight",
+          "blocks.7.mlp.2.weight",
+          "blocks.8.attn.qkv.weight",
+          "blocks.8.attn.proj.weight",
+          "blocks.8.mlp.0.weight",
+          "blocks.8.mlp.2.weight",
+          "blocks.9.attn.qkv.weight",
+          "blocks.9.attn.proj.weight",
+          "blocks.9.mlp.0.weight",
+          "blocks.9.mlp.2.weight",
+          "blocks.10.attn.qkv.weight",
+          "blocks.10.attn.proj.weight",
+          "blocks.10.mlp.0.weight",
+          "blocks.10.mlp.2.weight",
+          "blocks.11.attn.qkv.weight",
+          "blocks.11.attn.proj.weight",
+          "blocks.11.mlp.0.weight",
+          "blocks.11.mlp.2.weight"
+        ],
+        "shapes": {
+          "blocks.0.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.0.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.0.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.0.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.1.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.1.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.1.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.1.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.2.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.2.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.2.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.2.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.3.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.3.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.3.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.3.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.4.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.4.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.4.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.4.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.5.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.5.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.5.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.5.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.6.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.6.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.6.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.6.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.7.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.7.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.7.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.7.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.8.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.8.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.8.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.8.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.9.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.9.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.9.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.9.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.10.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.10.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.10.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.10.mlp.2.weight": [
+            8,
+            16
+          ],
+          "blocks.11.attn.qkv.weight": [
+            24,
+            8
+          ],
+          "blocks.11.attn.proj.weight": [
+            8,
+            8
+          ],
+          "blocks.11.mlp.0.weight": [
+            16,
+            8
+          ],
+          "blocks.11.mlp.2.weight": [
+            8,
+            16
+          ]
+        },
+        "dimension": 6144,
+        "coordinates": "post-clipping pre-noise average gradient",
+        "scale_signal": "g = q / S; q = S * clipped_sum / logical_batch_size",
+        "files": [
+          {
+            "file": "step_001.pt",
+            "sha256": "3d9ef572fa7300e1451f54fc75a25575a3b2f49bf724656e23927f439c614fda"
+          },
+          {
+            "file": "step_002.pt",
+            "sha256": "0060b5c7818f5676071ce2886cfedbdaac4e3daad107def2d1631bb604bc8c8a"
+          }
+        ],
+        "coefficients": [
+          1.0,
+          -0.95,
+          -0.0012500000000000844,
+          -0.001187499999999897
+        ],
+        "innovation_std_sum": 141.40348896567355,
+        "innovation_std_gradient": 17.675436120709193,
+        "logical_batch_size": 8,
+        "actual_lr": 0.006,
+        "source_seed": 20261001,
+        "source_noise_seed": 20261004,
+        "source_spec": {
+          "method": "mf_muon_standard",
+          "result_dir": "exp3b/results/smoke/mf_muon_standard",
+          "seed": 20261001,
+          "muon_lr": 0.006,
+          "adam_lr": 0.012,
+          "max_grad_norm": 30.0,
+          "lambda_parallel": 1.0,
+          "kappa": 4.0,
+          "rho": 0.1,
+          "lr": 0.005,
+          "eps_scale": 0.1,
+          "capture": true,
+          "smoke": true,
+          "data_root": "data",
+          "cache_root": "cache"
+        },
+        "initialization_sha256": "71fe9a6fb88065d33b5bbf98688b7f81d12f18cc0e46f7e162b1e0474ae6aaed",
+        "checkpoint_sha256": "fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed",
+        "initial_optimizer_state": "zero",
+        "smoke": true
+      },
+      "replay_seeds": [
+        20261101,
+        20261102,
+        20261103,
+        20261104,
+        20261105,
+        20261106,
+        20261107,
+        20261108
+      ],
+      "steps": 2,
+      "support_count": 48,
+      "support": [
+        "blocks.0.attn.qkv.weight",
+        "blocks.0.attn.proj.weight",
+        "blocks.0.mlp.0.weight",
+        "blocks.0.mlp.2.weight",
+        "blocks.1.attn.qkv.weight",
+        "blocks.1.attn.proj.weight",
+        "blocks.1.mlp.0.weight",
+        "blocks.1.mlp.2.weight",
+        "blocks.2.attn.qkv.weight",
+        "blocks.2.attn.proj.weight",
+        "blocks.2.mlp.0.weight",
+        "blocks.2.mlp.2.weight",
+        "blocks.3.attn.qkv.weight",
+        "blocks.3.attn.proj.weight",
+        "blocks.3.mlp.0.weight",
+        "blocks.3.mlp.2.weight",
+        "blocks.4.attn.qkv.weight",
+        "blocks.4.attn.proj.weight",
+        "blocks.4.mlp.0.weight",
+        "blocks.4.mlp.2.weight",
+        "blocks.5.attn.qkv.weight",
+        "blocks.5.attn.proj.weight",
+        "blocks.5.mlp.0.weight",
+        "blocks.5.mlp.2.weight",
+        "blocks.6.attn.qkv.weight",
+        "blocks.6.attn.proj.weight",
+        "blocks.6.mlp.0.weight",
+        "blocks.6.mlp.2.weight",
+        "blocks.7.attn.qkv.weight",
+        "blocks.7.attn.proj.weight",
+        "blocks.7.mlp.0.weight",
+        "blocks.7.mlp.2.weight",
+        "blocks.8.attn.qkv.weight",
+        "blocks.8.attn.proj.weight",
+        "blocks.8.mlp.0.weight",
+        "blocks.8.mlp.2.weight",
+        "blocks.9.attn.qkv.weight",
+        "blocks.9.attn.proj.weight",
+        "blocks.9.mlp.0.weight",
+        "blocks.9.mlp.2.weight",
+        "blocks.10.attn.qkv.weight",
+        "blocks.10.attn.proj.weight",
+        "blocks.10.mlp.0.weight",
+        "blocks.10.mlp.2.weight",
+        "blocks.11.attn.qkv.weight",
+        "blocks.11.attn.proj.weight",
+        "blocks.11.mlp.0.weight",
+        "blocks.11.mlp.2.weight"
+      ],
+      "dimension": 6144,
+      "paired_noise": "MF = D z, IID = z, exact same Gaussian tensors; same MF innovation scale",
+      "metric": "pre-LR complete optimizer update; cumulative sum of noisy minus clean updates",
+      "std": "sample standard deviation across paired replay seeds, ddof=1",
+      "cancellation": "mean of paired RMSE_MF / RMSE_IID ratios",
+      "source_trajectory_modified": false,
+      "forward_backward_in_replay": false,
+      "mf_workload_beta": 0.9,
+      "muon_nesterov_beta": 0.95,
+      "final": {
+        "step": 2,
+        "method": "MF-Muon",
+        "rmse_mf_mean": 0.550458578289161,
+        "rmse_mf_std": 0.0040354701462446295,
+        "rmse_iid_mean": 0.667391116958884,
+        "rmse_iid_std": 0.006416716339242335,
+        "cancellation_mean": 0.8248086242831132,
+        "cancellation_std": 0.0023814544262831575,
+        "instant_rmse_mf_mean": 0.41336096575371606,
+        "instant_rmse_mf_std": 0.0022658876318437634,
+        "instant_rmse_iid_mean": 0.4137054303394968,
+        "instant_rmse_iid_std": 0.005182305291261227,
+        "parameter_rmse_mf_mean": 0.0033027514697349667,
+        "parameter_rmse_mf_std": 2.421282087746782e-05,
+        "parameter_rmse_iid_mean": 0.004004346701753304,
+        "parameter_rmse_iid_std": 3.8500298035454084e-05,
+        "relative_to_momentum": 1.2839299311261627
+      }
+    }
+  },
+  "final": {
+    "MF-Momentum": {
+      "step": 2,
+      "method": "MF-Momentum",
+      "rmse_mf_mean": 1.379311422413372,
+      "rmse_mf_std": 0.0,
+      "rmse_iid_mean": 2.1470910553583886,
+      "rmse_iid_std": 0.0,
+      "cancellation_mean": 0.6424093747543184,
+      "cancellation_std": 0.0,
+      "relative_to_momentum": 1.0,
+      "instant_rmse_mf_mean": 1.0012492197250393,
+      "instant_rmse_mf_std": 0.0,
+      "instant_rmse_iid_mean": 1.3453624047073711,
+      "instant_rmse_iid_std": 0.0,
+      "parameter_rmse_mf_mean": 1.379311422413372,
+      "parameter_rmse_mf_std": 0.0,
+      "parameter_rmse_iid_mean": 2.1470910553583886,
+      "parameter_rmse_iid_std": 0.0
+    },
+    "MF-Adam": {
+      "step": 2,
+      "method": "MF-Adam",
+      "rmse_mf_mean": 1.994385657426686,
+      "rmse_mf_std": 0.008854858368925881,
+      "rmse_iid_mean": 2.190219964416246,
+      "rmse_iid_std": 0.011460358365134914,
+      "cancellation_mean": 0.9105918247939535,
+      "cancellation_std": 0.0019670101211190167,
+      "relative_to_momentum": 1.4174634751278314,
+      "instant_rmse_mf_mean": 0.9126223748906019,
+      "instant_rmse_mf_std": 0.00628977728669652,
+      "instant_rmse_iid_mean": 1.0095140679681311,
+      "instant_rmse_iid_std": 0.005366011684491772,
+      "parameter_rmse_mf_mean": 0.00997192828713343,
+      "parameter_rmse_mf_std": 4.42742918446292e-05,
+      "parameter_rmse_iid_mean": 0.010951099822081228,
+      "parameter_rmse_iid_std": 5.730179182567463e-05
+    },
+    "MF-Adam-Scale": {
+      "step": 2,
+      "method": "MF-Adam-Scale",
+      "rmse_mf_mean": 1.835817064563136,
+      "rmse_mf_std": 0.00942998821327238,
+      "rmse_iid_mean": 2.0387678796842703,
+      "rmse_iid_std": 0.008334564947992206,
+      "cancellation_mean": 0.9004613709892835,
+      "cancellation_std": 0.004763980916968697,
+      "relative_to_momentum": 1.4016940075534452,
+      "instant_rmse_mf_mean": 1.0231351210092816,
+      "instant_rmse_mf_std": 0.007577411147995369,
+      "instant_rmse_iid_mean": 1.036426481453857,
+      "instant_rmse_iid_std": 0.005787577405799599,
+      "parameter_rmse_mf_mean": 0.00917908532281568,
+      "parameter_rmse_mf_std": 4.7149941066361846e-05,
+      "parameter_rmse_iid_mean": 0.010193839398421351,
+      "parameter_rmse_iid_std": 4.167282473996116e-05
+    },
+    "MF-Muon": {
+      "step": 2,
+      "method": "MF-Muon",
+      "rmse_mf_mean": 0.550458578289161,
+      "rmse_mf_std": 0.0040354701462446295,
+      "rmse_iid_mean": 0.667391116958884,
+      "rmse_iid_std": 0.006416716339242335,
+      "cancellation_mean": 0.8248086242831132,
+      "cancellation_std": 0.0023814544262831575,
+      "relative_to_momentum": 1.2839299311261627,
+      "instant_rmse_mf_mean": 0.41336096575371606,
+      "instant_rmse_mf_std": 0.0022658876318437634,
+      "instant_rmse_iid_mean": 0.4137054303394968,
+      "instant_rmse_iid_std": 0.005182305291261227,
+      "parameter_rmse_mf_mean": 0.0033027514697349667,
+      "parameter_rmse_mf_std": 2.421282087746782e-05,
+      "parameter_rmse_iid_mean": 0.004004346701753304,
+      "parameter_rmse_iid_std": 3.8500298035454084e-05
+    }
+  },
+  "full_experiment": false
+}

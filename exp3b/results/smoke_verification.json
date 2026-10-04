@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "scope": "tiny dim=8 image=32 model, local checkpoint read, real CIFAR100 read, two GPU logical steps per method",
+  "methods": [
+    "momentum_standard",
+    "momentum_scale",
+    "nonprivate_hybrid",
+    "iid_dp_hybrid",
+    "mf_muon_standard",
+    "mf_muon_normscale",
+    "mf_muon_spectralscale"
+  ],
+  "gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "max_concurrency": 4,
+  "observed_gpu_each_method": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "0",
+    "1",
+    "2"
+  ],
+  "logical_steps_each": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "capture_support": 48,
+  "replay_seeds": 8,
+  "paired_replay": true,
+  "cancellation_methods": [
+    "MF-Momentum",
+    "MF-Adam",
+    "MF-Adam-Scale",
+    "MF-Muon"
+  ],
+  "full_experiment_started": false
+}

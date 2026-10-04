@@ -1,0 +1,318 @@
+{
+  "steps": 250,
+  "support_count": 48,
+  "support": [
+    "blocks.0.attn.qkv.weight",
+    "blocks.0.attn.proj.weight",
+    "blocks.0.mlp.0.weight",
+    "blocks.0.mlp.2.weight",
+    "blocks.1.attn.qkv.weight",
+    "blocks.1.attn.proj.weight",
+    "blocks.1.mlp.0.weight",
+    "blocks.1.mlp.2.weight",
+    "blocks.2.attn.qkv.weight",
+    "blocks.2.attn.proj.weight",
+    "blocks.2.mlp.0.weight",
+    "blocks.2.mlp.2.weight",
+    "blocks.3.attn.qkv.weight",
+    "blocks.3.attn.proj.weight",
+    "blocks.3.mlp.0.weight",
+    "blocks.3.mlp.2.weight",
+    "blocks.4.attn.qkv.weight",
+    "blocks.4.attn.proj.weight",
+    "blocks.4.mlp.0.weight",
+    "blocks.4.mlp.2.weight",
+    "blocks.5.attn.qkv.weight",
+    "blocks.5.attn.proj.weight",
+    "blocks.5.mlp.0.weight",
+    "blocks.5.mlp.2.weight",
+    "blocks.6.attn.qkv.weight",
+    "blocks.6.attn.proj.weight",
+    "blocks.6.mlp.0.weight",
+    "blocks.6.mlp.2.weight",
+    "blocks.7.attn.qkv.weight",
+    "blocks.7.attn.proj.weight",
+    "blocks.7.mlp.0.weight",
+    "blocks.7.mlp.2.weight",
+    "blocks.8.attn.qkv.weight",
+    "blocks.8.attn.proj.weight",
+    "blocks.8.mlp.0.weight",
+    "blocks.8.mlp.2.weight",
+    "blocks.9.attn.qkv.weight",
+    "blocks.9.attn.proj.weight",
+    "blocks.9.mlp.0.weight",
+    "blocks.9.mlp.2.weight",
+    "blocks.10.attn.qkv.weight",
+    "blocks.10.attn.proj.weight",
+    "blocks.10.mlp.0.weight",
+    "blocks.10.mlp.2.weight",
+    "blocks.11.attn.qkv.weight",
+    "blocks.11.attn.proj.weight",
+    "blocks.11.mlp.0.weight",
+    "blocks.11.mlp.2.weight"
+  ],
+  "dimension": 192,
+  "replay_seeds": [
+    81,
+    82
+  ],
+  "source_manifest": {
+    "status": "completed",
+    "method": "momentum_standard",
+    "shapes": {
+      "blocks.0.attn.qkv.weight": [
+        2,
+        2
+      ],
+      "blocks.0.attn.proj.weight": [
+        2,
+        2
+      ],
+      "blocks.0.mlp.0.weight": [
+        2,
+        2
+      ],
+      "blocks.0.mlp.2.weight": [
+        2,
+        2
+      ],
+      "blocks.1.attn.qkv.weight": [
+        2,
+        2
+      ],
+      "blocks.1.attn.proj.weight": [
+        2,
+        2
+      ],
+      "blocks.1.mlp.0.weight": [
+        2,
+        2
+      ],
+      "blocks.1.mlp.2.weight": [
+        2,
+        2
+      ],
+      "blocks.2.attn.qkv.weight": [
+        2,
+        2
+      ],
+      "blocks.2.attn.proj.weight": [
+        2,
+        2
+      ],
+      "blocks.2.mlp.0.weight": [
+        2,
+        2
+      ],
+      "blocks.2.mlp.2.weight": [
+        2,
+        2
+      ],
+      "blocks.3.attn.qkv.weight": [
+        2,
+        2
+      ],
+      "blocks.3.attn.proj.weight": [
+        2,
+        2
+      ],
+      "blocks.3.mlp.0.weight": [
+        2,
+        2
+      ],
+      "blocks.3.mlp.2.weight": [
+        2,
+        2
+      ],
+      "blocks.4.attn.qkv.weight": [
+        2,
+        2
+      ],
+      "blocks.4.attn.proj.weight": [
+        2,
+        2
+      ],
+      "blocks.4.mlp.0.weight": [
+        2,
+        2
+      ],
+      "blocks.4.mlp.2.weight": [
+        2,
+        2
+      ],
+      "blocks.5.attn.qkv.weight": [
+        2,
+        2
+      ],
+      "blocks.5.attn.proj.weight": [
+        2,
+        2
+      ],
+      "blocks.5.mlp.0.weight": [
+        2,
+        2
+      ],
+      "blocks.5.mlp.2.weight": [
+        2,
+        2
+      ],
+      "blocks.6.attn.qkv.weight": [
+        2,
+        2
+      ],
+      "blocks.6.attn.proj.weight": [
+        2,
+        2
+      ],
+      "blocks.6.mlp.0.weight": [
+        2,
+        2
+      ],
+      "blocks.6.mlp.2.weight": [
+        2,
+        2
+      ],
+      "blocks.7.attn.qkv.weight": [
+        2,
+        2
+      ],
+      "blocks.7.attn.proj.weight": [
+        2,
+        2
+      ],
+      "blocks.7.mlp.0.weight": [
+        2,
+        2
+      ],
+      "blocks.7.mlp.2.weight": [
+        2,
+        2
+      ],
+      "blocks.8.attn.qkv.weight": [
+        2,
+        2
+      ],
+      "blocks.8.attn.proj.weight": [
+        2,
+        2
+      ],
+      "blocks.8.mlp.0.weight": [
+        2,
+        2
+      ],
+      "blocks.8.mlp.2.weight": [
+        2,
+        2
+      ],
+      "blocks.9.attn.qkv.weight": [
+        2,
+        2
+      ],
+      "blocks.9.attn.proj.weight": [
+        2,
+        2
+      ],
+      "blocks.9.mlp.0.weight": [
+        2,
+        2
+      ],
+      "blocks.9.mlp.2.weight": [
+        2,
+        2
+      ],
+      "blocks.10.attn.qkv.weight": [
+        2,
+        2
+      ],
+      "blocks.10.attn.proj.weight": [
+        2,
+        2
+      ],
+      "blocks.10.mlp.0.weight": [
+        2,
+        2
+      ],
+      "blocks.10.mlp.2.weight": [
+        2,
+        2
+      ],
+      "blocks.11.attn.qkv.weight": [
+        2,
+        2
+      ],
+      "blocks.11.attn.proj.weight": [
+        2,
+        2
+      ],
+      "blocks.11.mlp.0.weight": [
+        2,
+        2
+      ],
+      "blocks.11.mlp.2.weight": [
+        2,
+        2
+      ]
+    },
+    "support": [
+      "blocks.0.attn.qkv.weight",
+      "blocks.0.attn.proj.weight",
+      "blocks.0.mlp.0.weight",
+      "blocks.0.mlp.2.weight",
+      "blocks.1.attn.qkv.weight",
+      "blocks.1.attn.proj.weight",
+      "blocks.1.mlp.0.weight",
+      "blocks.1.mlp.2.weight",
+      "blocks.2.attn.qkv.weight",
+      "blocks.2.attn.proj.weight",
+      "blocks.2.mlp.0.weight",
+      "blocks.2.mlp.2.weight",
+      "blocks.3.attn.qkv.weight",
+      "blocks.3.attn.proj.weight",
+      "blocks.3.mlp.0.weight",
+      "blocks.3.mlp.2.weight",
+      "blocks.4.attn.qkv.weight",
+      "blocks.4.attn.proj.weight",
+      "blocks.4.mlp.0.weight",
+      "blocks.4.mlp.2.weight",
+      "blocks.5.attn.qkv.weight",
+      "blocks.5.attn.proj.weight",
+      "blocks.5.mlp.0.weight",
+      "blocks.5.mlp.2.weight",
+      "blocks.6.attn.qkv.weight",
+      "blocks.6.attn.proj.weight",
+      "blocks.6.mlp.0.weight",
+      "blocks.6.mlp.2.weight",
+      "blocks.7.attn.qkv.weight",
+      "blocks.7.attn.proj.weight",
+      "blocks.7.mlp.0.weight",
+      "blocks.7.mlp.2.weight",
+      "blocks.8.attn.qkv.weight",
+      "blocks.8.attn.proj.weight",
+      "blocks.8.mlp.0.weight",
+      "blocks.8.mlp.2.weight",
+      "blocks.9.attn.qkv.weight",
+      "blocks.9.attn.proj.weight",
+      "blocks.9.mlp.0.weight",
+      "blocks.9.mlp.2.weight",
+      "blocks.10.attn.qkv.weight",
+      "blocks.10.attn.proj.weight",
+      "blocks.10.mlp.0.weight",
+      "blocks.10.mlp.2.weight",
+      "blocks.11.attn.qkv.weight",
+      "blocks.11.attn.proj.weight",
+      "blocks.11.mlp.0.weight",
+      "blocks.11.mlp.2.weight"
+    ],
+    "dimension": 192,
+    "steps": 250,
+    "coefficients": [
+      1.0,
+      -0.95,
+      -0.0012500000000000844,
+      -0.001187499999999897
+    ],
+    "innovation_std_gradient": 0.13,
+    "actual_lr": 0.005,
+    "smoke": true
+  }
+}
