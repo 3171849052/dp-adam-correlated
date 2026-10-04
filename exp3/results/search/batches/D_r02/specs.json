@@ -1,0 +1,44 @@
+[
+  {
+    "method": "mf_muon_normscale",
+    "result_dir": "exp3/results/search/D/d04_lambda_0.1",
+    "seed": 20261001,
+    "muon_lr": 0.006,
+    "adam_lr": 0.012,
+    "max_grad_norm": 30.0,
+    "lambda_parallel": 0.1,
+    "kappa": 4.0,
+    "rho": 0.1,
+    "smoke": false,
+    "diagnostic_interval": 25,
+    "diagnostic_probes": 4
+  },
+  {
+    "method": "mf_muon_normscale",
+    "result_dir": "exp3/results/search/D/d05_lambda_4",
+    "seed": 20261001,
+    "muon_lr": 0.006,
+    "adam_lr": 0.012,
+    "max_grad_norm": 30.0,
+    "lambda_parallel": 4.0,
+    "kappa": 4.0,
+    "rho": 0.1,
+    "smoke": false,
+    "diagnostic_interval": 25,
+    "diagnostic_probes": 4
+  },
+  {
+    "method": "mf_muon_normscale",
+    "result_dir": "exp3/results/search/D/d06_lambda_0.01_clip_60",
+    "seed": 20261001,
+    "muon_lr": 0.006,
+    "adam_lr": 0.012,
+    "max_grad_norm": 60.0,
+    "lambda_parallel": 0.01,
+    "kappa": 4.0,
+    "rho": 0.1,
+    "smoke": false,
+    "diagnostic_interval": 25,
+    "diagnostic_probes": 4
+  }
+]

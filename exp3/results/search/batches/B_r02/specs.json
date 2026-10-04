@@ -1,0 +1,44 @@
+[
+  {
+    "method": "iid_dp_hybrid",
+    "result_dir": "exp3/results/search/B/b04_muon_0.0001",
+    "seed": 20261001,
+    "muon_lr": 0.0001,
+    "adam_lr": 0.001,
+    "max_grad_norm": 30.0,
+    "lambda_parallel": 1.0,
+    "kappa": 4.0,
+    "rho": 0.1,
+    "smoke": false,
+    "diagnostic_interval": 25,
+    "diagnostic_probes": 4
+  },
+  {
+    "method": "iid_dp_hybrid",
+    "result_dir": "exp3/results/search/B/b05_muon_0.001",
+    "seed": 20261001,
+    "muon_lr": 0.001,
+    "adam_lr": 0.001,
+    "max_grad_norm": 30.0,
+    "lambda_parallel": 1.0,
+    "kappa": 4.0,
+    "rho": 0.1,
+    "smoke": false,
+    "diagnostic_interval": 25,
+    "diagnostic_probes": 4
+  },
+  {
+    "method": "iid_dp_hybrid",
+    "result_dir": "exp3/results/search/B/b06_clip_60",
+    "seed": 20261001,
+    "muon_lr": 0.0003,
+    "adam_lr": 0.001,
+    "max_grad_norm": 60.0,
+    "lambda_parallel": 1.0,
+    "kappa": 4.0,
+    "rho": 0.1,
+    "smoke": false,
+    "diagnostic_interval": 25,
+    "diagnostic_probes": 4
+  }
+]

@@ -1,0 +1,84 @@
+data_root: data
+dataset: CIFAR-100
+dataset_size: 50000
+epochs: 5
+logical_batch_size: 1000
+physical_batch_size: 250
+gradient_accumulation: 4
+num_workers: 2
+total_steps: 250
+model:
+  architecture: vit_tiny_patch16_224
+  pretrained: true
+  num_classes: 100
+  image_size: 224
+muon:
+  momentum: 0.95
+  nesterov: true
+  ns_steps: 5
+  dtype: float32
+adam:
+  beta1: 0.9
+  beta2: 0.999
+  eps: 1.0e-08
+  weight_decay: 0.0
+privacy:
+  epsilon: 8.0
+  delta: 1.0e-05
+  k: 5
+  b_participation: 50
+  adjacency: add_remove_zero_out
+  sampling_amplification: false
+  max_grad_norm: 30.0
+bandinvmf:
+  beta_mf: 0.9
+  num_bands: 4
+trial_spec:
+  method: iid_dp_hybrid
+  result_dir: exp3/results/search/B/b07_muon_0.003
+  seed: 20261001
+  muon_lr: 0.003
+  adam_lr: 0.001
+  max_grad_norm: 30.0
+  lambda_parallel: 1.0
+  kappa: 4.0
+  rho: 0.1
+  smoke: false
+  diagnostic_interval: 25
+  diagnostic_probes: 4
+spec_sha256: 143b08b34727ceb6efddf5ec2a4925ed413e75c834e6a4f0f816c68585cddfd0
+initialization_sha256: 32174ab45c6778646193838fe7b8f83343d50d42359835e98c8a1c13b16a3cf7
+classifier_initialization_sha256: 94d86daf116060908048dcb9e9eaaf1b2e9575f5ff316459ae0fbd7ee237c592
+checkpoint_sha256: fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed
+pretrained_cfg:
+  mean:
+  - 0.5
+  - 0.5
+  - 0.5
+  std:
+  - 0.5
+  - 0.5
+  - 0.5
+  crop_pct: 0.9
+  interpolation: bicubic
+  hf_hub_id: timm/vit_tiny_patch16_224.augreg_in21k_ft_in1k
+  checkpoint_path: cache/huggingface/hub/models--timm--vit_tiny_patch16_224.augreg_in21k_ft_in1k/snapshots/7d3afdd0cf93ad84d986eb2d6bcc5812ebd0b106/model.safetensors
+  checkpoint_sha256: fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed
+privacy_calibration:
+  target_mu: 1.6660305978457184
+  sensitivity: 2.23606797749979
+  innovation_std_sum: 40.264590225254544
+  adjacency: add_remove_zero_out
+  k: 5
+  b_participation: 50
+  sampling_amplification: false
+noising_coefficients:
+- 1.0
+download: false
+visible_devices: '1'
+device_name: NVIDIA GeForce RTX 3080 Ti
+effective_steps: 250
+augmentation_rng_convention: dedicated seeded DataLoader generators; spawn workers;
+  fixed permutation reused each epoch
+diagnostic_note: Phi/update-space JVP at H_t with frozen S_t from H_(t-1); noise weighted
+  and frozen-state trajectory diagnostics are analysis only

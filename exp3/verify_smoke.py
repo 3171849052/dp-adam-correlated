@@ -31,7 +31,13 @@ def main():
         assert cfg['download'] is False and cfg['visible_devices'] in ('1', '2', '3')
         assert s['diagnostics']['probe_count'] == 2 and len(s['diagnostics']['records']) == 6
         assert {r['step'] for r in s['diagnostics']['records']} == {1,2}
-        assert all(np.isfinite(r['mean']) and np.isfinite(r['std']) for r in s['diagnostics']['records'])
+        assert all(np.isfinite(r['update_gain_mean']) and np.isfinite(r['phi_gain_std']) for r in s['diagnostics']['records'])
+        for row in s['diagnostics']['records']:
+            assert np.isclose(row['update_gain_mean'], row['shape_factor'] * row['phi_gain_mean'])
+            if spec.method == 'nonprivate_hybrid':
+                assert row['noise_weighted_update_gain_mean'] is None
+            else:
+                assert np.isclose(row['noise_weighted_update_gain_mean'], s['innovation_std_sum']/1000*row['update_gain_mean'])
         saved = torch.load(spec.directory / 'final.pt', map_location='cpu', weights_only=True)
         assert saved['logical_steps'] == 2
         assert all(torch.isfinite(v).all() for v in saved['model'].values())
@@ -43,6 +49,9 @@ def main():
             for key, value in zip(('noising_coefficients', 'strategy', 'workload_coefficients'), expected):
                 np.testing.assert_array_equal(data[key], value)
         if spec.method.startswith('mf_'):
+            trajectory=torch.load(spec.directory/'muon_trajectory.pt',map_location='cpu',weights_only=True)
+            assert len(trajectory)==3 and all(len(frames)==2 for frames in trajectory.values())
+            assert s['frozen_trajectory_muon_mf']['steps']==2
             with np.load(spec.directory / 'matrices.npz') as data:
                 matrices.append({k: data[k].copy() for k in data.files})
     for data in matrices[1:]:
@@ -51,6 +60,8 @@ def main():
     # Same first step: identical initial state, identity geometry, coefficients and noise RNG.
     first = [summaries[m]['diagnostics']['records'][:3] for m in METHODS[2:]]
     assert first[0] == first[1] == first[2]
+    assert all(summaries[m]['frozen_trajectory_muon_mf']['temporal_probe_sha256'] ==
+               reference['frozen_trajectory_muon_mf']['temporal_probe_sha256'] for m in METHODS[2:])
     result = dict(status='passed', methods=5, logical_steps_per_trial=2, physical_batches_per_trial=8,
                   paired_initialization_order_augmentation=True, mf_matrices_identical=True,
                   finite_saved_models=True, saved_pre_ns_matrices_per_trial=48,
@@ -58,7 +69,7 @@ def main():
                   final_test_top1={m:summaries[m]['final_test_top1'] for m in METHODS},
                   optimizer_steps={m:summaries[m]['optimizer_steps'] for m in METHODS},
                   noise_steps={m:summaries[m]['noise_steps'] for m in METHODS})
-    (EXP3 / 'results/smoke_verification.json').write_text(json.dumps(result, indent=2))
+    (EXP3 / 'results/smoke_v2_verification.json').write_text(json.dumps(result, indent=2))
     print(json.dumps(result))
 
 

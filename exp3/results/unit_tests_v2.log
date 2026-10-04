@@ -1,0 +1,22 @@
+.....................................................                    [100%]
+=============================== warnings summary ===============================
+tests/test_diagnostics_v2.py: 18 warnings
+  /home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/jit/_script.py:1488: DeprecationWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+    warnings.warn(
+
+tests/test_experiment.py::test_joint_global_clip_matches_per_example_autograd[iid_dp_hybrid]
+tests/test_experiment.py::test_joint_global_clip_matches_per_example_autograd[mf_muon_standard]
+tests/test_experiment.py::test_joint_global_clip_matches_per_example_autograd[mf_muon_normscale]
+tests/test_experiment.py::test_joint_global_clip_matches_per_example_autograd[mf_muon_spectralscale]
+  /media/data/data/lt/dp-adam-correlated/exp3/mechanism.py:22: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    losses.sum().backward(retain_graph=True)
+
+tests/test_experiment.py::test_joint_global_clip_matches_per_example_autograd[iid_dp_hybrid]
+tests/test_experiment.py::test_joint_global_clip_matches_per_example_autograd[mf_muon_standard]
+tests/test_experiment.py::test_joint_global_clip_matches_per_example_autograd[mf_muon_normscale]
+tests/test_experiment.py::test_joint_global_clip_matches_per_example_autograd[mf_muon_spectralscale]
+  /media/data/data/lt/dp-adam-correlated/exp3/mechanism.py:27: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    (losses * factors).sum().backward()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+53 passed, 26 warnings in 13.49s

@@ -21,7 +21,7 @@ from torch.utils.data import DataLoader, Subset
 from torchvision import datasets, transforms
 import yaml
 from exp3.bandinvmf import BandInvMFNoise, build_matrices, materialize
-from exp3.diagnostics import MuonDiagnostics
+from exp3.diagnostics import MuonDiagnostics, UpdateStatistics, frozen_trajectory_diagnostic
 from exp3.mechanism import GeometryGhostModule, LogicalBatch, clipped_microbatch
 from exp3.model import pretrained_vit, initialization_digest
 from exp3.optimizer import HybridOptimizer
@@ -111,7 +111,7 @@ def execute(spec):
                     download=False, visible_devices=os.environ['CUDA_VISIBLE_DEVICES'],
                     device_name=torch.cuda.get_device_name(), effective_steps=2 if spec.smoke else 250,
                     augmentation_rng_convention='dedicated seeded DataLoader generators; spawn workers; fixed permutation reused each epoch',
-                    diagnostic_note='JVP of actual FP32 Phi at H_t using frozen S_t from H_(t-1); analysis only')
+                    diagnostic_note='Phi/update-space JVP at H_t with frozen S_t from H_(t-1); noise weighted and frozen-state trajectory diagnostics are analysis only')
     (directory / 'config.yaml').write_text(yaml.safe_dump(resolved, sort_keys=False))
     np.savez(directory / 'matrices.npz', noising_coefficients=coefficients, strategy=strategy,
              workload_coefficients=workload, W=materialize(workload, 250),
@@ -134,7 +134,10 @@ def execute(spec):
     noise = BandInvMFNoise(model.parameters(), coefficients, sigma, 250, spec.seed + 3) if private else None
     logical = LogicalBatch(model, optimizer, noise, spec.method, spec.max_grad_norm,
                            spec.lambda_parallel, spec.kappa, spec.rho)
-    diagnostics = MuonDiagnostics(optimizer, spec.diagnostic_interval, spec.diagnostic_probes)
+    diagnostics = MuonDiagnostics(optimizer, spec.diagnostic_interval, spec.diagnostic_probes,
+                                  innovation_std_sum=sigma if private else None,
+                                  save_trajectory=spec.method.startswith('mf_'))
+    updates = UpdateStatistics()
     epochs = 1 if spec.smoke else 5
     records, augmentation_digests = [], []
     print(json.dumps(dict(status='running', method=spec.method, seed=spec.seed,
@@ -163,8 +166,15 @@ def execute(spec):
                 count += len(y)
                 loss_sum += loss
                 clipped += clip_count
+                next_step = logical.optimizer_steps + 1
+                sample_update = logical.micro_steps == 3 and (next_step == 1 or next_step % spec.diagnostic_interval == 0)
+                before = {p: p.detach().clone() for p in model.parameters()} if sample_update else None
                 if logical.finish_microbatch():
                     diagnostics.record(logical.optimizer_steps, logical.geometries)
+                    if sample_update:
+                        updates.record(optimizer, before)
+                        print(json.dumps(dict(event='logical_progress', step=logical.optimizer_steps,
+                                              train_loss=loss_sum/count, clip_fraction=clipped/count if private else None)), flush=True)
             assert logical.micro_steps == 0
             assert logical.optimizer_steps == (epoch + 1) * (2 if spec.smoke else 50)
             test_loss, accuracy = evaluate(model, test_loader, device)
@@ -185,6 +195,12 @@ def execute(spec):
             print(json.dumps(record), flush=True)
     assert optimizer.step_count == logical.optimizer_steps == (2 if spec.smoke else 250)
     diagnostic_summary = diagnostics.save(directory)
+    update_summary = updates.save(directory)
+    frozen_diagnostic = None
+    if spec.method.startswith('mf_'):
+        frozen_diagnostic = frozen_trajectory_diagnostic(
+            diagnostics.trajectory, materialize(coefficients, 250), sigma, 1000, spec.muon_lr, device)
+    (directory / 'frozen_trajectory_muon_mf.json').write_text(json.dumps(frozen_diagnostic, indent=2, allow_nan=False))
     torch.save(dict(model=base_model.state_dict(), optimizer=optimizer.state_dict(),
                     logical_steps=logical.optimizer_steps), directory / 'final.pt')
     summary = dict(status='completed', **spec.mapping(), spec_sha256=spec.fingerprint(),
@@ -198,6 +214,7 @@ def execute(spec):
                    checkpoint_sha256=metadata['checkpoint_sha256'], augmentation_trace_sha256=augmentation_digests,
                    train_order_sha256=hashlib.sha256(order.numpy().tobytes()).hexdigest(),
                    planned_total_steps=250, epochs=records, diagnostics=diagnostic_summary,
+                   update_statistics=update_summary, frozen_trajectory_muon_mf=frozen_diagnostic,
                    muon_parameters=list(optimizer.muon), adam_parameters=list(optimizer.adam),
                    wall_seconds=time.monotonic()-started)
     (directory / 'summary.json').write_text(json.dumps(summary, indent=2, allow_nan=False))

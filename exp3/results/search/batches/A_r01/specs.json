@@ -1,0 +1,44 @@
+[
+  {
+    "method": "nonprivate_hybrid",
+    "result_dir": "exp3/results/search/A/a01_muon_0.003",
+    "seed": 20261001,
+    "muon_lr": 0.003,
+    "adam_lr": 0.0005,
+    "max_grad_norm": 100.0,
+    "lambda_parallel": 1.0,
+    "kappa": 4.0,
+    "rho": 0.1,
+    "smoke": false,
+    "diagnostic_interval": 25,
+    "diagnostic_probes": 4
+  },
+  {
+    "method": "nonprivate_hybrid",
+    "result_dir": "exp3/results/search/A/a02_muon_0.01",
+    "seed": 20261001,
+    "muon_lr": 0.01,
+    "adam_lr": 0.0005,
+    "max_grad_norm": 100.0,
+    "lambda_parallel": 1.0,
+    "kappa": 4.0,
+    "rho": 0.1,
+    "smoke": false,
+    "diagnostic_interval": 25,
+    "diagnostic_probes": 4
+  },
+  {
+    "method": "nonprivate_hybrid",
+    "result_dir": "exp3/results/search/A/a03_muon_0.03",
+    "seed": 20261001,
+    "muon_lr": 0.03,
+    "adam_lr": 0.0005,
+    "max_grad_norm": 100.0,
+    "lambda_parallel": 1.0,
+    "kappa": 4.0,
+    "rho": 0.1,
+    "smoke": false,
+    "diagnostic_interval": 25,
+    "diagnostic_probes": 4
+  }
+]

@@ -1,0 +1,356 @@
+{
+  "A": {
+    "tested_region": {
+      "muon_lr": [
+        0.0003,
+        0.001,
+        0.003,
+        0.01,
+        0.03
+      ],
+      "adam_lr": [
+        0.0002,
+        0.0005,
+        0.001,
+        0.002
+      ],
+      "max_grad_norm": [
+        100.0
+      ],
+      "lambda_parallel": [
+        1.0
+      ],
+      "kappa": [
+        4.0
+      ],
+      "rho": [
+        0.1
+      ]
+    },
+    "rounds": [
+      {
+        "round": "A_r01",
+        "why_next_trials_were_selected": "No full tuning trials yet. Coarsely bracket Muon LR at 0.003/0.01/0.03 with Adam fixed at 0.0005; judge final top1, five-epoch curves and actual group update norms before choosing Adam-LR trials. Clipping/noise are absent in Stage A.",
+        "observed": "Final top1: Muon LR .003=81.78%, .01=72.87%, .03=49.45%; all curves improve but higher LRs have persistently greater train/test losses. Current best is on lower boundary; .03 is an overshoot region. No clipping/noise in this stage."
+      },
+      {
+        "round": "A_r02",
+        "why_next_trials_were_selected": "Best .003 is not bracketed below. Test .001 and .0003 with Adam still .0005 to finish coarse Muon localization before changing Adam. Higher neighboring Muon LRs were clearly worse; do not spend more trials there.",
+        "observed": "Final .001=85.16%, .0003=85.22%; the 0.06 pp difference is immaterial. Both clearly improve over .003=81.78%, while .0003 learns more slowly early but finishes with slightly lower test loss. A low-Muon-LR basin is established; do not spend budget resolving a 0.1 pp distinction."
+      },
+      {
+        "round": "A_r03",
+        "why_next_trials_were_selected": "Use the highest-final-top1 gentle Muon .0003 point in the established .0003-.001 basin. Bracket the existing Adam .0005 with .0002 and higher .001/.002 to check classifier learning versus patch/normalization overshoot. This is the final Stage A batch (8 total); no finer Muon search for the 0.06 pp tie.",
+        "observed": "Final Adam .0002=84.63%, .001=85.44%, .002=84.88% at Muon .0003. Adam .001 is highest overall, with .0005 control=85.22%; differences around the optimum are small. Both overly large Muon .01/.03 and slow Adam .0002 were inferior."
+      }
+    ],
+    "status": "closed",
+    "observed_trend": "Stable small-Muon basin (.0003-.001); increasing Muon to .003/.01/.03 hurts. Adam .001 improves learning speed versus .0002 and finishes highest; .002 loses utility. No search to resolve sub-0.3 pp ties.",
+    "why_search_stopped": "Eight-trial budget reached; Adam optimum bracketed and large-Muon overshoot established.",
+    "trials_run": 8,
+    "identity_controls_reused": 0,
+    "selected_trial": "a07_adam_0.001",
+    "selected_config": {
+      "muon_lr": 0.0003,
+      "adam_lr": 0.001,
+      "max_grad_norm": 100.0,
+      "lambda_parallel": 1.0,
+      "kappa": 4.0,
+      "rho": 0.1
+    },
+    "selected_final_test_top1": 0.8544,
+    "best_observed_final_test_top1": 0.8544,
+    "selection_gap_percentage_points": 0.0,
+    "varied_parameters": [
+      "muon_lr",
+      "adam_lr"
+    ]
+  },
+  "B": {
+    "tested_region": {
+      "muon_lr": [
+        0.0001,
+        0.0003,
+        0.001,
+        0.003
+      ],
+      "adam_lr": [
+        0.0003,
+        0.001,
+        0.003
+      ],
+      "max_grad_norm": [
+        10.0,
+        30.0,
+        60.0,
+        100.0
+      ],
+      "lambda_parallel": [
+        1.0
+      ],
+      "kappa": [
+        4.0
+      ],
+      "rho": [
+        0.1
+      ]
+    },
+    "rounds": [
+      {
+        "round": "B_r01",
+        "why_next_trials_were_selected": "Start from Stage A LR basin (.0003/.001). First vary C=10/30/100 to contrast near-saturated, intermediate and lighter clipping; sigma is recalibrated with C. Inspect utility, clipping curves and noise-weighted diagnostics before spending trials on private LRs. Do not assume the nonprivate LR optimum transfers.",
+        "observed": "Final C10=69.44%, C30=69.46%, C100=66.75%. C10/C30 are tied but C30 is less saturated by epoch5 (81.194% vs89.824% clipped). C100 has larger calibrated sigma and lower utility despite lighter clipping; avoid increasing C. C30 is the current best, but C60 will check the shoulder. No smaller C: it would repeat early fully saturated normalized-optimizer behavior. Noise-weighted update gain is 0.52483/0.52485/0.52475 across C30/10/100 and Muon update RMS is 1.70815e-5 in all three. Thus calibrated raw gradient noise increases with C, but normalization cancels its absolute update scale; utility loss reflects changed clipped signal/noise balance, not an observed increase in update RMS. Raw gain/CV alone is not a utility predictor."
+      },
+      {
+        "round": "B_r02",
+        "why_next_trials_were_selected": "With reasonable C10-30 regime localized, bracket private Muon .0003 by .0001/.001 at C30; larger private update noise can shift LR optimum. Test intermediate C60 at original LRs to bracket the clipping shoulder. Compare final top1, loss/clip curves, group update RMS and noise-weighted JVP rather than raw gain or a composite score.",
+        "observed": "Muon .0001=68.01%, .001=69.82% versus .0003=69.46% at C30. Increasing Muon gave a modest 0.36 pp improvement; private LR optimum differs from selected nonprivate LR. C60=68.88%, confirming the higher-C shoulder is inferior. C10-30 is the useful clipping region. Muon .001 remains unbracketed above."
+      },
+      {
+        "round": "B_r03",
+        "why_next_trials_were_selected": "C is localized at 10-30 and larger C degraded utility. Bracket private Muon .001 above with .003, and bracket Adam .001 by .0003/.003 at current Muon best. Use actual five-epoch final top1/curves to distinguish weak learning from unstable larger updates. Six trials completed; this batch brings Stage B to nine, leaving three only if a credible new direction emerges.",
+        "observed": "Final Muon .003=61.95%, Adam .0003=52.11%, Adam .003=60.94%; all worse than Muon/Adam .001/.001, C30=69.82%. Large private LRs overshoot; Adam .003 peaks earlier then deteriorates. Both LR directions now bracket the best, and C60/C100 lose versus C10-30."
+      }
+    ],
+    "status": "closed",
+    "observed_trend": "C10-30 plateau, larger C60/100 harms utility despite similar normalized update RMS; best C30 has less late clipping. Muon .001 modestly improves .0003, whereas .003 sharply degrades. Adam .0003 underfits and .003 has a declining later curve.",
+    "why_search_stopped": "Best LR region bracketed by inferior neighbors; clipping trend clear. Stop after nine trials rather than expend the remaining three.",
+    "trials_run": 9,
+    "identity_controls_reused": 0,
+    "selected_trial": "b05_muon_0.001",
+    "selected_config": {
+      "muon_lr": 0.001,
+      "adam_lr": 0.001,
+      "max_grad_norm": 30.0,
+      "lambda_parallel": 1.0,
+      "kappa": 4.0,
+      "rho": 0.1
+    },
+    "selected_final_test_top1": 0.6982,
+    "best_observed_final_test_top1": 0.6982,
+    "selection_gap_percentage_points": 0.0,
+    "varied_parameters": [
+      "muon_lr",
+      "adam_lr",
+      "max_grad_norm"
+    ]
+  },
+  "C": {
+    "tested_region": {
+      "muon_lr": [
+        0.001,
+        0.003,
+        0.006
+      ],
+      "adam_lr": [
+        0.001,
+        0.003,
+        0.006,
+        0.009,
+        0.012,
+        0.024
+      ],
+      "max_grad_norm": [
+        10.0,
+        30.0,
+        60.0
+      ],
+      "lambda_parallel": [
+        1.0
+      ],
+      "kappa": [
+        4.0
+      ],
+      "rho": [
+        0.1
+      ]
+    },
+    "rounds": [
+      {
+        "round": "C_r01",
+        "why_next_trials_were_selected": "Start one MF anchor at IID best, then test Adam .003 and Muon .003 with Adam .003. At equal C, MF innovations have 3.512x IID sigma with temporally correlated noise; Adam normalization and actual Nesterov dynamics change the LR basin. Thus IID overshoot thresholds need not transfer. Keep C30 initially; observe actual update RMS, frozen-trajectory cancellation and full curves before choosing the next C/LR trials. MF design remains ordinary beta=.9/four bands, actual Muon beta=.95 Nesterov.",
+        "observed": "IID-LR MF anchor=.4299, Adam .003 at Muon .001=.6865, Muon .003/Adam .003=.7174. The IID LR config severely underfits MF; both independent larger LRs matter. Best MF is already 1.92 pp above selected IID. C30 clipping falls to .79704. Frozen diagnostics use the same temporal sequences across all three trials; larger Muon LR scales cumulative RMSE, so utility is not ranked by that alone."
+      },
+      {
+        "round": "C_r02",
+        "why_next_trials_were_selected": "Current MF best (.003/.003/C30) is unbracketed above in both LRs. Test independent doubling of Muon or Adam, and C10 at the current best LRs to check whether the IID clipping plateau transfers. Keep factorization fixed. Large-LR IID failure does not prohibit these MF points because the completed MF curves established a different LR basin.",
+        "observed": "Muon .006 at Adam .003 reaches 73.40%; Adam .006 at Muon .003 reaches 76.88% (+5.14 pp). C10 at .003/.003 reaches 71.25%, below C30=71.74%; thus clipping optimum does not simply favor minimum C. All curves remain finite and improve; Adam is still unbracketed above. MF supports substantially larger LRs than IID."
+      },
+      {
+        "round": "C_r03",
+        "why_next_trials_were_selected": "The current best .003/.006/C30 gained 5.14 pp, so another round is valuable. Combine the independently useful larger Muon/Adam LRs, bracket Adam .006 above with .012, and test C60 at current best LRs to bracket clipping above. C10 is not preferred. This batch brings Stage C to nine; reserve at most three further points for a specific remaining boundary, not a grid.",
+        "observed": "Combined .006/.006 reaches 77.55%; .003/.012 reaches 78.35%, the current highest. C60 at .003/.006 reaches 76.61%, slightly below C30=76.88%. C10/C60 provide no improvement; C30 remains the working plateau. Adam .012 is still on an upper boundary, while combining both LR increases gave a real .67 pp benefit."
+      },
+      {
+        "round": "C_r04",
+        "why_next_trials_were_selected": "Use the remaining three Stage C trials for the credible LR direction: combine Muon .006 with best Adam .012, bracket Adam above at .024, and check the intermediate .009 point for a stable head/patch-LR basin. C30 is already supported against both C10 and C60; do not spend on fine C differences. This is the last Stage C batch and reaches the twelve-trial budget; select highest final top1 then freeze Standard.",
+        "observed": "At C30, combining muon .006 with Adam .012 improves final Top1 to .7905; Adam .024 at muon .003 falls to .7454 and .009 gives .7820. The .012 Adam basin is supported by inferior .006/.009/.024 neighbors. All runs remain finite and learning curves improve over epochs. Final clip fractions .6141/.6553/.6505 are non-saturated. Muon .006 is the tested upper boundary, so no claim of full Muon-LR bracketing is made; the C-stage budget is reached."
+      }
+    ],
+    "status": "closed",
+    "observed_trend": "MF requires higher LRs than the IID basin: .001/.001 reaches only42.99%, while .006/.012 reaches79.05%. Adam .024 overshoots (74.54%); .006/.009 are inferior Adam neighbors. C10 and C60 do not improve on C30 at matched LRs. MF frozen perturbation RMSE scales with Muon LR; its lower value at underfitting LRs does not predict better utility. Update-gain temporal CV is about .035, lower than IID but not a standalone utility score. Best final clipping .614 supports a reasonable regime. Muon .006 remains a boundary of the tested LR range.",
+    "why_search_stopped": "Reached12-trial budget with a clear Adam basin and clipping trend; freeze highest final_test_top1 rather than extend search.",
+    "trials_run": 12,
+    "identity_controls_reused": 0,
+    "selected_trial": "c10_muon_0.006_adam_0.012",
+    "selected_config": {
+      "muon_lr": 0.006,
+      "adam_lr": 0.012,
+      "max_grad_norm": 30.0,
+      "lambda_parallel": 1.0,
+      "kappa": 4.0,
+      "rho": 0.1
+    },
+    "selected_final_test_top1": 0.7905,
+    "best_observed_final_test_top1": 0.7905,
+    "selection_gap_percentage_points": 0.0,
+    "varied_parameters": [
+      "muon_lr",
+      "adam_lr",
+      "max_grad_norm"
+    ]
+  },
+  "D": {
+    "tested_region": {
+      "muon_lr": [
+        0.006
+      ],
+      "adam_lr": [
+        0.012
+      ],
+      "max_grad_norm": [
+        30.0,
+        60.0
+      ],
+      "lambda_parallel": [
+        0.0001,
+        0.01,
+        0.1,
+        1.0,
+        4.0,
+        100.0
+      ],
+      "kappa": [
+        1.0,
+        4.0
+      ],
+      "rho": [
+        0.1
+      ]
+    },
+    "rounds": [
+      {
+        "round": "D_r01",
+        "why_next_trials_were_selected": "Reuse the exact lambda1 Standard identity control at79.05%. Freeze its LRs and C30, then contrast radial compression lambda .01 and .0001 (gain .1/.01) against expansion100 (gain10). These span a meaningful rank-one operating range rather than near-identity duplicate points. Compare epoch curves, clipping, actual update statistics and matched-probe JVP/frozen diagnostics with Standard before choosing any C/LR follow-up; geometry gains must not be credited solely to clipping changes.",
+        "observed": "At matched LRs/C30, lambda .01 gives75.80%, .0001 gives71.69%, and100 gives9.33% versus identity79.05%. Final clipping .6947/.7389/1 exceeds identity .6141. Temporal update-gain CV rises from .0351 to .5787/1.033/.4763, consistent with disrupted temporal behavior and worse utility. Frozen final RMSE falls to .003757/.002134/.002483 from .006659 despite worse accuracy, so smaller frozen perturbation alone is not utility improvement. Strong expansion is a saturated unstable failure; stronger compression is worse. Next investigate mild compression/expansion and whether larger C rescues the .01 clipping operating point."
+      },
+      {
+        "round": "D_r02",
+        "why_next_trials_were_selected": "All first-batch nonidentity points lose utility. Test lambda .1 and4 as milder neighbors on both sides of the existing lambda1 control while keeping Standard LRs/C30. Strong-compression .01 has higher clipping (.6947 final versus .6141), so test C60 at that same lambda to see whether improved clipping, with larger raw privacy noise, can rescue it. Keep LRs fixed until a geometry basin provides credible benefit; do not refine the failed .0001/100 extremes. Temporal CV degradation, not lower cumulative noise RMSE, agrees with the first-round utility losses.",
+        "observed": "Mild lambda neighbors and C compensation also fail to beat identity. C60 restores the .01 final clipping operating point to .6103 versus identity .6141, yet utility remains75.53% versus79.05%, so clipping saturation alone does not explain the geometry loss. Determine the final lambda bracket and diagnostics from completed full trials before freezing D."
+      }
+    ],
+    "status": "closed",
+    "observed_trend": "Exact identity lambda1 remains best79.05%. Lambda .1/.01/.0001 at C30 gives76.61/75.80/71.69%; expansion4/100 collapses to10.51/9.33% with near-total clipping and regressing curves. Identity is bracketed by worse moderate neighbors .1 and4. Raising C from30 to60 at lambda .01 restores final clipping .6103 close to Standard .6141 but gives75.53%, so a clipping-operating-point change does not rescue geometry. Noise-weighted JVP and frozen final RMSE decrease while utility worsens; actual Muon update RMS stays near .000342. Temporal gain CV rises from identity .0351 to .1871/.5787/1.033 under stronger compression, consistent with disruption and utility loss. No credible nonidentity geometry basin warrants LR tuning.",
+    "why_search_stopped": "Two completed rounds without any improvement over identity, lower-performing neighbors bracket lambda1, and clipping compensation fails. Stop at6 new trials plus1 reused identity, without spending the16-trial limit.",
+    "trials_run": 6,
+    "identity_controls_reused": 1,
+    "selected_trial": "d_identity_reuse_c10_muon_0.006_adam_0.012",
+    "selected_config": {
+      "muon_lr": 0.006,
+      "adam_lr": 0.012,
+      "max_grad_norm": 30.0,
+      "lambda_parallel": 1.0,
+      "kappa": 1.0,
+      "rho": 0.1
+    },
+    "selected_final_test_top1": 0.7905,
+    "best_observed_final_test_top1": 0.7905,
+    "selection_gap_percentage_points": 0.0,
+    "varied_parameters": [
+      "max_grad_norm",
+      "lambda_parallel"
+    ],
+    "best_nonidentity_trial": "d04_lambda_0.1",
+    "best_nonidentity_final_test_top1": 0.7661,
+    "best_nonidentity_config": {
+      "muon_lr": 0.006,
+      "adam_lr": 0.012,
+      "max_grad_norm": 30.0,
+      "lambda_parallel": 0.1,
+      "kappa": 4.0,
+      "rho": 0.1
+    }
+  },
+  "E": {
+    "tested_region": {
+      "muon_lr": [
+        0.006
+      ],
+      "adam_lr": [
+        0.012
+      ],
+      "max_grad_norm": [
+        30.0,
+        60.0
+      ],
+      "lambda_parallel": [
+        1.0
+      ],
+      "kappa": [
+        1.0,
+        1.1,
+        1.25,
+        2.0,
+        4.0
+      ],
+      "rho": [
+        0.1
+      ]
+    },
+    "rounds": [
+      {
+        "round": "E_r01",
+        "why_next_trials_were_selected": "Reuse exact kappa1 Standard control79.05%; keep rho=.1 and the frozen Standard LRs/C30. Start with kappa1.25/2/4, spanning mild bounded scaling through a wider active-spectrum range after the rectangular normalization repair. Compare utility, transformed clipping, update statistics, noise-weighted gains, temporal CV and common-probe frozen prefix diagnostic before choosing any C/LR follow-up. Version A provided no nonidentity basin; do not borrow its failed radial settings or search rho without credible spectral evidence.",
+        "observed": "At identical Standard LRs/C30,rho.1, kappa1.25/2/4 gives76.58/74.56/73.38% versus identity79.05%; higher kappa worsens every epoch and final clipping .6693/.7267/.7534 exceeds identity .6141. Temporal CV rises .0351->.0464/.0606/.0649 and frozen cumulative RMSE rises .006659->.009362/.015459/.018208, agreeing with utility deterioration. In contrast, noise-weighted one-step gain and within-probe CV decrease; one-step noise magnitude alone misses lost MF temporal cancellation. Actual Muon RMS changes only slightly (.0003411-.0003467), Adam RMS stays about .0019055. No credible gain supports an extra rho search. Two follow-ups will test mild kappa1.1 and larger C60 at the best nonidentity kappa1.25."
+      },
+      {
+        "round": "E_r02",
+        "why_next_trials_were_selected": "The first round is monotone toward exact identity with no geometry benefit and worsening frozen MF cancellation. Test kappa1.1 at C30 to bracket the mild end more closely without a fine near-identity sweep. Test C60 at kappa1.25, whose final clipping .6693 exceeds Standard .6141, to see whether loosening clipping rescues utility despite larger raw noise. Keep LRs fixed since no nonidentity geometry basin yet justifies retuning them; keep rho.1 because weaker kappa already tests reducing spectral strength, and diagnostics do not show a useful regularization region. Only2 trials are justified; do not fill the third GPU with a redundant point.",
+        "observed": "Kappa1.1 gives77.64%, below identity79.05% and better than1.25/2/4 (76.58/74.56/73.38%), confirming a monotone trend toward identity at the allowed lower bound. Kappa1.25 C60 gives76.28%, versus76.58% at C30; final clipping falls .6693->.5933, but utility does not recover. Doubling raw sigma leaves measured noise-weighted gain .76567 and frozen RMSE .009362 essentially unchanged; attribute the small utility decline to the changed clipped-signal/noise operating balance, not an observed doubling of update-noise amplitude. Kappa1.1 temporal CV .04049 and frozen RMSE .007607 remain above Standard .03508/.006659. No nonidentity basin or credible rho benefit emerged; close E without extra LR/Adam/rho trials."
+      }
+    ],
+    "status": "closed",
+    "observed_trend": "Identity kappa1 remains highest79.05%. At rho.1, kappa1.1/1.25/2/4 gives77.64/76.58/74.56/73.38%, a clear monotone decline away from the allowed lower bound. Raising C30->60 at kappa1.25 lowers final clipping .6693->.5933 but gives76.28%, so clipping compensation does not rescue utility. Raw innovation sigma doubles, while noise-weighted JVP and frozen RMSE stay essentially unchanged at matched kappa/LRs; do not explain the small loss as a doubled measured update-noise amplitude. Temporal gain CV and frozen cumulative RMSE rise with kappa and utility deteriorates; within-probe CV and instantaneous gain fall without utility benefit. Best active Version B77.64% exceeds best active Version A76.61% by1.03pp, but neither beats Standard. The frozen choices for both versions are exact identity.",
+    "why_search_stopped": "Two rounds without improvement over the79.05% identity control, monotone performance loss at higher kappa, and failed clipping compensation. Stop at5 new trials plus1 reused identity; no nonidentity basin warrants LR tuning. Keep rho.1: neither utility nor temporal-cancellation diagnostics supports an extra rho search, and reducing strength toward identity has already been tested.",
+    "trials_run": 5,
+    "identity_controls_reused": 1,
+    "selected_trial": "e_identity_reuse_c10_muon_0.006_adam_0.012",
+    "selected_config": {
+      "muon_lr": 0.006,
+      "adam_lr": 0.012,
+      "max_grad_norm": 30.0,
+      "lambda_parallel": 1.0,
+      "kappa": 1.0,
+      "rho": 0.1
+    },
+    "selected_final_test_top1": 0.7905,
+    "best_observed_final_test_top1": 0.7905,
+    "selection_gap_percentage_points": 0.0,
+    "varied_parameters": [
+      "max_grad_norm",
+      "kappa"
+    ],
+    "best_nonidentity_trial": "e04_kappa_1.1",
+    "best_nonidentity_final_test_top1": 0.7764,
+    "best_nonidentity_config": {
+      "muon_lr": 0.006,
+      "adam_lr": 0.012,
+      "max_grad_norm": 30.0,
+      "lambda_parallel": 1.0,
+      "kappa": 1.1,
+      "rho": 0.1
+    },
+    "extra_rho_trials_run": 0
+  }
+}

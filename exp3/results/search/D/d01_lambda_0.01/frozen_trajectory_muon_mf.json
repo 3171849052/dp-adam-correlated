@@ -1,0 +1,120 @@
+{
+  "name": "frozen_trajectory_muon_mf",
+  "interpretation": "frozen-state first-order diagnostic; not exact nonlinear training dynamics",
+  "actual_dynamics": "EMA Nesterov beta=.95",
+  "mf_design_workload": "ordinary momentum beta=.9",
+  "steps": 250,
+  "layers": [
+    "blocks.0.attn.qkv.weight",
+    "blocks.5.attn.proj.weight",
+    "blocks.11.mlp.2.weight"
+  ],
+  "probes": 2,
+  "probe_seed": 31415926,
+  "temporal_probe_sha256": {
+    "blocks.0.attn.qkv.weight": "0dfacca1b3f0c2d8cd9cc7a1100ce2fcab521f7544307fe326f2efa1c0ba22e8",
+    "blocks.5.attn.proj.weight": "71de56c2b00671de0ee9224c8be9d801d98879ee5d0455621c4b5eb5b2e200c6",
+    "blocks.11.mlp.2.weight": "bfa8d1b6c9ac44d07cdb85247222340ea5babab25ea5c135bccfe536b0e07067"
+  },
+  "innovation_std_sum": 141.40348896567355,
+  "logical_batch_size": 1000,
+  "muon_lr": 0.006,
+  "per_layer": {
+    "blocks.0.attn.qkv.weight": {
+      "final_cumulative_rmse": {
+        "mean": 0.00334946159273386,
+        "std": 3.6959536373615265e-06,
+        "cv": 0.0011034470869525203,
+        "p10": 0.003346504829823971,
+        "p50": 0.00334946159273386,
+        "p90": 0.003352418355643749
+      },
+      "mean_prefix_rmse": {
+        "mean": 0.0022254916951060296,
+        "std": 1.98405457194897e-06,
+        "cv": 0.0008915129076023997,
+        "p10": 0.0022239044514484703,
+        "p50": 0.0022254916951060296,
+        "p90": 0.002227078938763589
+      },
+      "per_probe_final_cumulative_rmse": [
+        0.0033531575463712215,
+        0.0033457656390964985
+      ],
+      "per_probe_mean_prefix_rmse": [
+        0.0022235076405340806,
+        0.0022274757496779786
+      ]
+    },
+    "blocks.5.attn.proj.weight": {
+      "final_cumulative_rmse": {
+        "mean": 0.006383450701832771,
+        "std": 1.2017320841550827e-05,
+        "cv": 0.0018825743947706057,
+        "p10": 0.006373836845159531,
+        "p50": 0.006383450701832771,
+        "p90": 0.006393064558506012
+      },
+      "mean_prefix_rmse": {
+        "mean": 0.004268605999764986,
+        "std": 6.8549591815099745e-06,
+        "cv": 0.0016059011260086745,
+        "p10": 0.004263122032419778,
+        "p50": 0.004268605999764986,
+        "p90": 0.004274089967110194
+      },
+      "per_probe_final_cumulative_rmse": [
+        0.0063714333809912205,
+        0.006395468022674322
+      ],
+      "per_probe_mean_prefix_rmse": [
+        0.004261751040583476,
+        0.004275460958946496
+      ]
+    },
+    "blocks.11.mlp.2.weight": {
+      "final_cumulative_rmse": {
+        "mean": 0.0015378985553979874,
+        "std": 6.21424987912178e-07,
+        "cv": 0.00040407410861463593,
+        "p10": 0.0015374014154076576,
+        "p50": 0.0015378985553979874,
+        "p90": 0.0015383956953883172
+      },
+      "mean_prefix_rmse": {
+        "mean": 0.0010233329086913726,
+        "std": 4.673798102885606e-07,
+        "cv": 0.00045672313117169365,
+        "p10": 0.0010229590048431419,
+        "p50": 0.0010233329086913726,
+        "p90": 0.0010237068125396034
+      },
+      "per_probe_final_cumulative_rmse": [
+        0.0015385199803858995,
+        0.0015372771304100752
+      ],
+      "per_probe_mean_prefix_rmse": [
+        0.0010238002885016612,
+        0.001022865528881084
+      ]
+    }
+  },
+  "aggregate": {
+    "final_cumulative_rmse": {
+      "mean": 0.0037569369499882064,
+      "std": 0.001999074828873448,
+      "cv": 0.5321023098031292,
+      "p10": 0.0015378985553979874,
+      "p50": 0.00334946159273386,
+      "p90": 0.006383450701832771
+    },
+    "mean_prefix_rmse": {
+      "mean": 0.0025058102011874628,
+      "std": 0.0013396289984522634,
+      "cv": 0.5346091247523196,
+      "p10": 0.0010233329086913726,
+      "p50": 0.0022254916951060296,
+      "p90": 0.004268605999764986
+    }
+  }
+}

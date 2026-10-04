@@ -137,8 +137,7 @@ def test_spectral_inverse_range_normalization(shape, rank):
     s = SpectralScale(h,4,.1)
     torch.testing.assert_close(s.inverse(s.transform(g)),g)
     assert s.delta > 0 and s.pairwise_min >= .25-1e-12 and s.pairwise_max <= 4+1e-12
-    assert float(torch.quantile(s.left_gain.log(),.5)) == pytest.approx(0, abs=1e-12)
-    assert float(torch.quantile(s.right_gain.log(),.5)) == pytest.approx(0, abs=1e-12)
+    assert float(torch.quantile(s.active_gain.log(),.5)) == pytest.approx(0, abs=1e-12)
     one = SpectralScale(h,1,.1)
     torch.testing.assert_close(one.transform(g),g)
 
@@ -268,7 +267,7 @@ def test_diagnostic_fixed_probes_and_temporal_statistics(tmp_path):
         opt.step(); a.record(step,geometry)
     result=a.save(tmp_path)
     assert [r['step'] for r in result['records']]==[1,2]
-    assert 'temporal_gain_cv' in result and 'layer_gain_cv' in result
+    assert 'temporal_update_gain_cv' in result and 'layer_update_gain_cv' in result
 
 
 def completed_fixture(spec):

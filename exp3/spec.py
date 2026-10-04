@@ -10,7 +10,9 @@ EXP3 = ROOT / 'exp3'
 METHODS = ('nonprivate_hybrid', 'iid_dp_hybrid', 'mf_muon_standard',
            'mf_muon_normscale', 'mf_muon_spectralscale')
 TRIAL_FILES = ('config.yaml', 'train.log', 'metrics.csv', 'summary.json',
-               'train_order.npy', 'final.pt', 'matrices.npz', 'diagnostics.csv', 'diagnostics.json')
+               'train_order.npy', 'final.pt', 'matrices.npz', 'diagnostics.csv', 'diagnostics.json',
+               'update_statistics.csv', 'update_statistics.json', 'muon_trajectory.pt', 'frozen_trajectory_muon_mf.json')
+IMPLEMENTATION_VERSION = 'active_spectrum_v2_update_space_frozen_trajectory'
 
 
 @dataclass(frozen=True)
@@ -52,7 +54,7 @@ class TrialSpec:
         return values
 
     def fingerprint(self):
-        return hashlib.sha256(json.dumps(self.mapping(), sort_keys=True).encode()).hexdigest()
+        return hashlib.sha256(json.dumps(dict(version=IMPLEMENTATION_VERSION, spec=self.mapping()), sort_keys=True).encode()).hexdigest()
 
 
 def load_spec(path):

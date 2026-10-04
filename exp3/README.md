@@ -12,7 +12,7 @@ Muon uses EMA momentum .95, Nesterov, Frobenius normalization with `1e-7`, stand
 
 All MF methods use the same ordinary momentum `.9` workload, four-band inverse-square-root coefficients and strategy; geometry is absent from factorization. GDP calibration follows Exp1/2, without sampling amplification and with add/remove zero-out adjacency. `innovation_std_sum = clip * fixed_epoch_sensitivity(strategy,5,50) / target_mu(8,1e-5)`, so changing clip recalibrates noise. Innovations are convolved by `D=C^-1` before inverse scaling. Adam and Muon share this one mechanism. The saved matrices include unscaled `D`, strategy, `W`, and `M = sigma D`; the noise coefficient stream is common to MF methods, while sigma changes with clip.
 
-Version A scales the component parallel to normalized previous `H` by `sqrt(lambda_parallel)`. Version B computes `QL/QR` eigendecompositions in FP64; `delta=rho*mean(nonzero singular_values(Hbar)^2)`. Nonzero rank is determined at FP64 precision. Each side's log eigengains is centered at its median and clamped to `[-log(kappa)/2, log(kappa)/2]`, putting all pairwise scales within `[1/kappa,kappa]`. Both scale methods use identity on the first step; `lambda_parallel=1` and `kappa=1` give exact identity. Geometry only affects Muon blocks.
+Version A scales the component parallel to normalized previous `H` by `sqrt(lambda_parallel)`. Version B uses an FP64 thin SVD; `delta=rho*mean(active singular_values(Hbar)^2)`. The median log-gain of the active singular spectrum gives one shared normalization center for both sides. Structural nullspace receives a finite ridge gain but does not set the center. The existing `[-log(kappa)/2, log(kappa)/2]` cap puts all pairwise scales within `[1/kappa,kappa]`. Both scale methods use identity on the first step; `lambda_parallel=1` and `kappa=1` give exact identity. Geometry only affects Muon blocks.
 
 Norm computation uses Opacus Fast Clipping with exact layer-at-a-time transformed per-example gradients; no full-model Jacobian or full-model per-example gradient tensor is materialized. The second backward sums gradients using the single global clipping coefficient. Geometry is linear, so the sum is transformed at release time.
 
@@ -59,12 +59,42 @@ This explicitly launches the 15 full trials using seeds 20261011/20261012/202610
 PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/exp3/tmp" \
   python -m pytest -c exp3/pytest.ini exp3/tests -q > exp3/results/unit_tests.log 2>&1
 python -m exp3.launch_batch --specs exp3/specs/smoke_mf.json \
-  --result-dir exp3/results/smoke/batch_mf
+  --result-dir exp3/results/smoke_v2/batch_mf
 python -m exp3.launch_batch --specs exp3/specs/smoke_baseline.json \
-  --result-dir exp3/results/smoke/batch_baseline
+  --result-dir exp3/results/smoke_v2/batch_baseline
 python -m exp3.verify_smoke
 ```
 
 The actual-pretrained, local-CIFAR GPU smoke runs each of five methods for two logical steps (8 physical batches, 2000 training examples, 100 test examples), checking both identity on the first step and adaptive geometry on the second. All three diagnostic layers use two fixed probes at both steps. These smoke specs do not start search or final validation.
 
 JVP diagnostics evaluate `Phi` at completed `H_t` using the **actual frozen `S_t` from `H_(t-1)`**. They record per-layer probe mean/std/CV and p10/p50/p90, CV across layer means per diagnostic step, and temporal CV of each layer's mean. Probes use dedicated generators seeded by layer-name hashes; diagnostic RNG never affects training or noise. Norm/noise estimates and training logs are experiment diagnostics on local data; only the jointly noised gradient is the analyzed privacy mechanism.
+
+## Active-spectrum normalization and diagnostics (revision 2)
+
+Version B uses an FP64 thin SVD. Active singular values exceed `eps64 * max(shape) * sigma_max`. With `delta = rho * mean(active_sigma**2)`, a **shared** center is `median(-0.25 * log(active_sigma**2 + delta))`. Both sides subtract that center before the existing half-log-kappa cap. Structural nullspace gets the finite ridge gain and the same cap, and does not influence the center. Adding structural null dimensions leaves active gains unchanged. The trial fingerprint includes this implementation revision, so old artifacts cannot be mistaken for corrected runs; prior results remain untouched.
+
+`diagnostics.csv/json` now contains `phi_gain_*`, `update_gain_*`, `noise_weighted_update_gain_*` for mean/std/CV/p10/p50/p90. Update gain includes the actual `sqrt(max(1,rows/cols))` factor. Cross-layer and temporal metrics are `layer_update_gain_cv` and `temporal_update_gain_cv`. Noise weighting is `innovation_std_sum/1000`; nonprivate values are null. No old Phi-only cross-layer metric is used as an optimizer metric.
+
+MF trials save all 250 completed `H_t` matrices and actual frozen geometry for **only the three diagnostic layers** in `muon_trajectory.pt`. Inverse factors fully determine the saved spectral geometry. `frozen_trajectory_muon_mf.json` and the trial summary contain final cumulative RMSE and mean-prefix RMSE (mean/std/CV/p10/p50/p90 across probes), per-layer and equal-weight sampled-layer aggregate. Dedicated CPU temporal probes use the same layer/seed/sequence across methods, actual saved D, sigma/batch, actual EMA Nesterov .95 recurrence, JVP at frozen H, shape factor, and Muon LR before parameter-update accumulation. This is a **frozen-state first-order diagnostic, not exact nonlinear training dynamics**. It never affects optimizer or privacy calibration.
+
+Recompute offline, for example:
+
+```bash
+CUDA_VISIBLE_DEVICES=1 python -m exp3.frozen_trajectory \
+  --trial-dir exp3/results/search/<trial> --device cuda:0 --probes 2
+```
+
+`update_statistics.csv/json` records actual Muon/Adam released-gradient norms, update norms/RMS and relative update norms on diagnostic steps. Values also appear in `summary.json`. The existing two-step smoke specs now point to `exp3/results/smoke_v2/`, preserving the prior smoke. Its verification report is `exp3/results/smoke_v2_verification.json`.
+
+`exp3/search_records.py` only records explicitly chosen sequential batches and their rationales. It enforces tuning seed 20261001, full five-epoch trials, stage ordering, budgets, one active batch, and result paths inside `exp3/results/search/`. It contains no search grid or automatic parameter policy. Exact `lambda=1` / `kappa=1` controls can reuse a completed equivalent Standard trial with the equivalence recorded, avoiding duplicate training. Search logs are `search_history.json`, `search_summary.csv`, `search_rationale.json`; frozen selected parameters are `selected_configs.json`.
+
+Once all five stages close, `python -m exp3.search_audit` verifies full-trial counts, seed isolation, finite checkpoints, pairing, common MF matrices/probes and frozen configurations. `python -m exp3.search_report` exports the selected trials, utility differences and matching-LR/C Standard comparisons to `exp3/results/search/search_report.json` and `.md`. Neither command launches trials or reads final-validation results. The environment manifest is `exp3/results/search/environment.json`.
+
+Run final validation separately after search has frozen the configuration:
+
+```bash
+conda activate curve
+PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/exp3/tmp" \
+  python -m exp3.final_runner --frozen-config exp3/results/selected_configs.json \
+  --result-dir exp3/results/final
+```

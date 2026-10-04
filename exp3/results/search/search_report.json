@@ -1,0 +1,907 @@
+{
+  "tuning_seed": 20261001,
+  "selection_frozen": true,
+  "validation_results_used": false,
+  "final_validation_started": false,
+  "stages": {
+    "A": {
+      "status": "closed",
+      "observed_trend": "Stable small-Muon basin (.0003-.001); increasing Muon to .003/.01/.03 hurts. Adam .001 improves learning speed versus .0002 and finishes highest; .002 loses utility. No search to resolve sub-0.3 pp ties.",
+      "why_search_stopped": "Eight-trial budget reached; Adam optimum bracketed and large-Muon overshoot established.",
+      "trials_run": 8,
+      "identity_controls_reused": 0,
+      "selected_trial": "a07_adam_0.001",
+      "selected_config": {
+        "muon_lr": 0.0003,
+        "adam_lr": 0.001,
+        "max_grad_norm": 100.0,
+        "lambda_parallel": 1.0,
+        "kappa": 4.0,
+        "rho": 0.1
+      },
+      "selected_final_test_top1": 0.8544,
+      "best_observed_final_test_top1": 0.8544,
+      "selection_gap_percentage_points": 0.0,
+      "varied_parameters": [
+        "muon_lr",
+        "adam_lr"
+      ]
+    },
+    "B": {
+      "status": "closed",
+      "observed_trend": "C10-30 plateau, larger C60/100 harms utility despite similar normalized update RMS; best C30 has less late clipping. Muon .001 modestly improves .0003, whereas .003 sharply degrades. Adam .0003 underfits and .003 has a declining later curve.",
+      "why_search_stopped": "Best LR region bracketed by inferior neighbors; clipping trend clear. Stop after nine trials rather than expend the remaining three.",
+      "trials_run": 9,
+      "identity_controls_reused": 0,
+      "selected_trial": "b05_muon_0.001",
+      "selected_config": {
+        "muon_lr": 0.001,
+        "adam_lr": 0.001,
+        "max_grad_norm": 30.0,
+        "lambda_parallel": 1.0,
+        "kappa": 4.0,
+        "rho": 0.1
+      },
+      "selected_final_test_top1": 0.6982,
+      "best_observed_final_test_top1": 0.6982,
+      "selection_gap_percentage_points": 0.0,
+      "varied_parameters": [
+        "muon_lr",
+        "adam_lr",
+        "max_grad_norm"
+      ]
+    },
+    "C": {
+      "status": "closed",
+      "observed_trend": "MF requires higher LRs than the IID basin: .001/.001 reaches only42.99%, while .006/.012 reaches79.05%. Adam .024 overshoots (74.54%); .006/.009 are inferior Adam neighbors. C10 and C60 do not improve on C30 at matched LRs. MF frozen perturbation RMSE scales with Muon LR; its lower value at underfitting LRs does not predict better utility. Update-gain temporal CV is about .035, lower than IID but not a standalone utility score. Best final clipping .614 supports a reasonable regime. Muon .006 remains a boundary of the tested LR range.",
+      "why_search_stopped": "Reached12-trial budget with a clear Adam basin and clipping trend; freeze highest final_test_top1 rather than extend search.",
+      "trials_run": 12,
+      "identity_controls_reused": 0,
+      "selected_trial": "c10_muon_0.006_adam_0.012",
+      "selected_config": {
+        "muon_lr": 0.006,
+        "adam_lr": 0.012,
+        "max_grad_norm": 30.0,
+        "lambda_parallel": 1.0,
+        "kappa": 4.0,
+        "rho": 0.1
+      },
+      "selected_final_test_top1": 0.7905,
+      "best_observed_final_test_top1": 0.7905,
+      "selection_gap_percentage_points": 0.0,
+      "varied_parameters": [
+        "muon_lr",
+        "adam_lr",
+        "max_grad_norm"
+      ]
+    },
+    "D": {
+      "status": "closed",
+      "observed_trend": "Exact identity lambda1 remains best79.05%. Lambda .1/.01/.0001 at C30 gives76.61/75.80/71.69%; expansion4/100 collapses to10.51/9.33% with near-total clipping and regressing curves. Identity is bracketed by worse moderate neighbors .1 and4. Raising C from30 to60 at lambda .01 restores final clipping .6103 close to Standard .6141 but gives75.53%, so a clipping-operating-point change does not rescue geometry. Noise-weighted JVP and frozen final RMSE decrease while utility worsens; actual Muon update RMS stays near .000342. Temporal gain CV rises from identity .0351 to .1871/.5787/1.033 under stronger compression, consistent with disruption and utility loss. No credible nonidentity geometry basin warrants LR tuning.",
+      "why_search_stopped": "Two completed rounds without any improvement over identity, lower-performing neighbors bracket lambda1, and clipping compensation fails. Stop at6 new trials plus1 reused identity, without spending the16-trial limit.",
+      "trials_run": 6,
+      "identity_controls_reused": 1,
+      "selected_trial": "d_identity_reuse_c10_muon_0.006_adam_0.012",
+      "selected_config": {
+        "muon_lr": 0.006,
+        "adam_lr": 0.012,
+        "max_grad_norm": 30.0,
+        "lambda_parallel": 1.0,
+        "kappa": 1.0,
+        "rho": 0.1
+      },
+      "selected_final_test_top1": 0.7905,
+      "best_observed_final_test_top1": 0.7905,
+      "selection_gap_percentage_points": 0.0,
+      "varied_parameters": [
+        "max_grad_norm",
+        "lambda_parallel"
+      ],
+      "best_nonidentity_trial": "d04_lambda_0.1",
+      "best_nonidentity_final_test_top1": 0.7661,
+      "best_nonidentity_config": {
+        "muon_lr": 0.006,
+        "adam_lr": 0.012,
+        "max_grad_norm": 30.0,
+        "lambda_parallel": 0.1,
+        "kappa": 4.0,
+        "rho": 0.1
+      }
+    },
+    "E": {
+      "status": "closed",
+      "observed_trend": "Identity kappa1 remains highest79.05%. At rho.1, kappa1.1/1.25/2/4 gives77.64/76.58/74.56/73.38%, a clear monotone decline away from the allowed lower bound. Raising C30->60 at kappa1.25 lowers final clipping .6693->.5933 but gives76.28%, so clipping compensation does not rescue utility. Raw innovation sigma doubles, while noise-weighted JVP and frozen RMSE stay essentially unchanged at matched kappa/LRs; do not explain the small loss as a doubled measured update-noise amplitude. Temporal gain CV and frozen cumulative RMSE rise with kappa and utility deteriorates; within-probe CV and instantaneous gain fall without utility benefit. Best active Version B77.64% exceeds best active Version A76.61% by1.03pp, but neither beats Standard. The frozen choices for both versions are exact identity.",
+      "why_search_stopped": "Two rounds without improvement over the79.05% identity control, monotone performance loss at higher kappa, and failed clipping compensation. Stop at5 new trials plus1 reused identity; no nonidentity basin warrants LR tuning. Keep rho.1: neither utility nor temporal-cancellation diagnostics supports an extra rho search, and reducing strength toward identity has already been tested.",
+      "trials_run": 5,
+      "identity_controls_reused": 1,
+      "selected_trial": "e_identity_reuse_c10_muon_0.006_adam_0.012",
+      "selected_config": {
+        "muon_lr": 0.006,
+        "adam_lr": 0.012,
+        "max_grad_norm": 30.0,
+        "lambda_parallel": 1.0,
+        "kappa": 1.0,
+        "rho": 0.1
+      },
+      "selected_final_test_top1": 0.7905,
+      "best_observed_final_test_top1": 0.7905,
+      "selection_gap_percentage_points": 0.0,
+      "varied_parameters": [
+        "max_grad_norm",
+        "kappa"
+      ],
+      "best_nonidentity_trial": "e04_kappa_1.1",
+      "best_nonidentity_final_test_top1": 0.7764,
+      "best_nonidentity_config": {
+        "muon_lr": 0.006,
+        "adam_lr": 0.012,
+        "max_grad_norm": 30.0,
+        "lambda_parallel": 1.0,
+        "kappa": 1.1,
+        "rho": 0.1
+      },
+      "extra_rho_trials_run": 0
+    }
+  },
+  "selected_trials": {
+    "nonprivate_hybrid": {
+      "stage": "A",
+      "trial_id": "a07_adam_0.001",
+      "method": "nonprivate_hybrid",
+      "source_method": "nonprivate_hybrid",
+      "seed": 20261001,
+      "reused_identity": false,
+      "status": "completed",
+      "spec": {
+        "method": "nonprivate_hybrid",
+        "result_dir": "exp3/results/search/A/a07_adam_0.001",
+        "seed": 20261001,
+        "muon_lr": 0.0003,
+        "adam_lr": 0.001,
+        "max_grad_norm": 100.0,
+        "lambda_parallel": 1.0,
+        "kappa": 4.0,
+        "rho": 0.1,
+        "smoke": false,
+        "diagnostic_interval": 25,
+        "diagnostic_probes": 4
+      },
+      "muon_lr": 0.0003,
+      "adam_lr": 0.001,
+      "max_grad_norm": 100.0,
+      "lambda_parallel": 1.0,
+      "kappa": 4.0,
+      "rho": 0.1,
+      "result_dir": "exp3/results/search/A/a07_adam_0.001",
+      "final_test_top1": 0.8544,
+      "best_test_top1": 0.8544,
+      "train_loss": 0.8597403039550782,
+      "epoch_test_top1": [
+        0.7432,
+        0.818,
+        0.8392,
+        0.8481,
+        0.8544
+      ],
+      "epoch_clip_fraction": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "mean_clip_fraction": null,
+      "innovation_std_sum": 0.0,
+      "noise_std_gradient": 0.0,
+      "mean_update_gain_cv": 0.006424447740514831,
+      "mean_layer_update_gain_cv": 0.6693297074728138,
+      "mean_temporal_update_gain_cv": 0.46982042284980396,
+      "mean_noise_weighted_update_gain": null,
+      "frozen_final_cumulative_rmse": null,
+      "update_statistics": {
+        "muon": {
+          "gradient_norm": {
+            "mean": 3.596859086643566,
+            "std": 0.31572910250125447,
+            "cv": 0.08777911363658099,
+            "p10": 3.2216298580169678,
+            "p50": 3.503690719604492,
+            "p90": 4.0809526443481445
+          },
+          "update_norm": {
+            "mean": 0.03863691301508383,
+            "std": 0.0001938941915490801,
+            "cv": 0.00501836654168991,
+            "p10": 0.03840909153223038,
+            "p50": 0.03873702883720398,
+            "p90": 0.038794517517089844
+          },
+          "update_rms": {
+            "mean": 1.6769493496130135e-05,
+            "std": 8.415546508206607e-08,
+            "cv": 0.005018366541689912,
+            "p10": 1.6670612644197212e-05,
+            "p50": 1.681294654392534e-05,
+            "p90": 1.6837898227903577e-05
+          },
+          "relative_update_norm": {
+            "mean": 0.00028264015614126557,
+            "std": 1.4442977666039267e-06,
+            "cv": 0.005110023240583183,
+            "p10": 0.000280955514023593,
+            "p50": 0.0002833876225191289,
+            "p90": 0.00028380968019639557
+          }
+        },
+        "adam": {
+          "gradient_norm": {
+            "mean": 1.928459720178084,
+            "std": 0.6184442046744315,
+            "cv": 0.3206933482734714,
+            "p10": 1.559494972229004,
+            "p50": 1.7026935815811157,
+            "p90": 2.2478513717651367
+          },
+          "update_norm": {
+            "mean": 0.13489467853849585,
+            "std": 0.11142811739434955,
+            "cv": 0.8260379030633926,
+            "p10": 0.08576551824808121,
+            "p50": 0.09548023343086243,
+            "p90": 0.15122640132904053
+          },
+          "update_rms": {
+            "mean": 0.000278089027882856,
+            "std": 0.00022971207745729172,
+            "cv": 0.8260379030633928,
+            "p10": 0.00017680793530096056,
+            "p50": 0.00019683508337387353,
+            "p90": 0.00031175731608874515
+          },
+          "relative_update_norm": {
+            "mean": 0.0007184226803207977,
+            "std": 0.0005938388019742948,
+            "cv": 0.8265869358538731,
+            "p10": 0.00045647647200710466,
+            "p50": 0.0005082201154436836,
+            "p90": 0.0008058361595024533
+          }
+        }
+      }
+    },
+    "iid_dp_hybrid": {
+      "stage": "B",
+      "trial_id": "b05_muon_0.001",
+      "method": "iid_dp_hybrid",
+      "source_method": "iid_dp_hybrid",
+      "seed": 20261001,
+      "reused_identity": false,
+      "status": "completed",
+      "spec": {
+        "method": "iid_dp_hybrid",
+        "result_dir": "exp3/results/search/B/b05_muon_0.001",
+        "seed": 20261001,
+        "muon_lr": 0.001,
+        "adam_lr": 0.001,
+        "max_grad_norm": 30.0,
+        "lambda_parallel": 1.0,
+        "kappa": 4.0,
+        "rho": 0.1,
+        "smoke": false,
+        "diagnostic_interval": 25,
+        "diagnostic_probes": 4
+      },
+      "muon_lr": 0.001,
+      "adam_lr": 0.001,
+      "max_grad_norm": 30.0,
+      "lambda_parallel": 1.0,
+      "kappa": 4.0,
+      "rho": 0.1,
+      "result_dir": "exp3/results/search/B/b05_muon_0.001",
+      "final_test_top1": 0.6982,
+      "best_test_top1": 0.6982,
+      "train_loss": 1.6158245715332031,
+      "epoch_test_top1": [
+        0.288,
+        0.5286,
+        0.6227,
+        0.6748,
+        0.6982
+      ],
+      "epoch_clip_fraction": [
+        1.0,
+        0.98482,
+        0.91282,
+        0.8389,
+        0.78478
+      ],
+      "mean_clip_fraction": 0.9042639999999998,
+      "innovation_std_sum": 40.264590225254544,
+      "noise_std_gradient": 0.04026459022525455,
+      "mean_update_gain_cv": 0.009505063611113519,
+      "mean_layer_update_gain_cv": 0.47102225089784455,
+      "mean_temporal_update_gain_cv": 0.21394548616155243,
+      "mean_noise_weighted_update_gain": 0.5248540145407201,
+      "frozen_final_cumulative_rmse": null,
+      "update_statistics": {
+        "muon": {
+          "gradient_norm": {
+            "mean": 92.77060560746627,
+            "std": 0.035665186895052534,
+            "cv": 0.0003844449075384948,
+            "p10": 92.7384033203125,
+            "p50": 92.75435638427734,
+            "p90": 92.81478118896484
+          },
+          "update_norm": {
+            "mean": 0.13118553838946603,
+            "std": 4.29706124487383e-05,
+            "cv": 0.00032755601704485414,
+            "p10": 0.1311320960521698,
+            "p50": 0.1311996579170227,
+            "p90": 0.13122591376304626
+          },
+          "update_rms": {
+            "mean": 5.6938167703761295e-05,
+            "std": 1.865043943087499e-08,
+            "cv": 0.0003275560170448364,
+            "p10": 5.691497224486536e-05,
+            "p50": 5.694429597092999e-05,
+            "p90": 5.695569173743328e-05
+          },
+          "relative_update_norm": {
+            "mean": 0.0009581739808344239,
+            "std": 1.0637426113935027e-06,
+            "cv": 0.0011101768913273397,
+            "p10": 0.0009567543662213653,
+            "p50": 0.0009586607709414296,
+            "p90": 0.0009592258070528092
+          }
+        },
+        "adam": {
+          "gradient_norm": {
+            "mean": 19.541054118763316,
+            "std": 0.038141824199891046,
+            "cv": 0.0019518816113030092,
+            "p10": 19.49359893798828,
+            "p50": 19.534658432006836,
+            "p90": 19.58719253540039
+          },
+          "update_norm": {
+            "mean": 0.14629065719517795,
+            "std": 0.10716335799678217,
+            "cv": 0.7325372655466784,
+            "p10": 0.11121242493391037,
+            "p50": 0.11145216971635818,
+            "p90": 0.12026628106832504
+          },
+          "update_rms": {
+            "mean": 0.0003015821460751063,
+            "std": 0.0002209201606235573,
+            "cv": 0.7325372655466785,
+            "p10": 0.0002292674216169349,
+            "p50": 0.00022976166196958064,
+            "p90": 0.0002479321908894462
+          },
+          "relative_update_norm": {
+            "mean": 0.0007791698817438863,
+            "std": 0.0005710834003681375,
+            "cv": 0.7329382381798134,
+            "p10": 0.0005920410830509899,
+            "p50": 0.0005934910039059897,
+            "p90": 0.0006407426095886031
+          }
+        }
+      }
+    },
+    "mf_muon_standard": {
+      "stage": "C",
+      "trial_id": "c10_muon_0.006_adam_0.012",
+      "method": "mf_muon_standard",
+      "source_method": "mf_muon_standard",
+      "seed": 20261001,
+      "reused_identity": false,
+      "status": "completed",
+      "spec": {
+        "method": "mf_muon_standard",
+        "result_dir": "exp3/results/search/C/c10_muon_0.006_adam_0.012",
+        "seed": 20261001,
+        "muon_lr": 0.006,
+        "adam_lr": 0.012,
+        "max_grad_norm": 30.0,
+        "lambda_parallel": 1.0,
+        "kappa": 4.0,
+        "rho": 0.1,
+        "smoke": false,
+        "diagnostic_interval": 25,
+        "diagnostic_probes": 4
+      },
+      "muon_lr": 0.006,
+      "adam_lr": 0.012,
+      "max_grad_norm": 30.0,
+      "lambda_parallel": 1.0,
+      "kappa": 4.0,
+      "rho": 0.1,
+      "result_dir": "exp3/results/search/C/c10_muon_0.006_adam_0.012",
+      "final_test_top1": 0.7905,
+      "best_test_top1": 0.7905,
+      "train_loss": 1.2724237963867187,
+      "epoch_test_top1": [
+        0.4819,
+        0.6796,
+        0.7457,
+        0.7728,
+        0.7905
+      ],
+      "epoch_clip_fraction": [
+        0.98832,
+        0.85102,
+        0.72406,
+        0.65618,
+        0.61406
+      ],
+      "mean_clip_fraction": 0.766728,
+      "innovation_std_sum": 141.40348896567355,
+      "noise_std_gradient": 0.14140348896567353,
+      "mean_update_gain_cv": 0.011062249004440725,
+      "mean_layer_update_gain_cv": 0.47039956815595385,
+      "mean_temporal_update_gain_cv": 0.03507974022580376,
+      "mean_noise_weighted_update_gain": 0.7932499600864438,
+      "frozen_final_cumulative_rmse": 0.006658797346365948,
+      "update_statistics": {
+        "muon": {
+          "gradient_norm": {
+            "mean": 438.05609130859375,
+            "std": 35.489130218345174,
+            "cv": 0.08101503648158254,
+            "p10": 448.9757080078125,
+            "p50": 449.2574157714844,
+            "p90": 449.40875244140625
+          },
+          "update_norm": {
+            "mean": 0.7869553999467329,
+            "std": 0.00023932824087664125,
+            "cv": 0.00030411919264146457,
+            "p10": 0.7867774963378906,
+            "p50": 0.7870110273361206,
+            "p90": 0.787251353263855
+          },
+          "update_rms": {
+            "mean": 0.00034156050344910286,
+            "std": 1.038751045471573e-07,
+            "cv": 0.00030411919264147617,
+            "p10": 0.00034148328834109835,
+            "p50": 0.00034158464728130237,
+            "p90": 0.0003416889554096593
+          },
+          "relative_update_norm": {
+            "mean": 0.005752093992952282,
+            "std": 3.389783964818086e-06,
+            "cv": 0.0005893130343439099,
+            "p10": 0.005747449587301053,
+            "p50": 0.005752464842553662,
+            "p90": 0.005755851641987637
+          }
+        },
+        "adam": {
+          "gradient_norm": {
+            "mean": 92.18378448486328,
+            "std": 7.466834864265931,
+            "cv": 0.08099943939155586,
+            "p10": 94.14794921875,
+            "p50": 94.52999114990234,
+            "p90": 94.74736022949219
+          },
+          "update_norm": {
+            "mean": 0.9243214645168998,
+            "std": 1.5485139928852691,
+            "cv": 1.6752980995573936,
+            "p10": 0.42702049016952515,
+            "p50": 0.4291738271713257,
+            "p90": 0.4812573790550232
+          },
+          "update_rms": {
+            "mean": 0.0019055136963420545,
+            "std": 0.0031923034741624286,
+            "cv": 1.6752980995573938,
+            "p10": 0.000880314288776154,
+            "p50": 0.0008847534512399572,
+            "p90": 0.0009921251019896224
+          },
+          "relative_update_norm": {
+            "mean": 0.004922651311537634,
+            "std": 0.008251521442073681,
+            "cv": 1.6762352073838527,
+            "p10": 0.0022727092828599485,
+            "p50": 0.0022843425915405288,
+            "p90": 0.002561757834598454
+          }
+        }
+      }
+    },
+    "mf_muon_normscale": {
+      "stage": "D",
+      "trial_id": "d_identity_reuse_c10_muon_0.006_adam_0.012",
+      "method": "mf_muon_normscale",
+      "source_method": "mf_muon_standard",
+      "seed": 20261001,
+      "reused_identity": true,
+      "status": "completed",
+      "spec": {
+        "method": "mf_muon_normscale",
+        "result_dir": "exp3/results/search/C/c10_muon_0.006_adam_0.012",
+        "seed": 20261001,
+        "muon_lr": 0.006,
+        "adam_lr": 0.012,
+        "max_grad_norm": 30.0,
+        "lambda_parallel": 1.0,
+        "kappa": 1.0,
+        "rho": 0.1,
+        "smoke": false,
+        "diagnostic_interval": 25,
+        "diagnostic_probes": 4
+      },
+      "muon_lr": 0.006,
+      "adam_lr": 0.012,
+      "max_grad_norm": 30.0,
+      "lambda_parallel": 1.0,
+      "kappa": 1.0,
+      "rho": 0.1,
+      "result_dir": "exp3/results/search/C/c10_muon_0.006_adam_0.012",
+      "final_test_top1": 0.7905,
+      "best_test_top1": 0.7905,
+      "train_loss": 1.2724237963867187,
+      "epoch_test_top1": [
+        0.4819,
+        0.6796,
+        0.7457,
+        0.7728,
+        0.7905
+      ],
+      "epoch_clip_fraction": [
+        0.98832,
+        0.85102,
+        0.72406,
+        0.65618,
+        0.61406
+      ],
+      "mean_clip_fraction": 0.766728,
+      "innovation_std_sum": 141.40348896567355,
+      "noise_std_gradient": 0.14140348896567353,
+      "mean_update_gain_cv": 0.011062249004440725,
+      "mean_layer_update_gain_cv": 0.47039956815595385,
+      "mean_temporal_update_gain_cv": 0.03507974022580376,
+      "mean_noise_weighted_update_gain": 0.7932499600864438,
+      "frozen_final_cumulative_rmse": 0.006658797346365948,
+      "update_statistics": {
+        "muon": {
+          "gradient_norm": {
+            "mean": 438.05609130859375,
+            "std": 35.489130218345174,
+            "cv": 0.08101503648158254,
+            "p10": 448.9757080078125,
+            "p50": 449.2574157714844,
+            "p90": 449.40875244140625
+          },
+          "update_norm": {
+            "mean": 0.7869553999467329,
+            "std": 0.00023932824087664125,
+            "cv": 0.00030411919264146457,
+            "p10": 0.7867774963378906,
+            "p50": 0.7870110273361206,
+            "p90": 0.787251353263855
+          },
+          "update_rms": {
+            "mean": 0.00034156050344910286,
+            "std": 1.038751045471573e-07,
+            "cv": 0.00030411919264147617,
+            "p10": 0.00034148328834109835,
+            "p50": 0.00034158464728130237,
+            "p90": 0.0003416889554096593
+          },
+          "relative_update_norm": {
+            "mean": 0.005752093992952282,
+            "std": 3.389783964818086e-06,
+            "cv": 0.0005893130343439099,
+            "p10": 0.005747449587301053,
+            "p50": 0.005752464842553662,
+            "p90": 0.005755851641987637
+          }
+        },
+        "adam": {
+          "gradient_norm": {
+            "mean": 92.18378448486328,
+            "std": 7.466834864265931,
+            "cv": 0.08099943939155586,
+            "p10": 94.14794921875,
+            "p50": 94.52999114990234,
+            "p90": 94.74736022949219
+          },
+          "update_norm": {
+            "mean": 0.9243214645168998,
+            "std": 1.5485139928852691,
+            "cv": 1.6752980995573936,
+            "p10": 0.42702049016952515,
+            "p50": 0.4291738271713257,
+            "p90": 0.4812573790550232
+          },
+          "update_rms": {
+            "mean": 0.0019055136963420545,
+            "std": 0.0031923034741624286,
+            "cv": 1.6752980995573938,
+            "p10": 0.000880314288776154,
+            "p50": 0.0008847534512399572,
+            "p90": 0.0009921251019896224
+          },
+          "relative_update_norm": {
+            "mean": 0.004922651311537634,
+            "std": 0.008251521442073681,
+            "cv": 1.6762352073838527,
+            "p10": 0.0022727092828599485,
+            "p50": 0.0022843425915405288,
+            "p90": 0.002561757834598454
+          }
+        }
+      },
+      "source_trial": "c10_muon_0.006_adam_0.012",
+      "reason": "Exact identity geometry, same optimizer/clipping/noise/order; reuse Standard without rerunning an equivalent trial"
+    },
+    "mf_muon_spectralscale": {
+      "stage": "E",
+      "trial_id": "e_identity_reuse_c10_muon_0.006_adam_0.012",
+      "method": "mf_muon_spectralscale",
+      "source_method": "mf_muon_standard",
+      "seed": 20261001,
+      "reused_identity": true,
+      "status": "completed",
+      "spec": {
+        "method": "mf_muon_spectralscale",
+        "result_dir": "exp3/results/search/C/c10_muon_0.006_adam_0.012",
+        "seed": 20261001,
+        "muon_lr": 0.006,
+        "adam_lr": 0.012,
+        "max_grad_norm": 30.0,
+        "lambda_parallel": 1.0,
+        "kappa": 1.0,
+        "rho": 0.1,
+        "smoke": false,
+        "diagnostic_interval": 25,
+        "diagnostic_probes": 4
+      },
+      "muon_lr": 0.006,
+      "adam_lr": 0.012,
+      "max_grad_norm": 30.0,
+      "lambda_parallel": 1.0,
+      "kappa": 1.0,
+      "rho": 0.1,
+      "result_dir": "exp3/results/search/C/c10_muon_0.006_adam_0.012",
+      "final_test_top1": 0.7905,
+      "best_test_top1": 0.7905,
+      "train_loss": 1.2724237963867187,
+      "epoch_test_top1": [
+        0.4819,
+        0.6796,
+        0.7457,
+        0.7728,
+        0.7905
+      ],
+      "epoch_clip_fraction": [
+        0.98832,
+        0.85102,
+        0.72406,
+        0.65618,
+        0.61406
+      ],
+      "mean_clip_fraction": 0.766728,
+      "innovation_std_sum": 141.40348896567355,
+      "noise_std_gradient": 0.14140348896567353,
+      "mean_update_gain_cv": 0.011062249004440725,
+      "mean_layer_update_gain_cv": 0.47039956815595385,
+      "mean_temporal_update_gain_cv": 0.03507974022580376,
+      "mean_noise_weighted_update_gain": 0.7932499600864438,
+      "frozen_final_cumulative_rmse": 0.006658797346365948,
+      "update_statistics": {
+        "muon": {
+          "gradient_norm": {
+            "mean": 438.05609130859375,
+            "std": 35.489130218345174,
+            "cv": 0.08101503648158254,
+            "p10": 448.9757080078125,
+            "p50": 449.2574157714844,
+            "p90": 449.40875244140625
+          },
+          "update_norm": {
+            "mean": 0.7869553999467329,
+            "std": 0.00023932824087664125,
+            "cv": 0.00030411919264146457,
+            "p10": 0.7867774963378906,
+            "p50": 0.7870110273361206,
+            "p90": 0.787251353263855
+          },
+          "update_rms": {
+            "mean": 0.00034156050344910286,
+            "std": 1.038751045471573e-07,
+            "cv": 0.00030411919264147617,
+            "p10": 0.00034148328834109835,
+            "p50": 0.00034158464728130237,
+            "p90": 0.0003416889554096593
+          },
+          "relative_update_norm": {
+            "mean": 0.005752093992952282,
+            "std": 3.389783964818086e-06,
+            "cv": 0.0005893130343439099,
+            "p10": 0.005747449587301053,
+            "p50": 0.005752464842553662,
+            "p90": 0.005755851641987637
+          }
+        },
+        "adam": {
+          "gradient_norm": {
+            "mean": 92.18378448486328,
+            "std": 7.466834864265931,
+            "cv": 0.08099943939155586,
+            "p10": 94.14794921875,
+            "p50": 94.52999114990234,
+            "p90": 94.74736022949219
+          },
+          "update_norm": {
+            "mean": 0.9243214645168998,
+            "std": 1.5485139928852691,
+            "cv": 1.6752980995573936,
+            "p10": 0.42702049016952515,
+            "p50": 0.4291738271713257,
+            "p90": 0.4812573790550232
+          },
+          "update_rms": {
+            "mean": 0.0019055136963420545,
+            "std": 0.0031923034741624286,
+            "cv": 1.6752980995573938,
+            "p10": 0.000880314288776154,
+            "p50": 0.0008847534512399572,
+            "p90": 0.0009921251019896224
+          },
+          "relative_update_norm": {
+            "mean": 0.004922651311537634,
+            "std": 0.008251521442073681,
+            "cv": 1.6762352073838527,
+            "p10": 0.0022727092828599485,
+            "p50": 0.0022843425915405288,
+            "p90": 0.002561757834598454
+          }
+        }
+      },
+      "source_trial": "c10_muon_0.006_adam_0.012",
+      "reason": "Exact identity geometry, same optimizer/clipping/noise/order; reuse Standard without rerunning an equivalent trial"
+    }
+  },
+  "matched_standard_comparisons": [
+    {
+      "trial": "d01_lambda_0.01",
+      "standard_control": "c10_muon_0.006_adam_0.012",
+      "utility_difference_percentage_points": -3.2499999999999973,
+      "final_clip_fraction": 0.6947,
+      "control_final_clip_fraction": 0.61406,
+      "temporal_gain_cv": 0.5786873886440363,
+      "control_temporal_gain_cv": 0.03507974022580376,
+      "noise_weighted_gain": 0.40220145412602243,
+      "control_noise_weighted_gain": 0.7932499600864438
+    },
+    {
+      "trial": "d03_lambda_100",
+      "standard_control": "c10_muon_0.006_adam_0.012",
+      "utility_difference_percentage_points": -69.72,
+      "final_clip_fraction": 1.0,
+      "control_final_clip_fraction": 0.61406,
+      "temporal_gain_cv": 0.47629423890823164,
+      "control_temporal_gain_cv": 0.03507974022580376,
+      "noise_weighted_gain": 0.3509253590126974,
+      "control_noise_weighted_gain": 0.7932499600864438
+    },
+    {
+      "trial": "d02_lambda_0.0001",
+      "standard_control": "c10_muon_0.006_adam_0.012",
+      "utility_difference_percentage_points": -7.359999999999999,
+      "final_clip_fraction": 0.73894,
+      "control_final_clip_fraction": 0.61406,
+      "temporal_gain_cv": 1.032971913812576,
+      "control_temporal_gain_cv": 0.03507974022580376,
+      "noise_weighted_gain": 0.23004742662872357,
+      "control_noise_weighted_gain": 0.7932499600864438
+    },
+    {
+      "trial": "d05_lambda_4",
+      "standard_control": "c10_muon_0.006_adam_0.012",
+      "utility_difference_percentage_points": -68.54,
+      "final_clip_fraction": 0.99994,
+      "control_final_clip_fraction": 0.61406,
+      "temporal_gain_cv": 0.3100353608386928,
+      "control_temporal_gain_cv": 0.03507974022580376,
+      "noise_weighted_gain": 0.44524204140210416,
+      "control_noise_weighted_gain": 0.7932499600864438
+    },
+    {
+      "trial": "d04_lambda_0.1",
+      "standard_control": "c10_muon_0.006_adam_0.012",
+      "utility_difference_percentage_points": -2.4399999999999977,
+      "final_clip_fraction": 0.68116,
+      "control_final_clip_fraction": 0.61406,
+      "temporal_gain_cv": 0.1871451518477331,
+      "control_temporal_gain_cv": 0.03507974022580376,
+      "noise_weighted_gain": 0.5565289843183533,
+      "control_noise_weighted_gain": 0.7932499600864438
+    },
+    {
+      "trial": "d06_lambda_0.01_clip_60",
+      "standard_control": null,
+      "utility_difference_percentage_points": null,
+      "final_clip_fraction": 0.61034,
+      "control_final_clip_fraction": null,
+      "temporal_gain_cv": 0.5845074209928176,
+      "control_temporal_gain_cv": null,
+      "noise_weighted_gain": 0.4054764858445801,
+      "control_noise_weighted_gain": null
+    },
+    {
+      "trial": "e01_kappa_1.25",
+      "standard_control": "c10_muon_0.006_adam_0.012",
+      "utility_difference_percentage_points": -2.4699999999999944,
+      "final_clip_fraction": 0.66932,
+      "control_final_clip_fraction": 0.61406,
+      "temporal_gain_cv": 0.0464166832008451,
+      "control_temporal_gain_cv": 0.03507974022580376,
+      "noise_weighted_gain": 0.7656742920932791,
+      "control_noise_weighted_gain": 0.7932499600864438
+    },
+    {
+      "trial": "e02_kappa_2",
+      "standard_control": "c10_muon_0.006_adam_0.012",
+      "utility_difference_percentage_points": -4.489999999999994,
+      "final_clip_fraction": 0.72672,
+      "control_final_clip_fraction": 0.61406,
+      "temporal_gain_cv": 0.06063235925542754,
+      "control_temporal_gain_cv": 0.03507974022580376,
+      "noise_weighted_gain": 0.7317195455258901,
+      "control_noise_weighted_gain": 0.7932499600864438
+    },
+    {
+      "trial": "e03_kappa_4",
+      "standard_control": "c10_muon_0.006_adam_0.012",
+      "utility_difference_percentage_points": -5.669999999999997,
+      "final_clip_fraction": 0.75336,
+      "control_final_clip_fraction": 0.61406,
+      "temporal_gain_cv": 0.0648810000032458,
+      "control_temporal_gain_cv": 0.03507974022580376,
+      "noise_weighted_gain": 0.7208047920007344,
+      "control_noise_weighted_gain": 0.7932499600864438
+    },
+    {
+      "trial": "e05_kappa_1.25_clip_60",
+      "standard_control": null,
+      "utility_difference_percentage_points": null,
+      "final_clip_fraction": 0.59326,
+      "control_final_clip_fraction": null,
+      "temporal_gain_cv": 0.04641713642249667,
+      "control_temporal_gain_cv": null,
+      "noise_weighted_gain": 0.7656666468052873,
+      "control_noise_weighted_gain": null
+    },
+    {
+      "trial": "e04_kappa_1.1",
+      "standard_control": "c10_muon_0.006_adam_0.012",
+      "utility_difference_percentage_points": -1.4100000000000001,
+      "final_clip_fraction": 0.64408,
+      "control_final_clip_fraction": 0.61406,
+      "temporal_gain_cv": 0.0404900060900388,
+      "control_temporal_gain_cv": 0.03507974022580376,
+      "noise_weighted_gain": 0.7805074099360256,
+      "control_noise_weighted_gain": 0.7932499600864438
+    }
+  ],
+  "differences_percentage_points": {
+    "version_a_minus_standard": 0.0,
+    "version_b_minus_standard": 0.0,
+    "version_b_minus_version_a": 0.0
+  },
+  "diagnostics_interpretation": "Frozen-state first-order estimates, not exact nonlinear training dynamics; different LRs scale cumulative RMSE, so these diagnostics do not rank utility.",
+  "final_validation_command": "conda activate curve\nPYTHONDONTWRITEBYTECODE=1 TMPDIR=\"$PWD/exp3/tmp\" python -m exp3.final_runner --frozen-config exp3/results/selected_configs.json --result-dir exp3/results/final"
+}

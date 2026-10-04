@@ -1,0 +1,42 @@
+{
+  "nonprivate_hybrid": {
+    "muon_lr": 0.0003,
+    "adam_lr": 0.001,
+    "max_grad_norm": 100.0,
+    "lambda_parallel": 1.0,
+    "kappa": 4.0,
+    "rho": 0.1
+  },
+  "iid_dp_hybrid": {
+    "muon_lr": 0.001,
+    "adam_lr": 0.001,
+    "max_grad_norm": 30.0,
+    "lambda_parallel": 1.0,
+    "kappa": 4.0,
+    "rho": 0.1
+  },
+  "mf_muon_standard": {
+    "muon_lr": 0.006,
+    "adam_lr": 0.012,
+    "max_grad_norm": 30.0,
+    "lambda_parallel": 1.0,
+    "kappa": 4.0,
+    "rho": 0.1
+  },
+  "mf_muon_normscale": {
+    "muon_lr": 0.006,
+    "adam_lr": 0.012,
+    "max_grad_norm": 30.0,
+    "lambda_parallel": 1.0,
+    "kappa": 1.0,
+    "rho": 0.1
+  },
+  "mf_muon_spectralscale": {
+    "muon_lr": 0.006,
+    "adam_lr": 0.012,
+    "max_grad_norm": 30.0,
+    "lambda_parallel": 1.0,
+    "kappa": 1.0,
+    "rho": 0.1
+  }
+}

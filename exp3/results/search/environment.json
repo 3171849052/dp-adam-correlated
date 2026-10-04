@@ -1,0 +1,24 @@
+{
+  "recorded_at": "2026-10-03T17:56:12.987032+00:00",
+  "conda_environment": "curve",
+  "python_executable": "/home/longt29/miniconda3/envs/curve/bin/python",
+  "python_version": "3.11.15 (main, Jun 11 2026, 15:20:16) [GCC 14.3.0]",
+  "packages": {
+    "torch": "2.13.0+cu126",
+    "torchvision": "0.28.0+cu126",
+    "timm": "1.0.29",
+    "opacus": "1.6.0",
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "safetensors": "0.8.0"
+  },
+  "physical_gpus": [
+    1,
+    2,
+    3
+  ],
+  "launcher": "exp3.launch_batch",
+  "tuning_seed": 20261001,
+  "implementation_version": "active_spectrum_v2_update_space_frozen_trajectory",
+  "repository_base_commit": "cd168d43f2443b07b94e28b36f7766588ad3632d"
+}
