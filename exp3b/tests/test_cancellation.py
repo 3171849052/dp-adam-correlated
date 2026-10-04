@@ -40,10 +40,10 @@ def test_momentum_theory_matches_monte_carlo():
     z = np.random.default_rng(92).standard_normal((steps, 80000))
     empirical_mf = np.sqrt(np.mean((w @ d @ z) ** 2, axis=1))
     empirical_iid = np.sqrt(np.mean((w @ z) ** 2, axis=1))
-    np.testing.assert_allclose(empirical_mf, [r['rmse_mf_mean'] for r in rows], rtol=.015)
-    np.testing.assert_allclose(empirical_iid, [r['rmse_iid_mean'] for r in rows], rtol=.015)
+    np.testing.assert_allclose(empirical_mf, [r['rmse_mf'] for r in rows], rtol=.015)
+    np.testing.assert_allclose(empirical_iid, [r['rmse_iid'] for r in rows], rtol=.015)
     np.testing.assert_allclose(empirical_mf / empirical_iid,
-                               [r['cancellation_mean'] for r in rows], rtol=.02)
+                               [r['cancellation'] for r in rows], rtol=.02)
 
 
 def test_noise_pairing_is_the_exact_same_z():
@@ -161,7 +161,10 @@ def test_exact_common_48_parameter_support_and_rmse(method):
     updates = [state(manifest['shapes'], 'cpu').update(x) for x in branches]
     expected = np.sqrt(sum(float((updates[1][n] - updates[0][n]).double().square().sum())
                            for n in expected_names()) / (48 * 4))
-    assert rows[0]['rmse_mf'] == pytest.approx(expected, rel=1e-12)
+    assert rows[0]['realized_rmse_mf'] == pytest.approx(expected, rel=1e-12)
+    assert rows[0]['cumulative_mse_mf'] == pytest.approx(expected ** 2, rel=1e-12)
+    assert rows[0]['instant_mse_mf'] == rows[0]['cumulative_mse_mf']
+    assert rows[0]['instant_mse_iid'] == rows[0]['cumulative_mse_iid']
 
 
 def test_capture_pre_noise_scaled_signal_does_not_change_real_optimizer(tmp_path):
@@ -244,6 +247,43 @@ def test_nonfinite_and_outside_outputs_fail(tmp_path):
     with pytest.raises(AssertionError):
         output_path('/tmp/outside-exp3b.json')
     rows = momentum_theory(2)
-    rows[0]['rmse_mf_mean'] = float('nan')
+    rows[0]['rmse_mf'] = float('nan')
     with pytest.raises(AssertionError):
         validate(rows, 'MF-Momentum', 2)
+
+
+def test_root_mean_mse_and_ratio_of_formal_rmse_differ_from_paired_means():
+    samples = []
+    for seed, mf, iid, instant_mf, instant_iid in ((1, 1., 2., 2., 1.), (2, 3., 1., 4., 3.)):
+        samples.append([dict(step=1, replay_seed=seed,
+            cumulative_mse_mf=mf ** 2, cumulative_mse_iid=iid ** 2,
+            instant_mse_mf=instant_mf ** 2, instant_mse_iid=instant_iid ** 2,
+            parameter_mse_mf=mf ** 2 * .005 ** 2, parameter_mse_iid=iid ** 2 * .005 ** 2,
+            realized_rmse_mf=mf, realized_rmse_iid=iid, paired_cancellation=mf / iid)])
+    row = aggregate(samples, 'MF-Adam', momentum_theory(1))[0]
+    assert row['rmse_mf'] == pytest.approx(np.sqrt(5.))
+    assert row['rmse_mf'] != pytest.approx((1. + 3.) / 2.)
+    assert row['rmse_iid'] == pytest.approx(np.sqrt(2.5))
+    assert row['cancellation'] == pytest.approx(np.sqrt(5.) / np.sqrt(2.5))
+    assert row['cancellation'] != pytest.approx((.5 + 3.) / 2.)
+    assert row['paired_cancellation_mean'] == pytest.approx(1.75)
+    assert row['instant_rmse_mf'] == pytest.approx(np.sqrt(10.))
+    assert row['instant_rmse_iid'] == pytest.approx(np.sqrt(5.))
+    assert row['parameter_rmse_mf'] == pytest.approx(.005 * np.sqrt(5.))
+    assert row['realized_rmse_mf_std'] == pytest.approx(np.std([1., 3.], ddof=1))
+    assert row['realized_rmse_iid_std'] == pytest.approx(np.std([2., 1.], ddof=1))
+    assert row['relative_to_momentum'] == row['cancellation']
+    assert 'rmse_mf_std' not in row and 'cancellation_std' not in row
+
+
+def test_formal_aggregate_uses_mse_even_if_auxiliary_realized_rms_changes():
+    manifest = fixture_manifest(steps=2)
+    tensors = {n: dict(g=torch.ones(2, 2) * .2) for n in expected_names()}
+    samples = [replay_one(manifest, lambda step: tensors, seed, 'cpu') for seed in (19, 20)]
+    before = aggregate(samples, 'MF-Adam', momentum_theory(2))
+    for sample in samples:
+        for row in sample:
+            row['realized_rmse_mf'] = 1000.
+            row['realized_rmse_iid'] = 2000.
+    after = aggregate(samples, 'MF-Adam', momentum_theory(2))
+    assert before == after

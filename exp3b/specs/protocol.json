@@ -8,6 +8,15 @@
   "standard_extension_factor": 1.3333333333333333,
   "max_standard_extensions": 4,
   "scale_refinement_budget": 4,
+  "adam_standard": {
+    "objective": "final_test_top1",
+    "initial_lrs": [0.003, 0.007],
+    "lr_extension_factor": 1.5,
+    "max_lr_extensions": 3,
+    "clear_drop_absolute_top1": 0.005,
+    "lr_move_relative_threshold": 0.2,
+    "clips": [10.0, 30.0, 100.0]
+  },
   "final_seeds": [20261011, 20261012, 20261013],
   "replay_seeds": [20261101, 20261102, 20261103, 20261104, 20261105, 20261106, 20261107, 20261108],
   "total_steps": 250,

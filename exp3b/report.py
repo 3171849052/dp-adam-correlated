@@ -5,7 +5,7 @@ import json
 
 import numpy as np
 from exp3b import BASE, offline_runtime
-from exp3b.replay import FIELDS, momentum_theory, write_csv
+from exp3b.replay import AGGREGATION_METADATA, FIELDS, momentum_theory, write_csv
 from exp3b.spec import output_path, write_json
 
 offline_runtime()
@@ -21,7 +21,8 @@ def validate(rows, method, steps):
     for row in rows:
         assert set(row) == set(FIELDS)
         assert all(np.isfinite(float(row[key])) for key in FIELDS if key != 'method')
-        assert float(row['rmse_iid_mean']) > 0
+        assert float(row['rmse_iid']) > 0
+        assert np.isclose(float(row['cancellation']), float(row['rmse_mf']) / float(row['rmse_iid']), rtol=1e-12)
     return rows
 
 
@@ -35,20 +36,13 @@ def plot(directory, groups):
                 steps = np.asarray([int(row['step']) for row in rows])
                 if kind == 'cumulative_rmse':
                     for noise, style in (('mf', '-'), ('iid', '--')):
-                        mean = np.asarray([float(row[f'rmse_{noise}_mean']) for row in rows])
-                        std = np.asarray([float(row[f'rmse_{noise}_std']) for row in rows])
+                        mean = np.asarray([float(row[f'rmse_{noise}']) for row in rows])
                         ax.plot(steps, mean, style, color=color, label=f'{method} / {noise.upper()}')
-                        ax.fill_between(steps, np.maximum(0., mean - std), mean + std, color=color, alpha=.1)
                     ax.set_ylabel('Cumulative pre-LR update RMSE')
                 else:
-                    field = 'cancellation_mean' if kind == 'cancellation_curve' else 'relative_to_momentum'
+                    field = 'cancellation' if kind == 'cancellation_curve' else 'relative_to_momentum'
                     mean = np.asarray([float(row[field]) for row in rows])
-                    std = np.asarray([float(row['cancellation_std']) for row in rows])
-                    if kind == 'relative_to_momentum':
-                        baseline = np.asarray([float(row['cancellation_mean']) for row in groups['MF-Momentum']])
-                        std = std / baseline
                     ax.plot(steps, mean, color=color, label=method)
-                    ax.fill_between(steps, np.maximum(0., mean - std), mean + std, color=color, alpha=.15)
                     ax.set_ylabel('MF / IID cumulative RMSE' if kind == 'cancellation_curve' else 'Cancellation / Momentum cancellation')
             if kind == 'cumulative_rmse':
                 ax.text(.01, .99, 'Momentum theory: unit innovations; nonlinear: source-calibrated innovations',
@@ -77,7 +71,7 @@ def build(directory=BASE / 'results/cancellation', steps=250):
                      for key, value in row.items()} for row in csv.DictReader(stream)]
         validate(rows, method, steps)
         for index, row in enumerate(rows):
-            expected = float(row['cancellation_mean']) / theory[index]['cancellation_mean']
+            expected = float(row['cancellation']) / theory[index]['cancellation']
             assert np.isclose(float(row['relative_to_momentum']), expected, rtol=1e-12)
         groups[method] = rows
         metadata[method] = json.loads((directory / f'{name}.json').read_text())
@@ -91,9 +85,13 @@ def build(directory=BASE / 'results/cancellation', steps=250):
     write_json(directory / 'summary.json', dict(status='completed', steps=steps,
         methods=list(groups), rows=len(combined), nonlinear_support=supports[0],
         nonlinear_dimension=metadata['MF-Muon']['dimension'],
-        metric='delta_u = complete noisy pre-LR update - complete clean pre-LR update; E_t=sum(delta_u); RMSE=sqrt(sum(E_t^2)/d)',
-        cancellation='per paired seed C_t=RMSE_MF/RMSE_IID; reported mean/std across replay seeds',
-        relative_to_momentum='mean(C_t_optimizer) / exact(C_t_momentum)',
+        metric='delta_u = complete noisy pre-LR update - complete clean pre-LR update; E_t=sum(delta_u)',
+        aggregation=AGGREGATION_METADATA, rmse=AGGREGATION_METADATA['rmse'],
+        cancellation=AGGREGATION_METADATA['cancellation'],
+        relative_to_momentum=AGGREGATION_METADATA['relative_to_momentum'],
+        auxiliary=AGGREGATION_METADATA['auxiliary'], uncertainty=AGGREGATION_METADATA['uncertainty'],
+        mf_adam_config_rule='MF-Adam uses its own utility-optimal hyperparameters selected by Exp3b continuation',
+        plots='formal RMSE and cancellation only; auxiliary realized RMS std is not drawn as estimator uncertainty',
         momentum='exact row norms of W D and W, W=L H_0.9, T=250, num_bands=4; RMSE uses unit innovation scale',
         iid='cancellation control only; exactly the MF innovation scale, no IID privacy calibration',
         adam_scale='clean = q^S / S; common realized clipped signal; inverse S only on added noise',

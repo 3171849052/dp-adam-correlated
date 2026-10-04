@@ -15,11 +15,21 @@ from exp3b.support import expected_names
 
 offline_runtime()
 REPLAY_SEEDS = tuple(range(20261101, 20261109))
-FIELDS = ('step', 'method', 'rmse_mf_mean', 'rmse_mf_std', 'rmse_iid_mean',
-          'rmse_iid_std', 'cancellation_mean', 'cancellation_std', 'relative_to_momentum',
-          'instant_rmse_mf_mean', 'instant_rmse_mf_std', 'instant_rmse_iid_mean',
-          'instant_rmse_iid_std', 'parameter_rmse_mf_mean', 'parameter_rmse_mf_std',
-          'parameter_rmse_iid_mean', 'parameter_rmse_iid_std')
+FIELDS = ('step', 'method', 'rmse_mf', 'rmse_iid', 'cancellation', 'relative_to_momentum',
+          'realized_rmse_mf_std', 'realized_rmse_iid_std',
+          'paired_cancellation_mean', 'paired_cancellation_std',
+          'instant_rmse_mf', 'instant_rmse_iid',
+          'realized_instant_rmse_mf_std', 'realized_instant_rmse_iid_std',
+          'parameter_rmse_mf', 'parameter_rmse_iid',
+          'realized_parameter_rmse_mf_std', 'realized_parameter_rmse_iid_std')
+AGGREGATION_METADATA = dict(
+    version='root_mean_mse_v2',
+    rmse='RMSE_t = sqrt(mean_seed(||E_t||^2 / d))',
+    instantaneous_rmse='sqrt(mean_seed(||delta_u_t||^2 / d))',
+    cancellation='C_t = RMSE_t^MF / RMSE_t^IID',
+    relative_to_momentum='C_t / exact C_t^Momentum',
+    auxiliary='per-seed realized RMS and paired cancellation ratios are auxiliary diagnostics only',
+    uncertainty='realized_*_std and paired_cancellation_std are sample std (ddof=1); not RMSE estimator standard errors')
 
 
 def write_csv(path, rows, fields):
@@ -40,14 +50,14 @@ def momentum_theory(steps=250):
     iid = np.linalg.norm(w, axis=1)
     instant_mf = np.linalg.norm(h @ d, axis=1)
     instant_iid = np.linalg.norm(h, axis=1)
-    rows = [dict(step=i + 1, method='MF-Momentum', rmse_mf_mean=float(mf[i]),
-                 rmse_mf_std=0., rmse_iid_mean=float(iid[i]), rmse_iid_std=0.,
-                 cancellation_mean=float(mf[i] / iid[i]), cancellation_std=0.,
-                 relative_to_momentum=1., instant_rmse_mf_mean=float(instant_mf[i]),
-                 instant_rmse_mf_std=0., instant_rmse_iid_mean=float(instant_iid[i]),
-                 instant_rmse_iid_std=0., parameter_rmse_mf_mean=float(mf[i]),
-                 parameter_rmse_mf_std=0., parameter_rmse_iid_mean=float(iid[i]),
-                 parameter_rmse_iid_std=0.) for i in range(steps)]
+    rows = [dict(step=i + 1, method='MF-Momentum', rmse_mf=float(mf[i]), rmse_iid=float(iid[i]),
+                 realized_rmse_mf_std=0., realized_rmse_iid_std=0.,
+                 cancellation=float(mf[i] / iid[i]), paired_cancellation_mean=float(mf[i] / iid[i]),
+                 paired_cancellation_std=0., relative_to_momentum=1.,
+                 instant_rmse_mf=float(instant_mf[i]), instant_rmse_iid=float(instant_iid[i]),
+                 realized_instant_rmse_mf_std=0., realized_instant_rmse_iid_std=0.,
+                 parameter_rmse_mf=float(mf[i]), parameter_rmse_iid=float(iid[i]),
+                 realized_parameter_rmse_mf_std=0., realized_parameter_rmse_iid_std=0.) for i in range(steps)]
     return rows
 
 
@@ -173,15 +183,17 @@ def replay_one(manifest, loader, seed, device):
                 cumulative[branch][name].add_(difference)
                 instant_sq.add_(difference.square().sum())
                 cumulative_sq.add_(cumulative[branch][name].square().sum())
-            values.extend([float((cumulative_sq / dimension).sqrt()),
-                           float((instant_sq / dimension).sqrt())])
-        rmse_mf, instant_mf, rmse_iid, instant_iid = values
-        assert rmse_iid > 0
-        row = dict(step=step, replay_seed=seed, rmse_mf=rmse_mf, rmse_iid=rmse_iid,
-                   instant_rmse_mf=instant_mf, instant_rmse_iid=instant_iid,
-                   cancellation=rmse_mf / rmse_iid,
-                   parameter_rmse_mf=rmse_mf * manifest['actual_lr'],
-                   parameter_rmse_iid=rmse_iid * manifest['actual_lr'])
+            values.extend([float(cumulative_sq / dimension), float(instant_sq / dimension)])
+        cumulative_mse_mf, instant_mse_mf, cumulative_mse_iid, instant_mse_iid = values
+        assert cumulative_mse_iid > 0
+        row = dict(step=step, replay_seed=seed,
+                   cumulative_mse_mf=cumulative_mse_mf, cumulative_mse_iid=cumulative_mse_iid,
+                   instant_mse_mf=instant_mse_mf, instant_mse_iid=instant_mse_iid,
+                   parameter_mse_mf=cumulative_mse_mf * manifest['actual_lr'] ** 2,
+                   parameter_mse_iid=cumulative_mse_iid * manifest['actual_lr'] ** 2,
+                   realized_rmse_mf=float(np.sqrt(cumulative_mse_mf)),
+                   realized_rmse_iid=float(np.sqrt(cumulative_mse_iid)),
+                   paired_cancellation=float(np.sqrt(cumulative_mse_mf / cumulative_mse_iid)))
         assert all(np.isfinite(value) for value in row.values())
         records.append(row)
     assert noise.innovation_draws == manifest['steps']
@@ -195,12 +207,20 @@ def aggregate(samples, method, theory):
     rows = []
     for index in range(steps):
         row = dict(step=index + 1, method=method)
-        for metric in ('rmse_mf', 'rmse_iid', 'cancellation', 'instant_rmse_mf',
-                       'instant_rmse_iid', 'parameter_rmse_mf', 'parameter_rmse_iid'):
-            values = [sample[index][metric] for sample in samples]
-            row[metric + '_mean'] = float(np.mean(values))
-            row[metric + '_std'] = float(np.std(values, ddof=1))
-        row['relative_to_momentum'] = row['cancellation_mean'] / theory[index]['cancellation_mean']
+        for noise in ('mf', 'iid'):
+            for prefix, mse_prefix in (('', 'cumulative'), ('instant_', 'instant'), ('parameter_', 'parameter')):
+                values = np.asarray([sample[index][f'{mse_prefix}_mse_{noise}'] for sample in samples])
+                assert np.isfinite(values).all() and (values >= 0).all()
+                metric = f'{prefix}rmse_{noise}'
+                row[metric] = float(np.sqrt(np.mean(values)))
+                row[f'realized_{metric}_std'] = float(np.std(np.sqrt(values), ddof=1))
+        assert row['rmse_iid'] > 0
+        row['cancellation'] = row['rmse_mf'] / row['rmse_iid']
+        paired = [sample[index]['paired_cancellation'] for sample in samples]
+        row['paired_cancellation_mean'] = float(np.mean(paired))
+        row['paired_cancellation_std'] = float(np.std(paired, ddof=1))
+        row['relative_to_momentum'] = row['cancellation'] / theory[index]['cancellation']
+        assert all(np.isfinite(value) for key, value in row.items() if key != 'method')
         rows.append(row)
     return rows
 
@@ -210,11 +230,21 @@ def run_replay(source, result, device='cuda:0', seeds=REPLAY_SEEDS, smoke=False)
     manifest = json.loads((source / 'manifest.json').read_text())
     assert manifest['status'] == 'completed' and manifest['steps'] == (2 if smoke else 250)
     assert manifest['smoke'] == smoke
+    utility_provenance = None
     if not smoke:
         expected, _, _ = build_matrices('momentum_bandinvmf', 250, 4, .9)
         np.testing.assert_array_equal(manifest['coefficients'], expected)
         assert manifest['initial_optimizer_state'] == 'zero'
         assert manifest['logical_batch_size'] == 1000
+        from exp3b import BASE
+        selection = json.loads((BASE / 'results/selected_configs.json').read_text())
+        assert selection['status'] == 'frozen' and selection['objective'] == 'final_test_top1'
+        chosen = selection['configs'][manifest['method']]
+        assert all(manifest['source_spec'][key] == value for key, value in chosen.items() if key != 'num_bands')
+        if manifest['method'] == 'momentum_standard':
+            assert selection['mf_adam_tuning']['status'] == 'completed'
+            assert selection['mf_adam_tuning']['fixed_anchor_used'] is False
+        utility_provenance = selection['provenance'][manifest['method']]
     assert len(seeds) >= 2 and len(set(seeds)) == len(seeds)
     labels = {'momentum_standard': 'MF-Adam', 'momentum_scale': 'MF-Adam-Scale',
               'mf_muon_standard': 'MF-Muon'}
@@ -233,8 +263,11 @@ def run_replay(source, result, device='cuda:0', seeds=REPLAY_SEEDS, smoke=False)
         support=manifest['support'], dimension=manifest['dimension'],
         paired_noise='MF = D z, IID = z, exact same Gaussian tensors; same MF innovation scale',
         metric='pre-LR complete optimizer update; cumulative sum of noisy minus clean updates',
-        std='sample standard deviation across paired replay seeds, ddof=1',
-        cancellation='mean of paired RMSE_MF / RMSE_IID ratios',
+        aggregation=AGGREGATION_METADATA,
+        rmse=AGGREGATION_METADATA['rmse'], cancellation=AGGREGATION_METADATA['cancellation'],
+        auxiliary=AGGREGATION_METADATA['auxiliary'], uncertainty=AGGREGATION_METADATA['uncertainty'],
+        mf_adam_config_rule='MF-Adam uses its own utility-optimal hyperparameters selected by Exp3b continuation; smoke uses the imported utility best',
+        source_utility_provenance=utility_provenance,
         source_trajectory_modified=False, forward_backward_in_replay=False,
         mf_workload_beta=.9, muon_nesterov_beta=.95 if manifest['method'] == 'mf_muon_standard' else None,
         final=rows[-1]))

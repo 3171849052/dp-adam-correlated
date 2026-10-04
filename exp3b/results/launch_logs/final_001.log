@@ -1,0 +1,44 @@
+[W1004 17:41:36.772270927 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 39845888 bytes (free: 14745600, total: 12500664320).
+[W1004 17:41:36.845453555 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 39845888 bytes (free: 12648448, total: 12500664320).
+[W1004 17:41:36.845726829 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 39845888 bytes (free: 12648448, total: 12500664320).
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/media/data/data/lt/dp-adam-correlated/exp3b/train.py", line 231, in <module>
+    main()
+  File "/media/data/data/lt/dp-adam-correlated/exp3b/train.py", line 227, in main
+    run(RunSpec(**json.loads((ROOT / args.spec).read_text())))
+  File "/media/data/data/lt/dp-adam-correlated/exp3b/train.py", line 219, in run
+    result = execute(spec)
+             ^^^^^^^^^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp3b/train.py", line 175, in execute
+    loss_tensor = torch.nn.functional.cross_entropy(model(x), y, reduction='sum')
+                                                    ^^^^^^^^
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp3/model.py", line 70, in forward
+    return self.head(self.norm(self.blocks(x))[:, 0])
+                               ^^^^^^^^^^^^^^
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp3/model.py", line 44, in forward
+    return x + self.mlp(self.norm2(x))
+           ~~^~~~~~~~~~~~~~~~~~~~~~~~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 38.00 MiB. GPU 0 has a total capacity of 11.64 GiB of which 12.06 MiB is free. Process 3329499 has 7.87 GiB memory in use. Including non-PyTorch memory, this process has 3.75 GiB memory in use. Of the allocated memory 3.36 GiB is allocated by PyTorch, and 78.32 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)

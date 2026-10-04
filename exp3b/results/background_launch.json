@@ -1,0 +1,48 @@
+{
+  "status": "failed",
+  "pid": 3285970,
+  "started_at": "2026-10-04T14:42:43.606817+08:00",
+  "conda_environment": "curve",
+  "python": "/home/longt29/miniconda3/envs/curve/bin/python",
+  "conda_prefix": "/home/longt29/miniconda3/envs/curve",
+  "gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "max_concurrency": 4,
+  "data_root": "data",
+  "cache_root": "cache",
+  "command": [
+    "/home/longt29/miniconda3/envs/curve/bin/python",
+    "-u",
+    "-m",
+    "exp3b.experiment",
+    "--gpus",
+    "0,1,2,3",
+    "--data-root",
+    "data",
+    "--cache-root",
+    "cache"
+  ],
+  "log": "exp3b/results/full_experiment.log",
+  "user_requested_background_launch": true,
+  "verified_at": "2026-10-04T14:43:47.760109+08:00",
+  "current_phase": "final validation first batch failed",
+  "first_trial": {
+    "method": "momentum_standard",
+    "lr": 0.003,
+    "max_grad_norm": 30.0,
+    "gpu": 0,
+    "directory": "exp3b/results/tuning/adam_standard_lr_0.003_clip_30",
+    "planned_logical_steps": 250
+  },
+  "checked_at": "2026-10-04T17:48:25.669980+08:00",
+  "no_active_exp3b_processes": true,
+  "termination_requested_by_user": true,
+  "already_exited": true,
+  "killed_pids": [],
+  "failure": "CUDA out of memory; final validation first batch failed; scheduler terminated sibling trials",
+  "status_report": "exp3b/results/stop_verification.json"
+}

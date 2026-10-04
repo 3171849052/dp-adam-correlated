@@ -1,0 +1,32 @@
+Launching adam_standard_lr_0.003_clip_30 job 1/1 on GPU 0
+Launching adam_standard_lr_0.007_clip_30 job 1/1 on GPU 0
+Launching standard_0.009 job 1/1 on GPU 0
+Launching standard_0.012 job 1/1 on GPU 0
+Launching standard_0.016 job 1/1 on GPU 0
+Launching mf_muon_normscale_refine_1 job 1/1 on GPU 0
+Launching mf_muon_normscale_refine_2 job 1/1 on GPU 0
+Launching mf_muon_normscale_refine_3 job 1/1 on GPU 0
+Launching mf_muon_spectralscale_refine_1 job 1/1 on GPU 0
+Launching mf_muon_spectralscale_refine_2 job 1/1 on GPU 0
+Launching mf_muon_spectralscale_refine_3 job 1/1 on GPU 0
+Launching final job 1/15 on GPU 0
+Launching final job 2/15 on GPU 1
+Launching final job 3/15 on GPU 2
+Launching final job 4/15 on GPU 3
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/media/data/data/lt/dp-adam-correlated/exp3b/experiment.py", line 300, in <module>
+    main()
+  File "/media/data/data/lt/dp-adam-correlated/exp3b/experiment.py", line 295, in main
+    finals = final_trials(frozen, plan)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp3b/experiment.py", line 252, in final_trials
+    summaries = run_trials(specs, plan['gpus'], 'final')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp3b/scheduler.py", line 56, in run_trials
+    run_commands(commands, gpus, label)
+  File "/media/data/data/lt/dp-adam-correlated/exp3b/scheduler.py", line 32, in run_commands
+    assert status == 0, f'{label} subprocess failed with exit {status}; see {logs}'
+           ^^^^^^^^^^^
+AssertionError: final subprocess failed with exit 1; see /media/data/data/lt/dp-adam-correlated/exp3b/results/launch_logs

@@ -1,0 +1,27 @@
+{"stage": 0, "stage_name": "nonprivate_scale_probe", "status": "completed", "U50": 450.0840606689453, "selection_reason": "Median of all 250 raw Adam direction norms from full nonprivate probe; excluded from DP method ranking."}
+{"event": "stage_started", "stage": 1, "stage_name": "iid_radius", "status": "running", "method": "dp-adam-iid-uc", "candidate_count": 9, "new_trials": 9, "reused_trials": 0}
+{"event": "started", "gpu": 0, "pid": 3366713, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/f7475962619c55a2"}
+{"event": "started", "gpu": 2, "pid": 3366714, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/d8d7d1ca93744cd5"}
+{"event": "started", "gpu": 3, "pid": 3366715, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/7df9700fd662c969"}
+{"event": "completed", "gpu": 2, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/d8d7d1ca93744cd5"}
+{"event": "started", "gpu": 2, "pid": 3379602, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/775192c9f70af454"}
+{"event": "completed", "gpu": 3, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/7df9700fd662c969"}
+{"event": "started", "gpu": 3, "pid": 3379750, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/0f702ff6920d3edf"}
+{"event": "completed", "gpu": 0, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/f7475962619c55a2"}
+{"event": "started", "gpu": 0, "pid": 3380602, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/536d3580a00c3b7e"}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/media/data/data/lt/dp-adam-correlated/exp4/search.py", line 280, in <module>
+    main()
+  File "/media/data/data/lt/dp-adam-correlated/exp4/search.py", line 276, in main
+    StagedSearch().run()
+  File "/media/data/data/lt/dp-adam-correlated/exp4/search.py", line 226, in run
+    s1 = self.run_stage(1, iid, radius_points(self.u50, 1e-3))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp4/search.py", line 202, in run_stage
+    self.launch(pending, on_complete=lambda trial: self.finish_record(lookup[trial['result_dir']], trial))
+  File "/media/data/data/lt/dp-adam-correlated/exp4/launch_batch.py", line 54, in launch
+    raise RuntimeError(f'Trial exited {code}: {destination / "train.log"}')
+RuntimeError: Trial exited 1: /media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/536d3580a00c3b7e/train.log
+ERROR conda.cli.main_run:execute(127): `conda run python -B -m exp4.search` failed. (See above for error)

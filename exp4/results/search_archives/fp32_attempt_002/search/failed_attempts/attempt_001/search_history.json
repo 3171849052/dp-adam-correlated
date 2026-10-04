@@ -1,0 +1,1242 @@
+{
+  "protocol": "exp4/config.yaml",
+  "search_seed": 20261001,
+  "status": "running",
+  "selection_rule": [
+    "max_final_test_top1",
+    "min_update_clip_norm",
+    "min_lr"
+  ],
+  "stages": [
+    {
+      "stage": 0,
+      "stage_name": "nonprivate_scale_probe",
+      "status": "completed",
+      "U50": 450.0840606689453,
+      "selection_reason": "Median of all 250 raw Adam direction norms from full nonprivate probe; excluded from DP method ranking."
+    },
+    {
+      "stage": 1,
+      "stage_name": "iid_radius",
+      "status": "running",
+      "method": "dp-adam-iid-uc",
+      "candidate_count": 9
+    }
+  ],
+  "trials": [
+    {
+      "stage": 0,
+      "stage_name": "nonprivate_scale_probe",
+      "candidate": 0,
+      "method": "nonprivate-scale-probe",
+      "trial_id": "stage0_probe",
+      "reused": true,
+      "status": "completed",
+      "R": null,
+      "R_over_U50": null,
+      "lr": 0.001,
+      "spec": {
+        "stage": 0,
+        "stage_name": "nonprivate_scale_probe",
+        "trial": {
+          "method": "dp-adam-iid-uc",
+          "seed": 20261001,
+          "lr": 0.001,
+          "update_clip_norm": 1.0,
+          "scale_probe": true,
+          "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/stage0_probe"
+        },
+        "config": {
+          "seed": 20261001,
+          "search_seed": 20261001,
+          "final_seeds": [
+            20261011,
+            20261012,
+            20261013
+          ],
+          "data_root": "data",
+          "epochs": 5,
+          "dataset_size": 50000,
+          "logical_batch_size": 1000,
+          "physical_batch_size": 250,
+          "gradient_accumulation": 4,
+          "total_steps": 250,
+          "num_workers": 2,
+          "gpus": [
+            0,
+            2,
+            3
+          ],
+          "max_parallel_trials": 3,
+          "optimizer": {
+            "lr": 0.001,
+            "update_clip_norm": null,
+            "beta1": 0.9,
+            "beta2": 0.999,
+            "eps": 1e-08,
+            "weight_decay": 0.0
+          },
+          "privacy": {
+            "epsilon": 8.0,
+            "delta": 1e-05,
+            "adjacency": "replace_one",
+            "participation": "full_temporal"
+          },
+          "uc_includes_lr": false,
+          "uc_includes_sign": false,
+          "noise_before_lr": true,
+          "adam_state_uses_raw_batch_gradient": true,
+          "per_example_clipping": false,
+          "sampling_amplification": false,
+          "bandinvmf_workload": "sgd",
+          "bandinvmf_num_bands": 4,
+          "model": {
+            "architecture": "vit_tiny_patch16_224",
+            "pretrained": true,
+            "num_classes": 100,
+            "image_size": 224
+          }
+        },
+        "smoke": false,
+        "effective_epochs": 5,
+        "effective_total_steps": 250,
+        "update_clipping_enabled": false,
+        "dp_noise_enabled": false,
+        "participates_in_ranking": false
+      },
+      "spec_path": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/specs/stage0_probe.json",
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/stage0_probe",
+      "participates_in_ranking": false,
+      "final_test_top1": 0.763,
+      "clip_fraction": 0.0,
+      "final_epoch_clip_fraction": 0.0,
+      "optimizer_steps": 250,
+      "privacy_calibration": {
+        "accountant": "nonprivate_scale_probe",
+        "innovation_std": 0.0,
+        "target_epsilon": null,
+        "delta": null,
+        "total_steps": 250,
+        "privacy_applied": false,
+        "sampling_amplification": false
+      },
+      "epochs": [
+        {
+          "epoch": 1,
+          "logical_steps": 50,
+          "train_examples": 50000,
+          "train_loss": 3.6147926416015626,
+          "test_loss": 1.939947479248047,
+          "test_top1": 0.4655,
+          "epoch_clip_fraction": 0.0,
+          "gdp_mu": null,
+          "gdp_epsilon": null,
+          "noise_marginal_std": 0.0,
+          "parameter_noise_std": 0.0,
+          "augmentation_trace_sha256": "d63da21bdb0b5208efde32fe6efd500a1dd8422cf2de8538c5d20df0af3afa1c",
+          "seconds": 83.94098547752947
+        },
+        {
+          "epoch": 2,
+          "logical_steps": 100,
+          "train_examples": 50000,
+          "train_loss": 1.807377559814453,
+          "test_loss": 1.066376611328125,
+          "test_top1": 0.6898,
+          "epoch_clip_fraction": 0.0,
+          "gdp_mu": null,
+          "gdp_epsilon": null,
+          "noise_marginal_std": 0.0,
+          "parameter_noise_std": 0.0,
+          "augmentation_trace_sha256": "eba11842858511941e69682cb3174b7d5e6fd73ab7d8425892c6d4fc55cf418b",
+          "seconds": 86.3781571360305
+        },
+        {
+          "epoch": 3,
+          "logical_steps": 150,
+          "train_examples": 50000,
+          "train_loss": 1.3801770013427734,
+          "test_loss": 0.8982804412841797,
+          "test_top1": 0.7321,
+          "epoch_clip_fraction": 0.0,
+          "gdp_mu": null,
+          "gdp_epsilon": null,
+          "noise_marginal_std": 0.0,
+          "parameter_noise_std": 0.0,
+          "augmentation_trace_sha256": "f4ab582ea37ff08d6c3ec209d5c76a6a59fcdd228971935ccfe60255636fc688",
+          "seconds": 84.02364673092961
+        },
+        {
+          "epoch": 4,
+          "logical_steps": 200,
+          "train_examples": 50000,
+          "train_loss": 1.212813168334961,
+          "test_loss": 0.8528424194335937,
+          "test_top1": 0.7468,
+          "epoch_clip_fraction": 0.0,
+          "gdp_mu": null,
+          "gdp_epsilon": null,
+          "noise_marginal_std": 0.0,
+          "parameter_noise_std": 0.0,
+          "augmentation_trace_sha256": "eeab75a2450d737b335b1b301c8415d8e4847a2415b1acc4f6665e5915aa923a",
+          "seconds": 84.62582832761109
+        },
+        {
+          "epoch": 5,
+          "logical_steps": 250,
+          "train_examples": 50000,
+          "train_loss": 1.1316323495483398,
+          "test_loss": 0.80457705078125,
+          "test_top1": 0.763,
+          "epoch_clip_fraction": 0.0,
+          "gdp_mu": null,
+          "gdp_epsilon": null,
+          "noise_marginal_std": 0.0,
+          "parameter_noise_std": 0.0,
+          "augmentation_trace_sha256": "41f1cb58f0307df20ce87cfb313693105a3d89f587b34546eb06562652fb22c3",
+          "seconds": 85.72408210486174
+        }
+      ]
+    },
+    {
+      "stage": 1,
+      "stage_name": "iid_radius",
+      "candidate": 0,
+      "method": "dp-adam-iid-uc",
+      "trial_id": "f7475962619c55a2",
+      "reused": false,
+      "status": "completed",
+      "R": 1.7581408619880676,
+      "R_over_U50": 0.00390625,
+      "lr": 0.001,
+      "spec": {
+        "stage": 1,
+        "stage_name": "iid_radius",
+        "trial": {
+          "method": "dp-adam-iid-uc",
+          "seed": 20261001,
+          "lr": 0.001,
+          "update_clip_norm": 1.7581408619880676,
+          "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/f7475962619c55a2"
+        },
+        "config": {
+          "seed": 20261001,
+          "search_seed": 20261001,
+          "final_seeds": [
+            20261011,
+            20261012,
+            20261013
+          ],
+          "data_root": "data",
+          "epochs": 5,
+          "dataset_size": 50000,
+          "logical_batch_size": 1000,
+          "physical_batch_size": 250,
+          "gradient_accumulation": 4,
+          "total_steps": 250,
+          "num_workers": 2,
+          "gpus": [
+            0,
+            2,
+            3
+          ],
+          "max_parallel_trials": 3,
+          "optimizer": {
+            "lr": 0.001,
+            "update_clip_norm": 1.7581408619880676,
+            "beta1": 0.9,
+            "beta2": 0.999,
+            "eps": 1e-08,
+            "weight_decay": 0.0
+          },
+          "privacy": {
+            "epsilon": 8.0,
+            "delta": 1e-05,
+            "adjacency": "replace_one",
+            "participation": "full_temporal"
+          },
+          "uc_includes_lr": false,
+          "uc_includes_sign": false,
+          "noise_before_lr": true,
+          "adam_state_uses_raw_batch_gradient": true,
+          "per_example_clipping": false,
+          "sampling_amplification": false,
+          "bandinvmf_workload": "sgd",
+          "bandinvmf_num_bands": 4,
+          "model": {
+            "architecture": "vit_tiny_patch16_224",
+            "pretrained": true,
+            "num_classes": 100,
+            "image_size": 224
+          }
+        },
+        "smoke": false,
+        "effective_epochs": 5,
+        "effective_total_steps": 250,
+        "update_clipping_enabled": true,
+        "dp_noise_enabled": true,
+        "participates_in_ranking": true
+      },
+      "spec_path": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/specs/stage1_00_f7475962619c55a2.json",
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/f7475962619c55a2",
+      "participates_in_ranking": true,
+      "final_test_top1": 0.0069,
+      "clip_fraction": 1.0,
+      "final_epoch_clip_fraction": 1.0,
+      "optimizer_steps": 250,
+      "privacy_calibration": {
+        "target_epsilon": 8.0,
+        "delta": 1e-05,
+        "target_mu": 1.6660305978457184,
+        "total_steps": 250,
+        "per_step_sensitivity": 3.5162817239761353,
+        "temporal_sensitivity": 15.811388300841896,
+        "trajectory_sensitivity": 55.597295712940436,
+        "innovation_std": 33.37111322254898,
+        "sampling_amplification": false,
+        "participation": "full_temporal",
+        "adjacency": "replace_one",
+        "accountant": "conditional_gaussian_gdp_row_absolute_sum",
+        "noise_space": "update_direction",
+        "batch_size_division": false
+      },
+      "epochs": [
+        {
+          "epoch": 1,
+          "logical_steps": 50,
+          "train_examples": 50000,
+          "train_loss": 22.515976545410155,
+          "test_loss": 36.1221443359375,
+          "test_top1": 0.0109,
+          "epoch_clip_fraction": 1.0,
+          "gdp_mu": 0.7450715338755284,
+          "gdp_epsilon": 3.123292516214856,
+          "noise_marginal_std": 33.37111322254898,
+          "parameter_noise_std": 0.03337111322254898,
+          "augmentation_trace_sha256": "d63da21bdb0b5208efde32fe6efd500a1dd8422cf2de8538c5d20df0af3afa1c",
+          "seconds": 83.63621389307082
+        },
+        {
+          "epoch": 2,
+          "logical_steps": 100,
+          "train_examples": 50000,
+          "train_loss": 44.14047107421875,
+          "test_loss": 48.843513671875,
+          "test_top1": 0.0109,
+          "epoch_clip_fraction": 1.0,
+          "gdp_mu": 1.053690268144897,
+          "gdp_epsilon": 4.650921021133028,
+          "noise_marginal_std": 33.37111322254898,
+          "parameter_noise_std": 0.03337111322254898,
+          "augmentation_trace_sha256": "eba11842858511941e69682cb3174b7d5e6fd73ab7d8425892c6d4fc55cf418b",
+          "seconds": 83.98451386205852
+        },
+        {
+          "epoch": 3,
+          "logical_steps": 150,
+          "train_examples": 50000,
+          "train_loss": 53.5309305859375,
+          "test_loss": 57.9546259765625,
+          "test_top1": 0.0094,
+          "epoch_clip_fraction": 1.0,
+          "gdp_mu": 1.290501751945691,
+          "gdp_epsilon": 5.897172094191148,
+          "noise_marginal_std": 33.37111322254898,
+          "parameter_noise_std": 0.03337111322254898,
+          "augmentation_trace_sha256": "f4ab582ea37ff08d6c3ec209d5c76a6a59fcdd228971935ccfe60255636fc688",
+          "seconds": 82.57432983070612
+        },
+        {
+          "epoch": 4,
+          "logical_steps": 200,
+          "train_examples": 50000,
+          "train_loss": 67.56076630859376,
+          "test_loss": 76.988648828125,
+          "test_top1": 0.0096,
+          "epoch_clip_fraction": 1.0,
+          "gdp_mu": 1.4901430677510568,
+          "gdp_epsilon": 6.9960331570817695,
+          "noise_marginal_std": 33.37111322254898,
+          "parameter_noise_std": 0.03337111322254898,
+          "augmentation_trace_sha256": "eeab75a2450d737b335b1b301c8415d8e4847a2415b1acc4f6665e5915aa923a",
+          "seconds": 83.92599410936236
+        },
+        {
+          "epoch": 5,
+          "logical_steps": 250,
+          "train_examples": 50000,
+          "train_loss": 81.06750537109374,
+          "test_loss": 75.0788548828125,
+          "test_top1": 0.0069,
+          "epoch_clip_fraction": 1.0,
+          "gdp_mu": 1.6660305978457186,
+          "gdp_epsilon": 8.000000000000007,
+          "noise_marginal_std": 33.37111322254898,
+          "parameter_noise_std": 0.03337111322254898,
+          "augmentation_trace_sha256": "41f1cb58f0307df20ce87cfb313693105a3d89f587b34546eb06562652fb22c3",
+          "seconds": 84.63547041453421
+        }
+      ]
+    },
+    {
+      "stage": 1,
+      "stage_name": "iid_radius",
+      "candidate": 1,
+      "method": "dp-adam-iid-uc",
+      "trial_id": "d8d7d1ca93744cd5",
+      "reused": false,
+      "status": "completed",
+      "R": 3.5162817239761353,
+      "R_over_U50": 0.0078125,
+      "lr": 0.001,
+      "spec": {
+        "stage": 1,
+        "stage_name": "iid_radius",
+        "trial": {
+          "method": "dp-adam-iid-uc",
+          "seed": 20261001,
+          "lr": 0.001,
+          "update_clip_norm": 3.5162817239761353,
+          "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/d8d7d1ca93744cd5"
+        },
+        "config": {
+          "seed": 20261001,
+          "search_seed": 20261001,
+          "final_seeds": [
+            20261011,
+            20261012,
+            20261013
+          ],
+          "data_root": "data",
+          "epochs": 5,
+          "dataset_size": 50000,
+          "logical_batch_size": 1000,
+          "physical_batch_size": 250,
+          "gradient_accumulation": 4,
+          "total_steps": 250,
+          "num_workers": 2,
+          "gpus": [
+            0,
+            2,
+            3
+          ],
+          "max_parallel_trials": 3,
+          "optimizer": {
+            "lr": 0.001,
+            "update_clip_norm": 3.5162817239761353,
+            "beta1": 0.9,
+            "beta2": 0.999,
+            "eps": 1e-08,
+            "weight_decay": 0.0
+          },
+          "privacy": {
+            "epsilon": 8.0,
+            "delta": 1e-05,
+            "adjacency": "replace_one",
+            "participation": "full_temporal"
+          },
+          "uc_includes_lr": false,
+          "uc_includes_sign": false,
+          "noise_before_lr": true,
+          "adam_state_uses_raw_batch_gradient": true,
+          "per_example_clipping": false,
+          "sampling_amplification": false,
+          "bandinvmf_workload": "sgd",
+          "bandinvmf_num_bands": 4,
+          "model": {
+            "architecture": "vit_tiny_patch16_224",
+            "pretrained": true,
+            "num_classes": 100,
+            "image_size": 224
+          }
+        },
+        "smoke": false,
+        "effective_epochs": 5,
+        "effective_total_steps": 250,
+        "update_clipping_enabled": true,
+        "dp_noise_enabled": true,
+        "participates_in_ranking": true
+      },
+      "spec_path": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/specs/stage1_01_d8d7d1ca93744cd5.json",
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/d8d7d1ca93744cd5",
+      "participates_in_ranking": true,
+      "final_test_top1": 0.0094,
+      "clip_fraction": 1.0,
+      "final_epoch_clip_fraction": 1.0,
+      "optimizer_steps": 250,
+      "privacy_calibration": {
+        "target_epsilon": 8.0,
+        "delta": 1e-05,
+        "target_mu": 1.6660305978457184,
+        "total_steps": 250,
+        "per_step_sensitivity": 7.0325634479522705,
+        "temporal_sensitivity": 15.811388300841896,
+        "trajectory_sensitivity": 111.19459142588087,
+        "innovation_std": 66.74222644509796,
+        "sampling_amplification": false,
+        "participation": "full_temporal",
+        "adjacency": "replace_one",
+        "accountant": "conditional_gaussian_gdp_row_absolute_sum",
+        "noise_space": "update_direction",
+        "batch_size_division": false
+      },
+      "epochs": [
+        {
+          "epoch": 1,
+          "logical_steps": 50,
+          "train_examples": 50000,
+          "train_loss": 43.53502532958984,
+          "test_loss": 73.287391015625,
+          "test_top1": 0.0109,
+          "epoch_clip_fraction": 1.0,
+          "gdp_mu": 0.7450715338755284,
+          "gdp_epsilon": 3.123292516214856,
+          "noise_marginal_std": 66.74222644509796,
+          "parameter_noise_std": 0.06674222644509796,
+          "augmentation_trace_sha256": "d63da21bdb0b5208efde32fe6efd500a1dd8422cf2de8538c5d20df0af3afa1c",
+          "seconds": 82.26910694129765
+        },
+        {
+          "epoch": 2,
+          "logical_steps": 100,
+          "train_examples": 50000,
+          "train_loss": 95.9896326953125,
+          "test_loss": 118.8467328125,
+          "test_top1": 0.0122,
+          "epoch_clip_fraction": 1.0,
+          "gdp_mu": 1.053690268144897,
+          "gdp_epsilon": 4.650921021133028,
+          "noise_marginal_std": 66.74222644509796,
+          "parameter_noise_std": 0.06674222644509796,
+          "augmentation_trace_sha256": "eba11842858511941e69682cb3174b7d5e6fd73ab7d8425892c6d4fc55cf418b",
+          "seconds": 81.34175478853285
+        },
+        {
+          "epoch": 3,
+          "logical_steps": 150,
+          "train_examples": 50000,
+          "train_loss": 111.810223828125,
+          "test_loss": 115.6654416015625,
+          "test_top1": 0.0074,
+          "epoch_clip_fraction": 1.0,
+          "gdp_mu": 1.290501751945691,
+          "gdp_epsilon": 5.897172094191148,
+          "noise_marginal_std": 66.74222644509796,
+          "parameter_noise_std": 0.06674222644509796,
+          "augmentation_trace_sha256": "f4ab582ea37ff08d6c3ec209d5c76a6a59fcdd228971935ccfe60255636fc688",
+          "seconds": 81.71691117063165
+        },
+        {
+          "epoch": 4,
+          "logical_steps": 200,
+          "train_examples": 50000,
+          "train_loss": 129.021222734375,
+          "test_loss": 142.884651953125,
+          "test_top1": 0.0103,
+          "epoch_clip_fraction": 1.0,
+          "gdp_mu": 1.4901430677510568,
+          "gdp_epsilon": 6.9960331570817695,
+          "noise_marginal_std": 66.74222644509796,
+          "parameter_noise_std": 0.06674222644509796,
+          "augmentation_trace_sha256": "eeab75a2450d737b335b1b301c8415d8e4847a2415b1acc4f6665e5915aa923a",
+          "seconds": 81.60609950684011
+        },
+        {
+          "epoch": 5,
+          "logical_steps": 250,
+          "train_examples": 50000,
+          "train_loss": 170.689879375,
+          "test_loss": 125.9976388671875,
+          "test_top1": 0.0094,
+          "epoch_clip_fraction": 1.0,
+          "gdp_mu": 1.6660305978457186,
+          "gdp_epsilon": 8.000000000000007,
+          "noise_marginal_std": 66.74222644509796,
+          "parameter_noise_std": 0.06674222644509796,
+          "augmentation_trace_sha256": "41f1cb58f0307df20ce87cfb313693105a3d89f587b34546eb06562652fb22c3",
+          "seconds": 81.11866339482367
+        }
+      ]
+    },
+    {
+      "stage": 1,
+      "stage_name": "iid_radius",
+      "candidate": 2,
+      "method": "dp-adam-iid-uc",
+      "trial_id": "7df9700fd662c969",
+      "reused": false,
+      "status": "completed",
+      "R": 7.0325634479522705,
+      "R_over_U50": 0.015625,
+      "lr": 0.001,
+      "spec": {
+        "stage": 1,
+        "stage_name": "iid_radius",
+        "trial": {
+          "method": "dp-adam-iid-uc",
+          "seed": 20261001,
+          "lr": 0.001,
+          "update_clip_norm": 7.0325634479522705,
+          "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/7df9700fd662c969"
+        },
+        "config": {
+          "seed": 20261001,
+          "search_seed": 20261001,
+          "final_seeds": [
+            20261011,
+            20261012,
+            20261013
+          ],
+          "data_root": "data",
+          "epochs": 5,
+          "dataset_size": 50000,
+          "logical_batch_size": 1000,
+          "physical_batch_size": 250,
+          "gradient_accumulation": 4,
+          "total_steps": 250,
+          "num_workers": 2,
+          "gpus": [
+            0,
+            2,
+            3
+          ],
+          "max_parallel_trials": 3,
+          "optimizer": {
+            "lr": 0.001,
+            "update_clip_norm": 7.0325634479522705,
+            "beta1": 0.9,
+            "beta2": 0.999,
+            "eps": 1e-08,
+            "weight_decay": 0.0
+          },
+          "privacy": {
+            "epsilon": 8.0,
+            "delta": 1e-05,
+            "adjacency": "replace_one",
+            "participation": "full_temporal"
+          },
+          "uc_includes_lr": false,
+          "uc_includes_sign": false,
+          "noise_before_lr": true,
+          "adam_state_uses_raw_batch_gradient": true,
+          "per_example_clipping": false,
+          "sampling_amplification": false,
+          "bandinvmf_workload": "sgd",
+          "bandinvmf_num_bands": 4,
+          "model": {
+            "architecture": "vit_tiny_patch16_224",
+            "pretrained": true,
+            "num_classes": 100,
+            "image_size": 224
+          }
+        },
+        "smoke": false,
+        "effective_epochs": 5,
+        "effective_total_steps": 250,
+        "update_clipping_enabled": true,
+        "dp_noise_enabled": true,
+        "participates_in_ranking": true
+      },
+      "spec_path": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/specs/stage1_02_7df9700fd662c969.json",
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/7df9700fd662c969",
+      "participates_in_ranking": true,
+      "final_test_top1": 0.0097,
+      "clip_fraction": 1.0,
+      "final_epoch_clip_fraction": 1.0,
+      "optimizer_steps": 250,
+      "privacy_calibration": {
+        "target_epsilon": 8.0,
+        "delta": 1e-05,
+        "target_mu": 1.6660305978457184,
+        "total_steps": 250,
+        "per_step_sensitivity": 14.065126895904541,
+        "temporal_sensitivity": 15.811388300841896,
+        "trajectory_sensitivity": 222.38918285176175,
+        "innovation_std": 133.4844528901959,
+        "sampling_amplification": false,
+        "participation": "full_temporal",
+        "adjacency": "replace_one",
+        "accountant": "conditional_gaussian_gdp_row_absolute_sum",
+        "noise_space": "update_direction",
+        "batch_size_division": false
+      },
+      "epochs": [
+        {
+          "epoch": 1,
+          "logical_steps": 50,
+          "train_examples": 50000,
+          "train_loss": 90.76405603271485,
+          "test_loss": 176.812404296875,
+          "test_top1": 0.0097,
+          "epoch_clip_fraction": 1.0,
+          "gdp_mu": 0.7450715338755284,
+          "gdp_epsilon": 3.123292516214856,
+          "noise_marginal_std": 133.4844528901959,
+          "parameter_noise_std": 0.13348445289019592,
+          "augmentation_trace_sha256": "d63da21bdb0b5208efde32fe6efd500a1dd8422cf2de8538c5d20df0af3afa1c",
+          "seconds": 81.78041504882276
+        },
+        {
+          "epoch": 2,
+          "logical_steps": 100,
+          "train_examples": 50000,
+          "train_loss": 199.8666434375,
+          "test_loss": 270.296478515625,
+          "test_top1": 0.011,
+          "epoch_clip_fraction": 1.0,
+          "gdp_mu": 1.053690268144897,
+          "gdp_epsilon": 4.650921021133028,
+          "noise_marginal_std": 133.4844528901959,
+          "parameter_noise_std": 0.13348445289019592,
+          "augmentation_trace_sha256": "eba11842858511941e69682cb3174b7d5e6fd73ab7d8425892c6d4fc55cf418b",
+          "seconds": 84.45505270548165
+        },
+        {
+          "epoch": 3,
+          "logical_steps": 150,
+          "train_examples": 50000,
+          "train_loss": 226.0568109375,
+          "test_loss": 248.517244140625,
+          "test_top1": 0.0063,
+          "epoch_clip_fraction": 1.0,
+          "gdp_mu": 1.290501751945691,
+          "gdp_epsilon": 5.897172094191148,
+          "noise_marginal_std": 133.4844528901959,
+          "parameter_noise_std": 0.13348445289019592,
+          "augmentation_trace_sha256": "f4ab582ea37ff08d6c3ec209d5c76a6a59fcdd228971935ccfe60255636fc688",
+          "seconds": 81.77009772323072
+        },
+        {
+          "epoch": 4,
+          "logical_steps": 200,
+          "train_examples": 50000,
+          "train_loss": 292.850725546875,
+          "test_loss": 357.5629640625,
+          "test_top1": 0.0099,
+          "epoch_clip_fraction": 1.0,
+          "gdp_mu": 1.4901430677510568,
+          "gdp_epsilon": 6.9960331570817695,
+          "noise_marginal_std": 133.4844528901959,
+          "parameter_noise_std": 0.13348445289019592,
+          "augmentation_trace_sha256": "eeab75a2450d737b335b1b301c8415d8e4847a2415b1acc4f6665e5915aa923a",
+          "seconds": 80.70625326409936
+        },
+        {
+          "epoch": 5,
+          "logical_steps": 250,
+          "train_examples": 50000,
+          "train_loss": 394.09108984375,
+          "test_loss": 293.15072109375,
+          "test_top1": 0.0097,
+          "epoch_clip_fraction": 1.0,
+          "gdp_mu": 1.6660305978457186,
+          "gdp_epsilon": 8.000000000000007,
+          "noise_marginal_std": 133.4844528901959,
+          "parameter_noise_std": 0.13348445289019592,
+          "augmentation_trace_sha256": "41f1cb58f0307df20ce87cfb313693105a3d89f587b34546eb06562652fb22c3",
+          "seconds": 82.0652526859194
+        }
+      ]
+    },
+    {
+      "stage": 1,
+      "stage_name": "iid_radius",
+      "candidate": 3,
+      "method": "dp-adam-iid-uc",
+      "trial_id": "775192c9f70af454",
+      "reused": false,
+      "status": "planned",
+      "R": 14.065126895904541,
+      "R_over_U50": 0.03125,
+      "lr": 0.001,
+      "spec": {
+        "stage": 1,
+        "stage_name": "iid_radius",
+        "trial": {
+          "method": "dp-adam-iid-uc",
+          "seed": 20261001,
+          "lr": 0.001,
+          "update_clip_norm": 14.065126895904541,
+          "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/775192c9f70af454"
+        },
+        "config": {
+          "seed": 20261001,
+          "search_seed": 20261001,
+          "final_seeds": [
+            20261011,
+            20261012,
+            20261013
+          ],
+          "data_root": "data",
+          "epochs": 5,
+          "dataset_size": 50000,
+          "logical_batch_size": 1000,
+          "physical_batch_size": 250,
+          "gradient_accumulation": 4,
+          "total_steps": 250,
+          "num_workers": 2,
+          "gpus": [
+            0,
+            2,
+            3
+          ],
+          "max_parallel_trials": 3,
+          "optimizer": {
+            "lr": 0.001,
+            "update_clip_norm": 14.065126895904541,
+            "beta1": 0.9,
+            "beta2": 0.999,
+            "eps": 1e-08,
+            "weight_decay": 0.0
+          },
+          "privacy": {
+            "epsilon": 8.0,
+            "delta": 1e-05,
+            "adjacency": "replace_one",
+            "participation": "full_temporal"
+          },
+          "uc_includes_lr": false,
+          "uc_includes_sign": false,
+          "noise_before_lr": true,
+          "adam_state_uses_raw_batch_gradient": true,
+          "per_example_clipping": false,
+          "sampling_amplification": false,
+          "bandinvmf_workload": "sgd",
+          "bandinvmf_num_bands": 4,
+          "model": {
+            "architecture": "vit_tiny_patch16_224",
+            "pretrained": true,
+            "num_classes": 100,
+            "image_size": 224
+          }
+        },
+        "smoke": false,
+        "effective_epochs": 5,
+        "effective_total_steps": 250,
+        "update_clipping_enabled": true,
+        "dp_noise_enabled": true,
+        "participates_in_ranking": true
+      },
+      "spec_path": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/specs/stage1_03_775192c9f70af454.json",
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/775192c9f70af454",
+      "participates_in_ranking": true
+    },
+    {
+      "stage": 1,
+      "stage_name": "iid_radius",
+      "candidate": 4,
+      "method": "dp-adam-iid-uc",
+      "trial_id": "0f702ff6920d3edf",
+      "reused": false,
+      "status": "planned",
+      "R": 28.130253791809082,
+      "R_over_U50": 0.0625,
+      "lr": 0.001,
+      "spec": {
+        "stage": 1,
+        "stage_name": "iid_radius",
+        "trial": {
+          "method": "dp-adam-iid-uc",
+          "seed": 20261001,
+          "lr": 0.001,
+          "update_clip_norm": 28.130253791809082,
+          "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/0f702ff6920d3edf"
+        },
+        "config": {
+          "seed": 20261001,
+          "search_seed": 20261001,
+          "final_seeds": [
+            20261011,
+            20261012,
+            20261013
+          ],
+          "data_root": "data",
+          "epochs": 5,
+          "dataset_size": 50000,
+          "logical_batch_size": 1000,
+          "physical_batch_size": 250,
+          "gradient_accumulation": 4,
+          "total_steps": 250,
+          "num_workers": 2,
+          "gpus": [
+            0,
+            2,
+            3
+          ],
+          "max_parallel_trials": 3,
+          "optimizer": {
+            "lr": 0.001,
+            "update_clip_norm": 28.130253791809082,
+            "beta1": 0.9,
+            "beta2": 0.999,
+            "eps": 1e-08,
+            "weight_decay": 0.0
+          },
+          "privacy": {
+            "epsilon": 8.0,
+            "delta": 1e-05,
+            "adjacency": "replace_one",
+            "participation": "full_temporal"
+          },
+          "uc_includes_lr": false,
+          "uc_includes_sign": false,
+          "noise_before_lr": true,
+          "adam_state_uses_raw_batch_gradient": true,
+          "per_example_clipping": false,
+          "sampling_amplification": false,
+          "bandinvmf_workload": "sgd",
+          "bandinvmf_num_bands": 4,
+          "model": {
+            "architecture": "vit_tiny_patch16_224",
+            "pretrained": true,
+            "num_classes": 100,
+            "image_size": 224
+          }
+        },
+        "smoke": false,
+        "effective_epochs": 5,
+        "effective_total_steps": 250,
+        "update_clipping_enabled": true,
+        "dp_noise_enabled": true,
+        "participates_in_ranking": true
+      },
+      "spec_path": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/specs/stage1_04_0f702ff6920d3edf.json",
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/0f702ff6920d3edf",
+      "participates_in_ranking": true
+    },
+    {
+      "stage": 1,
+      "stage_name": "iid_radius",
+      "candidate": 5,
+      "method": "dp-adam-iid-uc",
+      "trial_id": "536d3580a00c3b7e",
+      "reused": false,
+      "status": "planned",
+      "R": 56.260507583618164,
+      "R_over_U50": 0.125,
+      "lr": 0.001,
+      "spec": {
+        "stage": 1,
+        "stage_name": "iid_radius",
+        "trial": {
+          "method": "dp-adam-iid-uc",
+          "seed": 20261001,
+          "lr": 0.001,
+          "update_clip_norm": 56.260507583618164,
+          "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/536d3580a00c3b7e"
+        },
+        "config": {
+          "seed": 20261001,
+          "search_seed": 20261001,
+          "final_seeds": [
+            20261011,
+            20261012,
+            20261013
+          ],
+          "data_root": "data",
+          "epochs": 5,
+          "dataset_size": 50000,
+          "logical_batch_size": 1000,
+          "physical_batch_size": 250,
+          "gradient_accumulation": 4,
+          "total_steps": 250,
+          "num_workers": 2,
+          "gpus": [
+            0,
+            2,
+            3
+          ],
+          "max_parallel_trials": 3,
+          "optimizer": {
+            "lr": 0.001,
+            "update_clip_norm": 56.260507583618164,
+            "beta1": 0.9,
+            "beta2": 0.999,
+            "eps": 1e-08,
+            "weight_decay": 0.0
+          },
+          "privacy": {
+            "epsilon": 8.0,
+            "delta": 1e-05,
+            "adjacency": "replace_one",
+            "participation": "full_temporal"
+          },
+          "uc_includes_lr": false,
+          "uc_includes_sign": false,
+          "noise_before_lr": true,
+          "adam_state_uses_raw_batch_gradient": true,
+          "per_example_clipping": false,
+          "sampling_amplification": false,
+          "bandinvmf_workload": "sgd",
+          "bandinvmf_num_bands": 4,
+          "model": {
+            "architecture": "vit_tiny_patch16_224",
+            "pretrained": true,
+            "num_classes": 100,
+            "image_size": 224
+          }
+        },
+        "smoke": false,
+        "effective_epochs": 5,
+        "effective_total_steps": 250,
+        "update_clipping_enabled": true,
+        "dp_noise_enabled": true,
+        "participates_in_ranking": true
+      },
+      "spec_path": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/specs/stage1_05_536d3580a00c3b7e.json",
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/536d3580a00c3b7e",
+      "participates_in_ranking": true
+    },
+    {
+      "stage": 1,
+      "stage_name": "iid_radius",
+      "candidate": 6,
+      "method": "dp-adam-iid-uc",
+      "trial_id": "24f83f41fe3a6846",
+      "reused": false,
+      "status": "planned",
+      "R": 112.52101516723633,
+      "R_over_U50": 0.25,
+      "lr": 0.001,
+      "spec": {
+        "stage": 1,
+        "stage_name": "iid_radius",
+        "trial": {
+          "method": "dp-adam-iid-uc",
+          "seed": 20261001,
+          "lr": 0.001,
+          "update_clip_norm": 112.52101516723633,
+          "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/24f83f41fe3a6846"
+        },
+        "config": {
+          "seed": 20261001,
+          "search_seed": 20261001,
+          "final_seeds": [
+            20261011,
+            20261012,
+            20261013
+          ],
+          "data_root": "data",
+          "epochs": 5,
+          "dataset_size": 50000,
+          "logical_batch_size": 1000,
+          "physical_batch_size": 250,
+          "gradient_accumulation": 4,
+          "total_steps": 250,
+          "num_workers": 2,
+          "gpus": [
+            0,
+            2,
+            3
+          ],
+          "max_parallel_trials": 3,
+          "optimizer": {
+            "lr": 0.001,
+            "update_clip_norm": 112.52101516723633,
+            "beta1": 0.9,
+            "beta2": 0.999,
+            "eps": 1e-08,
+            "weight_decay": 0.0
+          },
+          "privacy": {
+            "epsilon": 8.0,
+            "delta": 1e-05,
+            "adjacency": "replace_one",
+            "participation": "full_temporal"
+          },
+          "uc_includes_lr": false,
+          "uc_includes_sign": false,
+          "noise_before_lr": true,
+          "adam_state_uses_raw_batch_gradient": true,
+          "per_example_clipping": false,
+          "sampling_amplification": false,
+          "bandinvmf_workload": "sgd",
+          "bandinvmf_num_bands": 4,
+          "model": {
+            "architecture": "vit_tiny_patch16_224",
+            "pretrained": true,
+            "num_classes": 100,
+            "image_size": 224
+          }
+        },
+        "smoke": false,
+        "effective_epochs": 5,
+        "effective_total_steps": 250,
+        "update_clipping_enabled": true,
+        "dp_noise_enabled": true,
+        "participates_in_ranking": true
+      },
+      "spec_path": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/specs/stage1_06_24f83f41fe3a6846.json",
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/24f83f41fe3a6846",
+      "participates_in_ranking": true
+    },
+    {
+      "stage": 1,
+      "stage_name": "iid_radius",
+      "candidate": 7,
+      "method": "dp-adam-iid-uc",
+      "trial_id": "66bb1415ed67044e",
+      "reused": false,
+      "status": "planned",
+      "R": 225.04203033447266,
+      "R_over_U50": 0.5,
+      "lr": 0.001,
+      "spec": {
+        "stage": 1,
+        "stage_name": "iid_radius",
+        "trial": {
+          "method": "dp-adam-iid-uc",
+          "seed": 20261001,
+          "lr": 0.001,
+          "update_clip_norm": 225.04203033447266,
+          "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/66bb1415ed67044e"
+        },
+        "config": {
+          "seed": 20261001,
+          "search_seed": 20261001,
+          "final_seeds": [
+            20261011,
+            20261012,
+            20261013
+          ],
+          "data_root": "data",
+          "epochs": 5,
+          "dataset_size": 50000,
+          "logical_batch_size": 1000,
+          "physical_batch_size": 250,
+          "gradient_accumulation": 4,
+          "total_steps": 250,
+          "num_workers": 2,
+          "gpus": [
+            0,
+            2,
+            3
+          ],
+          "max_parallel_trials": 3,
+          "optimizer": {
+            "lr": 0.001,
+            "update_clip_norm": 225.04203033447266,
+            "beta1": 0.9,
+            "beta2": 0.999,
+            "eps": 1e-08,
+            "weight_decay": 0.0
+          },
+          "privacy": {
+            "epsilon": 8.0,
+            "delta": 1e-05,
+            "adjacency": "replace_one",
+            "participation": "full_temporal"
+          },
+          "uc_includes_lr": false,
+          "uc_includes_sign": false,
+          "noise_before_lr": true,
+          "adam_state_uses_raw_batch_gradient": true,
+          "per_example_clipping": false,
+          "sampling_amplification": false,
+          "bandinvmf_workload": "sgd",
+          "bandinvmf_num_bands": 4,
+          "model": {
+            "architecture": "vit_tiny_patch16_224",
+            "pretrained": true,
+            "num_classes": 100,
+            "image_size": 224
+          }
+        },
+        "smoke": false,
+        "effective_epochs": 5,
+        "effective_total_steps": 250,
+        "update_clipping_enabled": true,
+        "dp_noise_enabled": true,
+        "participates_in_ranking": true
+      },
+      "spec_path": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/specs/stage1_07_66bb1415ed67044e.json",
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/66bb1415ed67044e",
+      "participates_in_ranking": true
+    },
+    {
+      "stage": 1,
+      "stage_name": "iid_radius",
+      "candidate": 8,
+      "method": "dp-adam-iid-uc",
+      "trial_id": "2197e94b2b971572",
+      "reused": false,
+      "status": "planned",
+      "R": 450.0840606689453,
+      "R_over_U50": 1.0,
+      "lr": 0.001,
+      "spec": {
+        "stage": 1,
+        "stage_name": "iid_radius",
+        "trial": {
+          "method": "dp-adam-iid-uc",
+          "seed": 20261001,
+          "lr": 0.001,
+          "update_clip_norm": 450.0840606689453,
+          "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/2197e94b2b971572"
+        },
+        "config": {
+          "seed": 20261001,
+          "search_seed": 20261001,
+          "final_seeds": [
+            20261011,
+            20261012,
+            20261013
+          ],
+          "data_root": "data",
+          "epochs": 5,
+          "dataset_size": 50000,
+          "logical_batch_size": 1000,
+          "physical_batch_size": 250,
+          "gradient_accumulation": 4,
+          "total_steps": 250,
+          "num_workers": 2,
+          "gpus": [
+            0,
+            2,
+            3
+          ],
+          "max_parallel_trials": 3,
+          "optimizer": {
+            "lr": 0.001,
+            "update_clip_norm": 450.0840606689453,
+            "beta1": 0.9,
+            "beta2": 0.999,
+            "eps": 1e-08,
+            "weight_decay": 0.0
+          },
+          "privacy": {
+            "epsilon": 8.0,
+            "delta": 1e-05,
+            "adjacency": "replace_one",
+            "participation": "full_temporal"
+          },
+          "uc_includes_lr": false,
+          "uc_includes_sign": false,
+          "noise_before_lr": true,
+          "adam_state_uses_raw_batch_gradient": true,
+          "per_example_clipping": false,
+          "sampling_amplification": false,
+          "bandinvmf_workload": "sgd",
+          "bandinvmf_num_bands": 4,
+          "model": {
+            "architecture": "vit_tiny_patch16_224",
+            "pretrained": true,
+            "num_classes": 100,
+            "image_size": 224
+          }
+        },
+        "smoke": false,
+        "effective_epochs": 5,
+        "effective_total_steps": 250,
+        "update_clipping_enabled": true,
+        "dp_noise_enabled": true,
+        "participates_in_ranking": true
+      },
+      "spec_path": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/specs/stage1_08_2197e94b2b971572.json",
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/2197e94b2b971572",
+      "participates_in_ranking": true
+    }
+  ],
+  "auto_run_final": false,
+  "U50": 450.0840606689453
+}

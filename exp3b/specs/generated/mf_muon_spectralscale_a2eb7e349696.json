@@ -1,0 +1,17 @@
+{
+  "method": "mf_muon_spectralscale",
+  "result_dir": "exp3b/results/smoke_v2_utility_rms/mf_muon_spectralscale",
+  "seed": 20261001,
+  "muon_lr": 0.006,
+  "adam_lr": 0.012,
+  "max_grad_norm": 30.0,
+  "lambda_parallel": 1.0,
+  "kappa": 1.1,
+  "rho": 0.1,
+  "lr": 0.005,
+  "eps_scale": 0.1,
+  "capture": false,
+  "smoke": true,
+  "data_root": "data",
+  "cache_root": "cache"
+}

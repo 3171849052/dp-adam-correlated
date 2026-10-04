@@ -1,0 +1,39 @@
+seed: 20261001
+search_seed: 20261001
+final_seeds: [20261011, 20261012, 20261013]
+data_root: data
+epochs: 5
+dataset_size: 50000
+logical_batch_size: 1000
+physical_batch_size: 250
+gradient_accumulation: 4
+total_steps: 250
+adam_state_dtype: float64
+num_workers: 2
+gpus: [0, 2, 3]
+max_parallel_trials: 3
+optimizer:
+  lr: 1.0e-5
+  update_clip_norm: 1.0
+  beta1: 0.9
+  beta2: 0.999
+  eps: 1.0e-8
+  weight_decay: 0.0
+privacy:
+  epsilon: 8.0
+  delta: 1.0e-5
+  adjacency: replace_one
+  participation: full_temporal
+uc_includes_lr: false
+uc_includes_sign: false
+noise_before_lr: true
+adam_state_uses_raw_batch_gradient: true
+per_example_clipping: false
+sampling_amplification: false
+bandinvmf_workload: sgd
+bandinvmf_num_bands: 4
+model:
+  architecture: vit_tiny_patch16_224
+  pretrained: true
+  num_classes: 100
+  image_size: 224

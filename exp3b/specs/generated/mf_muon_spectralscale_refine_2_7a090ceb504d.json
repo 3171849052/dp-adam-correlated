@@ -1,0 +1,17 @@
+{
+  "method": "mf_muon_spectralscale",
+  "result_dir": "exp3b/results/tuning/mf_muon_spectralscale_refine_2",
+  "seed": 20261001,
+  "muon_lr": 0.0075,
+  "adam_lr": 0.012,
+  "max_grad_norm": 30.0,
+  "lambda_parallel": 1.0,
+  "kappa": 1.1,
+  "rho": 0.1,
+  "lr": 0.005,
+  "eps_scale": 0.1,
+  "capture": false,
+  "smoke": false,
+  "data_root": "data",
+  "cache_root": "cache"
+}

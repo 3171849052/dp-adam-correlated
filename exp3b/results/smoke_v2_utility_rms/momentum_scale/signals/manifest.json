@@ -1,0 +1,295 @@
+{
+  "status": "completed",
+  "method": "momentum_scale",
+  "steps": 2,
+  "support": [
+    "blocks.0.attn.qkv.weight",
+    "blocks.0.attn.proj.weight",
+    "blocks.0.mlp.0.weight",
+    "blocks.0.mlp.2.weight",
+    "blocks.1.attn.qkv.weight",
+    "blocks.1.attn.proj.weight",
+    "blocks.1.mlp.0.weight",
+    "blocks.1.mlp.2.weight",
+    "blocks.2.attn.qkv.weight",
+    "blocks.2.attn.proj.weight",
+    "blocks.2.mlp.0.weight",
+    "blocks.2.mlp.2.weight",
+    "blocks.3.attn.qkv.weight",
+    "blocks.3.attn.proj.weight",
+    "blocks.3.mlp.0.weight",
+    "blocks.3.mlp.2.weight",
+    "blocks.4.attn.qkv.weight",
+    "blocks.4.attn.proj.weight",
+    "blocks.4.mlp.0.weight",
+    "blocks.4.mlp.2.weight",
+    "blocks.5.attn.qkv.weight",
+    "blocks.5.attn.proj.weight",
+    "blocks.5.mlp.0.weight",
+    "blocks.5.mlp.2.weight",
+    "blocks.6.attn.qkv.weight",
+    "blocks.6.attn.proj.weight",
+    "blocks.6.mlp.0.weight",
+    "blocks.6.mlp.2.weight",
+    "blocks.7.attn.qkv.weight",
+    "blocks.7.attn.proj.weight",
+    "blocks.7.mlp.0.weight",
+    "blocks.7.mlp.2.weight",
+    "blocks.8.attn.qkv.weight",
+    "blocks.8.attn.proj.weight",
+    "blocks.8.mlp.0.weight",
+    "blocks.8.mlp.2.weight",
+    "blocks.9.attn.qkv.weight",
+    "blocks.9.attn.proj.weight",
+    "blocks.9.mlp.0.weight",
+    "blocks.9.mlp.2.weight",
+    "blocks.10.attn.qkv.weight",
+    "blocks.10.attn.proj.weight",
+    "blocks.10.mlp.0.weight",
+    "blocks.10.mlp.2.weight",
+    "blocks.11.attn.qkv.weight",
+    "blocks.11.attn.proj.weight",
+    "blocks.11.mlp.0.weight",
+    "blocks.11.mlp.2.weight"
+  ],
+  "shapes": {
+    "blocks.0.attn.qkv.weight": [
+      24,
+      8
+    ],
+    "blocks.0.attn.proj.weight": [
+      8,
+      8
+    ],
+    "blocks.0.mlp.0.weight": [
+      16,
+      8
+    ],
+    "blocks.0.mlp.2.weight": [
+      8,
+      16
+    ],
+    "blocks.1.attn.qkv.weight": [
+      24,
+      8
+    ],
+    "blocks.1.attn.proj.weight": [
+      8,
+      8
+    ],
+    "blocks.1.mlp.0.weight": [
+      16,
+      8
+    ],
+    "blocks.1.mlp.2.weight": [
+      8,
+      16
+    ],
+    "blocks.2.attn.qkv.weight": [
+      24,
+      8
+    ],
+    "blocks.2.attn.proj.weight": [
+      8,
+      8
+    ],
+    "blocks.2.mlp.0.weight": [
+      16,
+      8
+    ],
+    "blocks.2.mlp.2.weight": [
+      8,
+      16
+    ],
+    "blocks.3.attn.qkv.weight": [
+      24,
+      8
+    ],
+    "blocks.3.attn.proj.weight": [
+      8,
+      8
+    ],
+    "blocks.3.mlp.0.weight": [
+      16,
+      8
+    ],
+    "blocks.3.mlp.2.weight": [
+      8,
+      16
+    ],
+    "blocks.4.attn.qkv.weight": [
+      24,
+      8
+    ],
+    "blocks.4.attn.proj.weight": [
+      8,
+      8
+    ],
+    "blocks.4.mlp.0.weight": [
+      16,
+      8
+    ],
+    "blocks.4.mlp.2.weight": [
+      8,
+      16
+    ],
+    "blocks.5.attn.qkv.weight": [
+      24,
+      8
+    ],
+    "blocks.5.attn.proj.weight": [
+      8,
+      8
+    ],
+    "blocks.5.mlp.0.weight": [
+      16,
+      8
+    ],
+    "blocks.5.mlp.2.weight": [
+      8,
+      16
+    ],
+    "blocks.6.attn.qkv.weight": [
+      24,
+      8
+    ],
+    "blocks.6.attn.proj.weight": [
+      8,
+      8
+    ],
+    "blocks.6.mlp.0.weight": [
+      16,
+      8
+    ],
+    "blocks.6.mlp.2.weight": [
+      8,
+      16
+    ],
+    "blocks.7.attn.qkv.weight": [
+      24,
+      8
+    ],
+    "blocks.7.attn.proj.weight": [
+      8,
+      8
+    ],
+    "blocks.7.mlp.0.weight": [
+      16,
+      8
+    ],
+    "blocks.7.mlp.2.weight": [
+      8,
+      16
+    ],
+    "blocks.8.attn.qkv.weight": [
+      24,
+      8
+    ],
+    "blocks.8.attn.proj.weight": [
+      8,
+      8
+    ],
+    "blocks.8.mlp.0.weight": [
+      16,
+      8
+    ],
+    "blocks.8.mlp.2.weight": [
+      8,
+      16
+    ],
+    "blocks.9.attn.qkv.weight": [
+      24,
+      8
+    ],
+    "blocks.9.attn.proj.weight": [
+      8,
+      8
+    ],
+    "blocks.9.mlp.0.weight": [
+      16,
+      8
+    ],
+    "blocks.9.mlp.2.weight": [
+      8,
+      16
+    ],
+    "blocks.10.attn.qkv.weight": [
+      24,
+      8
+    ],
+    "blocks.10.attn.proj.weight": [
+      8,
+      8
+    ],
+    "blocks.10.mlp.0.weight": [
+      16,
+      8
+    ],
+    "blocks.10.mlp.2.weight": [
+      8,
+      16
+    ],
+    "blocks.11.attn.qkv.weight": [
+      24,
+      8
+    ],
+    "blocks.11.attn.proj.weight": [
+      8,
+      8
+    ],
+    "blocks.11.mlp.0.weight": [
+      16,
+      8
+    ],
+    "blocks.11.mlp.2.weight": [
+      8,
+      16
+    ]
+  },
+  "dimension": 6144,
+  "coordinates": "post-clipping pre-noise average gradient",
+  "scale_signal": "g = q / S; q = S * clipped_sum / logical_batch_size",
+  "files": [
+    {
+      "file": "step_001.pt",
+      "sha256": "2b527c2cd9db183978b2cb8091c3a0de018054ed064b4d65312a0a340de638c8"
+    },
+    {
+      "file": "step_002.pt",
+      "sha256": "a895b32748ce2c824e7fd34cf24d0fcd2b0470cab13baf3d740404a9ee35a8df"
+    }
+  ],
+  "coefficients": [
+    1.0,
+    -0.95,
+    -0.0012500000000000844,
+    -0.001187499999999897
+  ],
+  "innovation_std_sum": 471.34496321891186,
+  "innovation_std_gradient": 58.91812040236398,
+  "logical_batch_size": 8,
+  "actual_lr": 0.005,
+  "source_seed": 20261001,
+  "source_noise_seed": 20261002,
+  "source_spec": {
+    "method": "momentum_scale",
+    "result_dir": "exp3b/results/smoke_v2_utility_rms/momentum_scale",
+    "seed": 20261001,
+    "muon_lr": 0.006,
+    "adam_lr": 0.012,
+    "max_grad_norm": 100.0,
+    "lambda_parallel": 1.0,
+    "kappa": 4.0,
+    "rho": 0.1,
+    "lr": 0.005,
+    "eps_scale": 0.1,
+    "capture": true,
+    "smoke": true,
+    "data_root": "data",
+    "cache_root": "cache"
+  },
+  "initialization_sha256": "71fe9a6fb88065d33b5bbf98688b7f81d12f18cc0e46f7e162b1e0474ae6aaed",
+  "checkpoint_sha256": "fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed",
+  "initial_optimizer_state": "zero",
+  "smoke": true
+}

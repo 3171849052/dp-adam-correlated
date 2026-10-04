@@ -1,5 +1,5 @@
 {
-  "status": "pending_refinement",
+  "status": "frozen",
   "objective": "final_test_top1",
   "configs": {
     "nonprivate_hybrid": {
@@ -27,7 +27,7 @@
       "rho": 0.1
     },
     "mf_muon_normscale": {
-      "muon_lr": 0.006,
+      "muon_lr": 0.0075,
       "adam_lr": 0.012,
       "max_grad_norm": 30.0,
       "lambda_parallel": 0.1,
@@ -35,7 +35,7 @@
       "rho": 0.1
     },
     "mf_muon_spectralscale": {
-      "muon_lr": 0.006,
+      "muon_lr": 0.0045,
       "adam_lr": 0.012,
       "max_grad_norm": 30.0,
       "lambda_parallel": 1.0,
@@ -44,39 +44,76 @@
     },
     "momentum_standard": {
       "lr": 0.005,
-      "max_grad_norm": 1.0,
+      "max_grad_norm": 30.0,
       "num_bands": 4
     },
     "momentum_scale": {
       "lr": 0.005,
       "max_grad_norm": 100.0,
-      "eps_scale": 0.1,
-      "num_bands": 4
+      "num_bands": 4,
+      "eps_scale": 0.1
     }
   },
   "provenance": {
     "nonprivate_hybrid": {
       "result_dir": "exp3/results/search/A/a07_adam_0.001",
-      "final_test_top1": 0.8544
+      "final_test_top1": 0.8544,
+      "origin": "exp3",
+      "source_method": "nonprivate_hybrid",
+      "source_csv": "exp3/results/search_history.json"
     },
     "iid_dp_hybrid": {
       "result_dir": "exp3/results/search/B/b05_muon_0.001",
-      "final_test_top1": 0.6982
+      "final_test_top1": 0.6982,
+      "origin": "exp3",
+      "source_method": "iid_dp_hybrid",
+      "source_csv": "exp3/results/search_history.json"
     },
     "mf_muon_standard": {
       "result_dir": "exp3/results/search/C/c10_muon_0.006_adam_0.012",
-      "final_test_top1": 0.7905
+      "final_test_top1": 0.7905,
+      "origin": "exp3",
+      "source_method": "mf_muon_standard",
+      "source_csv": "exp3/results/search_history.json"
     },
     "mf_muon_normscale": {
-      "result_dir": "exp3/results/search/D/d04_lambda_0.1",
-      "final_test_top1": 0.7661
+      "result_dir": "exp3b/results/tuning/mf_muon_normscale_refine_2",
+      "final_test_top1": 0.7664,
+      "origin": "exp3b",
+      "source_method": "mf_muon_normscale",
+      "source_csv": "exp3b/results/tuning/mf_muon_normscale_refine_2/summary.json"
     },
     "mf_muon_spectralscale": {
-      "result_dir": "exp3/results/search/E/e04_kappa_1.1",
-      "final_test_top1": 0.7764
+      "result_dir": "exp3b/results/tuning/mf_muon_spectralscale_refine_1",
+      "final_test_top1": 0.7775,
+      "origin": "exp3b",
+      "source_method": "mf_muon_spectralscale",
+      "source_csv": "exp3b/results/tuning/mf_muon_spectralscale_refine_1/summary.json"
+    },
+    "momentum_standard": {
+      "result_dir": "exp2/results/matched_search/momentum_standard_matched/clip_30",
+      "final_test_top1": 0.7361,
+      "origin": "exp2",
+      "source_method": "momentum_standard_matched",
+      "source_csv": "exp2/results/matched_search_summary.csv"
+    },
+    "momentum_scale": {
+      "result_dir": "exp2/results/search/momentum_scale/lr_0.005_clip_100",
+      "final_test_top1": 0.745,
+      "origin": "exp2",
+      "source_method": "momentum_scale",
+      "source_csv": "exp2/results/search_summary.csv"
     }
   },
-  "exp2_source_configs": "exp2/results/selected_configs.json and final_summary.json; utility choices",
+  "mf_adam_tuning": {
+    "status": "completed",
+    "objective": "maximum final_test_top1",
+    "history": "all completed Exp2 momentum_standard / momentum_standard_matched utility observations",
+    "selection": "Exp3b utility continuation; matched label and clipping matching never rank configurations",
+    "fixed_anchor_used": false,
+    "continuation": "exp3b/results/mf_adam_continuation.json"
+  },
+  "mf_adam_scale_selection": "maximum utility in Exp2 momentum_scale history",
   "legacy_exp3_selected": {
     "nonprivate_hybrid": {
       "muon_lr": 0.0003,

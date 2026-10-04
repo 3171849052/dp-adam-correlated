@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-10-04T17:48:25.669980+08:00",
+  "status": "failed_and_already_exited",
+  "active_exp3b_processes": [],
+  "killed_pids": [],
+  "completed_new_tuning_trials": 11,
+  "configs_frozen": true,
+  "completed_final_trials": 0,
+  "planned_final_trials": 15,
+  "failed_trial": "nonprivate_hybrid/seed_20261012",
+  "failed_physical_gpu": 1,
+  "failure": "CUDA out of memory; final validation first batch failed; scheduler terminated sibling trials",
+  "source_started": false,
+  "cancellation_replay_started": false,
+  "protected_process": {
+    "user": "zhongrlong",
+    "uid": 1020,
+    "pid": 3329499,
+    "gpu": 1,
+    "untouched": true
+  }
+}

@@ -5,6 +5,8 @@ from exp3b.history import read_inputs
 from exp3b.scheduler import run_trials
 from exp3b.spec import ADAM, HYBRID, PARAMETERS, RunSpec, write_json
 
+SMOKE_BASE = BASE / 'results/smoke_v2_utility_rms'
+
 
 def main():
     inputs = read_inputs()
@@ -12,7 +14,7 @@ def main():
     for method in ADAM + HYBRID:
         values = ({k: v for k, v in inputs['adam'][method].items() if k != 'num_bands'}
                   if method in ADAM else {k: inputs['choices'][method][k] for k in PARAMETERS})
-        specs.append(RunSpec(method=method, result_dir=f'exp3b/results/smoke/{method}', smoke=True,
+        specs.append(RunSpec(method=method, result_dir=str((SMOKE_BASE / method).relative_to(BASE.parent)), smoke=True,
             capture=method in ADAM + ('mf_muon_standard',), **values))
     summaries = run_trials(specs, [0, 1, 2, 3], 'smoke')
     observed_gpus = [json.loads((spec.directory / 'config.json').read_text())['visible_devices']
@@ -21,7 +23,7 @@ def main():
     assert all(summary['optimizer_steps'] == 2 for summary in summaries)
     from exp3b.replay import run_replay
     from exp3b.report import build
-    outputs = BASE / 'results/smoke/cancellation'
+    outputs = SMOKE_BASE / 'cancellation'
     import torch
     torch.set_num_threads(2)
     for method, name in (('momentum_standard', 'adam'), ('momentum_scale', 'adam_scale'), ('mf_muon_standard', 'muon')):
@@ -34,6 +36,8 @@ def main():
         observed_gpu_each_method=observed_gpus,
         logical_steps_each=[s['optimizer_steps'] for s in summaries],
         capture_support=48, replay_seeds=8, paired_replay=True,
+        smoke_directory=str(SMOKE_BASE), mf_adam_hyperparameters=inputs['adam']['momentum_standard'],
+        aggregation='root_mean_mse_v2',
         cancellation_methods=list(groups), full_experiment_started=False))
     print(json.dumps(dict(status='passed', summary='exp3b/results/smoke_verification.json')))
 

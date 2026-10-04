@@ -1,0 +1,238 @@
+{
+  "attempt": 1,
+  "reason": "FP32 diagnostic sum of squared vhat overflowed on large finite Adam states; diagnostics now accumulate in FP64. FP32 Adam state, direction, clipping, noise, lr and training protocol are unchanged.",
+  "trials": [
+    {
+      "trial_id": "775192c9f70af454",
+      "stage": 1,
+      "spec": {
+        "stage": 1,
+        "stage_name": "iid_radius",
+        "trial": {
+          "method": "dp-adam-iid-uc",
+          "seed": 20261001,
+          "lr": 0.001,
+          "update_clip_norm": 14.065126895904541,
+          "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/775192c9f70af454"
+        },
+        "config": {
+          "seed": 20261001,
+          "search_seed": 20261001,
+          "final_seeds": [
+            20261011,
+            20261012,
+            20261013
+          ],
+          "data_root": "data",
+          "epochs": 5,
+          "dataset_size": 50000,
+          "logical_batch_size": 1000,
+          "physical_batch_size": 250,
+          "gradient_accumulation": 4,
+          "total_steps": 250,
+          "num_workers": 2,
+          "gpus": [
+            0,
+            2,
+            3
+          ],
+          "max_parallel_trials": 3,
+          "optimizer": {
+            "lr": 0.001,
+            "update_clip_norm": 14.065126895904541,
+            "beta1": 0.9,
+            "beta2": 0.999,
+            "eps": 1e-08,
+            "weight_decay": 0.0
+          },
+          "privacy": {
+            "epsilon": 8.0,
+            "delta": 1e-05,
+            "adjacency": "replace_one",
+            "participation": "full_temporal"
+          },
+          "uc_includes_lr": false,
+          "uc_includes_sign": false,
+          "noise_before_lr": true,
+          "adam_state_uses_raw_batch_gradient": true,
+          "per_example_clipping": false,
+          "sampling_amplification": false,
+          "bandinvmf_workload": "sgd",
+          "bandinvmf_num_bands": 4,
+          "model": {
+            "architecture": "vit_tiny_patch16_224",
+            "pretrained": true,
+            "num_classes": 100,
+            "image_size": 224
+          }
+        },
+        "smoke": false,
+        "effective_epochs": 5,
+        "effective_total_steps": 250,
+        "update_clipping_enabled": true,
+        "dp_noise_enabled": true,
+        "participates_in_ranking": true
+      },
+      "original_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/775192c9f70af454",
+      "archived_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/failed_attempts/attempt_001/775192c9f70af454",
+      "completed_steps": 241,
+      "status": "interrupted",
+      "eligible_for_selection": false
+    },
+    {
+      "trial_id": "0f702ff6920d3edf",
+      "stage": 1,
+      "spec": {
+        "stage": 1,
+        "stage_name": "iid_radius",
+        "trial": {
+          "method": "dp-adam-iid-uc",
+          "seed": 20261001,
+          "lr": 0.001,
+          "update_clip_norm": 28.130253791809082,
+          "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/0f702ff6920d3edf"
+        },
+        "config": {
+          "seed": 20261001,
+          "search_seed": 20261001,
+          "final_seeds": [
+            20261011,
+            20261012,
+            20261013
+          ],
+          "data_root": "data",
+          "epochs": 5,
+          "dataset_size": 50000,
+          "logical_batch_size": 1000,
+          "physical_batch_size": 250,
+          "gradient_accumulation": 4,
+          "total_steps": 250,
+          "num_workers": 2,
+          "gpus": [
+            0,
+            2,
+            3
+          ],
+          "max_parallel_trials": 3,
+          "optimizer": {
+            "lr": 0.001,
+            "update_clip_norm": 28.130253791809082,
+            "beta1": 0.9,
+            "beta2": 0.999,
+            "eps": 1e-08,
+            "weight_decay": 0.0
+          },
+          "privacy": {
+            "epsilon": 8.0,
+            "delta": 1e-05,
+            "adjacency": "replace_one",
+            "participation": "full_temporal"
+          },
+          "uc_includes_lr": false,
+          "uc_includes_sign": false,
+          "noise_before_lr": true,
+          "adam_state_uses_raw_batch_gradient": true,
+          "per_example_clipping": false,
+          "sampling_amplification": false,
+          "bandinvmf_workload": "sgd",
+          "bandinvmf_num_bands": 4,
+          "model": {
+            "architecture": "vit_tiny_patch16_224",
+            "pretrained": true,
+            "num_classes": 100,
+            "image_size": 224
+          }
+        },
+        "smoke": false,
+        "effective_epochs": 5,
+        "effective_total_steps": 250,
+        "update_clipping_enabled": true,
+        "dp_noise_enabled": true,
+        "participates_in_ranking": true
+      },
+      "original_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/0f702ff6920d3edf",
+      "archived_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/failed_attempts/attempt_001/0f702ff6920d3edf",
+      "completed_steps": 231,
+      "status": "interrupted",
+      "eligible_for_selection": false
+    },
+    {
+      "trial_id": "536d3580a00c3b7e",
+      "stage": 1,
+      "spec": {
+        "stage": 1,
+        "stage_name": "iid_radius",
+        "trial": {
+          "method": "dp-adam-iid-uc",
+          "seed": 20261001,
+          "lr": 0.001,
+          "update_clip_norm": 56.260507583618164,
+          "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/536d3580a00c3b7e"
+        },
+        "config": {
+          "seed": 20261001,
+          "search_seed": 20261001,
+          "final_seeds": [
+            20261011,
+            20261012,
+            20261013
+          ],
+          "data_root": "data",
+          "epochs": 5,
+          "dataset_size": 50000,
+          "logical_batch_size": 1000,
+          "physical_batch_size": 250,
+          "gradient_accumulation": 4,
+          "total_steps": 250,
+          "num_workers": 2,
+          "gpus": [
+            0,
+            2,
+            3
+          ],
+          "max_parallel_trials": 3,
+          "optimizer": {
+            "lr": 0.001,
+            "update_clip_norm": 56.260507583618164,
+            "beta1": 0.9,
+            "beta2": 0.999,
+            "eps": 1e-08,
+            "weight_decay": 0.0
+          },
+          "privacy": {
+            "epsilon": 8.0,
+            "delta": 1e-05,
+            "adjacency": "replace_one",
+            "participation": "full_temporal"
+          },
+          "uc_includes_lr": false,
+          "uc_includes_sign": false,
+          "noise_before_lr": true,
+          "adam_state_uses_raw_batch_gradient": true,
+          "per_example_clipping": false,
+          "sampling_amplification": false,
+          "bandinvmf_workload": "sgd",
+          "bandinvmf_num_bands": 4,
+          "model": {
+            "architecture": "vit_tiny_patch16_224",
+            "pretrained": true,
+            "num_classes": 100,
+            "image_size": 224
+          }
+        },
+        "smoke": false,
+        "effective_epochs": 5,
+        "effective_total_steps": 250,
+        "update_clipping_enabled": true,
+        "dp_noise_enabled": true,
+        "participates_in_ranking": true
+      },
+      "original_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/536d3580a00c3b7e",
+      "archived_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/failed_attempts/attempt_001/536d3580a00c3b7e",
+      "completed_steps": 220,
+      "status": "failed",
+      "eligible_for_selection": false
+    }
+  ],
+  "action": "Explicitly restart these three incomplete trials from step 0; retain and reuse the three completed trials."
+}

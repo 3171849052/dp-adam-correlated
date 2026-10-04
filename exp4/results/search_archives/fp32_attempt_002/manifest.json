@@ -1,0 +1,87 @@
+{
+  "reason": "FP32 Adam vhat became infinite at step 6 for R=U50. Switch all probe/search/final trials to one fixed FP64 raw Adam state implementation, with FP32 gradients, model, UC directions and noise; preserve equations and all search hyperparameters.",
+  "action": "Discard all prior precision results from ranking and recompute U50 and every DP candidate; no automatic fallback or changed search space.",
+  "archived_trials": [
+    {
+      "trial_id": "stage0_probe",
+      "stage": 0,
+      "status": "completed",
+      "original_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/stage0_probe",
+      "archived_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search_archives/fp32_attempt_002/search/stage0_probe",
+      "eligible_for_selection": false
+    },
+    {
+      "trial_id": "f7475962619c55a2",
+      "stage": 1,
+      "status": "completed",
+      "original_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/f7475962619c55a2",
+      "archived_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search_archives/fp32_attempt_002/search/dp-adam-iid-uc/f7475962619c55a2",
+      "eligible_for_selection": false
+    },
+    {
+      "trial_id": "d8d7d1ca93744cd5",
+      "stage": 1,
+      "status": "completed",
+      "original_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/d8d7d1ca93744cd5",
+      "archived_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search_archives/fp32_attempt_002/search/dp-adam-iid-uc/d8d7d1ca93744cd5",
+      "eligible_for_selection": false
+    },
+    {
+      "trial_id": "7df9700fd662c969",
+      "stage": 1,
+      "status": "completed",
+      "original_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/7df9700fd662c969",
+      "archived_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search_archives/fp32_attempt_002/search/dp-adam-iid-uc/7df9700fd662c969",
+      "eligible_for_selection": false
+    },
+    {
+      "trial_id": "775192c9f70af454",
+      "stage": 1,
+      "status": "completed",
+      "original_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/775192c9f70af454",
+      "archived_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search_archives/fp32_attempt_002/search/dp-adam-iid-uc/775192c9f70af454",
+      "eligible_for_selection": false
+    },
+    {
+      "trial_id": "0f702ff6920d3edf",
+      "stage": 1,
+      "status": "completed",
+      "original_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/0f702ff6920d3edf",
+      "archived_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search_archives/fp32_attempt_002/search/dp-adam-iid-uc/0f702ff6920d3edf",
+      "eligible_for_selection": false
+    },
+    {
+      "trial_id": "536d3580a00c3b7e",
+      "stage": 1,
+      "status": "completed",
+      "original_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/536d3580a00c3b7e",
+      "archived_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search_archives/fp32_attempt_002/search/dp-adam-iid-uc/536d3580a00c3b7e",
+      "eligible_for_selection": false
+    },
+    {
+      "trial_id": "24f83f41fe3a6846",
+      "stage": 1,
+      "status": "planned",
+      "original_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/24f83f41fe3a6846",
+      "archived_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search_archives/fp32_attempt_002/search/dp-adam-iid-uc/24f83f41fe3a6846",
+      "eligible_for_selection": false
+    },
+    {
+      "trial_id": "66bb1415ed67044e",
+      "stage": 1,
+      "status": "planned",
+      "original_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/66bb1415ed67044e",
+      "archived_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search_archives/fp32_attempt_002/search/dp-adam-iid-uc/66bb1415ed67044e",
+      "eligible_for_selection": false
+    },
+    {
+      "trial_id": "2197e94b2b971572",
+      "stage": 1,
+      "status": "planned",
+      "original_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/2197e94b2b971572",
+      "archived_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search_archives/fp32_attempt_002/search/dp-adam-iid-uc/2197e94b2b971572",
+      "eligible_for_selection": false
+    }
+  ],
+  "eligible_for_selection": false
+}

@@ -38,6 +38,13 @@
   "capture_support": 48,
   "replay_seeds": 8,
   "paired_replay": true,
+  "smoke_directory": "/media/data/data/lt/dp-adam-correlated/exp3b/results/smoke_v2_utility_rms",
+  "mf_adam_hyperparameters": {
+    "lr": 0.005,
+    "max_grad_norm": 30.0,
+    "num_bands": 4
+  },
+  "aggregation": "root_mean_mse_v2",
   "cancellation_methods": [
     "MF-Momentum",
     "MF-Adam",

@@ -1,0 +1,30 @@
+{
+  "observations": [
+    {
+      "lr": 0.009,
+      "final_test_top1": 0.7898,
+      "previous_best": 0.7905
+    },
+    {
+      "lr": 0.012,
+      "final_test_top1": 0.7873,
+      "previous_best": 0.7905
+    },
+    {
+      "lr": 0.016,
+      "final_test_top1": 0.7784,
+      "previous_best": 0.7905
+    }
+  ],
+  "upper_bracket_lr": 0.016,
+  "clear_drop_absolute_top1": 0.005,
+  "chosen": {
+    "muon_lr": 0.006,
+    "adam_lr": 0.012,
+    "max_grad_norm": 30.0,
+    "lambda_parallel": 1.0,
+    "kappa": 4.0,
+    "rho": 0.1
+  },
+  "selection": "maximum final_test_top1"
+}

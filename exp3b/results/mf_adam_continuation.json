@@ -1,0 +1,76 @@
+{
+  "status": "completed",
+  "objective": "maximum final_test_top1",
+  "initial_config": {
+    "lr": 0.005,
+    "max_grad_norm": 30.0,
+    "num_bands": 4
+  },
+  "initial_observation": {
+    "method": "momentum_standard",
+    "source_method": "momentum_standard_matched",
+    "stage": "exp2_utility_history",
+    "source_csv": "exp2/results/matched_search_summary.csv",
+    "origin": "exp2",
+    "seed": 20261001,
+    "result_dir": "exp2/results/matched_search/momentum_standard_matched/clip_30",
+    "lr": 0.005,
+    "max_grad_norm": 30.0,
+    "num_bands": 4,
+    "final_test_top1": 0.7361
+  },
+  "fixed_clip_lr_best": {
+    "lr": 0.005,
+    "max_grad_norm": 30.0,
+    "num_bands": 4
+  },
+  "lower_bracket": [
+    {
+      "lr": 0.003,
+      "final_test_top1": 0.7012
+    }
+  ],
+  "upper_bracket": [
+    {
+      "lr": 0.007,
+      "final_test_top1": 0.7276
+    }
+  ],
+  "lr_moved": false,
+  "observations": [
+    {
+      "lr": 0.003,
+      "max_grad_norm": 30.0,
+      "final_test_top1": 0.7012,
+      "reused": false,
+      "result_dir": "exp3b/results/tuning/adam_standard_lr_0.003_clip_30"
+    },
+    {
+      "lr": 0.007,
+      "max_grad_norm": 30.0,
+      "final_test_top1": 0.7276,
+      "reused": false,
+      "result_dir": "exp3b/results/tuning/adam_standard_lr_0.007_clip_30"
+    }
+  ],
+  "selected_config": {
+    "lr": 0.005,
+    "max_grad_norm": 30.0,
+    "num_bands": 4
+  },
+  "selected_observation": {
+    "method": "momentum_standard",
+    "source_method": "momentum_standard_matched",
+    "stage": "exp2_utility_history",
+    "source_csv": "exp2/results/matched_search_summary.csv",
+    "origin": "exp2",
+    "seed": 20261001,
+    "result_dir": "exp2/results/matched_search/momentum_standard_matched/clip_30",
+    "lr": 0.005,
+    "max_grad_norm": 30.0,
+    "num_bands": 4,
+    "final_test_top1": 0.7361
+  },
+  "matched_label_priority": false,
+  "fixed_anchor_used": false
+}

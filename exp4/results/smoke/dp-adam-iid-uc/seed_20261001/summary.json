@@ -1,0 +1,63 @@
+{
+  "method": "dp-adam-iid-uc",
+  "status": "completed",
+  "smoke": true,
+  "seed": 20261001,
+  "lr": 1e-05,
+  "update_clip_norm": 1.0,
+  "optimizer_steps": 2,
+  "noise_steps": 2,
+  "planned_total_steps": 250,
+  "physical_batches": 8,
+  "initialization_sha256": "32174ab45c6778646193838fe7b8f83343d50d42359835e98c8a1c13b16a3cf7",
+  "classifier_initialization_sha256": "94d86daf116060908048dcb9e9eaaf1b2e9575f5ff316459ae0fbd7ee237c592",
+  "calibration": {
+    "target_epsilon": 8.0,
+    "delta": 1e-05,
+    "target_mu": 1.6660305978457184,
+    "total_steps": 250,
+    "per_step_sensitivity": 2.0,
+    "temporal_sensitivity": 15.811388300841896,
+    "trajectory_sensitivity": 31.622776601683793,
+    "innovation_std": 18.980909859983374,
+    "sampling_amplification": false,
+    "participation": "full_temporal",
+    "adjacency": "replace_one",
+    "accountant": "conditional_gaussian_gdp_row_absolute_sum",
+    "noise_space": "update_direction",
+    "batch_size_division": false
+  },
+  "final": {
+    "epoch": 1,
+    "logical_steps": 2,
+    "train_examples": 2000,
+    "train_loss": 5.174956726074218,
+    "test_loss": 5.2057867431640625,
+    "test_top1": 0.02,
+    "epoch_clip_fraction": 1.0,
+    "gdp_mu": 0.14901430677510566,
+    "gdp_epsilon": 0.5261416222400348,
+    "noise_marginal_std": 18.980909859983374,
+    "parameter_noise_std": 0.00018980909859983377,
+    "augmentation_trace_sha256": "9c763bbaf8431bf624f97129a4481ef9b066fa937a3e3b23cf8981750a39e498",
+    "seconds": 23.278829946182668
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "logical_steps": 2,
+      "train_examples": 2000,
+      "train_loss": 5.174956726074218,
+      "test_loss": 5.2057867431640625,
+      "test_top1": 0.02,
+      "epoch_clip_fraction": 1.0,
+      "gdp_mu": 0.14901430677510566,
+      "gdp_epsilon": 0.5261416222400348,
+      "noise_marginal_std": 18.980909859983374,
+      "parameter_noise_std": 0.00018980909859983377,
+      "augmentation_trace_sha256": "9c763bbaf8431bf624f97129a4481ef9b066fa937a3e3b23cf8981750a39e498",
+      "seconds": 23.278829946182668
+    }
+  ],
+  "wall_seconds": 26.951178824529052
+}

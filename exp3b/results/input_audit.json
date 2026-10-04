@@ -4,7 +4,8 @@
     "exp3/results/selected_configs.json",
     "exp2/results/selected_configs.json",
     "exp2/results/final_summary.json",
-    "exp2/results/search_summary.csv"
+    "exp2/results/search_summary.csv",
+    "exp2/results/matched_search_summary.csv"
   ],
   "completed_exp3_trials": 40,
   "imported_choices": {
@@ -82,6 +83,149 @@
   "exp2_utility_configs": {
     "momentum_standard": {
       "lr": 0.005,
+      "max_grad_norm": 30.0,
+      "num_bands": 4
+    },
+    "momentum_scale": {
+      "lr": 0.005,
+      "max_grad_norm": 100.0,
+      "num_bands": 4,
+      "eps_scale": 0.1
+    }
+  },
+  "exp2_utility_choices": {
+    "momentum_standard": {
+      "method": "momentum_standard",
+      "source_method": "momentum_standard_matched",
+      "stage": "exp2_utility_history",
+      "source_csv": "exp2/results/matched_search_summary.csv",
+      "origin": "exp2",
+      "seed": 20261001,
+      "result_dir": "exp2/results/matched_search/momentum_standard_matched/clip_30",
+      "lr": 0.005,
+      "max_grad_norm": 30.0,
+      "num_bands": 4,
+      "final_test_top1": 0.7361
+    },
+    "momentum_scale": {
+      "method": "momentum_scale",
+      "source_method": "momentum_scale",
+      "stage": "exp2_utility_history",
+      "source_csv": "exp2/results/search_summary.csv",
+      "origin": "exp2",
+      "seed": 20261001,
+      "result_dir": "exp2/results/search/momentum_scale/lr_0.005_clip_100",
+      "lr": 0.005,
+      "max_grad_norm": 100.0,
+      "num_bands": 4,
+      "final_test_top1": 0.745,
+      "eps_scale": 0.1
+    }
+  },
+  "mf_adam_history": [
+    {
+      "method": "momentum_standard",
+      "source_method": "momentum_standard_matched",
+      "stage": "exp2_utility_history",
+      "source_csv": "exp2/results/matched_search_summary.csv",
+      "origin": "exp2",
+      "seed": 20261001,
+      "result_dir": "exp2/results/matched_search/momentum_standard_matched/clip_1",
+      "lr": 0.005,
+      "max_grad_norm": 1.0,
+      "num_bands": 4,
+      "final_test_top1": 0.7235
+    },
+    {
+      "method": "momentum_standard",
+      "source_method": "momentum_standard_matched",
+      "stage": "exp2_utility_history",
+      "source_csv": "exp2/results/matched_search_summary.csv",
+      "origin": "exp2",
+      "seed": 20261001,
+      "result_dir": "exp2/results/matched_search/momentum_standard_matched/clip_10",
+      "lr": 0.005,
+      "max_grad_norm": 10.0,
+      "num_bands": 4,
+      "final_test_top1": 0.7351
+    },
+    {
+      "method": "momentum_standard",
+      "source_method": "momentum_standard_matched",
+      "stage": "exp2_utility_history",
+      "source_csv": "exp2/results/matched_search_summary.csv",
+      "origin": "exp2",
+      "seed": 20261001,
+      "result_dir": "exp2/results/matched_search/momentum_standard_matched/clip_100",
+      "lr": 0.005,
+      "max_grad_norm": 100.0,
+      "num_bands": 4,
+      "final_test_top1": 0.7167
+    },
+    {
+      "method": "momentum_standard",
+      "source_method": "momentum_standard_matched",
+      "stage": "exp2_utility_history",
+      "source_csv": "exp2/results/matched_search_summary.csv",
+      "origin": "exp2",
+      "seed": 20261001,
+      "result_dir": "exp2/results/matched_search/momentum_standard_matched/clip_3",
+      "lr": 0.005,
+      "max_grad_norm": 3.0,
+      "num_bands": 4,
+      "final_test_top1": 0.7305
+    },
+    {
+      "method": "momentum_standard",
+      "source_method": "momentum_standard_matched",
+      "stage": "exp2_utility_history",
+      "source_csv": "exp2/results/matched_search_summary.csv",
+      "origin": "exp2",
+      "seed": 20261001,
+      "result_dir": "exp2/results/matched_search/momentum_standard_matched/clip_30",
+      "lr": 0.005,
+      "max_grad_norm": 30.0,
+      "num_bands": 4,
+      "final_test_top1": 0.7361
+    },
+    {
+      "method": "momentum_standard",
+      "source_method": "momentum_standard_matched",
+      "stage": "exp2_utility_history",
+      "source_csv": "exp2/results/matched_search_summary.csv",
+      "origin": "exp2",
+      "seed": 20261001,
+      "result_dir": "exp2/results/matched_search/momentum_standard_matched/clip_300",
+      "lr": 0.005,
+      "max_grad_norm": 300.0,
+      "num_bands": 4,
+      "final_test_top1": 0.4415
+    }
+  ],
+  "mf_adam_selection": "maximum final_test_top1; Exp3b utility continuation completed; fixed anchor unused",
+  "legacy_exp2_selected": {
+    "iid_standard": {
+      "lr": 0.0005,
+      "max_grad_norm": 1.0
+    },
+    "iid_scale": {
+      "lr": 0.0005,
+      "max_grad_norm": 100.0,
+      "eps_scale": 0.1
+    },
+    "prefix_standard": {
+      "lr": 0.002,
+      "max_grad_norm": 1.0,
+      "num_bands": 4
+    },
+    "prefix_scale": {
+      "lr": 0.002,
+      "max_grad_norm": 200.0,
+      "eps_scale": 0.1,
+      "num_bands": 4
+    },
+    "momentum_standard": {
+      "lr": 0.005,
       "max_grad_norm": 1.0,
       "num_bands": 4
     },
@@ -132,6 +276,186 @@
       "lambda_parallel": 1.0,
       "kappa": 1.0,
       "rho": 0.1
+    }
+  },
+  "exp3b_mf_adam_tuning": {
+    "status": "completed",
+    "objective": "maximum final_test_top1",
+    "initial_config": {
+      "lr": 0.005,
+      "max_grad_norm": 30.0,
+      "num_bands": 4
+    },
+    "initial_observation": {
+      "method": "momentum_standard",
+      "source_method": "momentum_standard_matched",
+      "stage": "exp2_utility_history",
+      "source_csv": "exp2/results/matched_search_summary.csv",
+      "origin": "exp2",
+      "seed": 20261001,
+      "result_dir": "exp2/results/matched_search/momentum_standard_matched/clip_30",
+      "lr": 0.005,
+      "max_grad_norm": 30.0,
+      "num_bands": 4,
+      "final_test_top1": 0.7361
+    },
+    "fixed_clip_lr_best": {
+      "lr": 0.005,
+      "max_grad_norm": 30.0,
+      "num_bands": 4
+    },
+    "lower_bracket": [
+      {
+        "lr": 0.003,
+        "final_test_top1": 0.7012
+      }
+    ],
+    "upper_bracket": [
+      {
+        "lr": 0.007,
+        "final_test_top1": 0.7276
+      }
+    ],
+    "lr_moved": false,
+    "observations": [
+      {
+        "lr": 0.003,
+        "max_grad_norm": 30.0,
+        "final_test_top1": 0.7012,
+        "reused": false,
+        "result_dir": "exp3b/results/tuning/adam_standard_lr_0.003_clip_30"
+      },
+      {
+        "lr": 0.007,
+        "max_grad_norm": 30.0,
+        "final_test_top1": 0.7276,
+        "reused": false,
+        "result_dir": "exp3b/results/tuning/adam_standard_lr_0.007_clip_30"
+      }
+    ],
+    "selected_config": {
+      "lr": 0.005,
+      "max_grad_norm": 30.0,
+      "num_bands": 4
+    },
+    "selected_observation": {
+      "method": "momentum_standard",
+      "source_method": "momentum_standard_matched",
+      "stage": "exp2_utility_history",
+      "source_csv": "exp2/results/matched_search_summary.csv",
+      "origin": "exp2",
+      "seed": 20261001,
+      "result_dir": "exp2/results/matched_search/momentum_standard_matched/clip_30",
+      "lr": 0.005,
+      "max_grad_norm": 30.0,
+      "num_bands": 4,
+      "final_test_top1": 0.7361
+    },
+    "matched_label_priority": false,
+    "fixed_anchor_used": false
+  },
+  "exp3b_frozen_configs": {
+    "nonprivate_hybrid": {
+      "muon_lr": 0.0003,
+      "adam_lr": 0.001,
+      "max_grad_norm": 100.0,
+      "lambda_parallel": 1.0,
+      "kappa": 4.0,
+      "rho": 0.1
+    },
+    "iid_dp_hybrid": {
+      "muon_lr": 0.001,
+      "adam_lr": 0.001,
+      "max_grad_norm": 30.0,
+      "lambda_parallel": 1.0,
+      "kappa": 4.0,
+      "rho": 0.1
+    },
+    "mf_muon_standard": {
+      "muon_lr": 0.006,
+      "adam_lr": 0.012,
+      "max_grad_norm": 30.0,
+      "lambda_parallel": 1.0,
+      "kappa": 4.0,
+      "rho": 0.1
+    },
+    "mf_muon_normscale": {
+      "muon_lr": 0.0075,
+      "adam_lr": 0.012,
+      "max_grad_norm": 30.0,
+      "lambda_parallel": 0.1,
+      "kappa": 4.0,
+      "rho": 0.1
+    },
+    "mf_muon_spectralscale": {
+      "muon_lr": 0.0045,
+      "adam_lr": 0.012,
+      "max_grad_norm": 30.0,
+      "lambda_parallel": 1.0,
+      "kappa": 1.1,
+      "rho": 0.1
+    },
+    "momentum_standard": {
+      "lr": 0.005,
+      "max_grad_norm": 30.0,
+      "num_bands": 4
+    },
+    "momentum_scale": {
+      "lr": 0.005,
+      "max_grad_norm": 100.0,
+      "num_bands": 4,
+      "eps_scale": 0.1
+    }
+  },
+  "exp3b_utility_provenance": {
+    "nonprivate_hybrid": {
+      "result_dir": "exp3/results/search/A/a07_adam_0.001",
+      "final_test_top1": 0.8544,
+      "origin": "exp3",
+      "source_method": "nonprivate_hybrid",
+      "source_csv": "exp3/results/search_history.json"
+    },
+    "iid_dp_hybrid": {
+      "result_dir": "exp3/results/search/B/b05_muon_0.001",
+      "final_test_top1": 0.6982,
+      "origin": "exp3",
+      "source_method": "iid_dp_hybrid",
+      "source_csv": "exp3/results/search_history.json"
+    },
+    "mf_muon_standard": {
+      "result_dir": "exp3/results/search/C/c10_muon_0.006_adam_0.012",
+      "final_test_top1": 0.7905,
+      "origin": "exp3",
+      "source_method": "mf_muon_standard",
+      "source_csv": "exp3/results/search_history.json"
+    },
+    "mf_muon_normscale": {
+      "result_dir": "exp3b/results/tuning/mf_muon_normscale_refine_2",
+      "final_test_top1": 0.7664,
+      "origin": "exp3b",
+      "source_method": "mf_muon_normscale",
+      "source_csv": "exp3b/results/tuning/mf_muon_normscale_refine_2/summary.json"
+    },
+    "mf_muon_spectralscale": {
+      "result_dir": "exp3b/results/tuning/mf_muon_spectralscale_refine_1",
+      "final_test_top1": 0.7775,
+      "origin": "exp3b",
+      "source_method": "mf_muon_spectralscale",
+      "source_csv": "exp3b/results/tuning/mf_muon_spectralscale_refine_1/summary.json"
+    },
+    "momentum_standard": {
+      "result_dir": "exp2/results/matched_search/momentum_standard_matched/clip_30",
+      "final_test_top1": 0.7361,
+      "origin": "exp2",
+      "source_method": "momentum_standard_matched",
+      "source_csv": "exp2/results/matched_search_summary.csv"
+    },
+    "momentum_scale": {
+      "result_dir": "exp2/results/search/momentum_scale/lr_0.005_clip_100",
+      "final_test_top1": 0.745,
+      "origin": "exp2",
+      "source_method": "momentum_scale",
+      "source_csv": "exp2/results/search_summary.csv"
     }
   }
 }

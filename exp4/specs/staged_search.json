@@ -1,0 +1,53 @@
+{
+  "search_seed": 20261001,
+  "epochs": 5,
+  "total_steps": 250,
+  "probe_lr": 0.001,
+  "radius_fractions": [
+    0.00390625,
+    0.0078125,
+    0.015625,
+    0.03125,
+    0.0625,
+    0.125,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "iid_learning_rates": [
+    0.00025,
+    0.0005,
+    0.001,
+    0.002,
+    0.004
+  ],
+  "bandinvmf_lr_multipliers": [
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0
+  ],
+  "refinement_multipliers": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "stages": [
+    "nonprivate_scale_probe",
+    "iid_radius",
+    "iid_lr",
+    "iid_refinement",
+    "bandinvmf_radius",
+    "bandinvmf_lr",
+    "bandinvmf_refinement"
+  ],
+  "selection_rule": [
+    "max_final_test_top1",
+    "min_update_clip_norm",
+    "min_lr"
+  ],
+  "auto_run_final": false,
+  "adam_state_dtype": "float64",
+  "parameter_gradient_update_noise_dtype": "float32"
+}

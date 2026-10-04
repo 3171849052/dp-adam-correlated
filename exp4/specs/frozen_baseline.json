@@ -1,0 +1,8 @@
+{
+  "protocol": "exp4/config.yaml",
+  "provenance": "stage1_untuned_fixed_baseline; not selected by smoke accuracy",
+  "methods": {
+    "dp-adam-iid-uc": {"lr": 0.00001, "update_clip_norm": 1.0},
+    "dp-adam-bandinvmf-uc": {"lr": 0.00001, "update_clip_norm": 1.0}
+  }
+}
