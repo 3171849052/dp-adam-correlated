@@ -117,11 +117,18 @@ Resize + CenterCrop；按 pretrained metadata normalize。每 seed 只生成一�
 增强 RNG 协议。开启 deterministic algorithms，关闭 TF32。
 
 固定使用 FP64 Adam m/v、bias correction 和 direction 算术，随后将 direction
-转换为 FP32 再做 UC/noise/parameter update。模型、普通累积梯度、UC 查询和
-Gaussian noise 均为 FP32；此精度选择不参与调参。指定的大 R 范围曾使 FP32
-vhat 真正溢出，因此改用这一个统一实现，并重新运行 probe 和全部搜索点。
-此前 FP32 尝试保存在 `results/search_archives/fp32_attempt_002/`，全部排除排名。
-23 项当前实现测试通过，含 1e20 梯度下有限 moments/statistics 的验证。
+转换为 FP32 再做 UC/noise/parameter update。模型参数、普通累积梯度、UC 查询和
+Gaussian noise 均为 FP32；LayerNorm 和 attention 内部计算固定为 FP64，
+eps/参数/结构保持相同。固定使用 math SDPA 后端，在训练时对每个 Transformer block 做 activation
+checkpointing，保留 physical batch=250。没有 AMP、loss scaling 或额外梯度裁剪。
+这些是所有 probe/search/final trial 共用的固定数值实现，不参与调参。
+
+指定的大 R 曾触发 FP32 vhat 溢出、efficient SDPA 的错误巨大梯度/NaN，
+以及 FP32 math attention 的 SafeSoftmaxBackward0 NaN；
+相关尝试及 anomaly traces 在 `results/search_archives/`、`results/*nan_debug.log`。
+旧精度结果全部排除排名，probe 和全部候选重跑。当前实现通过 26 项测试，
+数值复现检查（`results/precision_preflight.json`、`results/attention64_preflight.json`）
+仅用于修复验证，位于 runtime/，不作为搜索 trial 或用于超参选择。
 
 `model.py` 显式读取
 `cache/huggingface/hub/models--timm--vit_tiny_patch16_224.augreg_in21k_ft_in1k/refs/main`

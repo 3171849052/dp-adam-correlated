@@ -48,10 +48,17 @@ def main():
         folder = Path(record['result_dir'])
         cfg = yaml.safe_load((folder / 'config.yaml').read_text())
         assert cfg['adam_state_dtype'] == cfg['adam_direction_arithmetic_dtype'] == 'float64'
+        assert cfg['layer_norm_compute_dtype'] == 'float64'
+        assert cfg['attention_backend'] == 'math' and cfg['activation_checkpointing'] == 'per_transformer_block'
+        assert cfg['attention_compute_dtype'] == 'float64'
         assert cfg['dtype'] == cfg['update_direction_dtype'] == 'float32'
         assert cfg['test_examples'] == 10000
         assert cfg['local_data_root'] == str(ROOT / 'data') and not cfg['download']
         assert (ROOT / cfg['pretrained_cfg']['checkpoint_path']).resolve().is_relative_to(ROOT / 'cache')
+        matrices = np.load(folder / 'matrices.npz')
+        np.testing.assert_array_equal(matrices['workload_coefficients'], np.ones(250))
+        np.testing.assert_array_equal(matrices['W'], np.tril(np.ones((250, 250))))
+        np.testing.assert_allclose(matrices['D'] @ matrices['strategy'], np.eye(250), atol=1e-12)
         initializations.add(cfg['initialization_sha256'])
         checkpoints.add(cfg['pretrained_cfg']['checkpoint_sha256'])
         permutations.add((folder / 'train_order.npy').read_bytes())
@@ -68,12 +75,25 @@ def main():
     finals = make_trials(selected, results / 'final')
     assert len(finals) == 6 and {t['seed'] for t in finals} == {20261011, 20261012, 20261013}
     assert not (results / 'final').exists()
+    active, maximum = set(), 0
+    for line in (results / 'staged_search.log').read_text().splitlines():
+        event = json.loads(line)
+        if event.get('event') == 'started':
+            gpu = event['gpu']
+            assert gpu in (0, 2, 3) and gpu not in active
+            active.add(gpu)
+            maximum = max(maximum, len(active))
+            assert maximum <= 3
+        elif event.get('event') == 'completed':
+            active.remove(event['gpu'])
+    assert not active and maximum == 3
     evidence = dict(status='passed', U50=u50, stage_candidate_counts=[len(groups[s]) for s in range(7)],
                     unique_dp_trials=len({r['trial_id'] for r in rows if r['stage']}),
                     reused_dp_entries=sum(r['reused'] for r in rows if r['stage']),
                     all_trials_full_5_epochs_250_steps=True, smoke_excluded=True,
                     fixed_protocol_and_local_inputs_verified=True, paired_initialization_order_augmentation=True,
-                    grids_and_selection_recomputed=True, final_trials_not_started=True)
+                    grids_and_selection_recomputed=True, final_trials_not_started=True,
+                    max_parallel_trials_observed=maximum, allowed_single_gpu_assignments_verified=True)
     (results / 'search_verification.json').write_text(json.dumps(evidence, indent=2))
     print(json.dumps(evidence))
 

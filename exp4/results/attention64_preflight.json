@@ -1,0 +1,12 @@
+{
+  "purpose": "full numerical verification of the failed maximal-R BandInvMF candidate",
+  "participates_in_search": false,
+  "checked_logical_steps": 250,
+  "method": "dp-adam-bandinvmf-uc",
+  "seed": 20261001,
+  "lr": 0.002,
+  "R": 447.5035400390625,
+  "attention_compute_dtype": "float64",
+  "all_diagnostics_finite": true,
+  "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/runtime/attention64_preflight"
+}

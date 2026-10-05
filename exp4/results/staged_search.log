@@ -1,7 +1,79 @@
-{"event": "started", "gpu": 0, "pid": 3411233, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/stage0_probe"}
-{"event": "completed", "gpu": 0, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/stage0_probe"}
-{"stage": 0, "stage_name": "nonprivate_scale_probe", "status": "completed", "U50": 448.95384216308594, "selection_reason": "Median of all 250 raw Adam direction norms from full nonprivate probe; excluded from DP method ranking."}
+{"stage": 0, "stage_name": "nonprivate_scale_probe", "status": "completed", "U50": 447.3172607421875, "selection_reason": "Median of all 250 raw Adam direction norms from full nonprivate probe; excluded from DP method ranking."}
 {"event": "stage_started", "stage": 1, "stage_name": "iid_radius", "status": "running", "method": "dp-adam-iid-uc", "candidate_count": 9, "new_trials": 9, "reused_trials": 0}
-{"event": "started", "gpu": 0, "pid": 3418848, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/2e095f8326d3c769"}
-{"event": "started", "gpu": 2, "pid": 3418849, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/06d8445b2cc976ef"}
-{"event": "started", "gpu": 3, "pid": 3418850, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/b9eea00c56e9548c"}
+{"event": "started", "gpu": 0, "pid": 3657995, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/840059a96a8c4367"}
+{"event": "started", "gpu": 2, "pid": 3657996, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/a19ce3bf01e825f0"}
+{"event": "started", "gpu": 3, "pid": 3657997, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/b7d0988ee6539af4"}
+{"event": "completed", "gpu": 2, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/a19ce3bf01e825f0"}
+{"event": "started", "gpu": 2, "pid": 3681951, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/e223e71a77fc2d34"}
+{"event": "completed", "gpu": 3, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/b7d0988ee6539af4"}
+{"event": "started", "gpu": 3, "pid": 3683139, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/234091fcbf728b59"}
+{"event": "completed", "gpu": 0, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/840059a96a8c4367"}
+{"event": "started", "gpu": 0, "pid": 3690949, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/dccbe1a6175073dc"}
+{"event": "completed", "gpu": 2, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/e223e71a77fc2d34"}
+{"event": "started", "gpu": 2, "pid": 3707649, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/2d09796203e0b131"}
+{"event": "completed", "gpu": 3, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/234091fcbf728b59"}
+{"event": "started", "gpu": 3, "pid": 3709033, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/284779c3294df5eb"}
+{"event": "completed", "gpu": 0, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/dccbe1a6175073dc"}
+{"event": "started", "gpu": 0, "pid": 3716788, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/52ac13bfafb1be22"}
+{"event": "completed", "gpu": 2, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/2d09796203e0b131"}
+{"event": "completed", "gpu": 3, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/284779c3294df5eb"}
+{"event": "completed", "gpu": 0, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/52ac13bfafb1be22"}
+{"event": "stage_completed", "stage": 1, "stage_name": "iid_radius", "status": "completed", "method": "dp-adam-iid-uc", "candidate_count": 9, "new_trials": 9, "reused_trials": 0, "stage_winner": {"rule": ["max_final_test_top1", "min_update_clip_norm", "min_lr"], "eligible_unique_trials": 9, "trials_tied_at_best_top1": 1, "selected_trial_id": "e223e71a77fc2d34", "final_test_top1": 0.0117, "R": 13.97866439819336, "lr": 0.001, "explanation": "Highest final epoch test top1 over all eligible full trials; ties use smaller R, then smaller lr; test loss is not a tie-breaker."}}
+{"event": "stage_started", "stage": 2, "stage_name": "iid_lr", "status": "running", "method": "dp-adam-iid-uc", "candidate_count": 5, "new_trials": 4, "reused_trials": 1}
+{"event": "started", "gpu": 0, "pid": 3739090, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/8440c2fc685cb6a3"}
+{"event": "started", "gpu": 2, "pid": 3739091, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/0b7c4c9619dc583a"}
+{"event": "started", "gpu": 3, "pid": 3739092, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/fb718e2ed17f906a"}
+{"event": "completed", "gpu": 0, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/8440c2fc685cb6a3"}
+{"event": "started", "gpu": 0, "pid": 3763631, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/544a30605af230d6"}
+{"event": "completed", "gpu": 2, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/0b7c4c9619dc583a"}
+{"event": "completed", "gpu": 3, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/fb718e2ed17f906a"}
+{"event": "completed", "gpu": 0, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/544a30605af230d6"}
+{"event": "stage_completed", "stage": 2, "stage_name": "iid_lr", "status": "completed", "method": "dp-adam-iid-uc", "candidate_count": 5, "new_trials": 4, "reused_trials": 1, "stage_winner": {"rule": ["max_final_test_top1", "min_update_clip_norm", "min_lr"], "eligible_unique_trials": 5, "trials_tied_at_best_top1": 1, "selected_trial_id": "e223e71a77fc2d34", "final_test_top1": 0.0117, "R": 13.97866439819336, "lr": 0.001, "explanation": "Highest final epoch test top1 over all eligible full trials; ties use smaller R, then smaller lr; test loss is not a tie-breaker."}}
+{"event": "stage_started", "stage": 3, "stage_name": "iid_refinement", "status": "running", "method": "dp-adam-iid-uc", "candidate_count": 9, "new_trials": 4, "reused_trials": 5}
+{"event": "started", "gpu": 0, "pid": 3781305, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/0021375514d5a0bb"}
+{"event": "started", "gpu": 2, "pid": 3781306, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/824f102386297cdb"}
+{"event": "started", "gpu": 3, "pid": 3781307, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/669c272c53adb574"}
+{"event": "completed", "gpu": 0, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/0021375514d5a0bb"}
+{"event": "started", "gpu": 0, "pid": 3807304, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/c147de0c9e8b2a11"}
+{"event": "completed", "gpu": 2, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/824f102386297cdb"}
+{"event": "completed", "gpu": 3, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/669c272c53adb574"}
+{"event": "completed", "gpu": 0, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/c147de0c9e8b2a11"}
+{"event": "stage_completed", "stage": 3, "stage_name": "iid_refinement", "status": "completed", "method": "dp-adam-iid-uc", "candidate_count": 9, "new_trials": 4, "reused_trials": 5, "stage_winner": {"rule": ["max_final_test_top1", "min_update_clip_norm", "min_lr"], "eligible_unique_trials": 9, "trials_tied_at_best_top1": 3, "selected_trial_id": "824f102386297cdb", "final_test_top1": 0.0117, "R": 6.98933219909668, "lr": 0.002, "explanation": "Highest final epoch test top1 over all eligible full trials; ties use smaller R, then smaller lr; test loss is not a tie-breaker."}}
+{"event": "stage_started", "stage": 4, "stage_name": "bandinvmf_radius", "status": "running", "method": "dp-adam-bandinvmf-uc", "candidate_count": 9, "new_trials": 9, "reused_trials": 0}
+{"event": "started", "gpu": 0, "pid": 3824480, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/ce81c546bee7bb90"}
+{"event": "started", "gpu": 2, "pid": 3824481, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/0dc63fc9d67c0c3c"}
+{"event": "started", "gpu": 3, "pid": 3824482, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/4cee96595475a622"}
+{"event": "completed", "gpu": 0, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/ce81c546bee7bb90"}
+{"event": "started", "gpu": 0, "pid": 3842141, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/eaf89dedcd080c93"}
+{"event": "completed", "gpu": 2, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/0dc63fc9d67c0c3c"}
+{"event": "started", "gpu": 2, "pid": 3842852, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/b7e04424c61dcd4c"}
+{"event": "completed", "gpu": 3, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/4cee96595475a622"}
+{"event": "started", "gpu": 3, "pid": 3843227, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/2ffb0be15b42e43b"}
+{"event": "completed", "gpu": 0, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/eaf89dedcd080c93"}
+{"event": "started", "gpu": 0, "pid": 3851391, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/f5be90aaeaa2424c"}
+{"event": "completed", "gpu": 2, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/b7e04424c61dcd4c"}
+{"event": "started", "gpu": 2, "pid": 3851837, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/eac6f31e21ed4a96"}
+{"event": "completed", "gpu": 3, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/2ffb0be15b42e43b"}
+{"event": "started", "gpu": 3, "pid": 3852606, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/7d26bbeedcdb69a0"}
+{"event": "completed", "gpu": 2, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/eac6f31e21ed4a96"}
+{"event": "completed", "gpu": 0, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/f5be90aaeaa2424c"}
+{"event": "completed", "gpu": 3, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/7d26bbeedcdb69a0"}
+{"event": "stage_completed", "stage": 4, "stage_name": "bandinvmf_radius", "status": "completed", "method": "dp-adam-bandinvmf-uc", "candidate_count": 9, "new_trials": 9, "reused_trials": 0, "stage_winner": {"rule": ["max_final_test_top1", "min_update_clip_norm", "min_lr"], "eligible_unique_trials": 9, "trials_tied_at_best_top1": 1, "selected_trial_id": "eaf89dedcd080c93", "final_test_top1": 0.0115, "R": 13.97866439819336, "lr": 0.002, "explanation": "Highest final epoch test top1 over all eligible full trials; ties use smaller R, then smaller lr; test loss is not a tie-breaker."}}
+{"event": "stage_started", "stage": 5, "stage_name": "bandinvmf_lr", "status": "running", "method": "dp-adam-bandinvmf-uc", "candidate_count": 5, "new_trials": 4, "reused_trials": 1}
+{"event": "started", "gpu": 0, "pid": 3860650, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/b1cc15a5458ecfae"}
+{"event": "started", "gpu": 2, "pid": 3860651, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/bca92f8d29132acf"}
+{"event": "started", "gpu": 3, "pid": 3860652, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/5ccca49f3e4803ca"}
+{"event": "completed", "gpu": 2, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/bca92f8d29132acf"}
+{"event": "started", "gpu": 2, "pid": 3869973, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/e36827b6ac06ceeb"}
+{"event": "completed", "gpu": 0, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/b1cc15a5458ecfae"}
+{"event": "completed", "gpu": 3, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/5ccca49f3e4803ca"}
+{"event": "completed", "gpu": 2, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/e36827b6ac06ceeb"}
+{"event": "stage_completed", "stage": 5, "stage_name": "bandinvmf_lr", "status": "completed", "method": "dp-adam-bandinvmf-uc", "candidate_count": 5, "new_trials": 4, "reused_trials": 1, "stage_winner": {"rule": ["max_final_test_top1", "min_update_clip_norm", "min_lr"], "eligible_unique_trials": 5, "trials_tied_at_best_top1": 1, "selected_trial_id": "eaf89dedcd080c93", "final_test_top1": 0.0115, "R": 13.97866439819336, "lr": 0.002, "explanation": "Highest final epoch test top1 over all eligible full trials; ties use smaller R, then smaller lr; test loss is not a tie-breaker."}}
+{"event": "stage_started", "stage": 6, "stage_name": "bandinvmf_refinement", "status": "running", "method": "dp-adam-bandinvmf-uc", "candidate_count": 9, "new_trials": 4, "reused_trials": 5}
+{"event": "started", "gpu": 0, "pid": 3873233, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/9375f11d52fb3c11"}
+{"event": "started", "gpu": 2, "pid": 3873234, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/b7a6c327298a45ad"}
+{"event": "started", "gpu": 3, "pid": 3873235, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/a8106fef9c203659"}
+{"event": "completed", "gpu": 2, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/b7a6c327298a45ad"}
+{"event": "started", "gpu": 2, "pid": 3882423, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/a89586af673ea12c"}
+{"event": "completed", "gpu": 0, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/9375f11d52fb3c11"}
+{"event": "completed", "gpu": 3, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/a8106fef9c203659"}

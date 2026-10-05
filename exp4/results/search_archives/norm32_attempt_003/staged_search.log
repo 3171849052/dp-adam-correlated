@@ -1,0 +1,35 @@
+{"event": "started", "gpu": 0, "pid": 3411233, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/stage0_probe"}
+{"event": "completed", "gpu": 0, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/stage0_probe"}
+{"stage": 0, "stage_name": "nonprivate_scale_probe", "status": "completed", "U50": 448.95384216308594, "selection_reason": "Median of all 250 raw Adam direction norms from full nonprivate probe; excluded from DP method ranking."}
+{"event": "stage_started", "stage": 1, "stage_name": "iid_radius", "status": "running", "method": "dp-adam-iid-uc", "candidate_count": 9, "new_trials": 9, "reused_trials": 0}
+{"event": "started", "gpu": 0, "pid": 3418848, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/2e095f8326d3c769"}
+{"event": "started", "gpu": 2, "pid": 3418849, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/06d8445b2cc976ef"}
+{"event": "started", "gpu": 3, "pid": 3418850, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/b9eea00c56e9548c"}
+{"event": "completed", "gpu": 3, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/b9eea00c56e9548c"}
+{"event": "started", "gpu": 3, "pid": 3431951, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/c2ef2c6858e038cf"}
+{"event": "completed", "gpu": 2, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/06d8445b2cc976ef"}
+{"event": "started", "gpu": 2, "pid": 3432334, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/592abec71da9de79"}
+{"event": "completed", "gpu": 0, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/2e095f8326d3c769"}
+{"event": "started", "gpu": 0, "pid": 3432907, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/0f23631de256fb28"}
+{"event": "completed", "gpu": 3, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/c2ef2c6858e038cf"}
+{"event": "started", "gpu": 3, "pid": 3445030, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/f76c75cdbaa0cc3a"}
+{"event": "completed", "gpu": 2, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/592abec71da9de79"}
+{"event": "started", "gpu": 2, "pid": 3445740, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/b9c623835247584d"}
+{"event": "completed", "gpu": 0, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/0f23631de256fb28"}
+{"event": "started", "gpu": 0, "pid": 3446509, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/f3e599c42be56efd"}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/media/data/data/lt/dp-adam-correlated/exp4/search.py", line 284, in <module>
+    main()
+  File "/media/data/data/lt/dp-adam-correlated/exp4/search.py", line 280, in main
+    StagedSearch().run()
+  File "/media/data/data/lt/dp-adam-correlated/exp4/search.py", line 230, in run
+    s1 = self.run_stage(1, iid, radius_points(self.u50, 1e-3))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp4/search.py", line 206, in run_stage
+    self.launch(pending, on_complete=lambda trial: self.finish_record(lookup[trial['result_dir']], trial))
+  File "/media/data/data/lt/dp-adam-correlated/exp4/launch_batch.py", line 54, in launch
+    raise RuntimeError(f'Trial exited {code}: {destination / "train.log"}')
+RuntimeError: Trial exited 1: /media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/f3e599c42be56efd/train.log
+ERROR conda.cli.main_run:execute(127): `conda run python -B -m exp4.search` failed. (See above for error)

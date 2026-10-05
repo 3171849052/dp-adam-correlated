@@ -1,5 +1,6 @@
 import json
 import socket
+import copy
 from pathlib import Path
 
 import numpy as np
@@ -9,7 +10,7 @@ from torchvision import datasets
 
 from exp4.config import METHODS, load_config
 from exp4.runtime import ROOT, EXP, output_path
-from exp4.model import pretrained_vit, checkpoint_path
+from exp4.model import pretrained_vit, checkpoint_path, StableLayerNorm, Attention, ViTTiny
 from exp4.search import radius_points, refinement_points, winner
 from exp4.final_runner import make_trials as final_trials
 from exp4.launch_batch import trial_command, launch
@@ -34,6 +35,65 @@ def test_outputs_cannot_escape_exp4():
     for path in (ROOT / 'exp2/forbidden', ROOT / 'results', EXP / '../exp3/nope'):
         with pytest.raises(ValueError):
             output_path(path)
+
+
+def test_layernorm_large_backward_matches_double_reference_without_changing_parameters():
+    torch.manual_seed(10)
+    layer = StableLayerNorm(192, eps=1e-6)
+    with torch.no_grad():
+        layer.weight.fill_(1e10)
+    x = (torch.randn(4, 192) * 1e10).requires_grad_()
+    upstream = torch.randn(4, 192) * 1e30
+    output = layer(x)
+    output.backward(upstream)
+    rx = x.detach().double().requires_grad_()
+    rw = layer.weight.detach().double().requires_grad_()
+    rb = layer.bias.detach().double().requires_grad_()
+    reference = torch.nn.functional.layer_norm(rx, (192,), rw, rb, 1e-6)
+    reference.backward(upstream.double())
+    torch.testing.assert_close(output, reference.float())
+    for actual, expected in ((x.grad, rx.grad), (layer.weight.grad, rw.grad), (layer.bias.grad, rb.grad)):
+        assert torch.isfinite(actual).all()
+        torch.testing.assert_close(actual, expected.float())
+    assert layer.weight.dtype == layer.bias.dtype == output.dtype == torch.float32
+
+
+def test_math_attention_large_logits_has_finite_backward(monkeypatch):
+    original = torch.nn.functional.scaled_dot_product_attention
+    observed = []
+    def checked_attention(q, k, v, **kwargs):
+        observed.append((q.dtype, k.dtype, v.dtype))
+        return original(q, k, v, **kwargs)
+    monkeypatch.setattr(torch.nn.functional, 'scaled_dot_product_attention', checked_attention)
+    torch.manual_seed(16)
+    layer = Attention(6, 3)
+    with torch.no_grad():
+        layer.qkv.weight.mul_(1e4)
+    x = (torch.randn(2, 4, 6) * 1e4).requires_grad_()
+    output = layer(x)
+    output.square().mean().backward()
+    assert torch.isfinite(output).all() and torch.isfinite(x.grad).all()
+    assert all(torch.isfinite(p.grad).all() for p in layer.parameters())
+    assert observed == [(torch.float64, torch.float64, torch.float64)]
+    assert output.dtype == x.dtype == layer.qkv.weight.dtype == torch.float32
+
+
+def test_block_checkpointing_preserves_forward_and_raw_gradients():
+    torch.manual_seed(25)
+    model = ViTTiny(patch_size=4, embed_dim=6, depth=2, heads=3,
+                    mlp_ratio=2, num_classes=3, image_size=8)
+    reference = copy.deepcopy(model)
+    model.train()  # checkpoint every block
+    reference.eval()  # same operators/parameters, with checkpointing disabled
+    x = torch.randn(2, 3, 8, 8, requires_grad=True)
+    rx = x.detach().clone().requires_grad_()
+    actual, expected = model(x), reference(rx)
+    torch.testing.assert_close(actual, expected)
+    actual.sum().backward()
+    expected.sum().backward()
+    torch.testing.assert_close(x.grad, rx.grad)
+    for p, q in zip(model.parameters(), reference.parameters()):
+        torch.testing.assert_close(p.grad, q.grad)
 
 
 def test_local_data_and_checkpoint_with_network_connections_forbidden(monkeypatch):

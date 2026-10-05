@@ -1,0 +1,73 @@
+{
+  "stage": 4,
+  "stage_name": "bandinvmf_radius",
+  "trial": {
+    "method": "dp-adam-bandinvmf-uc",
+    "seed": 20261001,
+    "lr": 0.002,
+    "update_clip_norm": 55.91465759277344,
+    "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/2ffb0be15b42e43b"
+  },
+  "config": {
+    "seed": 20261001,
+    "search_seed": 20261001,
+    "final_seeds": [
+      20261011,
+      20261012,
+      20261013
+    ],
+    "data_root": "data",
+    "epochs": 5,
+    "dataset_size": 50000,
+    "logical_batch_size": 1000,
+    "physical_batch_size": 250,
+    "gradient_accumulation": 4,
+    "total_steps": 250,
+    "adam_state_dtype": "float64",
+    "layer_norm_compute_dtype": "float64",
+    "attention_backend": "math",
+    "attention_compute_dtype": "float64",
+    "activation_checkpointing": "per_transformer_block",
+    "num_workers": 2,
+    "gpus": [
+      0,
+      2,
+      3
+    ],
+    "max_parallel_trials": 3,
+    "optimizer": {
+      "lr": 0.002,
+      "update_clip_norm": 55.91465759277344,
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "eps": 1e-08,
+      "weight_decay": 0.0
+    },
+    "privacy": {
+      "epsilon": 8.0,
+      "delta": 1e-05,
+      "adjacency": "replace_one",
+      "participation": "full_temporal"
+    },
+    "uc_includes_lr": false,
+    "uc_includes_sign": false,
+    "noise_before_lr": true,
+    "adam_state_uses_raw_batch_gradient": true,
+    "per_example_clipping": false,
+    "sampling_amplification": false,
+    "bandinvmf_workload": "sgd",
+    "bandinvmf_num_bands": 4,
+    "model": {
+      "architecture": "vit_tiny_patch16_224",
+      "pretrained": true,
+      "num_classes": 100,
+      "image_size": 224
+    }
+  },
+  "smoke": false,
+  "effective_epochs": 5,
+  "effective_total_steps": 250,
+  "update_clipping_enabled": true,
+  "dp_noise_enabled": true,
+  "participates_in_ranking": true
+}

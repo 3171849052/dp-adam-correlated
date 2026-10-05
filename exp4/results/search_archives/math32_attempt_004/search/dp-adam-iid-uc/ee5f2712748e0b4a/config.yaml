@@ -1,0 +1,112 @@
+seed: 20261001
+search_seed: 20261001
+final_seeds:
+- 20261011
+- 20261012
+- 20261013
+data_root: data
+epochs: 5
+dataset_size: 50000
+logical_batch_size: 1000
+physical_batch_size: 250
+gradient_accumulation: 4
+total_steps: 250
+adam_state_dtype: float64
+layer_norm_compute_dtype: float64
+attention_backend: math
+activation_checkpointing: per_transformer_block
+num_workers: 2
+gpus:
+- 0
+- 2
+- 3
+max_parallel_trials: 3
+optimizer:
+  lr: 0.001
+  update_clip_norm: 27.968971252441406
+  beta1: 0.9
+  beta2: 0.999
+  eps: 1.0e-08
+  weight_decay: 0.0
+privacy:
+  epsilon: 8.0
+  delta: 1.0e-05
+  adjacency: replace_one
+  participation: full_temporal
+uc_includes_lr: false
+uc_includes_sign: false
+noise_before_lr: true
+adam_state_uses_raw_batch_gradient: true
+per_example_clipping: false
+sampling_amplification: false
+bandinvmf_workload: sgd
+bandinvmf_num_bands: 4
+model:
+  architecture: vit_tiny_patch16_224
+  pretrained: true
+  num_classes: 100
+  image_size: 224
+method: dp-adam-iid-uc
+smoke: false
+scale_probe: false
+update_clipping_enabled: true
+dp_noise_enabled: true
+adam_direction_arithmetic_dtype: float64
+update_direction_dtype: float32
+effective_epochs: 5
+effective_steps_per_epoch: 50
+effective_total_steps: 250
+visible_devices: '2'
+device_name: NVIDIA GeForce RTX 3080 Ti
+initialization_sha256: 32174ab45c6778646193838fe7b8f83343d50d42359835e98c8a1c13b16a3cf7
+classifier_initialization_sha256: 94d86daf116060908048dcb9e9eaaf1b2e9575f5ff316459ae0fbd7ee237c592
+pretrained_cfg:
+  mean:
+  - 0.5
+  - 0.5
+  - 0.5
+  std:
+  - 0.5
+  - 0.5
+  - 0.5
+  crop_pct: 0.9
+  interpolation: bicubic
+  hf_hub_id: timm/vit_tiny_patch16_224.augreg_in21k_ft_in1k
+  checkpoint_path: cache/huggingface/hub/models--timm--vit_tiny_patch16_224.augreg_in21k_ft_in1k/snapshots/7d3afdd0cf93ad84d986eb2d6bcc5812ebd0b106/model.safetensors
+  checkpoint_sha256: fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed
+local_data_root: /media/data/data/lt/dp-adam-correlated/data
+download: false
+fixed_epoch_order: true
+dtype: float32
+privacy_calibration:
+  target_epsilon: 8.0
+  delta: 1.0e-05
+  target_mu: 1.6660305978457184
+  total_steps: 250
+  per_step_sensitivity: 55.93794250488281
+  temporal_sensitivity: 15.811388300841896
+  trajectory_sensitivity: 884.4565296948707
+  innovation_std: 530.8765222190566
+  sampling_amplification: false
+  participation: full_temporal
+  adjacency: replace_one
+  accountant: conditional_gaussian_gdp_row_absolute_sum
+  noise_space: update_direction
+  batch_size_division: false
+noising_coefficients:
+- 1.0
+trainable_parameters: 5543716
+test_examples: 10000
+augmentation_rng_convention: seeded DataLoader + worker seeds, fixed permutation every
+  epoch
+diagnostic_release: private research diagnostics; GDP claim covers noisy parameter
+  trajectory only
+versions:
+  torch: 2.13.0+cu126
+  torchvision: 0.28.0+cu126
+  jax: 0.10.2
+  jax_privacy: 2.3.0.dev0
+  numpy: 2.4.4
+  scipy: 1.17.1
+  timm: 1.0.29
+  PyYAML: 6.0.3

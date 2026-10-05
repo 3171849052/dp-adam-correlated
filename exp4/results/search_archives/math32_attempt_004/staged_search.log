@@ -1,0 +1,77 @@
+{"event": "started", "gpu": 0, "pid": 3461970, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/stage0_probe"}
+{"event": "completed", "gpu": 0, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/stage0_probe"}
+{"stage": 0, "stage_name": "nonprivate_scale_probe", "status": "completed", "U50": 447.5035400390625, "selection_reason": "Median of all 250 raw Adam direction norms from full nonprivate probe; excluded from DP method ranking."}
+{"event": "stage_started", "stage": 1, "stage_name": "iid_radius", "status": "running", "method": "dp-adam-iid-uc", "candidate_count": 9, "new_trials": 9, "reused_trials": 0}
+{"event": "started", "gpu": 0, "pid": 3470910, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/3f3321eda2655da1"}
+{"event": "started", "gpu": 2, "pid": 3470911, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/0d396fa673b3912a"}
+{"event": "started", "gpu": 3, "pid": 3470912, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/41b616e43f537b6e"}
+{"event": "completed", "gpu": 3, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/41b616e43f537b6e"}
+{"event": "started", "gpu": 3, "pid": 3486708, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/1c11fbfe854866c0"}
+{"event": "completed", "gpu": 2, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/0d396fa673b3912a"}
+{"event": "started", "gpu": 2, "pid": 3487157, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/ee5f2712748e0b4a"}
+{"event": "completed", "gpu": 0, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/3f3321eda2655da1"}
+{"event": "started", "gpu": 0, "pid": 3487898, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/d6b89e061677dc5e"}
+{"event": "completed", "gpu": 3, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/1c11fbfe854866c0"}
+{"event": "started", "gpu": 3, "pid": 3503336, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/ccc9bc53f13d4f73"}
+{"event": "completed", "gpu": 2, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/ee5f2712748e0b4a"}
+{"event": "started", "gpu": 2, "pid": 3504566, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/4b9fc8336b7cd905"}
+{"event": "completed", "gpu": 0, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/d6b89e061677dc5e"}
+{"event": "started", "gpu": 0, "pid": 3505473, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/da147886f2bf971f"}
+{"event": "completed", "gpu": 3, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/ccc9bc53f13d4f73"}
+{"event": "completed", "gpu": 2, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/4b9fc8336b7cd905"}
+{"event": "completed", "gpu": 0, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/da147886f2bf971f"}
+{"event": "stage_completed", "stage": 1, "stage_name": "iid_radius", "status": "completed", "method": "dp-adam-iid-uc", "candidate_count": 9, "new_trials": 9, "reused_trials": 0, "stage_winner": {"rule": ["max_final_test_top1", "min_update_clip_norm", "min_lr"], "eligible_unique_trials": 9, "trials_tied_at_best_top1": 1, "selected_trial_id": "1c11fbfe854866c0", "final_test_top1": 0.0115, "R": 13.984485626220703, "lr": 0.001, "explanation": "Highest final epoch test top1 over all eligible full trials; ties use smaller R, then smaller lr; test loss is not a tie-breaker."}}
+{"event": "stage_started", "stage": 2, "stage_name": "iid_lr", "status": "running", "method": "dp-adam-iid-uc", "candidate_count": 5, "new_trials": 4, "reused_trials": 1}
+{"event": "started", "gpu": 0, "pid": 3521392, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/f0343b5d5ca26491"}
+{"event": "started", "gpu": 2, "pid": 3521393, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/3381bd0f2821ba1d"}
+{"event": "started", "gpu": 3, "pid": 3521394, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/e16d6c9a89d05e58"}
+{"event": "completed", "gpu": 2, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/3381bd0f2821ba1d"}
+{"event": "started", "gpu": 2, "pid": 3537851, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/409a3efd4bacffd3"}
+{"event": "completed", "gpu": 3, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/e16d6c9a89d05e58"}
+{"event": "completed", "gpu": 0, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/f0343b5d5ca26491"}
+{"event": "completed", "gpu": 2, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/409a3efd4bacffd3"}
+{"event": "stage_completed", "stage": 2, "stage_name": "iid_lr", "status": "completed", "method": "dp-adam-iid-uc", "candidate_count": 5, "new_trials": 4, "reused_trials": 1, "stage_winner": {"rule": ["max_final_test_top1", "min_update_clip_norm", "min_lr"], "eligible_unique_trials": 5, "trials_tied_at_best_top1": 1, "selected_trial_id": "1c11fbfe854866c0", "final_test_top1": 0.0115, "R": 13.984485626220703, "lr": 0.001, "explanation": "Highest final epoch test top1 over all eligible full trials; ties use smaller R, then smaller lr; test loss is not a tie-breaker."}}
+{"event": "stage_started", "stage": 3, "stage_name": "iid_refinement", "status": "running", "method": "dp-adam-iid-uc", "candidate_count": 9, "new_trials": 4, "reused_trials": 5}
+{"event": "started", "gpu": 0, "pid": 3549520, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/07013aa9c5bf2647"}
+{"event": "started", "gpu": 2, "pid": 3549521, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/9283eade3dfca8f1"}
+{"event": "started", "gpu": 3, "pid": 3549522, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/cc752d7abee3e8e1"}
+{"event": "completed", "gpu": 2, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/9283eade3dfca8f1"}
+{"event": "started", "gpu": 2, "pid": 3569213, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/3111dc1a5e664aaa"}
+{"event": "completed", "gpu": 3, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/cc752d7abee3e8e1"}
+{"event": "completed", "gpu": 0, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/07013aa9c5bf2647"}
+{"event": "completed", "gpu": 2, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/3111dc1a5e664aaa"}
+{"event": "stage_completed", "stage": 3, "stage_name": "iid_refinement", "status": "completed", "method": "dp-adam-iid-uc", "candidate_count": 9, "new_trials": 4, "reused_trials": 5, "stage_winner": {"rule": ["max_final_test_top1", "min_update_clip_norm", "min_lr"], "eligible_unique_trials": 9, "trials_tied_at_best_top1": 3, "selected_trial_id": "9283eade3dfca8f1", "final_test_top1": 0.0115, "R": 6.992242813110352, "lr": 0.002, "explanation": "Highest final epoch test top1 over all eligible full trials; ties use smaller R, then smaller lr; test loss is not a tie-breaker."}}
+{"event": "stage_started", "stage": 4, "stage_name": "bandinvmf_radius", "status": "running", "method": "dp-adam-bandinvmf-uc", "candidate_count": 9, "new_trials": 9, "reused_trials": 0}
+{"event": "started", "gpu": 0, "pid": 3579275, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/a91e3491cf2ccd3d"}
+{"event": "started", "gpu": 2, "pid": 3579276, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/e844900d828fa659"}
+{"event": "started", "gpu": 3, "pid": 3579277, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/acc65fc88fca24b8"}
+{"event": "completed", "gpu": 3, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/acc65fc88fca24b8"}
+{"event": "started", "gpu": 3, "pid": 3595713, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/50d2ca7bee8a5c2c"}
+{"event": "completed", "gpu": 2, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/e844900d828fa659"}
+{"event": "started", "gpu": 2, "pid": 3596358, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/bce3ede564904251"}
+{"event": "completed", "gpu": 0, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/a91e3491cf2ccd3d"}
+{"event": "started", "gpu": 0, "pid": 3605270, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/bac621ada1d61b95"}
+{"event": "completed", "gpu": 3, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/50d2ca7bee8a5c2c"}
+{"event": "started", "gpu": 3, "pid": 3611467, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/71cfde99aaad29a0"}
+{"event": "completed", "gpu": 2, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/bce3ede564904251"}
+{"event": "started", "gpu": 2, "pid": 3612090, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/7c15d95e470c764b"}
+{"event": "completed", "gpu": 3, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/71cfde99aaad29a0"}
+{"event": "started", "gpu": 3, "pid": 3627050, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/1baddc8b06a1bfa0"}
+{"event": "completed", "gpu": 2, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/7c15d95e470c764b"}
+{"event": "completed", "gpu": 0, "result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/bac621ada1d61b95"}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/media/data/data/lt/dp-adam-correlated/exp4/search.py", line 284, in <module>
+    main()
+  File "/media/data/data/lt/dp-adam-correlated/exp4/search.py", line 280, in main
+    StagedSearch().run()
+  File "/media/data/data/lt/dp-adam-correlated/exp4/search.py", line 236, in run
+    s4 = self.run_stage(4, mf, radius_points(self.u50, iid_lr))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp4/search.py", line 206, in run_stage
+    self.launch(pending, on_complete=lambda trial: self.finish_record(lookup[trial['result_dir']], trial))
+  File "/media/data/data/lt/dp-adam-correlated/exp4/launch_batch.py", line 54, in launch
+    raise RuntimeError(f'Trial exited {code}: {destination / "train.log"}')
+RuntimeError: Trial exited 1: /media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-bandinvmf-uc/1baddc8b06a1bfa0/train.log
+ERROR conda.cli.main_run:execute(127): `conda run python -B -m exp4.search` failed. (See above for error)

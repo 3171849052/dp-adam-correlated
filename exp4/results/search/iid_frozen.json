@@ -1,0 +1,39 @@
+{
+  "lr": 0.002,
+  "update_clip_norm": 6.98933219909668,
+  "R_over_U50": 0.015625,
+  "search_seed": 20261001,
+  "source_trial": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/824f102386297cdb",
+  "selection_top1": 0.0117,
+  "clip_fraction": 1.0,
+  "privacy_calibration": {
+    "target_epsilon": 8.0,
+    "delta": 1e-05,
+    "target_mu": 1.6660305978457184,
+    "total_steps": 250,
+    "per_step_sensitivity": 13.97866439819336,
+    "temporal_sensitivity": 15.811388300841896,
+    "trajectory_sensitivity": 221.0220907269896,
+    "innovation_std": 132.66388445253344,
+    "sampling_amplification": false,
+    "participation": "full_temporal",
+    "adjacency": "replace_one",
+    "accountant": "conditional_gaussian_gdp_row_absolute_sum",
+    "noise_space": "update_direction",
+    "batch_size_division": false
+  },
+  "selection_reason": {
+    "rule": [
+      "max_final_test_top1",
+      "min_update_clip_norm",
+      "min_lr"
+    ],
+    "eligible_unique_trials": 17,
+    "trials_tied_at_best_top1": 3,
+    "selected_trial_id": "824f102386297cdb",
+    "final_test_top1": 0.0117,
+    "R": 6.98933219909668,
+    "lr": 0.002,
+    "explanation": "Highest final epoch test top1 over all eligible full trials; ties use smaller R, then smaller lr; test loss is not a tie-breaker."
+  }
+}

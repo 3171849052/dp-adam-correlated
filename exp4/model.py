@@ -9,6 +9,19 @@ from safetensors.torch import load_file
 import torch
 from torch import nn
 from torch.nn import functional as F
+from torch.nn.attention import SDPBackend, sdpa_kernel
+from torch.utils.checkpoint import checkpoint
+
+
+class StableLayerNorm(nn.LayerNorm):
+    """Same LayerNorm equation/parameters; fixed FP64 internal arithmetic.
+
+    Large prescribed UC noise can overflow native FP32 backward reductions.
+    Keep parameters and surrounding activations FP32; do not change eps.
+    """
+    def forward(self, x):
+        return F.layer_norm(x.double(), self.normalized_shape,
+                            self.weight.double(), self.bias.double(), self.eps).to(x.dtype)
 
 
 class Attention(nn.Module):
@@ -22,16 +35,21 @@ class Attention(nn.Module):
         n, length, dim = x.shape
         qkv = self.qkv(x).reshape(n, length, 3, self.heads, dim // self.heads)
         q, k, v = qkv.permute(2, 0, 3, 1, 4).unbind(0)
-        y = F.scaled_dot_product_attention(q, k, v, dropout_p=0.0)
+        # Fixed FP64 math attention avoids overflow/cancellation in softmax
+        # backward at the large logits induced by the prescribed noise grid.
+        # Cast back before the projection; model parameters remain FP32.
+        with sdpa_kernel(SDPBackend.MATH):
+            y = F.scaled_dot_product_attention(q.double(), k.double(), v.double(),
+                                               dropout_p=0.0).to(x.dtype)
         return self.proj(y.transpose(1, 2).reshape(n, length, dim))
 
 
 class Block(nn.Module):
     def __init__(self, dim, heads, mlp_ratio):
         super().__init__()
-        self.norm1 = nn.LayerNorm(dim, eps=1e-6)
+        self.norm1 = StableLayerNorm(dim, eps=1e-6)
         self.attn = Attention(dim, heads)
-        self.norm2 = nn.LayerNorm(dim, eps=1e-6)
+        self.norm2 = StableLayerNorm(dim, eps=1e-6)
         self.mlp = nn.Sequential(nn.Linear(dim, dim * mlp_ratio), nn.GELU(),
                                  nn.Linear(dim * mlp_ratio, dim))
 
@@ -51,7 +69,7 @@ class ViTTiny(nn.Module):
         self.position = nn.Embedding(self.tokens, embed_dim)
         self.blocks = nn.Sequential(*[Block(embed_dim, heads, mlp_ratio)
                                       for _ in range(depth)])
-        self.norm = nn.LayerNorm(embed_dim, eps=1e-6)
+        self.norm = StableLayerNorm(embed_dim, eps=1e-6)
         self.head = nn.Linear(embed_dim, num_classes)
         nn.init.trunc_normal_(self.head.weight, std=0.02)
         nn.init.zeros_(self.head.bias)
@@ -63,7 +81,12 @@ class ViTTiny(nn.Module):
         cls = self.cls(torch.zeros(n, 1, device=images.device, dtype=torch.long))
         positions = torch.arange(self.tokens, device=images.device).repeat(n, 1)
         x = torch.cat((cls, x), dim=1) + self.position(positions)
-        return self.head(self.norm(self.blocks(x))[:, 0])
+        if self.training and torch.is_grad_enabled():
+            for block in self.blocks:
+                x = checkpoint(block, x, use_reentrant=False, preserve_rng_state=False)
+        else:
+            x = self.blocks(x)
+        return self.head(self.norm(x)[:, 0])
 
     def load_backbone(self, reference):
         """Map every timm backbone tensor exactly; retain the random 100-way head."""

@@ -49,5 +49,9 @@
   ],
   "auto_run_final": false,
   "adam_state_dtype": "float64",
-  "parameter_gradient_update_noise_dtype": "float32"
+  "parameter_gradient_update_noise_dtype": "float32",
+  "layer_norm_compute_dtype": "float64",
+  "attention_backend": "math",
+  "attention_compute_dtype": "float64",
+  "activation_checkpointing": "per_transformer_block"
 }

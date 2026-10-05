@@ -12,6 +12,10 @@ physical_batch_size: 250
 gradient_accumulation: 4
 total_steps: 250
 adam_state_dtype: float64
+layer_norm_compute_dtype: float64
+attention_backend: math
+attention_compute_dtype: float64
+activation_checkpointing: per_transformer_block
 num_workers: 2
 gpus:
 - 0
@@ -53,7 +57,7 @@ update_direction_dtype: float32
 effective_epochs: 5
 effective_steps_per_epoch: 50
 effective_total_steps: 250
-visible_devices: '0'
+visible_devices: '2'
 device_name: NVIDIA GeForce RTX 3080 Ti
 initialization_sha256: 32174ab45c6778646193838fe7b8f83343d50d42359835e98c8a1c13b16a3cf7
 classifier_initialization_sha256: 94d86daf116060908048dcb9e9eaaf1b2e9575f5ff316459ae0fbd7ee237c592

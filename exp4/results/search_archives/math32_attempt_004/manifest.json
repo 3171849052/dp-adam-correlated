@@ -1,0 +1,15 @@
+{
+  "archived_from": "exp4/results/search",
+  "excluded_from_current_search": true,
+  "reason": "BandInvMF Stage 4 maximal R failed with SafeSoftmaxBackward0 NaN at step 88; all points rerun with fixed FP64 math attention",
+  "failed_trial": {
+    "method": "dp-adam-bandinvmf-uc",
+    "seed": 20261001,
+    "lr": 0.002,
+    "R": 447.5035400390625,
+    "completed_steps": 87
+  },
+  "previous_attention_compute_dtype": "float32",
+  "replacement_attention_compute_dtype": "float64",
+  "diagnostics": "exp4/results/band_nan_debug.log"
+}

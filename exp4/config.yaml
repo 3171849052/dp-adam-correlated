@@ -9,6 +9,10 @@ physical_batch_size: 250
 gradient_accumulation: 4
 total_steps: 250
 adam_state_dtype: float64
+layer_norm_compute_dtype: float64
+attention_backend: math
+attention_compute_dtype: float64
+activation_checkpointing: per_transformer_block
 num_workers: 2
 gpus: [0, 2, 3]
 max_parallel_trials: 3

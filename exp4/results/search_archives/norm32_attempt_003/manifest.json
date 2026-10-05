@@ -1,0 +1,87 @@
+{
+  "reason": "Anomaly detection identifies NativeLayerNormBackward0 returning NaN at step 7 for R=U50; fixed FP64 LayerNorm arithmetic will be applied to all trials, retaining FP32 model weights/gradients/directions/noise and the same architecture/eps.",
+  "action": "Archive and exclude these precision results. Recompute scale probe and every search point with one shared fixed implementation.",
+  "archived_trials": [
+    {
+      "trial_id": "stage0_probe",
+      "stage": 0,
+      "status": "completed",
+      "original_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/stage0_probe",
+      "archived_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search_archives/norm32_attempt_003/search/stage0_probe",
+      "eligible_for_selection": false
+    },
+    {
+      "trial_id": "2e095f8326d3c769",
+      "stage": 1,
+      "status": "completed",
+      "original_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/2e095f8326d3c769",
+      "archived_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search_archives/norm32_attempt_003/search/dp-adam-iid-uc/2e095f8326d3c769",
+      "eligible_for_selection": false
+    },
+    {
+      "trial_id": "06d8445b2cc976ef",
+      "stage": 1,
+      "status": "completed",
+      "original_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/06d8445b2cc976ef",
+      "archived_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search_archives/norm32_attempt_003/search/dp-adam-iid-uc/06d8445b2cc976ef",
+      "eligible_for_selection": false
+    },
+    {
+      "trial_id": "b9eea00c56e9548c",
+      "stage": 1,
+      "status": "completed",
+      "original_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/b9eea00c56e9548c",
+      "archived_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search_archives/norm32_attempt_003/search/dp-adam-iid-uc/b9eea00c56e9548c",
+      "eligible_for_selection": false
+    },
+    {
+      "trial_id": "c2ef2c6858e038cf",
+      "stage": 1,
+      "status": "completed",
+      "original_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/c2ef2c6858e038cf",
+      "archived_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search_archives/norm32_attempt_003/search/dp-adam-iid-uc/c2ef2c6858e038cf",
+      "eligible_for_selection": false
+    },
+    {
+      "trial_id": "592abec71da9de79",
+      "stage": 1,
+      "status": "completed",
+      "original_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/592abec71da9de79",
+      "archived_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search_archives/norm32_attempt_003/search/dp-adam-iid-uc/592abec71da9de79",
+      "eligible_for_selection": false
+    },
+    {
+      "trial_id": "0f23631de256fb28",
+      "stage": 1,
+      "status": "completed",
+      "original_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/0f23631de256fb28",
+      "archived_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search_archives/norm32_attempt_003/search/dp-adam-iid-uc/0f23631de256fb28",
+      "eligible_for_selection": false
+    },
+    {
+      "trial_id": "f76c75cdbaa0cc3a",
+      "stage": 1,
+      "status": "planned",
+      "original_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/f76c75cdbaa0cc3a",
+      "archived_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search_archives/norm32_attempt_003/search/dp-adam-iid-uc/f76c75cdbaa0cc3a",
+      "eligible_for_selection": false
+    },
+    {
+      "trial_id": "b9c623835247584d",
+      "stage": 1,
+      "status": "planned",
+      "original_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/b9c623835247584d",
+      "archived_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search_archives/norm32_attempt_003/search/dp-adam-iid-uc/b9c623835247584d",
+      "eligible_for_selection": false
+    },
+    {
+      "trial_id": "f3e599c42be56efd",
+      "stage": 1,
+      "status": "planned",
+      "original_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search/dp-adam-iid-uc/f3e599c42be56efd",
+      "archived_result_dir": "/media/data/data/lt/dp-adam-correlated/exp4/results/search_archives/norm32_attempt_003/search/dp-adam-iid-uc/f3e599c42be56efd",
+      "eligible_for_selection": false
+    }
+  ],
+  "eligible_for_selection": false
+}
