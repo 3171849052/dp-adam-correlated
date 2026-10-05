@@ -1,0 +1,58 @@
+{
+  "stage": 2,
+  "method": "dp-sgdm-iid",
+  "status": "completed",
+  "trial_ids": [
+    "a83c4467f75ad9cf827669ebbf4c9ca1f1f67c4e075dbcf1bed1ad832dd6bd39",
+    "4e56831ead0d24ab9219f91a8442951bb83409cf089e13ba7a15e0955feb8a35",
+    "a624d47e4c5f6b90b21310b45a4466ea90bc9ccd87787733375c20846a3d7869",
+    "b0fd8e7849ff2686c7ed8a5bc62a1e20bf46bd9f59b1cad9f3dfb1a57fec8c44",
+    "3bb6a8dda05ecd2600fad436de49dae97a41b6722aafe9ce12ae47b6e5530f82"
+  ],
+  "candidates": 5,
+  "new_trials": 4,
+  "reused": 1,
+  "winner": {
+    "method": "dp-sgdm-iid",
+    "seed": 20261001,
+    "lr": 0.002,
+    "C": 4.0,
+    "trial_id": "3bb6a8dda05ecd2600fad436de49dae97a41b6722aafe9ce12ae47b6e5530f82",
+    "final_test_top1": 0.1838,
+    "source_trial": "/media/data/data/lt/dp-adam-correlated/exp5/results/search/trials/3bb6a8dda05ecd2600fad436de49dae97a41b6722aafe9ce12ae47b6e5530f82",
+    "diagnostics": {
+      "clip_fraction": 1.0,
+      "mean_unclipped_norm": 69.63251203906249,
+      "mean_clip_factor": 0.061271035152435295,
+      "query_norm": 0.1853731774687767,
+      "noise_std": 0.01073722406006788,
+      "momentum_norm": 57.433528526306155,
+      "update_norm": 0.11486705705261231
+    },
+    "privacy": {
+      "epsilon": 8.0,
+      "delta": 1e-05,
+      "mu": 1.6660305978457184,
+      "adjacency": "replace_one",
+      "per_query_sensitivity": 0.008,
+      "sensitivity": 0.01788854381999832,
+      "strategy_sensitivity": 2.23606797749979,
+      "innovation_std": 0.010737224060067878,
+      "participation": "fixed_epoch_sparse",
+      "epochs": 5,
+      "participation_spacing": 50,
+      "direct_participations": 5,
+      "sampling_amplification": false,
+      "workload": "momentum",
+      "beta": 0.9,
+      "num_bands": 1,
+      "noising_coefficients": [
+        1.0
+      ],
+      "strategy": "inverse_lower_triangular_toeplitz",
+      "accountant_source": "exp2.privacy.fixed_epoch_sensitivity",
+      "workload_source": "exp2.bandinvmf.build_matrices(momentum_bandinvmf)",
+      "noise_space": "logical_averaged_gradient"
+    }
+  }
+}
