@@ -1,0 +1,78 @@
+{
+  "stage": "C_iid_scale_C",
+  "note": "Coarse C search; LR/geometry fixed at anchor",
+  "selection": "final_test_top1_desc_C_asc_lr_asc",
+  "candidates": [
+    {
+      "trial": {
+        "method": "dp-lora-iid-scale",
+        "seed": 20261001,
+        "lr": 0.003,
+        "C": 0.1,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "4649605759407fb7c7e587220b08a5a06d6c3df9012169487467130c32d8ef6d",
+      "fingerprint": "fingerprint-4649605759407fb7c7e587220b08a5a06d6c3df9012169487467130c32d8ef6d",
+      "final_test_top1": 0.5670416313399568,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/4649605759407fb7c7e587220b08a5a06d6c3df9012169487467130c32d8ef6d"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-iid-scale",
+        "seed": 20261001,
+        "lr": 0.003,
+        "C": 0.3,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "36539c29abf4321f61bcbdbac2f67969a780d087378c4466c71c80635ef34a17",
+      "fingerprint": "fingerprint-36539c29abf4321f61bcbdbac2f67969a780d087378c4466c71c80635ef34a17",
+      "final_test_top1": 0.5835208156699784,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/36539c29abf4321f61bcbdbac2f67969a780d087378c4466c71c80635ef34a17"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-iid-scale",
+        "seed": 20261001,
+        "lr": 0.003,
+        "C": 1.0,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "fae9d4ccc7f6360d723178e18056e2996314f2901ae5303cd6f5f988ae370345",
+      "fingerprint": "fingerprint-fae9d4ccc7f6360d723178e18056e2996314f2901ae5303cd6f5f988ae370345",
+      "final_test_top1": 0.5654612236050893,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/fae9d4ccc7f6360d723178e18056e2996314f2901ae5303cd6f5f988ae370345"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-iid-scale",
+        "seed": 20261001,
+        "lr": 0.003,
+        "C": 3.0,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "e0c125e493e46ff7b4efb4b38d099dae2b6444d186962a08c5577624cd2ff58e",
+      "fingerprint": "fingerprint-e0c125e493e46ff7b4efb4b38d099dae2b6444d186962a08c5577624cd2ff58e",
+      "final_test_top1": 0.5489820392750677,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/e0c125e493e46ff7b4efb4b38d099dae2b6444d186962a08c5577624cd2ff58e"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-iid-scale",
+        "seed": 20261001,
+        "lr": 0.003,
+        "C": 10.0,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "fa35710626e950975f8f6e838d4e1cf25a0a53d200572bbafa9d3b984045121c",
+      "fingerprint": "fingerprint-fa35710626e950975f8f6e838d4e1cf25a0a53d200572bbafa9d3b984045121c",
+      "final_test_top1": 0.5309224472101787,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/fa35710626e950975f8f6e838d4e1cf25a0a53d200572bbafa9d3b984045121c"
+    }
+  ],
+  "candidate_winner": "36539c29abf4321f61bcbdbac2f67969a780d087378c4466c71c80635ef34a17"
+}

@@ -1,0 +1,92 @@
+{
+  "stage": "A_iid_lr",
+  "note": "Coarse LR search at current winning C",
+  "selection": "final_test_top1_desc_C_asc_lr_asc",
+  "candidates": [
+    {
+      "trial": {
+        "method": "dp-lora-iid",
+        "seed": 20261001,
+        "lr": 0.0001,
+        "C": 3.0,
+        "geom_eps": 0.1,
+        "physical_batch_size": 50
+      },
+      "trial_id": "7a67a3c0d24dbc1dc0bf2ef575d997fe83da02663e60ef7d34aa38157d5e10eb",
+      "fingerprint": "fingerprint-7a67a3c0d24dbc1dc0bf2ef575d997fe83da02663e60ef7d34aa38157d5e10eb",
+      "final_test_top1": 0.5489820392750676,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/7a67a3c0d24dbc1dc0bf2ef575d997fe83da02663e60ef7d34aa38157d5e10eb"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-iid",
+        "seed": 20261001,
+        "lr": 0.0003,
+        "C": 3.0,
+        "geom_eps": 0.1,
+        "physical_batch_size": 50
+      },
+      "trial_id": "a0aae780267d60d97ec08af4a3f65ce2a10fd3554c7622c2f6d821a3d8b2055e",
+      "fingerprint": "fingerprint-a0aae780267d60d97ec08af4a3f65ce2a10fd3554c7622c2f6d821a3d8b2055e",
+      "final_test_top1": 0.5654612236050893,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/a0aae780267d60d97ec08af4a3f65ce2a10fd3554c7622c2f6d821a3d8b2055e"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-iid",
+        "seed": 20261001,
+        "lr": 0.001,
+        "C": 3.0,
+        "geom_eps": 0.1,
+        "physical_batch_size": 50
+      },
+      "trial_id": "2548ac04ebb18adf240c4cc8909ac93c2764cba3dd375f603987f8a1470c0bc0",
+      "fingerprint": "fingerprint-2548ac04ebb18adf240c4cc8909ac93c2764cba3dd375f603987f8a1470c0bc0",
+      "final_test_top1": 0.5835208156699784,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/2548ac04ebb18adf240c4cc8909ac93c2764cba3dd375f603987f8a1470c0bc0"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-iid",
+        "seed": 20261001,
+        "lr": 0.003,
+        "C": 3.0,
+        "geom_eps": 0.1,
+        "physical_batch_size": 50
+      },
+      "trial_id": "61de879617cdffdb047e3f020668141c4920fdf2c453527597baa0124b8d7273",
+      "fingerprint": "fingerprint-61de879617cdffdb047e3f020668141c4920fdf2c453527597baa0124b8d7273",
+      "final_test_top1": 0.6,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/61de879617cdffdb047e3f020668141c4920fdf2c453527597baa0124b8d7273"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-iid",
+        "seed": 20261001,
+        "lr": 0.01,
+        "C": 3.0,
+        "geom_eps": 0.1,
+        "physical_batch_size": 50
+      },
+      "trial_id": "582de4011d1058f442b1536631b2532adbfb351f7dfd86dcaaef0652ed32349f",
+      "fingerprint": "fingerprint-582de4011d1058f442b1536631b2532adbfb351f7dfd86dcaaef0652ed32349f",
+      "final_test_top1": 0.5819404079351109,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/582de4011d1058f442b1536631b2532adbfb351f7dfd86dcaaef0652ed32349f"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-iid",
+        "seed": 20261001,
+        "lr": 0.03,
+        "C": 3.0,
+        "geom_eps": 0.1,
+        "physical_batch_size": 50
+      },
+      "trial_id": "9d4ff707d0317ec612e31bcc7330a9e89c4d9727d966658baa404dec784e9445",
+      "fingerprint": "fingerprint-9d4ff707d0317ec612e31bcc7330a9e89c4d9727d966658baa404dec784e9445",
+      "final_test_top1": 0.5654612236050893,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/9d4ff707d0317ec612e31bcc7330a9e89c4d9727d966658baa404dec784e9445"
+    }
+  ],
+  "candidate_winner": "61de879617cdffdb047e3f020668141c4920fdf2c453527597baa0124b8d7273"
+}

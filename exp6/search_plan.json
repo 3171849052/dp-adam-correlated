@@ -1,0 +1,14 @@
+{
+  "protocol": "staged-utility-v2",
+  "seed": 20261001,
+  "initial_lr": 0.001,
+  "initial_C": 1.0,
+  "raw_geom_eps": 0.1,
+  "clip_norms": [0.1, 0.3, 1.0, 3.0, 10.0],
+  "learning_rates": [0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03],
+  "geom_eps_values": [0.001, 0.01, 0.1, 1.0],
+  "local_factors": [0.5, 1.0, 2.0],
+  "max_boundary_extensions": 1,
+  "physical_batch_size": 50,
+  "selection": "final_test_top1_desc_C_asc_lr_asc"
+}

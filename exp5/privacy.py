@@ -5,7 +5,8 @@ from exp2.bandinvmf import build_matrices, materialize
 from exp5.config import FIXED, METHODS
 
 
-def build(method, C, num_bands=4):
+def build(method, C):
+    num_bands = FIXED['num_bands']
     if method not in METHODS:
         raise ValueError(f'Unknown method: {method}')
     T, beta = FIXED['total_steps'], FIXED['beta']
@@ -18,7 +19,7 @@ def build(method, C, num_bands=4):
     multiplier = fixed_epoch_sensitivity(strategy, FIXED['epochs'], FIXED['steps_per_epoch'])
     sensitivity = per_query * multiplier
     metadata = dict(epsilon=FIXED['epsilon'], delta=FIXED['delta'], mu=mu,
-                    adjacency='replace_one', per_query_sensitivity=per_query,
+                    adjacency='replace_one', per_query_sensitivity=per_query, per_step_sensitivity=per_query,
                     sensitivity=sensitivity, strategy_sensitivity=multiplier,
                     innovation_std=sensitivity / mu, participation='fixed_epoch_sparse',
                     epochs=5, participation_spacing=50, direct_participations=5,

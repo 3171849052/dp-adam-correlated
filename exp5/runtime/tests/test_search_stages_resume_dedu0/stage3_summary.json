@@ -1,0 +1,69 @@
+{
+  "stage": 3,
+  "method": "dp-coordnorm-sgdm-iid",
+  "status": "completed",
+  "trial_ids": [
+    "d849fc642ca0f8a3a8057d347c29d963e705121ae414e980bc54a5f52ac79816",
+    "e675e1ad89bc2aea7a41876b9ff61bd8429a7032a7e748b11ce7f1ca7aeb9358",
+    "e01b90655467b449b3b9e57cc77e0666453e2df2d7388b09ff378ea0327de5cf",
+    "7a78a14b18807635427571fb35af137e8f1fa5bf26dfa3abe5155d12498e1bb8",
+    "d41c3ebec046fc4920a08fad0436418570b5c884a5f31acc4f9b8a8a4e45512b",
+    "57abffb03cf8d390e29fa609dae6f05929ab51ac0b3256dcf44c6adc03295794",
+    "242f16333e4e46728eec610e6d268fde662bdd2b7dc6c74fb8fac8d7712253f0",
+    "cf9c3c356059f253f6e183ebf4d85f1d8da187c7ac826ede531404846929004e",
+    "0289626b2e8af2dfaabd162b5260281826a1bcdb2688551f5714443a6245238f"
+  ],
+  "candidates": 9,
+  "new_trials": 0,
+  "reused": 9,
+  "winner": {
+    "method": "dp-coordnorm-sgdm-iid",
+    "seed": 20261001,
+    "lr": 0.002,
+    "tau": 0.04,
+    "C": 1.0,
+    "trial_id": "d41c3ebec046fc4920a08fad0436418570b5c884a5f31acc4f9b8a8a4e45512b",
+    "final_test_top1": 0.5,
+    "source_trial": "/media/data/data/lt/dp-adam-correlated/exp5/runtime/tests/test_search_stages_resume_dedu0/trials/d41c3ebec046fc4920a08fad0436418570b5c884a5f31acc4f9b8a8a4e45512b",
+    "diagnostics": {
+      "mean_raw_sample_norm": 0.1,
+      "mean_transformed_sample_norm": 0.1,
+      "transformed_norm_std": 0.1,
+      "clip_fraction": 0.1,
+      "mean_clip_factor": 0.1,
+      "raw_mean_gradient_norm": 0.1,
+      "query_norm": 0.1,
+      "batch_coherence": 0.1,
+      "noise_std": 0.1,
+      "momentum_norm": 0.1,
+      "update_norm": 0.1,
+      "logical_step_seconds": 0.1
+    },
+    "privacy": {
+      "epsilon": 8.0,
+      "delta": 1e-05,
+      "mu": 1.6660305978457184,
+      "adjacency": "replace_one",
+      "per_query_sensitivity": 0.002,
+      "per_step_sensitivity": 0.002,
+      "sensitivity": 0.00447213595499958,
+      "strategy_sensitivity": 2.23606797749979,
+      "innovation_std": 0.0026843060150169695,
+      "participation": "fixed_epoch_sparse",
+      "epochs": 5,
+      "participation_spacing": 50,
+      "direct_participations": 5,
+      "sampling_amplification": false,
+      "workload": "momentum",
+      "beta": 0.9,
+      "num_bands": 1,
+      "noising_coefficients": [
+        1.0
+      ],
+      "strategy": "inverse_lower_triangular_toeplitz",
+      "accountant_source": "exp2.privacy.fixed_epoch_sensitivity",
+      "workload_source": "exp2.bandinvmf.build_matrices(momentum_bandinvmf)",
+      "noise_space": "logical_averaged_gradient"
+    }
+  }
+}

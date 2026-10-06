@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "methods": [
+    "dp-lora-iid",
+    "dp-lora-bandinvmf",
+    "dp-lora-iid-scale",
+    "dp-lora-bandinvmf-scale"
+  ],
+  "physical_gpus": [
+    1,
+    2,
+    3
+  ],
+  "logical_steps_per_method": 3,
+  "examples_per_step": 1000,
+  "same_initialization": true,
+  "same_order": true,
+  "same_augmentations": true,
+  "identical_standardized_innovations": true,
+  "identical_bandinvmf_geometry": true,
+  "full_trajectory_target": {
+    "epsilon": 8.0,
+    "delta": 1e-05
+  },
+  "smoke_spent": {
+    "dp-lora-iid": {
+      "mu": 0.7450715338755283,
+      "epsilon": 3.1232925162148555,
+      "delta": 1e-05
+    },
+    "dp-lora-bandinvmf": {
+      "mu": 0.349853981692067,
+      "epsilon": 1.340798383103308,
+      "delta": 1e-05
+    },
+    "dp-lora-iid-scale": {
+      "mu": 0.7450715338755283,
+      "epsilon": 3.1232925162148555,
+      "delta": 1e-05
+    },
+    "dp-lora-bandinvmf-scale": {
+      "mu": 0.349853981692067,
+      "epsilon": 1.340798383103308,
+      "delta": 1e-05
+    }
+  }
+}
+

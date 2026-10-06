@@ -1,0 +1,126 @@
+{"event": "stage_completed", "stage": "A_iid_C", "trained": 0, "reused": 5, "winner": {"method": "dp-lora-iid", "seed": 20261001, "lr": 0.001, "C": 3.0, "geom_eps": 0.1, "physical_batch_size": 50}, "final_test_top1": 0.7455}
+{"event": "stage_completed", "stage": "A_iid_lr", "trained": 0, "reused": 6, "winner": {"method": "dp-lora-iid", "seed": 20261001, "lr": 0.001, "C": 3.0, "geom_eps": 0.1, "physical_batch_size": 50}, "final_test_top1": 0.7455}
+{"event": "stage_completed", "stage": "A_iid_local", "trained": 0, "reused": 9, "winner": {"method": "dp-lora-iid", "seed": 20261001, "lr": 0.002, "C": 1.5, "geom_eps": 0.1, "physical_batch_size": 50}, "final_test_top1": 0.7676}
+{"event": "stage_completed", "stage": "A_iid_C_boundary_1", "trained": 0, "reused": 1, "winner": {"method": "dp-lora-iid", "seed": 20261001, "lr": 0.002, "C": 0.75, "geom_eps": 0.1, "physical_batch_size": 50}, "final_test_top1": 0.767}
+{"event": "stage_completed", "stage": "A_iid_lr_boundary_1", "trained": 0, "reused": 1, "winner": {"method": "dp-lora-iid", "seed": 20261001, "lr": 0.004, "C": 1.5, "geom_eps": 0.1, "physical_batch_size": 50}, "final_test_top1": 0.6746}
+{"event": "stage_completed", "stage": "B_mf_C", "trained": 0, "reused": 6, "winner": {"method": "dp-lora-bandinvmf", "seed": 20261001, "lr": 0.002, "C": 10.0, "geom_eps": 0.1, "physical_batch_size": 50}, "final_test_top1": 0.6383}
+{"event": "stage_completed", "stage": "B_mf_lr", "trained": 0, "reused": 7, "winner": {"method": "dp-lora-bandinvmf", "seed": 20261001, "lr": 0.03, "C": 10.0, "geom_eps": 0.1, "physical_batch_size": 50}, "final_test_top1": 0.8086}
+{"event": "stage_completed", "stage": "B_mf_local", "trained": 0, "reused": 9, "winner": {"method": "dp-lora-bandinvmf", "seed": 20261001, "lr": 0.015, "C": 5.0, "geom_eps": 0.1, "physical_batch_size": 50}, "final_test_top1": 0.815}
+{"event": "stage_completed", "stage": "B_mf_C_boundary_1", "trained": 0, "reused": 1, "winner": {"method": "dp-lora-bandinvmf", "seed": 20261001, "lr": 0.015, "C": 2.5, "geom_eps": 0.1, "physical_batch_size": 50}, "final_test_top1": 0.8149}
+{"event": "stage_completed", "stage": "B_mf_lr_boundary_1", "trained": 0, "reused": 1, "winner": {"method": "dp-lora-bandinvmf", "seed": 20261001, "lr": 0.0075, "C": 5.0, "geom_eps": 0.1, "physical_batch_size": 50}, "final_test_top1": 0.7976}
+{"event": "stage_completed", "stage": "C_iid_scale_geometry", "trained": 0, "reused": 4, "winner": {"method": "dp-lora-iid-scale", "seed": 20261001, "lr": 0.002, "C": 1.5, "geom_eps": 1.0, "physical_batch_size": 50}, "final_test_top1": 0.7676}
+{"event": "stage_completed", "stage": "C_iid_scale_C", "trained": 0, "reused": 6, "winner": {"method": "dp-lora-iid-scale", "seed": 20261001, "lr": 0.002, "C": 0.3, "geom_eps": 1.0, "physical_batch_size": 50}, "final_test_top1": 0.7681}
+{"event": "stage_completed", "stage": "C_iid_scale_lr", "trained": 0, "reused": 7, "winner": {"method": "dp-lora-iid-scale", "seed": 20261001, "lr": 0.002, "C": 0.3, "geom_eps": 1.0, "physical_batch_size": 50}, "final_test_top1": 0.7681}
+{"event": "stage_completed", "stage": "C_iid_scale_local", "trained": 0, "reused": 9, "winner": {"method": "dp-lora-iid-scale", "seed": 20261001, "lr": 0.002, "C": 0.3, "geom_eps": 1.0, "physical_batch_size": 50}, "final_test_top1": 0.7681}
+{"event": "stage_completed", "stage": "D_mf_scale_C", "trained": 0, "reused": 5, "winner": {"method": "dp-lora-bandinvmf-scale", "seed": 20261001, "lr": 0.002, "C": 10.0, "geom_eps": 1.0, "physical_batch_size": 50}, "final_test_top1": 0.6409}
+{"event": "stage_completed", "stage": "D_mf_scale_lr", "trained": 0, "reused": 7, "winner": {"method": "dp-lora-bandinvmf-scale", "seed": 20261001, "lr": 0.01, "C": 10.0, "geom_eps": 1.0, "physical_batch_size": 50}, "final_test_top1": 0.805}
+{"event": "stage_completed", "stage": "D_mf_scale_local", "trained": 0, "reused": 9, "winner": {"method": "dp-lora-bandinvmf-scale", "seed": 20261001, "lr": 0.02, "C": 5.0, "geom_eps": 1.0, "physical_batch_size": 50}, "final_test_top1": 0.8162}
+{"event": "stage_completed", "stage": "D_mf_scale_C_boundary_1", "trained": 0, "reused": 1, "winner": {"method": "dp-lora-bandinvmf-scale", "seed": 20261001, "lr": 0.02, "C": 2.5, "geom_eps": 1.0, "physical_batch_size": 50}, "final_test_top1": 0.8156}
+{"event": "stage_completed", "stage": "D_mf_scale_lr_boundary_1", "trained": 0, "reused": 1, "winner": {"method": "dp-lora-bandinvmf-scale", "seed": 20261001, "lr": 0.04, "C": 5.0, "geom_eps": 1.0, "physical_batch_size": 50}, "final_test_top1": 0.7501}
+{
+  "status": "completed",
+  "selection": "final_test_top1_desc_C_asc_lr_asc",
+  "plan": {
+    "protocol": "staged-utility-v2",
+    "seed": 20261001,
+    "initial_lr": 0.001,
+    "initial_C": 1.0,
+    "raw_geom_eps": 0.1,
+    "clip_norms": [
+      0.1,
+      0.3,
+      1.0,
+      3.0,
+      10.0
+    ],
+    "learning_rates": [
+      0.0001,
+      0.0003,
+      0.001,
+      0.003,
+      0.01,
+      0.03
+    ],
+    "geom_eps_values": [
+      0.001,
+      0.01,
+      0.1,
+      1.0
+    ],
+    "local_factors": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "max_boundary_extensions": 1,
+    "physical_batch_size": 50,
+    "selection": "final_test_top1_desc_C_asc_lr_asc"
+  },
+  "stages": [
+    "A_iid_C",
+    "A_iid_lr",
+    "A_iid_local",
+    "A_iid_C_boundary_1",
+    "A_iid_lr_boundary_1",
+    "B_mf_C",
+    "B_mf_lr",
+    "B_mf_local",
+    "B_mf_C_boundary_1",
+    "B_mf_lr_boundary_1",
+    "C_iid_scale_geometry",
+    "C_iid_scale_C",
+    "C_iid_scale_lr",
+    "C_iid_scale_local",
+    "D_mf_scale_C",
+    "D_mf_scale_lr",
+    "D_mf_scale_local",
+    "D_mf_scale_C_boundary_1",
+    "D_mf_scale_lr_boundary_1"
+  ],
+  "total_unique_tuning_trials": 85,
+  "actual_trained_trials": 0,
+  "reused_preexisting_trials": 85,
+  "stage_reuse_events": 85,
+  "selected": {
+    "dp-lora-iid": {
+      "hyperparameters": {
+        "C": 1.5,
+        "lr": 0.002,
+        "geom_eps": 0.1
+      },
+      "final_test_top1": 0.7676,
+      "selected_trial_id": "dc62ed7e2f3f4873e1e17857c121480c9e3f7cb85f7865809935bc0016e7d738"
+    },
+    "dp-lora-bandinvmf": {
+      "hyperparameters": {
+        "C": 5.0,
+        "lr": 0.015,
+        "geom_eps": 0.1
+      },
+      "final_test_top1": 0.815,
+      "selected_trial_id": "6de7836e7632b1903e8d75f0634898ad8314d6e2b8e74f3feddab2dc2130a599"
+    },
+    "dp-lora-iid-scale": {
+      "hyperparameters": {
+        "C": 0.3,
+        "lr": 0.002,
+        "geom_eps": 1.0
+      },
+      "final_test_top1": 0.7681,
+      "selected_trial_id": "3099e857925b6938353698ac7c9227b65e6ead81416504dd0094caf4d34f28ea"
+    },
+    "dp-lora-bandinvmf-scale": {
+      "hyperparameters": {
+        "C": 5.0,
+        "lr": 0.02,
+        "geom_eps": 1.0
+      },
+      "final_test_top1": 0.8162,
+      "selected_trial_id": "a994bbe8ec8d4ebac0561e5eb894d8e049cb4a0b9ec06bafa4666014fe4e12d4"
+    }
+  },
+  "final_trials_prepared": 12,
+  "final_launched": false,
+  "provenance_sha256": "0c8220bea74a1e4f0f1bbdb6ccd9bc8b34a9b7d94ed5d7b518d0216d65225f0a",
+  "actual_trained_trials_total": 85
+}

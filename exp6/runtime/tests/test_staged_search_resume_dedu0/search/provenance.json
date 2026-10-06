@@ -1,0 +1,81 @@
+{
+  "plan": {
+    "protocol": "staged-utility-v2",
+    "seed": 20261001,
+    "initial_lr": 0.001,
+    "initial_C": 1.0,
+    "raw_geom_eps": 0.1,
+    "clip_norms": [
+      0.1,
+      0.3,
+      1.0,
+      3.0,
+      10.0
+    ],
+    "learning_rates": [
+      0.0001,
+      0.0003,
+      0.001,
+      0.003,
+      0.01,
+      0.03
+    ],
+    "geom_eps_values": [
+      0.001,
+      0.01,
+      0.1,
+      1.0
+    ],
+    "local_factors": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "max_boundary_extensions": 1,
+    "physical_batch_size": 50,
+    "selection": "final_test_top1_desc_C_asc_lr_asc"
+  },
+  "fixed": {
+    "protocol": "exp6-lora-v1",
+    "dataset": "CIFAR-100",
+    "dataset_size": 50000,
+    "data_root": "data",
+    "pretrained_root": "cache",
+    "download": false,
+    "architecture": "vit_tiny_patch16_224",
+    "image_size": 224,
+    "classes": 100,
+    "epochs": 5,
+    "logical_batch_size": 1000,
+    "steps_per_epoch": 50,
+    "total_steps": 250,
+    "rank": 8,
+    "alpha": 8,
+    "lora_modules": 48,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "adam_eps": 1e-08,
+    "weight_decay": 0.0,
+    "epsilon": 8.0,
+    "delta": 1e-05,
+    "num_bands": 4,
+    "workload": "momentum_bandinvmf",
+    "adjacency": "add_remove_zero_out",
+    "fixed_epoch_order": true,
+    "sampling_amplification": false,
+    "geometry": "actual_weight",
+    "dtype": "float32",
+    "noise_seed_offset": 1,
+    "augmentation": "sample_keyed_seed_epoch_index",
+    "backbone_frozen": true
+  },
+  "environment": {
+    "test": "fixed"
+  },
+  "search_source_sha256": {
+    "search.py": "5d46af55371358785c712a4ba85d944118ef189bc2b5993fd307de66e00b8939",
+    "launch_batch.py": "ecb88ca8044b01eceb9868e941d5fcc35a3cbdb367976001f556219c384bd4fe",
+    "final_runner.py": "c9f05a2e2713d55b89a5e4446ef8fae54d9a08cd00d7032f2f835b734bb4e5f6",
+    "report.py": "73efd8bf029d7662f64829c658d8b7d37c497c458139182ff69fd44215d40acd"
+  }
+}

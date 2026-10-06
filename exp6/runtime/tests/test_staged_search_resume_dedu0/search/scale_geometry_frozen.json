@@ -1,0 +1,13 @@
+{
+  "geom_eps": 0.01,
+  "anchor_trial": {
+    "method": "dp-lora-iid-scale",
+    "seed": 20261001,
+    "lr": 0.003,
+    "C": 3.0,
+    "geom_eps": 0.01,
+    "physical_batch_size": 50
+  },
+  "selection": "final_test_top1; C/lr tie break, then smaller geom_eps",
+  "selected_trial_id": "e0c125e493e46ff7b4efb4b38d099dae2b6444d186962a08c5577624cd2ff58e"
+}

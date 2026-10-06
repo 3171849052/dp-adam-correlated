@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "unique_full_tuning_trials": 85,
+  "first_run_trained": 85,
+  "unique_stage_reused_configs": 8,
+  "resume_trained": 0,
+  "resume_reused": 85,
+  "selected_unchanged": true,
+  "all_selected_are_utility_winners": true,
+  "paired_initialization_order_augmentation_innovations": true,
+  "raw_scale_bandinvmf_matrices_identical": true,
+  "privacy": {
+    "epsilon": 8.0,
+    "delta": 1e-05
+  },
+  "final_trials_prepared": 12,
+  "final_launched": false,
+  "selected": {
+    "dp-lora-iid": {
+      "hyperparameters": {
+        "C": 1.5,
+        "lr": 0.002,
+        "geom_eps": 0.1
+      },
+      "final_test_top1": 0.7676
+    },
+    "dp-lora-bandinvmf": {
+      "hyperparameters": {
+        "C": 5.0,
+        "lr": 0.015,
+        "geom_eps": 0.1
+      },
+      "final_test_top1": 0.815
+    },
+    "dp-lora-iid-scale": {
+      "hyperparameters": {
+        "C": 0.3,
+        "lr": 0.002,
+        "geom_eps": 1.0
+      },
+      "final_test_top1": 0.7681
+    },
+    "dp-lora-bandinvmf-scale": {
+      "hyperparameters": {
+        "C": 5.0,
+        "lr": 0.02,
+        "geom_eps": 1.0
+      },
+      "final_test_top1": 0.8162
+    }
+  }
+}

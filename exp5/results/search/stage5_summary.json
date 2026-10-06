@@ -1,0 +1,66 @@
+{
+  "stage": 5,
+  "method": "dp-coordnorm-sgdm-bandinvmf",
+  "status": "completed",
+  "trial_ids": [
+    "17d69fb3dd132e69c0024ec726b92e3496671e0e6535f045fdf9994832a7b0f4",
+    "7a41eba628060d901dfe80603f58c77916da81b5e954d04b4d241d147c7c646d",
+    "0882a7e2388d6c2d5c8182d824d4bafdceb67123ebe15855d78ace9bdf20ec85"
+  ],
+  "candidates": 3,
+  "new_trials": 0,
+  "reused": 3,
+  "winner": {
+    "method": "dp-coordnorm-sgdm-bandinvmf",
+    "seed": 20261001,
+    "lr": 0.128,
+    "tau": 0.03763713104171447,
+    "C": 1.0,
+    "trial_id": "0882a7e2388d6c2d5c8182d824d4bafdceb67123ebe15855d78ace9bdf20ec85",
+    "final_test_top1": 0.463,
+    "source_trial": "/media/data/data/lt/dp-adam-correlated/exp5/results/search/trials/0882a7e2388d6c2d5c8182d824d4bafdceb67123ebe15855d78ace9bdf20ec85",
+    "diagnostics": {
+      "mean_raw_sample_norm": 107.27575196044921,
+      "mean_transformed_sample_norm": 744.24036915625,
+      "transformed_norm_std": 139.42398798810711,
+      "clip_fraction": 0.999516,
+      "mean_clip_factor": 0.002475339944332838,
+      "raw_mean_gradient_norm": 4.891365107910157,
+      "query_norm": 0.048339554771780965,
+      "batch_coherence": 0.0483522318770829,
+      "noise_std": 0.01298833696878022,
+      "momentum_norm": 22.35265242767334,
+      "update_norm": 2.8611395107421878,
+      "logical_step_seconds": 2.315489475116134
+    },
+    "privacy": {
+      "epsilon": 8.0,
+      "delta": 1e-05,
+      "mu": 1.6660305978457184,
+      "adjacency": "replace_one",
+      "per_query_sensitivity": 0.002,
+      "per_step_sensitivity": 0.002,
+      "sensitivity": 0.015705502617263438,
+      "strategy_sensitivity": 7.852751308631718,
+      "innovation_std": 0.009426899264378237,
+      "participation": "fixed_epoch_sparse",
+      "epochs": 5,
+      "participation_spacing": 50,
+      "direct_participations": 5,
+      "sampling_amplification": false,
+      "workload": "momentum",
+      "beta": 0.9,
+      "num_bands": 4,
+      "noising_coefficients": [
+        1.0,
+        -0.95,
+        -0.0012500000000000844,
+        -0.001187499999999897
+      ],
+      "strategy": "inverse_lower_triangular_toeplitz",
+      "accountant_source": "exp2.privacy.fixed_epoch_sensitivity",
+      "workload_source": "exp2.bandinvmf.build_matrices(momentum_bandinvmf)",
+      "noise_space": "logical_averaged_gradient"
+    }
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "stage": "D_mf_scale_local",
+  "note": "3x3 local refinement about coarse winner",
+  "selection": "final_test_top1_desc_C_asc_lr_asc",
+  "candidates": [
+    {
+      "trial": {
+        "method": "dp-lora-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.0015,
+        "C": 0.5,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "4a2966bf312cd89aa2a2e77e59ce9703faf27e3b978442de3d7c1a212bb9baf6",
+      "fingerprint": "fingerprint-4a2966bf312cd89aa2a2e77e59ce9703faf27e3b978442de3d7c1a212bb9baf6",
+      "final_test_top1": 0.5792055845832017,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/4a2966bf312cd89aa2a2e77e59ce9703faf27e3b978442de3d7c1a212bb9baf6"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.003,
+        "C": 0.5,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "0c2fa4b3d6fd58cd83ca2e2d91ba437dd681e180bf1547f3de97368db92ddf0a",
+      "fingerprint": "fingerprint-0c2fa4b3d6fd58cd83ca2e2d91ba437dd681e180bf1547f3de97368db92ddf0a",
+      "final_test_top1": 0.5896027922916008,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/0c2fa4b3d6fd58cd83ca2e2d91ba437dd681e180bf1547f3de97368db92ddf0a"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.006,
+        "C": 0.5,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "db4fcb23821f10766140b10d6a8fe3da61c1f9fa4df4bdf07cb635364f6155ad",
+      "fingerprint": "fingerprint-db4fcb23821f10766140b10d6a8fe3da61c1f9fa4df4bdf07cb635364f6155ad",
+      "final_test_top1": 0.5792055845832017,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/db4fcb23821f10766140b10d6a8fe3da61c1f9fa4df4bdf07cb635364f6155ad"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.0015,
+        "C": 1.0,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "7ace51916c0a11cef8ba30da61fd79a1b65a126240e583b0f1ccee0f4824eff6",
+      "fingerprint": "fingerprint-7ace51916c0a11cef8ba30da61fd79a1b65a126240e583b0f1ccee0f4824eff6",
+      "final_test_top1": 0.5896027922916008,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/7ace51916c0a11cef8ba30da61fd79a1b65a126240e583b0f1ccee0f4824eff6"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.003,
+        "C": 1.0,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "6e6e80a5458b19001cc52ce8fe81cdf4565bc22813b9f40af287c742ffa0546f",
+      "fingerprint": "fingerprint-6e6e80a5458b19001cc52ce8fe81cdf4565bc22813b9f40af287c742ffa0546f",
+      "final_test_top1": 0.6,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/6e6e80a5458b19001cc52ce8fe81cdf4565bc22813b9f40af287c742ffa0546f"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.006,
+        "C": 1.0,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "716e7816b58c4c91d5df16b133d9a75f3d39a1be371cfe795561022a5597bd55",
+      "fingerprint": "fingerprint-716e7816b58c4c91d5df16b133d9a75f3d39a1be371cfe795561022a5597bd55",
+      "final_test_top1": 0.5896027922916008,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/716e7816b58c4c91d5df16b133d9a75f3d39a1be371cfe795561022a5597bd55"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.0015,
+        "C": 2.0,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "dda1bbe3f4ba56fb6620f24b8897ef2f99c57f04d0a3da89c2d147c7e653d71b",
+      "fingerprint": "fingerprint-dda1bbe3f4ba56fb6620f24b8897ef2f99c57f04d0a3da89c2d147c7e653d71b",
+      "final_test_top1": 0.5792055845832017,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/dda1bbe3f4ba56fb6620f24b8897ef2f99c57f04d0a3da89c2d147c7e653d71b"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.003,
+        "C": 2.0,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "a05d8103dd4681db903b1c966e3effacaafeef80e886b5c10185892c0750a923",
+      "fingerprint": "fingerprint-a05d8103dd4681db903b1c966e3effacaafeef80e886b5c10185892c0750a923",
+      "final_test_top1": 0.5896027922916008,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/a05d8103dd4681db903b1c966e3effacaafeef80e886b5c10185892c0750a923"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.006,
+        "C": 2.0,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "3597209b6488cdc0d03738695de00aacac612221829ed4d5a9d5bcae96ea634a",
+      "fingerprint": "fingerprint-3597209b6488cdc0d03738695de00aacac612221829ed4d5a9d5bcae96ea634a",
+      "final_test_top1": 0.5792055845832017,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/3597209b6488cdc0d03738695de00aacac612221829ed4d5a9d5bcae96ea634a"
+    }
+  ],
+  "candidate_winner": "6e6e80a5458b19001cc52ce8fe81cdf4565bc22813b9f40af287c742ffa0546f"
+}

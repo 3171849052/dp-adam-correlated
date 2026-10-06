@@ -1,6 +1,7 @@
 """FIFO single-GPU trials on physical GPUs 0,1,2; completed trials reused."""
 from exp5.runtime import ROOT, EXP, output_path
 import argparse
+import fcntl
 import json
 import os
 from pathlib import Path
@@ -10,16 +11,17 @@ import time
 from exp5.config import FIXED, GPUS, Trial
 
 
-def read_completed(trial, folder):
+def read_completed(trial, folder, smoke=False):
     folder = output_path(folder)
     summary = json.loads((folder / 'summary.json').read_text())
-    assert summary['status'] == 'completed' and not summary['smoke']
+    assert summary['status'] == 'completed' and summary['smoke'] == smoke
     assert summary['trial_id'] == trial.identity and summary['fixed'] == FIXED
     assert all(summary[k] == v for k, v in trial.asdict().items())
-    assert summary['optimizer_steps'] == summary['noise_steps'] == 250
-    assert summary['physical_batches'] == 2500
-    assert [r['logical_steps'] for r in summary['epochs']] == [50, 100, 150, 200, 250]
-    assert abs(summary['final']['epsilon'] - 8.) < 1e-7
+    assert summary['optimizer_steps'] == summary['noise_steps'] == (1 if smoke else 250)
+    assert summary['physical_batches'] == (10 if smoke else 2500)
+    assert [r['logical_steps'] for r in summary['epochs']] == ([1] if smoke else [50, 100, 150, 200, 250])
+    if not smoke:
+        assert abs(summary['final']['epsilon'] - 8.) < 1e-7
     return summary
 
 
@@ -30,14 +32,17 @@ def launch(jobs, on_complete=None):
     for job in jobs:
         folder = output_path(job['result_dir'])
         trial = Trial(**job['trial'])
-        if (folder / 'summary.json').exists() and not job.get('smoke', False):
-            read_completed(trial, folder)
+        if (folder / 'summary.json').exists():
+            read_completed(trial, folder, smoke=job.get('smoke', False))
             if on_complete:
                 on_complete(job)
         else:
-            if folder.exists():
-                raise RuntimeError(f'Incomplete trial directory: {folder}; inspect it before restarting')
             queue.append(job)
+    locks = []
+    for gpu in GPUS:
+        handle = (EXP / 'runtime' / f'gpu_{gpu}.lock').open('w')
+        fcntl.flock(handle, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        locks.append(handle)
     try:
         while queue or active:
             for gpu in GPUS:
@@ -45,10 +50,11 @@ def launch(jobs, on_complete=None):
                     job = queue.pop(0)
                     trial = Trial(**job['trial'])
                     folder = output_path(job['result_dir'])
-                    folder.mkdir(parents=True)
+                    folder.mkdir(parents=True, exist_ok=True)
                     log = (folder / 'train.log').open('w')
                     command = [sys.executable, '-B', '-m', 'exp5.train', '--method', trial.method,
                                '--seed', str(trial.seed), '--lr', str(trial.lr), '--C', str(trial.C),
+                               '--tau', str(trial.tau),
                                '--result-dir', str(folder)]
                     if job.get('smoke', False):
                         command.append('--smoke')
@@ -77,6 +83,8 @@ def launch(jobs, on_complete=None):
             process.terminate()
             process.wait()
             log.close()
+        for handle in locks:
+            handle.close()
 
 
 def main():
@@ -87,9 +95,9 @@ def main():
     if a.smoke:
         from exp5.config import METHODS, SEARCH_SEED
         # Three simultaneous real trials also exercise GPU 2 independently.
-        trials = [Trial(METHODS[0], SEARCH_SEED, 5e-4, 1.),
-                  Trial(METHODS[1], SEARCH_SEED, 5e-4, 1.),
-                  Trial(METHODS[0], SEARCH_SEED + 1, 5e-4, 1.)]
+        trials = [Trial(METHODS[0], SEARCH_SEED, 1e-3, 1e-3),
+                  Trial(METHODS[1], SEARCH_SEED, 1e-3, 1e-3),
+                  Trial(METHODS[0], SEARCH_SEED + 1, 1e-3, 1e-3)]
         launch([dict(trial=t.asdict(), result_dir=str(EXP / 'results/smoke' / t.identity),
                      smoke=True) for t in trials])
     else:

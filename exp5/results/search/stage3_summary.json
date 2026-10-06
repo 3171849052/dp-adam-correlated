@@ -1,0 +1,66 @@
+{
+  "stage": 3,
+  "method": "dp-coordnorm-sgdm-iid",
+  "status": "completed",
+  "trial_ids": [
+    "699b07026c94f0d075b90463cf6146424d808b335579e82377297bb19368c626",
+    "87d980b21dec74f00aea7888515cb8808b25f3b4664baf355a8c8d74ba89f354",
+    "458250fd1dffd11a49c9c9dec74c9cbe56f26b338cce0de79e419c1f81fda882",
+    "1f1f908b3153c2f2f5012a39dccff08ee3e987e535e1423e04ec3618fa3e8a66",
+    "355782f2553e516faaf42f4d67c1a56006f58404f6c0cea21905569c309cee55",
+    "5ddf3584c52f8ff46f7c2c94f6de09b53aa7f272fb4b55b533794697958597f9"
+  ],
+  "candidates": 6,
+  "new_trials": 0,
+  "reused": 6,
+  "winner": {
+    "method": "dp-coordnorm-sgdm-iid",
+    "seed": 20261001,
+    "lr": 0.016,
+    "tau": 0.03763713104171447,
+    "C": 1.0,
+    "trial_id": "5ddf3584c52f8ff46f7c2c94f6de09b53aa7f272fb4b55b533794697958597f9",
+    "final_test_top1": 0.1138,
+    "source_trial": "/media/data/data/lt/dp-adam-correlated/exp5/results/search/trials/5ddf3584c52f8ff46f7c2c94f6de09b53aa7f272fb4b55b533794697958597f9",
+    "diagnostics": {
+      "mean_raw_sample_norm": 65.24660359570312,
+      "mean_transformed_sample_norm": 573.9414379218749,
+      "transformed_norm_std": 70.5112845092354,
+      "clip_fraction": 1.0,
+      "mean_clip_factor": 0.001810694030582905,
+      "raw_mean_gradient_norm": 2.9702722509765627,
+      "query_norm": 0.058428404316306116,
+      "batch_coherence": 0.058428404316306116,
+      "noise_std": 0.00268430601501697,
+      "momentum_norm": 14.36237460899353,
+      "update_norm": 0.22979799374389648,
+      "logical_step_seconds": 2.2762800448834897
+    },
+    "privacy": {
+      "epsilon": 8.0,
+      "delta": 1e-05,
+      "mu": 1.6660305978457184,
+      "adjacency": "replace_one",
+      "per_query_sensitivity": 0.002,
+      "per_step_sensitivity": 0.002,
+      "sensitivity": 0.00447213595499958,
+      "strategy_sensitivity": 2.23606797749979,
+      "innovation_std": 0.0026843060150169695,
+      "participation": "fixed_epoch_sparse",
+      "epochs": 5,
+      "participation_spacing": 50,
+      "direct_participations": 5,
+      "sampling_amplification": false,
+      "workload": "momentum",
+      "beta": 0.9,
+      "num_bands": 1,
+      "noising_coefficients": [
+        1.0
+      ],
+      "strategy": "inverse_lower_triangular_toeplitz",
+      "accountant_source": "exp2.privacy.fixed_epoch_sensitivity",
+      "workload_source": "exp2.bandinvmf.build_matrices(momentum_bandinvmf)",
+      "noise_space": "logical_averaged_gradient"
+    }
+  }
+}

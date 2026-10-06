@@ -1,0 +1,218 @@
+ M exp5/README.md
+ M exp5/__init__.py
+ M exp5/config.py
+ M exp5/final_runner.py
+ M exp5/launch_batch.py
+ M exp5/mechanism.py
+ M exp5/model.py
+ M exp5/privacy.py
+ D exp5/results/report_tests.log
+ M exp5/results/search/search_summary.json
+ M exp5/results/search/stage1_summary.json
+ M exp5/results/search/stage2_summary.json
+ D exp5/results/search/trials/2a03c2f7f901c23a6b0dc4fddd48edf8fae800079221e26e434d37e21eeda7c0/config.json
+ D exp5/results/search/trials/2a03c2f7f901c23a6b0dc4fddd48edf8fae800079221e26e434d37e21eeda7c0/metrics.csv
+ D exp5/results/search/trials/2a03c2f7f901c23a6b0dc4fddd48edf8fae800079221e26e434d37e21eeda7c0/steps.csv
+ D exp5/results/search/trials/2a03c2f7f901c23a6b0dc4fddd48edf8fae800079221e26e434d37e21eeda7c0/summary.json
+ D exp5/results/search/trials/2a03c2f7f901c23a6b0dc4fddd48edf8fae800079221e26e434d37e21eeda7c0/train.log
+ D exp5/results/search/trials/3bb6a8dda05ecd2600fad436de49dae97a41b6722aafe9ce12ae47b6e5530f82/config.json
+ D exp5/results/search/trials/3bb6a8dda05ecd2600fad436de49dae97a41b6722aafe9ce12ae47b6e5530f82/metrics.csv
+ D exp5/results/search/trials/3bb6a8dda05ecd2600fad436de49dae97a41b6722aafe9ce12ae47b6e5530f82/steps.csv
+ D exp5/results/search/trials/3bb6a8dda05ecd2600fad436de49dae97a41b6722aafe9ce12ae47b6e5530f82/summary.json
+ D exp5/results/search/trials/3bb6a8dda05ecd2600fad436de49dae97a41b6722aafe9ce12ae47b6e5530f82/train.log
+ D exp5/results/search/trials/46c565221d9786308bec368860742da0b105f1fad7a7a1fe8f81194726384fe7/config.json
+ D exp5/results/search/trials/46c565221d9786308bec368860742da0b105f1fad7a7a1fe8f81194726384fe7/metrics.csv
+ D exp5/results/search/trials/46c565221d9786308bec368860742da0b105f1fad7a7a1fe8f81194726384fe7/steps.csv
+ D exp5/results/search/trials/46c565221d9786308bec368860742da0b105f1fad7a7a1fe8f81194726384fe7/summary.json
+ D exp5/results/search/trials/46c565221d9786308bec368860742da0b105f1fad7a7a1fe8f81194726384fe7/train.log
+ D exp5/results/search/trials/4e56831ead0d24ab9219f91a8442951bb83409cf089e13ba7a15e0955feb8a35/config.json
+ D exp5/results/search/trials/4e56831ead0d24ab9219f91a8442951bb83409cf089e13ba7a15e0955feb8a35/metrics.csv
+ D exp5/results/search/trials/4e56831ead0d24ab9219f91a8442951bb83409cf089e13ba7a15e0955feb8a35/steps.csv
+ D exp5/results/search/trials/4e56831ead0d24ab9219f91a8442951bb83409cf089e13ba7a15e0955feb8a35/summary.json
+ D exp5/results/search/trials/4e56831ead0d24ab9219f91a8442951bb83409cf089e13ba7a15e0955feb8a35/train.log
+ D exp5/results/search/trials/63ac9220a1f2beabb585566fe2968ab9b4459674203b16339ad57c22e83cc527/config.json
+ D exp5/results/search/trials/63ac9220a1f2beabb585566fe2968ab9b4459674203b16339ad57c22e83cc527/metrics.csv
+ D exp5/results/search/trials/63ac9220a1f2beabb585566fe2968ab9b4459674203b16339ad57c22e83cc527/steps.csv
+ D exp5/results/search/trials/63ac9220a1f2beabb585566fe2968ab9b4459674203b16339ad57c22e83cc527/train.log
+ D exp5/results/search/trials/83e76dc88e588642b9496446dbba4c7fb560174dca7402e8cb431058329af6bd/config.json
+ D exp5/results/search/trials/83e76dc88e588642b9496446dbba4c7fb560174dca7402e8cb431058329af6bd/metrics.csv
+ D exp5/results/search/trials/83e76dc88e588642b9496446dbba4c7fb560174dca7402e8cb431058329af6bd/steps.csv
+ D exp5/results/search/trials/83e76dc88e588642b9496446dbba4c7fb560174dca7402e8cb431058329af6bd/summary.json
+ D exp5/results/search/trials/83e76dc88e588642b9496446dbba4c7fb560174dca7402e8cb431058329af6bd/train.log
+ D exp5/results/search/trials/a624d47e4c5f6b90b21310b45a4466ea90bc9ccd87787733375c20846a3d7869/config.json
+ D exp5/results/search/trials/a624d47e4c5f6b90b21310b45a4466ea90bc9ccd87787733375c20846a3d7869/metrics.csv
+ D exp5/results/search/trials/a624d47e4c5f6b90b21310b45a4466ea90bc9ccd87787733375c20846a3d7869/steps.csv
+ D exp5/results/search/trials/a624d47e4c5f6b90b21310b45a4466ea90bc9ccd87787733375c20846a3d7869/summary.json
+ D exp5/results/search/trials/a624d47e4c5f6b90b21310b45a4466ea90bc9ccd87787733375c20846a3d7869/train.log
+ D exp5/results/search/trials/a83c4467f75ad9cf827669ebbf4c9ca1f1f67c4e075dbcf1bed1ad832dd6bd39/config.json
+ D exp5/results/search/trials/a83c4467f75ad9cf827669ebbf4c9ca1f1f67c4e075dbcf1bed1ad832dd6bd39/metrics.csv
+ D exp5/results/search/trials/a83c4467f75ad9cf827669ebbf4c9ca1f1f67c4e075dbcf1bed1ad832dd6bd39/steps.csv
+ D exp5/results/search/trials/a83c4467f75ad9cf827669ebbf4c9ca1f1f67c4e075dbcf1bed1ad832dd6bd39/summary.json
+ D exp5/results/search/trials/a83c4467f75ad9cf827669ebbf4c9ca1f1f67c4e075dbcf1bed1ad832dd6bd39/train.log
+ D exp5/results/search/trials/b0fd8e7849ff2686c7ed8a5bc62a1e20bf46bd9f59b1cad9f3dfb1a57fec8c44/config.json
+ D exp5/results/search/trials/b0fd8e7849ff2686c7ed8a5bc62a1e20bf46bd9f59b1cad9f3dfb1a57fec8c44/metrics.csv
+ D exp5/results/search/trials/b0fd8e7849ff2686c7ed8a5bc62a1e20bf46bd9f59b1cad9f3dfb1a57fec8c44/steps.csv
+ D exp5/results/search/trials/b0fd8e7849ff2686c7ed8a5bc62a1e20bf46bd9f59b1cad9f3dfb1a57fec8c44/summary.json
+ D exp5/results/search/trials/b0fd8e7849ff2686c7ed8a5bc62a1e20bf46bd9f59b1cad9f3dfb1a57fec8c44/train.log
+ D exp5/results/search/trials/d40db733fd06297e6e5be7ed968804b65ae24fc7d72edd685a73ea3a3d6bdda8/config.json
+ D exp5/results/search/trials/d40db733fd06297e6e5be7ed968804b65ae24fc7d72edd685a73ea3a3d6bdda8/metrics.csv
+ D exp5/results/search/trials/d40db733fd06297e6e5be7ed968804b65ae24fc7d72edd685a73ea3a3d6bdda8/steps.csv
+ D exp5/results/search/trials/d40db733fd06297e6e5be7ed968804b65ae24fc7d72edd685a73ea3a3d6bdda8/train.log
+ D exp5/results/search/trials/df8f9b694c06a918a372e35cea89ea9a2c3d5508919f2d12aa8dd866c76c9f8b/config.json
+ D exp5/results/search/trials/df8f9b694c06a918a372e35cea89ea9a2c3d5508919f2d12aa8dd866c76c9f8b/metrics.csv
+ D exp5/results/search/trials/df8f9b694c06a918a372e35cea89ea9a2c3d5508919f2d12aa8dd866c76c9f8b/steps.csv
+ D exp5/results/search/trials/df8f9b694c06a918a372e35cea89ea9a2c3d5508919f2d12aa8dd866c76c9f8b/summary.json
+ D exp5/results/search/trials/df8f9b694c06a918a372e35cea89ea9a2c3d5508919f2d12aa8dd866c76c9f8b/train.log
+ D exp5/results/search/trials/e481fe8f37f7cc27af00738325a3209cc036eb6472589448c26633dedb693b51/config.json
+ D exp5/results/search/trials/e481fe8f37f7cc27af00738325a3209cc036eb6472589448c26633dedb693b51/metrics.csv
+ D exp5/results/search/trials/e481fe8f37f7cc27af00738325a3209cc036eb6472589448c26633dedb693b51/steps.csv
+ D exp5/results/search/trials/e481fe8f37f7cc27af00738325a3209cc036eb6472589448c26633dedb693b51/train.log
+ D exp5/results/search/trials/f57491bd7a874dde2dfe79e6e4885422863bbe47ce0d82ab5550fcbb403e6f1b/config.json
+ D exp5/results/search/trials/f57491bd7a874dde2dfe79e6e4885422863bbe47ce0d82ab5550fcbb403e6f1b/metrics.csv
+ D exp5/results/search/trials/f57491bd7a874dde2dfe79e6e4885422863bbe47ce0d82ab5550fcbb403e6f1b/steps.csv
+ D exp5/results/search/trials/f57491bd7a874dde2dfe79e6e4885422863bbe47ce0d82ab5550fcbb403e6f1b/summary.json
+ D exp5/results/search/trials/f57491bd7a874dde2dfe79e6e4885422863bbe47ce0d82ab5550fcbb403e6f1b/train.log
+ D exp5/results/search/trials/f725c8f4e2ce07f72255972ae3823df0dcc9b35419cf1cf4ea91a884c7eccc0b/config.json
+ D exp5/results/search/trials/f725c8f4e2ce07f72255972ae3823df0dcc9b35419cf1cf4ea91a884c7eccc0b/metrics.csv
+ D exp5/results/search/trials/f725c8f4e2ce07f72255972ae3823df0dcc9b35419cf1cf4ea91a884c7eccc0b/steps.csv
+ D exp5/results/search/trials/f725c8f4e2ce07f72255972ae3823df0dcc9b35419cf1cf4ea91a884c7eccc0b/summary.json
+ D exp5/results/search/trials/f725c8f4e2ce07f72255972ae3823df0dcc9b35419cf1cf4ea91a884c7eccc0b/train.log
+ D exp5/results/search/trials/ff146e0b01a8b93fa679504c3a06a5e54aa2409ec20d5c1c07634689ae0874d1/config.json
+ D exp5/results/search/trials/ff146e0b01a8b93fa679504c3a06a5e54aa2409ec20d5c1c07634689ae0874d1/metrics.csv
+ D exp5/results/search/trials/ff146e0b01a8b93fa679504c3a06a5e54aa2409ec20d5c1c07634689ae0874d1/steps.csv
+ D exp5/results/search/trials/ff146e0b01a8b93fa679504c3a06a5e54aa2409ec20d5c1c07634689ae0874d1/summary.json
+ D exp5/results/search/trials/ff146e0b01a8b93fa679504c3a06a5e54aa2409ec20d5c1c07634689ae0874d1/train.log
+ M exp5/results/search_launcher.log
+ D exp5/results/smoke/4bbba7b70d11920156f6408c2b96cde463a4d4ce76d1c8a3f3881f307e7069b2/config.json
+ D exp5/results/smoke/4bbba7b70d11920156f6408c2b96cde463a4d4ce76d1c8a3f3881f307e7069b2/metrics.csv
+ D exp5/results/smoke/4bbba7b70d11920156f6408c2b96cde463a4d4ce76d1c8a3f3881f307e7069b2/steps.csv
+ D exp5/results/smoke/4bbba7b70d11920156f6408c2b96cde463a4d4ce76d1c8a3f3881f307e7069b2/summary.json
+ D exp5/results/smoke/4bbba7b70d11920156f6408c2b96cde463a4d4ce76d1c8a3f3881f307e7069b2/train.log
+ D exp5/results/smoke/777e58e3424e353ae91e0314f222b504d607b7ad2b5bf00d3e4b2bcea342cd9b/config.json
+ D exp5/results/smoke/777e58e3424e353ae91e0314f222b504d607b7ad2b5bf00d3e4b2bcea342cd9b/metrics.csv
+ D exp5/results/smoke/777e58e3424e353ae91e0314f222b504d607b7ad2b5bf00d3e4b2bcea342cd9b/steps.csv
+ D exp5/results/smoke/777e58e3424e353ae91e0314f222b504d607b7ad2b5bf00d3e4b2bcea342cd9b/summary.json
+ D exp5/results/smoke/777e58e3424e353ae91e0314f222b504d607b7ad2b5bf00d3e4b2bcea342cd9b/train.log
+ D exp5/results/smoke/df8f9b694c06a918a372e35cea89ea9a2c3d5508919f2d12aa8dd866c76c9f8b/config.json
+ D exp5/results/smoke/df8f9b694c06a918a372e35cea89ea9a2c3d5508919f2d12aa8dd866c76c9f8b/metrics.csv
+ D exp5/results/smoke/df8f9b694c06a918a372e35cea89ea9a2c3d5508919f2d12aa8dd866c76c9f8b/steps.csv
+ D exp5/results/smoke/df8f9b694c06a918a372e35cea89ea9a2c3d5508919f2d12aa8dd866c76c9f8b/summary.json
+ D exp5/results/smoke/df8f9b694c06a918a372e35cea89ea9a2c3d5508919f2d12aa8dd866c76c9f8b/train.log
+ M exp5/results/smoke_launcher.log
+ M exp5/results/smoke_verification.json
+ M exp5/results/smoke_verification.log
+ M exp5/results/unit_tests.log
+ M exp5/runtime.py
+ D exp5/runtime/tests/test_final_report_sample_std_a0/final_summary.json
+ D exp5/runtime/tests/test_final_report_sample_std_a0/report.md
+ D exp5/runtime/tests/test_final_report_sample_std_acurrent
+ D exp5/runtime/tests/test_launcher_three_gpus_one_p0/trial_0/summary.json
+ D exp5/runtime/tests/test_launcher_three_gpus_one_p0/trial_0/train.log
+ D exp5/runtime/tests/test_launcher_three_gpus_one_p0/trial_1/summary.json
+ D exp5/runtime/tests/test_launcher_three_gpus_one_p0/trial_1/train.log
+ D exp5/runtime/tests/test_launcher_three_gpus_one_p0/trial_2/summary.json
+ D exp5/runtime/tests/test_launcher_three_gpus_one_p0/trial_2/train.log
+ D exp5/runtime/tests/test_launcher_three_gpus_one_p0/trial_3/summary.json
+ D exp5/runtime/tests/test_launcher_three_gpus_one_p0/trial_3/train.log
+ D exp5/runtime/tests/test_launcher_three_gpus_one_p0/trial_4/summary.json
+ D exp5/runtime/tests/test_launcher_three_gpus_one_p0/trial_4/train.log
+ D exp5/runtime/tests/test_launcher_three_gpus_one_p0/trial_5/summary.json
+ D exp5/runtime/tests/test_launcher_three_gpus_one_p0/trial_5/train.log
+ D exp5/runtime/tests/test_launcher_three_gpus_one_pcurrent
+ D exp5/runtime/tests/test_outputs_and_trial_identitcurrent
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/bandinvmf_frozen.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/iid_frozen.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/search_summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/selected_configs.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/stage1_summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/stage2_summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/stage3_summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/stage4_summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/stage5_summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/stage6_summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/044a1892096a8adf06a0bb89dedd56c840e77cb74b2e69cfa02217aa2de9a12c/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/0783e71711067596ecde13b020784ea888c03da565fd99ad2e911abddfc8cdda/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/0afa77e633d9168b67fa39e437f2e14c8df45e4ed101ff9dc416c9251aa49149/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/182374e0a6f455ab30f74ab12226c4463e4a49fbae1b4fa356334b82ad8883ce/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/1893bb74692980ed51238412b01ee60eaa04c1557e33664ab904a0f35bad7924/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/1d2b78eed372f938cbd789d7f3de9ac8c7740e735f6033825b0495dd6e362f4e/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/27c033ac80f588c541af28b317b01a8861b35a5530888826232a768080c8ad51/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/29e2ef0aa5d76971ea9ac4d3ac6cbf436a14cfbbcfde288861d0ff12b8fb9004/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/2a03c2f7f901c23a6b0dc4fddd48edf8fae800079221e26e434d37e21eeda7c0/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/46c565221d9786308bec368860742da0b105f1fad7a7a1fe8f81194726384fe7/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/4bbba7b70d11920156f6408c2b96cde463a4d4ce76d1c8a3f3881f307e7069b2/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/6558c3777e22c452090e675f05df8ab97fabc39ec5a790fab97aa4ffee7dc5db/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/82c2e4ff375257fee4244813783de58bfd5f0ce28ed75f9b211845c2c616d22a/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/856086c7d0ab4eed45e7c3032fa11b87faf1302e2b1ca5df8c0a4a56c51f83d5/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/9ac4f44e017e966dda74d314e638ecd26853bedfbb8cca11e8340cb4c80badaa/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/a624d47e4c5f6b90b21310b45a4466ea90bc9ccd87787733375c20846a3d7869/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/b88b30ccd0f7944aacc6d1c50439a9abd60510b8524b379daaf04eb3a2f36e4c/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/c2589f82867eda840c2088b3e38ed1ce2e6a7bb65a1d7d932f205f4f500faf59/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/d6912e507c4614b53a0f709cb81102accc960074624392456cc8cfb721db6f18/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/df8f9b694c06a918a372e35cea89ea9a2c3d5508919f2d12aa8dd866c76c9f8b/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/f0fbf27c8c601b730201233b5f82d89745b719fa1ef41bb817ddae967be96c65/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/f57491bd7a874dde2dfe79e6e4885422863bbe47ce0d82ab5550fcbb403e6f1b/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/f93772e658401a104a2cf040054d67fc3386894205fec7f660fe650f91d961d0/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/f949024a734352fca396d27f9ad7137eae1f216aad4d9fea9f29f24639e14f59/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/fe3e372449c730577d445836499f7c93657aef2fa803ef1225f4a02559725b1c/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_0/trials/ff146e0b01a8b93fa679504c3a06a5e54aa2409ec20d5c1c07634689ae0874d1/summary.json
+ D exp5/runtime/tests/test_staged_grid_dedup_resume_current
+ M exp5/search.py
+ D exp5/tests/test_platform.py
+ M exp5/train.py
+ M exp5/verify_smoke.py
+?? exp5/audit_results.py
+?? exp5/data.py
+?? exp5/probe.py
+?? exp5/results/final/
+?? exp5/results/final_verification.json
+?? exp5/results/final_verification.log
+?? exp5/results/phase1_report.md
+?? exp5/results/phase1_summary.json
+?? exp5/results/resume_verification.log
+?? exp5/results/scale_probe.log
+?? exp5/results/search/bandinvmf_frozen.json
+?? exp5/results/search/iid_frozen.json
+?? exp5/results/search/scale_probe.json
+?? exp5/results/search/selected_configs.json
+?? exp5/results/search/stage3_summary.json
+?? exp5/results/search/stage4_summary.json
+?? exp5/results/search/stage5_summary.json
+?? exp5/results/search/trials/0882a7e2388d6c2d5c8182d824d4bafdceb67123ebe15855d78ace9bdf20ec85/
+?? exp5/results/search/trials/089aed7382cdb0dcadb602150b8bd7996ed7334bacbaf11fb9cd59e26e9014c0/
+?? exp5/results/search/trials/17d69fb3dd132e69c0024ec726b92e3496671e0e6535f045fdf9994832a7b0f4/
+?? exp5/results/search/trials/1f1f908b3153c2f2f5012a39dccff08ee3e987e535e1423e04ec3618fa3e8a66/
+?? exp5/results/search/trials/355782f2553e516faaf42f4d67c1a56006f58404f6c0cea21905569c309cee55/
+?? exp5/results/search/trials/458250fd1dffd11a49c9c9dec74c9cbe56f26b338cce0de79e419c1f81fda882/
+?? exp5/results/search/trials/4ca79d9fc314c7176d73d11477e22e8412b8581737e972fcbbbbe344a9447f2e/
+?? exp5/results/search/trials/4d5861a8683dcaba9d3fa79d7e77dd37fa57afa5969d097f6bc02550869ba819/
+?? exp5/results/search/trials/5ddf3584c52f8ff46f7c2c94f6de09b53aa7f272fb4b55b533794697958597f9/
+?? exp5/results/search/trials/65b0b2114ef6da12cec8651355a86af4a5a55bdb21048f102ce50d3571590b05/
+?? exp5/results/search/trials/699b07026c94f0d075b90463cf6146424d808b335579e82377297bb19368c626/
+?? exp5/results/search/trials/6e4a6da0737b69beafd3f59f3186a29728eb8589c727259a6fc7deef8c5c9004/
+?? exp5/results/search/trials/7a41eba628060d901dfe80603f58c77916da81b5e954d04b4d241d147c7c646d/
+?? exp5/results/search/trials/7e621bbb6ad8e6774dafa498ab1127b88b46ff80cf1c6f7deea574424b70c04d/
+?? exp5/results/search/trials/87d980b21dec74f00aea7888515cb8808b25f3b4664baf355a8c8d74ba89f354/
+?? exp5/results/search/trials/ac4a050b06413ab5c53c6738f082b90718194cb24e194a638d38ef0b168e5b8b/
+?? exp5/results/search/trials/b1ad44a509f6414fef33540bac82f1959a839e891e8a305676d689a2a8902d64/
+?? exp5/results/search/trials/b5f625a88a026489aa74a15486e84fb61a32aa2e91c208cb1a04c89576aab7e9/
+?? exp5/results/search/trials/d4d101d6288223119e99de99e9acb275313004846f51616b34812b0b72e47b34/
+?? exp5/results/search/trials/fa0525739d52223b63cd11add34101a814f350b9c8b8cdcdcdc0a8f80374ee52/
+?? exp5/results/smoke/339de4cd394e7ac0b13726ff8ef0e766d1e87504ae0cf2adbfd4236ecacddf33/
+?? exp5/results/smoke/d43da910d788376ae2404ea4640796efdb320b988e523ad8bf7853bc41362dd8/
+?? exp5/results/smoke/f811f4d788f37bff2245cfe2ac127a5fedf923755256e79d4accac5e3c55366f/
+?? exp5/results/smoke_chunk10/
+?? exp5/runtime/gpu_0.lock
+?? exp5/runtime/gpu_1.lock
+?? exp5/runtime/gpu_2.lock
+?? exp5/runtime/tests/test_final_report_ddof_one0/
+?? exp5/runtime/tests/test_final_report_ddof_onecurrent
+?? exp5/runtime/tests/test_launcher_three_gpus_singl0/
+?? exp5/runtime/tests/test_launcher_three_gpus_singlcurrent
+?? exp5/runtime/tests/test_output_paths_identity_andcurrent
+?? exp5/runtime/tests/test_search_stages_resume_dedu0/
+?? exp5/runtime/tests/test_search_stages_resume_deducurrent
+?? exp5/runtime/triton/
+?? exp5/status.py
+?? exp5/tests/test_coordnorm.py
+?? exp6/

@@ -1,0 +1,92 @@
+{
+  "stage": "D_mf_scale_lr",
+  "note": "Coarse LR search at current winning C",
+  "selection": "final_test_top1_desc_C_asc_lr_asc",
+  "candidates": [
+    {
+      "trial": {
+        "method": "dp-lora-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.0001,
+        "C": 1.0,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "3e5ae22120240b0928b09172c1e286bd9e31eac55850cd46b39d81d8806cb45c",
+      "fingerprint": "fingerprint-3e5ae22120240b0928b09172c1e286bd9e31eac55850cd46b39d81d8806cb45c",
+      "final_test_top1": 0.5489820392750676,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/3e5ae22120240b0928b09172c1e286bd9e31eac55850cd46b39d81d8806cb45c"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.0003,
+        "C": 1.0,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "aa69ba33369e7b9156cfdc673c842282117119f0b43b1c47c5ed8be183041aec",
+      "fingerprint": "fingerprint-aa69ba33369e7b9156cfdc673c842282117119f0b43b1c47c5ed8be183041aec",
+      "final_test_top1": 0.5654612236050893,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/aa69ba33369e7b9156cfdc673c842282117119f0b43b1c47c5ed8be183041aec"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.001,
+        "C": 1.0,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "16b6571c0d2614cc599a296eeefb291877537429d08e45c881d07f047894aa2f",
+      "fingerprint": "fingerprint-16b6571c0d2614cc599a296eeefb291877537429d08e45c881d07f047894aa2f",
+      "final_test_top1": 0.5835208156699784,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/16b6571c0d2614cc599a296eeefb291877537429d08e45c881d07f047894aa2f"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.003,
+        "C": 1.0,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "6e6e80a5458b19001cc52ce8fe81cdf4565bc22813b9f40af287c742ffa0546f",
+      "fingerprint": "fingerprint-6e6e80a5458b19001cc52ce8fe81cdf4565bc22813b9f40af287c742ffa0546f",
+      "final_test_top1": 0.6,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/6e6e80a5458b19001cc52ce8fe81cdf4565bc22813b9f40af287c742ffa0546f"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.01,
+        "C": 1.0,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "88c6c1da14bc5ef2464b58157b8e31d8fb9931775f46c81d6540782e45473e6f",
+      "fingerprint": "fingerprint-88c6c1da14bc5ef2464b58157b8e31d8fb9931775f46c81d6540782e45473e6f",
+      "final_test_top1": 0.5819404079351109,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/88c6c1da14bc5ef2464b58157b8e31d8fb9931775f46c81d6540782e45473e6f"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.03,
+        "C": 1.0,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "d7d488be6fdc216801eb500ed7853792f9ce109be2d02f7c3f698910baed7e39",
+      "fingerprint": "fingerprint-d7d488be6fdc216801eb500ed7853792f9ce109be2d02f7c3f698910baed7e39",
+      "final_test_top1": 0.5654612236050893,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/d7d488be6fdc216801eb500ed7853792f9ce109be2d02f7c3f698910baed7e39"
+    }
+  ],
+  "candidate_winner": "6e6e80a5458b19001cc52ce8fe81cdf4565bc22813b9f40af287c742ffa0546f"
+}

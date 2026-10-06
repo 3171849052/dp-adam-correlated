@@ -1,0 +1,143 @@
+{
+  "selected_configs": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/selected_configs.json",
+  "seeds": [
+    20261011,
+    20261012,
+    20261013
+  ],
+  "jobs": [
+    {
+      "trial": {
+        "method": "dp-lora-iid",
+        "seed": 20261011,
+        "lr": 0.003,
+        "C": 3.0,
+        "geom_eps": 0.1,
+        "physical_batch_size": 50
+      },
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp6/results/final/d10e7bb6e9b4ebf29d96fa35179cd1bb967d77b0bd6a26c073c866f586fc725d"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-bandinvmf",
+        "seed": 20261011,
+        "lr": 0.01,
+        "C": 10.0,
+        "geom_eps": 0.1,
+        "physical_batch_size": 50
+      },
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp6/results/final/8e6b21f05b2c0d2a7d22f793676ecdc65e1d5687f9fda5634b6413f70e74d75c"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-iid-scale",
+        "seed": 20261011,
+        "lr": 0.001,
+        "C": 0.3,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp6/results/final/9d2fd2c21a30fbcb595af3c806e028b107284ba3be449920a42ba692eedc1832"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-bandinvmf-scale",
+        "seed": 20261011,
+        "lr": 0.003,
+        "C": 1.0,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp6/results/final/6474bcc64cf29f012f9133c01e9a84483b96aa272cbe367ea9e6d048cd782a82"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-iid",
+        "seed": 20261012,
+        "lr": 0.003,
+        "C": 3.0,
+        "geom_eps": 0.1,
+        "physical_batch_size": 50
+      },
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp6/results/final/31eb491b8c34793688437683bbe411da05bfb487886c1ff4b469a49eb2c476ec"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-bandinvmf",
+        "seed": 20261012,
+        "lr": 0.01,
+        "C": 10.0,
+        "geom_eps": 0.1,
+        "physical_batch_size": 50
+      },
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp6/results/final/360b09b69afdf6bf37d8ff10209a4f71a007575f0382815ddf98a253899fbb8c"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-iid-scale",
+        "seed": 20261012,
+        "lr": 0.001,
+        "C": 0.3,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp6/results/final/84818738159356586db2ea82cbf7c279d15613def80e9e5d11ab4f3bf7c11e58"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-bandinvmf-scale",
+        "seed": 20261012,
+        "lr": 0.003,
+        "C": 1.0,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp6/results/final/fa028d4b3f72a582a4c533c60c1fdc15008d42b985736522f8ebfcfac526eac9"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-iid",
+        "seed": 20261013,
+        "lr": 0.003,
+        "C": 3.0,
+        "geom_eps": 0.1,
+        "physical_batch_size": 50
+      },
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp6/results/final/0e98a3a655dee41962bdd401495659028e052b1e7fe0daf83fc46e4e7c9078b2"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-bandinvmf",
+        "seed": 20261013,
+        "lr": 0.01,
+        "C": 10.0,
+        "geom_eps": 0.1,
+        "physical_batch_size": 50
+      },
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp6/results/final/f08a0426e38d7ec59420afb404606b2e414320c07a19e5f555b6c39b677343d5"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-iid-scale",
+        "seed": 20261013,
+        "lr": 0.001,
+        "C": 0.3,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp6/results/final/45b5e6ba88a33b47ea5bbeaa7888dab4516f5968b492973c7549e94e789bde9f"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-bandinvmf-scale",
+        "seed": 20261013,
+        "lr": 0.003,
+        "C": 1.0,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp6/results/final/23c8b6336f8bb1e4fe435727fa9f0f7e5648e2b68618271ef5211bd4b6cc9b01"
+    }
+  ],
+  "status": "prepared_not_launched"
+}

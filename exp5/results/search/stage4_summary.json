@@ -1,0 +1,68 @@
+{
+  "stage": 4,
+  "method": "dp-coordnorm-sgdm-bandinvmf",
+  "status": "completed",
+  "trial_ids": [
+    "7e621bbb6ad8e6774dafa498ab1127b88b46ff80cf1c6f7deea574424b70c04d",
+    "089aed7382cdb0dcadb602150b8bd7996ed7334bacbaf11fb9cd59e26e9014c0",
+    "d4d101d6288223119e99de99e9acb275313004846f51616b34812b0b72e47b34",
+    "17d69fb3dd132e69c0024ec726b92e3496671e0e6535f045fdf9994832a7b0f4",
+    "7a41eba628060d901dfe80603f58c77916da81b5e954d04b4d241d147c7c646d"
+  ],
+  "candidates": 5,
+  "new_trials": 0,
+  "reused": 5,
+  "winner": {
+    "method": "dp-coordnorm-sgdm-bandinvmf",
+    "seed": 20261001,
+    "lr": 0.064,
+    "tau": 0.03763713104171447,
+    "C": 1.0,
+    "trial_id": "7a41eba628060d901dfe80603f58c77916da81b5e954d04b4d241d147c7c646d",
+    "final_test_top1": 0.3991,
+    "source_trial": "/media/data/data/lt/dp-adam-correlated/exp5/results/search/trials/7a41eba628060d901dfe80603f58c77916da81b5e954d04b4d241d147c7c646d",
+    "diagnostics": {
+      "mean_raw_sample_norm": 98.64657041064451,
+      "mean_transformed_sample_norm": 711.794029890625,
+      "transformed_norm_std": 101.00593917941713,
+      "clip_fraction": 1.0,
+      "mean_clip_factor": 0.001530579936400056,
+      "raw_mean_gradient_norm": 4.200801340820313,
+      "query_norm": 0.04979550988972187,
+      "batch_coherence": 0.04979550988972187,
+      "noise_std": 0.01298833696878022,
+      "momentum_norm": 22.353372215270998,
+      "update_norm": 1.4306158217773437,
+      "logical_step_seconds": 2.308258359372616
+    },
+    "privacy": {
+      "epsilon": 8.0,
+      "delta": 1e-05,
+      "mu": 1.6660305978457184,
+      "adjacency": "replace_one",
+      "per_query_sensitivity": 0.002,
+      "per_step_sensitivity": 0.002,
+      "sensitivity": 0.015705502617263438,
+      "strategy_sensitivity": 7.852751308631718,
+      "innovation_std": 0.009426899264378237,
+      "participation": "fixed_epoch_sparse",
+      "epochs": 5,
+      "participation_spacing": 50,
+      "direct_participations": 5,
+      "sampling_amplification": false,
+      "workload": "momentum",
+      "beta": 0.9,
+      "num_bands": 4,
+      "noising_coefficients": [
+        1.0,
+        -0.95,
+        -0.0012500000000000844,
+        -0.001187499999999897
+      ],
+      "strategy": "inverse_lower_triangular_toeplitz",
+      "accountant_source": "exp2.privacy.fixed_epoch_sensitivity",
+      "workload_source": "exp2.bandinvmf.build_matrices(momentum_bandinvmf)",
+      "noise_space": "logical_averaged_gradient"
+    }
+  }
+}

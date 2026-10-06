@@ -1,0 +1,296 @@
+{"event": "started", "gpu": 1, "pid": 18101, "method": "dp-lora-iid"}
+{"event": "started", "gpu": 2, "pid": 18102, "method": "dp-lora-iid"}
+{"event": "started", "gpu": 3, "pid": 18103, "method": "dp-lora-iid"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-iid"}
+{"event": "started", "gpu": 1, "pid": 28996, "method": "dp-lora-iid"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-iid"}
+{"event": "started", "gpu": 3, "pid": 29066, "method": "dp-lora-iid"}
+{"event": "completed", "gpu": 2, "method": "dp-lora-iid"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-iid"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-iid"}
+{"event": "stage_completed", "stage": "A_iid_C", "trained": 5, "reused": 0, "winner": {"method": "dp-lora-iid", "seed": 20261001, "lr": 0.001, "C": 3.0, "geom_eps": 0.1, "physical_batch_size": 50}, "final_test_top1": 0.7455}
+{"event": "started", "gpu": 1, "pid": 38242, "method": "dp-lora-iid"}
+{"event": "started", "gpu": 2, "pid": 38244, "method": "dp-lora-iid"}
+{"event": "started", "gpu": 3, "pid": 38245, "method": "dp-lora-iid"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-iid"}
+{"event": "started", "gpu": 3, "pid": 48579, "method": "dp-lora-iid"}
+{"event": "completed", "gpu": 2, "method": "dp-lora-iid"}
+{"event": "started", "gpu": 2, "pid": 49074, "method": "dp-lora-iid"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-iid"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-iid"}
+{"event": "completed", "gpu": 2, "method": "dp-lora-iid"}
+{"event": "stage_completed", "stage": "A_iid_lr", "trained": 5, "reused": 1, "winner": {"method": "dp-lora-iid", "seed": 20261001, "lr": 0.001, "C": 3.0, "geom_eps": 0.1, "physical_batch_size": 50}, "final_test_top1": 0.7455}
+{"event": "started", "gpu": 1, "pid": 57769, "method": "dp-lora-iid"}
+{"event": "started", "gpu": 2, "pid": 57770, "method": "dp-lora-iid"}
+{"event": "started", "gpu": 3, "pid": 57771, "method": "dp-lora-iid"}
+{"event": "completed", "gpu": 2, "method": "dp-lora-iid"}
+{"event": "started", "gpu": 2, "pid": 68015, "method": "dp-lora-iid"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-iid"}
+{"event": "started", "gpu": 3, "pid": 68828, "method": "dp-lora-iid"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-iid"}
+{"event": "started", "gpu": 1, "pid": 69244, "method": "dp-lora-iid"}
+{"event": "completed", "gpu": 2, "method": "dp-lora-iid"}
+{"event": "started", "gpu": 2, "pid": 79529, "method": "dp-lora-iid"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-iid"}
+{"event": "started", "gpu": 1, "pid": 80984, "method": "dp-lora-iid"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-iid"}
+{"event": "completed", "gpu": 2, "method": "dp-lora-iid"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-iid"}
+{"event": "stage_completed", "stage": "A_iid_local", "trained": 8, "reused": 1, "winner": {"method": "dp-lora-iid", "seed": 20261001, "lr": 0.002, "C": 1.5, "geom_eps": 0.1, "physical_batch_size": 50}, "final_test_top1": 0.7676}
+{"event": "started", "gpu": 1, "pid": 89879, "method": "dp-lora-iid"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-iid"}
+{"event": "stage_completed", "stage": "A_iid_C_boundary_1", "trained": 1, "reused": 0, "winner": {"method": "dp-lora-iid", "seed": 20261001, "lr": 0.002, "C": 0.75, "geom_eps": 0.1, "physical_batch_size": 50}, "final_test_top1": 0.767}
+{"event": "started", "gpu": 1, "pid": 96778, "method": "dp-lora-iid"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-iid"}
+{"event": "stage_completed", "stage": "A_iid_lr_boundary_1", "trained": 1, "reused": 0, "winner": {"method": "dp-lora-iid", "seed": 20261001, "lr": 0.004, "C": 1.5, "geom_eps": 0.1, "physical_batch_size": 50}, "final_test_top1": 0.6746}
+{"event": "started", "gpu": 1, "pid": 103824, "method": "dp-lora-bandinvmf"}
+{"event": "started", "gpu": 2, "pid": 103825, "method": "dp-lora-bandinvmf"}
+{"event": "started", "gpu": 3, "pid": 103826, "method": "dp-lora-bandinvmf"}
+{"event": "completed", "gpu": 2, "method": "dp-lora-bandinvmf"}
+{"event": "started", "gpu": 2, "pid": 114216, "method": "dp-lora-bandinvmf"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-bandinvmf"}
+{"event": "started", "gpu": 1, "pid": 115574, "method": "dp-lora-bandinvmf"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-bandinvmf"}
+{"event": "started", "gpu": 3, "pid": 115644, "method": "dp-lora-bandinvmf"}
+{"event": "completed", "gpu": 2, "method": "dp-lora-bandinvmf"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-bandinvmf"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-bandinvmf"}
+{"event": "stage_completed", "stage": "B_mf_C", "trained": 6, "reused": 0, "winner": {"method": "dp-lora-bandinvmf", "seed": 20261001, "lr": 0.002, "C": 10.0, "geom_eps": 0.1, "physical_batch_size": 50}, "final_test_top1": 0.6383}
+{"event": "started", "gpu": 1, "pid": 126139, "method": "dp-lora-bandinvmf"}
+{"event": "started", "gpu": 2, "pid": 126140, "method": "dp-lora-bandinvmf"}
+{"event": "started", "gpu": 3, "pid": 126141, "method": "dp-lora-bandinvmf"}
+{"event": "completed", "gpu": 2, "method": "dp-lora-bandinvmf"}
+{"event": "started", "gpu": 2, "pid": 136934, "method": "dp-lora-bandinvmf"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-bandinvmf"}
+{"event": "started", "gpu": 3, "pid": 137002, "method": "dp-lora-bandinvmf"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-bandinvmf"}
+{"event": "started", "gpu": 1, "pid": 138685, "method": "dp-lora-bandinvmf"}
+{"event": "completed", "gpu": 2, "method": "dp-lora-bandinvmf"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-bandinvmf"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-bandinvmf"}
+{"event": "stage_completed", "stage": "B_mf_lr", "trained": 6, "reused": 1, "winner": {"method": "dp-lora-bandinvmf", "seed": 20261001, "lr": 0.03, "C": 10.0, "geom_eps": 0.1, "physical_batch_size": 50}, "final_test_top1": 0.8086}
+{"event": "started", "gpu": 1, "pid": 148413, "method": "dp-lora-bandinvmf"}
+{"event": "started", "gpu": 2, "pid": 148414, "method": "dp-lora-bandinvmf"}
+{"event": "started", "gpu": 3, "pid": 148415, "method": "dp-lora-bandinvmf"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-bandinvmf"}
+{"event": "started", "gpu": 3, "pid": 159084, "method": "dp-lora-bandinvmf"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-bandinvmf"}
+{"event": "started", "gpu": 1, "pid": 160114, "method": "dp-lora-bandinvmf"}
+{"event": "completed", "gpu": 2, "method": "dp-lora-bandinvmf"}
+{"event": "started", "gpu": 2, "pid": 160928, "method": "dp-lora-bandinvmf"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-bandinvmf"}
+{"event": "started", "gpu": 1, "pid": 170185, "method": "dp-lora-bandinvmf"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-bandinvmf"}
+{"event": "started", "gpu": 3, "pid": 171577, "method": "dp-lora-bandinvmf"}
+{"event": "completed", "gpu": 2, "method": "dp-lora-bandinvmf"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-bandinvmf"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-bandinvmf"}
+{"event": "stage_completed", "stage": "B_mf_local", "trained": 8, "reused": 1, "winner": {"method": "dp-lora-bandinvmf", "seed": 20261001, "lr": 0.015, "C": 5.0, "geom_eps": 0.1, "physical_batch_size": 50}, "final_test_top1": 0.815}
+{"event": "started", "gpu": 1, "pid": 180075, "method": "dp-lora-bandinvmf"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-bandinvmf"}
+{"event": "stage_completed", "stage": "B_mf_C_boundary_1", "trained": 1, "reused": 0, "winner": {"method": "dp-lora-bandinvmf", "seed": 20261001, "lr": 0.015, "C": 2.5, "geom_eps": 0.1, "physical_batch_size": 50}, "final_test_top1": 0.8149}
+{"event": "started", "gpu": 1, "pid": 186778, "method": "dp-lora-bandinvmf"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-bandinvmf"}
+{"event": "stage_completed", "stage": "B_mf_lr_boundary_1", "trained": 1, "reused": 0, "winner": {"method": "dp-lora-bandinvmf", "seed": 20261001, "lr": 0.0075, "C": 5.0, "geom_eps": 0.1, "physical_batch_size": 50}, "final_test_top1": 0.7976}
+{"event": "started", "gpu": 1, "pid": 193726, "method": "dp-lora-iid-scale"}
+{"event": "started", "gpu": 2, "pid": 193727, "method": "dp-lora-iid-scale"}
+{"event": "started", "gpu": 3, "pid": 193728, "method": "dp-lora-iid-scale"}
+{"event": "completed", "gpu": 2, "method": "dp-lora-iid-scale"}
+{"event": "started", "gpu": 2, "pid": 204361, "method": "dp-lora-iid-scale"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-iid-scale"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-iid-scale"}
+{"event": "completed", "gpu": 2, "method": "dp-lora-iid-scale"}
+{"event": "stage_completed", "stage": "C_iid_scale_geometry", "trained": 4, "reused": 0, "winner": {"method": "dp-lora-iid-scale", "seed": 20261001, "lr": 0.002, "C": 1.5, "geom_eps": 1.0, "physical_batch_size": 50}, "final_test_top1": 0.7676}
+{"event": "started", "gpu": 1, "pid": 211662, "method": "dp-lora-iid-scale"}
+{"event": "started", "gpu": 2, "pid": 211663, "method": "dp-lora-iid-scale"}
+{"event": "started", "gpu": 3, "pid": 211664, "method": "dp-lora-iid-scale"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-iid-scale"}
+{"event": "started", "gpu": 1, "pid": 222423, "method": "dp-lora-iid-scale"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-iid-scale"}
+{"event": "started", "gpu": 3, "pid": 223014, "method": "dp-lora-iid-scale"}
+{"event": "completed", "gpu": 2, "method": "dp-lora-iid-scale"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-iid-scale"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-iid-scale"}
+{"event": "stage_completed", "stage": "C_iid_scale_C", "trained": 5, "reused": 1, "winner": {"method": "dp-lora-iid-scale", "seed": 20261001, "lr": 0.002, "C": 0.3, "geom_eps": 1.0, "physical_batch_size": 50}, "final_test_top1": 0.7681}
+{"event": "started", "gpu": 1, "pid": 231635, "method": "dp-lora-iid-scale"}
+{"event": "started", "gpu": 2, "pid": 231636, "method": "dp-lora-iid-scale"}
+{"event": "started", "gpu": 3, "pid": 231637, "method": "dp-lora-iid-scale"}
+{"event": "completed", "gpu": 2, "method": "dp-lora-iid-scale"}
+{"event": "started", "gpu": 2, "pid": 242516, "method": "dp-lora-iid-scale"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-iid-scale"}
+{"event": "started", "gpu": 1, "pid": 243171, "method": "dp-lora-iid-scale"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-iid-scale"}
+{"event": "started", "gpu": 3, "pid": 243991, "method": "dp-lora-iid-scale"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-iid-scale"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-iid-scale"}
+{"event": "completed", "gpu": 2, "method": "dp-lora-iid-scale"}
+{"event": "stage_completed", "stage": "C_iid_scale_lr", "trained": 6, "reused": 1, "winner": {"method": "dp-lora-iid-scale", "seed": 20261001, "lr": 0.002, "C": 0.3, "geom_eps": 1.0, "physical_batch_size": 50}, "final_test_top1": 0.7681}
+{"event": "started", "gpu": 1, "pid": 253840, "method": "dp-lora-iid-scale"}
+{"event": "started", "gpu": 2, "pid": 253841, "method": "dp-lora-iid-scale"}
+{"event": "started", "gpu": 3, "pid": 253842, "method": "dp-lora-iid-scale"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-iid-scale"}
+{"event": "started", "gpu": 1, "pid": 265029, "method": "dp-lora-iid-scale"}
+{"event": "completed", "gpu": 2, "method": "dp-lora-iid-scale"}
+{"event": "started", "gpu": 2, "pid": 265175, "method": "dp-lora-iid-scale"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-iid-scale"}
+{"event": "started", "gpu": 3, "pid": 265441, "method": "dp-lora-iid-scale"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-iid-scale"}
+{"event": "started", "gpu": 1, "pid": 276003, "method": "dp-lora-iid-scale"}
+{"event": "completed", "gpu": 2, "method": "dp-lora-iid-scale"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-iid-scale"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-iid-scale"}
+{"event": "stage_completed", "stage": "C_iid_scale_local", "trained": 7, "reused": 2, "winner": {"method": "dp-lora-iid-scale", "seed": 20261001, "lr": 0.002, "C": 0.3, "geom_eps": 1.0, "physical_batch_size": 50}, "final_test_top1": 0.7681}
+{"event": "started", "gpu": 1, "pid": 283032, "method": "dp-lora-bandinvmf-scale"}
+{"event": "started", "gpu": 2, "pid": 283033, "method": "dp-lora-bandinvmf-scale"}
+{"event": "started", "gpu": 3, "pid": 283034, "method": "dp-lora-bandinvmf-scale"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-bandinvmf-scale"}
+{"event": "started", "gpu": 1, "pid": 293969, "method": "dp-lora-bandinvmf-scale"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-bandinvmf-scale"}
+{"event": "started", "gpu": 3, "pid": 294412, "method": "dp-lora-bandinvmf-scale"}
+{"event": "completed", "gpu": 2, "method": "dp-lora-bandinvmf-scale"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-bandinvmf-scale"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-bandinvmf-scale"}
+{"event": "stage_completed", "stage": "D_mf_scale_C", "trained": 5, "reused": 0, "winner": {"method": "dp-lora-bandinvmf-scale", "seed": 20261001, "lr": 0.002, "C": 10.0, "geom_eps": 1.0, "physical_batch_size": 50}, "final_test_top1": 0.6409}
+{"event": "started", "gpu": 1, "pid": 303376, "method": "dp-lora-bandinvmf-scale"}
+{"event": "started", "gpu": 2, "pid": 303377, "method": "dp-lora-bandinvmf-scale"}
+{"event": "started", "gpu": 3, "pid": 303378, "method": "dp-lora-bandinvmf-scale"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-bandinvmf-scale"}
+{"event": "started", "gpu": 1, "pid": 314747, "method": "dp-lora-bandinvmf-scale"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-bandinvmf-scale"}
+{"event": "started", "gpu": 3, "pid": 315218, "method": "dp-lora-bandinvmf-scale"}
+{"event": "completed", "gpu": 2, "method": "dp-lora-bandinvmf-scale"}
+{"event": "started", "gpu": 2, "pid": 315363, "method": "dp-lora-bandinvmf-scale"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-bandinvmf-scale"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-bandinvmf-scale"}
+{"event": "completed", "gpu": 2, "method": "dp-lora-bandinvmf-scale"}
+{"event": "stage_completed", "stage": "D_mf_scale_lr", "trained": 6, "reused": 1, "winner": {"method": "dp-lora-bandinvmf-scale", "seed": 20261001, "lr": 0.01, "C": 10.0, "geom_eps": 1.0, "physical_batch_size": 50}, "final_test_top1": 0.805}
+{"event": "started", "gpu": 1, "pid": 326303, "method": "dp-lora-bandinvmf-scale"}
+{"event": "started", "gpu": 2, "pid": 326304, "method": "dp-lora-bandinvmf-scale"}
+{"event": "started", "gpu": 3, "pid": 326305, "method": "dp-lora-bandinvmf-scale"}
+{"event": "completed", "gpu": 2, "method": "dp-lora-bandinvmf-scale"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-bandinvmf-scale"}
+{"event": "started", "gpu": 2, "pid": 337449, "method": "dp-lora-bandinvmf-scale"}
+{"event": "started", "gpu": 3, "pid": 337450, "method": "dp-lora-bandinvmf-scale"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-bandinvmf-scale"}
+{"event": "started", "gpu": 1, "pid": 339201, "method": "dp-lora-bandinvmf-scale"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-bandinvmf-scale"}
+{"event": "started", "gpu": 3, "pid": 348208, "method": "dp-lora-bandinvmf-scale"}
+{"event": "completed", "gpu": 2, "method": "dp-lora-bandinvmf-scale"}
+{"event": "started", "gpu": 2, "pid": 349485, "method": "dp-lora-bandinvmf-scale"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-bandinvmf-scale"}
+{"event": "completed", "gpu": 3, "method": "dp-lora-bandinvmf-scale"}
+{"event": "completed", "gpu": 2, "method": "dp-lora-bandinvmf-scale"}
+{"event": "stage_completed", "stage": "D_mf_scale_local", "trained": 8, "reused": 1, "winner": {"method": "dp-lora-bandinvmf-scale", "seed": 20261001, "lr": 0.02, "C": 5.0, "geom_eps": 1.0, "physical_batch_size": 50}, "final_test_top1": 0.8162}
+{"event": "started", "gpu": 1, "pid": 358070, "method": "dp-lora-bandinvmf-scale"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-bandinvmf-scale"}
+{"event": "stage_completed", "stage": "D_mf_scale_C_boundary_1", "trained": 1, "reused": 0, "winner": {"method": "dp-lora-bandinvmf-scale", "seed": 20261001, "lr": 0.02, "C": 2.5, "geom_eps": 1.0, "physical_batch_size": 50}, "final_test_top1": 0.8156}
+{"event": "started", "gpu": 1, "pid": 365334, "method": "dp-lora-bandinvmf-scale"}
+{"event": "completed", "gpu": 1, "method": "dp-lora-bandinvmf-scale"}
+{"event": "stage_completed", "stage": "D_mf_scale_lr_boundary_1", "trained": 1, "reused": 0, "winner": {"method": "dp-lora-bandinvmf-scale", "seed": 20261001, "lr": 0.04, "C": 5.0, "geom_eps": 1.0, "physical_batch_size": 50}, "final_test_top1": 0.7501}
+{
+  "status": "completed",
+  "selection": "final_test_top1_desc_C_asc_lr_asc",
+  "plan": {
+    "protocol": "staged-utility-v2",
+    "seed": 20261001,
+    "initial_lr": 0.001,
+    "initial_C": 1.0,
+    "raw_geom_eps": 0.1,
+    "clip_norms": [
+      0.1,
+      0.3,
+      1.0,
+      3.0,
+      10.0
+    ],
+    "learning_rates": [
+      0.0001,
+      0.0003,
+      0.001,
+      0.003,
+      0.01,
+      0.03
+    ],
+    "geom_eps_values": [
+      0.001,
+      0.01,
+      0.1,
+      1.0
+    ],
+    "local_factors": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "max_boundary_extensions": 1,
+    "physical_batch_size": 50,
+    "selection": "final_test_top1_desc_C_asc_lr_asc"
+  },
+  "stages": [
+    "A_iid_C",
+    "A_iid_lr",
+    "A_iid_local",
+    "A_iid_C_boundary_1",
+    "A_iid_lr_boundary_1",
+    "B_mf_C",
+    "B_mf_lr",
+    "B_mf_local",
+    "B_mf_C_boundary_1",
+    "B_mf_lr_boundary_1",
+    "C_iid_scale_geometry",
+    "C_iid_scale_C",
+    "C_iid_scale_lr",
+    "C_iid_scale_local",
+    "D_mf_scale_C",
+    "D_mf_scale_lr",
+    "D_mf_scale_local",
+    "D_mf_scale_C_boundary_1",
+    "D_mf_scale_lr_boundary_1"
+  ],
+  "total_unique_tuning_trials": 85,
+  "actual_trained_trials": 85,
+  "reused_preexisting_trials": 0,
+  "stage_reuse_events": 8,
+  "selected": {
+    "dp-lora-iid": {
+      "hyperparameters": {
+        "C": 1.5,
+        "lr": 0.002,
+        "geom_eps": 0.1
+      },
+      "final_test_top1": 0.7676,
+      "selected_trial_id": "dc62ed7e2f3f4873e1e17857c121480c9e3f7cb85f7865809935bc0016e7d738"
+    },
+    "dp-lora-bandinvmf": {
+      "hyperparameters": {
+        "C": 5.0,
+        "lr": 0.015,
+        "geom_eps": 0.1
+      },
+      "final_test_top1": 0.815,
+      "selected_trial_id": "6de7836e7632b1903e8d75f0634898ad8314d6e2b8e74f3feddab2dc2130a599"
+    },
+    "dp-lora-iid-scale": {
+      "hyperparameters": {
+        "C": 0.3,
+        "lr": 0.002,
+        "geom_eps": 1.0
+      },
+      "final_test_top1": 0.7681,
+      "selected_trial_id": "3099e857925b6938353698ac7c9227b65e6ead81416504dd0094caf4d34f28ea"
+    },
+    "dp-lora-bandinvmf-scale": {
+      "hyperparameters": {
+        "C": 5.0,
+        "lr": 0.02,
+        "geom_eps": 1.0
+      },
+      "final_test_top1": 0.8162,
+      "selected_trial_id": "a994bbe8ec8d4ebac0561e5eb894d8e049cb4a0b9ec06bafa4666014fe4e12d4"
+    }
+  },
+  "final_trials_prepared": 12,
+  "final_launched": false,
+  "provenance_sha256": "0c8220bea74a1e4f0f1bbdb6ccd9bc8b34a9b7d94ed5d7b518d0216d65225f0a",
+  "actual_trained_trials_total": 85
+}

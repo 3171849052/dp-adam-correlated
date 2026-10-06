@@ -1,0 +1,92 @@
+{
+  "stage": "C_iid_scale_lr",
+  "note": "Coarse LR search at current winning C",
+  "selection": "final_test_top1_desc_C_asc_lr_asc",
+  "candidates": [
+    {
+      "trial": {
+        "method": "dp-lora-iid-scale",
+        "seed": 20261001,
+        "lr": 0.0001,
+        "C": 0.3,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "7e4fe0406a575db19973b6fa747691f80de4269061b56abda2e0bd6b9da1b810",
+      "fingerprint": "fingerprint-7e4fe0406a575db19973b6fa747691f80de4269061b56abda2e0bd6b9da1b810",
+      "final_test_top1": 0.5654612236050893,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/7e4fe0406a575db19973b6fa747691f80de4269061b56abda2e0bd6b9da1b810"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-iid-scale",
+        "seed": 20261001,
+        "lr": 0.0003,
+        "C": 0.3,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "b728b600a0eeae3fd9f99a154b9a83170bf9cd42724a51c42d6f66a15978c64d",
+      "fingerprint": "fingerprint-b728b600a0eeae3fd9f99a154b9a83170bf9cd42724a51c42d6f66a15978c64d",
+      "final_test_top1": 0.5819404079351109,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/b728b600a0eeae3fd9f99a154b9a83170bf9cd42724a51c42d6f66a15978c64d"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-iid-scale",
+        "seed": 20261001,
+        "lr": 0.001,
+        "C": 0.3,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "e8f7b7e3f923acef11a3fde2dabe50f83c7f4e17c3cf513a0509d40229971d38",
+      "fingerprint": "fingerprint-e8f7b7e3f923acef11a3fde2dabe50f83c7f4e17c3cf513a0509d40229971d38",
+      "final_test_top1": 0.6,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/e8f7b7e3f923acef11a3fde2dabe50f83c7f4e17c3cf513a0509d40229971d38"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-iid-scale",
+        "seed": 20261001,
+        "lr": 0.003,
+        "C": 0.3,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "36539c29abf4321f61bcbdbac2f67969a780d087378c4466c71c80635ef34a17",
+      "fingerprint": "fingerprint-36539c29abf4321f61bcbdbac2f67969a780d087378c4466c71c80635ef34a17",
+      "final_test_top1": 0.5835208156699784,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/36539c29abf4321f61bcbdbac2f67969a780d087378c4466c71c80635ef34a17"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-iid-scale",
+        "seed": 20261001,
+        "lr": 0.01,
+        "C": 0.3,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "2b8662c570cd584a1685adcbbfb708ee32687ea2729a676c17fea1975d6f7b58",
+      "fingerprint": "fingerprint-2b8662c570cd584a1685adcbbfb708ee32687ea2729a676c17fea1975d6f7b58",
+      "final_test_top1": 0.5654612236050893,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/2b8662c570cd584a1685adcbbfb708ee32687ea2729a676c17fea1975d6f7b58"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-iid-scale",
+        "seed": 20261001,
+        "lr": 0.03,
+        "C": 0.3,
+        "geom_eps": 0.01,
+        "physical_batch_size": 50
+      },
+      "trial_id": "432eb308caf6437d1dfb619bda5deffec1f5038512b7e32ffd008dfa0a258c56",
+      "fingerprint": "fingerprint-432eb308caf6437d1dfb619bda5deffec1f5038512b7e32ffd008dfa0a258c56",
+      "final_test_top1": 0.5489820392750676,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/432eb308caf6437d1dfb619bda5deffec1f5038512b7e32ffd008dfa0a258c56"
+    }
+  ],
+  "candidate_winner": "e8f7b7e3f923acef11a3fde2dabe50f83c7f4e17c3cf513a0509d40229971d38"
+}

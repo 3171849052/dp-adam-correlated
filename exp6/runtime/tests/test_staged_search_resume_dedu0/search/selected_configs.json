@@ -1,0 +1,324 @@
+{
+  "status": "frozen",
+  "fixed": {
+    "protocol": "exp6-lora-v1",
+    "dataset": "CIFAR-100",
+    "dataset_size": 50000,
+    "data_root": "data",
+    "pretrained_root": "cache",
+    "download": false,
+    "architecture": "vit_tiny_patch16_224",
+    "image_size": 224,
+    "classes": 100,
+    "epochs": 5,
+    "logical_batch_size": 1000,
+    "steps_per_epoch": 50,
+    "total_steps": 250,
+    "rank": 8,
+    "alpha": 8,
+    "lora_modules": 48,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "adam_eps": 1e-08,
+    "weight_decay": 0.0,
+    "epsilon": 8.0,
+    "delta": 1e-05,
+    "num_bands": 4,
+    "workload": "momentum_bandinvmf",
+    "adjacency": "add_remove_zero_out",
+    "fixed_epoch_order": true,
+    "sampling_amplification": false,
+    "geometry": "actual_weight",
+    "dtype": "float32",
+    "noise_seed_offset": 1,
+    "augmentation": "sample_keyed_seed_epoch_index",
+    "backbone_frozen": true
+  },
+  "search_seed": 20261001,
+  "final_seeds": [
+    20261011,
+    20261012,
+    20261013
+  ],
+  "selection": "final_test_top1_desc_C_asc_lr_asc",
+  "shared_scale_geom_eps": 0.01,
+  "methods": {
+    "dp-lora-iid": {
+      "status": "frozen",
+      "method": "dp-lora-iid",
+      "fixed": {
+        "protocol": "exp6-lora-v1",
+        "dataset": "CIFAR-100",
+        "dataset_size": 50000,
+        "data_root": "data",
+        "pretrained_root": "cache",
+        "download": false,
+        "architecture": "vit_tiny_patch16_224",
+        "image_size": 224,
+        "classes": 100,
+        "epochs": 5,
+        "logical_batch_size": 1000,
+        "steps_per_epoch": 50,
+        "total_steps": 250,
+        "rank": 8,
+        "alpha": 8,
+        "lora_modules": 48,
+        "beta1": 0.9,
+        "beta2": 0.999,
+        "adam_eps": 1e-08,
+        "weight_decay": 0.0,
+        "epsilon": 8.0,
+        "delta": 1e-05,
+        "num_bands": 4,
+        "workload": "momentum_bandinvmf",
+        "adjacency": "add_remove_zero_out",
+        "fixed_epoch_order": true,
+        "sampling_amplification": false,
+        "geometry": "actual_weight",
+        "dtype": "float32",
+        "noise_seed_offset": 1,
+        "augmentation": "sample_keyed_seed_epoch_index",
+        "backbone_frozen": true
+      },
+      "search_seed": 20261001,
+      "hyperparameters": {
+        "C": 3.0,
+        "lr": 0.003,
+        "geom_eps": 0.1
+      },
+      "geometry_active": false,
+      "physical_batch_size": 50,
+      "final_test_top1": 0.6,
+      "selected_trial_id": "61de879617cdffdb047e3f020668141c4920fdf2c453527597baa0124b8d7273",
+      "selected_fingerprint": "fingerprint-61de879617cdffdb047e3f020668141c4920fdf2c453527597baa0124b8d7273",
+      "selection": "final_test_top1_desc_C_asc_lr_asc",
+      "privacy": {
+        "target_mu": 1.666
+      },
+      "final_privacy": {
+        "epsilon": 8.0,
+        "delta": 1e-05
+      },
+      "workload": {
+        "mechanism": "iid",
+        "beta1": 0.9,
+        "T": 250,
+        "num_bands": null,
+        "implementation": "exp2.bandinvmf.build_matrices",
+        "matrix_artifact": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/61de879617cdffdb047e3f020668141c4920fdf2c453527597baa0124b8d7273/matrices.npz"
+      },
+      "diagnostics": {
+        "artifact": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/61de879617cdffdb047e3f020668141c4920fdf2c453527597baa0124b8d7273"
+      },
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/61de879617cdffdb047e3f020668141c4920fdf2c453527597baa0124b8d7273"
+    },
+    "dp-lora-bandinvmf": {
+      "status": "frozen",
+      "method": "dp-lora-bandinvmf",
+      "fixed": {
+        "protocol": "exp6-lora-v1",
+        "dataset": "CIFAR-100",
+        "dataset_size": 50000,
+        "data_root": "data",
+        "pretrained_root": "cache",
+        "download": false,
+        "architecture": "vit_tiny_patch16_224",
+        "image_size": 224,
+        "classes": 100,
+        "epochs": 5,
+        "logical_batch_size": 1000,
+        "steps_per_epoch": 50,
+        "total_steps": 250,
+        "rank": 8,
+        "alpha": 8,
+        "lora_modules": 48,
+        "beta1": 0.9,
+        "beta2": 0.999,
+        "adam_eps": 1e-08,
+        "weight_decay": 0.0,
+        "epsilon": 8.0,
+        "delta": 1e-05,
+        "num_bands": 4,
+        "workload": "momentum_bandinvmf",
+        "adjacency": "add_remove_zero_out",
+        "fixed_epoch_order": true,
+        "sampling_amplification": false,
+        "geometry": "actual_weight",
+        "dtype": "float32",
+        "noise_seed_offset": 1,
+        "augmentation": "sample_keyed_seed_epoch_index",
+        "backbone_frozen": true
+      },
+      "search_seed": 20261001,
+      "hyperparameters": {
+        "C": 10.0,
+        "lr": 0.01,
+        "geom_eps": 0.1
+      },
+      "geometry_active": false,
+      "physical_batch_size": 50,
+      "final_test_top1": 0.6,
+      "selected_trial_id": "ed1c186fe372f5947248c9d7aea2227866ce7de67d4dead4e9909b21a56182fc",
+      "selected_fingerprint": "fingerprint-ed1c186fe372f5947248c9d7aea2227866ce7de67d4dead4e9909b21a56182fc",
+      "selection": "final_test_top1_desc_C_asc_lr_asc",
+      "privacy": {
+        "target_mu": 1.666
+      },
+      "final_privacy": {
+        "epsilon": 8.0,
+        "delta": 1e-05
+      },
+      "workload": {
+        "mechanism": "momentum_bandinvmf",
+        "beta1": 0.9,
+        "T": 250,
+        "num_bands": 4,
+        "implementation": "exp2.bandinvmf.build_matrices",
+        "matrix_artifact": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/ed1c186fe372f5947248c9d7aea2227866ce7de67d4dead4e9909b21a56182fc/matrices.npz"
+      },
+      "diagnostics": {
+        "artifact": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/ed1c186fe372f5947248c9d7aea2227866ce7de67d4dead4e9909b21a56182fc"
+      },
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/ed1c186fe372f5947248c9d7aea2227866ce7de67d4dead4e9909b21a56182fc"
+    },
+    "dp-lora-iid-scale": {
+      "status": "frozen",
+      "method": "dp-lora-iid-scale",
+      "fixed": {
+        "protocol": "exp6-lora-v1",
+        "dataset": "CIFAR-100",
+        "dataset_size": 50000,
+        "data_root": "data",
+        "pretrained_root": "cache",
+        "download": false,
+        "architecture": "vit_tiny_patch16_224",
+        "image_size": 224,
+        "classes": 100,
+        "epochs": 5,
+        "logical_batch_size": 1000,
+        "steps_per_epoch": 50,
+        "total_steps": 250,
+        "rank": 8,
+        "alpha": 8,
+        "lora_modules": 48,
+        "beta1": 0.9,
+        "beta2": 0.999,
+        "adam_eps": 1e-08,
+        "weight_decay": 0.0,
+        "epsilon": 8.0,
+        "delta": 1e-05,
+        "num_bands": 4,
+        "workload": "momentum_bandinvmf",
+        "adjacency": "add_remove_zero_out",
+        "fixed_epoch_order": true,
+        "sampling_amplification": false,
+        "geometry": "actual_weight",
+        "dtype": "float32",
+        "noise_seed_offset": 1,
+        "augmentation": "sample_keyed_seed_epoch_index",
+        "backbone_frozen": true
+      },
+      "search_seed": 20261001,
+      "hyperparameters": {
+        "C": 0.3,
+        "lr": 0.001,
+        "geom_eps": 0.01
+      },
+      "geometry_active": true,
+      "physical_batch_size": 50,
+      "final_test_top1": 0.6,
+      "selected_trial_id": "e8f7b7e3f923acef11a3fde2dabe50f83c7f4e17c3cf513a0509d40229971d38",
+      "selected_fingerprint": "fingerprint-e8f7b7e3f923acef11a3fde2dabe50f83c7f4e17c3cf513a0509d40229971d38",
+      "selection": "final_test_top1_desc_C_asc_lr_asc",
+      "privacy": {
+        "target_mu": 1.666
+      },
+      "final_privacy": {
+        "epsilon": 8.0,
+        "delta": 1e-05
+      },
+      "workload": {
+        "mechanism": "iid",
+        "beta1": 0.9,
+        "T": 250,
+        "num_bands": null,
+        "implementation": "exp2.bandinvmf.build_matrices",
+        "matrix_artifact": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/e8f7b7e3f923acef11a3fde2dabe50f83c7f4e17c3cf513a0509d40229971d38/matrices.npz"
+      },
+      "diagnostics": {
+        "artifact": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/e8f7b7e3f923acef11a3fde2dabe50f83c7f4e17c3cf513a0509d40229971d38"
+      },
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/e8f7b7e3f923acef11a3fde2dabe50f83c7f4e17c3cf513a0509d40229971d38"
+    },
+    "dp-lora-bandinvmf-scale": {
+      "status": "frozen",
+      "method": "dp-lora-bandinvmf-scale",
+      "fixed": {
+        "protocol": "exp6-lora-v1",
+        "dataset": "CIFAR-100",
+        "dataset_size": 50000,
+        "data_root": "data",
+        "pretrained_root": "cache",
+        "download": false,
+        "architecture": "vit_tiny_patch16_224",
+        "image_size": 224,
+        "classes": 100,
+        "epochs": 5,
+        "logical_batch_size": 1000,
+        "steps_per_epoch": 50,
+        "total_steps": 250,
+        "rank": 8,
+        "alpha": 8,
+        "lora_modules": 48,
+        "beta1": 0.9,
+        "beta2": 0.999,
+        "adam_eps": 1e-08,
+        "weight_decay": 0.0,
+        "epsilon": 8.0,
+        "delta": 1e-05,
+        "num_bands": 4,
+        "workload": "momentum_bandinvmf",
+        "adjacency": "add_remove_zero_out",
+        "fixed_epoch_order": true,
+        "sampling_amplification": false,
+        "geometry": "actual_weight",
+        "dtype": "float32",
+        "noise_seed_offset": 1,
+        "augmentation": "sample_keyed_seed_epoch_index",
+        "backbone_frozen": true
+      },
+      "search_seed": 20261001,
+      "hyperparameters": {
+        "C": 1.0,
+        "lr": 0.003,
+        "geom_eps": 0.01
+      },
+      "geometry_active": true,
+      "physical_batch_size": 50,
+      "final_test_top1": 0.6,
+      "selected_trial_id": "6e6e80a5458b19001cc52ce8fe81cdf4565bc22813b9f40af287c742ffa0546f",
+      "selected_fingerprint": "fingerprint-6e6e80a5458b19001cc52ce8fe81cdf4565bc22813b9f40af287c742ffa0546f",
+      "selection": "final_test_top1_desc_C_asc_lr_asc",
+      "privacy": {
+        "target_mu": 1.666
+      },
+      "final_privacy": {
+        "epsilon": 8.0,
+        "delta": 1e-05
+      },
+      "workload": {
+        "mechanism": "momentum_bandinvmf",
+        "beta1": 0.9,
+        "T": 250,
+        "num_bands": 4,
+        "implementation": "exp2.bandinvmf.build_matrices",
+        "matrix_artifact": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/6e6e80a5458b19001cc52ce8fe81cdf4565bc22813b9f40af287c742ffa0546f/matrices.npz"
+      },
+      "diagnostics": {
+        "artifact": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/6e6e80a5458b19001cc52ce8fe81cdf4565bc22813b9f40af287c742ffa0546f"
+      },
+      "result_dir": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/6e6e80a5458b19001cc52ce8fe81cdf4565bc22813b9f40af287c742ffa0546f"
+    }
+  },
+  "provenance_sha256": "f13f800cf550b83aca0ad367c02f0eac9db323b934f4d1484a4b4a98a731a840"
+}

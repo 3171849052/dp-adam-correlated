@@ -1,0 +1,101 @@
+{
+  "status": "completed",
+  "selection": "final_test_top1_desc_C_asc_lr_asc",
+  "plan": {
+    "protocol": "staged-utility-v2",
+    "seed": 20261001,
+    "initial_lr": 0.001,
+    "initial_C": 1.0,
+    "raw_geom_eps": 0.1,
+    "clip_norms": [
+      0.1,
+      0.3,
+      1.0,
+      3.0,
+      10.0
+    ],
+    "learning_rates": [
+      0.0001,
+      0.0003,
+      0.001,
+      0.003,
+      0.01,
+      0.03
+    ],
+    "geom_eps_values": [
+      0.001,
+      0.01,
+      0.1,
+      1.0
+    ],
+    "local_factors": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "max_boundary_extensions": 1,
+    "physical_batch_size": 50,
+    "selection": "final_test_top1_desc_C_asc_lr_asc"
+  },
+  "stages": [
+    "A_iid_C",
+    "A_iid_lr",
+    "A_iid_local",
+    "B_mf_C",
+    "B_mf_lr",
+    "B_mf_local",
+    "C_iid_scale_geometry",
+    "C_iid_scale_C",
+    "C_iid_scale_lr",
+    "C_iid_scale_local",
+    "D_mf_scale_C",
+    "D_mf_scale_lr",
+    "D_mf_scale_local"
+  ],
+  "total_unique_tuning_trials": 75,
+  "actual_trained_trials": 0,
+  "reused_preexisting_trials": 75,
+  "stage_reuse_events": 75,
+  "selected": {
+    "dp-lora-iid": {
+      "hyperparameters": {
+        "C": 3.0,
+        "lr": 0.003,
+        "geom_eps": 0.1
+      },
+      "final_test_top1": 0.6,
+      "selected_trial_id": "61de879617cdffdb047e3f020668141c4920fdf2c453527597baa0124b8d7273"
+    },
+    "dp-lora-bandinvmf": {
+      "hyperparameters": {
+        "C": 10.0,
+        "lr": 0.01,
+        "geom_eps": 0.1
+      },
+      "final_test_top1": 0.6,
+      "selected_trial_id": "ed1c186fe372f5947248c9d7aea2227866ce7de67d4dead4e9909b21a56182fc"
+    },
+    "dp-lora-iid-scale": {
+      "hyperparameters": {
+        "C": 0.3,
+        "lr": 0.001,
+        "geom_eps": 0.01
+      },
+      "final_test_top1": 0.6,
+      "selected_trial_id": "e8f7b7e3f923acef11a3fde2dabe50f83c7f4e17c3cf513a0509d40229971d38"
+    },
+    "dp-lora-bandinvmf-scale": {
+      "hyperparameters": {
+        "C": 1.0,
+        "lr": 0.003,
+        "geom_eps": 0.01
+      },
+      "final_test_top1": 0.6,
+      "selected_trial_id": "6e6e80a5458b19001cc52ce8fe81cdf4565bc22813b9f40af287c742ffa0546f"
+    }
+  },
+  "final_trials_prepared": 12,
+  "final_launched": false,
+  "provenance_sha256": "f13f800cf550b83aca0ad367c02f0eac9db323b934f4d1484a4b4a98a731a840",
+  "actual_trained_trials_total": 75
+}

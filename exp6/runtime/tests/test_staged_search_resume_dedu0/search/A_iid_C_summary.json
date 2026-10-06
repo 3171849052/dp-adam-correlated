@@ -1,0 +1,78 @@
+{
+  "stage": "A_iid_C",
+  "note": "Coarse C search; LR/geometry fixed at anchor",
+  "selection": "final_test_top1_desc_C_asc_lr_asc",
+  "candidates": [
+    {
+      "trial": {
+        "method": "dp-lora-iid",
+        "seed": 20261001,
+        "lr": 0.001,
+        "C": 0.1,
+        "geom_eps": 0.1,
+        "physical_batch_size": 50
+      },
+      "trial_id": "8c1a88acdebfa44549f6e6c86a0a920a2aed81c8b119c5d91175a69d6ff0e312",
+      "fingerprint": "fingerprint-8c1a88acdebfa44549f6e6c86a0a920a2aed81c8b119c5d91175a69d6ff0e312",
+      "final_test_top1": 0.532502854945046,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/8c1a88acdebfa44549f6e6c86a0a920a2aed81c8b119c5d91175a69d6ff0e312"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-iid",
+        "seed": 20261001,
+        "lr": 0.001,
+        "C": 0.3,
+        "geom_eps": 0.1,
+        "physical_batch_size": 50
+      },
+      "trial_id": "76617c310af24d3be328d38ead91e6ff094f994f676eadce2508a7cd378fffd7",
+      "fingerprint": "fingerprint-76617c310af24d3be328d38ead91e6ff094f994f676eadce2508a7cd378fffd7",
+      "final_test_top1": 0.5489820392750677,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/76617c310af24d3be328d38ead91e6ff094f994f676eadce2508a7cd378fffd7"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-iid",
+        "seed": 20261001,
+        "lr": 0.001,
+        "C": 1.0,
+        "geom_eps": 0.1,
+        "physical_batch_size": 50
+      },
+      "trial_id": "589af0d62e12bb087ff064992bb0b5268badadeeeb8a63dab3500590135d7701",
+      "fingerprint": "fingerprint-589af0d62e12bb087ff064992bb0b5268badadeeeb8a63dab3500590135d7701",
+      "final_test_top1": 0.5670416313399568,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/589af0d62e12bb087ff064992bb0b5268badadeeeb8a63dab3500590135d7701"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-iid",
+        "seed": 20261001,
+        "lr": 0.001,
+        "C": 3.0,
+        "geom_eps": 0.1,
+        "physical_batch_size": 50
+      },
+      "trial_id": "2548ac04ebb18adf240c4cc8909ac93c2764cba3dd375f603987f8a1470c0bc0",
+      "fingerprint": "fingerprint-2548ac04ebb18adf240c4cc8909ac93c2764cba3dd375f603987f8a1470c0bc0",
+      "final_test_top1": 0.5835208156699784,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/2548ac04ebb18adf240c4cc8909ac93c2764cba3dd375f603987f8a1470c0bc0"
+    },
+    {
+      "trial": {
+        "method": "dp-lora-iid",
+        "seed": 20261001,
+        "lr": 0.001,
+        "C": 10.0,
+        "geom_eps": 0.1,
+        "physical_batch_size": 50
+      },
+      "trial_id": "b200e0960c4e5c52f4f727ded6742fdc95d07c42e53fdacf18c43bf7ea89dbef",
+      "fingerprint": "fingerprint-b200e0960c4e5c52f4f727ded6742fdc95d07c42e53fdacf18c43bf7ea89dbef",
+      "final_test_top1": 0.5654612236050893,
+      "diagnostic_artifacts": "/media/data/data/lt/dp-adam-correlated/exp6/runtime/tests/test_staged_search_resume_dedu0/search/trials/b200e0960c4e5c52f4f727ded6742fdc95d07c42e53fdacf18c43bf7ea89dbef"
+    }
+  ],
+  "candidate_winner": "2548ac04ebb18adf240c4cc8909ac93c2764cba3dd375f603987f8a1470c0bc0"
+}

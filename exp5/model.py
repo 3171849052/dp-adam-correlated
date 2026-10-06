@@ -1,4 +1,4 @@
-"""timm-equivalent ViT-Tiny with Opacus-compatible token embeddings."""
+"""Locally loaded timm-equivalent ViT-Tiny supporting torch.func gradients."""
 import hashlib
 import os
 from pathlib import Path
@@ -22,7 +22,8 @@ class Attention(nn.Module):
         n, length, dim = x.shape
         qkv = self.qkv(x).reshape(n, length, 3, self.heads, dim // self.heads)
         q, k, v = qkv.permute(2, 0, 3, 1, 4).unbind(0)
-        y = F.scaled_dot_product_attention(q, k, v, dropout_p=0.0)
+        scores = (q @ k.transpose(-2, -1)) * (q.shape[-1] ** -.5)
+        y = scores.softmax(dim=-1) @ v
         return self.proj(y.transpose(1, 2).reshape(n, length, dim))
 
 
@@ -109,7 +110,7 @@ def checkpoint_sha256(path):
 
 
 def pretrained_vit():
-    """Same strict timm-to-Opacus backbone mapping as exp1e, explicit local load."""
+    """Strict backbone mapping with an explicit local checkpoint load."""
     path = checkpoint_path()
     reference = timm.create_model('vit_tiny_patch16_224', pretrained=False)
     reference.load_state_dict(load_file(str(path), device='cpu'), strict=True)

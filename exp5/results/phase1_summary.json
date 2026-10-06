@@ -1,0 +1,177 @@
+{
+  "status": "passed",
+  "tests": 17,
+  "conda_env": "curve",
+  "chunk_size": 50,
+  "gpus": [
+    0,
+    1,
+    2
+  ],
+  "smoke": {
+    "status": "passed",
+    "gpus": [
+      0,
+      1,
+      2
+    ],
+    "paired_initialization_and_query": true,
+    "trials": [
+      {
+        "method": "dp-coordnorm-sgdm-iid",
+        "seed": 20261001,
+        "privacy": {
+          "epsilon": 8.0,
+          "delta": 1e-05,
+          "mu": 1.6660305978457184,
+          "adjacency": "replace_one",
+          "per_query_sensitivity": 0.002,
+          "per_step_sensitivity": 0.002,
+          "sensitivity": 0.00447213595499958,
+          "strategy_sensitivity": 2.23606797749979,
+          "innovation_std": 0.0026843060150169695,
+          "participation": "fixed_epoch_sparse",
+          "epochs": 5,
+          "participation_spacing": 50,
+          "direct_participations": 5,
+          "sampling_amplification": false,
+          "workload": "momentum",
+          "beta": 0.9,
+          "num_bands": 1,
+          "noising_coefficients": [
+            1.0
+          ],
+          "strategy": "inverse_lower_triangular_toeplitz",
+          "accountant_source": "exp2.privacy.fixed_epoch_sensitivity",
+          "workload_source": "exp2.bandinvmf.build_matrices(momentum_bandinvmf)",
+          "noise_space": "logical_averaged_gradient"
+        },
+        "diagnostics": {
+          "mean_raw_sample_norm": 88.90094140625,
+          "mean_transformed_sample_norm": 1942.30315625,
+          "transformed_norm_std": 54.64021615337618,
+          "clip_fraction": 1.0,
+          "mean_clip_factor": 0.0005152718033641577,
+          "raw_mean_gradient_norm": 5.72590478515625,
+          "query_norm": 0.0590670146048069,
+          "batch_coherence": 0.0590670146048069,
+          "noise_std": 0.0026843060150169695,
+          "momentum_norm": 6.318060874938965,
+          "update_norm": 0.006318060874938965,
+          "logical_step_seconds": 17.40561285428703
+        },
+        "peak_allocated_mib": 4950.65185546875,
+        "peak_reserved_mib": 5768.0
+      },
+      {
+        "method": "dp-coordnorm-sgdm-bandinvmf",
+        "seed": 20261001,
+        "privacy": {
+          "epsilon": 8.0,
+          "delta": 1e-05,
+          "mu": 1.6660305978457184,
+          "adjacency": "replace_one",
+          "per_query_sensitivity": 0.002,
+          "per_step_sensitivity": 0.002,
+          "sensitivity": 0.015705502617263438,
+          "strategy_sensitivity": 7.852751308631718,
+          "innovation_std": 0.009426899264378237,
+          "participation": "fixed_epoch_sparse",
+          "epochs": 5,
+          "participation_spacing": 50,
+          "direct_participations": 5,
+          "sampling_amplification": false,
+          "workload": "momentum",
+          "beta": 0.9,
+          "num_bands": 4,
+          "noising_coefficients": [
+            1.0,
+            -0.95,
+            -0.0012500000000000844,
+            -0.001187499999999897
+          ],
+          "strategy": "inverse_lower_triangular_toeplitz",
+          "accountant_source": "exp2.privacy.fixed_epoch_sensitivity",
+          "workload_source": "exp2.bandinvmf.build_matrices(momentum_bandinvmf)",
+          "noise_space": "logical_averaged_gradient"
+        },
+        "diagnostics": {
+          "mean_raw_sample_norm": 88.90094140625,
+          "mean_transformed_sample_norm": 1942.30315625,
+          "transformed_norm_std": 54.64021615337618,
+          "clip_fraction": 1.0,
+          "mean_clip_factor": 0.0005152718033641577,
+          "raw_mean_gradient_norm": 5.72590478515625,
+          "query_norm": 0.0590670146048069,
+          "batch_coherence": 0.0590670146048069,
+          "noise_std": 0.009426899264378237,
+          "momentum_norm": 22.18722152709961,
+          "update_norm": 0.02218722152709961,
+          "logical_step_seconds": 14.556700833141804
+        },
+        "peak_allocated_mib": 4950.65185546875,
+        "peak_reserved_mib": 5770.0
+      },
+      {
+        "method": "dp-coordnorm-sgdm-iid",
+        "seed": 20261002,
+        "privacy": {
+          "epsilon": 8.0,
+          "delta": 1e-05,
+          "mu": 1.6660305978457184,
+          "adjacency": "replace_one",
+          "per_query_sensitivity": 0.002,
+          "per_step_sensitivity": 0.002,
+          "sensitivity": 0.00447213595499958,
+          "strategy_sensitivity": 2.23606797749979,
+          "innovation_std": 0.0026843060150169695,
+          "participation": "fixed_epoch_sparse",
+          "epochs": 5,
+          "participation_spacing": 50,
+          "direct_participations": 5,
+          "sampling_amplification": false,
+          "workload": "momentum",
+          "beta": 0.9,
+          "num_bands": 1,
+          "noising_coefficients": [
+            1.0
+          ],
+          "strategy": "inverse_lower_triangular_toeplitz",
+          "accountant_source": "exp2.privacy.fixed_epoch_sensitivity",
+          "workload_source": "exp2.bandinvmf.build_matrices(momentum_bandinvmf)",
+          "noise_space": "logical_averaged_gradient"
+        },
+        "diagnostics": {
+          "mean_raw_sample_norm": 88.77448681640625,
+          "mean_transformed_sample_norm": 1943.4291015625,
+          "transformed_norm_std": 57.941204681769506,
+          "clip_fraction": 1.0,
+          "mean_clip_factor": 0.0005150283034890891,
+          "raw_mean_gradient_norm": 5.86223046875,
+          "query_norm": 0.059553880244493484,
+          "batch_coherence": 0.059553880244493484,
+          "noise_std": 0.0026843060150169695,
+          "momentum_norm": 6.322127819061279,
+          "update_norm": 0.006322127819061279,
+          "logical_step_seconds": 17.409989645704627
+        },
+        "peak_allocated_mib": 4950.65185546875,
+        "peak_reserved_mib": 5768.0
+      }
+    ]
+  },
+  "scale_probe_quantiles": {
+    "p10": 0.0008230606833437359,
+    "p25": 0.002648620499655345,
+    "p50": 0.007644036157466592,
+    "p75": 0.018593019388332428,
+    "p90": 0.03763713104171447
+  },
+  "timing_scope": "one logical batch of 1000, including loader startup; steady-state timing available in trial steps.csv",
+  "steady_state_timing": {
+    "mean_seconds": 2.0529379426566314,
+    "median_seconds": 2.0391914639621973,
+    "logical_steps": 1225,
+    "excludes_epoch_loader_startup": true
+  }
+}
