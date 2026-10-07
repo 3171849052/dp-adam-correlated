@@ -1,0 +1,72 @@
+[
+  {
+    "method": "dp-adam-iid",
+    "seed": 20261001,
+    "lr": 0.00025,
+    "C": 30.0,
+    "eps_scale": null
+  },
+  {
+    "method": "dp-adam-iid",
+    "seed": 20261001,
+    "lr": 0.0005,
+    "C": 30.0,
+    "eps_scale": null
+  },
+  {
+    "method": "dp-adam-iid",
+    "seed": 20261001,
+    "lr": 0.001,
+    "C": 30.0,
+    "eps_scale": null
+  },
+  {
+    "method": "dp-adam-sgd-bandinvmf-scale",
+    "seed": 20261001,
+    "lr": 0.002,
+    "C": 2000000000.0,
+    "eps_scale": 1e-08
+  },
+  {
+    "method": "dp-adam-sgd-bandinvmf-scale",
+    "seed": 20261001,
+    "lr": 0.002,
+    "C": 200000.0,
+    "eps_scale": 0.0001
+  },
+  {
+    "method": "dp-adam-sgd-bandinvmf-scale",
+    "seed": 20261001,
+    "lr": 0.002,
+    "C": 20000.0,
+    "eps_scale": 0.001
+  },
+  {
+    "method": "dp-adam-sgd-bandinvmf-scale",
+    "seed": 20261001,
+    "lr": 0.002,
+    "C": 2000.0,
+    "eps_scale": 0.01
+  },
+  {
+    "method": "dp-adam-sgd-bandinvmf-scale",
+    "seed": 20261001,
+    "lr": 0.002,
+    "C": 200.0,
+    "eps_scale": 0.1
+  },
+  {
+    "method": "dp-adam-sgd-bandinvmf-scale",
+    "seed": 20261001,
+    "lr": 0.002,
+    "C": 66.66666666666667,
+    "eps_scale": 0.3
+  },
+  {
+    "method": "dp-adam-sgd-bandinvmf-scale",
+    "seed": 20261001,
+    "lr": 0.002,
+    "C": 20.0,
+    "eps_scale": 1.0
+  }
+]

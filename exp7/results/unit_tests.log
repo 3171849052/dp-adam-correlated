@@ -1,0 +1,26 @@
+...................                                                      [100%]
+=============================== warnings summary ===============================
+exp7/tests/test_platform.py::test_scaled_clipping_matches_explicit_per_example[None]
+exp7/tests/test_platform.py::test_scaled_clipping_matches_explicit_per_example[1e-08]
+exp7/tests/test_platform.py::test_scaled_clipping_matches_explicit_per_example[0.0001]
+exp7/tests/test_platform.py::test_scaled_clipping_matches_explicit_per_example[0.001]
+exp7/tests/test_platform.py::test_scaled_clipping_matches_explicit_per_example[0.01]
+exp7/tests/test_platform.py::test_scaled_clipping_matches_explicit_per_example[0.1]
+exp7/tests/test_platform.py::test_scaled_clipping_matches_explicit_per_example[0.3]
+exp7/tests/test_platform.py::test_scaled_clipping_matches_explicit_per_example[1.0]
+  /media/data/data/lt/dp-adam-correlated/exp2/scale.py:54: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    losses.sum().backward(retain_graph=True)
+
+exp7/tests/test_platform.py::test_scaled_clipping_matches_explicit_per_example[None]
+exp7/tests/test_platform.py::test_scaled_clipping_matches_explicit_per_example[1e-08]
+exp7/tests/test_platform.py::test_scaled_clipping_matches_explicit_per_example[0.0001]
+exp7/tests/test_platform.py::test_scaled_clipping_matches_explicit_per_example[0.001]
+exp7/tests/test_platform.py::test_scaled_clipping_matches_explicit_per_example[0.01]
+exp7/tests/test_platform.py::test_scaled_clipping_matches_explicit_per_example[0.1]
+exp7/tests/test_platform.py::test_scaled_clipping_matches_explicit_per_example[0.3]
+exp7/tests/test_platform.py::test_scaled_clipping_matches_explicit_per_example[1.0]
+  /media/data/data/lt/dp-adam-correlated/exp2/scale.py:59: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    (losses * coefficients).sum().backward()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+19 passed, 16 warnings in 9.28s

@@ -1,0 +1,15 @@
+{
+  "method": "dp-adam-sgd-bandinvmf-scale",
+  "seed": 20261001,
+  "lr": 0.002,
+  "C": 2000000000.0,
+  "eps_scale": 1e-08,
+  "schema_version": 1,
+  "smoke": false,
+  "source": "new",
+  "status": "numerical_failure",
+  "final_test_top1": null,
+  "error": "FloatingPointError: non-finite model parameters or Adam second moment",
+  "result_dir": "exp7/results/trials/534114dec78aa500",
+  "checkpoint_note": "Initial model snapshot only (step 0); failed training state was not saved by the first failure handler."
+}

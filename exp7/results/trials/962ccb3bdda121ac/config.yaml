@@ -1,0 +1,37 @@
+seed: 20261001
+data_root: data
+epochs: 5
+dataset_size: 50000
+logical_batch_size: 1000
+physical_batch_size: 250
+num_workers: 2
+optimizer:
+  lr: 0.007
+  beta1: 0.9
+  beta2: 0.999
+  eps: 1.0e-08
+  weight_decay: 0.0
+privacy:
+  epsilon: 8.0
+  delta: 1.0e-05
+  max_grad_norm: 30.0
+  adjacency: add_remove_zero_out
+  sampling_amplification: false
+  k: 5
+  b_participation: 50
+bandinvmf:
+  num_bands: 4
+scale:
+  eps_scale: 0.1
+model:
+  architecture: vit_tiny_patch16_224
+  pretrained: true
+  num_classes: 100
+  image_size: 224
+gradient_accumulation: 4
+total_steps: 250
+method: dp-adam-momentum-bandinvmf
+geometry: standard
+noise: momentum_bandinvmf
+source: historical
+historical_result_dir: exp3b/results/tuning/adam_standard_lr_0.007_clip_30

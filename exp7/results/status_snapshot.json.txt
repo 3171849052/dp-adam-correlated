@@ -1,0 +1,20 @@
+{
+  "status": "running",
+  "stage": "coarse",
+  "seed": 20261001,
+  "final_seeds_run": false,
+  "counts": {
+    "new_trials": 3,
+    "historical_reused": 15,
+    "numerical_failures": 3
+  },
+  "stop_reasons": {
+    "dp-adam-momentum-bandinvmf": "frozen: historical C=10/30/100 and LR=.003/.005/.007 bracket; audited compatible"
+  }
+}
+{'result_dir': 'results/trials/9482ebcb28fb8194', 'last_epoch': {'epoch': '3', 'logical_steps': '150', 'train_examples': '50000', 'train_loss': '3.540209932861328', 'test_loss': '3.088601184082031', 'test_top1': '0.2773', 'clip_fraction': '0.9998', 'gdp_mu': '1.2905017519456905', 'gdp_epsilon': '5.897172094191148', 'target_mu': '1.6660305978457184', 'target_epsilon': '8.0', 'delta': '1e-05', 'noise_std': '0.04026459022525455', 'noise_std_space': 'gradient', 'innovation_std_sum': '40.264590225254544', 'augmentation_trace_sha256': 'f4ab582ea37ff08d6c3ec209d5c76a6a59fcdd228971935ccfe60255636fc688', 'seconds': '151.53952969424427'}, 'note': 'incomplete/running; no automatic recovery'}
+{'result_dir': 'results/trials/b48890ae35531eb9', 'last_epoch': {'epoch': '2', 'logical_steps': '100', 'train_examples': '50000', 'train_loss': '4.724984123535156', 'test_loss': '4.862655285644531', 'test_top1': '0.0121', 'clip_fraction': '0.0', 'gdp_mu': '1.0536897799813885', 'gdp_epsilon': '4.650918517225291', 'target_mu': '1.6660305978457184', 'target_epsilon': '8.0', 'delta': '1e-05', 'noise_std': '3.852419241842669', 'noise_std_space': 'scaled', 'innovation_std_sum': '3419.100335027163', 'augmentation_trace_sha256': 'eba11842858511941e69682cb3174b7d5e6fd73ab7d8425892c6d4fc55cf418b', 'seconds': '134.70543251372874'}, 'note': 'incomplete/running; no automatic recovery'}
+{'result_dir': 'results/trials/efc9b92b4e5b9b19', 'last_epoch': {'epoch': '3', 'logical_steps': '150', 'train_examples': '50000', 'train_loss': '2.23954739074707', 'test_loss': '1.6880733123779297', 'test_top1': '0.5386', 'clip_fraction': '0.93044', 'gdp_mu': '1.2905017519456905', 'gdp_epsilon': '5.897172094191148', 'target_mu': '1.6660305978457184', 'target_epsilon': '8.0', 'delta': '1e-05', 'noise_std': '0.04026459022525455', 'noise_std_space': 'gradient', 'innovation_std_sum': '40.264590225254544', 'augmentation_trace_sha256': 'f4ab582ea37ff08d6c3ec209d5c76a6a59fcdd228971935ccfe60255636fc688', 'seconds': '141.90593601763248'}, 'note': 'incomplete/running; no automatic recovery'}
+dp-adam-iid: Top1=0.5985 lr=0.0005 C=30 eps_scale=None
+dp-adam-momentum-bandinvmf: Top1=0.7361 lr=0.005 C=30 eps_scale=None
+dp-adam-sgd-bandinvmf-scale: Top1=0.7393 lr=0.002 C=200 eps_scale=0.1

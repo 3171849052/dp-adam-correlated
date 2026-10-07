@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "unit_tests": "passed",
+  "smoke_methods": [
+    "dp-adam-iid",
+    "dp-adam-momentum-bandinvmf",
+    "dp-adam-sgd-bandinvmf-scale"
+  ],
+  "smoke_trials": 3,
+  "gpus": [
+    0,
+    1,
+    2
+  ],
+  "history_audit": "passed",
+  "smoke_excluded_from_search": true
+}

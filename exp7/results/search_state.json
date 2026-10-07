@@ -1,0 +1,17 @@
+{
+  "status": "completed",
+  "stage": "done",
+  "seed": 20261001,
+  "final_seeds_run": false,
+  "counts": {
+    "new_trials": 19,
+    "new_completed": 15,
+    "historical_reused": 15,
+    "numerical_failures": 4
+  },
+  "stop_reasons": {
+    "dp-adam-momentum-bandinvmf": "frozen: historical C=10/30/100 and LR=.003/.005/.007 bracket; audited compatible",
+    "dp-adam-iid": "LR bracketed on both sides; historical C=10/30/100 bracket retained",
+    "dp-adam-sgd-bandinvmf-scale": "epsilon/K/LR all bracketed at selected point"
+  }
+}

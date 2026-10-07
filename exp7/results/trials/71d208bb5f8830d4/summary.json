@@ -1,0 +1,14 @@
+{
+  "method": "dp-adam-sgd-bandinvmf-scale",
+  "seed": 20261001,
+  "lr": 0.002,
+  "C": 20000.0,
+  "eps_scale": 0.001,
+  "schema_version": 1,
+  "smoke": false,
+  "source": "new",
+  "status": "numerical_failure",
+  "final_test_top1": null,
+  "error": "FloatingPointError: non-finite model parameters or Adam second moment",
+  "result_dir": "exp7/results/trials/71d208bb5f8830d4"
+}
