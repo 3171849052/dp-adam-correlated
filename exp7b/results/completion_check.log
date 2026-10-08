@@ -1,0 +1,70 @@
+{
+  "status": "completed",
+  "stage1_tests": "25 passed",
+  "smoke_trials": 7,
+  "search_trials": 33,
+  "new_search_trials": 27,
+  "historical_search_trials": 6,
+  "final_runs": 70,
+  "methods": 7,
+  "seeds": [
+    20261011,
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020
+  ],
+  "gpus": [
+    1,
+    2,
+    3
+  ],
+  "numerical_failures": 0,
+  "artifact_audit": {
+    "status": "passed",
+    "launches": 104,
+    "gpus": [
+      1,
+      2,
+      3
+    ],
+    "audited_trials": 110
+  },
+  "frozen_configs_sha256": "9685390e6090ba3435f3a528b3c5b4bef76b3e5f86c350debe59837a6502f41f",
+  "best_method": "dp-adam-momentum-bias-bandinvmf-scale",
+  "best_statistics": {
+    "raw_top1": [
+      0.7794,
+      0.7544,
+      0.7698,
+      0.7655,
+      0.7641,
+      0.7728,
+      0.7699,
+      0.7729,
+      0.7656,
+      0.7692
+    ],
+    "mean": 0.7683599999999999,
+    "sample_std": 0.006634790459724005,
+    "standard_error": 0.002098104965068351,
+    "ci95": [
+      0.7636137568249681,
+      0.7731062431750317
+    ],
+    "n": 10
+  },
+  "outputs": {
+    "final_multiseed.csv": "93a82965da888b547462c0508fbd0a5a6c73911d9ea0a665ddd8afdcc9b2b0fa",
+    "method_summary.json": "015388624c855acc324ba2ac20863249aa27de5d5632005576f81d530858196e",
+    "paired_effects.csv": "1384d4cfa7b01da8ed5fcd3f7746f4c3c27b0348e70c29bc502033d9ff407234",
+    "paired_effects.json": "bfb45219987325b80412c35c02f34ec4bdb01133e3cc84d9e493d62a1bd231c2",
+    "final_report.md": "b977a043e85b55b59506729fa12f97da05577fa77f7c97cebb3582751e3efdac",
+    "bandinvmf_structure.json": "e2d998e4ec95a469d9a85fcd9a28df2e8cf58656ea314216cd40199b19fc29cf"
+  }
+}

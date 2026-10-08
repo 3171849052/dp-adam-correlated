@@ -1,0 +1,20 @@
+.........................                                                [100%]
+=============================== warnings summary ===============================
+exp7b/tests/test_platform.py::test_clipping_matches_explicit_gradients[None]
+exp7b/tests/test_platform.py::test_clipping_matches_explicit_gradients[0.03]
+exp7b/tests/test_platform.py::test_clipping_matches_explicit_gradients[0.1]
+exp7b/tests/test_platform.py::test_clipping_matches_explicit_gradients[0.3]
+exp7b/tests/test_platform.py::test_clipping_matches_explicit_gradients[1.0]
+  /media/data/data/lt/dp-adam-correlated/exp2/scale.py:54: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    losses.sum().backward(retain_graph=True)
+
+exp7b/tests/test_platform.py::test_clipping_matches_explicit_gradients[None]
+exp7b/tests/test_platform.py::test_clipping_matches_explicit_gradients[0.03]
+exp7b/tests/test_platform.py::test_clipping_matches_explicit_gradients[0.1]
+exp7b/tests/test_platform.py::test_clipping_matches_explicit_gradients[0.3]
+exp7b/tests/test_platform.py::test_clipping_matches_explicit_gradients[1.0]
+  /media/data/data/lt/dp-adam-correlated/exp2/scale.py:59: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    (losses * coefficients).sum().backward()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+25 passed, 10 warnings in 23.94s

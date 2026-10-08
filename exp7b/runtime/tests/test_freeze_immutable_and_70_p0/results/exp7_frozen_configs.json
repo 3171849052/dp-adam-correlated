@@ -1,0 +1,77 @@
+{
+  "dp-adam-iid": {
+    "method": "dp-adam-iid",
+    "seed": 20261001,
+    "lr": 0.0005,
+    "C": 30.0,
+    "eps_scale": null,
+    "source": "exp7_frozen",
+    "num_bands": null,
+    "provenance": {
+      "selected_configs": "exp7/results/selected_configs.json",
+      "selected_configs_sha256": "2ec62eda050805d310b6d1ae6031721ee64db02f4f6d44c5a45d03e7d6cc14f3",
+      "original": {
+        "seed": 20261001,
+        "lr": 0.0005,
+        "C": 30.0,
+        "eps_scale": null,
+        "final_test_top1": 0.5985,
+        "source": "historical",
+        "result_dir": "exp7/results/trials/93c00c98a74535cf",
+        "num_bands": null,
+        "utility": 0.5985,
+        "stop_reason": "LR bracketed on both sides; historical C=10/30/100 bracket retained"
+      }
+    }
+  },
+  "dp-adam-momentum-bandinvmf": {
+    "method": "dp-adam-momentum-bandinvmf",
+    "seed": 20261001,
+    "lr": 0.005,
+    "C": 30.0,
+    "eps_scale": null,
+    "source": "exp7_frozen",
+    "num_bands": 4,
+    "provenance": {
+      "selected_configs": "exp7/results/selected_configs.json",
+      "selected_configs_sha256": "2ec62eda050805d310b6d1ae6031721ee64db02f4f6d44c5a45d03e7d6cc14f3",
+      "original": {
+        "seed": 20261001,
+        "lr": 0.005,
+        "C": 30.0,
+        "eps_scale": null,
+        "final_test_top1": 0.7361,
+        "source": "historical",
+        "result_dir": "exp7/results/trials/272bde0be8d1d257",
+        "num_bands": 4,
+        "utility": 0.7361,
+        "stop_reason": "frozen: historical C=10/30/100 and LR=.003/.005/.007 bracket; audited compatible"
+      }
+    }
+  },
+  "dp-adam-sgd-bandinvmf-scale": {
+    "method": "dp-adam-sgd-bandinvmf-scale",
+    "seed": 20261001,
+    "lr": 0.002,
+    "C": 100.0,
+    "eps_scale": 0.1,
+    "source": "exp7_frozen",
+    "num_bands": 4,
+    "provenance": {
+      "selected_configs": "exp7/results/selected_configs.json",
+      "selected_configs_sha256": "2ec62eda050805d310b6d1ae6031721ee64db02f4f6d44c5a45d03e7d6cc14f3",
+      "original": {
+        "seed": 20261001,
+        "lr": 0.002,
+        "C": 100.0,
+        "eps_scale": 0.1,
+        "final_test_top1": 0.7402,
+        "source": "new",
+        "result_dir": "exp7/results/trials/a3883f283715f047",
+        "num_bands": 4,
+        "utility": 0.7402,
+        "stop_reason": "epsilon/K/LR all bracketed at selected point"
+      }
+    }
+  }
+}

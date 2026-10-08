@@ -1,0 +1,78 @@
+{
+  "dp-adam-sgd-bandinvmf": {
+    "method": "dp-adam-sgd-bandinvmf",
+    "seed": 20261001,
+    "lr": 0.002,
+    "C": 10.0,
+    "eps_scale": null,
+    "source": "search_selected",
+    "num_bands": 4,
+    "final_test_top1": 0.8,
+    "stop_reason": "LR .001/.002/.003 at C=10; stop at internal winner or after one directional extension",
+    "provenance": {
+      "result_dir": "exp7b/results/search/trials/cf989d0827b3b8be",
+      "result_source": "new",
+      "historical_result_dir": null,
+      "objective": "seed=20261001 epoch-5 final_test_top1",
+      "workload_sha256": "W",
+      "strategy_sha256": "S"
+    }
+  },
+  "dp-adam-momentum-bandinvmf-scale": {
+    "method": "dp-adam-momentum-bandinvmf-scale",
+    "seed": 20261001,
+    "lr": 0.005,
+    "C": 33.333333333333336,
+    "eps_scale": 0.3,
+    "source": "search_selected",
+    "num_bands": 4,
+    "final_test_top1": 0.8,
+    "stop_reason": "eps neighborhood, K=5/10/20, then LR=.003/.005/.007 with at most one extension",
+    "provenance": {
+      "result_dir": "exp7b/results/search/trials/9b3c604cbf777599",
+      "result_source": "new",
+      "historical_result_dir": null,
+      "objective": "seed=20261001 epoch-5 final_test_top1",
+      "workload_sha256": "W",
+      "strategy_sha256": "S"
+    }
+  },
+  "dp-adam-momentum-bias-bandinvmf": {
+    "method": "dp-adam-momentum-bias-bandinvmf",
+    "seed": 20261001,
+    "lr": 0.003,
+    "C": 10.0,
+    "eps_scale": null,
+    "source": "search_selected",
+    "num_bands": 4,
+    "final_test_top1": 0.8,
+    "stop_reason": "C search at LR=.005, then LR search at best C; at most one endpoint extension per coordinate",
+    "provenance": {
+      "result_dir": "exp7b/results/search/trials/acce6147462881bc",
+      "result_source": "new",
+      "historical_result_dir": null,
+      "objective": "seed=20261001 epoch-5 final_test_top1",
+      "workload_sha256": "W",
+      "strategy_sha256": "S"
+    }
+  },
+  "dp-adam-momentum-bias-bandinvmf-scale": {
+    "method": "dp-adam-momentum-bias-bandinvmf-scale",
+    "seed": 20261001,
+    "lr": 0.005,
+    "C": 33.333333333333336,
+    "eps_scale": 0.3,
+    "source": "search_selected",
+    "num_bands": 4,
+    "final_test_top1": 0.8,
+    "stop_reason": "eps neighborhood and K=5/10/20; one bounded endpoint refinement; LR at best (eps,C)",
+    "provenance": {
+      "result_dir": "exp7b/results/search/trials/a075a76b960e9a14",
+      "result_source": "new",
+      "historical_result_dir": null,
+      "objective": "seed=20261001 epoch-5 final_test_top1",
+      "workload_sha256": "W",
+      "strategy_sha256": "S"
+    }
+  }
+}

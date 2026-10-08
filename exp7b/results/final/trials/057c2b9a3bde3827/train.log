@@ -1,0 +1,35 @@
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+{"method": "dp-adam-momentum-bias-bandinvmf", "smoke": false, "calibration": {"target_mu": 1.6660305978457184, "sensitivity": 4.065608121489227, "innovation_std_sum": 73.20888572058001, "adjacency": "add_remove_zero_out", "k": 5, "b_participation": 50, "sampling_amplification": false}, "coefficients": [1.0, -0.53161943769869, -0.0779998119461293, -0.2795535556950146]}
+sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+{"progress_step": 10, "epoch": 1, "train_loss_so_far": 4.676422143554688, "clip_fraction_so_far": 1.0}
+{"progress_step": 20, "epoch": 1, "train_loss_so_far": 4.396280947875977, "clip_fraction_so_far": 1.0}
+{"progress_step": 30, "epoch": 1, "train_loss_so_far": 4.107291721598307, "clip_fraction_so_far": 0.9992333333333333}
+{"progress_step": 40, "epoch": 1, "train_loss_so_far": 3.839506578063965, "clip_fraction_so_far": 0.9975}
+{"progress_step": 50, "epoch": 1, "train_loss_so_far": 3.607037893066406, "clip_fraction_so_far": 0.99424}
+{"epoch": 1, "logical_steps": 50, "train_examples": 50000, "train_loss": 3.607037893066406, "test_loss": 2.146402377319336, "test_top1": 0.4572, "clip_fraction": 0.99424, "gdp_mu": 0.7271304784322895, "gdp_epsilon": 3.037976902428692, "target_mu": 1.6660305978457184, "target_epsilon": 8.0, "delta": 1e-05, "noise_std": 0.08559034234029003, "noise_std_space": "gradient", "innovation_std_sum": 73.20888572058001, "augmentation_trace_sha256": "db128d4a1343574879305bd7fd9c871dc5c311f5ff649a0060d9cbec7269e61a", "seconds": 148.15132985264063}
+{"progress_step": 60, "epoch": 2, "train_loss_so_far": 2.371160174560547, "clip_fraction_so_far": 0.9544}
+{"progress_step": 70, "epoch": 2, "train_loss_so_far": 2.2763983489990234, "clip_fraction_so_far": 0.9417}
+{"progress_step": 80, "epoch": 2, "train_loss_so_far": 2.1924239135742187, "clip_fraction_so_far": 0.9283333333333333}
+{"progress_step": 90, "epoch": 2, "train_loss_so_far": 2.1210285316467283, "clip_fraction_so_far": 0.91465}
+{"progress_step": 100, "epoch": 2, "train_loss_so_far": 2.060452047729492, "clip_fraction_so_far": 0.90188}
+{"epoch": 2, "logical_steps": 100, "train_examples": 50000, "train_loss": 2.060452047729492, "test_loss": 1.2921136505126953, "test_top1": 0.648, "clip_fraction": 0.90188, "gdp_mu": 1.0438331619280494, "gdp_epsilon": 4.600416946348178, "target_mu": 1.6660305978457184, "target_epsilon": 8.0, "delta": 1e-05, "noise_std": 0.08559034234029003, "noise_std_space": "gradient", "innovation_std_sum": 73.20888572058001, "augmentation_trace_sha256": "03651116c9ec63a0c1efa3312b63111d95a813469ddfa8bd0cb6a0a13c9a6bfa", "seconds": 135.95823452435434}
+{"progress_step": 110, "epoch": 3, "train_loss_so_far": 1.7219325714111329, "clip_fraction_so_far": 0.819}
+{"progress_step": 120, "epoch": 3, "train_loss_so_far": 1.6866495513916016, "clip_fraction_so_far": 0.80705}
+{"progress_step": 130, "epoch": 3, "train_loss_so_far": 1.6593413177490235, "clip_fraction_so_far": 0.7961333333333334}
+{"progress_step": 140, "epoch": 3, "train_loss_so_far": 1.6423512481689453, "clip_fraction_so_far": 0.786875}
+{"progress_step": 150, "epoch": 3, "train_loss_so_far": 1.6181175048828125, "clip_fraction_so_far": 0.77974}
+{"epoch": 3, "logical_steps": 150, "train_examples": 50000, "train_loss": 1.6181175048828125, "test_loss": 1.002565672302246, "test_top1": 0.7153, "clip_fraction": 0.77974, "gdp_mu": 1.2851399415460758, "gdp_epsilon": 5.868262919898993, "target_mu": 1.6660305978457184, "target_epsilon": 8.0, "delta": 1e-05, "noise_std": 0.08559034234029003, "noise_std_space": "gradient", "innovation_std_sum": 73.20888572058001, "augmentation_trace_sha256": "10b7e3f22012f12bb1f8ccdc6a4834b26ac8b1f122b0057e5d43453424ed57bd", "seconds": 140.87990122288465}
+{"progress_step": 160, "epoch": 4, "train_loss_so_far": 1.494535824584961, "clip_fraction_so_far": 0.7336}
+{"progress_step": 170, "epoch": 4, "train_loss_so_far": 1.4734284439086913, "clip_fraction_so_far": 0.72305}
+{"progress_step": 180, "epoch": 4, "train_loss_so_far": 1.4528216603597006, "clip_fraction_so_far": 0.7147}
+{"progress_step": 190, "epoch": 4, "train_loss_so_far": 1.4476256805419923, "clip_fraction_so_far": 0.710475}
+{"progress_step": 200, "epoch": 4, "train_loss_so_far": 1.4372821612548827, "clip_fraction_so_far": 0.70622}
+{"epoch": 4, "logical_steps": 200, "train_examples": 50000, "train_loss": 1.4372821612548827, "test_loss": 0.8650959594726563, "test_top1": 0.7469, "clip_fraction": 0.70622, "gdp_mu": 1.4878241288541525, "gdp_epsilon": 6.9830197665238485, "target_mu": 1.6660305978457184, "target_epsilon": 8.0, "delta": 1e-05, "noise_std": 0.08559034234029003, "noise_std_space": "gradient", "innovation_std_sum": 73.20888572058001, "augmentation_trace_sha256": "199e2a862d99af89935337af169ac888112cbec8ce4bd69ccfaa9819477d6970", "seconds": 141.9583659786731}
+{"progress_step": 210, "epoch": 5, "train_loss_so_far": 1.3562663757324218, "clip_fraction_so_far": 0.6752}
+{"progress_step": 220, "epoch": 5, "train_loss_so_far": 1.3484597732543946, "clip_fraction_so_far": 0.66955}
+{"progress_step": 230, "epoch": 5, "train_loss_so_far": 1.3457144551595053, "clip_fraction_so_far": 0.6671333333333334}
+{"progress_step": 240, "epoch": 5, "train_loss_so_far": 1.3379752670288085, "clip_fraction_so_far": 0.663325}
+{"progress_step": 250, "epoch": 5, "train_loss_so_far": 1.3394635693359376, "clip_fraction_so_far": 0.6608}
+{"epoch": 5, "logical_steps": 250, "train_examples": 50000, "train_loss": 1.3394635693359376, "test_loss": 0.7899343673706055, "test_top1": 0.7654, "clip_fraction": 0.6608, "gdp_mu": 1.6660305978457184, "gdp_epsilon": 8.000000000000005, "target_mu": 1.6660305978457184, "target_epsilon": 8.0, "delta": 1e-05, "noise_std": 0.08559034234029003, "noise_std_space": "gradient", "innovation_std_sum": 73.20888572058001, "augmentation_trace_sha256": "2d8f99d54707bcf3a169f1187e9c925ce2c93dedb2c026b991c387c233b89402", "seconds": 139.24647614359856}
+{"status": "completed", "results": "/media/data/data/lt/dp-adam-correlated/exp7b/results/final/trials/057c2b9a3bde3827"}

@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "frozen_configs_sha256": "9685390e6090ba3435f3a528b3c5b4bef76b3e5f86c350debe59837a6502f41f",
+  "search_seed": 20261001,
+  "completed_search_trials": 33,
+  "new_trials": 27,
+  "historical_trials": 6,
+  "search_pairing": "passed",
+  "selection_objective": "epoch-5 final_test_top1",
+  "methods": {
+    "dp-adam-iid": {
+      "lr": 0.0005,
+      "C": 30.0,
+      "eps_scale": null,
+      "source": "exp7_frozen"
+    },
+    "dp-adam-sgd-bandinvmf": {
+      "lr": 0.002,
+      "C": 10.0,
+      "eps_scale": null,
+      "source": "search_selected"
+    },
+    "dp-adam-momentum-bandinvmf": {
+      "lr": 0.005,
+      "C": 30.0,
+      "eps_scale": null,
+      "source": "exp7_frozen"
+    },
+    "dp-adam-momentum-bias-bandinvmf": {
+      "lr": 0.003,
+      "C": 30.0,
+      "eps_scale": null,
+      "source": "search_selected"
+    },
+    "dp-adam-sgd-bandinvmf-scale": {
+      "lr": 0.002,
+      "C": 100.0,
+      "eps_scale": 0.1,
+      "source": "exp7_frozen"
+    },
+    "dp-adam-momentum-bandinvmf-scale": {
+      "lr": 0.005,
+      "C": 100.0,
+      "eps_scale": 0.1,
+      "source": "search_selected"
+    },
+    "dp-adam-momentum-bias-bandinvmf-scale": {
+      "lr": 0.003,
+      "C": 100.0,
+      "eps_scale": 0.1,
+      "source": "search_selected"
+    }
+  }
+}

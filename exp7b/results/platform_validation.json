@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "unit_tests": "passed",
+  "smoke_trials": 7,
+  "smoke_methods": [
+    "dp-adam-iid",
+    "dp-adam-sgd-bandinvmf",
+    "dp-adam-momentum-bandinvmf",
+    "dp-adam-momentum-bias-bandinvmf",
+    "dp-adam-sgd-bandinvmf-scale",
+    "dp-adam-momentum-bandinvmf-scale",
+    "dp-adam-momentum-bias-bandinvmf-scale"
+  ],
+  "gpus": [
+    1,
+    2,
+    3
+  ],
+  "pairing": "passed",
+  "fifo": {
+    "status": "passed",
+    "launches": 7,
+    "gpus": [
+      1,
+      2,
+      3
+    ]
+  },
+  "protocol_steps": 250,
+  "protocol_epochs": 5,
+  "smoke_steps": 1,
+  "smoke_epochs": 1,
+  "smoke_excluded_from_search": true,
+  "full_experiments_started": false
+}

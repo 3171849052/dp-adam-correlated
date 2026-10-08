@@ -1,0 +1,22 @@
+{
+  "objective": "fixed_participation_sensitivity_squared * mean_full_workload_error",
+  "optimized_objective": 6973.708848664393,
+  "initial_objective": 9523.045873689221,
+  "full_workload_shape": [
+    250,
+    250
+  ],
+  "optimizer": "Nelder-Mead, two fixed starts",
+  "iterations": 235,
+  "converged": true,
+  "d0_fixed": 1.0,
+  "coefficients": [
+    1.0,
+    -0.53161943769869,
+    -0.0779998119461293,
+    -0.2795535556950146
+  ],
+  "workload_sha256": "5789d76ad33c5d83b8a7d12d70472504b7d48545a405aa6fdb1e72bce392b229",
+  "strategy_sha256": "3b5d25b76f731d3d145b56487662e1afe290ad9ed4ef20101be00148d10c7653",
+  "workload_error": 421.9031628843412
+}
