@@ -1,0 +1,260 @@
+{
+  "records": [
+    {
+      "method": "dp-adam-iid",
+      "seed": 20261001,
+      "lr": 3e-05,
+      "C": 10.0,
+      "eps_scale": null,
+      "status": "completed",
+      "category": "search",
+      "completed_epochs": 5,
+      "accuracy": 0.6097712125471966,
+      "result_dir": "results/search/trials/2ab9db64618c0b07"
+    },
+    {
+      "method": "dp-adam-iid",
+      "seed": 20261001,
+      "lr": 0.0001,
+      "C": 10.0,
+      "eps_scale": null,
+      "status": "completed",
+      "category": "search",
+      "completed_epochs": 5,
+      "accuracy": 0.615,
+      "result_dir": "results/search/trials/893fa34648f5c9a7"
+    },
+    {
+      "method": "dp-adam-iid",
+      "seed": 20261001,
+      "lr": 0.0003,
+      "C": 10.0,
+      "eps_scale": null,
+      "status": "completed",
+      "category": "search",
+      "completed_epochs": 5,
+      "accuracy": 0.6197712125471966,
+      "result_dir": "results/search/trials/9caa21dc4f44b652"
+    },
+    {
+      "method": "dp-adam-iid",
+      "seed": 20261001,
+      "lr": 0.001,
+      "C": 10.0,
+      "eps_scale": null,
+      "status": "completed",
+      "category": "search",
+      "completed_epochs": 5,
+      "accuracy": 0.625,
+      "result_dir": "results/search/trials/5431ba4e1476f2ca"
+    },
+    {
+      "method": "dp-adam-iid",
+      "seed": 20261001,
+      "lr": 0.001,
+      "C": 0.1,
+      "eps_scale": null,
+      "status": "completed",
+      "category": "search",
+      "completed_epochs": 5,
+      "accuracy": 0.615,
+      "result_dir": "results/search/trials/80b972ed680060a5"
+    },
+    {
+      "method": "dp-adam-iid",
+      "seed": 20261001,
+      "lr": 0.001,
+      "C": 1.0,
+      "eps_scale": null,
+      "status": "completed",
+      "category": "search",
+      "completed_epochs": 5,
+      "accuracy": 0.62,
+      "result_dir": "results/search/trials/2ba5f7df869b2835"
+    },
+    {
+      "method": "dp-adam-iid",
+      "seed": 20261001,
+      "lr": 0.001,
+      "C": 30.0,
+      "eps_scale": null,
+      "status": "completed",
+      "category": "search",
+      "completed_epochs": 5,
+      "accuracy": 0.6273856062735983,
+      "result_dir": "results/search/trials/efc9b92b4e5b9b19"
+    },
+    {
+      "method": "dp-adam-iid",
+      "seed": 20261001,
+      "lr": 0.001,
+      "C": 100.0,
+      "eps_scale": null,
+      "status": "completed",
+      "category": "search",
+      "completed_epochs": 5,
+      "accuracy": 0.63,
+      "result_dir": "results/search/trials/525812438dda883f"
+    },
+    {
+      "method": "dp-adam-iid",
+      "seed": 20261001,
+      "lr": 0.0005477225575051661,
+      "C": 100.0,
+      "eps_scale": null,
+      "status": "completed",
+      "category": "search",
+      "completed_epochs": 5,
+      "accuracy": 0.6273856062735983,
+      "result_dir": "results/search/trials/41f215813f0082ab"
+    },
+    {
+      "method": "dp-adam-iid",
+      "seed": 20261001,
+      "lr": 0.003,
+      "C": 100.0,
+      "eps_scale": null,
+      "status": "completed",
+      "category": "search",
+      "completed_epochs": 5,
+      "accuracy": 0.6347712125471966,
+      "result_dir": "results/search/trials/12457ed13bc56597"
+    },
+    {
+      "method": "dp-adam-iid",
+      "seed": 20261001,
+      "lr": 0.003,
+      "C": 54.772255750516614,
+      "eps_scale": null,
+      "status": "completed",
+      "category": "search",
+      "completed_epochs": 5,
+      "accuracy": 0.6334640156839958,
+      "result_dir": "results/search/trials/35357274b5e300bf"
+    },
+    {
+      "method": "dp-adam-iid",
+      "seed": 20261001,
+      "lr": 0.003,
+      "C": 300.0,
+      "eps_scale": null,
+      "status": "completed",
+      "category": "search",
+      "completed_epochs": 5,
+      "accuracy": 0.6371568188207949,
+      "result_dir": "results/search/trials/21ead6f3bf1f9d61"
+    }
+  ],
+  "stages": [
+    {
+      "stage": "coarse_lr",
+      "candidates": [
+        {
+          "method": "dp-adam-iid",
+          "seed": 20261001,
+          "lr": 3e-05,
+          "C": 10.0,
+          "eps_scale": null
+        },
+        {
+          "method": "dp-adam-iid",
+          "seed": 20261001,
+          "lr": 0.0001,
+          "C": 10.0,
+          "eps_scale": null
+        },
+        {
+          "method": "dp-adam-iid",
+          "seed": 20261001,
+          "lr": 0.0003,
+          "C": 10.0,
+          "eps_scale": null
+        },
+        {
+          "method": "dp-adam-iid",
+          "seed": 20261001,
+          "lr": 0.001,
+          "C": 10.0,
+          "eps_scale": null
+        }
+      ],
+      "budget_used": 4
+    },
+    {
+      "stage": "coarse_C",
+      "candidates": [
+        {
+          "method": "dp-adam-iid",
+          "seed": 20261001,
+          "lr": 0.001,
+          "C": 0.1,
+          "eps_scale": null
+        },
+        {
+          "method": "dp-adam-iid",
+          "seed": 20261001,
+          "lr": 0.001,
+          "C": 1.0,
+          "eps_scale": null
+        },
+        {
+          "method": "dp-adam-iid",
+          "seed": 20261001,
+          "lr": 0.001,
+          "C": 30.0,
+          "eps_scale": null
+        },
+        {
+          "method": "dp-adam-iid",
+          "seed": 20261001,
+          "lr": 0.001,
+          "C": 100.0,
+          "eps_scale": null
+        }
+      ],
+      "budget_used": 8
+    },
+    {
+      "stage": "refine_lr_once",
+      "candidates": [
+        {
+          "method": "dp-adam-iid",
+          "seed": 20261001,
+          "lr": 0.0005477225575051661,
+          "C": 100.0,
+          "eps_scale": null
+        },
+        {
+          "method": "dp-adam-iid",
+          "seed": 20261001,
+          "lr": 0.003,
+          "C": 100.0,
+          "eps_scale": null
+        }
+      ],
+      "budget_used": 10
+    },
+    {
+      "stage": "refine_C_once",
+      "candidates": [
+        {
+          "method": "dp-adam-iid",
+          "seed": 20261001,
+          "lr": 0.003,
+          "C": 54.772255750516614,
+          "eps_scale": null
+        },
+        {
+          "method": "dp-adam-iid",
+          "seed": 20261001,
+          "lr": 0.003,
+          "C": 300.0,
+          "eps_scale": null
+        }
+      ],
+      "budget_used": 12
+    }
+  ],
+  "budget": 12,
+  "trials": 12
+}

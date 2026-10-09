@@ -1,0 +1,64 @@
+............................F....                                        [100%]
+=================================== FAILURES ===================================
+_ test_search_budget_seed_and_boundary_once[dp-adam-momentum-bias-bandinvmf-scale] _
+
+tmp_path = PosixPath('/media/data/data/lt/dp-adam-correlated/exp8b/runtime/tests/test_search_budget_seed_and_bo1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fb82c1a8390>
+method = 'dp-adam-momentum-bias-bandinvmf-scale'
+
+    @pytest.mark.parametrize('method',[IID,BIAS_SCALE])
+    def test_search_budget_seed_and_boundary_once(tmp_path,monkeypatch,method):
+        monkeypatch.setattr(config,'BASE',tmp_path);monkeypatch.setattr(config,'RESULTS',tmp_path/'results')
+        monkeypatch.setattr(search,'RESULTS',tmp_path/'results');monkeypatch.setattr(search,'ROOT',tmp_path)
+        eps=.1 if method.endswith('-scale') else None
+        smoke_dir=trial_dir(trial(method,1e-4,1.,eps),'smoke');smoke_dir.mkdir(parents=True)
+        (smoke_dir/'summary.json').write_text(json.dumps(dict(first_step_diagnostics=dict(gradient_norm_p50=50.))))
+        started=[]
+        def runner(jobs,gpu,category):
+            result=[]
+            for j in jobs:
+                assert j['seed']==SEED and category=='search' and gpu==0
+                started.append(j)
+                directory=tmp_path/'results/search/trials'/trial_id(j);directory.mkdir(parents=True)
+                with (directory/'mechanism_metrics.csv').open('w') as f:
+                    f.write('gradient_norm_p50,clip_fraction\n50,.8\n')
+                # Deliberate edge winner exercises all allowed outward refinements.
+                accuracy=.6+.01*math.log10(j['lr']/1e-5)+.005*math.log10(j['C'])
+                result.append(dict(j,status='completed',category='search',completed_epochs=5,accuracy=accuracy,
+                                   result_dir=str(directory.relative_to(tmp_path))))
+            return result
+        winner=search.search_method(method,runner=runner)
+        assert len(started)<= (18 if eps else 12) and len({trial_id(j) for j in started})==len(started)
+        proof=json.loads((tmp_path/'results/search'/f'{method}_search.json').read_text())
+        assert proof['trials']==len(started) and proof['winner']==winner
+        assert sum(s['stage']=='refine_lr_once' for s in proof['stages'])==1
+>       assert len([j for j in started if j['lr']>max(LRS)])<=3
+E       AssertionError: assert 5 <= 3
+E        +  where 5 = len([{'method': 'dp-adam-momentum-bias-bandinvmf-scale', 'seed': 20261001, 'lr': 0.003, 'C': 500.0, ...}, {'method': 'dp-a... ...}, {'method': 'dp-adam-momentum-bias-bandinvmf-scale', 'seed': 20261001, 'lr': 0.003, 'C': 821.5838362577491, ...}])
+
+exp8b/tests/test_workflows.py:47: AssertionError
+=============================== warnings summary ===============================
+exp8b/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cpu-standard-small]
+exp8b/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cpu-standard-pretrained]
+exp8b/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cpu-scale-small]
+exp8b/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cpu-scale-pretrained]
+  /media/data/data/lt/dp-adam-correlated/exp8b/clipping.py:55: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    losses.sum().backward(retain_graph=True)
+
+exp8b/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cpu-standard-small]
+exp8b/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cpu-standard-pretrained]
+exp8b/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cpu-scale-small]
+exp8b/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cpu-scale-pretrained]
+  /media/data/data/lt/dp-adam-correlated/exp8b/clipping.py:60: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    (losses * coefficients).sum().backward()
+
+exp8b/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cuda:0-standard-small]
+exp8b/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cuda:0-standard-pretrained]
+exp8b/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cuda:0-scale-small]
+exp8b/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cuda:0-scale-pretrained]
+  sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED exp8b/tests/test_workflows.py::test_search_budget_seed_and_boundary_once[dp-adam-momentum-bias-bandinvmf-scale]
+1 failed, 32 passed, 12 warnings in 17.61s

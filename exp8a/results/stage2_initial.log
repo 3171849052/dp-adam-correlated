@@ -1,0 +1,50 @@
+{'geometry': 'standard', 'max_length': 64, 'physical_batch_size': 8, 'status': 'completed', 'headroom_fraction': 0.9790295944847833}
+{'geometry': 'scale', 'max_length': 64, 'physical_batch_size': 8, 'status': 'completed', 'headroom_fraction': 0.9733256441846444}
+{'geometry': 'standard', 'max_length': 64, 'physical_batch_size': 20, 'status': 'completed', 'headroom_fraction': 0.9781907782641747}
+{'geometry': 'scale', 'max_length': 64, 'physical_batch_size': 20, 'status': 'completed', 'headroom_fraction': 0.9726545912081574}
+{'geometry': 'standard', 'max_length': 64, 'physical_batch_size': 40, 'status': 'completed', 'headroom_fraction': 0.9768486723112009}
+{'geometry': 'scale', 'max_length': 64, 'physical_batch_size': 40, 'status': 'completed', 'headroom_fraction': 0.9713124852551837}
+{'geometry': 'standard', 'max_length': 64, 'physical_batch_size': 50, 'status': 'completed', 'headroom_fraction': 0.9758420928464704}
+{'geometry': 'scale', 'max_length': 64, 'physical_batch_size': 50, 'status': 'completed', 'headroom_fraction': 0.9711447220110618}
+{'geometry': 'standard', 'max_length': 64, 'physical_batch_size': 100, 'status': 'completed', 'headroom_fraction': 0.9656085349550447}
+{'geometry': 'scale', 'max_length': 64, 'physical_batch_size': 100, 'status': 'completed', 'headroom_fraction': 0.9619177435843665}
+{'geometry': 'standard', 'max_length': 64, 'physical_batch_size': 125, 'status': 'completed', 'headroom_fraction': 0.9637631392697056}
+{'geometry': 'scale', 'max_length': 64, 'physical_batch_size': 125, 'status': 'completed', 'headroom_fraction': 0.9577236624813232}
+{'geometry': 'standard', 'max_length': 64, 'physical_batch_size': 200, 'status': 'completed', 'headroom_fraction': 0.9511808959605756}
+{'geometry': 'scale', 'max_length': 64, 'physical_batch_size': 200, 'status': 'completed', 'headroom_fraction': 0.9446381294398281}
+{'geometry': 'standard', 'max_length': 64, 'physical_batch_size': 250, 'status': 'completed', 'headroom_fraction': 0.9439670764633411}
+{'geometry': 'scale', 'max_length': 64, 'physical_batch_size': 250, 'status': 'completed', 'headroom_fraction': 0.9325591758630632}
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 18264.61it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+{'step': 62, 'epoch': 1.0, 'train_loss': 2.517974304199219, 'clip_fraction': 0.561, 'loss': 2.4536627632008465, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 3.054089440266451, 'mu': 0.7305251613152316}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/media/data/data/lt/dp-adam-correlated/exp8a/stage2.py", line 73, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp8a/stage2.py", line 71, in main
+    execute(a.gpu,a.pilots)
+  File "/media/data/data/lt/dp-adam-correlated/exp8a/stage2.py", line 36, in execute
+    cfg=pilots(cfg,gpu,pilot_count)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp8a/stage2.py", line 19, in pilots
+    results.append(dict(lr=lr,C=C,eps_scale=eps_scale,**result))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: dict() got multiple values for keyword argument 'lr'
+ERROR conda.cli.main_run:execute(127): `conda run python -B -m exp8a.stage2 --gpu 0` failed. (See above for error)

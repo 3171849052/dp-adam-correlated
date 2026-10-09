@@ -1,0 +1,57 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0  1095    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0 16.9M    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+HTTP/2 302 
+accept-ranges: bytes
+access-control-allow-origin: https://hf-mirror.com
+access-control-expose-headers: X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash
+access-control-max-age: 86400
+alt-svc: h3=":443"; ma=2592000
+cache-control: no-cache
+cache-control: no-store
+content-type: text/plain; charset=utf-8
+cross-origin-opener-policy: same-origin
+date: Thu, 08 Oct 2026 09:04:26 GMT
+link: <https://hf-mirror.com/api/models/prajjwal1/bert-tiny/xet-read-token/6f75de8b60a9f8a2fdf7b69cbd86d9e64bcb3837>; rel="xet-auth", <https://cas-server.xethub.hf.co/v1/reconstructions/05526191ad0e4fa22e3d4fdb7160def3c04f6534de288d2795a40d105d3fb965>; rel="xet-reconstruction-info"
+location: https://cas-bridge.xethub.hf.co/xet-bridge-us/621ffdc136468d709f17ef83/05526191ad0e4fa22e3d4fdb7160def3c04f6534de288d2795a40d105d3fb965?Expires=1791453866&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jYXMtYnJpZGdlLnhldGh1Yi5oZi5jby94ZXQtYnJpZGdlLXVzLzYyMWZmZGMxMzY0NjhkNzA5ZjE3ZWY4My8wNTUyNjE5MWFkMGU0ZmEyMmUzZDRmZGI3MTYwZGVmM2MwNGY2NTM0ZGUyODhkMjc5NWE0MGQxMDVkM2ZiOTY1KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5MTQ1Mzg2Nn19fV19&Signature=MEYCIQC5291jn1q9OwO73L0kM8ERK2nUg3v8wckYCQWmmTCf5gIhANwPp-KabjFFBAFR3kLLfByukxL7Z%7EhhqdUu3WFBLRBU&Key-Pair-Id=K3EPXBYC3CKDRZ&X-Xet-Cas-Uid=62171e3b6a99db28e0b3159d&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&xip=Tbjh9khOORA&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=cas%2F20261008%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261008T090426Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=d1781804e4c1b2e677bf4c1c4e55a73dd58974d286395844f219b558c8a40747
+ratelimit: "resolvers";r=60352;t=169
+ratelimit-policy: "fixed window";"resolvers";q=100000;w=300
+referrer-policy: strict-origin-when-cross-origin
+server: hf-mirror
+strict-transport-security: max-age=31536000
+vary: Origin, Accept
+via: 2.0 Caddy
+via: 1.1 dfb00a6f1b4396696c279555f554c78a.cloudfront.net (CloudFront)
+x-amz-cf-id: Dpx8ioIZQ1eoY1etNmTJb429tSu7xpuwi3q0TOnKURU7Aw_KJx0HgQ==
+x-amz-cf-pop: LAX53-P4
+x-cache: Miss from cloudfront
+x-hub-cache: HIT
+x-linked-etag: "dab2c2bddcfb48ea430ef63fd76d46d67d704487844d967256a50dd7d7fd0a66"
+x-linked-size: 17756393
+x-powered-by: huggingface-moon
+x-repo-commit: 6f75de8b60a9f8a2fdf7b69cbd86d9e64bcb3837
+x-request-id: Root=1-6ac75c9a-0d068b860abdc82321ad8ffc
+content-length: 1095
+
+HTTP/1.1 200 OK
+Content-Type: application/octet-stream
+Content-Length: 17756393
+Connection: keep-alive
+Content-Disposition: inline; filename*=UTF-8''pytorch_model.bin; filename="pytorch_model.bin";
+Cache-Control: public, max-age=31536000
+ETag: "05526191ad0e4fa22e3d4fdb7160def3c04f6534de288d2795a40d105d3fb965"
+Accept-Ranges: bytes
+access-control-allow-credentials: true
+access-control-expose-headers: accept-ranges,content-range,content-type,content-disposition,etag,x-cache
+x-request-id: 01M289GC1ZXHGYDV1V5VAVQ2DR
+Date: Fri, 11 Sep 2026 13:11:28 GMT
+Vary: origin,access-control-request-method,access-control-request-headers
+X-Cache: Hit from cloudfront
+Via: 1.1 b5afed9af6ab9ac8245e8872d677a7bc.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: LAX53-P4
+X-Amz-Cf-Id: GMEdWCWAqOG-pj1E0apSo3X4CTijUoZDyK6Gkw6yzmSsrSYKSWZqGg==
+Age: 2317979
+Content-Security-Policy: default-src 'none'; media-src 'self'; sandbox allow-same-origin
+Strict-Transport-Security: max-age=31536000
+

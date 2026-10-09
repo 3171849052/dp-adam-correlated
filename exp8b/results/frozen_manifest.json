@@ -1,0 +1,106 @@
+{
+  "frozen_configs_sha256": "d5bc9a25308ac9b5d1f1a9187de9fb0fd41491dffef1f9c3d7bf0651277837cd",
+  "selected_configs_sha256": "d5bc9a25308ac9b5d1f1a9187de9fb0fd41491dffef1f9c3d7bf0651277837cd",
+  "source_hashes": {
+    "__init__.py": "d6766921b632c3bde9de1b90b3dd0e3a92eba401bfc541ec939b2a2fd3b5b7c0",
+    "audit.py": "1e2ec97a8f6a41d628771e12159ef6395f5dc11f3a155b06c5830fcab4138760",
+    "bandinvmf.py": "f12114feed32ebe272ddda7a5853efeeb9171e81af5e69ba2d8a59c6c5ede138",
+    "clipping.py": "d5155f7ce1256f28544740ae73fdb3b998f4982ec4f01df879678e6c9299df21",
+    "config.py": "b0857a454c6d9c003745ca7077dae5e5aaee66edc87cd64e64838c0338746c08",
+    "data.py": "59a9565a0d3dbc95c958a667570d410f2c2afafbf4780ddb0d3b7670bb3d5d5f",
+    "final.py": "c4ee8ceaa6dc7188eb6f69b96dbed21f31c63f5a9651a3f246ac4d7ac0839465",
+    "frozen.py": "4709ec71301cab822c97d99f15a406b8440713e02566a566c3f67af449e7bb0f",
+    "launcher.py": "d9e15b0b0249d341e09da54a489e48e182313f1fe86c26579e0f565e0ee19474",
+    "model.py": "c76de22c36de8d4f01e0027ecb1d69137811801681e69f4506236b71babb847c",
+    "noise.py": "de6241eaba3ca673175c9fd83a573caf039cabbbc7b28e0f2ae79a27f7be0f8b",
+    "privacy.py": "6e37e95ccb496245174249f30f9c3237fb809b30a031a5092e462debf2d9ac5a",
+    "report.py": "ab641da1b954d5b4e7dbd02eac22544838c65d7a5dadf5757a00f39f52c29fca",
+    "search.py": "62d93ea063da456affed8af7debf3c4fb482bdde77c5e85cb30bcd937a3adab4",
+    "stage1.py": "40537a3769308e94c79ee8ca80c51e7c83822cddb476b073972224b7b4320bfe",
+    "stage2.py": "05496fa71414504076942fe3df812591e4de8dc99dbd58f8120ae5ea88ba1c8b",
+    "tests/test_correctness.py": "45d3b8202dc441d068a883613f57846ccb40ab3b3e64ce0fdea0d44b17fc9450",
+    "tests/test_protocol.py": "ca3935df09e671876912fe04a3439ce1d1f2d925ad8a97bc13832be1e5a69430",
+    "tests/test_workflows.py": "8f89a75cf64a5e57528e40cd104ec065a014acb4fa0bba050e181b1b4ce77972",
+    "train.py": "91c711c7ed6a7fe68e85fdf9a34450cb6fb832797e83b6f6062a6f38347a5ea4"
+  },
+  "split_sha256": "fe7597fa24b465bb5f28300ddc34cb76265b19e098f587b1c0b6bb288d127e6a",
+  "tokens_sha256": "69be144f9a3525ce3d063b04263a4b356f436d943ee00e8c6f1b9f9979b212a6",
+  "pretrained_sha256": "dab2c2bddcfb48ea430ef63fd76d46d67d704487844d967256a50dd7d7fd0a66",
+  "selection_objective": "search-validation Accuracy at epoch 5 only",
+  "search_seed": 20261001,
+  "final_seeds": [
+    20261011,
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020
+  ],
+  "official_validation_used": false,
+  "provenance": {
+    "dp-adam-iid": {
+      "result_dir": "exp8b/results/search/trials/b13f4e961e6c8d55",
+      "summary_sha256": "ba56c3be7695a7911ad2a03cdc84dba12ae159d3d707ad745a94fb9c215b198a",
+      "checkpoint_sha256": "0bfdd12c145d7acdf5f4c7420ac573b5d84089a11fa67aa9585ac720a2ae22b6"
+    },
+    "dp-adam-sgd-bandinvmf": {
+      "result_dir": "exp8b/results/search/trials/2f467315a5967ade",
+      "summary_sha256": "0bf8c16381ede3936c1cb97617c0070ae0a24a254b65fbff00c1ca08b18791f5",
+      "checkpoint_sha256": "c7919a55b26d7f4ffa2ce1de63f668922e2aec2deef677a5c9caa6d906299d75"
+    },
+    "dp-adam-momentum-bandinvmf": {
+      "result_dir": "exp8b/results/search/trials/a88fc72edf7a3e95",
+      "summary_sha256": "82437236624fc495f2de7fb2c68c02c74835cc48bd331fa89d071975690c8437",
+      "checkpoint_sha256": "a9f9fd9c383072e4334692f840838da724b2bd9be3326cf614901db8f66123bf"
+    },
+    "dp-adam-momentum-bias-bandinvmf": {
+      "result_dir": "exp8b/results/search/trials/acce6147462881bc",
+      "summary_sha256": "26d7ca14803f09ba022f162736caa51d50f909929716584c08a330ecb6198c72",
+      "checkpoint_sha256": "c3312799ae0fb6ae03d9c46a40af5a4a9e2b0e3ed5cc55e0f8c8be1d89be518c"
+    },
+    "dp-adam-sgd-bandinvmf-scale": {
+      "result_dir": "exp8b/results/search/trials/fd900cc7dde9454d",
+      "summary_sha256": "8961688d2761d07c757b3d0fc9e2d9509140db3a0bb1bc91ee872ce4af3ecb5b",
+      "checkpoint_sha256": "5464d0c263f807883a99f7c0a791ab93067eed26d1f7abaf25c7a04523762e27"
+    },
+    "dp-adam-momentum-bandinvmf-scale": {
+      "result_dir": "exp8b/results/search/trials/2780c2a0a5717138",
+      "summary_sha256": "21f7b83f282d5f06bbb9a8528b9ea863c843f7e23c722b73d0f7b1b7248bf03c",
+      "checkpoint_sha256": "a657bb624b0d542cb508dd3c5f3cadff2a716dc61e235ab7925fe3445deca025"
+    },
+    "dp-adam-momentum-bias-bandinvmf-scale": {
+      "result_dir": "exp8b/results/search/trials/7400b2756595b5e4",
+      "summary_sha256": "48655279f1c5c88018e590b0bfe6cc9cfb04a122cd2bc950a6e62d0e0ea0ec38",
+      "checkpoint_sha256": "3ed5735dc3aae1adb00e1548e7dde3678c7a6bb72c8505ae5ce29dd0d80cffab"
+    }
+  },
+  "implementation_amendments": [
+    {
+      "reason": "Serialize official-validation preparation after frozen verification and before parallel final workers; preserve frozen hyperparameters and training mechanisms",
+      "time_utc": "2026-10-08T11:52:15.545723+00:00",
+      "prior_manifest_sha256": "2b1bd776b7d43d3775d381b4f7e59c0aafb8b0f9296898dc3175ad14f3f45830",
+      "prior_manifest": "exp8b/results/failures/validation_download_race/frozen_manifest.json",
+      "changed_sources": {
+        "final.py": {
+          "before": "0ad3b583f646b0e2fe1d3f1d7b60893dcc73b23ea0c6d5ce1357a543b9013445",
+          "after": "c4ee8ceaa6dc7188eb6f69b96dbed21f31c63f5a9651a3f246ac4d7ac0839465"
+        },
+        "tests/test_workflows.py": {
+          "before": "468fe7ffa0a043da2635483557a354b10e82ef8a78f2bc2ff580fb40816ef411",
+          "after": "8f89a75cf64a5e57528e40cd104ec065a014acb4fa0bba050e181b1b4ce77972"
+        }
+      },
+      "frozen_configs_sha256": "d5bc9a25308ac9b5d1f1a9187de9fb0fd41491dffef1f9c3d7bf0651277837cd",
+      "failed_startups": [
+        "2fadf9df11a63677",
+        "dd551b9f5920552e",
+        "d8ea8dacb4d75a21",
+        "2de127d10e616fb4"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+comparison,method_a,method_b,mean_difference,sample_std,standard_error,ci95_low,ci95_high,wins,n
+dp-adam-sgd-bandinvmf - dp-adam-iid,dp-adam-sgd-bandinvmf,dp-adam-iid,0.022477064220183484,0.004052708954342086,0.0012815790989480328,0.019577930881805723,0.025376197558561246,10,10
+dp-adam-momentum-bandinvmf - dp-adam-sgd-bandinvmf,dp-adam-momentum-bandinvmf,dp-adam-sgd-bandinvmf,-0.023050458715596335,0.005084241565189834,0.0016077783520499326,-0.026687506030877984,-0.019413411400314686,0,10
+dp-adam-momentum-bias-bandinvmf - dp-adam-momentum-bandinvmf,dp-adam-momentum-bias-bandinvmf,dp-adam-momentum-bandinvmf,0.02110091743119267,0.0051909006717944855,0.0016415069230568734,0.01738757078741672,0.024814264074968617,10,10
+dp-adam-sgd-bandinvmf-scale - dp-adam-sgd-bandinvmf,dp-adam-sgd-bandinvmf-scale,dp-adam-sgd-bandinvmf,0.004701834862385313,0.005758104048621727,0.0018208723797881587,0.0005827353659061162,0.00882093435886451,7,10
+dp-adam-momentum-bandinvmf-scale - dp-adam-momentum-bandinvmf,dp-adam-momentum-bandinvmf-scale,dp-adam-momentum-bandinvmf,0.007912844036697241,0.003522216972412672,0.0011138228046126497,0.00539320180115475,0.010432486272239732,10,10
+dp-adam-momentum-bias-bandinvmf-scale - dp-adam-momentum-bias-bandinvmf,dp-adam-momentum-bias-bandinvmf-scale,dp-adam-momentum-bias-bandinvmf,0.007912844036697241,0.003915164412559441,0.0012380836957722977,0.005112104136162265,0.010713583937232218,10,10
+dp-adam-momentum-bias-bandinvmf-scale - dp-adam-momentum-bandinvmf-scale,dp-adam-momentum-bias-bandinvmf-scale,dp-adam-momentum-bandinvmf-scale,0.02110091743119267,0.006669366509958533,0.002109038872191702,0.01632994003984436,0.025871894822540976,10,10
+final best - IID,dp-adam-momentum-bias-bandinvmf-scale,dp-adam-iid,0.02844036697247706,0.006660596793463153,0.002106265644335767,0.023675663058387128,0.03320507088656699,10,10

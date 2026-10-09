@@ -1,0 +1,52 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0  1165    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0  1165    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0 16.9M    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0
+HTTP/1.1 200 Connection established
+
+HTTP/2 302 
+content-type: text/plain; charset=utf-8
+content-length: 1165
+location: https://us.aws.cdn.hf.co/xet-bridge-us/621ffdc136468d709f17ef83/05526191ad0e4fa22e3d4fdb7160def3c04f6534de288d2795a40d105d3fb965?xip=ML3Vt8HCzmw&user_id=public&response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&X-Xet-Cas-Uid=public&response-content-type=application%2Foctet-stream&Expires=1791453861&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly91cy5hd3MuY2RuLmhmLmNvL3hldC1icmlkZ2UtdXMvNjIxZmZkYzEzNjQ2OGQ3MDlmMTdlZjgzLzA1NTI2MTkxYWQwZTRmYTIyZTNkNGZkYjcxNjBkZWYzYzA0ZjY1MzRkZTI4OGQyNzk1YTQwZDEwNWQzZmI5NjVcXD94aXA9TUwzVnQ4SEN6bXcmdXNlcl9pZD1wdWJsaWMmcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1hdHRhY2htZW50JTNCK2ZpbGVuYW1lJTJBJTNEVVRGLTglMjclMjdweXRvcmNoX21vZGVsLmJpbiUzQitmaWxlbmFtZSUzRCUyMnB5dG9yY2hfbW9kZWwuYmluJTIyJTNCJlgtWGV0LUNhcy1VaWQ9cHVibGljJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1hcHBsaWNhdGlvbiUyRm9jdGV0LXN0cmVhbSIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiRXBvY2hUaW1lIjoxNzkxNDUzODYxfX19XX0_&Signature=MEQCIFMljZLSMZRZGWeUTnQbHCuSc7k5KvDCRXmiH1y5c0kQAiBlbs%7EPwPE4cEJ2qz3-TxvC20Hb7YTiv27fSzCfpRw0QA__&Key-Pair-Id=01KXEF4KZ1B6FV465MAWR4M21F&Hash-Algorithm=SHA256
+date: Thu, 08 Oct 2026 09:04:21 GMT
+x-powered-by: huggingface-moon
+x-request-id: Root=1-6ac75c95-7c913a941bc437f66a0af7ff
+ratelimit: "resolvers";r=2997;t=147
+ratelimit-policy: "fixed window";"resolvers";q=3000;w=300
+cross-origin-opener-policy: same-origin
+referrer-policy: strict-origin-when-cross-origin
+access-control-max-age: 86400
+access-control-allow-origin: https://huggingface.co
+vary: Origin, Accept
+access-control-expose-headers: X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash
+x-repo-commit: 6f75de8b60a9f8a2fdf7b69cbd86d9e64bcb3837
+accept-ranges: bytes
+x-hub-cache: MISS
+x-linked-size: 17756393
+x-linked-etag: "dab2c2bddcfb48ea430ef63fd76d46d67d704487844d967256a50dd7d7fd0a66"
+cache-control: no-store
+x-xet-hash: 05526191ad0e4fa22e3d4fdb7160def3c04f6534de288d2795a40d105d3fb965
+link: <https://huggingface.co/api/models/prajjwal1/bert-tiny/xet-read-token/6f75de8b60a9f8a2fdf7b69cbd86d9e64bcb3837>; rel="xet-auth", <https://cas-server.xethub.hf.co/v1/reconstructions/05526191ad0e4fa22e3d4fdb7160def3c04f6534de288d2795a40d105d3fb965>; rel="xet-reconstruction-info"
+x-cache: Miss from cloudfront
+via: 1.1 e03197159f8aaf8b951ead0d21237556.cloudfront.net (CloudFront)
+x-amz-cf-pop: LAX53-P4
+alt-svc: h3=":443"; ma=86400
+x-amz-cf-id: X9Wb2XFI_SOU0JZvYLnVzwwGJ5fBEN6SGVCLDJ3ZCreLMhcOy9r54w==
+strict-transport-security: max-age=31536000
+
+HTTP/1.1 200 Connection established
+
+HTTP/2 200 
+content-type: application/octet-stream
+accept-ranges: bytes
+content-disposition: attachment; filename*=UTF-8''pytorch_model.bin; filename="pytorch_model.bin";
+etag: "05526191ad0e4fa22e3d4fdb7160def3c04f6534de288d2795a40d105d3fb965"
+access-control-allow-headers: Content-Range, Content-Type, Content-Disposition, ETag
+access-control-expose-headers: *
+content-length: 17756393
+vary: origin, access-control-request-method, access-control-request-headers
+access-control-allow-origin: *
+x-request-id: 01M4DC3D9SA4MZXSZM44MS1S5Q
+x-hf-cdn-pop: aws-us-west-2
+date: Thu, 08 Oct 2026 09:04:24 GMT
+

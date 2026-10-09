@@ -1,0 +1,8 @@
+usage: stage2.py [-h] [--gpu GPU] [--pilots {0,1,2,3,4}]
+
+Sequential single-GPU search; never invoked by Stage 1.
+
+options:
+  -h, --help            show this help message and exit
+  --gpu GPU
+  --pilots {0,1,2,3,4}  0-4 one-epoch pilots at length 64

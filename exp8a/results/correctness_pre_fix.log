@@ -1,0 +1,537 @@
+.....F.F.F.F..                                                           [100%]
+=================================== FAILURES ===================================
+_____ test_bert_norm_coefficient_and_accumulation[cpu-standard-pretrained] _____
+
+geometry = 'standard', device = 'cpu', architecture = 'pretrained'
+
+    @pytest.mark.parametrize('architecture',['small','pretrained'])
+    @pytest.mark.parametrize('geometry',['standard','scale'])
+    @pytest.mark.parametrize('device',['cpu','cuda:0'])
+    def test_bert_norm_coefficient_and_accumulation(geometry,device,architecture):
+        seed_all(43)
+        base = (tiny() if architecture=='small' else make_model()).to(device)
+        C=1.3
+        wrapper = ScaledGhostModule if geometry=='scale' else StandardGhostModule
+        model = wrapper(copy.deepcopy(base),C)
+        opt = torch.optim.Adam(model.parameters(),lr=.001)
+        # Nonuniform completed second moment, including embedding coordinates.
+        for p in model.parameters():
+            opt.state[p].update(step=torch.tensor(3.),exp_avg=torch.zeros_like(p),exp_avg_sq=torch.rand_like(p)*.001)
+        if geometry=='scale': freeze_adam_scale(opt,.1)
+        ids=torch.tensor([[1,2,2,0,0,0],[3,3,4,3,0,0],[1,1,1,1,1,0],[5,6,7,7,0,0]],device=device)
+        inputs=(ids,(ids!=0).long(),torch.zeros_like(ids))
+        labels=torch.tensor([0,1,1,0],device=device)
+        totals=[torch.zeros_like(p) for p in base.parameters()]
+        expected_norms=[]
+        for i in range(4):
+            base.zero_grad()
+            logits=base(tuple(t[i:i+1] for t in inputs))
+            nn.functional.cross_entropy(logits,labels[i:i+1]).backward()
+            grads=[p.grad*q._logical_scale if geometry=='scale' else p.grad for p,q in zip(base.parameters(),model.parameters())]
+            norm=sum(g.square().sum() for g in grads).sqrt()
+            expected_norms.append(norm)
+            for total,p in zip(totals,base.parameters()): total.add_(p.grad*min(1.,C/norm.item()))
+        actual_norms=[]; actual_coefs=[]
+        sums=[torch.zeros_like(p) for p in model.parameters()]
+        for start in (0,2):
+            model.zero_grad(set_to_none=True)
+>           clipped_microbatch(model,tuple(t[start:start+2] for t in inputs),labels[start:start+2],C)
+
+exp8a/tests/test_correctness.py:72: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+exp8a/clipping.py:55: in clipped_microbatch
+    losses.sum().backward(retain_graph=True)
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/_tensor.py:623: in backward
+    torch.autograd.backward(
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/autograd/__init__.py:395: in backward
+    _engine_run_backward(
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/autograd/graph.py:979: in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/utils/hooks.py:137: in hook
+    out = hook(self.module, res, self.grad_outputs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/opacus/grad_sample/grad_sample_module_fast_gradient_clipping.py:206: in capture_backprops_hook
+    activations, backprops = self.rearrange_grad_samples(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = StandardGhostModule(Classifier(
+  (bert): BertModel(
+    (embeddings): BertEmbeddings(
+      (word_embeddings): Embedd..., bias=True)
+      (activation): Tanh()
+    )
+  )
+  (classifier): Linear(in_features=128, out_features=2, bias=True)
+))
+module = Linear(in_features=128, out_features=128, bias=True)
+backprops = tensor([[-5.5996e-08,  1.0788e-02, -1.5476e-06,  4.8200e-04,  2.3022e-05,
+         -6.2000e-03, -5.1251e-05, -6.7475e-...      7.7053e-03, -4.5313e-08,  1.0341e-02,  1.5857e-02,  3.5261e-06,
+          1.8339e-03, -2.6102e-03, -4.0305e-03]])
+loss_reduction = 'sum', batch_first = True
+
+    def rearrange_grad_samples(
+        self,
+        *,
+        module: nn.Module,
+        backprops: torch.Tensor,
+        loss_reduction: str,
+        batch_first: bool,
+    ) -> Tuple[torch.Tensor, torch.Tensor]:
+        """
+        Rearrange activations and grad_samples based on loss reduction and batch dim
+    
+        Args:
+            module: the module for which per-sample gradients are computed
+            backprops: the captured backprops
+            loss_reduction: either "mean" or "sum" depending on whether backpropped
+                loss was averaged or summed over batch
+            batch_first: True is batch dimension is first
+        """
+        if not hasattr(module, "activations"):
+>           raise ValueError(
+                f"No activations detected for {type(module)},"
+                " run forward after add_hooks(model)"
+            )
+E           ValueError: No activations detected for <class 'torch.nn.modules.linear.Linear'>, run forward after add_hooks(model)
+
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/opacus/grad_sample/grad_sample_module.py:386: ValueError
+----------------------------- Captured stderr call -----------------------------
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 15727.13it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+------------------------------ Captured log call -------------------------------
+WARNING  transformers.modeling_utils:loading_report.py:269 [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+______ test_bert_norm_coefficient_and_accumulation[cpu-scale-pretrained] _______
+
+geometry = 'scale', device = 'cpu', architecture = 'pretrained'
+
+    @pytest.mark.parametrize('architecture',['small','pretrained'])
+    @pytest.mark.parametrize('geometry',['standard','scale'])
+    @pytest.mark.parametrize('device',['cpu','cuda:0'])
+    def test_bert_norm_coefficient_and_accumulation(geometry,device,architecture):
+        seed_all(43)
+        base = (tiny() if architecture=='small' else make_model()).to(device)
+        C=1.3
+        wrapper = ScaledGhostModule if geometry=='scale' else StandardGhostModule
+        model = wrapper(copy.deepcopy(base),C)
+        opt = torch.optim.Adam(model.parameters(),lr=.001)
+        # Nonuniform completed second moment, including embedding coordinates.
+        for p in model.parameters():
+            opt.state[p].update(step=torch.tensor(3.),exp_avg=torch.zeros_like(p),exp_avg_sq=torch.rand_like(p)*.001)
+        if geometry=='scale': freeze_adam_scale(opt,.1)
+        ids=torch.tensor([[1,2,2,0,0,0],[3,3,4,3,0,0],[1,1,1,1,1,0],[5,6,7,7,0,0]],device=device)
+        inputs=(ids,(ids!=0).long(),torch.zeros_like(ids))
+        labels=torch.tensor([0,1,1,0],device=device)
+        totals=[torch.zeros_like(p) for p in base.parameters()]
+        expected_norms=[]
+        for i in range(4):
+            base.zero_grad()
+            logits=base(tuple(t[i:i+1] for t in inputs))
+            nn.functional.cross_entropy(logits,labels[i:i+1]).backward()
+            grads=[p.grad*q._logical_scale if geometry=='scale' else p.grad for p,q in zip(base.parameters(),model.parameters())]
+            norm=sum(g.square().sum() for g in grads).sqrt()
+            expected_norms.append(norm)
+            for total,p in zip(totals,base.parameters()): total.add_(p.grad*min(1.,C/norm.item()))
+        actual_norms=[]; actual_coefs=[]
+        sums=[torch.zeros_like(p) for p in model.parameters()]
+        for start in (0,2):
+            model.zero_grad(set_to_none=True)
+>           clipped_microbatch(model,tuple(t[start:start+2] for t in inputs),labels[start:start+2],C)
+
+exp8a/tests/test_correctness.py:72: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+exp8a/clipping.py:55: in clipped_microbatch
+    losses.sum().backward(retain_graph=True)
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/_tensor.py:623: in backward
+    torch.autograd.backward(
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/autograd/__init__.py:395: in backward
+    _engine_run_backward(
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/autograd/graph.py:979: in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/utils/hooks.py:137: in hook
+    out = hook(self.module, res, self.grad_outputs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/opacus/grad_sample/grad_sample_module_fast_gradient_clipping.py:206: in capture_backprops_hook
+    activations, backprops = self.rearrange_grad_samples(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = ScaledGhostModule(Classifier(
+  (bert): BertModel(
+    (embeddings): BertEmbeddings(
+      (word_embeddings): Embeddin..., bias=True)
+      (activation): Tanh()
+    )
+  )
+  (classifier): Linear(in_features=128, out_features=2, bias=True)
+))
+module = Linear(in_features=128, out_features=128, bias=True)
+backprops = tensor([[-5.5996e-08,  1.0788e-02, -1.5476e-06,  4.8200e-04,  2.3022e-05,
+         -6.2000e-03, -5.1251e-05, -6.7475e-...      7.7053e-03, -4.5313e-08,  1.0341e-02,  1.5857e-02,  3.5261e-06,
+          1.8339e-03, -2.6102e-03, -4.0305e-03]])
+loss_reduction = 'sum', batch_first = True
+
+    def rearrange_grad_samples(
+        self,
+        *,
+        module: nn.Module,
+        backprops: torch.Tensor,
+        loss_reduction: str,
+        batch_first: bool,
+    ) -> Tuple[torch.Tensor, torch.Tensor]:
+        """
+        Rearrange activations and grad_samples based on loss reduction and batch dim
+    
+        Args:
+            module: the module for which per-sample gradients are computed
+            backprops: the captured backprops
+            loss_reduction: either "mean" or "sum" depending on whether backpropped
+                loss was averaged or summed over batch
+            batch_first: True is batch dimension is first
+        """
+        if not hasattr(module, "activations"):
+>           raise ValueError(
+                f"No activations detected for {type(module)},"
+                " run forward after add_hooks(model)"
+            )
+E           ValueError: No activations detected for <class 'torch.nn.modules.linear.Linear'>, run forward after add_hooks(model)
+
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/opacus/grad_sample/grad_sample_module.py:386: ValueError
+----------------------------- Captured stderr call -----------------------------
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 7390.34it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+------------------------------ Captured log call -------------------------------
+WARNING  transformers.modeling_utils:loading_report.py:269 [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+___ test_bert_norm_coefficient_and_accumulation[cuda:0-standard-pretrained] ____
+
+geometry = 'standard', device = 'cuda:0', architecture = 'pretrained'
+
+    @pytest.mark.parametrize('architecture',['small','pretrained'])
+    @pytest.mark.parametrize('geometry',['standard','scale'])
+    @pytest.mark.parametrize('device',['cpu','cuda:0'])
+    def test_bert_norm_coefficient_and_accumulation(geometry,device,architecture):
+        seed_all(43)
+        base = (tiny() if architecture=='small' else make_model()).to(device)
+        C=1.3
+        wrapper = ScaledGhostModule if geometry=='scale' else StandardGhostModule
+        model = wrapper(copy.deepcopy(base),C)
+        opt = torch.optim.Adam(model.parameters(),lr=.001)
+        # Nonuniform completed second moment, including embedding coordinates.
+        for p in model.parameters():
+            opt.state[p].update(step=torch.tensor(3.),exp_avg=torch.zeros_like(p),exp_avg_sq=torch.rand_like(p)*.001)
+        if geometry=='scale': freeze_adam_scale(opt,.1)
+        ids=torch.tensor([[1,2,2,0,0,0],[3,3,4,3,0,0],[1,1,1,1,1,0],[5,6,7,7,0,0]],device=device)
+        inputs=(ids,(ids!=0).long(),torch.zeros_like(ids))
+        labels=torch.tensor([0,1,1,0],device=device)
+        totals=[torch.zeros_like(p) for p in base.parameters()]
+        expected_norms=[]
+        for i in range(4):
+            base.zero_grad()
+            logits=base(tuple(t[i:i+1] for t in inputs))
+            nn.functional.cross_entropy(logits,labels[i:i+1]).backward()
+            grads=[p.grad*q._logical_scale if geometry=='scale' else p.grad for p,q in zip(base.parameters(),model.parameters())]
+            norm=sum(g.square().sum() for g in grads).sqrt()
+            expected_norms.append(norm)
+            for total,p in zip(totals,base.parameters()): total.add_(p.grad*min(1.,C/norm.item()))
+        actual_norms=[]; actual_coefs=[]
+        sums=[torch.zeros_like(p) for p in model.parameters()]
+        for start in (0,2):
+            model.zero_grad(set_to_none=True)
+>           clipped_microbatch(model,tuple(t[start:start+2] for t in inputs),labels[start:start+2],C)
+
+exp8a/tests/test_correctness.py:72: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+exp8a/clipping.py:55: in clipped_microbatch
+    losses.sum().backward(retain_graph=True)
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/_tensor.py:623: in backward
+    torch.autograd.backward(
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/autograd/__init__.py:395: in backward
+    _engine_run_backward(
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/autograd/graph.py:979: in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/utils/hooks.py:137: in hook
+    out = hook(self.module, res, self.grad_outputs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/opacus/grad_sample/grad_sample_module_fast_gradient_clipping.py:206: in capture_backprops_hook
+    activations, backprops = self.rearrange_grad_samples(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = StandardGhostModule(Classifier(
+  (bert): BertModel(
+    (embeddings): BertEmbeddings(
+      (word_embeddings): Embedd..., bias=True)
+      (activation): Tanh()
+    )
+  )
+  (classifier): Linear(in_features=128, out_features=2, bias=True)
+))
+module = Linear(in_features=128, out_features=128, bias=True)
+backprops = tensor([[-5.5996e-08,  1.0788e-02, -1.5476e-06,  4.8200e-04,  2.3022e-05,
+         -6.2000e-03, -5.1251e-05, -6.7475e-... -4.5313e-08,  1.0341e-02,  1.5857e-02,  3.5261e-06,
+          1.8339e-03, -2.6101e-03, -4.0305e-03]], device='cuda:0')
+loss_reduction = 'sum', batch_first = True
+
+    def rearrange_grad_samples(
+        self,
+        *,
+        module: nn.Module,
+        backprops: torch.Tensor,
+        loss_reduction: str,
+        batch_first: bool,
+    ) -> Tuple[torch.Tensor, torch.Tensor]:
+        """
+        Rearrange activations and grad_samples based on loss reduction and batch dim
+    
+        Args:
+            module: the module for which per-sample gradients are computed
+            backprops: the captured backprops
+            loss_reduction: either "mean" or "sum" depending on whether backpropped
+                loss was averaged or summed over batch
+            batch_first: True is batch dimension is first
+        """
+        if not hasattr(module, "activations"):
+>           raise ValueError(
+                f"No activations detected for {type(module)},"
+                " run forward after add_hooks(model)"
+            )
+E           ValueError: No activations detected for <class 'torch.nn.modules.linear.Linear'>, run forward after add_hooks(model)
+
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/opacus/grad_sample/grad_sample_module.py:386: ValueError
+----------------------------- Captured stderr call -----------------------------
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 13233.38it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+------------------------------ Captured log call -------------------------------
+WARNING  transformers.modeling_utils:loading_report.py:269 [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+_____ test_bert_norm_coefficient_and_accumulation[cuda:0-scale-pretrained] _____
+
+geometry = 'scale', device = 'cuda:0', architecture = 'pretrained'
+
+    @pytest.mark.parametrize('architecture',['small','pretrained'])
+    @pytest.mark.parametrize('geometry',['standard','scale'])
+    @pytest.mark.parametrize('device',['cpu','cuda:0'])
+    def test_bert_norm_coefficient_and_accumulation(geometry,device,architecture):
+        seed_all(43)
+        base = (tiny() if architecture=='small' else make_model()).to(device)
+        C=1.3
+        wrapper = ScaledGhostModule if geometry=='scale' else StandardGhostModule
+        model = wrapper(copy.deepcopy(base),C)
+        opt = torch.optim.Adam(model.parameters(),lr=.001)
+        # Nonuniform completed second moment, including embedding coordinates.
+        for p in model.parameters():
+            opt.state[p].update(step=torch.tensor(3.),exp_avg=torch.zeros_like(p),exp_avg_sq=torch.rand_like(p)*.001)
+        if geometry=='scale': freeze_adam_scale(opt,.1)
+        ids=torch.tensor([[1,2,2,0,0,0],[3,3,4,3,0,0],[1,1,1,1,1,0],[5,6,7,7,0,0]],device=device)
+        inputs=(ids,(ids!=0).long(),torch.zeros_like(ids))
+        labels=torch.tensor([0,1,1,0],device=device)
+        totals=[torch.zeros_like(p) for p in base.parameters()]
+        expected_norms=[]
+        for i in range(4):
+            base.zero_grad()
+            logits=base(tuple(t[i:i+1] for t in inputs))
+            nn.functional.cross_entropy(logits,labels[i:i+1]).backward()
+            grads=[p.grad*q._logical_scale if geometry=='scale' else p.grad for p,q in zip(base.parameters(),model.parameters())]
+            norm=sum(g.square().sum() for g in grads).sqrt()
+            expected_norms.append(norm)
+            for total,p in zip(totals,base.parameters()): total.add_(p.grad*min(1.,C/norm.item()))
+        actual_norms=[]; actual_coefs=[]
+        sums=[torch.zeros_like(p) for p in model.parameters()]
+        for start in (0,2):
+            model.zero_grad(set_to_none=True)
+>           clipped_microbatch(model,tuple(t[start:start+2] for t in inputs),labels[start:start+2],C)
+
+exp8a/tests/test_correctness.py:72: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+exp8a/clipping.py:55: in clipped_microbatch
+    losses.sum().backward(retain_graph=True)
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/_tensor.py:623: in backward
+    torch.autograd.backward(
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/autograd/__init__.py:395: in backward
+    _engine_run_backward(
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/autograd/graph.py:979: in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/utils/hooks.py:137: in hook
+    out = hook(self.module, res, self.grad_outputs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/opacus/grad_sample/grad_sample_module_fast_gradient_clipping.py:206: in capture_backprops_hook
+    activations, backprops = self.rearrange_grad_samples(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = ScaledGhostModule(Classifier(
+  (bert): BertModel(
+    (embeddings): BertEmbeddings(
+      (word_embeddings): Embeddin..., bias=True)
+      (activation): Tanh()
+    )
+  )
+  (classifier): Linear(in_features=128, out_features=2, bias=True)
+))
+module = Linear(in_features=128, out_features=128, bias=True)
+backprops = tensor([[-5.5996e-08,  1.0788e-02, -1.5476e-06,  4.8200e-04,  2.3022e-05,
+         -6.2000e-03, -5.1251e-05, -6.7475e-... -4.5313e-08,  1.0341e-02,  1.5857e-02,  3.5261e-06,
+          1.8339e-03, -2.6101e-03, -4.0305e-03]], device='cuda:0')
+loss_reduction = 'sum', batch_first = True
+
+    def rearrange_grad_samples(
+        self,
+        *,
+        module: nn.Module,
+        backprops: torch.Tensor,
+        loss_reduction: str,
+        batch_first: bool,
+    ) -> Tuple[torch.Tensor, torch.Tensor]:
+        """
+        Rearrange activations and grad_samples based on loss reduction and batch dim
+    
+        Args:
+            module: the module for which per-sample gradients are computed
+            backprops: the captured backprops
+            loss_reduction: either "mean" or "sum" depending on whether backpropped
+                loss was averaged or summed over batch
+            batch_first: True is batch dimension is first
+        """
+        if not hasattr(module, "activations"):
+>           raise ValueError(
+                f"No activations detected for {type(module)},"
+                " run forward after add_hooks(model)"
+            )
+E           ValueError: No activations detected for <class 'torch.nn.modules.linear.Linear'>, run forward after add_hooks(model)
+
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/opacus/grad_sample/grad_sample_module.py:386: ValueError
+----------------------------- Captured stderr call -----------------------------
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 6121.93it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+------------------------------ Captured log call -------------------------------
+WARNING  transformers.modeling_utils:loading_report.py:269 [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+=============================== warnings summary ===============================
+exp8a/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cpu-standard-small]
+exp8a/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cpu-scale-small]
+  /media/data/data/lt/dp-adam-correlated/exp8a/clipping.py:55: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    losses.sum().backward(retain_graph=True)
+
+exp8a/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cpu-standard-small]
+exp8a/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cpu-scale-small]
+  /media/data/data/lt/dp-adam-correlated/exp8a/clipping.py:60: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    (losses * coefficients).sum().backward()
+
+exp8a/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cuda:0-standard-small]
+exp8a/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cuda:0-scale-small]
+  sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED exp8a/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cpu-standard-pretrained]
+FAILED exp8a/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cpu-scale-pretrained]
+FAILED exp8a/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cuda:0-standard-pretrained]
+FAILED exp8a/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cuda:0-scale-pretrained]
+4 failed, 10 passed, 6 warnings in 12.40s
+ERROR conda.cli.main_run:execute(127): `conda run python -B -m pytest exp8a/tests/test_correctness.py -q -o cache_dir=exp8a/runtime/pytest_cache` failed. (See above for error)

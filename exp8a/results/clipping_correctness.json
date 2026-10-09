@@ -1,0 +1,100 @@
+{
+  "status": "passed",
+  "tests": [
+    {
+      "status": "passed",
+      "geometry": "standard",
+      "device": "cpu",
+      "architecture": "small",
+      "embedding_repeated_tokens": true,
+      "norm_max_abs_error": 5.960464477539063e-08,
+      "coefficient_max_abs_error": 0.0,
+      "accumulated_gradient_max_abs_error": 7.450580596923828e-09,
+      "reference": "independent one-sample autograd over all BERT parameters"
+    },
+    {
+      "status": "passed",
+      "geometry": "standard",
+      "device": "cuda:0",
+      "architecture": "small",
+      "embedding_repeated_tokens": true,
+      "norm_max_abs_error": 5.960464477539063e-08,
+      "coefficient_max_abs_error": 0.0,
+      "accumulated_gradient_max_abs_error": 2.9802322387695312e-08,
+      "reference": "independent one-sample autograd over all BERT parameters"
+    },
+    {
+      "status": "passed",
+      "geometry": "scale",
+      "device": "cpu",
+      "architecture": "small",
+      "embedding_repeated_tokens": true,
+      "norm_max_abs_error": 2.384185791015625e-07,
+      "coefficient_max_abs_error": 5.960464477539063e-08,
+      "accumulated_gradient_max_abs_error": 2.9802322387695312e-08,
+      "reference": "independent one-sample autograd over all BERT parameters"
+    },
+    {
+      "status": "passed",
+      "geometry": "scale",
+      "device": "cuda:0",
+      "architecture": "small",
+      "embedding_repeated_tokens": true,
+      "norm_max_abs_error": 1.1920928955078125e-07,
+      "coefficient_max_abs_error": 0.0,
+      "accumulated_gradient_max_abs_error": 1.862645149230957e-08,
+      "reference": "independent one-sample autograd over all BERT parameters"
+    },
+    {
+      "status": "passed",
+      "geometry": "standard",
+      "device": "cpu",
+      "architecture": "pretrained",
+      "embedding_repeated_tokens": true,
+      "norm_max_abs_error": 1.430511474609375e-06,
+      "coefficient_max_abs_error": 4.470348358154297e-08,
+      "accumulated_gradient_max_abs_error": 1.043081283569336e-07,
+      "reference": "independent one-sample autograd over all BERT parameters"
+    },
+    {
+      "status": "passed",
+      "geometry": "standard",
+      "device": "cuda:0",
+      "architecture": "pretrained",
+      "embedding_repeated_tokens": true,
+      "norm_max_abs_error": 9.5367431640625e-07,
+      "coefficient_max_abs_error": 2.9802322387695312e-08,
+      "accumulated_gradient_max_abs_error": 1.341104507446289e-07,
+      "reference": "independent one-sample autograd over all BERT parameters"
+    },
+    {
+      "status": "passed",
+      "geometry": "scale",
+      "device": "cpu",
+      "architecture": "pretrained",
+      "embedding_repeated_tokens": true,
+      "norm_max_abs_error": 3.814697265625e-06,
+      "coefficient_max_abs_error": 1.4901161193847656e-08,
+      "accumulated_gradient_max_abs_error": 4.284083843231201e-08,
+      "reference": "independent one-sample autograd over all BERT parameters"
+    },
+    {
+      "status": "passed",
+      "geometry": "scale",
+      "device": "cuda:0",
+      "architecture": "pretrained",
+      "embedding_repeated_tokens": true,
+      "norm_max_abs_error": 1.9073486328125e-06,
+      "coefficient_max_abs_error": 1.4901161193847656e-08,
+      "accumulated_gradient_max_abs_error": 4.842877388000488e-08,
+      "reference": "independent one-sample autograd over all BERT parameters"
+    }
+  ],
+  "tolerances": {
+    "norm_rtol": 3e-05,
+    "norm_atol": 3e-06,
+    "gradient_rtol": 5e-05,
+    "gradient_atol": 3e-06
+  },
+  "embedding_identity": "g_i[v]=sum_{j:x_ij=v} backprop_ij; scale after duplicate aggregation; padding zero"
+}

@@ -1,0 +1,27 @@
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 10770.91it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1124  100  1124    0     0   1270      0 --:--:-- --:--:-- --:--:--  1270
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100 72819  100 72819    0     0  32639      0  0:00:02  0:00:02 --:--:--  157k
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 872 examples [00:00, 169427.58 examples/s]
+sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+{"step": 62, "epoch": 1.0, "train_loss": 0.6466117770287297, "clip_fraction": 0.5235967741935484, "validation_loss": 0.6623364982255008, "accuracy": 0.7373853211009175, "validation_examples": 872, "epsilon": 3.054089440266451}
+{"step": 124, "epoch": 2.0, "train_loss": 0.6314031785534273, "clip_fraction": 0.45043548387096766, "validation_loss": 0.6814865628513721, "accuracy": 0.7580275229357798, "validation_examples": 872, "epsilon": 4.610238743691153}
+{"step": 186, "epoch": 3.0, "train_loss": 0.5835025487099925, "clip_fraction": 0.39254838709677414, "validation_loss": 0.6691339256566599, "accuracy": 0.7614678899082569, "validation_examples": 872, "epsilon": 5.873890881586911}
+{"step": 248, "epoch": 4.0, "train_loss": 0.5361248188634071, "clip_fraction": 0.3552903225806452, "validation_loss": 0.6463050098594175, "accuracy": 0.7763761467889908, "validation_examples": 872, "epsilon": 6.985551657770655}
+{"step": 310, "epoch": 5.0, "train_loss": 0.5084243843324724, "clip_fraction": 0.32432258064516123, "validation_loss": 0.6222169333641682, "accuracy": 0.7752293577981652, "validation_examples": 872, "epsilon": 8.000000000000005}

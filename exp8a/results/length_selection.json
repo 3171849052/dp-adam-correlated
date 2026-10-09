@@ -1,0 +1,68 @@
+{
+  "max_length": 64,
+  "reason": "No length exceeds the majority baseline by 0.003; equal baseline accuracy is insufficient length evidence; prefer 64",
+  "statistics": {
+    "32": {
+      "mean_accuracy": 0.557861282482707,
+      "mean_gap_to_best": 0.0,
+      "paired_gap_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_seeds": [
+        20261011,
+        20261012,
+        20261013
+      ]
+    },
+    "64": {
+      "mean_accuracy": 0.557861282482707,
+      "mean_gap_to_best": 0.0,
+      "paired_gap_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_seeds": [
+        20261011,
+        20261012,
+        20261013
+      ]
+    },
+    "128": {
+      "mean_accuracy": 0.557861282482707,
+      "mean_gap_to_best": 0.0,
+      "paired_gap_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_seeds": [
+        20261011,
+        20261012,
+        20261013
+      ]
+    }
+  },
+  "tolerance": 0.003,
+  "baseline_accuracy": 0.557861282482707,
+  "convergence_evidence": false,
+  "compute_and_truncation": {
+    "32": {
+      "combined_steps_per_second": 5.826214613118453,
+      "peak_reserved_bytes": 620756992,
+      "truncation_ratio": 0.054982256603661524
+    },
+    "64": {
+      "combined_steps_per_second": 5.796151718933878,
+      "peak_reserved_bytes": 843055104,
+      "truncation_ratio": 5.939212163506511e-05
+    },
+    "128": {
+      "combined_steps_per_second": 5.286957157017304,
+      "peak_reserved_bytes": 1166016512,
+      "truncation_ratio": 0.0
+    }
+  },
+  "full_runs": 9,
+  "close_candidate_trigger": 0.006,
+  "token_lengths_file": "exp8a/results/token_lengths.json"
+}

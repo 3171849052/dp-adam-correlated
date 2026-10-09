@@ -1,0 +1,67 @@
+{
+  "max_length": 32,
+  "reason": "Shortest safe length with mean and paired 95% upper gap <= 0.003",
+  "statistics": {
+    "32": {
+      "mean_accuracy": 0.8000000000000002,
+      "mean_gap_to_best": 0.0,
+      "paired_gap_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_seeds": [
+        20261011,
+        20261012,
+        20261013
+      ]
+    },
+    "64": {
+      "mean_accuracy": 0.8000000000000002,
+      "mean_gap_to_best": 0.0,
+      "paired_gap_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_seeds": [
+        20261011,
+        20261012,
+        20261013
+      ]
+    },
+    "128": {
+      "mean_accuracy": 0.8000000000000002,
+      "mean_gap_to_best": 0.0,
+      "paired_gap_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_seeds": [
+        20261011,
+        20261012,
+        20261013
+      ]
+    }
+  },
+  "tolerance": 0.003,
+  "best_mean_length": 32,
+  "compute_and_truncation": {
+    "32": {
+      "combined_steps_per_second": 2.0,
+      "peak_reserved_bytes": 5368709120.0,
+      "truncation_ratio": 0.055
+    },
+    "64": {
+      "combined_steps_per_second": 2.0,
+      "peak_reserved_bytes": 5368709120.0,
+      "truncation_ratio": 6e-05
+    },
+    "128": {
+      "combined_steps_per_second": 2.0,
+      "peak_reserved_bytes": 5368709120.0,
+      "truncation_ratio": 0.0
+    }
+  },
+  "full_runs": 9,
+  "close_candidate_trigger": 0.006,
+  "token_lengths_file": "exp8a/results/token_lengths.json"
+}

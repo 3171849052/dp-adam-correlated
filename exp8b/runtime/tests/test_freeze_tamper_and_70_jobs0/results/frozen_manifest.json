@@ -1,0 +1,81 @@
+{
+  "frozen_configs_sha256": "47ade8e4578ef9fbb2592130e2a41d9d6e48bd0d44a11d3ba2aadae0b02382d0",
+  "selected_configs_sha256": "47ade8e4578ef9fbb2592130e2a41d9d6e48bd0d44a11d3ba2aadae0b02382d0",
+  "source_hashes": {
+    "__init__.py": "d6766921b632c3bde9de1b90b3dd0e3a92eba401bfc541ec939b2a2fd3b5b7c0",
+    "audit.py": "1e2ec97a8f6a41d628771e12159ef6395f5dc11f3a155b06c5830fcab4138760",
+    "bandinvmf.py": "f12114feed32ebe272ddda7a5853efeeb9171e81af5e69ba2d8a59c6c5ede138",
+    "clipping.py": "d5155f7ce1256f28544740ae73fdb3b998f4982ec4f01df879678e6c9299df21",
+    "config.py": "b0857a454c6d9c003745ca7077dae5e5aaee66edc87cd64e64838c0338746c08",
+    "data.py": "59a9565a0d3dbc95c958a667570d410f2c2afafbf4780ddb0d3b7670bb3d5d5f",
+    "final.py": "c4ee8ceaa6dc7188eb6f69b96dbed21f31c63f5a9651a3f246ac4d7ac0839465",
+    "frozen.py": "4709ec71301cab822c97d99f15a406b8440713e02566a566c3f67af449e7bb0f",
+    "launcher.py": "d9e15b0b0249d341e09da54a489e48e182313f1fe86c26579e0f565e0ee19474",
+    "model.py": "c76de22c36de8d4f01e0027ecb1d69137811801681e69f4506236b71babb847c",
+    "noise.py": "de6241eaba3ca673175c9fd83a573caf039cabbbc7b28e0f2ae79a27f7be0f8b",
+    "privacy.py": "6e37e95ccb496245174249f30f9c3237fb809b30a031a5092e462debf2d9ac5a",
+    "report.py": "ab641da1b954d5b4e7dbd02eac22544838c65d7a5dadf5757a00f39f52c29fca",
+    "search.py": "62d93ea063da456affed8af7debf3c4fb482bdde77c5e85cb30bcd937a3adab4",
+    "stage1.py": "40537a3769308e94c79ee8ca80c51e7c83822cddb476b073972224b7b4320bfe",
+    "stage2.py": "05496fa71414504076942fe3df812591e4de8dc99dbd58f8120ae5ea88ba1c8b",
+    "tests/test_correctness.py": "45d3b8202dc441d068a883613f57846ccb40ab3b3e64ce0fdea0d44b17fc9450",
+    "tests/test_protocol.py": "ca3935df09e671876912fe04a3439ce1d1f2d925ad8a97bc13832be1e5a69430",
+    "tests/test_workflows.py": "8f89a75cf64a5e57528e40cd104ec065a014acb4fa0bba050e181b1b4ce77972",
+    "train.py": "91c711c7ed6a7fe68e85fdf9a34450cb6fb832797e83b6f6062a6f38347a5ea4"
+  },
+  "split_sha256": "d59386e0ae435e292fbe0ebcdb954b75ed5fb3922091277cb19f798fc5d50718",
+  "tokens_sha256": "d59386e0ae435e292fbe0ebcdb954b75ed5fb3922091277cb19f798fc5d50718",
+  "pretrained_sha256": "1d48e455e23d79d3103e7e69a92a8f55b0109888c2f4cd15874980ca9ab715c7",
+  "selection_objective": "search-validation Accuracy at epoch 5 only",
+  "search_seed": 20261001,
+  "final_seeds": [
+    20261011,
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020
+  ],
+  "official_validation_used": false,
+  "provenance": {
+    "dp-adam-iid": {
+      "result_dir": "trials/0",
+      "summary_sha256": "f9c37a6566127bda4c6008efc3e2fdc6b8692aba5fb0afaa9d76141b9bd4a6ef",
+      "checkpoint_sha256": "4b413bf52b21a73686ad3b7a1054190754df2c93707c27dad0c9295bbf94cc10"
+    },
+    "dp-adam-sgd-bandinvmf": {
+      "result_dir": "trials/1",
+      "summary_sha256": "d47b57da72257322ae98b7ffbd0b86a9e634854390ef1cef1f352af63fd1d7c3",
+      "checkpoint_sha256": "4b413bf52b21a73686ad3b7a1054190754df2c93707c27dad0c9295bbf94cc10"
+    },
+    "dp-adam-momentum-bandinvmf": {
+      "result_dir": "trials/2",
+      "summary_sha256": "b7097288e888363fa4681921e6fea813db212c6a14c359e5784d234e8ad0c0d0",
+      "checkpoint_sha256": "4b413bf52b21a73686ad3b7a1054190754df2c93707c27dad0c9295bbf94cc10"
+    },
+    "dp-adam-momentum-bias-bandinvmf": {
+      "result_dir": "trials/3",
+      "summary_sha256": "3295a392eb9f1e7a5f03f6c92377b69214e697bc51ebadaa9d1aecdd0f68808b",
+      "checkpoint_sha256": "4b413bf52b21a73686ad3b7a1054190754df2c93707c27dad0c9295bbf94cc10"
+    },
+    "dp-adam-sgd-bandinvmf-scale": {
+      "result_dir": "trials/4",
+      "summary_sha256": "dc19e7ce03bc308d0bae2c7bc10487bb39a1db1dcacbec164c26dd49b7964aee",
+      "checkpoint_sha256": "4b413bf52b21a73686ad3b7a1054190754df2c93707c27dad0c9295bbf94cc10"
+    },
+    "dp-adam-momentum-bandinvmf-scale": {
+      "result_dir": "trials/5",
+      "summary_sha256": "c56925b9c9b9e2996b65356f10d2c327d935ae90318896cd5f498e6f63a2f4eb",
+      "checkpoint_sha256": "4b413bf52b21a73686ad3b7a1054190754df2c93707c27dad0c9295bbf94cc10"
+    },
+    "dp-adam-momentum-bias-bandinvmf-scale": {
+      "result_dir": "trials/6",
+      "summary_sha256": "b6f4da04af5d53ef4e69c0d42059426094966ba5194ec730ece563259bce7207",
+      "checkpoint_sha256": "4b413bf52b21a73686ad3b7a1054190754df2c93707c27dad0c9295bbf94cc10"
+    }
+  }
+}

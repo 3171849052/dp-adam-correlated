@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "geometry": "scale",
+  "device": "cuda:0",
+  "architecture": "pretrained",
+  "embedding_repeated_tokens": true,
+  "norm_max_abs_error": 1.9073486328125e-06,
+  "coefficient_max_abs_error": 1.4901161193847656e-08,
+  "accumulated_gradient_max_abs_error": 4.842877388000488e-08,
+  "reference": "independent one-sample autograd over all BERT parameters"
+}

@@ -1,0 +1,30 @@
+{
+  "coefficients": [
+    1.0,
+    -0.50922865903301,
+    -0.07727236688161641,
+    -0.3143675658601789
+  ],
+  "optimization": {
+    "objective": "fixed_participation_sensitivity_squared * mean_full_workload_error",
+    "optimized_objective": 7305.738503395133,
+    "initial_objective": 9347.213531148223,
+    "full_workload_shape": [
+      310,
+      310
+    ],
+    "optimizer": "Nelder-Mead, two fixed starts",
+    "iterations": 246,
+    "converged": true,
+    "d0_fixed": 1.0
+  },
+  "privacy": {
+    "target_mu": 1.6660305978457184,
+    "sensitivity": 4.18402302431354,
+    "innovation_std_sum": 2.5113722579427673,
+    "adjacency": "add_remove_zero_out",
+    "k": 5,
+    "b_participation": 62,
+    "sampling_amplification": false
+  }
+}

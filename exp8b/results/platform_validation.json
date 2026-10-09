@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "unit_tests": "passed",
+  "unit_tests_sha256": "9623ea0fbe957da317b23c1a9a4abbab5fd7425bbd0bb74e3fc518cf6d86e68b",
+  "tests_xml_sha256": "6d4916a5685cccca9ea4d5bd0e1057aa067a1b181a5c6efceb911308a25bdf98",
+  "smoke_methods": [
+    "dp-adam-iid",
+    "dp-adam-sgd-bandinvmf",
+    "dp-adam-momentum-bandinvmf",
+    "dp-adam-momentum-bias-bandinvmf",
+    "dp-adam-sgd-bandinvmf-scale",
+    "dp-adam-momentum-bandinvmf-scale",
+    "dp-adam-momentum-bias-bandinvmf-scale"
+  ],
+  "smoke_steps_each": 1,
+  "gpu": 0,
+  "source_hashes": {
+    "__init__.py": "d6766921b632c3bde9de1b90b3dd0e3a92eba401bfc541ec939b2a2fd3b5b7c0",
+    "audit.py": "1e2ec97a8f6a41d628771e12159ef6395f5dc11f3a155b06c5830fcab4138760",
+    "bandinvmf.py": "f12114feed32ebe272ddda7a5853efeeb9171e81af5e69ba2d8a59c6c5ede138",
+    "clipping.py": "d5155f7ce1256f28544740ae73fdb3b998f4982ec4f01df879678e6c9299df21",
+    "config.py": "b0857a454c6d9c003745ca7077dae5e5aaee66edc87cd64e64838c0338746c08",
+    "data.py": "59a9565a0d3dbc95c958a667570d410f2c2afafbf4780ddb0d3b7670bb3d5d5f",
+    "final.py": "c4ee8ceaa6dc7188eb6f69b96dbed21f31c63f5a9651a3f246ac4d7ac0839465",
+    "frozen.py": "4709ec71301cab822c97d99f15a406b8440713e02566a566c3f67af449e7bb0f",
+    "launcher.py": "d9e15b0b0249d341e09da54a489e48e182313f1fe86c26579e0f565e0ee19474",
+    "model.py": "c76de22c36de8d4f01e0027ecb1d69137811801681e69f4506236b71babb847c",
+    "noise.py": "de6241eaba3ca673175c9fd83a573caf039cabbbc7b28e0f2ae79a27f7be0f8b",
+    "privacy.py": "6e37e95ccb496245174249f30f9c3237fb809b30a031a5092e462debf2d9ac5a",
+    "report.py": "ab641da1b954d5b4e7dbd02eac22544838c65d7a5dadf5757a00f39f52c29fca",
+    "search.py": "62d93ea063da456affed8af7debf3c4fb482bdde77c5e85cb30bcd937a3adab4",
+    "stage1.py": "40537a3769308e94c79ee8ca80c51e7c83822cddb476b073972224b7b4320bfe",
+    "stage2.py": "05496fa71414504076942fe3df812591e4de8dc99dbd58f8120ae5ea88ba1c8b",
+    "tests/test_correctness.py": "45d3b8202dc441d068a883613f57846ccb40ab3b3e64ce0fdea0d44b17fc9450",
+    "tests/test_protocol.py": "ca3935df09e671876912fe04a3439ce1d1f2d925ad8a97bc13832be1e5a69430",
+    "tests/test_workflows.py": "8f89a75cf64a5e57528e40cd104ec065a014acb4fa0bba050e181b1b4ce77972",
+    "train.py": "91c711c7ed6a7fe68e85fdf9a34450cb6fb832797e83b6f6062a6f38347a5ea4"
+  },
+  "smoke_summary_hashes": {
+    "dp-adam-iid": "2738221d95e2b763c31ac8dab7d477c0d105bfe48b92c6491393fe1472462b96",
+    "dp-adam-sgd-bandinvmf": "76d406ba566507244603cf22e23583a7e3443ca1b797458736751f90440693db",
+    "dp-adam-momentum-bandinvmf": "ae0d747941ca6ae496904c946a3968a9af61792319f422cbf925c8f7ffc89c8e",
+    "dp-adam-momentum-bias-bandinvmf": "7b02aef627ef704eebf7c94fc412f6e1ef4198f46ad33532b4fa6b9d85ec32e5",
+    "dp-adam-sgd-bandinvmf-scale": "bea2ac7a9b52b382922235a823d7716b5e9e94d93923d94edf685a6f54b54c39",
+    "dp-adam-momentum-bandinvmf-scale": "ff3922e728345d6792c4f88fb0af264b4614e01f07c76dd799622dd74d158289",
+    "dp-adam-momentum-bias-bandinvmf-scale": "ab26b65718cec717592a15dd9cd12535fac33fada613a6cf60cba6173752981f"
+  },
+  "pairing": "passed",
+  "previous_experiments": {
+    "status": "passed",
+    "files": 9723,
+    "check": "size and nanosecond modification time; prior experiments untouched"
+  },
+  "physical_batch_size": 1000,
+  "max_length": 128,
+  "fifo": {
+    "status": "passed",
+    "launches": 121,
+    "gpus": [
+      0,
+      1,
+      2
+    ]
+  },
+  "protocol_steps": 310,
+  "protocol_epochs": 5,
+  "epsilon": 8,
+  "delta": 1e-05,
+  "official_validation_used": false,
+  "full_experiments_started": false,
+  "validation_context": "revalidation after final-loader fix; canonical GPU smokes reused and re-audited",
+  "stage2_previously_started": true
+}

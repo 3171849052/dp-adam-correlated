@@ -1,0 +1,164 @@
+[
+  {
+    "stage": "coarse_lr",
+    "candidates": [
+      {
+        "method": "dp-adam-sgd-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 3e-05,
+        "C": 23.152283477783204,
+        "eps_scale": 0.1
+      },
+      {
+        "method": "dp-adam-sgd-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.0001,
+        "C": 23.152283477783204,
+        "eps_scale": 0.1
+      },
+      {
+        "method": "dp-adam-sgd-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.0003,
+        "C": 23.152283477783204,
+        "eps_scale": 0.1
+      },
+      {
+        "method": "dp-adam-sgd-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.001,
+        "C": 23.152283477783204,
+        "eps_scale": 0.1
+      }
+    ],
+    "budget_used": 4
+  },
+  {
+    "stage": "coarse_C",
+    "candidates": [
+      {
+        "method": "dp-adam-sgd-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.001,
+        "C": 0.7104060459136963,
+        "eps_scale": 0.1
+      },
+      {
+        "method": "dp-adam-sgd-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.001,
+        "C": 2.131218137741089,
+        "eps_scale": 0.1
+      },
+      {
+        "method": "dp-adam-sgd-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.001,
+        "C": 7.104060459136963,
+        "eps_scale": 0.1
+      },
+      {
+        "method": "dp-adam-sgd-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.001,
+        "C": 21.312181377410887,
+        "eps_scale": 0.1
+      },
+      {
+        "method": "dp-adam-sgd-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.001,
+        "C": 71.04060459136963,
+        "eps_scale": 0.1
+      }
+    ],
+    "budget_used": 9
+  },
+  {
+    "stage": "coarse_eps_scale_at_K",
+    "candidates": [
+      {
+        "method": "dp-adam-sgd-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.001,
+        "C": 236.80201530456546,
+        "eps_scale": 0.03
+      },
+      {
+        "method": "dp-adam-sgd-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.001,
+        "C": 23.680201530456547,
+        "eps_scale": 0.3
+      },
+      {
+        "method": "dp-adam-sgd-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.001,
+        "C": 7.104060459136964,
+        "eps_scale": 1.0
+      }
+    ],
+    "budget_used": 12
+  },
+  {
+    "stage": "refine_lr_once",
+    "candidates": [
+      {
+        "method": "dp-adam-sgd-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.0005477225575051661,
+        "C": 236.80201530456546,
+        "eps_scale": 0.03
+      },
+      {
+        "method": "dp-adam-sgd-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.003,
+        "C": 236.80201530456546,
+        "eps_scale": 0.03
+      }
+    ],
+    "budget_used": 14
+  },
+  {
+    "stage": "refine_C_once",
+    "candidates": [
+      {
+        "method": "dp-adam-sgd-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.003,
+        "C": 129.70180544499408,
+        "eps_scale": 0.03
+      },
+      {
+        "method": "dp-adam-sgd-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.003,
+        "C": 710.4060459136964,
+        "eps_scale": 0.03
+      }
+    ],
+    "budget_used": 16
+  },
+  {
+    "stage": "refine_eps_scale_once",
+    "candidates": [
+      {
+        "method": "dp-adam-sgd-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.003,
+        "C": 710.4060459136963,
+        "eps_scale": 0.01
+      },
+      {
+        "method": "dp-adam-sgd-bandinvmf-scale",
+        "seed": 20261001,
+        "lr": 0.003,
+        "C": 129.70180544499408,
+        "eps_scale": 0.05477225575051661
+      }
+    ],
+    "budget_used": 18
+  }
+]

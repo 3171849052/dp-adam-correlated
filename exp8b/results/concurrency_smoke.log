@@ -1,0 +1,7 @@
+smoke: {'method': 'dp-adam-sgd-bandinvmf-scale', 'seed': 20261001, 'lr': 0.0002, 'C': 1.0, 'eps_scale': 0.1}
+smoke: {'method': 'dp-adam-sgd-bandinvmf-scale', 'seed': 20261001, 'lr': 0.0003, 'C': 1.0, 'eps_scale': 0.1}
+smoke: {'method': 'dp-adam-momentum-bandinvmf-scale', 'seed': 20261001, 'lr': 0.0002, 'C': 1.0, 'eps_scale': 0.1}
+smoke: {'method': 'dp-adam-momentum-bandinvmf-scale', 'seed': 20261001, 'lr': 0.0003, 'C': 1.0, 'eps_scale': 0.1}
+smoke: {'method': 'dp-adam-momentum-bias-bandinvmf-scale', 'seed': 20261001, 'lr': 0.0002, 'C': 1.0, 'eps_scale': 0.1}
+smoke: {'method': 'dp-adam-momentum-bias-bandinvmf-scale', 'seed': 20261001, 'lr': 0.0003, 'C': 1.0, 'eps_scale': 0.1}
+Six simultaneous scale smoke trials passed on GPUs 0,1,2.

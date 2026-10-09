@@ -1,0 +1,252 @@
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 16297.48it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+{'step': 62, 'epoch': 1.0, 'train_loss': 0.7257534484863282, 'clip_fraction': 1.0, 'loss': 0.7174332640643074, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 3.054089440266451, 'mu': 0.7305251613152316}
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 8474.66it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+{'step': 62, 'epoch': 1.0, 'train_loss': 0.8255657958984375, 'clip_fraction': 1.0, 'loss': 0.8132261859967255, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 3.054089440266451, 'mu': 0.7305251613152316}
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 4548.25it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+{'step': 62, 'epoch': 1.0, 'train_loss': 0.7258789825439453, 'clip_fraction': 1.0, 'loss': 0.7175462465683842, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 3.054089440266451, 'mu': 0.7305251613152316}
+{'geometry': 'standard', 'max_length': 32, 'physical_batch_size': 250, 'status': 'completed', 'headroom_fraction': 0.9647697187344361}
+{'geometry': 'scale', 'max_length': 32, 'physical_batch_size': 250, 'status': 'completed', 'headroom_fraction': 0.950342079739967}
+{'geometry': 'standard', 'max_length': 64, 'physical_batch_size': 250, 'status': 'completed', 'headroom_fraction': 0.9439670764633411}
+{'geometry': 'scale', 'max_length': 64, 'physical_batch_size': 250, 'status': 'completed', 'headroom_fraction': 0.9325591758630632}
+{'geometry': 'standard', 'max_length': 128, 'physical_batch_size': 250, 'status': 'completed', 'headroom_fraction': 0.915111798474403}
+{'geometry': 'scale', 'max_length': 128, 'physical_batch_size': 250, 'status': 'completed', 'headroom_fraction': 0.9067236362683163}
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 9049.95it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+{'step': 62, 'epoch': 1.0, 'train_loss': 0.7256201782226562, 'clip_fraction': 1.0, 'loss': 0.7175761066122264, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 3.054089440266451, 'mu': 0.7305251613152316}
+{'step': 124, 'epoch': 2.0, 'train_loss': 0.8299919738769531, 'clip_fraction': 1.0, 'loss': 0.81548255125949, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 4.610238743691153, 'mu': 1.045751821479919}
+{'step': 186, 'epoch': 3.0, 'train_loss': 0.990431625366211, 'clip_fraction': 1.0, 'loss': 0.9694332301806102, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 5.873890881586911, 'mu': 1.2861842266181187}
+{'step': 248, 'epoch': 4.0, 'train_loss': 1.1913424987792969, 'clip_fraction': 1.0, 'loss': 1.1636649763100524, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 6.985551657770655, 'mu': 1.4882753841163243}
+{'step': 310, 'epoch': 5.0, 'train_loss': 1.420107666015625, 'clip_fraction': 1.0, 'loss': 1.3856757095003154, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 8.000000000000005, 'mu': 1.6660305978457184}
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 3895.45it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+{'step': 62, 'epoch': 1.0, 'train_loss': 0.7257534484863282, 'clip_fraction': 1.0, 'loss': 0.7174332640643074, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 3.054089440266451, 'mu': 0.7305251613152316}
+{'step': 124, 'epoch': 2.0, 'train_loss': 0.8299899749755859, 'clip_fraction': 1.0, 'loss': 0.8152006116843175, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 4.610238743691153, 'mu': 1.045751821479919}
+{'step': 186, 'epoch': 3.0, 'train_loss': 0.9904046173095703, 'clip_fraction': 1.0, 'loss': 0.9690405902160085, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 5.873890881586911, 'mu': 1.2861842266181187}
+{'step': 248, 'epoch': 4.0, 'train_loss': 1.1913487548828126, 'clip_fraction': 1.0, 'loss': 1.163163629240534, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 6.985551657770655, 'mu': 1.4882753841163243}
+{'step': 310, 'epoch': 5.0, 'train_loss': 1.420112518310547, 'clip_fraction': 1.0, 'loss': 1.385012987685618, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 8.000000000000005, 'mu': 1.6660305978457184}
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 8799.24it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+{'step': 62, 'epoch': 1.0, 'train_loss': 0.7257530822753906, 'clip_fraction': 1.0, 'loss': 0.7174311281476294, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 3.054089440266451, 'mu': 0.7305251613152316}
+{'step': 124, 'epoch': 2.0, 'train_loss': 0.8299884796142578, 'clip_fraction': 1.0, 'loss': 0.815198031468444, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 4.610238743691153, 'mu': 1.045751821479919}
+{'step': 186, 'epoch': 3.0, 'train_loss': 0.9904024658203125, 'clip_fraction': 1.0, 'loss': 0.9690376191880017, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 5.873890881586911, 'mu': 1.2861842266181187}
+{'step': 248, 'epoch': 4.0, 'train_loss': 1.1913460083007812, 'clip_fraction': 1.0, 'loss': 1.1631604956118586, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 6.985551657770655, 'mu': 1.4882753841163243}
+{'step': 310, 'epoch': 5.0, 'train_loss': 1.4201093444824218, 'clip_fraction': 1.0, 'loss': 1.3850096386823727, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 8.000000000000005, 'mu': 1.6660305978457184}
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 6866.96it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+{'step': 62, 'epoch': 1.0, 'train_loss': 0.6967626342773438, 'clip_fraction': 1.0, 'loss': 0.6923185189119297, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 3.054089440266451, 'mu': 0.7305251613152316}
+{'step': 124, 'epoch': 2.0, 'train_loss': 0.7880025329589844, 'clip_fraction': 1.0, 'loss': 0.7764192717747056, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 4.610238743691153, 'mu': 1.045751821479919}
+{'step': 186, 'epoch': 3.0, 'train_loss': 0.9381091766357422, 'clip_fraction': 1.0, 'loss': 0.9200755868320889, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 5.873890881586911, 'mu': 1.2861842266181187}
+{'step': 248, 'epoch': 4.0, 'train_loss': 1.1270205078125, 'clip_fraction': 1.0, 'loss': 1.1028377620677765, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 6.985551657770655, 'mu': 1.4882753841163243}
+{'step': 310, 'epoch': 5.0, 'train_loss': 1.3464737243652343, 'clip_fraction': 1.0, 'loss': 1.3158033809209009, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 8.000000000000005, 'mu': 1.6660305978457184}
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 4780.04it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+{'step': 62, 'epoch': 1.0, 'train_loss': 0.6966729125976563, 'clip_fraction': 1.0, 'loss': 0.6924297769931259, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 3.054089440266451, 'mu': 0.7305251613152316}
+{'step': 124, 'epoch': 2.0, 'train_loss': 0.7880317535400391, 'clip_fraction': 1.0, 'loss': 0.7765879029313032, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 4.610238743691153, 'mu': 1.045751821479919}
+{'step': 186, 'epoch': 3.0, 'train_loss': 0.9381422576904297, 'clip_fraction': 1.0, 'loss': 0.9202322796764363, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 5.873890881586911, 'mu': 1.2861842266181187}
+{'step': 248, 'epoch': 4.0, 'train_loss': 1.1267903747558594, 'clip_fraction': 1.0, 'loss': 1.1027129895889016, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 6.985551657770655, 'mu': 1.4882753841163243}
+{'step': 310, 'epoch': 5.0, 'train_loss': 1.3459490051269531, 'clip_fraction': 1.0, 'loss': 1.3153927015531708, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 8.000000000000005, 'mu': 1.6660305978457184}
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 10985.01it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+{'step': 62, 'epoch': 1.0, 'train_loss': 0.6966722106933594, 'clip_fraction': 1.0, 'loss': 0.6924272224510423, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 3.054089440266451, 'mu': 0.7305251613152316}
+{'step': 124, 'epoch': 2.0, 'train_loss': 0.788030258178711, 'clip_fraction': 1.0, 'loss': 0.7765844519460596, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 4.610238743691153, 'mu': 1.045751821479919}
+{'step': 186, 'epoch': 3.0, 'train_loss': 0.9381400451660157, 'clip_fraction': 1.0, 'loss': 0.9202290690263915, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 5.873890881586911, 'mu': 1.2861842266181187}
+{'step': 248, 'epoch': 4.0, 'train_loss': 1.1267872314453125, 'clip_fraction': 1.0, 'loss': 1.1027094280637297, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 6.985551657770655, 'mu': 1.4882753841163243}
+{'step': 310, 'epoch': 5.0, 'train_loss': 1.345946014404297, 'clip_fraction': 1.0, 'loss': 1.315389630682648, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 8.000000000000005, 'mu': 1.6660305978457184}
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 7501.51it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+{'step': 62, 'epoch': 1.0, 'train_loss': 0.7421905364990234, 'clip_fraction': 1.0, 'loss': 0.7344501913986734, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 3.054089440266451, 'mu': 0.7305251613152316}
+{'step': 124, 'epoch': 2.0, 'train_loss': 0.8684959411621094, 'clip_fraction': 1.0, 'loss': 0.8547802310186939, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 4.610238743691153, 'mu': 1.045751821479919}
+{'step': 186, 'epoch': 3.0, 'train_loss': 1.0483051910400392, 'clip_fraction': 1.0, 'loss': 1.0280839652965215, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 5.873890881586911, 'mu': 1.2861842266181187}
+{'step': 248, 'epoch': 4.0, 'train_loss': 1.2640587463378907, 'clip_fraction': 1.0, 'loss': 1.2369183789772238, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 6.985551657770655, 'mu': 1.4882753841163243}
+{'step': 310, 'epoch': 5.0, 'train_loss': 1.5035435485839843, 'clip_fraction': 1.0, 'loss': 1.469157374580456, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 8.000000000000005, 'mu': 1.6660305978457184}
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 7296.07it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+{'step': 62, 'epoch': 1.0, 'train_loss': 0.7419667205810547, 'clip_fraction': 1.0, 'loss': 0.7343396878416326, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 3.054089440266451, 'mu': 0.7305251613152316}
+{'step': 124, 'epoch': 2.0, 'train_loss': 0.8684478912353516, 'clip_fraction': 1.0, 'loss': 0.8548546243904015, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 4.610238743691153, 'mu': 1.045751821479919}
+{'step': 186, 'epoch': 3.0, 'train_loss': 1.048473907470703, 'clip_fraction': 1.0, 'loss': 1.028323340580873, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 5.873890881586911, 'mu': 1.2861842266181187}
+{'step': 248, 'epoch': 4.0, 'train_loss': 1.2644248046875, 'clip_fraction': 1.0, 'loss': 1.237274306848754, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 6.985551657770655, 'mu': 1.4882753841163243}
+{'step': 310, 'epoch': 5.0, 'train_loss': 1.5040991821289063, 'clip_fraction': 1.0, 'loss': 1.4696232554488682, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 8.000000000000005, 'mu': 1.6660305978457184}
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 7568.14it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+{'step': 62, 'epoch': 1.0, 'train_loss': 0.7419665222167968, 'clip_fraction': 1.0, 'loss': 0.7343383499519204, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 3.054089440266451, 'mu': 0.7305251613152316}
+{'step': 124, 'epoch': 2.0, 'train_loss': 0.868447509765625, 'clip_fraction': 1.0, 'loss': 0.8548536644759279, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 4.610238743691153, 'mu': 1.045751821479919}
+{'step': 186, 'epoch': 3.0, 'train_loss': 1.0484731903076172, 'clip_fraction': 1.0, 'loss': 1.0283223107766384, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 5.873890881586911, 'mu': 1.2861842266181187}
+{'step': 248, 'epoch': 4.0, 'train_loss': 1.2644235229492187, 'clip_fraction': 1.0, 'loss': 1.2372730274382295, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 6.985551657770655, 'mu': 1.4882753841163243}
+{'step': 310, 'epoch': 5.0, 'train_loss': 1.5040975341796874, 'clip_fraction': 1.0, 'loss': 1.469621971759379, 'accuracy': 0.557861282482707, 'examples': 5349, 'epsilon': 8.000000000000005, 'mu': 1.6660305978457184}
+{'geometry': 'standard', 'max_length': 32, 'physical_batch_size': 8, 'status': 'completed', 'headroom_fraction': 0.9795328842171486}
+{'geometry': 'scale', 'max_length': 32, 'physical_batch_size': 8, 'status': 'completed', 'headroom_fraction': 0.9736611706728879}
+{'geometry': 'standard', 'max_length': 32, 'physical_batch_size': 20, 'status': 'completed', 'headroom_fraction': 0.9788618312406616}
+Terminated
+ERROR conda.cli.main_run:execute(127): `conda run python -B -m exp8a.stage2 --gpu 0 --after-batch` failed. (See above for error)

@@ -1,0 +1,110 @@
+[
+  {
+    "stage": "coarse_lr",
+    "candidates": [
+      {
+        "method": "dp-adam-momentum-bias-bandinvmf",
+        "seed": 20261001,
+        "lr": 3e-05,
+        "C": 10.0,
+        "eps_scale": null
+      },
+      {
+        "method": "dp-adam-momentum-bias-bandinvmf",
+        "seed": 20261001,
+        "lr": 0.0001,
+        "C": 10.0,
+        "eps_scale": null
+      },
+      {
+        "method": "dp-adam-momentum-bias-bandinvmf",
+        "seed": 20261001,
+        "lr": 0.0003,
+        "C": 10.0,
+        "eps_scale": null
+      },
+      {
+        "method": "dp-adam-momentum-bias-bandinvmf",
+        "seed": 20261001,
+        "lr": 0.001,
+        "C": 10.0,
+        "eps_scale": null
+      }
+    ],
+    "budget_used": 4
+  },
+  {
+    "stage": "coarse_C",
+    "candidates": [
+      {
+        "method": "dp-adam-momentum-bias-bandinvmf",
+        "seed": 20261001,
+        "lr": 0.001,
+        "C": 0.1,
+        "eps_scale": null
+      },
+      {
+        "method": "dp-adam-momentum-bias-bandinvmf",
+        "seed": 20261001,
+        "lr": 0.001,
+        "C": 1.0,
+        "eps_scale": null
+      },
+      {
+        "method": "dp-adam-momentum-bias-bandinvmf",
+        "seed": 20261001,
+        "lr": 0.001,
+        "C": 30.0,
+        "eps_scale": null
+      },
+      {
+        "method": "dp-adam-momentum-bias-bandinvmf",
+        "seed": 20261001,
+        "lr": 0.001,
+        "C": 100.0,
+        "eps_scale": null
+      }
+    ],
+    "budget_used": 8
+  },
+  {
+    "stage": "refine_lr_once",
+    "candidates": [
+      {
+        "method": "dp-adam-momentum-bias-bandinvmf",
+        "seed": 20261001,
+        "lr": 0.0005477225575051661,
+        "C": 10.0,
+        "eps_scale": null
+      },
+      {
+        "method": "dp-adam-momentum-bias-bandinvmf",
+        "seed": 20261001,
+        "lr": 0.003,
+        "C": 10.0,
+        "eps_scale": null
+      }
+    ],
+    "budget_used": 10
+  },
+  {
+    "stage": "refine_C_once",
+    "candidates": [
+      {
+        "method": "dp-adam-momentum-bias-bandinvmf",
+        "seed": 20261001,
+        "lr": 0.003,
+        "C": 3.1622776601683795,
+        "eps_scale": null
+      },
+      {
+        "method": "dp-adam-momentum-bias-bandinvmf",
+        "seed": 20261001,
+        "lr": 0.003,
+        "C": 17.320508075688775,
+        "eps_scale": null
+      }
+    ],
+    "budget_used": 12
+  }
+]

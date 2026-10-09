@@ -1,0 +1,73 @@
+{
+  "physical_batch_size": 250,
+  "max_length": 128,
+  "seed": 20261012,
+  "lr": 5e-05,
+  "C": 1.0,
+  "eps_scale": 0.1,
+  "logical_batch_size": 1000,
+  "epochs": 5,
+  "total_steps": 310,
+  "dataset_size": 62000,
+  "beta1": 0.9,
+  "beta2": 0.999,
+  "adam_eps": 1e-08,
+  "dropout": 0.0,
+  "model": "prajjwal1/bert-tiny",
+  "task": "GLUE SST-2",
+  "loss": "cross_entropy",
+  "full_finetuning": true,
+  "head": "random_initialization",
+  "padding": "max_length",
+  "fixed_epoch_order": true,
+  "official_validation_used": false,
+  "privacy": {
+    "epsilon": 8,
+    "delta": 1e-05,
+    "adjacency": "add_remove_zero_out",
+    "sampling_amplification": false,
+    "k": 5,
+    "b_participation": 62,
+    "max_grad_norm": 1.0
+  },
+  "bandinvmf": {
+    "num_bands": 4,
+    "workload": "full_non_toeplitz_momentum_bias",
+    "beta1": 0.9
+  },
+  "rng": "fixed split/order; paired initialization seed; independent noise seed+1; dropout=0 for partition invariance",
+  "geometry": "scale",
+  "initialization_sha256": "8a0924ab1a8f11714ce42488507af7e72a7979301bef39cfa403a62b7bfb3b9b",
+  "classifier_initialization_sha256": "5ff8afff126f00c2cc4f48080a59b73f0fefb26120bc210d9ef214d3dbd0023b",
+  "checkpoint_sha256": "dab2c2bddcfb48ea430ef63fd76d46d67d704487844d967256a50dd7d7fd0a66",
+  "split_sha256": "fe7597fa24b465bb5f28300ddc34cb76265b19e098f587b1c0b6bb288d127e6a",
+  "privacy_calibration": {
+    "target_mu": 1.6660305978457184,
+    "sensitivity": 4.18402302431354,
+    "innovation_std_sum": 2.5113722579427673,
+    "adjacency": "add_remove_zero_out",
+    "k": 5,
+    "b_participation": 62,
+    "sampling_amplification": false
+  },
+  "coefficients": [
+    1.0,
+    -0.50922865903301,
+    -0.07727236688161641,
+    -0.3143675658601789
+  ],
+  "matrix_optimization": {
+    "objective": "fixed_participation_sensitivity_squared * mean_full_workload_error",
+    "optimized_objective": 7305.738503395133,
+    "initial_objective": 9347.213531148223,
+    "full_workload_shape": [
+      310,
+      310
+    ],
+    "optimizer": "Nelder-Mead, two fixed starts",
+    "iterations": 246,
+    "converged": true,
+    "d0_fixed": 1.0
+  },
+  "requested_steps": 310
+}

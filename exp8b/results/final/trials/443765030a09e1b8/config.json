@@ -1,0 +1,40 @@
+{
+  "method": "dp-adam-momentum-bias-bandinvmf",
+  "seed": 20261015,
+  "lr": 0.003,
+  "C": 10.0,
+  "eps_scale": null,
+  "physical_batch_size": 1000,
+  "logical_batch_size": 1000,
+  "max_length": 128,
+  "epochs": 5,
+  "total_steps": 310,
+  "dataset_size": 62000,
+  "beta1": 0.9,
+  "beta2": 0.999,
+  "adam_eps": 1e-08,
+  "weight_decay": 0.0,
+  "dropout": 0.1,
+  "model": "prajjwal1/bert-tiny",
+  "task": "GLUE SST-2",
+  "full_finetuning": true,
+  "head": "random_initialization",
+  "loss": "cross_entropy",
+  "fixed_epoch_order": true,
+  "privacy": {
+    "epsilon": 8,
+    "delta": 1e-05,
+    "adjacency": "add_remove_zero_out",
+    "sampling_amplification": false,
+    "k": 5,
+    "b_participation": 62,
+    "max_grad_norm": 10.0
+  },
+  "bandinvmf": {
+    "num_bands": 4,
+    "noise": "momentum_bias_bandinvmf"
+  },
+  "rng": "fixed split/order; paired initialization; dropout seed=seed+100000+step; independent noise seed=seed+1",
+  "category": "final",
+  "frozen_configs_sha256": "d5bc9a25308ac9b5d1f1a9187de9fb0fd41491dffef1f9c3d7bf0651277837cd"
+}

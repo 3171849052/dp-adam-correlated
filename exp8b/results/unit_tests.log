@@ -1,0 +1,24 @@
+.........................................                                [100%]
+=============================== warnings summary ===============================
+exp8b/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cpu-standard-small]
+exp8b/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cpu-standard-pretrained]
+exp8b/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cpu-scale-small]
+exp8b/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cpu-scale-pretrained]
+  /media/data/data/lt/dp-adam-correlated/exp8b/clipping.py:55: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    losses.sum().backward(retain_graph=True)
+
+exp8b/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cpu-standard-small]
+exp8b/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cpu-standard-pretrained]
+exp8b/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cpu-scale-small]
+exp8b/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cpu-scale-pretrained]
+  /media/data/data/lt/dp-adam-correlated/exp8b/clipping.py:60: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    (losses * coefficients).sum().backward()
+
+exp8b/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cuda:0-standard-small]
+exp8b/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cuda:0-standard-pretrained]
+exp8b/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cuda:0-scale-small]
+exp8b/tests/test_correctness.py::test_bert_norm_coefficient_and_accumulation[cuda:0-scale-pretrained]
+  sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+41 passed, 12 warnings in 24.61s

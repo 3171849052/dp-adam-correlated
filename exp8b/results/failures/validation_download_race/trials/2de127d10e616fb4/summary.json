@@ -1,0 +1,17 @@
+{
+  "method": "dp-adam-momentum-bandinvmf-scale",
+  "seed": 20261011,
+  "lr": 0.003,
+  "C": 163.07783497332343,
+  "eps_scale": 0.01,
+  "status": "failed",
+  "category": "final",
+  "error": "[Errno 2] No such file or directory: '/media/data/data/lt/dp-adam-correlated/data/sst2/validation.parquet.part' -> '/media/data/data/lt/dp-adam-correlated/data/sst2/validation.parquet'",
+  "oom": false,
+  "physical_batch_size": 1000,
+  "max_length": 128,
+  "peak_allocated_bytes": 52643840,
+  "peak_reserved_bytes": 56623104,
+  "seconds": 36.50440717488527,
+  "result_dir": "exp8b/results/final/trials/2de127d10e616fb4"
+}

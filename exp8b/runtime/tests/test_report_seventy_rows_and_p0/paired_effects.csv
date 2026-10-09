@@ -1,0 +1,9 @@
+comparison,method_a,method_b,mean_difference,sample_std,standard_error,ci95_low,ci95_high,wins,n
+dp-adam-sgd-bandinvmf - dp-adam-iid,dp-adam-sgd-bandinvmf,dp-adam-iid,0.010000000000000009,0.0,0.0,0.010000000000000009,0.010000000000000009,10,10
+dp-adam-momentum-bandinvmf - dp-adam-sgd-bandinvmf,dp-adam-momentum-bandinvmf,dp-adam-sgd-bandinvmf,0.010000000000000009,0.0,0.0,0.010000000000000009,0.010000000000000009,10,10
+dp-adam-momentum-bias-bandinvmf - dp-adam-momentum-bandinvmf,dp-adam-momentum-bias-bandinvmf,dp-adam-momentum-bandinvmf,0.010000000000000009,0.0,0.0,0.010000000000000009,0.010000000000000009,10,10
+dp-adam-sgd-bandinvmf-scale - dp-adam-sgd-bandinvmf,dp-adam-sgd-bandinvmf-scale,dp-adam-sgd-bandinvmf,0.030000000000000027,0.0,0.0,0.030000000000000027,0.030000000000000027,10,10
+dp-adam-momentum-bandinvmf-scale - dp-adam-momentum-bandinvmf,dp-adam-momentum-bandinvmf-scale,dp-adam-momentum-bandinvmf,0.030000000000000027,0.0,0.0,0.030000000000000027,0.030000000000000027,10,10
+dp-adam-momentum-bias-bandinvmf-scale - dp-adam-momentum-bias-bandinvmf,dp-adam-momentum-bias-bandinvmf-scale,dp-adam-momentum-bias-bandinvmf,0.030000000000000027,0.0,0.0,0.030000000000000027,0.030000000000000027,10,10
+dp-adam-momentum-bias-bandinvmf-scale - dp-adam-momentum-bandinvmf-scale,dp-adam-momentum-bias-bandinvmf-scale,dp-adam-momentum-bandinvmf-scale,0.010000000000000009,0.0,0.0,0.010000000000000009,0.010000000000000009,10,10
+final best - IID,dp-adam-momentum-bias-bandinvmf-scale,dp-adam-iid,0.06000000000000005,0.0,0.0,0.06000000000000005,0.06000000000000005,10,10

@@ -1,0 +1,20 @@
+first train ids [101, 1997, 1996, 6569, 3560, 1010, 22609, 2969, 1011, 5456, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+decoded of the joyous, turbulent self - discovery
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 29362.39it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+initial gradient_norms [6.679118633270264, 6.565664768218994, 7.493953704833984, 6.651960372924805] head_norms [5.859660625457764, 5.667933940887451, 6.452831268310547, 5.514547348022461] pred_counts [1, 99] logit_std [0.041251081973314285, 0.04979660362005234] pooled_mean_std 0.18581411242485046
+pilot2 gradient_norms [4.5190863609313965, 4.318109035491943, 9.115713119506836, 4.09487771987915] head_norms [4.017824172973633, 3.9181432723999023, 8.28951644897461, 3.7849225997924805] pred_counts [0, 100] logit_std [0.04035061225295067, 0.05171937495470047] pooled_mean_std 0.180586576461792

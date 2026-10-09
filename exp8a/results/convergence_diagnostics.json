@@ -1,0 +1,54 @@
+{
+  "majority_baseline_accuracy": 0.557861282482707,
+  "best_mean_accuracy": 0.557861282482707,
+  "convergence_evidence": false,
+  "full_runs": 9,
+  "final_losses": [
+    {
+      "seed": 20261011,
+      "max_length": 128,
+      "loss": 1.3850096386823727
+    },
+    {
+      "seed": 20261012,
+      "max_length": 128,
+      "loss": 1.315389630682648
+    },
+    {
+      "seed": 20261013,
+      "max_length": 128,
+      "loss": 1.469621971759379
+    },
+    {
+      "seed": 20261011,
+      "max_length": 32,
+      "loss": 1.3856757095003154
+    },
+    {
+      "seed": 20261012,
+      "max_length": 32,
+      "loss": 1.3158033809209009
+    },
+    {
+      "seed": 20261013,
+      "max_length": 32,
+      "loss": 1.469157374580456
+    },
+    {
+      "seed": 20261011,
+      "max_length": 64,
+      "loss": 1.385012987685618
+    },
+    {
+      "seed": 20261012,
+      "max_length": 64,
+      "loss": 1.3153927015531708
+    },
+    {
+      "seed": 20261013,
+      "max_length": 64,
+      "loss": 1.4696232554488682
+    }
+  ],
+  "no_additional_pilots_after_freezing": true
+}

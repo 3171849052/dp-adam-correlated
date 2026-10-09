@@ -1,0 +1,25 @@
+# Exp8b Stage 1
+
+Unit tests and seven full logical-step GPU smokes passed. This validation rerun reused and re-audited the seven canonical GPU smokes after the final-loader fix. Stage 2 search had already completed; frozen hyperparameters remained unchanged.
+GPU: RTX 3080 Ti; physical=logical batch 1000; max_length 128; FP32; two backwards, calibrated DP noise, ordinary Adam.
+One-step smoke is a feasibility check; it is not evidence of five-epoch convergence or accuracy.
+Cold step timings include kernel warm-up. Peak memory includes persistent model, Adam and noise buffers.
+
+| Method | Allocated GiB | Reserved GiB | Seconds / step | Samples / s |
+|---|---:|---:|---:|---:|
+| dp-adam-iid | 3.361 | 3.672 | 5.219 | 191.6 |
+| dp-adam-sgd-bandinvmf | 3.361 | 3.672 | 5.444 | 183.7 |
+| dp-adam-momentum-bandinvmf | 3.361 | 3.672 | 4.913 | 203.5 |
+| dp-adam-momentum-bias-bandinvmf | 3.361 | 3.672 | 5.133 | 194.8 |
+| dp-adam-sgd-bandinvmf-scale | 3.701 | 3.914 | 5.219 | 191.6 |
+| dp-adam-momentum-bandinvmf-scale | 3.701 | 3.914 | 5.652 | 176.9 |
+| dp-adam-momentum-bias-bandinvmf-scale | 3.701 | 3.914 | 5.021 | 199.1 |
+
+All strategies rebuilt for T=310; GDP calibrated from their actual fixed-participation sensitivity.
+Repeated tokens, padding, position embeddings, token-type embeddings, arbitrary coordinate scales, clipping coefficients and clipped gradient sums checked against explicit per-example autograd.
+
+From repository root:
+
+```bash
+conda run --no-capture-output -n curve python -B -m exp8b.stage2 --gpu 0
+```
