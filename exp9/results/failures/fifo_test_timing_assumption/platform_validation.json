@@ -1,0 +1,7 @@
+{
+  "status": "failed",
+  "error": "Command '['/home/longt29/miniconda3/envs/curve/bin/python', '-B', '-m', 'pytest', 'exp9/tests', '-q', '-o', 'cache_dir=exp9/runtime/pytest_cache', '--basetemp=exp9/runtime/tests', '--junitxml=/media/data/data/lt/dp-adam-correlated/exp9/results/tests.xml']' returned non-zero exit status 1.",
+  "traceback": "Traceback (most recent call last):\n  File \"/media/data/data/lt/dp-adam-correlated/exp9/stage1.py\", line 40, in verify_platform\n    prepare();write_grid();unit_tests()\n                           ^^^^^^^^^^^^\n  File \"/media/data/data/lt/dp-adam-correlated/exp9/stage1.py\", line 14, in unit_tests\n    subprocess.run([sys.executable,'-B','-m','pytest','exp9/tests','-q',\n  File \"/home/longt29/miniconda3/envs/curve/lib/python3.11/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['/home/longt29/miniconda3/envs/curve/bin/python', '-B', '-m', 'pytest', 'exp9/tests', '-q', '-o', 'cache_dir=exp9/runtime/pytest_cache', '--basetemp=exp9/runtime/tests', '--junitxml=/media/data/data/lt/dp-adam-correlated/exp9/results/tests.xml']' returned non-zero exit status 1.\n",
+  "full_experiments_started": false,
+  "physical_batch_policy": "No automatic reduction; inspect failures before continuing"
+}

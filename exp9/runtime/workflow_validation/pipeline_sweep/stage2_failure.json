@@ -1,0 +1,5 @@
+{
+  "status": "failed",
+  "error": "injected dependency failure",
+  "traceback": "Traceback (most recent call last):\n  File \"/media/data/data/lt/dp-adam-correlated/exp9/stage2.py\", line 45, in main\n    status('sweep');run_formal('sweep',**schedule)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/media/data/data/lt/dp-adam-correlated/exp9/runtime/validate_workflows.py\", line 33, in formal\n    def formal(stage,**kwargs):return call(stage)(**kwargs)\n                                      ^^^^^^^^^^^^^^^^^^^^^\n  File \"/media/data/data/lt/dp-adam-correlated/exp9/runtime/validate_workflows.py\", line 29, in wrapped\n    if name==fail: raise RuntimeError('injected dependency failure')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: injected dependency failure\n"
+}

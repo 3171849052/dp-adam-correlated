@@ -1,0 +1,28 @@
+{
+  "pid": 2244315,
+  "process_group": 2244315,
+  "argv": [
+    "/home/longt29/miniconda3/bin/conda",
+    "run",
+    "--no-capture-output",
+    "-n",
+    "curve",
+    "python",
+    "-B",
+    "-m",
+    "exp9.stage2",
+    "--gpus",
+    "0",
+    "1",
+    "2",
+    "3",
+    "--cv-per-gpu",
+    "1",
+    "--nlp-per-gpu",
+    "2"
+  ],
+  "cwd": "/media/data/data/lt/dp-adam-correlated",
+  "log": "/media/data/data/lt/dp-adam-correlated/exp9/results/stage2.log",
+  "detached": true,
+  "monitoring": false
+}

@@ -1,0 +1,56 @@
+{
+  "counts": {
+    "search": 321,
+    "recheck": 56,
+    "final": 140,
+    "sweep": 126,
+    "total": 643
+  },
+  "gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "cv_per_gpu": 1,
+  "nlp_per_gpu": 2,
+  "cv_search": 177,
+  "nlp_search": 144,
+  "epochs_per_trial": 5,
+  "stage_order": [
+    "search",
+    "recheck",
+    "freeze",
+    "final",
+    "sweep",
+    "report"
+  ],
+  "search_seed": 20261101,
+  "recheck_seeds": [
+    20261102,
+    20261103
+  ],
+  "formal_seeds": [
+    20261111,
+    20261112,
+    20261113,
+    20261114,
+    20261115,
+    20261116,
+    20261117,
+    20261118,
+    20261119,
+    20261120
+  ],
+  "sweep_epsilons": [
+    2,
+    4,
+    16
+  ],
+  "sweep_seeds": [
+    20261111,
+    20261112,
+    20261113
+  ],
+  "sweep_protocol": "fixed-hyperparameter; only recalibrate DP noise"
+}

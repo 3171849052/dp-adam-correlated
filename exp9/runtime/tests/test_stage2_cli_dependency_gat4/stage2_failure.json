@@ -1,0 +1,5 @@
+{
+  "status": "failed",
+  "error": "injected dependency failure",
+  "traceback": "Traceback (most recent call last):\n  File \"/media/data/data/lt/dp-adam-correlated/exp9/stage2.py\", line 44, in main\n    status('final');run_formal('final',**schedule)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/media/data/data/lt/dp-adam-correlated/exp9/tests/test_workflow.py\", line 151, in <lambda>\n    monkeypatch.setattr(final,'run_formal',lambda stage,**kw:wrapped(stage)(**kw))\n                                                             ^^^^^^^^^^^^^^^^^^^^\n  File \"/media/data/data/lt/dp-adam-correlated/exp9/tests/test_workflow.py\", line 140, in invoke\n    if name==fail: raise RuntimeError('injected dependency failure')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: injected dependency failure\n"
+}

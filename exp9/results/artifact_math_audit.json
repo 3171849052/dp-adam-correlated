@@ -1,0 +1,228 @@
+{
+  "status": "passed",
+  "independent_checkpoint_reloads": true,
+  "checks": [
+    {
+      "trial_id": "687badc2f9b8b707cd90",
+      "task": "cv",
+      "method": "dp-adam-iid",
+      "T": 225,
+      "state_tensors": 152,
+      "full_epsilon": 8.0,
+      "executed_prefix_epsilon": 3.1232925162148586,
+      "status": "passed"
+    },
+    {
+      "trial_id": "6fab5a4bdc9fb4b84e4c",
+      "task": "cv",
+      "method": "dp-adam-sgd-bandinvmf",
+      "T": 225,
+      "state_tensors": 152,
+      "full_epsilon": 8.0,
+      "executed_prefix_epsilon": 2.6942973302683164,
+      "status": "passed"
+    },
+    {
+      "trial_id": "bf931c28e10b5945c275",
+      "task": "cv",
+      "method": "dp-adam-momentum-bandinvmf",
+      "T": 225,
+      "state_tensors": 152,
+      "full_epsilon": 8.0,
+      "executed_prefix_epsilon": 1.0787546578649685,
+      "status": "passed"
+    },
+    {
+      "trial_id": "5b432e0b065ada9a2ec9",
+      "task": "cv",
+      "method": "dp-adam-momentum-bias-bandinvmf",
+      "T": 225,
+      "state_tensors": 152,
+      "full_epsilon": 8.0,
+      "executed_prefix_epsilon": 1.871063911184716,
+      "status": "passed"
+    },
+    {
+      "trial_id": "acc675b847478139367c",
+      "task": "cv",
+      "method": "dp-adam-sgd-bandinvmf-scale",
+      "T": 225,
+      "state_tensors": 152,
+      "full_epsilon": 8.0,
+      "executed_prefix_epsilon": 2.694297330268314,
+      "status": "passed"
+    },
+    {
+      "trial_id": "fe8a7e3a9db559b2f5ee",
+      "task": "cv",
+      "method": "dp-adam-momentum-bandinvmf-scale",
+      "T": 225,
+      "state_tensors": 152,
+      "full_epsilon": 8.0,
+      "executed_prefix_epsilon": 1.0787546578649683,
+      "status": "passed"
+    },
+    {
+      "trial_id": "a169b1b151597720fd23",
+      "task": "cv",
+      "method": "dp-adam-momentum-bias-bandinvmf-scale",
+      "T": 225,
+      "state_tensors": 152,
+      "full_epsilon": 8.0,
+      "executed_prefix_epsilon": 1.871063911184716,
+      "status": "passed"
+    },
+    {
+      "trial_id": "7729fcba5cb9310ea96c",
+      "task": "cv",
+      "method": "dp-adam-iid",
+      "T": 250,
+      "state_tensors": 152,
+      "full_epsilon": 8.0,
+      "executed_prefix_epsilon": 3.1232925162148586,
+      "status": "passed"
+    },
+    {
+      "trial_id": "911cc8f5af334d0b7e27",
+      "task": "cv",
+      "method": "dp-adam-sgd-bandinvmf",
+      "T": 250,
+      "state_tensors": 152,
+      "full_epsilon": 8.0,
+      "executed_prefix_epsilon": 2.6943075975089483,
+      "status": "passed"
+    },
+    {
+      "trial_id": "73bd6efa84426124888e",
+      "task": "cv",
+      "method": "dp-adam-momentum-bandinvmf",
+      "T": 250,
+      "state_tensors": 152,
+      "full_epsilon": 8.0,
+      "executed_prefix_epsilon": 1.1012343657626944,
+      "status": "passed"
+    },
+    {
+      "trial_id": "b8a31dc994cefcc3681d",
+      "task": "cv",
+      "method": "dp-adam-momentum-bias-bandinvmf",
+      "T": 250,
+      "state_tensors": 152,
+      "full_epsilon": 8.0,
+      "executed_prefix_epsilon": 1.8341565892917335,
+      "status": "passed"
+    },
+    {
+      "trial_id": "936ec2ff325d948e4b17",
+      "task": "cv",
+      "method": "dp-adam-sgd-bandinvmf-scale",
+      "T": 250,
+      "state_tensors": 152,
+      "full_epsilon": 8.0,
+      "executed_prefix_epsilon": 2.6943075975089483,
+      "status": "passed"
+    },
+    {
+      "trial_id": "a7a758ec8febc8831e7e",
+      "task": "cv",
+      "method": "dp-adam-momentum-bandinvmf-scale",
+      "T": 250,
+      "state_tensors": 152,
+      "full_epsilon": 8.0,
+      "executed_prefix_epsilon": 1.1012343657626944,
+      "status": "passed"
+    },
+    {
+      "trial_id": "6c6ab96aecdebdf1c3c7",
+      "task": "cv",
+      "method": "dp-adam-momentum-bias-bandinvmf-scale",
+      "T": 250,
+      "state_tensors": 152,
+      "full_epsilon": 8.0,
+      "executed_prefix_epsilon": 1.8341565892917335,
+      "status": "passed"
+    },
+    {
+      "trial_id": "e3e03a4bf0a85ab674a7",
+      "task": "nlp",
+      "method": "dp-adam-iid",
+      "T": 310,
+      "state_tensors": 41,
+      "full_epsilon": 8.0,
+      "executed_prefix_epsilon": 3.1232925162148555,
+      "status": "passed"
+    },
+    {
+      "trial_id": "0e2eac75d1261a2c8a0d",
+      "task": "nlp",
+      "method": "dp-adam-sgd-bandinvmf",
+      "T": 310,
+      "state_tensors": 41,
+      "full_epsilon": 8.0,
+      "executed_prefix_epsilon": 2.694311197617745,
+      "status": "passed"
+    },
+    {
+      "trial_id": "21eb9d7a2ec2dbf57e6f",
+      "task": "nlp",
+      "method": "dp-adam-momentum-bandinvmf",
+      "T": 310,
+      "state_tensors": 41,
+      "full_epsilon": 8.0,
+      "executed_prefix_epsilon": 1.1387674904347311,
+      "status": "passed"
+    },
+    {
+      "trial_id": "d0aea94015c0f4ad57f3",
+      "task": "nlp",
+      "method": "dp-adam-momentum-bias-bandinvmf",
+      "T": 310,
+      "state_tensors": 41,
+      "full_epsilon": 8.0,
+      "executed_prefix_epsilon": 1.7584391334097267,
+      "status": "passed"
+    },
+    {
+      "trial_id": "b1c863ba68eac402897f",
+      "task": "nlp",
+      "method": "dp-adam-sgd-bandinvmf-scale",
+      "T": 310,
+      "state_tensors": 41,
+      "full_epsilon": 8.0,
+      "executed_prefix_epsilon": 2.6943111976177416,
+      "status": "passed"
+    },
+    {
+      "trial_id": "7157aa7722cea82068fd",
+      "task": "nlp",
+      "method": "dp-adam-momentum-bandinvmf-scale",
+      "T": 310,
+      "state_tensors": 41,
+      "full_epsilon": 8.0,
+      "executed_prefix_epsilon": 1.1387674904347311,
+      "status": "passed"
+    },
+    {
+      "trial_id": "46bfba8acbeb635e88f4",
+      "task": "nlp",
+      "method": "dp-adam-momentum-bias-bandinvmf-scale",
+      "T": 310,
+      "state_tensors": 41,
+      "full_epsilon": 8.0,
+      "executed_prefix_epsilon": 1.7584391334097267,
+      "status": "passed"
+    },
+    {
+      "trial_id": "f48965ef41b97fe5b8c1",
+      "task": "nlp",
+      "method": "dp-adam-momentum-bias-bandinvmf-scale",
+      "T": 310,
+      "state_tensors": 41,
+      "full_epsilon": 8.0,
+      "executed_prefix_epsilon": 1.7584391334097267,
+      "status": "passed"
+    }
+  ],
+  "protected_files_unchanged": true,
+  "full_experiments_started": false
+}

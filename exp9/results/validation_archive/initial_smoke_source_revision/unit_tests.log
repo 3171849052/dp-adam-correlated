@@ -1,0 +1,30 @@
+.......................................................                  [100%]
+=============================== warnings summary ===============================
+exp9/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cpu-standard-small]
+exp9/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cpu-standard-pretrained]
+exp9/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cpu-scale-small]
+exp9/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cpu-scale-pretrained]
+exp9/tests/test_math.py::test_cv_exact_clipping[cpu-False]
+exp9/tests/test_math.py::test_cv_exact_clipping[cpu-True]
+  /media/data/data/lt/dp-adam-correlated/exp9/clipping.py:55: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    losses.sum().backward(retain_graph=True)
+
+exp9/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cpu-standard-small]
+exp9/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cpu-standard-pretrained]
+exp9/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cpu-scale-small]
+exp9/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cpu-scale-pretrained]
+exp9/tests/test_math.py::test_cv_exact_clipping[cpu-False]
+exp9/tests/test_math.py::test_cv_exact_clipping[cpu-True]
+  /media/data/data/lt/dp-adam-correlated/exp9/clipping.py:60: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    (losses * coefficients).sum().backward()
+
+exp9/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cuda:0-standard-small]
+exp9/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cuda:0-standard-pretrained]
+exp9/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cuda:0-scale-small]
+exp9/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cuda:0-scale-pretrained]
+exp9/tests/test_math.py::test_cv_exact_clipping[cuda:0-False]
+exp9/tests/test_math.py::test_cv_exact_clipping[cuda:0-True]
+  sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+55 passed, 18 warnings in 27.47s

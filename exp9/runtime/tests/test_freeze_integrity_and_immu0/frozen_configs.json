@@ -1,0 +1,175 @@
+{
+  "cv": {
+    "dp-adam-iid": {
+      "lr": 0.001,
+      "C": 100,
+      "eps_scale": null,
+      "mean_validation_accuracy": 0.6669333333333333,
+      "trial_ids": [
+        "849126dad9a7d0a06a33",
+        "4de85b52d4a47a2f65ae",
+        "e2660197c4f735c5b4a5"
+      ],
+      "base_id": "849126dad9a7d0a06a33"
+    },
+    "dp-adam-sgd-bandinvmf": {
+      "lr": 0.007,
+      "C": 200,
+      "eps_scale": null,
+      "mean_validation_accuracy": 0.6675999999999999,
+      "trial_ids": [
+        "73cf2bc0a45527009085",
+        "469b86723e809633640b",
+        "41f44b8208887092e7fe"
+      ],
+      "base_id": "73cf2bc0a45527009085"
+    },
+    "dp-adam-momentum-bandinvmf": {
+      "lr": 0.007,
+      "C": 200,
+      "eps_scale": null,
+      "mean_validation_accuracy": 0.6682666666666667,
+      "trial_ids": [
+        "b126ec6486c01a43746b",
+        "76e05a55a6a2fefb4873",
+        "dacb375cb996c82188a9"
+      ],
+      "base_id": "b126ec6486c01a43746b"
+    },
+    "dp-adam-momentum-bias-bandinvmf": {
+      "lr": 0.007,
+      "C": 200,
+      "eps_scale": null,
+      "mean_validation_accuracy": 0.6689333333333334,
+      "trial_ids": [
+        "e82eb75139c29f4a4277",
+        "3ea0307776e605f7695e",
+        "78004a3486e8a8d593be"
+      ],
+      "base_id": "e82eb75139c29f4a4277"
+    },
+    "dp-adam-sgd-bandinvmf-scale": {
+      "lr": 0.007,
+      "C": 200,
+      "eps_scale": 0.3,
+      "mean_validation_accuracy": 0.6701333333333332,
+      "trial_ids": [
+        "67ac3bef200ded2e7a19",
+        "46eaad8adcc749fb2dfe",
+        "60cd0944a4fd2864ace2"
+      ],
+      "base_id": "67ac3bef200ded2e7a19"
+    },
+    "dp-adam-momentum-bandinvmf-scale": {
+      "lr": 0.007,
+      "C": 200,
+      "eps_scale": 0.3,
+      "mean_validation_accuracy": 0.6713333333333334,
+      "trial_ids": [
+        "ae465e6869042051d2fe",
+        "ce52541fea287655c06d",
+        "8bd2d4d851e0f30a9105"
+      ],
+      "base_id": "ae465e6869042051d2fe"
+    },
+    "dp-adam-momentum-bias-bandinvmf-scale": {
+      "lr": 0.007,
+      "C": 200,
+      "eps_scale": 0.3,
+      "mean_validation_accuracy": 0.6725333333333333,
+      "trial_ids": [
+        "adb12bf9b758dda010ce",
+        "a9afeb79eafbe8c2115c",
+        "8b934a9caa01243c1c5a"
+      ],
+      "base_id": "adb12bf9b758dda010ce"
+    }
+  },
+  "nlp": {
+    "dp-adam-iid": {
+      "lr": 0.002,
+      "C": 1,
+      "eps_scale": null,
+      "mean_validation_accuracy": 0.6728333333333332,
+      "trial_ids": [
+        "7a3d19d87893bef6fb44",
+        "84bc88929ae3353c1466",
+        "0f4f2fd84d7b9758e747"
+      ],
+      "base_id": "7a3d19d87893bef6fb44"
+    },
+    "dp-adam-sgd-bandinvmf": {
+      "lr": 0.005,
+      "C": 20,
+      "eps_scale": null,
+      "mean_validation_accuracy": 0.6731333333333334,
+      "trial_ids": [
+        "633b9f2d1c16de219534",
+        "7d7c112a18056c929a28",
+        "a9059870739265aa5c92"
+      ],
+      "base_id": "633b9f2d1c16de219534"
+    },
+    "dp-adam-momentum-bandinvmf": {
+      "lr": 0.005,
+      "C": 20,
+      "eps_scale": null,
+      "mean_validation_accuracy": 0.6734333333333332,
+      "trial_ids": [
+        "c10b63619ffe9a962f90",
+        "a2372fcf816c36434bd9",
+        "b738e4abec5e32f80913"
+      ],
+      "base_id": "c10b63619ffe9a962f90"
+    },
+    "dp-adam-momentum-bias-bandinvmf": {
+      "lr": 0.005,
+      "C": 20,
+      "eps_scale": null,
+      "mean_validation_accuracy": 0.6737333333333333,
+      "trial_ids": [
+        "15cfae31eb5b5eba42ff",
+        "a51cfa5c701683dd98ae",
+        "0aa1978feaf694a9cf66"
+      ],
+      "base_id": "15cfae31eb5b5eba42ff"
+    },
+    "dp-adam-sgd-bandinvmf-scale": {
+      "lr": 0.005,
+      "C": 300,
+      "eps_scale": 0.1,
+      "mean_validation_accuracy": 0.6749333333333333,
+      "trial_ids": [
+        "fe0f8ce6b0a80780b9b1",
+        "11486758df79997081ae",
+        "dc973dcf14495e34fffe"
+      ],
+      "base_id": "fe0f8ce6b0a80780b9b1"
+    },
+    "dp-adam-momentum-bandinvmf-scale": {
+      "lr": 0.005,
+      "C": 300,
+      "eps_scale": 0.1,
+      "mean_validation_accuracy": 0.6761333333333331,
+      "trial_ids": [
+        "649c4241279770a1a991",
+        "e293227410e7467c90a2",
+        "ce8ab50bc7c2b2bccae8"
+      ],
+      "base_id": "649c4241279770a1a991"
+    },
+    "dp-adam-momentum-bias-bandinvmf-scale": {
+      "lr": 0.005,
+      "C": 300,
+      "eps_scale": 0.1,
+      "mean_validation_accuracy": 0.6773333333333333,
+      "trial_ids": [
+        "849a2caf60b6459698e8",
+        "5803250f6e2b766e6ec9",
+        "242033c78d0bd5d89533"
+      ],
+      "base_id": "849a2caf60b6459698e8"
+    }
+  }
+}
+ 

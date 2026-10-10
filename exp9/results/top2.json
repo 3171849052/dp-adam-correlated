@@ -1,0 +1,342 @@
+{
+  "cv": {
+    "dp-adam-iid": [
+      {
+        "task": "cv",
+        "method": "dp-adam-iid",
+        "lr": 0.0005,
+        "C": 30,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "cv",
+        "method": "dp-adam-iid",
+        "lr": 0.0005,
+        "C": 10,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ],
+    "dp-adam-sgd-bandinvmf": [
+      {
+        "task": "cv",
+        "method": "dp-adam-sgd-bandinvmf",
+        "lr": 0.003,
+        "C": 30,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "cv",
+        "method": "dp-adam-sgd-bandinvmf",
+        "lr": 0.003,
+        "C": 3,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ],
+    "dp-adam-momentum-bandinvmf": [
+      {
+        "task": "cv",
+        "method": "dp-adam-momentum-bandinvmf",
+        "lr": 0.005,
+        "C": 30,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "cv",
+        "method": "dp-adam-momentum-bandinvmf",
+        "lr": 0.005,
+        "C": 10,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ],
+    "dp-adam-momentum-bias-bandinvmf": [
+      {
+        "task": "cv",
+        "method": "dp-adam-momentum-bias-bandinvmf",
+        "lr": 0.003,
+        "C": 30,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "cv",
+        "method": "dp-adam-momentum-bias-bandinvmf",
+        "lr": 0.003,
+        "C": 10,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ],
+    "dp-adam-sgd-bandinvmf-scale": [
+      {
+        "task": "cv",
+        "method": "dp-adam-sgd-bandinvmf-scale",
+        "lr": 0.003,
+        "C": 100,
+        "eps_scale": 0.1,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "cv",
+        "method": "dp-adam-sgd-bandinvmf-scale",
+        "lr": 0.003,
+        "C": 200,
+        "eps_scale": 0.05,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ],
+    "dp-adam-momentum-bandinvmf-scale": [
+      {
+        "task": "cv",
+        "method": "dp-adam-momentum-bandinvmf-scale",
+        "lr": 0.005,
+        "C": 100,
+        "eps_scale": 0.1,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "cv",
+        "method": "dp-adam-momentum-bandinvmf-scale",
+        "lr": 0.005,
+        "C": 100,
+        "eps_scale": 0.05,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ],
+    "dp-adam-momentum-bias-bandinvmf-scale": [
+      {
+        "task": "cv",
+        "method": "dp-adam-momentum-bias-bandinvmf-scale",
+        "lr": 0.003,
+        "C": 200,
+        "eps_scale": 0.05,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "cv",
+        "method": "dp-adam-momentum-bias-bandinvmf-scale",
+        "lr": 0.003,
+        "C": 200,
+        "eps_scale": 0.1,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ]
+  },
+  "nlp": {
+    "dp-adam-iid": [
+      {
+        "task": "nlp",
+        "method": "dp-adam-iid",
+        "lr": 0.002,
+        "C": 0.3,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "nlp",
+        "method": "dp-adam-iid",
+        "lr": 0.002,
+        "C": 1,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ],
+    "dp-adam-sgd-bandinvmf": [
+      {
+        "task": "nlp",
+        "method": "dp-adam-sgd-bandinvmf",
+        "lr": 0.005,
+        "C": 20,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "nlp",
+        "method": "dp-adam-sgd-bandinvmf",
+        "lr": 0.005,
+        "C": 10,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ],
+    "dp-adam-momentum-bandinvmf": [
+      {
+        "task": "nlp",
+        "method": "dp-adam-momentum-bandinvmf",
+        "lr": 0.005,
+        "C": 1,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "nlp",
+        "method": "dp-adam-momentum-bandinvmf",
+        "lr": 0.005,
+        "C": 10,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ],
+    "dp-adam-momentum-bias-bandinvmf": [
+      {
+        "task": "nlp",
+        "method": "dp-adam-momentum-bias-bandinvmf",
+        "lr": 0.005,
+        "C": 1,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "nlp",
+        "method": "dp-adam-momentum-bias-bandinvmf",
+        "lr": 0.005,
+        "C": 20,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ],
+    "dp-adam-sgd-bandinvmf-scale": [
+      {
+        "task": "nlp",
+        "method": "dp-adam-sgd-bandinvmf-scale",
+        "lr": 0.005,
+        "C": 300,
+        "eps_scale": 0.01,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "nlp",
+        "method": "dp-adam-sgd-bandinvmf-scale",
+        "lr": 0.005,
+        "C": 300,
+        "eps_scale": 0.005,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ],
+    "dp-adam-momentum-bandinvmf-scale": [
+      {
+        "task": "nlp",
+        "method": "dp-adam-momentum-bandinvmf-scale",
+        "lr": 0.005,
+        "C": 200,
+        "eps_scale": 0.01,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "nlp",
+        "method": "dp-adam-momentum-bandinvmf-scale",
+        "lr": 0.005,
+        "C": 200,
+        "eps_scale": 0.005,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ],
+    "dp-adam-momentum-bias-bandinvmf-scale": [
+      {
+        "task": "nlp",
+        "method": "dp-adam-momentum-bias-bandinvmf-scale",
+        "lr": 0.005,
+        "C": 300,
+        "eps_scale": 0.01,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "nlp",
+        "method": "dp-adam-momentum-bias-bandinvmf-scale",
+        "lr": 0.005,
+        "C": 300,
+        "eps_scale": 0.005,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ]
+  }
+}

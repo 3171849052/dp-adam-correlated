@@ -1,0 +1,86 @@
+.....................................................F.......            [100%]
+=================================== FAILURES ===================================
+_____________ test_real_subprocess_fifo_capacity_mapping_and_reuse _____________
+
+tmp_path = PosixPath('/media/data/data/lt/dp-adam-correlated/exp9/runtime/tests/test_real_subprocess_fifo_capa0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fe58c180d10>
+
+    def test_real_subprocess_fifo_capacity_mapping_and_reuse(tmp_path,monkeypatch):
+        from exp9 import config,launcher
+        from exp9.audit import audit_fifo
+        monkeypatch.setattr(config,'RESULTS',tmp_path);monkeypatch.setattr(launcher,'RESULTS',tmp_path)
+        worker=tmp_path/'worker.py'
+        worker.write_text('''import json,os,sys,time
+    from pathlib import Path
+    j=json.loads(sys.argv[1]);d=Path(sys.argv[2]);time.sleep(.25)
+    j.update(status='completed',trial_id=sys.argv[3],gpu=os.environ['CUDA_VISIBLE_DEVICES'])
+    (d/'summary.json').write_text(json.dumps(j))
+    ''')
+        jobs=[Trial('cv',IID,.001+i*.00001,10,stage='smoke') for i in range(5)]
+        jobs += [Trial('nlp',IID,.001+i*.00001,1,stage='smoke') for i in range(8)]
+        jobs += [Trial('cv',IID,.002+i*.00001,10,stage='smoke') for i in range(2)]
+        verify=lambda cfg,**kw:json.loads((cfg.output/'summary.json').read_text())
+        command=lambda j:[sys.executable,'-B',str(worker),json.dumps(j.values()),str(j.output),j.id]
+        rows=launcher.run_queue(jobs,command=command,verify=verify,poll_seconds=.01)
+        events=[json.loads(s) for s in (tmp_path/'scheduler.jsonl').read_text().splitlines()]
+        assert [e['trial_id'] for e in events if e['event']=='start']==[j.id for j in jobs]
+        assert {r['gpu'] for r in rows}=={'0','1','2','3'}
+        assert audit_fifo(tmp_path/'scheduler.jsonl')['status']=='passed'
+        active={};peak={g:0 for g in range(4)}
+        for e in events:
+            if e['event']=='start':
+                active[e['trial_id']]=e
+                if e['task']=='nlp': peak[e['gpu']]=max(peak[e['gpu']],sum(a['gpu']==e['gpu'] for a in active.values()))
+            elif e['event']=='finish': active.pop(e['trial_id'])
+>       assert all(v==2 for v in peak.values())
+E       assert False
+E        +  where False = all(<generator object test_real_subprocess_fifo_capacity_mapping_and_reuse.<locals>.<genexpr> at 0x7fe5500f7b90>)
+
+exp9/tests/test_workflow.py:105: AssertionError
+----------------------------- Captured stdout call -----------------------------
+[smoke] GPU 0 cv dp-adam-iid 687badc2f9b8b707cd90
+[smoke] GPU 1 cv dp-adam-iid b165ac721f6242956685
+[smoke] GPU 2 cv dp-adam-iid b2046ead2637b64dd79a
+[smoke] GPU 3 cv dp-adam-iid 5c4bd25bc412c6f43a25
+[smoke] GPU 0 cv dp-adam-iid 1f6a65f842f2ef86f849
+[smoke] GPU 1 nlp dp-adam-iid e3e03a4bf0a85ab674a7
+[smoke] GPU 2 nlp dp-adam-iid fd17b76e1fcdba15cb37
+[smoke] GPU 3 nlp dp-adam-iid 1fedfede4bf3ae79d0e8
+[smoke] GPU 1 nlp dp-adam-iid 2290c1b83c49b485965c
+[smoke] GPU 2 nlp dp-adam-iid 249541aa96b3b04bc20a
+[smoke] GPU 3 nlp dp-adam-iid e8bbeb8a6e7fb2f9e6a9
+[smoke] GPU 0 nlp dp-adam-iid dfa946c05341a6e66214
+[smoke] GPU 1 nlp dp-adam-iid 09338dbdf0c580c55989
+[smoke] GPU 2 cv dp-adam-iid 87ec0dcf621496103f4d
+[smoke] GPU 3 cv dp-adam-iid a406f9a60e73747e841e
+=============================== warnings summary ===============================
+exp9/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cpu-standard-small]
+exp9/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cpu-standard-pretrained]
+exp9/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cpu-scale-small]
+exp9/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cpu-scale-pretrained]
+exp9/tests/test_math.py::test_cv_exact_clipping[cpu-False]
+exp9/tests/test_math.py::test_cv_exact_clipping[cpu-True]
+  /media/data/data/lt/dp-adam-correlated/exp9/clipping.py:55: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    losses.sum().backward(retain_graph=True)
+
+exp9/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cpu-standard-small]
+exp9/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cpu-standard-pretrained]
+exp9/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cpu-scale-small]
+exp9/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cpu-scale-pretrained]
+exp9/tests/test_math.py::test_cv_exact_clipping[cpu-False]
+exp9/tests/test_math.py::test_cv_exact_clipping[cpu-True]
+  /media/data/data/lt/dp-adam-correlated/exp9/clipping.py:60: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    (losses * coefficients).sum().backward()
+
+exp9/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cuda:0-standard-small]
+exp9/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cuda:0-standard-pretrained]
+exp9/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cuda:0-scale-small]
+exp9/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cuda:0-scale-pretrained]
+exp9/tests/test_math.py::test_cv_exact_clipping[cuda:0-False]
+exp9/tests/test_math.py::test_cv_exact_clipping[cuda:0-True]
+  sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED exp9/tests/test_workflow.py::test_real_subprocess_fifo_capacity_mapping_and_reuse
+1 failed, 60 passed, 18 warnings in 29.30s

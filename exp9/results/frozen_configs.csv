@@ -1,0 +1,15 @@
+task,method,lr,C,eps_scale,mean_validation_accuracy,trial_ids,base_id
+cv,dp-adam-iid,0.0005,30,,0.5824666666666668,"['63abb984db3927c948e7', 'd1dfb906af8094d2fa81', '8b30b944ebe8c803a727']",63abb984db3927c948e7
+cv,dp-adam-sgd-bandinvmf,0.003,30,,0.7041333333333334,"['b857cdedb134b33c6875', 'e9c28b37a481c62b04b1', 'bb27e0bcc6deea326020']",b857cdedb134b33c6875
+cv,dp-adam-momentum-bandinvmf,0.005,30,,0.7169333333333334,"['86ec3a0d4e59c0d5efde', 'd944cc51350d4d2e9f60', '282ca57196bc609535a9']",86ec3a0d4e59c0d5efde
+cv,dp-adam-momentum-bias-bandinvmf,0.003,30,,0.7571333333333333,"['82fe908e77d6800c317c', '2f3684a536a52c4a5950', 'c9054d4c193e72fb7c97']",82fe908e77d6800c317c
+cv,dp-adam-sgd-bandinvmf-scale,0.003,200,0.05,0.7082,"['6388317f796d2fceb8cc', '91626f05c7f25622038d', '839f4f338fdeedeade74']",6388317f796d2fceb8cc
+cv,dp-adam-momentum-bandinvmf-scale,0.005,100,0.1,0.7238000000000001,"['dd09d6c085d9827ce221', 'f9f68a3275880b3ee770', '7bf9b2b9bd856258375c']",dd09d6c085d9827ce221
+cv,dp-adam-momentum-bias-bandinvmf-scale,0.003,200,0.05,0.7639333333333332,"['15e400bf0d76ea3817cd', 'd21d64f5659aae3c4cfe', 'cf76b2370b6235adca04']",15e400bf0d76ea3817cd
+nlp,dp-adam-iid,0.002,0.3,,0.796597494858852,"['d6dbce7109ac05c72a40', '69aad34adcfbbcd507fe', 'eb933c5aa419c6e7ca21']",d6dbce7109ac05c72a40
+nlp,dp-adam-sgd-bandinvmf,0.005,20,,0.8268212126877298,"['633b9f2d1c16de219534', '7d7c112a18056c929a28', 'a9059870739265aa5c92']",633b9f2d1c16de219534
+nlp,dp-adam-momentum-bandinvmf,0.005,10,,0.8081261294946095,"['87598931aee8aa5bb085', 'cf81f91d04dd264bcac3', 'ac67e8e119a8b26fa22f']",87598931aee8aa5bb085
+nlp,dp-adam-momentum-bias-bandinvmf,0.005,20,,0.8263226771359132,"['15cfae31eb5b5eba42ff', 'a51cfa5c701683dd98ae', '0aa1978feaf694a9cf66']",15cfae31eb5b5eba42ff
+nlp,dp-adam-sgd-bandinvmf-scale,0.005,300,0.01,0.8400324048108682,"['916f5990d3aabf910d13', '07073b66b8d4b0b014c3', '5d6012f9cbd1e1832206']",916f5990d3aabf910d13
+nlp,dp-adam-momentum-bandinvmf-scale,0.005,200,0.01,0.8198417149622982,"['d54b66a0cbe126825d31', '9f169020c89a2e1e9ba1', '2875d7dbb1eb82cbb79d']",d54b66a0cbe126825d31
+nlp,dp-adam-momentum-bias-bandinvmf-scale,0.005,300,0.01,0.842774350345859,"['1085e0e54368a3a1b9e9', 'e6ec57e796feafb9b07e', '4a3bc7b5ed9ef7def241']",1085e0e54368a3a1b9e9

@@ -1,0 +1,81 @@
+{
+  "status": "passed",
+  "mocked_orchestration_no_training": true,
+  "dependency_checks": [
+    {
+      "injected_failure": null,
+      "calls": [
+        "gate",
+        "tests",
+        "grid",
+        "search",
+        "freeze",
+        "official",
+        "final",
+        "sweep",
+        "report"
+      ],
+      "status": "passed"
+    },
+    {
+      "injected_failure": "gate",
+      "calls": [
+        "gate"
+      ],
+      "status": "passed"
+    },
+    {
+      "injected_failure": "search",
+      "calls": [
+        "gate",
+        "tests",
+        "grid",
+        "search"
+      ],
+      "status": "passed"
+    },
+    {
+      "injected_failure": "freeze",
+      "calls": [
+        "gate",
+        "tests",
+        "grid",
+        "search",
+        "freeze"
+      ],
+      "status": "passed"
+    },
+    {
+      "injected_failure": "final",
+      "calls": [
+        "gate",
+        "tests",
+        "grid",
+        "search",
+        "freeze",
+        "official",
+        "final"
+      ],
+      "status": "passed"
+    },
+    {
+      "injected_failure": "sweep",
+      "calls": [
+        "gate",
+        "tests",
+        "grid",
+        "search",
+        "freeze",
+        "official",
+        "final",
+        "sweep"
+      ],
+      "status": "passed"
+    }
+  ],
+  "synthetic_report_only": true,
+  "main_rows": 14,
+  "paired_rows": 42,
+  "privacy_utility_rows": 56,
+  "grid_heatmaps": 14
+}

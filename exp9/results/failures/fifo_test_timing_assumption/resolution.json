@@ -1,0 +1,4 @@
+{
+  "failure": "Test expected every GPU to reach two NLP workers during a mixed CV/NLP queue. Which GPUs are available at a task transition depends on worker completion times. FIFO order, capacity and task exclusion passed.",
+  "resolution": "Test mixed-queue bounds and FIFO separately; use a standalone eight-job NLP wave to verify two slots on every GPU. No scheduler or training change."
+}

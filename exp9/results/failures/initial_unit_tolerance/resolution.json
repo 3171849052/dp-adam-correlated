@@ -1,0 +1,4 @@
+{
+  "failure": "ViT vs timm FP32 logit comparison: 1/200 values outside atol=3e-6, absolute difference 3.5762786865234375e-6",
+  "resolution": "Check FP64 equivalence independently; use atol=1e-5 for FP32 patch-linear vs patch-convolution accumulation roundoff. No model/kernel change."
+}
