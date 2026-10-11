@@ -1,0 +1,14 @@
+/media/data/data/lt/dp-adam-correlated/exp11/data.py:14: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  raw = pickle.load(f, encoding='bytes')
+sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+{"step": 10, "epoch": 1, "step_seconds": 2.1744516249746084, "noise_marginal_std_avg": 0.03250730425820358}
+{"step": 20, "epoch": 1, "step_seconds": 2.1956539880484343, "noise_marginal_std_avg": 0.03250730425820358}
+{"step": 30, "epoch": 1, "step_seconds": 2.192049028351903, "noise_marginal_std_avg": 0.03250730425820358}
+{"step": 40, "epoch": 1, "step_seconds": 2.191665882244706, "noise_marginal_std_avg": 0.03250730425820358}
+{"epoch": 1, "step": 45, "epsilon": 3.123292516214856, "accuracy": 0.2798, "validation_loss": 2.8130208251953124, "validation_examples": 5000}
+{"step": 50, "epoch": 2, "step_seconds": 2.1868012621998787, "noise_marginal_std_avg": 0.03250730425820358}
+{"step": 60, "epoch": 2, "step_seconds": 2.190424796193838, "noise_marginal_std_avg": 0.03250730425820358}
+{"step": 70, "epoch": 2, "step_seconds": 2.1797073911875486, "noise_marginal_std_avg": 0.03250730425820358}
+{"step": 80, "epoch": 2, "step_seconds": 2.182888802140951, "noise_marginal_std_avg": 0.03250730425820358}
+{"step": 90, "epoch": 2, "step_seconds": 2.190570892766118, "noise_marginal_std_avg": 0.03250730425820358}
+{"epoch": 2, "step": 90, "epsilon": 4.650921021133024, "accuracy": 0.278, "validation_loss": 2.8421194091796873, "validation_examples": 5000}

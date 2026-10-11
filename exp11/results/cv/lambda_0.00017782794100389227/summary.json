@@ -1,0 +1,229 @@
+{
+  "lambda_value": 0.00017782794100389227,
+  "seed": 20261101,
+  "status": "completed",
+  "smoke": false,
+  "completed_epochs": 5,
+  "optimizer_steps": 225,
+  "noise_draws": 225,
+  "physical_batches": 900,
+  "planned_total_steps": 225,
+  "finite": true,
+  "physical_gpu": 2,
+  "initialization_sha256": "565ec9ab00337e01ae99fc8a6a12cf8fde5af0d956297b4605bf477c0e3ba8ac",
+  "classifier_initialization_sha256": "a6e53920e91095e2f1836834718aeaefd5e459028ace88ae4e7e7718ed8fa7e5",
+  "train_order_sha256": "102bc81790c03c73538c5e2f2668de6b868cd3538ce47711d83d1026dc127154",
+  "rng_trace": [
+    "402ce21836014b897adbb8063f77bb47bde4d7179285091f626b5195fe996fd4",
+    "8251b33355f51138838ecf43784474d8658340ce85d2aa2b009c46ad19345a14",
+    "677568089ef047123993272099b3a0e2e851652c4555e6b6b0864f49d78dd2ff",
+    "21bf2bff5bd399f702551ffeeb0baa360eae0bf34754e3f317e496489da81e11",
+    "94c9d623701f20d2d8a30eca063d90bbb2ecc0d5b4474209da05e7e0dad99d99"
+  ],
+  "strategy_sha256": "47da2be2b540a307b355a5af81343b3d85538ec7d38a0561d3dbfc21fae32748",
+  "coefficients": [
+    1.0,
+    -0.44504805640563794,
+    -0.17111906384095132,
+    -0.258775020360874
+  ],
+  "calibration": {
+    "target_mu": 1.6660305978457184,
+    "sensitivity": 3.81261531314173,
+    "innovation_std_sum": 54.92262124940581,
+    "adjacency": "add_remove_zero_out",
+    "k": 5,
+    "b_participation": 45,
+    "sampling_amplification": false,
+    "verified_full_epsilon": 8.000000000000005,
+    "delta": 1e-05,
+    "target_epsilon": 8.0
+  },
+  "actual_epsilon": 8.000000000000005,
+  "epochs": [
+    {
+      "epoch": 1,
+      "step": 45,
+      "epsilon": 3.0351785118310786,
+      "accuracy": 0.4524,
+      "validation_loss": 2.1363258056640624,
+      "validation_examples": 5000
+    },
+    {
+      "epoch": 2,
+      "step": 90,
+      "epsilon": 4.5986478224289735,
+      "accuracy": 0.6438,
+      "validation_loss": 1.300792498779297,
+      "validation_examples": 5000
+    },
+    {
+      "epoch": 3,
+      "step": 135,
+      "epsilon": 5.867245995839962,
+      "accuracy": 0.7084,
+      "validation_loss": 1.0180854583740235,
+      "validation_examples": 5000
+    },
+    {
+      "epoch": 4,
+      "step": 180,
+      "epsilon": 6.982562237918528,
+      "accuracy": 0.7432,
+      "validation_loss": 0.8781219573974609,
+      "validation_examples": 5000
+    },
+    {
+      "epoch": 5,
+      "step": 225,
+      "epsilon": 8.000000000000005,
+      "accuracy": 0.7642,
+      "validation_loss": 0.8129787689208985,
+      "validation_examples": 5000
+    }
+  ],
+  "matrix_optimization": {
+    "horizon": 225,
+    "lambda_value": 0.00017782794100389227,
+    "J1": 6848.924270911302,
+    "J2_variance": 8.309275629908045e-07,
+    "J2_bias_sq": 1.4990266613242382e-05,
+    "J2_mse": 1.5821194176233188e-05,
+    "sensitivity": 3.81261531314173,
+    "sigma_avg": 0.054922621249405806,
+    "C_clip": 24.0,
+    "normalized_J1": 0.11010075007909767,
+    "normalized_J2_variance": 0.7327449690241603,
+    "normalized_J2_bias_sq": 13.219013226193521,
+    "normalized_J2_mse": 13.951758195217682,
+    "iid": {
+      "J1": 62205.97285659684,
+      "J2_variance": 5.739606531608261e-08,
+      "J2_bias_sq": 1.0765967945699426e-06,
+      "J2_mse": 1.1339928598860252e-06,
+      "sensitivity": 2.23606797749979,
+      "sigma_avg": 0.032211672180203633,
+      "C_clip": 24.0
+    },
+    "normalized_objective": 0.11258176251233681,
+    "coefficients": [
+      1.0,
+      -0.44504805640563794,
+      -0.17111906384095132,
+      -0.258775020360874
+    ],
+    "d0_fixed": 1.0,
+    "optimizer": "Exp9 Nelder-Mead; BISR, IID, available neighboring lambda starts",
+    "optimality": "Numerical local optimum; no global optimality claim",
+    "starts": [
+      {
+        "name": "Exp9 BISR",
+        "coefficients": [
+          1.0,
+          -0.95,
+          -0.0012500000000000844,
+          -0.001187499999999897
+        ],
+        "initial_objective": 0.2601814414148813,
+        "final_objective": 0.1125817625123369,
+        "iterations": 289,
+        "converged": true,
+        "message": "Optimization terminated successfully."
+      },
+      {
+        "name": "IID",
+        "coefficients": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "initial_objective": 1.0001778279410038,
+        "final_objective": 0.1125817625123369,
+        "iterations": 238,
+        "converged": true,
+        "message": "Optimization terminated successfully."
+      },
+      {
+        "name": "neighbor lambda=0.0001",
+        "coefficients": [
+          1.0,
+          -0.47362612435468365,
+          -0.14720196632350746,
+          -0.2568663644220728
+        ],
+        "initial_objective": 0.112638742595617,
+        "final_objective": 0.1125817625123369,
+        "iterations": 125,
+        "converged": true,
+        "message": "Optimization terminated successfully."
+      },
+      {
+        "name": "neighbor lambda=1",
+        "coefficients": [
+          1.0,
+          -0.10094204941531473,
+          -0.10631465373571725,
+          -0.11205996809210349
+        ],
+        "initial_objective": 0.513891503170977,
+        "final_objective": 0.11258176251233681,
+        "iterations": 160,
+        "converged": true,
+        "message": "Optimization terminated successfully."
+      }
+    ],
+    "coefficients_sha256": "0aa97ac1dfb9333a900114495d80ce5160ab059d779710cbd6dd488577a1541e",
+    "strategy_sha256": "47da2be2b540a307b355a5af81343b3d85538ec7d38a0561d3dbfc21fae32748",
+    "workload_sha256": "5fe50ff5b3bed4c9648c6b1b82eed290012964a103c1e46ad51717db901f719d"
+  },
+  "official_evaluation_used": false,
+  "seconds": 583.1496698837727,
+  "train_seconds": 484.3112203888595,
+  "logical_step_seconds": 2.1524943128393756,
+  "peak_allocated_bytes": 8398219776,
+  "peak_reserved_bytes": 8808038400,
+  "device": "NVIDIA GeForce RTX 3080 Ti",
+  "code_sha256": {
+    "__init__.py": "fd61db2341546a71d31565c52ec7f5cfc7dceed8bd856175f73c1816b7f29808",
+    "bandinvmf.py": "412d482324a19d322cb7a136b00a56e281058828c948019fc1a96e219929ddba",
+    "clipping.py": "60990854ffd19f4c8419610b776d2e05889a0d9cebd032e4455833fd0b58a63b",
+    "config.py": "7803d49410fed40bf804d9f0a1dc656a760191a18b6114923803145c0ed88453",
+    "cv_model.py": "de7b23603dc94b1f5b6000a85d8f8b4485a5a81b1e9fcfdabf96daa21cf4d38c",
+    "data.py": "9c06298e885b8b85819b48f0c79390ec04fb7f3b7b49a8c10a79c0e932b87844",
+    "matrices.py": "1eceb2b3139c182143194c6fc061a274a24d0515ad936c2ad6932ccdd05f3639",
+    "noise.py": "de6241eaba3ca673175c9fd83a573caf039cabbbc7b28e0f2ae79a27f7be0f8b",
+    "privacy.py": "6e37e95ccb496245174249f30f9c3237fb809b30a031a5092e462debf2d9ac5a",
+    "report.py": "4eed71dc0dab6ac343815f6580c2910b2317050098be3dfb20a81eb3a7b74a6f",
+    "run.py": "a385e3b68273878b943f6b55e64c1ce0bcc6d28ee3a6647732a03f9f634c3187",
+    "tests/test_math.py": "92a07bfd1c700d23eb5604ccd9fafd20701e326d184bf730764617ea78b49e0c",
+    "train.py": "eacbc77d17acfc8044954557860482ec8748fc070bf4cab8bb9b3f08f0a965d0"
+  },
+  "assets_manifest_sha256": "e0c513600cf40425e338d76d2b2a1f190359817c2a533b4cf4c035a3db3a292b",
+  "pretrained": {
+    "mean": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "std": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "crop_pct": 0.9,
+    "interpolation": "bicubic",
+    "hf_hub_id": "timm/vit_tiny_patch16_224.augreg_in21k_ft_in1k",
+    "checkpoint_path": "cache/huggingface/hub/models--timm--vit_tiny_patch16_224.augreg_in21k_ft_in1k/snapshots/7d3afdd0cf93ad84d986eb2d6bcc5812ebd0b106/model.safetensors",
+    "checkpoint_sha256": "fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed"
+  },
+  "accuracy": 0.7642,
+  "validation_loss": 0.8129787689208985,
+  "file_sha256": {
+    "config.json": "f489b1bf05155b00802b69b399cd0c4ffbc0289c5ebda0456fc3baf189e30160",
+    "matrices.npz": "f04578915c788fe727fd3e35a0f604eb3c52b059de6237a689b40b64ada1eb09",
+    "train_order.npy": "102bc81790c03c73538c5e2f2668de6b868cd3538ce47711d83d1026dc127154",
+    "metrics.csv": "861d423ddf69ac566e6100f121c5fd21c88f1208e0918d95390421a682e11c8a",
+    "steps.csv": "1ad886f8ec32c32047b8ae74d4abbd8be1cb904c36f4e64bea09621334f9ed42"
+  }
+}

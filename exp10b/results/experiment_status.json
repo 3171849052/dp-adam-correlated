@@ -1,0 +1,29 @@
+{
+  "stage": "stage4",
+  "started_at_unix": 1791690468.5675848,
+  "updated_at_unix": 1791705538.9197176,
+  "counts": {
+    "stage1": 36,
+    "stage2": 84,
+    "stage4": 40,
+    "total": 160
+  },
+  "status": "failed",
+  "completed_full_trainings": 120,
+  "winners": {
+    "cv": {
+      "module": 0.1,
+      "lr": 0.003,
+      "C": 30.0,
+      "mean_internal_accuracy": 0.7635599999999999
+    },
+    "nlp": {
+      "module": 1.0,
+      "lr": 0.005,
+      "C": 1.0,
+      "mean_internal_accuracy": 0.8316320807627594
+    }
+  },
+  "error": "",
+  "traceback": "Traceback (most recent call last):\n  File \"/media/data/data/lt/dp-adam-correlated/exp10b/run.py\", line 47, in execute\n    audit_pairing(final);audit=full_audit()\n                               ^^^^^^^^^^^^\n  File \"/media/data/data/lt/dp-adam-correlated/exp10b/audit.py\", line 130, in full_audit\n    assert result['historical_files_unchanged']\n           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "seed": 20261111,
+    "horizon": 250,
+    "reference": "exp9/results/final/cv/reference/summary.json",
+    "reference_summary_sha256": "9a910591ba73acd0fd1dd8ee14445e477fd8710efb0ad214e71b649487d313eb",
+    "paired_checks": {
+      "initialization_sha256": true,
+      "classifier_initialization_sha256": true,
+      "train_order_sha256": true,
+      "rng_trace": true,
+      "strategy_sha256": true,
+      "coefficients": true
+    },
+    "calibration_equal": true,
+    "noise_protocol_equal": true,
+    "noise_evidence": "seed+1, parameter shapes/order, exact coefficients/sigma; independent CPU/GPU source-equivalence tests",
+    "final_model_tensors_exact": false,
+    "final_model_max_abs_difference": 0.09999990463256836,
+    "accuracy_difference": 0.0,
+    "validation_loss_difference": 0.0,
+    "status": "difference_recorded"
+  }
+]

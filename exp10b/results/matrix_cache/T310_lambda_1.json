@@ -1,0 +1,62 @@
+{
+  "horizon": 310,
+  "lambda_value": 1.0,
+  "C_clip_objective": 1.0,
+  "J1": 8077.7645481726,
+  "J2": 9.859739820031095e-13,
+  "sensitivity": 3.308391226385612,
+  "sigma_avg_C1": 0.001985792596284587,
+  "J2_diag": 8.541638241613626e-13,
+  "J2_cross": 1.3181015784174668e-13,
+  "R_corr": 1.1543148446624523,
+  "covariance_diagonal_mean": 4.9050503708174546e-06,
+  "covariance_lag1_mean": -3.176554914151114e-07,
+  "baseline": {
+    "J1": 7305.738503395133,
+    "J2": 3.2850205608837218e-12,
+    "sensitivity": 4.18402302431354,
+    "sigma_avg_C1": 0.0025113722579427674,
+    "J2_diag": 2.5851456706934805e-12,
+    "J2_cross": 6.998748901902415e-13,
+    "R_corr": 1.2707293821483165,
+    "covariance_diagonal_mean": 8.591889723362483e-06,
+    "covariance_lag1_mean": -2.8121105378396923e-06
+  },
+  "normalized_objective": 1.4058163307111808,
+  "optimizer": "Exp9 Nelder-Mead, two fixed starts",
+  "iterations": 144,
+  "converged": true,
+  "base_coefficients": [
+    1.0,
+    -0.50922865903301,
+    -0.07727236688161641,
+    -0.3143675658601789
+  ],
+  "base_optimization": {
+    "objective": "fixed_participation_sensitivity_squared * mean_full_workload_error",
+    "optimized_objective": 7305.738503395133,
+    "initial_objective": 9347.213531148223,
+    "full_workload_shape": [
+      310,
+      310
+    ],
+    "optimizer": "Nelder-Mead, two fixed starts",
+    "iterations": 246,
+    "converged": true,
+    "d0_fixed": 1.0
+  },
+  "J1_ratio": 1.105673922549882,
+  "J2_ratio": 0.3001424081613258,
+  "exp9_reference": {
+    "path": "exp9/results/final/nlp/066a0a509e4d676ebb23/matrices.npz",
+    "sha256": "a9f17ef90a27049b6008d9ea33f5cb4b6164b39fc7db901a069b98ca9ad3725c",
+    "summary": "exp9/results/final/nlp/066a0a509e4d676ebb23/summary.json",
+    "summary_sha256": "9e6a46a56aa3bcd9316835c0534376b729c3674f38310673024aef4f0c5025e9"
+  },
+  "coefficients_sha256": "ea5a31e751d02b46e625c77682cf49769a117a2d87163a81c50fbf67e266e40f",
+  "strategy_sha256": "64ec15a1ab1e965c043399bcb5d0f188d4d78bb310b0af90b81b84b17fa9e9fd",
+  "workload_sha256": "33a2029532b7d93a1b9ddb0e22c084af5c81bafdbc24613b029a3d979ed81af2",
+  "inverse_sha256": "bc701dfe8da3f6bb86539c701a0771ec4628c3af3f92a1d0947cad1047dc0768",
+  "covariance_C1_sha256": "bcd7faff2c011ad47b2e8319dbfbd2cb26efa41491acca49018135ec11d40124",
+  "marginal_variance_C1_sha256": "5dea5a900b5b90076ac19d89afc279367a0e0b24693dcff674ad0c82e48b8ae3"
+}

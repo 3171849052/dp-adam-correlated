@@ -1,0 +1,62 @@
+{
+  "horizon": 250,
+  "lambda_value": 0.01,
+  "C_clip_objective": 1.0,
+  "J1": 6978.9479070682255,
+  "J2": 2.861686279753331e-12,
+  "sensitivity": 3.9706638989425618,
+  "sigma_avg_C1": 0.002383307908076165,
+  "J2_diag": 2.373148166241675e-12,
+  "J2_cross": 4.885381135116561e-13,
+  "R_corr": 1.2058607719741947,
+  "covariance_diagonal_mean": 7.4852249633418675e-06,
+  "covariance_lag1_mean": -2.1232495227211894e-06,
+  "baseline": {
+    "J1": 6973.708848664393,
+    "J2": 3.5145579475124146e-12,
+    "sensitivity": 4.065608121489227,
+    "sigma_avg_C1": 0.0024402961906860006,
+    "J2_diag": 2.7685572638616985e-12,
+    "J2_cross": 7.460006836507158e-13,
+    "R_corr": 1.2694546699063625,
+    "covariance_diagonal_mean": 8.127067573983935e-06,
+    "covariance_lag1_mean": -2.7910689008253723e-06
+  },
+  "normalized_objective": 1.0088936375426487,
+  "optimizer": "Exp9 Nelder-Mead, two fixed starts",
+  "iterations": 274,
+  "converged": true,
+  "base_coefficients": [
+    1.0,
+    -0.53161943769869,
+    -0.0779998119461293,
+    -0.2795535556950146
+  ],
+  "base_optimization": {
+    "objective": "fixed_participation_sensitivity_squared * mean_full_workload_error",
+    "optimized_objective": 6973.708848664393,
+    "initial_objective": 9523.045873689221,
+    "full_workload_shape": [
+      250,
+      250
+    ],
+    "optimizer": "Nelder-Mead, two fixed starts",
+    "iterations": 235,
+    "converged": true,
+    "d0_fixed": 1.0
+  },
+  "J1_ratio": 1.0007512585508693,
+  "J2_ratio": 0.8142378991869568,
+  "exp9_reference": {
+    "path": "exp9/results/final/cv/1c9dfd58a8210743e8cb/matrices.npz",
+    "sha256": "09432a23d6fddb86b0b721a32bb0067a9a922ef97450af345beffe34699fd190",
+    "summary": "exp9/results/final/cv/1c9dfd58a8210743e8cb/summary.json",
+    "summary_sha256": "8f0adcc1daba5f8e2b616bdb0aded3cdead41a50a15d696bf01e4edc36ce9b57"
+  },
+  "coefficients_sha256": "cb7b599d222f62d846e2cd90caeab61ce2e4e4057ae7981354f16a0932ec05c6",
+  "strategy_sha256": "1577f3413005392a690f23c59415949be9a5bf22e78f118a81de4241862c9e77",
+  "workload_sha256": "5789d76ad33c5d83b8a7d12d70472504b7d48545a405aa6fdb1e72bce392b229",
+  "inverse_sha256": "559bdd1e376a207c681b5f802f640b88aa693aaea0c3db569cbee051e373c14a",
+  "covariance_C1_sha256": "18d8dd3f4024200d5b3b33fb102868bcf6b2e276f8b9dde48e959d432b7bb1e5",
+  "marginal_variance_C1_sha256": "d56f0f509bb3374bf7802e43b9c31fd74739775e6d506bed908520663f85b5a5"
+}

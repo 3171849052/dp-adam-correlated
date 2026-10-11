@@ -1,0 +1,62 @@
+{
+  "horizon": 250,
+  "lambda_value": 0.03,
+  "C_clip_objective": 1.0,
+  "J1": 6995.576604284708,
+  "J2": 2.406674114526714e-12,
+  "sensitivity": 3.8710543411820875,
+  "sigma_avg_C1": 0.0023235193556394476,
+  "J2_diag": 2.0580193054275833e-12,
+  "J2_cross": 3.486548090991304e-13,
+  "R_corr": 1.169412798111091,
+  "covariance_diagonal_mean": 6.951859716991705e-06,
+  "covariance_lag1_mean": -1.614967857755163e-06,
+  "baseline": {
+    "J1": 6973.708848664393,
+    "J2": 3.5145579475124146e-12,
+    "sensitivity": 4.065608121489227,
+    "sigma_avg_C1": 0.0024402961906860006,
+    "J2_diag": 2.7685572638616985e-12,
+    "J2_cross": 7.460006836507158e-13,
+    "R_corr": 1.2694546699063625,
+    "covariance_diagonal_mean": 8.127067573983935e-06,
+    "covariance_lag1_mean": -2.7910689008253723e-06
+  },
+  "normalized_objective": 1.0236789302111589,
+  "optimizer": "Exp9 Nelder-Mead, two fixed starts",
+  "iterations": 144,
+  "converged": true,
+  "base_coefficients": [
+    1.0,
+    -0.53161943769869,
+    -0.0779998119461293,
+    -0.2795535556950146
+  ],
+  "base_optimization": {
+    "objective": "fixed_participation_sensitivity_squared * mean_full_workload_error",
+    "optimized_objective": 6973.708848664393,
+    "initial_objective": 9523.045873689221,
+    "full_workload_shape": [
+      250,
+      250
+    ],
+    "optimizer": "Nelder-Mead, two fixed starts",
+    "iterations": 235,
+    "converged": true,
+    "d0_fixed": 1.0
+  },
+  "J1_ratio": 1.0031357425574918,
+  "J2_ratio": 0.6847729217923821,
+  "exp9_reference": {
+    "path": "exp9/results/final/cv/1c9dfd58a8210743e8cb/matrices.npz",
+    "sha256": "09432a23d6fddb86b0b721a32bb0067a9a922ef97450af345beffe34699fd190",
+    "summary": "exp9/results/final/cv/1c9dfd58a8210743e8cb/summary.json",
+    "summary_sha256": "8f0adcc1daba5f8e2b616bdb0aded3cdead41a50a15d696bf01e4edc36ce9b57"
+  },
+  "coefficients_sha256": "164d3372d09bf98370902ac1d06dd489c0ad48106d75bc812146fa0ba52f2e5d",
+  "strategy_sha256": "1c33b072d44215d97182087cbb7874c560032e8e9da1281b1d983c437612e975",
+  "workload_sha256": "5789d76ad33c5d83b8a7d12d70472504b7d48545a405aa6fdb1e72bce392b229",
+  "inverse_sha256": "080f2555f5ba1a7fe82633716a4679711a52bb4efd8dd7ba2fe11d8d4c700508",
+  "covariance_C1_sha256": "ff675c1a960763817faed50d303161f686c9c866a81aef88599dfcbb9251aed4",
+  "marginal_variance_C1_sha256": "7ddd46ad28e5632b6c9d1269546bdee9959ced3a96ec4d38bbde1dda90d0a41b"
+}

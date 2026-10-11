@@ -1,0 +1,22 @@
+{
+  "pid": 3877184,
+  "command": [
+    "conda",
+    "run",
+    "--no-capture-output",
+    "-n",
+    "curve",
+    "python",
+    "-B",
+    "-m",
+    "exp10b.run",
+    "--gpus",
+    "1",
+    "2",
+    "3"
+  ],
+  "cwd": "/media/data/data/lt/dp-adam-correlated",
+  "log": "exp10b/results/full_run.log",
+  "started_at_unix": 1791690450.5141644,
+  "detached": true
+}

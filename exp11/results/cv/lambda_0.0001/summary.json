@@ -1,0 +1,229 @@
+{
+  "lambda_value": 0.0001,
+  "seed": 20261101,
+  "status": "completed",
+  "smoke": false,
+  "completed_epochs": 5,
+  "optimizer_steps": 225,
+  "noise_draws": 225,
+  "physical_batches": 900,
+  "planned_total_steps": 225,
+  "finite": true,
+  "physical_gpu": 1,
+  "initialization_sha256": "565ec9ab00337e01ae99fc8a6a12cf8fde5af0d956297b4605bf477c0e3ba8ac",
+  "classifier_initialization_sha256": "a6e53920e91095e2f1836834718aeaefd5e459028ace88ae4e7e7718ed8fa7e5",
+  "train_order_sha256": "102bc81790c03c73538c5e2f2668de6b868cd3538ce47711d83d1026dc127154",
+  "rng_trace": [
+    "402ce21836014b897adbb8063f77bb47bde4d7179285091f626b5195fe996fd4",
+    "8251b33355f51138838ecf43784474d8658340ce85d2aa2b009c46ad19345a14",
+    "677568089ef047123993272099b3a0e2e851652c4555e6b6b0864f49d78dd2ff",
+    "21bf2bff5bd399f702551ffeeb0baa360eae0bf34754e3f317e496489da81e11",
+    "94c9d623701f20d2d8a30eca063d90bbb2ecc0d5b4474209da05e7e0dad99d99"
+  ],
+  "strategy_sha256": "584da43eed8c21d439f974fa1db709e4e500ed92e01af5e38ec6805eda8a27f6",
+  "coefficients": [
+    1.0,
+    -0.47362612435468365,
+    -0.14720196632350746,
+    -0.2568663644220728
+  ],
+  "calibration": {
+    "target_mu": 1.6660305978457184,
+    "sensitivity": 3.8753647612789948,
+    "innovation_std_sum": 55.826558282280054,
+    "adjacency": "add_remove_zero_out",
+    "k": 5,
+    "b_participation": 45,
+    "sampling_amplification": false,
+    "verified_full_epsilon": 8.000000000000005,
+    "delta": 1e-05,
+    "target_epsilon": 8.0
+  },
+  "actual_epsilon": 8.000000000000005,
+  "epochs": [
+    {
+      "epoch": 1,
+      "step": 45,
+      "epsilon": 3.032994071049151,
+      "accuracy": 0.4484,
+      "validation_loss": 2.162202990722656,
+      "validation_examples": 5000
+    },
+    {
+      "epoch": 2,
+      "step": 90,
+      "epsilon": 4.597320115586249,
+      "accuracy": 0.6418,
+      "validation_loss": 1.3138025756835938,
+      "validation_examples": 5000
+    },
+    {
+      "epoch": 3,
+      "step": 135,
+      "epsilon": 5.866485391519303,
+      "accuracy": 0.7052,
+      "validation_loss": 1.0258053253173829,
+      "validation_examples": 5000
+    },
+    {
+      "epoch": 4,
+      "step": 180,
+      "epsilon": 6.982220136422037,
+      "accuracy": 0.7418,
+      "validation_loss": 0.8827340881347656,
+      "validation_examples": 5000
+    },
+    {
+      "epoch": 5,
+      "step": 225,
+      "epsilon": 8.000000000000005,
+      "accuracy": 0.7646,
+      "validation_loss": 0.8152025390625,
+      "validation_examples": 5000
+    }
+  ],
+  "matrix_optimization": {
+    "horizon": 225,
+    "lambda_value": 0.0001,
+    "J1": 6837.4280792786585,
+    "J2_variance": 9.239841514440452e-07,
+    "J2_bias_sq": 1.643907408197055e-05,
+    "J2_mse": 1.7363058233414594e-05,
+    "sensitivity": 3.8753647612789948,
+    "sigma_avg": 0.05582655828228005,
+    "C_clip": 24.0,
+    "normalized_J1": 0.10991594159359828,
+    "normalized_J2_variance": 0.8148059693576136,
+    "normalized_J2_bias_sq": 14.496629267685865,
+    "normalized_J2_mse": 15.31143523704348,
+    "iid": {
+      "J1": 62205.97285659684,
+      "J2_variance": 5.739606531608261e-08,
+      "J2_bias_sq": 1.0765967945699426e-06,
+      "J2_mse": 1.1339928598860252e-06,
+      "sensitivity": 2.23606797749979,
+      "sigma_avg": 0.032211672180203633,
+      "C_clip": 24.0
+    },
+    "normalized_objective": 0.11144708511730346,
+    "coefficients": [
+      1.0,
+      -0.47362612435468365,
+      -0.14720196632350746,
+      -0.2568663644220728
+    ],
+    "d0_fixed": 1.0,
+    "optimizer": "Exp9 Nelder-Mead; BISR, IID, available neighboring lambda starts",
+    "optimality": "Numerical local optimum; no global optimality claim",
+    "starts": [
+      {
+        "name": "Exp9 BISR",
+        "coefficients": [
+          1.0,
+          -0.95,
+          -0.0012500000000000844,
+          -0.001187499999999897
+        ],
+        "initial_objective": 0.21462869657198408,
+        "final_objective": 0.11144708511730346,
+        "iterations": 282,
+        "converged": true,
+        "message": "Optimization terminated successfully."
+      },
+      {
+        "name": "IID",
+        "coefficients": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "initial_objective": 1.0001,
+        "final_objective": 0.11144708511730352,
+        "iterations": 283,
+        "converged": true,
+        "message": "Optimization terminated successfully."
+      },
+      {
+        "name": "neighbor lambda=0",
+        "coefficients": [
+          1.0,
+          -0.542162222060744,
+          -0.07912562584161631,
+          -0.26164327427820705
+        ],
+        "initial_objective": 0.11167658169372105,
+        "final_objective": 0.11144708511730349,
+        "iterations": 141,
+        "converged": true,
+        "message": "Optimization terminated successfully."
+      },
+      {
+        "name": "neighbor lambda=1",
+        "coefficients": [
+          1.0,
+          -0.10094204941531473,
+          -0.10631465373571725,
+          -0.11205996809210349
+        ],
+        "initial_objective": 0.5138008800643512,
+        "final_objective": 0.11144708511730347,
+        "iterations": 149,
+        "converged": true,
+        "message": "Optimization terminated successfully."
+      }
+    ],
+    "coefficients_sha256": "033fb8a5d0916480453741277bb77993189a768a094cd138c72c3b681ff76632",
+    "strategy_sha256": "584da43eed8c21d439f974fa1db709e4e500ed92e01af5e38ec6805eda8a27f6",
+    "workload_sha256": "5fe50ff5b3bed4c9648c6b1b82eed290012964a103c1e46ad51717db901f719d"
+  },
+  "official_evaluation_used": false,
+  "seconds": 580.4646429959685,
+  "train_seconds": 480.1587009653449,
+  "logical_step_seconds": 2.1340386709570884,
+  "peak_allocated_bytes": 8398219776,
+  "peak_reserved_bytes": 8808038400,
+  "device": "NVIDIA GeForce RTX 3080 Ti",
+  "code_sha256": {
+    "__init__.py": "fd61db2341546a71d31565c52ec7f5cfc7dceed8bd856175f73c1816b7f29808",
+    "bandinvmf.py": "412d482324a19d322cb7a136b00a56e281058828c948019fc1a96e219929ddba",
+    "clipping.py": "60990854ffd19f4c8419610b776d2e05889a0d9cebd032e4455833fd0b58a63b",
+    "config.py": "7803d49410fed40bf804d9f0a1dc656a760191a18b6114923803145c0ed88453",
+    "cv_model.py": "de7b23603dc94b1f5b6000a85d8f8b4485a5a81b1e9fcfdabf96daa21cf4d38c",
+    "data.py": "9c06298e885b8b85819b48f0c79390ec04fb7f3b7b49a8c10a79c0e932b87844",
+    "matrices.py": "1eceb2b3139c182143194c6fc061a274a24d0515ad936c2ad6932ccdd05f3639",
+    "noise.py": "de6241eaba3ca673175c9fd83a573caf039cabbbc7b28e0f2ae79a27f7be0f8b",
+    "privacy.py": "6e37e95ccb496245174249f30f9c3237fb809b30a031a5092e462debf2d9ac5a",
+    "report.py": "4eed71dc0dab6ac343815f6580c2910b2317050098be3dfb20a81eb3a7b74a6f",
+    "run.py": "a385e3b68273878b943f6b55e64c1ce0bcc6d28ee3a6647732a03f9f634c3187",
+    "tests/test_math.py": "92a07bfd1c700d23eb5604ccd9fafd20701e326d184bf730764617ea78b49e0c",
+    "train.py": "eacbc77d17acfc8044954557860482ec8748fc070bf4cab8bb9b3f08f0a965d0"
+  },
+  "assets_manifest_sha256": "e0c513600cf40425e338d76d2b2a1f190359817c2a533b4cf4c035a3db3a292b",
+  "pretrained": {
+    "mean": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "std": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "crop_pct": 0.9,
+    "interpolation": "bicubic",
+    "hf_hub_id": "timm/vit_tiny_patch16_224.augreg_in21k_ft_in1k",
+    "checkpoint_path": "cache/huggingface/hub/models--timm--vit_tiny_patch16_224.augreg_in21k_ft_in1k/snapshots/7d3afdd0cf93ad84d986eb2d6bcc5812ebd0b106/model.safetensors",
+    "checkpoint_sha256": "fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed"
+  },
+  "accuracy": 0.7646,
+  "validation_loss": 0.8152025390625,
+  "file_sha256": {
+    "config.json": "90c7e089dc30f47017aa6d791e01579936df92b740771a44a48529fb6342f130",
+    "matrices.npz": "c3d66141a23fba7177cc3b48fc2b74d512628d3f6e9b378ca5a4dd3083f07539",
+    "train_order.npy": "102bc81790c03c73538c5e2f2668de6b868cd3538ce47711d83d1026dc127154",
+    "metrics.csv": "71998c5c95a6d047d6f78e79ab88c9f2e8b1957ca25b25d1ef6562fd9578c10b",
+    "steps.csv": "3261e19be9e1ae3d0fe284906b4963f8ff252b3ebe64ff965c78669bcab6c86d"
+  }
+}

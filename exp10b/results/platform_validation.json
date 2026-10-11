@@ -1,0 +1,136 @@
+{
+  "status": "passed",
+  "full_experiments_started": false,
+  "code_sha256": {
+    "__init__.py": "ef412d6c2b8b8faaa7b1b7b970a8cdb96b762d1c850686ce9aaba1ecdeae5e69",
+    "audit.py": "5dea870a2a26f394a455b104c5336bea507db5712e2541aaa68d75d18ff466c7",
+    "bandinvmf.py": "9a71347b44d43c8943aea508ecad9d4a3ecd9aba1f56a895520e76d99a6b7f79",
+    "clipping.py": "d5155f7ce1256f28544740ae73fdb3b998f4982ec4f01df879678e6c9299df21",
+    "config.py": "77e968b72e906fd42d4e65455ad25eff0b92aecba872edab9f92cda7ed0e395d",
+    "cv_model.py": "de7b23603dc94b1f5b6000a85d8f8b4485a5a81b1e9fcfdabf96daa21cf4d38c",
+    "data.py": "d6eb35430624bad3b36a9f3033f731f904a8e86f2670beda12b3a0003e9c8747",
+    "frozen.py": "482fcd3316882d31ae2e8d507a16cc8bf9b5c287f93ce6dfe2eca865c9856cdf",
+    "launcher.py": "318c78443d465d51c01ab0e4a373a79f5b9ae44ef20c5987e4ed856b65e03a0e",
+    "matrices.py": "b6a0f3e887a2099f8bc22a8eeb6d0117dc07b30f0cf7c3af745e0a5d505a6e8f",
+    "nlp_model.py": "5d57911b49560935af84fab073fd6cebd68a3f9a20020221bdab348d6993df4c",
+    "noise.py": "ecd83d7745e0f8f0424ba7a677df73d650e1024343faf88cc0279f5e036bbecd",
+    "optim.py": "557863989a484d222a68af13e3d8f0cb42e3758d0bbc3131b32a59758bed2a42",
+    "privacy.py": "6e37e95ccb496245174249f30f9c3237fb809b30a031a5092e462debf2d9ac5a",
+    "protocol.py": "9ada200847f5c5c49538a1c750d41299d9268671635cf43d04a4d889bf27460e",
+    "report.py": "e8f0963d70eb76d4925c77efff59998befcbf3bd2bc05ca8fb3e0054af5fd7ba",
+    "run.py": "a48cde3431928add71abd4574b8b6e613b29fa35a06dec1cfa9a2140a3a718a7",
+    "stage0.py": "5994cea47c112e03887e222b5186a24a5b2349a5b29c21127138cef20a002226",
+    "tests/test_clipping.py": "07277dee6137a42f3365b8965e1a9dee8e7409e863a758d4f35750efa6ea9031",
+    "tests/test_cv.py": "dc401562606567d3ab856c6c1f96724991f3ec651b89097f79f0f9a038339595",
+    "tests/test_math.py": "a4485cef26627c9eae2a7a628958027e1c6ee2a34f86103f057bac2245ca461c",
+    "tests/test_report.py": "d3b97d92980574073b317b7506181c42e667ec93d99cccc6361fc9b38e51dd92",
+    "tests/test_workflow.py": "4feeaa0b6220a408ffd3617c89d4170710a6f733ea8ec4aa5a8ea4460a0a8216",
+    "train.py": "e415094d6f70aa7b4a619302a2e06b38ea38aa6c2ebae4605e5b097806f3757e",
+    "kernel_provenance.json": "af8e16ee6189f91e76132f74e15ada3a037c5a6f6c654a0a20f0d0d9ca614c76",
+    "exp9_matrix_references.json": "1f1438e14d6bc353fbac9c13b5ca9c8b4770697a050eb4f79ddf9c9279436e5b"
+  },
+  "evidence_sha256": {
+    "unit_tests.log": "0ffdd4e1b3be38607782764fab5c60a20c09317e2e89b6b41504058a80531345",
+    "tests.xml": "9ac9bb23ed671644ed6ab86d4b098f39b8c677074941dfd47e78e2aa964eb15b",
+    "smoke_summary.json": "7e041d640c106cee3dd44642f9f5e6599d24fc780114b1bc052c199b8931a7e8",
+    "assets_manifest.json": "432c7eadf1ac3eae7af7664de6b951b0fa66502f808e84b50090ea4abfd04818",
+    "cli_plan.json": "61af3157fe630d33c73b6f274e6051885f8d89c8d90e6e1ffe31df79d305e97f",
+    "full_plan.json": "61af3157fe630d33c73b6f274e6051885f8d89c8d90e6e1ffe31df79d305e97f",
+    "matrix_cache/T225_lambda_0.01.json": "eb192f11bc8dcaf7061db8f293e668a1889d2979707b335dad20124bc141dc04",
+    "matrix_cache/T225_lambda_0.01.npz": "6ba8b2713296677aab74ef878d60c5cf0293557b39744eff3c2151a11731bfe1",
+    "matrix_cache/T225_lambda_0.03.json": "6d12db78b63d4552eea4d8c02103cbffea6edaa1a3a13c7b757a96d8d1541368",
+    "matrix_cache/T225_lambda_0.03.npz": "468708f0a3d52e43072a47f3a8abb0a3ff20ed5b340332398786d37ff8026ae5",
+    "matrix_cache/T225_lambda_0.1.json": "1cadd7bd92570e3002179a7f33ef9db54a72693b7a8ee1f3c5c2e08a0bca8f85",
+    "matrix_cache/T225_lambda_0.1.npz": "e0e99d6c6ad1ab7e66f661366b0f0f07b6479eca0bc5fb247dab83cbc2210dc3",
+    "matrix_cache/T225_lambda_0.3.json": "1990ecd8349b47d1cd1da631cb4e1cac3be29060164a73be96a0e7443e116cd5",
+    "matrix_cache/T225_lambda_0.3.npz": "32ec4dc9533cac7087da8cd7977f2a1f2c234c0fbc51f871a76b60fa05e3ce9f",
+    "matrix_cache/T225_lambda_0.json": "02fc90d6663ce40b30430659103e21087000c6ccdabb657cfc77cfb4ea662f3e",
+    "matrix_cache/T225_lambda_0.npz": "5aaffeacc53e78befc5247afe6bfbe94bef8e3ab7bdac300f6ad93484e301f08",
+    "matrix_cache/T225_lambda_1.json": "deec887e6e5408dfc39312af9f50b9fac663b039ab7e843c0d3d2fc6ea653fcd",
+    "matrix_cache/T225_lambda_1.npz": "4990900b239d1d129707ce8ada58a007fbff7d996d925e8440aa0a000a729037",
+    "matrix_cache/T250_lambda_0.01.json": "bfd0c5beb8e4f3e775e37264ac3f865abdb5f578574df2c15733057d8f39949d",
+    "matrix_cache/T250_lambda_0.01.npz": "4392fda169e0f922a42b2ec18331069858e48724472cdc20fc93fe5caa24f52c",
+    "matrix_cache/T250_lambda_0.03.json": "75ceac11e7742e16735ee35c8183269fc0ab482d2afc174c613de6b9b59607ef",
+    "matrix_cache/T250_lambda_0.03.npz": "46fc4a8089e1b866d6b3b7c46a70603afcd98bc7eda82ee24611a97adfd68837",
+    "matrix_cache/T250_lambda_0.1.json": "825162b10ce623f76cc4cd5b9a5e1a1182eb0628b6d9ad005cb7136bd2108111",
+    "matrix_cache/T250_lambda_0.1.npz": "f93d6eb9559481c4329aaecd817e1f2d0abe17bca08f9a4cb68b8bfa53d8220d",
+    "matrix_cache/T250_lambda_0.3.json": "957edb37e5eb6cf8e06f84447588aeb214060984abdc29ec2046364cd1400fde",
+    "matrix_cache/T250_lambda_0.3.npz": "df78229b236bd6c9c55e595889c4204539479d1b925cb0bbf710305fbe94be18",
+    "matrix_cache/T250_lambda_0.json": "c9ea5e767a59c40aca7df9df56c1381337e196b08971e513137103fd3adf24f2",
+    "matrix_cache/T250_lambda_0.npz": "3a92d8e46097e36708129eeaf3107ef82d513c44d8f7e6c63344b071594c38d4",
+    "matrix_cache/T250_lambda_1.json": "392223b4ecbf9abd47f3950abc534b31b982d8e4ac2966cc52d897cb08e4efb2",
+    "matrix_cache/T250_lambda_1.npz": "1b5914af9893394662c74789f18a3dd6391dd43209e153ea5731a3ef79e07793",
+    "matrix_cache/T310_lambda_0.01.json": "0b9e4f88ce6189e5487ee7b1266dbdf5c9a6fc8fb5aeb6f4cf39c25f4cb4bf0e",
+    "matrix_cache/T310_lambda_0.01.npz": "06f2c76f33f99c291d6a87079e3c82e03bc420a12168ec79e813be72a2b71dd9",
+    "matrix_cache/T310_lambda_0.03.json": "8a7ddd7f4b807dd5fa3ed01c7eaf66f6e52fd06621ee6b4ea0553d092cc19897",
+    "matrix_cache/T310_lambda_0.03.npz": "126ed625e8f3c45989a4e07b5837244f6afd7de7a9e9414ecc860dc2a4507b01",
+    "matrix_cache/T310_lambda_0.1.json": "d370ab7650835aebfc2b943477248c44ded0b30a90b4829555167cd75143d51b",
+    "matrix_cache/T310_lambda_0.1.npz": "12578e87e6e1f6f58902c02ac5baad3bb4534c5947adb9d437737597c16c5cf3",
+    "matrix_cache/T310_lambda_0.3.json": "bbe3f21fe0642066feb906fc7dfeb54a9595fd662246117e36f44dd2ddc07b38",
+    "matrix_cache/T310_lambda_0.3.npz": "b847e1321635eb5f676539b154b12fdaa4e860ea2b62871ad0e73d064b5d03da",
+    "matrix_cache/T310_lambda_0.json": "9ffd384f33551d35623384654b64ac6e38286fa289f309bd387839957985eb98",
+    "matrix_cache/T310_lambda_0.npz": "8c9c20af135741f09d3bd1b50c66ca2a07c3cc206a93dd73d746513a22095591",
+    "matrix_cache/T310_lambda_1.json": "bf8e60fe932500a9e62491030256f36516e67d7039cb0511ef1ac4bbefd90903",
+    "matrix_cache/T310_lambda_1.npz": "8b5f81bcedf5ed5c338949164d1897cc6104cf5fd0d40b94d0f58aab662728b1"
+  },
+  "smoke_trials": 13,
+  "smoke_logical_steps_each": 3,
+  "smoke_horizons": [
+    225,
+    250,
+    310
+  ],
+  "gpus": [
+    1,
+    2,
+    3
+  ],
+  "nlp_per_gpu": 2,
+  "memory": {
+    "available_mib": {
+      "1": 10311,
+      "2": 10333,
+      "3": 10435
+    },
+    "single_reserved_peak_mib": {
+      "1": 3768.0,
+      "2": 3768.0,
+      "3": 3768.0
+    },
+    "safety_margin_mib": 512
+  },
+  "pairing": {
+    "status": "passed",
+    "groups": 8
+  },
+  "fifo": {
+    "status": "passed",
+    "gpu_starts": {
+      "1": 4,
+      "2": 5,
+      "3": 4
+    },
+    "peak_concurrency": {
+      "1": {
+        "cv": 1,
+        "nlp": 2
+      },
+      "2": {
+        "cv": 1,
+        "nlp": 2
+      },
+      "3": {
+        "cv": 1,
+        "nlp": 2
+      }
+    },
+    "events": 26
+  },
+  "historical_files_unchanged": true,
+  "planned_full_trials": {
+    "stage1": 36,
+    "stage2": 84,
+    "stage4": 40,
+    "total": 160
+  }
+}

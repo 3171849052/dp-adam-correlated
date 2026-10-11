@@ -1,0 +1,95 @@
+{
+  "horizon": 225,
+  "lambda_value": 0.31622776601683794,
+  "J1": 20736.334797261978,
+  "J2_variance": 8.71140121193215e-08,
+  "J2_bias_sq": 1.6041255999140875e-06,
+  "J2_mse": 1.691239612033409e-06,
+  "sensitivity": 2.380666687898247,
+  "sigma_avg": 0.03429468857501078,
+  "C_clip": 24.0,
+  "normalized_J1": 0.3333495779427059,
+  "normalized_J2_variance": 0.07682060020031971,
+  "normalized_J2_bias_sq": 1.414581746198397,
+  "normalized_J2_mse": 1.4914023463987167,
+  "iid": {
+    "J1": 62205.97285659684,
+    "J2_variance": 5.739606531608261e-08,
+    "J2_bias_sq": 1.0765967945699426e-06,
+    "J2_mse": 1.1339928598860252e-06,
+    "sensitivity": 2.23606797749979,
+    "sigma_avg": 0.032211672180203633,
+    "C_clip": 24.0
+  },
+  "normalized_objective": 0.8049724101766409,
+  "coefficients": [
+    1.0,
+    -0.1469411588994626,
+    -0.16358843322901423,
+    -0.18034404244416563
+  ],
+  "d0_fixed": 1.0,
+  "optimizer": "Exp9 Nelder-Mead; BISR, IID, available neighboring lambda starts",
+  "optimality": "Numerical local optimum; no global optimality claim",
+  "starts": [
+    {
+      "name": "Exp9 BISR",
+      "coefficients": [
+        1.0,
+        -0.95,
+        -0.0012500000000000844,
+        -0.001187499999999897
+      ],
+      "initial_objective": 185.24441719373843,
+      "final_objective": 0.8049724101766411,
+      "iterations": 218,
+      "converged": true,
+      "message": "Optimization terminated successfully."
+    },
+    {
+      "name": "IID",
+      "coefficients": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_objective": 1.316227766016838,
+      "final_objective": 0.804972410176641,
+      "iterations": 178,
+      "converged": true,
+      "message": "Optimization terminated successfully."
+    },
+    {
+      "name": "neighbor lambda=0.17782794100389229",
+      "coefficients": [
+        1.0,
+        -0.16439549536465653,
+        -0.18899050637363213,
+        -0.21345073369830148
+      ],
+      "initial_objective": 0.8265606936165231,
+      "final_objective": 0.8049724101766411,
+      "iterations": 96,
+      "converged": true,
+      "message": "Optimization terminated successfully."
+    },
+    {
+      "name": "neighbor lambda=1",
+      "coefficients": [
+        1.0,
+        -0.10094204941531473,
+        -0.10631465373571725,
+        -0.11205996809210349
+      ],
+      "initial_objective": 0.881901074899047,
+      "final_objective": 0.8049724101766409,
+      "iterations": 103,
+      "converged": true,
+      "message": "Optimization terminated successfully."
+    }
+  ],
+  "coefficients_sha256": "800d7256952514953ff2cced7b5e7013d97ee96e0eb69035cf1ee567b4c89ebf",
+  "strategy_sha256": "112267b37327554057f789386fa39a203955ee236bd72056623f55dcb32119bc",
+  "workload_sha256": "5fe50ff5b3bed4c9648c6b1b82eed290012964a103c1e46ad51717db901f719d"
+}

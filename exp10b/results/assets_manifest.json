@@ -1,0 +1,38 @@
+{
+  "cv_pretrained": "fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed",
+  "nlp_pretrained": {
+    "pytorch_model.bin": "dab2c2bddcfb48ea430ef63fd76d46d67d704487844d967256a50dd7d7fd0a66",
+    "config.json": "cf3179684f7c360dd6185962d480e7d426ceb8fe49f5db7b64bdc15dba0b8798",
+    "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+  },
+  "cifar_train": "735e79b04f092ca3d2e6d07f368c0a7d70d48c48d28865950cc24454cf45129b",
+  "sst2_train": "66a253e67968acfabcbe49dbe9da964b42ac1c851c40ab760e8c8942efdb3229",
+  "tokens_sha256": "8bc80358e62658803e15f0ddbfaa447d18b54974916a8afed8fc7f5d047ae56b",
+  "split_seed": 20261008,
+  "splits": {
+    "nlp": {
+      "file_sha256": "fe7597fa24b465bb5f28300ddc34cb76265b19e098f587b1c0b6bb288d127e6a",
+      "indices_sha256": {
+        "train": "fc9326db4c8882b78cf7a478c95c1550a842a33c5230369be16eb3f7ae3725f0",
+        "search_validation": "40ef9407b344ff83b3ba042bb1ad033086bc68727c6b3a96120855c46066d213"
+      },
+      "examples": {
+        "train": 62000,
+        "search_validation": 5349
+      }
+    },
+    "cv": {
+      "file_sha256": "205005831d63a9aa17091038faefc8e87c3cf38b5b99e24c8782c50b2614744e",
+      "indices_sha256": {
+        "train": "f33e2c888dee236de6860444931c2070e3b7f07ad46182367f0e15abea844eae",
+        "search_validation": "ad61b8152429b9c3b91543f3aac2c608c16ddd0fe9720adaec7c565f908d16e8"
+      },
+      "examples": {
+        "train": 45000,
+        "search_validation": 5000
+      }
+    }
+  },
+  "official_evaluation_loaded": false,
+  "offline": true
+}

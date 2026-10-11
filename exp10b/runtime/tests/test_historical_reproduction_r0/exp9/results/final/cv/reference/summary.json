@@ -1,0 +1,32 @@
+{
+  "status": "completed",
+  "method": "dp-adam-momentum-bias-bandinvmf",
+  "lr": 0.003,
+  "C": 30,
+  "seed": 20261111,
+  "planned_total_steps": 250,
+  "initialization_sha256": "init",
+  "classifier_initialization_sha256": "head",
+  "train_order_sha256": "order",
+  "rng_trace": [
+    "rng"
+  ],
+  "strategy_sha256": "matrix",
+  "coefficients": [
+    1.0,
+    -0.5,
+    -0.1,
+    -0.3
+  ],
+  "calibration": {
+    "target_mu": 1.0,
+    "sensitivity": 2.0,
+    "innovation_std_sum": 60.0
+  },
+  "accuracy": 0.7,
+  "epochs": [
+    {
+      "validation_loss": 0.5
+    }
+  ]
+}

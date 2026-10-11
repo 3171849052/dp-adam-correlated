@@ -1,0 +1,81 @@
+{
+  "horizon": 225,
+  "lambda_value": 31.622776601683793,
+  "J1": 59700.911965018946,
+  "J2_variance": 5.743724190711277e-08,
+  "J2_bias_sq": 1.0772645870174923e-06,
+  "J2_mse": 1.134701828924605e-06,
+  "sensitivity": 2.236246761598221,
+  "sigma_avg": 0.03221424765412824,
+  "C_clip": 24.0,
+  "normalized_J1": 0.9597295761718445,
+  "normalized_J2_variance": 0.05065044405384144,
+  "normalized_J2_bias_sq": 0.9499747530383618,
+  "normalized_J2_mse": 1.000625197092203,
+  "iid": {
+    "J1": 62205.97285659684,
+    "J2_variance": 5.739606531608261e-08,
+    "J2_bias_sq": 1.0765967945699426e-06,
+    "J2_mse": 1.1339928598860252e-06,
+    "sensitivity": 2.23606797749979,
+    "sigma_avg": 0.032211672180203633,
+    "C_clip": 24.0
+  },
+  "normalized_objective": 32.60227664583441,
+  "coefficients": [
+    1.0,
+    -0.007285686852908199,
+    -0.007240148459356575,
+    -0.00721557045856085
+  ],
+  "d0_fixed": 1.0,
+  "optimizer": "Exp9 Nelder-Mead; BISR, IID, available neighboring lambda starts",
+  "optimality": "Numerical local optimum; no global optimality claim",
+  "starts": [
+    {
+      "name": "Exp9 BISR",
+      "coefficients": [
+        1.0,
+        -0.95,
+        -0.0012500000000000844,
+        -0.001187499999999897
+      ],
+      "initial_objective": 18508.98795489721,
+      "final_objective": 32.60227664583443,
+      "iterations": 247,
+      "converged": true,
+      "message": "Optimization terminated successfully."
+    },
+    {
+      "name": "IID",
+      "coefficients": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initial_objective": 32.622776601683796,
+      "final_objective": 32.60227664583441,
+      "iterations": 119,
+      "converged": true,
+      "message": "Optimization terminated successfully."
+    },
+    {
+      "name": "neighbor lambda=17.782794100389228",
+      "coefficients": [
+        1.0,
+        -0.01254212880651917,
+        -0.012491878631202744,
+        -0.012480146118571187
+      ],
+      "initial_objective": 32.61321707009509,
+      "final_objective": 32.60227664583443,
+      "iterations": 107,
+      "converged": true,
+      "message": "Optimization terminated successfully."
+    }
+  ],
+  "coefficients_sha256": "4ce9957ad9e866a668aed212b940114f42683e4804f4ff6f2426d4da3afa6e0b",
+  "strategy_sha256": "88375a64dc7d5f4ee900cf1722ab5a56d92b9dc01fab81151e9e2034e5e52a44",
+  "workload_sha256": "5fe50ff5b3bed4c9648c6b1b82eed290012964a103c1e46ad51717db901f719d"
+}
