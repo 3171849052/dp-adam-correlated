@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "completed": 194,
+  "failures": [],
+  "pairing": {
+    "status": "passed",
+    "groups": 33
+  },
+  "fifo": {
+    "status": "passed",
+    "gpu_starts": {
+      "1": 62,
+      "2": 60,
+      "3": 72
+    },
+    "peak_concurrency": {
+      "1": {
+        "cv": 1,
+        "nlp": 2
+      },
+      "2": {
+        "cv": 1,
+        "nlp": 2
+      },
+      "3": {
+        "cv": 1,
+        "nlp": 2
+      }
+    },
+    "events": 414
+  },
+  "historical_files_unchanged": true,
+  "privacy_scope": "Each completed training only; no epsilon=8 claim for the entire selection pipeline.",
+  "evaluation_limitations": [
+    "CV historical experiments used official test for selection.",
+    "NLP official validation has already been viewed by historical experiments; no new blind-test claim."
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "unit_tests": 49,
+  "unit_failures": 0,
+  "unit_errors": 0,
+  "smoke_trials": 10,
+  "smoke_steps_each": 3,
+  "physical_gpus": [
+    1,
+    2,
+    3
+  ],
+  "excluded_gpus": [
+    0
+  ],
+  "historical_matrix_equality": [
+    {
+      "horizon": 225,
+      "status": "passed",
+      "reference": "exp9/results/search/cv/ac48b76f5cb6a0840e26/matrices.npz",
+      "strategy_sha256": "d6afb0eec0c9b6f5c373adfbf775e901704376db397ec1fc90805d1d1d7c8bfd"
+    },
+    {
+      "horizon": 250,
+      "status": "passed",
+      "reference": "exp9/results/sweep/cv/3617942b7a2fb78b2deb/matrices.npz",
+      "strategy_sha256": "3b5d25b76f731d3d145b56487662e1afe290ad9ed4ef20101be00148d10c7653"
+    },
+    {
+      "horizon": 310,
+      "status": "passed",
+      "reference": "exp9/results/search/nlp/b77453a0b237af38ba6b/matrices.npz",
+      "strategy_sha256": "906e33e97e371c46a0811d8ba9e2d6e45441f94bf4abfe06414a145c024cfcc5"
+    }
+  ],
+  "platform_status": "passed",
+  "report_generation_test": "passed (synthetic fixtures only)",
+  "source_revision_audit": "passed; all scientific sources identical",
+  "unit_tests_after_report_fix": 49,
+  "historical_files_unchanged": true
+}

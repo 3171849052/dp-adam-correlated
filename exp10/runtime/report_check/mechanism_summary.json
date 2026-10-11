@@ -1,0 +1,200 @@
+[
+  {
+    "task": "cv",
+    "method": "adam-aware-mf",
+    "coefficients": [
+      1.0,
+      -0.21647249300436122,
+      -0.25550449875710424,
+      -0.31500965599665587
+    ],
+    "horizon": 250,
+    "lambda_value": 3.0,
+    "C_clip_objective": 1.0,
+    "J1": 8815.316357173178,
+    "J2": 7.056049841500566e-13,
+    "sensitivity": 2.950902792582689,
+    "sigma_avg_C1": 0.0017712176453412024,
+    "covariance_diagonal_mean": 3.7943747068658354e-06,
+    "covariance_lag1_mean": -2.5582400219172864e-07,
+    "baseline": {
+      "J1": 6973.708848664393,
+      "J2": 3.5145579475124146e-12,
+      "sensitivity": 4.065608121489227,
+      "sigma_avg_C1": 0.0024402961906860006,
+      "covariance_diagonal_mean": 8.127067573983935e-06,
+      "covariance_lag1_mean": -2.7910689008253723e-06
+    },
+    "normalized_objective": 1.8663776955008424,
+    "optimizer": "Exp9 Nelder-Mead, two fixed starts",
+    "iterations": 199,
+    "converged": true,
+    "base_coefficients": [
+      1.0,
+      -0.53161943769869,
+      -0.0779998119461293,
+      -0.2795535556950146
+    ],
+    "base_optimization": {
+      "objective": "fixed_participation_sensitivity_squared * mean_full_workload_error",
+      "optimized_objective": 6973.708848664393,
+      "initial_objective": 9523.045873689221,
+      "full_workload_shape": [
+        250,
+        250
+      ],
+      "optimizer": "Nelder-Mead, two fixed starts",
+      "iterations": 235,
+      "converged": true,
+      "d0_fixed": 1.0
+    },
+    "strategy_sha256": "6217604354f055d2035f07161e65c9b4975a7e0e74c765768d3da239f574cedd",
+    "coefficients_sha256": "36aaa980ac7a2505fcb6275efb0a91cf329d3a7853bd50cd8557d6662bd557a9",
+    "workload_sha256": "5789d76ad33c5d83b8a7d12d70472504b7d48545a405aa6fdb1e72bce392b229",
+    "actual_C": 100,
+    "J2_actual_C": 7.056049841500567e-05,
+    "theoretical_J2": 7.056049841500564e-05,
+    "monte_carlo_J2": 6.76464096260963e-05,
+    "cumulative_variance_final": 0.49687845605119996,
+    "innovation_std_avg": 0.17712176453412024
+  },
+  {
+    "task": "cv",
+    "method": "blockadam-mf",
+    "coefficients": [
+      1.0,
+      -0.53161943769869,
+      -0.0779998119461293,
+      -0.2795535556950146
+    ],
+    "horizon": 250,
+    "lambda_value": null,
+    "J1": 6973.708848664393,
+    "J2": 3.5145579475124146e-12,
+    "sensitivity": 4.065608121489227,
+    "sigma_avg_C1": 0.0024402961906860006,
+    "covariance_diagonal_mean": 8.127067573983935e-06,
+    "covariance_lag1_mean": -2.7910689008253723e-06,
+    "base_optimization": {
+      "objective": "fixed_participation_sensitivity_squared * mean_full_workload_error",
+      "optimized_objective": 6973.708848664393,
+      "initial_objective": 9523.045873689221,
+      "full_workload_shape": [
+        250,
+        250
+      ],
+      "optimizer": "Nelder-Mead, two fixed starts",
+      "iterations": 235,
+      "converged": true,
+      "d0_fixed": 1.0
+    },
+    "strategy_sha256": "3b5d25b76f731d3d145b56487662e1afe290ad9ed4ef20101be00148d10c7653",
+    "coefficients_sha256": "97c73808a9527e1fe9e966187ffb1065e8e13758456dd07742843f839e271366",
+    "workload_sha256": "5789d76ad33c5d83b8a7d12d70472504b7d48545a405aa6fdb1e72bce392b229",
+    "actual_C": 30,
+    "J2_actual_C": 2.846791937485056e-06,
+    "theoretical_J2": 2.8467919374850546e-06,
+    "monte_carlo_J2": 2.7202842564349977e-06,
+    "cumulative_variance_final": 0.030860660643883334,
+    "innovation_std_avg": 0.07320888572058001
+  },
+  {
+    "task": "nlp",
+    "method": "adam-aware-mf",
+    "coefficients": [
+      1.0,
+      -0.21237595395333064,
+      -0.26118206189336185,
+      -0.33187039520858463
+    ],
+    "horizon": 310,
+    "lambda_value": 3.0,
+    "C_clip_objective": 1.0,
+    "J1": 9324.911085943842,
+    "J2": 6.710879896857908e-13,
+    "sensitivity": 3.0289378253788657,
+    "sigma_avg_C1": 0.0018180565406754662,
+    "covariance_diagonal_mean": 4.038471929853931e-06,
+    "covariance_lag1_mean": -2.3457629046929978e-07,
+    "baseline": {
+      "J1": 7305.738503395133,
+      "J2": 3.2850205608837218e-12,
+      "sensitivity": 4.18402302431354,
+      "sigma_avg_C1": 0.0025113722579427674,
+      "covariance_diagonal_mean": 8.591889723362483e-06,
+      "covariance_lag1_mean": -2.8121105378396923e-06
+    },
+    "normalized_objective": 1.8892436293367458,
+    "optimizer": "Exp9 Nelder-Mead, two fixed starts",
+    "iterations": 142,
+    "converged": true,
+    "base_coefficients": [
+      1.0,
+      -0.50922865903301,
+      -0.07727236688161641,
+      -0.3143675658601789
+    ],
+    "base_optimization": {
+      "objective": "fixed_participation_sensitivity_squared * mean_full_workload_error",
+      "optimized_objective": 7305.738503395133,
+      "initial_objective": 9347.213531148223,
+      "full_workload_shape": [
+        310,
+        310
+      ],
+      "optimizer": "Nelder-Mead, two fixed starts",
+      "iterations": 246,
+      "converged": true,
+      "d0_fixed": 1.0
+    },
+    "strategy_sha256": "0e84174a5d6daf946ace08367307009e8270b72cd4fff0a88a5cbc8ba4a4faba",
+    "coefficients_sha256": "e6de9405a1c4e6c97a54ff9c98abd26531c11dc52482d0955627ea2ec874b046",
+    "workload_sha256": "33a2029532b7d93a1b9ddb0e22c084af5c81bafdbc24613b029a3d979ed81af2",
+    "actual_C": 1,
+    "J2_actual_C": 6.710879896857908e-13,
+    "theoretical_J2": 6.710879896857907e-13,
+    "monte_carlo_J2": 6.445057595731729e-13,
+    "cumulative_variance_final": 5.3071271939535656e-05,
+    "innovation_std_avg": 0.0018180565406754662
+  },
+  {
+    "task": "nlp",
+    "method": "blockadam-mf",
+    "coefficients": [
+      1.0,
+      -0.50922865903301,
+      -0.07727236688161641,
+      -0.3143675658601789
+    ],
+    "horizon": 310,
+    "lambda_value": null,
+    "J1": 7305.738503395133,
+    "J2": 3.2850205608837218e-12,
+    "sensitivity": 4.18402302431354,
+    "sigma_avg_C1": 0.0025113722579427674,
+    "covariance_diagonal_mean": 8.591889723362483e-06,
+    "covariance_lag1_mean": -2.8121105378396923e-06,
+    "base_optimization": {
+      "objective": "fixed_participation_sensitivity_squared * mean_full_workload_error",
+      "optimized_objective": 7305.738503395133,
+      "initial_objective": 9347.213531148223,
+      "full_workload_shape": [
+        310,
+        310
+      ],
+      "optimizer": "Nelder-Mead, two fixed starts",
+      "iterations": 246,
+      "converged": true,
+      "d0_fixed": 1.0
+    },
+    "strategy_sha256": "906e33e97e371c46a0811d8ba9e2d6e45441f94bf4abfe06414a145c024cfcc5",
+    "coefficients_sha256": "c6d82142b64263729c1608d8b2b240b5bf425286f4abc15d3fa81a61e6f92563",
+    "workload_sha256": "33a2029532b7d93a1b9ddb0e22c084af5c81bafdbc24613b029a3d979ed81af2",
+    "actual_C": 20,
+    "J2_actual_C": 5.256032897413955e-07,
+    "theoretical_J2": 5.256032897413956e-07,
+    "monte_carlo_J2": 5.02926178030215e-07,
+    "cumulative_variance_final": 0.014364216903378801,
+    "innovation_std_avg": 0.05022744515885535
+  }
+]

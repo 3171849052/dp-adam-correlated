@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/media/data/data/lt/dp-adam-correlated/exp10/runtime/check_report.py", line 27, in <module>
+    report.generate_report(formal,dict(status='passed',historical_files_unchanged=True))
+  File "/media/data/data/lt/dp-adam-correlated/exp10/report.py", line 94, in generate_report
+    details=mechanism_figures(rows,winners)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp10/report.py", line 60, in mechanism_figures
+    details.append(dict(task=task,method=method,horizon=n,coefficients=d.tolist(),**meta,
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: dict() got multiple values for keyword argument 'horizon'
+ERROR conda.cli.main_run:execute(127): `conda run python -B -m exp10.runtime.check_report` failed. (See above for error)

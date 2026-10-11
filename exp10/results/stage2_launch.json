@@ -1,0 +1,36 @@
+{
+  "pid": 3205631,
+  "started": 1791634267.8180614,
+  "command": [
+    "/home/longt29/miniconda3/bin/conda",
+    "run",
+    "--no-capture-output",
+    "-n",
+    "curve",
+    "python",
+    "-B",
+    "-m",
+    "exp10.stage2",
+    "--gpus",
+    "1",
+    "2",
+    "3"
+  ],
+  "cwd": "/media/data/data/lt/dp-adam-correlated",
+  "gpus": [
+    1,
+    2,
+    3
+  ],
+  "excluded_gpus": [
+    0
+  ],
+  "log": "exp10/results/stage2.log",
+  "completed_search_trials_reused": 6,
+  "counts": {
+    "search": 120,
+    "recheck": 24,
+    "final": 40,
+    "total": 184
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "horizon": 225,
+  "lambda_value": null,
+  "J1": 6827.80833553919,
+  "J2": 3.640412695200692e-12,
+  "sensitivity": 4.011134240903082,
+  "sigma_avg_C1": 0.0024075993838827024,
+  "covariance_diagonal_mean": 7.920287344643861e-06,
+  "covariance_lag1_mean": -2.7761747964406992e-06,
+  "base_optimization": {
+    "objective": "fixed_participation_sensitivity_squared * mean_full_workload_error",
+    "optimized_objective": 6827.80833553919,
+    "initial_objective": 9710.26720773406,
+    "full_workload_shape": [
+      225,
+      225
+    ],
+    "optimizer": "Nelder-Mead, two fixed starts",
+    "iterations": 245,
+    "converged": true,
+    "d0_fixed": 1.0
+  },
+  "strategy_sha256": "d6afb0eec0c9b6f5c373adfbf775e901704376db397ec1fc90805d1d1d7c8bfd",
+  "coefficients_sha256": "dffdcd675b3e19982bc7f07da87fabf2f299733b22df31f60b3e5bc412cee588",
+  "workload_sha256": "5fe50ff5b3bed4c9648c6b1b82eed290012964a103c1e46ad51717db901f719d"
+}

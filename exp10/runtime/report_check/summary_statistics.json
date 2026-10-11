@@ -1,0 +1,222 @@
+[
+  {
+    "task": "cv",
+    "method": "adam-aware-mf",
+    "metric": "accuracy",
+    "n": 10,
+    "mean": 0.71,
+    "std": 0.0,
+    "se": 0.0,
+    "ci95_low": 0.71,
+    "ci95_high": 0.71
+  },
+  {
+    "task": "cv",
+    "method": "adam-aware-mf",
+    "metric": "validation_loss",
+    "n": 10,
+    "mean": 0.5,
+    "std": 0.0,
+    "se": 0.0,
+    "ci95_low": 0.5,
+    "ci95_high": 0.5
+  },
+  {
+    "task": "cv",
+    "method": "adam-aware-mf",
+    "metric": "actual_epsilon",
+    "n": 10,
+    "mean": 8.0,
+    "std": 0.0,
+    "se": 0.0,
+    "ci95_low": 8.0,
+    "ci95_high": 8.0
+  },
+  {
+    "task": "cv",
+    "method": "adam-aware-mf",
+    "metric": "seconds",
+    "n": 10,
+    "mean": 1.0,
+    "std": 0.0,
+    "se": 0.0,
+    "ci95_low": 1.0,
+    "ci95_high": 1.0
+  },
+  {
+    "task": "cv",
+    "method": "adam-aware-mf",
+    "metric": "peak_allocated_bytes",
+    "n": 10,
+    "mean": 100.0,
+    "std": 0.0,
+    "se": 0.0,
+    "ci95_low": 100.0,
+    "ci95_high": 100.0
+  },
+  {
+    "task": "cv",
+    "method": "blockadam-mf",
+    "metric": "accuracy",
+    "n": 10,
+    "mean": 0.7,
+    "std": 0.0,
+    "se": 0.0,
+    "ci95_low": 0.7,
+    "ci95_high": 0.7
+  },
+  {
+    "task": "cv",
+    "method": "blockadam-mf",
+    "metric": "validation_loss",
+    "n": 10,
+    "mean": 0.5,
+    "std": 0.0,
+    "se": 0.0,
+    "ci95_low": 0.5,
+    "ci95_high": 0.5
+  },
+  {
+    "task": "cv",
+    "method": "blockadam-mf",
+    "metric": "actual_epsilon",
+    "n": 10,
+    "mean": 8.0,
+    "std": 0.0,
+    "se": 0.0,
+    "ci95_low": 8.0,
+    "ci95_high": 8.0
+  },
+  {
+    "task": "cv",
+    "method": "blockadam-mf",
+    "metric": "seconds",
+    "n": 10,
+    "mean": 1.0,
+    "std": 0.0,
+    "se": 0.0,
+    "ci95_low": 1.0,
+    "ci95_high": 1.0
+  },
+  {
+    "task": "cv",
+    "method": "blockadam-mf",
+    "metric": "peak_allocated_bytes",
+    "n": 10,
+    "mean": 100.0,
+    "std": 0.0,
+    "se": 0.0,
+    "ci95_low": 100.0,
+    "ci95_high": 100.0
+  },
+  {
+    "task": "nlp",
+    "method": "adam-aware-mf",
+    "metric": "accuracy",
+    "n": 10,
+    "mean": 0.71,
+    "std": 0.0,
+    "se": 0.0,
+    "ci95_low": 0.71,
+    "ci95_high": 0.71
+  },
+  {
+    "task": "nlp",
+    "method": "adam-aware-mf",
+    "metric": "validation_loss",
+    "n": 10,
+    "mean": 0.5,
+    "std": 0.0,
+    "se": 0.0,
+    "ci95_low": 0.5,
+    "ci95_high": 0.5
+  },
+  {
+    "task": "nlp",
+    "method": "adam-aware-mf",
+    "metric": "actual_epsilon",
+    "n": 10,
+    "mean": 8.0,
+    "std": 0.0,
+    "se": 0.0,
+    "ci95_low": 8.0,
+    "ci95_high": 8.0
+  },
+  {
+    "task": "nlp",
+    "method": "adam-aware-mf",
+    "metric": "seconds",
+    "n": 10,
+    "mean": 1.0,
+    "std": 0.0,
+    "se": 0.0,
+    "ci95_low": 1.0,
+    "ci95_high": 1.0
+  },
+  {
+    "task": "nlp",
+    "method": "adam-aware-mf",
+    "metric": "peak_allocated_bytes",
+    "n": 10,
+    "mean": 100.0,
+    "std": 0.0,
+    "se": 0.0,
+    "ci95_low": 100.0,
+    "ci95_high": 100.0
+  },
+  {
+    "task": "nlp",
+    "method": "blockadam-mf",
+    "metric": "accuracy",
+    "n": 10,
+    "mean": 0.7,
+    "std": 0.0,
+    "se": 0.0,
+    "ci95_low": 0.7,
+    "ci95_high": 0.7
+  },
+  {
+    "task": "nlp",
+    "method": "blockadam-mf",
+    "metric": "validation_loss",
+    "n": 10,
+    "mean": 0.5,
+    "std": 0.0,
+    "se": 0.0,
+    "ci95_low": 0.5,
+    "ci95_high": 0.5
+  },
+  {
+    "task": "nlp",
+    "method": "blockadam-mf",
+    "metric": "actual_epsilon",
+    "n": 10,
+    "mean": 8.0,
+    "std": 0.0,
+    "se": 0.0,
+    "ci95_low": 8.0,
+    "ci95_high": 8.0
+  },
+  {
+    "task": "nlp",
+    "method": "blockadam-mf",
+    "metric": "seconds",
+    "n": 10,
+    "mean": 1.0,
+    "std": 0.0,
+    "se": 0.0,
+    "ci95_low": 1.0,
+    "ci95_high": 1.0
+  },
+  {
+    "task": "nlp",
+    "method": "blockadam-mf",
+    "metric": "peak_allocated_bytes",
+    "n": 10,
+    "mean": 100.0,
+    "std": 0.0,
+    "se": 0.0,
+    "ci95_low": 100.0,
+    "ci95_high": 100.0
+  }
+]

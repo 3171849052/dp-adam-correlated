@@ -1,0 +1,21 @@
+.................................................                        [100%]
+=============================== warnings summary ===============================
+exp10/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cpu-standard-small]
+exp10/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cpu-standard-pretrained]
+exp10/tests/test_cv.py::test_cv_exact_clipping[cpu-False]
+  /media/data/data/lt/dp-adam-correlated/exp10/clipping.py:55: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    losses.sum().backward(retain_graph=True)
+
+exp10/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cpu-standard-small]
+exp10/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cpu-standard-pretrained]
+exp10/tests/test_cv.py::test_cv_exact_clipping[cpu-False]
+  /media/data/data/lt/dp-adam-correlated/exp10/clipping.py:60: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    (losses * coefficients).sum().backward()
+
+exp10/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cuda:0-standard-small]
+exp10/tests/test_clipping.py::test_bert_norm_coefficient_and_accumulation[cuda:0-standard-pretrained]
+exp10/tests/test_cv.py::test_cv_exact_clipping[cuda:0-False]
+  sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+49 passed, 9 warnings in 26.95s

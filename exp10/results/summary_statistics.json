@@ -1,0 +1,222 @@
+[
+  {
+    "task": "cv",
+    "method": "adam-aware-mf",
+    "metric": "accuracy",
+    "n": 10,
+    "mean": 0.76962,
+    "std": 0.0055463301179949406,
+    "se": 0.001753903582805445,
+    "ci95_low": 0.7656523944472992,
+    "ci95_high": 0.7735876055527008
+  },
+  {
+    "task": "cv",
+    "method": "adam-aware-mf",
+    "metric": "validation_loss",
+    "n": 10,
+    "mean": 0.7712903956604004,
+    "std": 0.014568793947305552,
+    "se": 0.004607057163516065,
+    "ci95_low": 0.7608685082985317,
+    "ci95_high": 0.781712283022269
+  },
+  {
+    "task": "cv",
+    "method": "adam-aware-mf",
+    "metric": "actual_epsilon",
+    "n": 10,
+    "mean": 8.000000000000004,
+    "std": 1.8724445165742407e-15,
+    "se": 5.921189464667501e-16,
+    "ci95_low": 8.000000000000002,
+    "ci95_high": 8.000000000000005
+  },
+  {
+    "task": "cv",
+    "method": "adam-aware-mf",
+    "metric": "seconds",
+    "n": 10,
+    "mean": 696.4942436082289,
+    "std": 8.853478066124453,
+    "se": 2.79971559032961,
+    "ci95_low": 690.160846931767,
+    "ci95_high": 702.8276402846908
+  },
+  {
+    "task": "cv",
+    "method": "adam-aware-mf",
+    "metric": "peak_allocated_bytes",
+    "n": 10,
+    "mean": 8398258688.0,
+    "std": 0.0,
+    "se": 0.0,
+    "ci95_low": 8398258688.0,
+    "ci95_high": 8398258688.0
+  },
+  {
+    "task": "cv",
+    "method": "blockadam-mf",
+    "metric": "accuracy",
+    "n": 10,
+    "mean": 0.02139,
+    "std": 0.008919074441268495,
+    "se": 0.0028204589855002128,
+    "ci95_low": 0.015009678503572134,
+    "ci95_high": 0.027770321496427865
+  },
+  {
+    "task": "cv",
+    "method": "blockadam-mf",
+    "metric": "validation_loss",
+    "n": 10,
+    "mean": 4.543612261962891,
+    "std": 0.07673376986288583,
+    "se": 0.02426534862179055,
+    "ci95_low": 4.488720229770312,
+    "ci95_high": 4.59850429415547
+  },
+  {
+    "task": "cv",
+    "method": "blockadam-mf",
+    "metric": "actual_epsilon",
+    "n": 10,
+    "mean": 8.000000000000004,
+    "std": 1.8724445165742407e-15,
+    "se": 5.921189464667501e-16,
+    "ci95_low": 8.000000000000002,
+    "ci95_high": 8.000000000000005
+  },
+  {
+    "task": "cv",
+    "method": "blockadam-mf",
+    "metric": "seconds",
+    "n": 10,
+    "mean": 692.5362876815722,
+    "std": 9.164383625377678,
+    "se": 2.898032560774473,
+    "ci95_low": 685.9804825661938,
+    "ci95_high": 699.0920927969505
+  },
+  {
+    "task": "cv",
+    "method": "blockadam-mf",
+    "metric": "peak_allocated_bytes",
+    "n": 10,
+    "mean": 8420456448.0,
+    "std": 0.0,
+    "se": 0.0,
+    "ci95_low": 8420456448.0,
+    "ci95_high": 8420456448.0
+  },
+  {
+    "task": "nlp",
+    "method": "adam-aware-mf",
+    "metric": "accuracy",
+    "n": 10,
+    "mean": 0.7829128440366973,
+    "std": 0.007665302474785005,
+    "se": 0.002423981477444601,
+    "ci95_low": 0.7774294169750058,
+    "ci95_high": 0.7883962710983887
+  },
+  {
+    "task": "nlp",
+    "method": "adam-aware-mf",
+    "metric": "validation_loss",
+    "n": 10,
+    "mean": 1.0627052954577523,
+    "std": 0.04338270298630344,
+    "se": 0.013718815249130739,
+    "ci95_low": 1.0316711792768258,
+    "ci95_high": 1.0937394116386787
+  },
+  {
+    "task": "nlp",
+    "method": "adam-aware-mf",
+    "metric": "actual_epsilon",
+    "n": 10,
+    "mean": 8.000000000000004,
+    "std": 1.8724445165742407e-15,
+    "se": 5.921189464667501e-16,
+    "ci95_low": 8.000000000000002,
+    "ci95_high": 8.000000000000005
+  },
+  {
+    "task": "nlp",
+    "method": "adam-aware-mf",
+    "metric": "seconds",
+    "n": 10,
+    "mean": 89.1607275377959,
+    "std": 1.1027882985160318,
+    "se": 0.3487322800292345,
+    "ci95_low": 88.37184031262882,
+    "ci95_high": 89.949614762963
+  },
+  {
+    "task": "nlp",
+    "method": "adam-aware-mf",
+    "metric": "peak_allocated_bytes",
+    "n": 10,
+    "mean": 3695773696.0,
+    "std": 0.0,
+    "se": 0.0,
+    "ci95_low": 3695773696.0,
+    "ci95_high": 3695773696.0
+  },
+  {
+    "task": "nlp",
+    "method": "blockadam-mf",
+    "metric": "accuracy",
+    "n": 10,
+    "mean": 0.6604357798165137,
+    "std": 0.04232757963984014,
+    "se": 0.013385155950406442,
+    "ci95_low": 0.6301564534081308,
+    "ci95_high": 0.6907151062248966
+  },
+  {
+    "task": "nlp",
+    "method": "blockadam-mf",
+    "metric": "validation_loss",
+    "n": 10,
+    "mean": 0.6941733482780806,
+    "std": 0.03406963106600746,
+    "se": 0.0107737633210214,
+    "ci95_low": 0.6698014024111395,
+    "ci95_high": 0.7185452941450218
+  },
+  {
+    "task": "nlp",
+    "method": "blockadam-mf",
+    "metric": "actual_epsilon",
+    "n": 10,
+    "mean": 8.000000000000004,
+    "std": 1.8724445165742407e-15,
+    "se": 5.921189464667501e-16,
+    "ci95_low": 8.000000000000002,
+    "ci95_high": 8.000000000000005
+  },
+  {
+    "task": "nlp",
+    "method": "blockadam-mf",
+    "metric": "seconds",
+    "n": 10,
+    "mean": 90.25111471880227,
+    "std": 1.054305940275316,
+    "se": 0.33340081219154494,
+    "ci95_low": 89.49690968342043,
+    "ci95_high": 91.00531975418411
+  },
+  {
+    "task": "nlp",
+    "method": "blockadam-mf",
+    "metric": "peak_allocated_bytes",
+    "n": 10,
+    "mean": 3713318912.0,
+    "std": 0.0,
+    "se": 0.0,
+    "ci95_low": 3713318912.0,
+    "ci95_high": 3713318912.0
+  }
+]

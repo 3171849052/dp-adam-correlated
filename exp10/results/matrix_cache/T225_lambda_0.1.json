@@ -1,0 +1,45 @@
+{
+  "horizon": 225,
+  "lambda_value": 0.1,
+  "C_clip_objective": 1.0,
+  "J1": 6909.344409683962,
+  "J2": 1.936599765600889e-12,
+  "sensitivity": 3.6451213869705126,
+  "sigma_avg_C1": 0.002187907828153866,
+  "covariance_diagonal_mean": 6.0249007829843855e-06,
+  "covariance_lag1_mean": -1.0713621611383928e-06,
+  "baseline": {
+    "J1": 6827.80833553919,
+    "J2": 3.640412695200692e-12,
+    "sensitivity": 4.011134240903082,
+    "sigma_avg_C1": 0.0024075993838827024,
+    "covariance_diagonal_mean": 7.920287344643861e-06,
+    "covariance_lag1_mean": -2.7761747964406992e-06
+  },
+  "normalized_objective": 1.065139022635893,
+  "optimizer": "Exp9 Nelder-Mead, two fixed starts",
+  "iterations": 293,
+  "converged": true,
+  "base_coefficients": [
+    1.0,
+    -0.542162222060744,
+    -0.07912562584161631,
+    -0.26164327427820705
+  ],
+  "base_optimization": {
+    "objective": "fixed_participation_sensitivity_squared * mean_full_workload_error",
+    "optimized_objective": 6827.80833553919,
+    "initial_objective": 9710.26720773406,
+    "full_workload_shape": [
+      225,
+      225
+    ],
+    "optimizer": "Nelder-Mead, two fixed starts",
+    "iterations": 245,
+    "converged": true,
+    "d0_fixed": 1.0
+  },
+  "strategy_sha256": "3a249a346832a4d88fb081c0c78bfddb610ecd2ee0b27ad6367c3c53fc9f332f",
+  "coefficients_sha256": "ef9a45ecbe9c99ad1298384ce5abecca6fa64f59f1726e6cf8518d8e88ee9765",
+  "workload_sha256": "5fe50ff5b3bed4c9648c6b1b82eed290012964a103c1e46ad51717db901f719d"
+}
