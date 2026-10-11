@@ -37,3 +37,74 @@ Completed lambda=0.17782794100389229, validation accuracy=0.606200, loss=1.41500
 Start CV lambda=1.7782794100389228 GPU=2
 Completed lambda=0.31622776601683794, validation accuracy=0.534200, loss=1.725630
 Start CV lambda=3.1622776601683795 GPU=3
+Completed lambda=1, validation accuracy=0.341200, loss=2.523501
+Start CV lambda=5.6234132519034912 GPU=1
+Completed lambda=0.56234132519034907, validation accuracy=0.448400, loss=2.099431
+Start CV lambda=10 GPU=0
+Completed lambda=1.7782794100389228, validation accuracy=0.264200, loss=2.879692
+Start CV lambda=17.782794100389228 GPU=2
+Completed lambda=3.1622776601683795, validation accuracy=0.211400, loss=3.149855
+Start CV lambda=31.622776601683793 GPU=3
+Completed lambda=5.6234132519034912, validation accuracy=0.181200, loss=3.321961
+Start CV lambda=56.234132519034908 GPU=1
+Completed lambda=17.782794100389228, validation accuracy=0.155000, loss=3.506033
+Start CV lambda=100 GPU=2
+Completed lambda=10, validation accuracy=0.162600, loss=3.437741
+Start CV lambda=177.82794100389228 GPU=0
+Completed lambda=31.622776601683793, validation accuracy=0.145800, loss=3.547163
+Start CV lambda=316.22776601683796 GPU=3
+Completed lambda=56.234132519034908, validation accuracy=0.140600, loss=3.575794
+Start CV lambda=562.34132519034904 GPU=1
+Completed lambda=100, validation accuracy=0.136400, loss=3.591327
+Start CV lambda=1000 GPU=2
+Completed lambda=316.22776601683796, validation accuracy=0.133200, loss=3.606478
+Completed lambda=177.82794100389228, validation accuracy=0.133400, loss=3.601051
+Completed lambda=562.34132519034904, validation accuracy=0.132800, loss=3.609282
+Completed lambda=1000, validation accuracy=0.133000, loss=3.610843
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/media/data/data/lt/dp-adam-correlated/exp11/run.py", line 202, in <module>
+    execute(args.gpus, args.adopt_lambda_zero_pid)
+  File "/media/data/data/lt/dp-adam-correlated/exp11/run.py", line 177, in execute
+    run_round(INITIAL_LAMBDAS, gpus, 'initial', 38, adopted_pid)
+  File "/media/data/data/lt/dp-adam-correlated/exp11/run.py", line 158, in run_round
+    generate(total if phase == 'refinement' else None)
+  File "/media/data/data/lt/dp-adam-correlated/exp11/report.py", line 46, in generate
+    fig.tight_layout()
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/matplotlib/figure.py", line 3665, in tight_layout
+    engine.execute(self)
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/matplotlib/layout_engine.py", line 188, in execute
+    kwargs = get_tight_layout_figure(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/matplotlib/_tight_layout.py", line 266, in get_tight_layout_figure
+    kwargs = _auto_adjust_subplotpars(fig, renderer,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/matplotlib/_tight_layout.py", line 82, in _auto_adjust_subplotpars
+    bb += [martist._get_tightbbox_for_layout_only(ax, renderer)]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/matplotlib/artist.py", line 1485, in _get_tightbbox_for_layout_only
+    return obj.get_tightbbox(*args, **{**kwargs, "for_layout_only": True})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/matplotlib/axes/_base.py", line 4758, in get_tightbbox
+    ba = martist._get_tightbbox_for_layout_only(axis, renderer)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/matplotlib/artist.py", line 1485, in _get_tightbbox_for_layout_only
+    return obj.get_tightbbox(*args, **{**kwargs, "for_layout_only": True})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/matplotlib/axis.py", line 1425, in get_tightbbox
+    ticks_to_draw = self._update_ticks()
+                    ^^^^^^^^^^^^^^^^^^^^
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/matplotlib/axis.py", line 1344, in _update_ticks
+    major_locs = self.get_majorticklocs()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/matplotlib/axis.py", line 1673, in get_majorticklocs
+    return self.major.locator()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/matplotlib/ticker.py", line 2470, in __call__
+    return self.tick_values(vmin, vmax)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/matplotlib/ticker.py", line 2492, in tick_values
+    raise ValueError(
+ValueError: Data cannot be log-scaled because all values are <= 0.
+ERROR conda.cli.main_run:execute(127): `conda run python -B -m exp11.run --gpus 0 1 2 3 --adopt-lambda-zero-pid 4174447` failed. (See above for error)
