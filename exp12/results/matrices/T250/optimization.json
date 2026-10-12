@@ -1,0 +1,59 @@
+{
+  "objective": "fixed_participation_sensitivity_squared * mean_full_workload_error",
+  "optimized_objective": 176.59713514173578,
+  "initial_objective": 179.64161991688925,
+  "full_workload_shape": [
+    250,
+    250
+  ],
+  "optimizer": "Nelder-Mead, two fixed starts",
+  "iterations": 280,
+  "converged": true,
+  "d0_fixed": 1.0,
+  "horizon": 250,
+  "beta1": 0.9,
+  "beta2": 0.999,
+  "coefficients_sha256": "beb41b29f8a2d7bd96c0dac6e893e60c17465f62e2ebbb9cd0f61b1f84ff01ab",
+  "strategy_sha256": "6c2c02df3074a8e4ab2716d7502dd6ceafdc769004bb7e1ce8f67ed1f85ef22a",
+  "workload_sha256": "cbee115275b029cccd92d0711a4815aaf18c428b6de9f78791930836df026db9",
+  "old_filter": {
+    "coefficients": [
+      1.0,
+      -0.53161943769869,
+      -0.0779998119461293,
+      -0.2795535556950146
+    ],
+    "sensitivity": 4.065608121489227,
+    "old_workload_error": 421.9031628843412,
+    "new_workload_error": 13.761605110709967,
+    "old_objective": 6973.708848664393,
+    "new_objective": 227.46790205669043
+  },
+  "new_filter": {
+    "coefficients": [
+      1.0,
+      -0.9094549704450474,
+      -0.048730330668649055,
+      2.160301037704926e-05
+    ],
+    "sensitivity": 8.454737363775065,
+    "old_workload_error": 148.4341491771763,
+    "new_workload_error": 2.4704917691904753,
+    "old_objective": 10610.45652075975,
+    "new_objective": 176.59713514173578
+  },
+  "old_optimization": {
+    "objective": "fixed_participation_sensitivity_squared * mean_full_workload_error",
+    "optimized_objective": 6973.708848664393,
+    "initial_objective": 9523.045873689221,
+    "full_workload_shape": [
+      250,
+      250
+    ],
+    "optimizer": "Nelder-Mead, two fixed starts",
+    "iterations": 235,
+    "converged": true,
+    "d0_fixed": 1.0
+  },
+  "optimality": "Exp9 numerical local optimization, no global optimum claim"
+}
