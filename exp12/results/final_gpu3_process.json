@@ -1,0 +1,33 @@
+{
+  "status": "launched",
+  "launcher_pid": 753734,
+  "command": [
+    "conda",
+    "run",
+    "--no-capture-output",
+    "-n",
+    "curve",
+    "python",
+    "-B",
+    "-m",
+    "exp12.execution.final_gpu3",
+    "--gpus",
+    "3"
+  ],
+  "physical_gpu": 3,
+  "seeds": [
+    20261111,
+    20261112,
+    20261113,
+    20261114,
+    20261115,
+    20261116,
+    20261117,
+    20261118,
+    20261119,
+    20261120
+  ],
+  "background": true,
+  "launched_unix": 1791802970.9851472,
+  "log": "exp12/results/final_gpu3.log"
+}

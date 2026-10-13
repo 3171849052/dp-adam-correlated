@@ -1,0 +1,5 @@
+{
+  "status": "failed",
+  "error": "Worker failure; parameters unchanged:\n/media/data/data/lt/dp-adam-correlated/exp9b/results/sweep/nlp/feae07318ab703ee12e6: exit 1, FloatingPointError: non-finite model/Adam state",
+  "traceback": "Traceback (most recent call last):\n  File \"/media/data/data/lt/dp-adam-correlated/exp9b/stage2.py\", line 45, in main\n    status('sweep');run_formal('sweep',**schedule)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/media/data/data/lt/dp-adam-correlated/exp9b/final.py\", line 25, in run_formal\n    rows=run_queue(jobs,**schedule)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/media/data/data/lt/dp-adam-correlated/exp9b/launcher.py\", line 75, in run_queue\n    if fatal: raise RuntimeError('Worker failure; parameters unchanged:\\n'+'\\n'.join(fatal))\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Worker failure; parameters unchanged:\n/media/data/data/lt/dp-adam-correlated/exp9b/results/sweep/nlp/feae07318ab703ee12e6: exit 1, FloatingPointError: non-finite model/Adam state\n"
+}

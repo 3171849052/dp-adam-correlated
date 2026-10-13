@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0,1,2 nohup /home/longt29/miniconda3/bin/conda run --no-capture-output -n curve python -B -m exp9b.stage2 --gpus 0 1 2 --cv-per-gpu 1 --nlp-per-gpu 2 > exp9b/results/full_run.log 2>&1 < /dev/null &

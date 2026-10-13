@@ -1,0 +1,57 @@
+{
+  "noise": "prefix_bandmf",
+  "T": 310,
+  "optimization": {
+    "objective": "Sens(S)^2 * ||W S^{-1}||_F^2 / T",
+    "optimized_objective": 213.53953047808483,
+    "initial_objective": 777.5,
+    "full_workload_shape": [
+      310,
+      310
+    ],
+    "optimizer": "Nelder-Mead, three fixed starts",
+    "iterations": 200,
+    "converged": true,
+    "s0_fixed": 1.0,
+    "starts": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        -0.9,
+        0.0,
+        0.0
+      ],
+      [
+        -1.8,
+        0.81,
+        0.0
+      ]
+    ],
+    "start_objectives": [
+      213.53953047808486,
+      213.53953047808486,
+      213.53953047808483
+    ],
+    "bandwidth_constraint": "strategy S has four bands; D=S^{-1} is dense"
+  },
+  "sensitivity": 3.557083943462648,
+  "workload_error": 16.876798107405115,
+  "inverse_max_abs_residual": 5.551115123125783e-17,
+  "unit_innovation_variance_final": 2.311284466366374,
+  "unit_innovation_variance_tail_mean": 2.3112844663663723,
+  "impulse_last_three": [
+    -8.233741968329179e-20,
+    -2.202378996803628e-20,
+    6.088729778726736e-20
+  ],
+  "array_sha256": {
+    "coefficients": "fc9de3d097c1e3e5927d28d2b89b51257126426ff11b551e4891514ba58c53c4",
+    "strategy": "7d663fe170cda1fda2dee1e6ec6dd37e45b7b31fb478eeffcab32c56b532ff36",
+    "workload": "e64124aa2d6c0d5f662f7e631987c84ce22993b4306af4e7db51edf9c638407c",
+    "inverse": "d98f7998629f92bdfad3abf5277591983f5e7a2971d0e390a1838a373d7a2ecb"
+  },
+  "file_sha256": "8266e0492570b8aa3c672c20028a1b4bb59c3b54af68f5435f56ff5f04174b97"
+}

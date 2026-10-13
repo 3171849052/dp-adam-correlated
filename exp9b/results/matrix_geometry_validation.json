@@ -1,0 +1,440 @@
+[
+  {
+    "experiment": "BandMF",
+    "method": "dp-adam-iid",
+    "T": 225,
+    "coefficients": [
+      1.0
+    ],
+    "sensitivity": 2.23606797749979,
+    "mean_full_workload_error": 1.0,
+    "objective": 5.000000000000001,
+    "unit_innovation_variance_final": 1.0,
+    "unit_innovation_variance_last_epoch_mean": 1.0,
+    "unit_C_calibrated_variance_final": 1.8013746955640704,
+    "tail_definition": "finite-horizon final variance and final-epoch average",
+    "inverse_residual": 0.0
+  },
+  {
+    "experiment": "Exp9 BandInvMF",
+    "method": "dp-adam-iid",
+    "T": 225,
+    "coefficients": [
+      1.0
+    ],
+    "sensitivity": 2.23606797749979,
+    "mean_full_workload_error": 1.0,
+    "objective": 5.000000000000001,
+    "unit_innovation_variance_final": 1.0,
+    "unit_innovation_variance_last_epoch_mean": 1.0,
+    "unit_C_calibrated_variance_final": 1.8013746955640704,
+    "tail_definition": "finite-horizon final variance and final-epoch average",
+    "inverse_residual": 0.0
+  },
+  {
+    "experiment": "BandMF",
+    "method": "dp-adam-sgd-bandmf",
+    "T": 225,
+    "coefficients": [
+      1.0,
+      0.7684502604942258,
+      0.6832111813471311,
+      0.6037037210046912
+    ],
+    "sensitivity": 3.4797640034392385,
+    "mean_full_workload_error": 13.098051435433643,
+    "objective": 158.601128811327,
+    "unit_innovation_variance_final": 2.1608705796789858,
+    "unit_innovation_variance_last_epoch_mean": 2.1608705796789853,
+    "unit_C_calibrated_variance_final": 9.426758744805882,
+    "tail_definition": "finite-horizon final variance and final-epoch average",
+    "inverse_residual": 5.551115123125783e-17
+  },
+  {
+    "experiment": "Exp9 BandInvMF",
+    "method": "dp-adam-sgd-bandmf",
+    "T": 225,
+    "coefficients": [
+      1.0,
+      -0.5,
+      -0.125,
+      -0.0625
+    ],
+    "sensitivity": 2.8481724970454687,
+    "mean_full_workload_error": 12.131753472222222,
+    "objective": 98.41383444806493,
+    "unit_innovation_variance_final": 1.26953125,
+    "unit_innovation_variance_last_epoch_mean": 1.26953125,
+    "unit_C_calibrated_variance_final": 3.7103085400200504,
+    "tail_definition": "finite-horizon final variance and final-epoch average",
+    "inverse_residual": 2.117582368135751e-22
+  },
+  {
+    "experiment": "BandMF",
+    "method": "dp-adam-momentum-bandmf",
+    "T": 225,
+    "coefficients": [
+      1.0,
+      0.9697041943765985,
+      0.940753769937249,
+      0.9130201628427694
+    ],
+    "sensitivity": 4.27723608069519,
+    "mean_full_workload_error": 694.6991185084418,
+    "objective": 12709.345649337169,
+    "unit_innovation_variance_final": 9.005527074795427,
+    "unit_innovation_variance_last_epoch_mean": 9.005486168694997,
+    "unit_C_calibrated_variance_final": 59.356684305315014,
+    "tail_definition": "finite-horizon final variance and final-epoch average",
+    "inverse_residual": 1.1102230246251565e-16
+  },
+  {
+    "experiment": "Exp9 BandInvMF",
+    "method": "dp-adam-momentum-bandmf",
+    "T": 225,
+    "coefficients": [
+      1.0,
+      -0.95,
+      -0.0012500000000000844,
+      -0.001187499999999897
+    ],
+    "sensitivity": 8.001406882210704,
+    "mean_full_workload_error": 31.821092278672914,
+    "objective": 2037.2662652775457,
+    "unit_innovation_variance_final": 1.90250297265625,
+    "unit_innovation_variance_last_epoch_mean": 1.9025029726562501,
+    "unit_C_calibrated_variance_final": 43.88257546188443,
+    "tail_definition": "finite-horizon final variance and final-epoch average",
+    "inverse_residual": 1.1050695045036577e-16
+  },
+  {
+    "experiment": "BandMF",
+    "method": "dp-adam-momentum-bias-bandmf",
+    "T": 225,
+    "coefficients": [
+      1.0,
+      0.8468276189871282,
+      0.7879568620324828,
+      0.7545982686789323
+    ],
+    "sensitivity": 3.812749388431351,
+    "mean_full_workload_error": 1263.1905381520185,
+    "objective": 18363.073990564197,
+    "unit_innovation_variance_final": 3.2546659820191004,
+    "unit_innovation_variance_last_epoch_mean": 3.254665982019099,
+    "unit_C_calibrated_variance_final": 17.04578468396652,
+    "tail_definition": "finite-horizon final variance and final-epoch average",
+    "inverse_residual": 2.7755575615628914e-17
+  },
+  {
+    "experiment": "Exp9 BandInvMF",
+    "method": "dp-adam-momentum-bias-bandmf",
+    "T": 225,
+    "coefficients": [
+      1.0,
+      -0.542162222060744,
+      -0.07912562584161631,
+      -0.26164327427820705
+    ],
+    "sensitivity": 4.011134240903082,
+    "mean_full_workload_error": 424.37220168424875,
+    "objective": 6827.80833553919,
+    "unit_innovation_variance_final": 1.368657942669692,
+    "unit_innovation_variance_last_epoch_mean": 1.368657942669692,
+    "unit_C_calibrated_variance_final": 7.933473384773448,
+    "tail_definition": "finite-horizon final variance and final-epoch average",
+    "inverse_residual": 3.2971777871600236e-17
+  },
+  {
+    "experiment": "BandMF",
+    "method": "dp-adam-iid",
+    "T": 250,
+    "coefficients": [
+      1.0
+    ],
+    "sensitivity": 2.23606797749979,
+    "mean_full_workload_error": 1.0,
+    "objective": 5.000000000000001,
+    "unit_innovation_variance_final": 1.0,
+    "unit_innovation_variance_last_epoch_mean": 1.0,
+    "unit_C_calibrated_variance_final": 1.8013746955640704,
+    "tail_definition": "finite-horizon final variance and final-epoch average",
+    "inverse_residual": 0.0
+  },
+  {
+    "experiment": "Exp9 BandInvMF",
+    "method": "dp-adam-iid",
+    "T": 250,
+    "coefficients": [
+      1.0
+    ],
+    "sensitivity": 2.23606797749979,
+    "mean_full_workload_error": 1.0,
+    "objective": 5.000000000000001,
+    "unit_innovation_variance_final": 1.0,
+    "unit_innovation_variance_last_epoch_mean": 1.0,
+    "unit_C_calibrated_variance_final": 1.8013746955640704,
+    "tail_definition": "finite-horizon final variance and final-epoch average",
+    "inverse_residual": 0.0
+  },
+  {
+    "experiment": "BandMF",
+    "method": "dp-adam-sgd-bandmf",
+    "T": 250,
+    "coefficients": [
+      1.0,
+      0.7758371170322109,
+      0.6924787454263959,
+      0.6134044230198943
+    ],
+    "sensitivity": 3.5055064050808245,
+    "mean_full_workload_error": 14.224664370781925,
+    "objective": 174.80085719012084,
+    "unit_innovation_variance_final": 2.2085213794268146,
+    "unit_innovation_variance_last_epoch_mean": 2.2085213794268146,
+    "unit_C_calibrated_variance_final": 9.77771087605863,
+    "tail_definition": "finite-horizon final variance and final-epoch average",
+    "inverse_residual": 5.551115123125783e-17
+  },
+  {
+    "experiment": "Exp9 BandInvMF",
+    "method": "dp-adam-sgd-bandmf",
+    "T": 250,
+    "coefficients": [
+      1.0,
+      -0.5,
+      -0.125,
+      -0.0625
+    ],
+    "sensitivity": 2.8481628876299,
+    "mean_full_workload_error": 13.3525625,
+    "objective": 108.3164120717809,
+    "unit_innovation_variance_final": 1.26953125,
+    "unit_innovation_variance_last_epoch_mean": 1.26953125,
+    "unit_C_calibrated_variance_final": 3.7102835037299107,
+    "tail_definition": "finite-horizon final variance and final-epoch average",
+    "inverse_residual": 2.117582368135751e-22
+  },
+  {
+    "experiment": "BandMF",
+    "method": "dp-adam-momentum-bandmf",
+    "T": 250,
+    "coefficients": [
+      1.0,
+      0.9708626062268553,
+      0.9429871278219262,
+      0.9162533427277808
+    ],
+    "sensitivity": 4.284459774269844,
+    "mean_full_workload_error": 777.2040399978182,
+    "objective": 14266.820227767852,
+    "unit_innovation_variance_final": 9.337971109230354,
+    "unit_innovation_variance_last_epoch_mean": 9.337951105035655,
+    "unit_C_calibrated_variance_final": 61.75593746900606,
+    "tail_definition": "finite-horizon final variance and final-epoch average",
+    "inverse_residual": 1.1102230246251565e-16
+  },
+  {
+    "experiment": "Exp9 BandInvMF",
+    "method": "dp-adam-momentum-bandmf",
+    "T": 250,
+    "coefficients": [
+      1.0,
+      -0.95,
+      -0.0012500000000000844,
+      -0.001187499999999897
+    ],
+    "sensitivity": 7.852751308631718,
+    "mean_full_workload_error": 34.67172763138924,
+    "objective": 2138.0564626089204,
+    "unit_innovation_variance_final": 1.90250297265625,
+    "unit_innovation_variance_last_epoch_mean": 1.9025029726562501,
+    "unit_C_calibrated_variance_final": 42.267161687774,
+    "tail_definition": "finite-horizon final variance and final-epoch average",
+    "inverse_residual": 1.1050695045036577e-16
+  },
+  {
+    "experiment": "BandMF",
+    "method": "dp-adam-momentum-bias-bandmf",
+    "T": 250,
+    "coefficients": [
+      1.0,
+      0.8554735680901085,
+      0.7999305379367128,
+      0.7685658555326746
+    ],
+    "sensitivity": 3.8486474023448887,
+    "mean_full_workload_error": 1347.497431616729,
+    "objective": 19959.248957042724,
+    "unit_innovation_variance_final": 3.4330357897560284,
+    "unit_innovation_variance_last_epoch_mean": 3.433035789756028,
+    "unit_C_calibrated_variance_final": 18.32013348253106,
+    "tail_definition": "finite-horizon final variance and final-epoch average",
+    "inverse_residual": 9.71445146547012e-17
+  },
+  {
+    "experiment": "Exp9 BandInvMF",
+    "method": "dp-adam-momentum-bias-bandmf",
+    "T": 250,
+    "coefficients": [
+      1.0,
+      -0.53161943769869,
+      -0.0779998119461293,
+      -0.2795535556950146
+    ],
+    "sensitivity": 4.065608121489227,
+    "mean_full_workload_error": 421.9031628843412,
+    "objective": 6973.708848664393,
+    "unit_innovation_variance_final": 1.3668533877044287,
+    "unit_innovation_variance_last_epoch_mean": 1.3668533877044284,
+    "unit_C_calibrated_variance_final": 8.139674113253387,
+    "tail_definition": "finite-horizon final variance and final-epoch average",
+    "inverse_residual": 7.335970532905841e-17
+  },
+  {
+    "experiment": "BandMF",
+    "method": "dp-adam-iid",
+    "T": 310,
+    "coefficients": [
+      1.0
+    ],
+    "sensitivity": 2.23606797749979,
+    "mean_full_workload_error": 1.0,
+    "objective": 5.000000000000001,
+    "unit_innovation_variance_final": 1.0,
+    "unit_innovation_variance_last_epoch_mean": 1.0,
+    "unit_C_calibrated_variance_final": 1.8013746955640704,
+    "tail_definition": "finite-horizon final variance and final-epoch average",
+    "inverse_residual": 0.0
+  },
+  {
+    "experiment": "Exp9 BandInvMF",
+    "method": "dp-adam-iid",
+    "T": 310,
+    "coefficients": [
+      1.0
+    ],
+    "sensitivity": 2.23606797749979,
+    "mean_full_workload_error": 1.0,
+    "objective": 5.000000000000001,
+    "unit_innovation_variance_final": 1.0,
+    "unit_innovation_variance_last_epoch_mean": 1.0,
+    "unit_C_calibrated_variance_final": 1.8013746955640704,
+    "tail_definition": "finite-horizon final variance and final-epoch average",
+    "inverse_residual": 0.0
+  },
+  {
+    "experiment": "BandMF",
+    "method": "dp-adam-sgd-bandmf",
+    "T": 310,
+    "coefficients": [
+      1.0,
+      0.7904301717800359,
+      0.7108710211861679,
+      0.6328125875371591
+    ],
+    "sensitivity": 3.557083943462648,
+    "mean_full_workload_error": 16.876798107405115,
+    "objective": 213.53953047808488,
+    "unit_innovation_variance_final": 2.3112844663663723,
+    "unit_innovation_variance_last_epoch_mean": 2.3112844663663723,
+    "unit_C_calibrated_variance_final": 10.535998069189644,
+    "tail_definition": "finite-horizon final variance and final-epoch average",
+    "inverse_residual": 5.551115123125783e-17
+  },
+  {
+    "experiment": "Exp9 BandInvMF",
+    "method": "dp-adam-sgd-bandmf",
+    "T": 310,
+    "coefficients": [
+      1.0,
+      -0.5,
+      -0.125,
+      -0.0625
+    ],
+    "sensitivity": 2.8481595181978294,
+    "mean_full_workload_error": 16.28243447580645,
+    "objective": 132.0833142956389,
+    "unit_innovation_variance_final": 1.26953125,
+    "unit_innovation_variance_last_epoch_mean": 1.26953125,
+    "unit_C_calibrated_variance_final": 3.7102747250600614,
+    "tail_definition": "finite-horizon final variance and final-epoch average",
+    "inverse_residual": 2.117582368135751e-22
+  },
+  {
+    "experiment": "BandMF",
+    "method": "dp-adam-momentum-bandmf",
+    "T": 310,
+    "coefficients": [
+      1.0,
+      0.9730572124451132,
+      0.9472247617840963,
+      0.9223927097668219
+    ],
+    "sensitivity": 4.29818764077336,
+    "mean_full_workload_error": 974.7955343398314,
+    "objective": 18008.77918654727,
+    "unit_innovation_variance_final": 10.045507610495314,
+    "unit_innovation_variance_last_epoch_mean": 10.045503887532174,
+    "unit_C_calibrated_variance_final": 66.86158729606119,
+    "tail_definition": "finite-horizon final variance and final-epoch average",
+    "inverse_residual": 1.4311468676808659e-16
+  },
+  {
+    "experiment": "Exp9 BandInvMF",
+    "method": "dp-adam-momentum-bandmf",
+    "T": 310,
+    "coefficients": [
+      1.0,
+      -0.95,
+      -0.0012500000000000844,
+      -0.001187499999999897
+    ],
+    "sensitivity": 7.617168324853429,
+    "mean_full_workload_error": 41.49818537031022,
+    "objective": 2407.7767244108845,
+    "unit_innovation_variance_final": 1.90250297265625,
+    "unit_innovation_variance_last_epoch_mean": 1.9025029726562503,
+    "unit_C_calibrated_variance_final": 39.76916779036343,
+    "tail_definition": "finite-horizon final variance and final-epoch average",
+    "inverse_residual": 1.1050695045036577e-16
+  },
+  {
+    "experiment": "BandMF",
+    "method": "dp-adam-momentum-bias-bandmf",
+    "T": 310,
+    "coefficients": [
+      1.0,
+      0.8724593548963355,
+      0.823319702174848,
+      0.7957627851503046
+    ],
+    "sensitivity": 3.9193615986315806,
+    "mean_full_workload_error": 1547.4817076673946,
+    "objective": 23771.478294178316,
+    "unit_innovation_variance_final": 3.8516022850994514,
+    "unit_innovation_variance_last_epoch_mean": 3.8516022850994527,
+    "unit_C_calibrated_variance_final": 21.316021786471406,
+    "tail_definition": "finite-horizon final variance and final-epoch average",
+    "inverse_residual": 1.1102230246251565e-16
+  },
+  {
+    "experiment": "Exp9 BandInvMF",
+    "method": "dp-adam-momentum-bias-bandmf",
+    "T": 310,
+    "coefficients": [
+      1.0,
+      -0.50922865903301,
+      -0.07727236688161641,
+      -0.3143675658601789
+    ],
+    "sensitivity": 4.18402302431354,
+    "mean_full_workload_error": 417.32652764501324,
+    "objective": 7305.738503395133,
+    "unit_innovation_variance_final": 1.3641118123288987,
+    "unit_innovation_variance_last_epoch_mean": 1.3641118123288989,
+    "unit_C_calibrated_variance_final": 8.603440402212987,
+    "tail_definition": "finite-horizon final variance and final-epoch average",
+    "inverse_residual": 5.551115123125783e-17
+  }
+]

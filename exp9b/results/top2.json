@@ -1,0 +1,342 @@
+{
+  "cv": {
+    "dp-adam-iid": [
+      {
+        "task": "cv",
+        "method": "dp-adam-iid",
+        "lr": 0.0005,
+        "C": 30,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "cv",
+        "method": "dp-adam-iid",
+        "lr": 0.0005,
+        "C": 10,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ],
+    "dp-adam-sgd-bandmf": [
+      {
+        "task": "cv",
+        "method": "dp-adam-sgd-bandmf",
+        "lr": 0.003,
+        "C": 30,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "cv",
+        "method": "dp-adam-sgd-bandmf",
+        "lr": 0.003,
+        "C": 10,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ],
+    "dp-adam-momentum-bandmf": [
+      {
+        "task": "cv",
+        "method": "dp-adam-momentum-bandmf",
+        "lr": 0.005,
+        "C": 30,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "cv",
+        "method": "dp-adam-momentum-bandmf",
+        "lr": 0.005,
+        "C": 10,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ],
+    "dp-adam-momentum-bias-bandmf": [
+      {
+        "task": "cv",
+        "method": "dp-adam-momentum-bias-bandmf",
+        "lr": 0.003,
+        "C": 30,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "cv",
+        "method": "dp-adam-momentum-bias-bandmf",
+        "lr": 0.003,
+        "C": 10,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ],
+    "dp-adam-sgd-bandmf-scale": [
+      {
+        "task": "cv",
+        "method": "dp-adam-sgd-bandmf-scale",
+        "lr": 0.003,
+        "C": 100,
+        "eps_scale": 0.3,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "cv",
+        "method": "dp-adam-sgd-bandmf-scale",
+        "lr": 0.003,
+        "C": 200,
+        "eps_scale": 0.05,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ],
+    "dp-adam-momentum-bandmf-scale": [
+      {
+        "task": "cv",
+        "method": "dp-adam-momentum-bandmf-scale",
+        "lr": 0.005,
+        "C": 100,
+        "eps_scale": 0.1,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "cv",
+        "method": "dp-adam-momentum-bandmf-scale",
+        "lr": 0.005,
+        "C": 100,
+        "eps_scale": 0.05,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ],
+    "dp-adam-momentum-bias-bandmf-scale": [
+      {
+        "task": "cv",
+        "method": "dp-adam-momentum-bias-bandmf-scale",
+        "lr": 0.003,
+        "C": 200,
+        "eps_scale": 0.05,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "cv",
+        "method": "dp-adam-momentum-bias-bandmf-scale",
+        "lr": 0.003,
+        "C": 100,
+        "eps_scale": 0.3,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ]
+  },
+  "nlp": {
+    "dp-adam-iid": [
+      {
+        "task": "nlp",
+        "method": "dp-adam-iid",
+        "lr": 0.002,
+        "C": 0.3,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "nlp",
+        "method": "dp-adam-iid",
+        "lr": 0.002,
+        "C": 1,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ],
+    "dp-adam-sgd-bandmf": [
+      {
+        "task": "nlp",
+        "method": "dp-adam-sgd-bandmf",
+        "lr": 0.005,
+        "C": 1,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "nlp",
+        "method": "dp-adam-sgd-bandmf",
+        "lr": 0.005,
+        "C": 10,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ],
+    "dp-adam-momentum-bandmf": [
+      {
+        "task": "nlp",
+        "method": "dp-adam-momentum-bandmf",
+        "lr": 0.005,
+        "C": 1,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "nlp",
+        "method": "dp-adam-momentum-bandmf",
+        "lr": 0.005,
+        "C": 10,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ],
+    "dp-adam-momentum-bias-bandmf": [
+      {
+        "task": "nlp",
+        "method": "dp-adam-momentum-bias-bandmf",
+        "lr": 0.005,
+        "C": 1,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "nlp",
+        "method": "dp-adam-momentum-bias-bandmf",
+        "lr": 0.005,
+        "C": 10,
+        "eps_scale": null,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ],
+    "dp-adam-sgd-bandmf-scale": [
+      {
+        "task": "nlp",
+        "method": "dp-adam-sgd-bandmf-scale",
+        "lr": 0.005,
+        "C": 300,
+        "eps_scale": 0.01,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "nlp",
+        "method": "dp-adam-sgd-bandmf-scale",
+        "lr": 0.005,
+        "C": 300,
+        "eps_scale": 0.005,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ],
+    "dp-adam-momentum-bandmf-scale": [
+      {
+        "task": "nlp",
+        "method": "dp-adam-momentum-bandmf-scale",
+        "lr": 0.005,
+        "C": 200,
+        "eps_scale": 0.005,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "nlp",
+        "method": "dp-adam-momentum-bandmf-scale",
+        "lr": 0.005,
+        "C": 200,
+        "eps_scale": 0.01,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ],
+    "dp-adam-momentum-bias-bandmf-scale": [
+      {
+        "task": "nlp",
+        "method": "dp-adam-momentum-bias-bandmf-scale",
+        "lr": 0.005,
+        "C": 200,
+        "eps_scale": 0.005,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      },
+      {
+        "task": "nlp",
+        "method": "dp-adam-momentum-bias-bandmf-scale",
+        "lr": 0.005,
+        "C": 200,
+        "eps_scale": 0.03,
+        "seed": 20261101,
+        "epsilon": 8.0,
+        "stage": "search",
+        "smoke_phase": "search"
+      }
+    ]
+  }
+}

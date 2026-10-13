@@ -1,0 +1,19 @@
+{
+  "task": "nlp",
+  "method": "dp-adam-momentum-bandmf-scale",
+  "lr": 0.005,
+  "C": 200,
+  "eps_scale": 0.01,
+  "seed": 20261111,
+  "epsilon": 2,
+  "stage": "sweep",
+  "smoke_phase": "search",
+  "trial_id": "feae07318ab703ee12e6",
+  "status": "non_finite",
+  "error": "FloatingPointError: non-finite model/Adam state",
+  "traceback": "Traceback (most recent call last):\n  File \"/media/data/data/lt/dp-adam-correlated/exp9b/train.py\", line 119, in run\n    if not all(torch.isfinite(t).all().item() for t in tensors): raise FloatingPointError('non-finite model/Adam state')\n                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFloatingPointError: non-finite model/Adam state\n",
+  "seconds": 12.455526176840067,
+  "physical_gpu": 2,
+  "physical_batch_size": 1000,
+  "peak_allocated_bytes": 4062693888
+}

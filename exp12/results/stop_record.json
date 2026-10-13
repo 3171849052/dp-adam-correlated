@@ -1,0 +1,55 @@
+{
+  "status": "stopped_by_user",
+  "stopped_unix": 1791779592.3947885,
+  "process_group": 439941,
+  "terminated_active_trainings": [
+    {
+      "status": "stopped_by_user",
+      "seed": 20261111,
+      "trial_id": "36677dc92301ad7dd704",
+      "physical_gpu": 0,
+      "completed_logical_steps": 56,
+      "planned_total_steps": 250,
+      "completed_full_training": false,
+      "stopped_unix": 1791779592.3947885,
+      "reason": "User requested stopping the 10-seed formal experiment"
+    },
+    {
+      "status": "stopped_by_user",
+      "seed": 20261112,
+      "trial_id": "fc2d0009177e3de95822",
+      "physical_gpu": 1,
+      "completed_logical_steps": 56,
+      "planned_total_steps": 250,
+      "completed_full_training": false,
+      "stopped_unix": 1791779592.3947885,
+      "reason": "User requested stopping the 10-seed formal experiment"
+    },
+    {
+      "status": "stopped_by_user",
+      "seed": 20261113,
+      "trial_id": "e4bf5625ca615d1f4b2c",
+      "physical_gpu": 2,
+      "completed_logical_steps": 57,
+      "planned_total_steps": 250,
+      "completed_full_training": false,
+      "stopped_unix": 1791779592.3947885,
+      "reason": "User requested stopping the 10-seed formal experiment"
+    }
+  ],
+  "completed": {
+    "search": 20,
+    "recheck": 4,
+    "final": 0
+  },
+  "remaining_formal_seeds_not_started": [
+    20261114,
+    20261115,
+    20261116,
+    20261117,
+    20261118,
+    20261119,
+    20261120
+  ],
+  "no_automatic_restart": true
+}

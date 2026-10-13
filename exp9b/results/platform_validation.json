@@ -1,0 +1,118 @@
+{
+  "status": "passed",
+  "full_experiments_started": false,
+  "code_sha256": {
+    "__init__.py": "7093409930563c681f49df3003f08fe95dabc1359a14556550992356a54c6bf5",
+    "audit.py": "7c4d638d76025a5aa50717f5ad72b75abf66083f4e8b73ec65b53ec2b7d21c18",
+    "bandmf.py": "4d7ba19158703c1fcca6430b90b8c2ad72b0e4135b903b9bbf8ad7a97d339289",
+    "clipping.py": "d5155f7ce1256f28544740ae73fdb3b998f4982ec4f01df879678e6c9299df21",
+    "comparison.py": "03101a90f470fd5548f18d9b4c039aa8b4e68d63eb928322fa9b1b3c0f773a07",
+    "config.py": "e02a5b67eb99dbd9ea4ee037dbfda8974f91ba70ead95249ea64687d267e9d12",
+    "cv_model.py": "de7b23603dc94b1f5b6000a85d8f8b4485a5a81b1e9fcfdabf96daa21cf4d38c",
+    "data.py": "a9f6409105233e7cd2dc5b77e7b579dc2a3c14d60bbb7d3a5bb00779ba7bb787",
+    "final.py": "5ece55c17fe27bec521fa18cb07c560417e9e1ea02d5a2d04957e46a2936335e",
+    "frozen.py": "95ab4834f6db4931260dbf7b225faf8db6a068f680a3cbbf5cdc91f800908107",
+    "grid.py": "c4bdf2c4c91b722ad3e1aba8ea1acc6fcf1b5c645334575a4cfb4ad06cb8b0c0",
+    "launcher.py": "8f5bb81d11fc429f505d6be941a418948846655ed456be319338a00fedc6d398",
+    "nlp_model.py": "9b2e7b0cf5e900d10729eaa66742529660640be687f0cf3c43cd5eac1037d743",
+    "noise.py": "cce87676ee9e8315717b3b1f0babe2ae55d96d632a3273a6bb7a8205d6a7fcd6",
+    "privacy.py": "6e37e95ccb496245174249f30f9c3237fb809b30a031a5092e462debf2d9ac5a",
+    "report.py": "5780ef88bdd6747a021523d25f9642c7c9720ec57f6de52bb8a04a340366b3f4",
+    "search.py": "cfba43852b10de6785eacbe1f5fbe2c7500b77bec7008e6db20a1467ad01b164",
+    "stage1.py": "bfb7505b56f0db014fbe01c8d1927356ff64e166dabc1547410f1f1978528959",
+    "stage2.py": "87344054222a9175fb522f7beabfb00fe1d956852dd407ea09c1735433debda4",
+    "tests/test_clipping.py": "d667bf0a674e72a9274a7da97f176d63584ec2ca70e29b0089545503240f6deb",
+    "tests/test_comparison.py": "d882523aa5f176aff0b4dc4cba906b4f165f0c4c9a98c42d630d9294d4d19e5c",
+    "tests/test_math.py": "c1347005a0a31b2231a28def641ae793c01dec2128e8967372a065ef58d7256b",
+    "tests/test_workflow.py": "87e396ab4140cdb1c38a7218e9e2a33e9d7b7670c0160c007de50393229d3ea5",
+    "train.py": "638c8d25860e71756251f786953301505e708de57d6339c311478786823bbb6e",
+    "kernel_provenance.json": "668872100b22f648c675aab0c53a5d2bc43ee26c01a259e29fa37c42c44483ec"
+  },
+  "evidence_sha256": {
+    "unit_tests.log": "d3cc3e00ba3edb202ad476aab20a787c7e53dbdd3a73434cfaa3ea761dc8209b",
+    "tests.xml": "1e15801566b330b17d2d0a14ff03cd77b05429b4dabfc7d8e7da2e5bf77ed88e",
+    "smoke_summary.json": "b0775b3ceed0a13e1125f54c8c7a70b2b9503b1fab032203b90fa4a64ebd5a6c",
+    "assets_manifest.json": "432c7eadf1ac3eae7af7664de6b951b0fa66502f808e84b50090ea4abfd04818",
+    "stage2_cli_plan.json": "0cfc17a0a93b9d366ffc766f4ff1fc9e18819363ce3db6dfcea4d126342cb7e5",
+    "cv_grid.json": "1f819ef6e2cb972d6c3e9b2b4db1805ecf9047a6a3c9c9f55ac4efef503f0310",
+    "nlp_grid.json": "4559f37dc68082e130b52fac849c8ca56beaed9ad4573b59812a9e925b33aaf1",
+    "matrix_validation.json": "cab1862d1e05e87fa3320d66b0baed4cbf4fa51d43a44c849efc8e063a9beced",
+    "matrix_geometry_validation.json": "7615230f11bd01ce1194cc0b3ccaa46798ea25d654a16098988bee61399c4043",
+    "exp9_comparison_sources.json": "7bae69487aa17c050360600ccb072b6563ece91716625db7a7972295bc905804"
+  },
+  "matrix_cache_sha256": {
+    "matrix_cache/iid_T225.json": "66a59bce4f949f3d83e98c6f4da80366d8918113aa3c0659d33bfd55d0f77d7b",
+    "matrix_cache/iid_T225.npz": "5c851f2e5dcd57991f0dceb98bacc638e11f72599a375a85badccf9ad44cc937",
+    "matrix_cache/iid_T250.json": "dca315b4ff387a20bf7fd4369b4c6bffbc0a457d1fd400acd6c779a8f762199f",
+    "matrix_cache/iid_T250.npz": "b5321eb68a0399e1b34f05644db8ec27dc4d08c0feee3bf096a8264f41f21a41",
+    "matrix_cache/iid_T310.json": "6dcdd37d8b36b72914a5a1b501327c2c727db4b2bde8ed90838e53cc754c0e39",
+    "matrix_cache/iid_T310.npz": "ba36edef72c56bceb57ca4b4a52433d8f0a0e486a08a98077084ed652726696a",
+    "matrix_cache/momentum_bandmf_T225.json": "b4ff174e4c20d69c01b09b13eb56e211ed2947b5df6d3777eec282f4bced4491",
+    "matrix_cache/momentum_bandmf_T225.npz": "e37087fb894f159773caebc328732c65d360940032b6ec98731107fa449261d6",
+    "matrix_cache/momentum_bandmf_T250.json": "e0b836f5d18950d36da3a5981090fa7c2441d55406e3301a2537f57cf9df01fd",
+    "matrix_cache/momentum_bandmf_T250.npz": "e012ebef46ca9f8ae7e19582de392cacda085d1d394f626e45e43d08070d917a",
+    "matrix_cache/momentum_bandmf_T310.json": "6ef3fe7fbdade5c5bebc185a0a1d73ed6407bbabb1b4400528c6e19d6284719b",
+    "matrix_cache/momentum_bandmf_T310.npz": "43645636cd277e7d4d0298b301012501ad78917a25548de0e7f06a6a63246b16",
+    "matrix_cache/momentum_bias_bandmf_T225.json": "68daea5170791c18e966b8c1d2384143a172493dc89030afb8fbceb6b133dd4b",
+    "matrix_cache/momentum_bias_bandmf_T225.npz": "3bd4a98b2f0be93a8d5ea2ef4fcc5d1d55bbc5a5bee500c3c869d575cb98d25f",
+    "matrix_cache/momentum_bias_bandmf_T250.json": "eb89df052a31581133c3c29ddc2c4e14b28835e4de6b28b6f15ebb3034feb3b6",
+    "matrix_cache/momentum_bias_bandmf_T250.npz": "4fe5da040aaaa289a1f9fec2edbab872767bc1877bad4773a5e7e7f03634e17b",
+    "matrix_cache/momentum_bias_bandmf_T310.json": "22d65c983d9b618c1866e0792c941c1a9b2bbb5ff894714bf91d50498e86ddb0",
+    "matrix_cache/momentum_bias_bandmf_T310.npz": "51adbd4359895659244d04fc11873826c576e9e731096bf0b1e563adfeaccb43",
+    "matrix_cache/prefix_bandmf_T225.json": "e5a5bcd0017fd4adc5871618ad31ba0e7a0dc5453df3c4be186cbb6d03b1f585",
+    "matrix_cache/prefix_bandmf_T225.npz": "4c6724e2b296e7e5a4f9ed2f700f9c6187c92ac7b0fee1a965672d2eace829df",
+    "matrix_cache/prefix_bandmf_T250.json": "538990e7fbecde6ca45aa354aeb34ffd4fffbf387c7750edd83d725864f2c546",
+    "matrix_cache/prefix_bandmf_T250.npz": "bae0032bb318cee2b1c6fc4fcfbd159f8e43df4587fbae070cca36a4a4046d8d",
+    "matrix_cache/prefix_bandmf_T310.json": "afda0c9f9397a19739f6c94754d5bc805831b140f7289227e0ede55386648e01",
+    "matrix_cache/prefix_bandmf_T310.npz": "8266e0492570b8aa3c672c20028a1b4bb59c3b54af68f5435f56ff5f04174b97"
+  },
+  "smoke_trials": 22,
+  "smoke_logical_steps_each": 2,
+  "smoke_horizons": [
+    225,
+    250,
+    310
+  ],
+  "gpus": [
+    0,
+    1,
+    2
+  ],
+  "pairing": {
+    "status": "passed",
+    "groups": 4
+  },
+  "fifo": {
+    "status": "passed",
+    "gpu_starts": {
+      "0": 9,
+      "1": 7,
+      "2": 6
+    },
+    "peak_concurrency": {
+      "0": {
+        "cv": 1,
+        "nlp": 2
+      },
+      "1": {
+        "cv": 1,
+        "nlp": 2
+      },
+      "2": {
+        "cv": 1,
+        "nlp": 2
+      }
+    },
+    "events": 44
+  },
+  "historical_files_unchanged": true,
+  "tests": "passed",
+  "stage2_cli": "validated with --plan; no full training started",
+  "planned_full_trials": {
+    "search": 321,
+    "recheck": 56,
+    "final": 140,
+    "sweep": 126,
+    "total": 643
+  }
+}

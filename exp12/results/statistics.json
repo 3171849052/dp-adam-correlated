@@ -1,7 +1,27 @@
 {
-  "status": "running",
-  "completed_trainings": 15,
-  "search": 15,
-  "recheck": 0,
-  "final": 0
+  "formal": {
+    "n": 10,
+    "mean": 0.7228600000000001,
+    "std": 0.010389118238704283,
+    "ci95": [
+      0.7154280725209972,
+      0.730291927479003
+    ],
+    "method": "Two-sided Student t interval, sample standard deviation ddof=1"
+  },
+  "paired": {
+    "n": 10,
+    "mean": -0.04438000000000001,
+    "std": 0.005930298849505362,
+    "ci95": [
+      -0.04862228023646356,
+      -0.04013771976353646
+    ],
+    "method": "Two-sided Student t interval, sample standard deviation ddof=1"
+  },
+  "status": "completed",
+  "completed_trainings": 34,
+  "search": 20,
+  "recheck": 4,
+  "final": 10
 }

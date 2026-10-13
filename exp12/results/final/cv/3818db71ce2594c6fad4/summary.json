@@ -1,0 +1,223 @@
+{
+  "task": "cv",
+  "method": "dp-adam-momentum-bias-bandinvmf",
+  "lr": 0.005,
+  "C": 30,
+  "eps_scale": null,
+  "seed": 20261120,
+  "epsilon": 8.0,
+  "stage": "final",
+  "smoke_phase": "search",
+  "trial_id": "3818db71ce2594c6fad4",
+  "status": "completed",
+  "accuracy": 0.7077,
+  "completed_epochs": 5,
+  "optimizer_steps": 250,
+  "noise_draws": 250,
+  "innovation_tensor_draws": 38000,
+  "physical_batches": 1000,
+  "physical_batch_size": 250,
+  "planned_total_steps": 250,
+  "finite": true,
+  "initialization_sha256": "67183f703a960ac5eb6c771818f7f065e846d6c3d0f6797ae755c4788071fa28",
+  "classifier_initialization_sha256": "90d216a0ba34f06159ad37665e21435fe4d6ba11686c63d5fea9fc2459233d14",
+  "train_order_sha256": "a0c75d903840ce7fddf872e8cb7d1c93c001b2a349aafc51296d078ed4b25b59",
+  "rng_trace": [
+    "7a514d7b248aa27ea95065ceb52288bf86b9aed859f767d9af3370ff58fa1f20",
+    "da17dcff960aa867a3357c9ac3dc20a0c518a8526711d8f859c6d1bf558a9d8a",
+    "66424f05bd370612ce3edd4f529aff5fdfb58d7946fa9091f8ee32f66136a53f",
+    "c42cf57e593d804fccebeb9b40f84fdefd34c891aa4a01608e4aa0e84407b913",
+    "3c4a8dac793438ace9a5b6e1ebb2d8b32ab2ddedb8acc9730b2320440e5616ce"
+  ],
+  "strategy_sha256": "6c2c02df3074a8e4ab2716d7502dd6ceafdc769004bb7e1ce8f67ed1f85ef22a",
+  "workload_sha256": "cbee115275b029cccd92d0711a4815aaf18c428b6de9f78791930836df026db9",
+  "coefficients": [
+    1.0,
+    -0.9094549704450474,
+    -0.048730330668649055,
+    2.160301037704926e-05
+  ],
+  "file_sha256": {
+    "config.json": "9b97f3d76f03cb23badddcc97e552fb00b3977b346e79856e3d1192192be9e76",
+    "checkpoint.pt": "a1e50f713b61290ab6a6a3b55fff871f1608dfa1c57d15f5025c37008de334e9",
+    "matrices.npz": "f1c17ea3d47c87988713f10db35a0dbfa7c134597dc4ee387d9c90da3db9bc9a",
+    "train_order.npy": "a0c75d903840ce7fddf872e8cb7d1c93c001b2a349aafc51296d078ed4b25b59",
+    "metrics.csv": "c1ffd8b4d2a906438950c6146cd5f3c1f1d34c603ed5a1f27d9991cb6de2cf2d",
+    "mechanism_metrics.csv": "e3be600db637572850a67803e6b65385d4b2aee074ca7745e69dfee96480fee4"
+  },
+  "code_sha256": {
+    "__init__.py": "d8dbe6f8eb809ac4949de59ae5f15a409292a231c0924e6670970f0194090a98",
+    "audit.py": "c2c70deb9440c4ce7e17ee0a1eb34a51e46e96769533e4adb0cbb5928c921c9c",
+    "bandinvmf.py": "1a530e3cb910615a1f41958034a6b82ececfe999470d3f339e9c28cb0ed59c6a",
+    "clipping.py": "d5155f7ce1256f28544740ae73fdb3b998f4982ec4f01df879678e6c9299df21",
+    "config.py": "2681cd7b4a98046ccec12312d7328f87023fd523d54d6f82e240766bd8284499",
+    "cv_model.py": "de7b23603dc94b1f5b6000a85d8f8b4485a5a81b1e9fcfdabf96daa21cf4d38c",
+    "data.py": "32e38f6a6b8087ec2515ccddd6e09cf2eb1030b31fcd5547f66164ca268f8d3b",
+    "frozen.py": "e0381d07adb6ad4c353f896b46d7a813d036645c1bc7c4984a15cee1127d0b23",
+    "launcher.py": "22e8689eeee4625418220cb84ca9e30f6126e4c51493e4303bfddeb89ef13ede",
+    "noise.py": "de6241eaba3ca673175c9fd83a573caf039cabbbc7b28e0f2ae79a27f7be0f8b",
+    "privacy.py": "6e37e95ccb496245174249f30f9c3237fb809b30a031a5092e462debf2d9ac5a",
+    "report.py": "5b0bd8bd29dee7b75079e45b2b17038ed743a22d90e0154da2b3a38c8605b779",
+    "rng.py": "2f9c9821d2d10ef2a3db74a96453d8a110bf2950283f173434dae732ed10a257",
+    "run.py": "876dbf061ca6bc9c91049e89d8c65e6d1cc3e261838925d2f9abdf5517d7fc6c",
+    "train.py": "0ec7821c1ee80b930f6659c8e57521f0a25a7911eff85c486603f5140754c953",
+    "tests/test_math.py": "ffd0ce68ae8e5ccded7f01ecb7b811efaad793ba5273915c10dd8a9772b99880",
+    "source_provenance.json": "a26deba75b7927335bf1f48408a4166e1f1893a44b1dd1d9ef0d07604e2a4222"
+  },
+  "assets_manifest_sha256": "8b8890107ec64e0ddad317872fbffd713b3d8f945d98719c93849516965afe58",
+  "calibration": {
+    "target_mu": 1.6660305978457184,
+    "sensitivity": 8.454737363775065,
+    "innovation_std_sum": 152.24337490633548,
+    "adjacency": "add_remove_zero_out",
+    "k": 5,
+    "b_participation": 50,
+    "sampling_amplification": false,
+    "verified_full_epsilon": 8.000000000000005,
+    "delta": 1e-05,
+    "target_epsilon": 8.0
+  },
+  "actual_epsilon": 8.000000000000005,
+  "epochs": [
+    {
+      "epoch": 1,
+      "step": 50,
+      "train_loss": 4.027578747558594,
+      "clip_fraction": 0.99982,
+      "epsilon": 2.7544685770978994,
+      "accuracy": 0.277,
+      "validation_loss": 2.9554741943359377,
+      "validation_examples": 10000
+    },
+    {
+      "epoch": 2,
+      "step": 100,
+      "train_loss": 2.6682840588378904,
+      "clip_fraction": 0.97874,
+      "epsilon": 4.410655651094473,
+      "accuracy": 0.4977,
+      "validation_loss": 1.8962386505126954,
+      "validation_examples": 10000
+    },
+    {
+      "epoch": 3,
+      "step": 150,
+      "train_loss": 2.054104419555664,
+      "clip_fraction": 0.90256,
+      "epsilon": 5.75754326527879,
+      "accuracy": 0.6096,
+      "validation_loss": 1.4088462524414063,
+      "validation_examples": 10000
+    },
+    {
+      "epoch": 4,
+      "step": 200,
+      "train_loss": 1.7417344018554688,
+      "clip_fraction": 0.82666,
+      "epsilon": 6.933138478456128,
+      "accuracy": 0.6734,
+      "validation_loss": 1.1486859649658203,
+      "validation_examples": 10000
+    },
+    {
+      "epoch": 5,
+      "step": 250,
+      "train_loss": 1.5735175341796874,
+      "clip_fraction": 0.76734,
+      "epsilon": 8.000000000000005,
+      "accuracy": 0.7077,
+      "validation_loss": 1.000307341003418,
+      "validation_examples": 10000
+    }
+  ],
+  "official_evaluation_used": true,
+  "seconds": 686.3047212362289,
+  "train_seconds": 546.3784714341164,
+  "logical_step_seconds": 2.1855138857364653,
+  "peak_allocated_bytes": 8398219776,
+  "peak_reserved_bytes": 8808038400,
+  "physical_gpu": 3,
+  "device": "NVIDIA GeForce RTX 3080 Ti",
+  "result_dir": "final/cv/3818db71ce2594c6fad4",
+  "first_step_diagnostics": {
+    "step": 1,
+    "epoch": 1,
+    "train_loss": 5.239381469726562,
+    "clip_fraction": 1.0,
+    "gradient_norm_mean": 88.5061484375,
+    "gradient_norm_max": 171.93121337890625,
+    "step_seconds": 2.941964216530323,
+    "innovation_std_sum": 152.24337490633548,
+    "noise_marginal_std_sum": 152.24337490633548
+  },
+  "last_step_diagnostics": {
+    "step": 250,
+    "epoch": 5,
+    "train_loss": 1.5290046691894532,
+    "clip_fraction": 0.739,
+    "gradient_norm_mean": 113.11732421875,
+    "gradient_norm_max": 682.9381103515625,
+    "step_seconds": 2.2094253674149513,
+    "innovation_std_sum": 152.24337490633548,
+    "noise_marginal_std_sum": 205.92192552932067
+  },
+  "matrix_optimization": {
+    "objective": "fixed_participation_sensitivity_squared * mean_full_workload_error",
+    "optimized_objective": 176.59713514173578,
+    "initial_objective": 179.64161991688925,
+    "full_workload_shape": [
+      250,
+      250
+    ],
+    "optimizer": "Nelder-Mead, two fixed starts",
+    "iterations": 280,
+    "converged": true,
+    "d0_fixed": 1.0,
+    "horizon": 250,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "coefficients_sha256": "beb41b29f8a2d7bd96c0dac6e893e60c17465f62e2ebbb9cd0f61b1f84ff01ab",
+    "strategy_sha256": "6c2c02df3074a8e4ab2716d7502dd6ceafdc769004bb7e1ce8f67ed1f85ef22a",
+    "workload_sha256": "cbee115275b029cccd92d0711a4815aaf18c428b6de9f78791930836df026db9",
+    "old_filter": {
+      "coefficients": [
+        1.0,
+        -0.53161943769869,
+        -0.0779998119461293,
+        -0.2795535556950146
+      ],
+      "sensitivity": 4.065608121489227,
+      "old_workload_error": 421.9031628843412,
+      "new_workload_error": 13.761605110709967,
+      "old_objective": 6973.708848664393,
+      "new_objective": 227.46790205669043
+    },
+    "new_filter": {
+      "coefficients": [
+        1.0,
+        -0.9094549704450474,
+        -0.048730330668649055,
+        2.160301037704926e-05
+      ],
+      "sensitivity": 8.454737363775065,
+      "old_workload_error": 148.4341491771763,
+      "new_workload_error": 2.4704917691904753,
+      "old_objective": 10610.45652075975,
+      "new_objective": 176.59713514173578
+    },
+    "old_optimization": {
+      "objective": "fixed_participation_sensitivity_squared * mean_full_workload_error",
+      "optimized_objective": 6973.708848664393,
+      "initial_objective": 9523.045873689221,
+      "full_workload_shape": [
+        250,
+        250
+      ],
+      "optimizer": "Nelder-Mead, two fixed starts",
+      "iterations": 235,
+      "converged": true,
+      "d0_fixed": 1.0
+    },
+    "optimality": "Exp9 numerical local optimization, no global optimum claim"
+  }
+}
