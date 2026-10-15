@@ -1,0 +1,186 @@
+{
+  "protocol": {
+    "kind": "full",
+    "seeds": [
+      20261111,
+      20261112,
+      20261113,
+      20261114,
+      20261115,
+      20261116,
+      20261117,
+      20261118,
+      20261119,
+      20261120
+    ],
+    "horizons": [
+      225,
+      250,
+      310
+    ],
+    "coordinates": 4096,
+    "holdouts_per_fit": 3,
+    "methods": [
+      "iid",
+      "exp9_momentum_bias",
+      "expected_self_consistent",
+      "actual_self_consistent"
+    ],
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "eps": 1e-08,
+    "epsilon": 8.0,
+    "delta": 1e-05,
+    "epochs": 5,
+    "clip": 1.0,
+    "logical_batch": 1000,
+    "learning_rate": 1.0,
+    "normalization": "mean over T and K; cumulative errors at all prefixes",
+    "optimizer": {
+      "method": "Nelder-Mead",
+      "maxiter": 1600,
+      "xatol": 1e-09,
+      "fatol": 1e-07,
+      "max_inverse_abs": 100000000.0,
+      "starts": [
+        "Exp9 four-band cumulative-momentum BISR",
+        "IID"
+      ]
+    },
+    "dtype": "float64",
+    "innovation_rng": "NumPy PCG64, one fixed draw per seed/horizon",
+    "holdout_rng": "fit_seed + 100000000 + holdout_index*1000000 (index starts at 0)",
+    "task_scope": "pure-noise numerical simulation only",
+    "calibration": "Exp9 GDP, add/remove zero-out, fixed 5 participations, no amplification"
+  },
+  "assignments": {
+    "0": [
+      {
+        "seed": 20261111,
+        "T": 225
+      },
+      {
+        "seed": 20261111,
+        "T": 250
+      },
+      {
+        "seed": 20261111,
+        "T": 310
+      },
+      {
+        "seed": 20261115,
+        "T": 225
+      },
+      {
+        "seed": 20261115,
+        "T": 250
+      },
+      {
+        "seed": 20261115,
+        "T": 310
+      },
+      {
+        "seed": 20261119,
+        "T": 225
+      },
+      {
+        "seed": 20261119,
+        "T": 250
+      },
+      {
+        "seed": 20261119,
+        "T": 310
+      }
+    ],
+    "1": [
+      {
+        "seed": 20261112,
+        "T": 225
+      },
+      {
+        "seed": 20261112,
+        "T": 250
+      },
+      {
+        "seed": 20261112,
+        "T": 310
+      },
+      {
+        "seed": 20261116,
+        "T": 225
+      },
+      {
+        "seed": 20261116,
+        "T": 250
+      },
+      {
+        "seed": 20261116,
+        "T": 310
+      },
+      {
+        "seed": 20261120,
+        "T": 225
+      },
+      {
+        "seed": 20261120,
+        "T": 250
+      },
+      {
+        "seed": 20261120,
+        "T": 310
+      }
+    ],
+    "2": [
+      {
+        "seed": 20261113,
+        "T": 225
+      },
+      {
+        "seed": 20261113,
+        "T": 250
+      },
+      {
+        "seed": 20261113,
+        "T": 310
+      },
+      {
+        "seed": 20261117,
+        "T": 225
+      },
+      {
+        "seed": 20261117,
+        "T": 250
+      },
+      {
+        "seed": 20261117,
+        "T": 310
+      }
+    ],
+    "3": [
+      {
+        "seed": 20261114,
+        "T": 225
+      },
+      {
+        "seed": 20261114,
+        "T": 250
+      },
+      {
+        "seed": 20261114,
+        "T": 310
+      },
+      {
+        "seed": 20261118,
+        "T": 225
+      },
+      {
+        "seed": 20261118,
+        "T": 250
+      },
+      {
+        "seed": 20261118,
+        "T": 310
+      }
+    ]
+  }
+}

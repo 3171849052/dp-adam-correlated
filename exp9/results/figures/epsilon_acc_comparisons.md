@@ -6,6 +6,8 @@ including epsilon=8. Error bars show sample standard deviation (ddof=1).
 LR/C/eps_scale stay fixed at the configuration selected at epsilon=8.
 
 Source: ../privacy_utility.json; all 56 points checked against ../final_results.json and ../sweep_results.json.
+Momentum-Bias2: Exp12 BC2-Naive BandInvMF, from ../../../exp12/results/final_results.json.
+Only CV at epsilon=8 is available; its mean/std use the same three seeds listed above (not all ten Exp12 seeds).
 Displayed values: [CSV](epsilon_acc_plot_data.csv).
 
 Regenerate from the repository root:
@@ -28,3 +30,7 @@ conda run --no-capture-output -n curve python -B -m exp9.runtime.plot_epsilon_co
 ![epsilon_acc_scale_vs_non_scale_momentum_bias](epsilon_acc_scale_vs_non_scale_momentum_bias.png)
 
 [PNG](epsilon_acc_scale_vs_non_scale_momentum_bias.png) · [PDF](epsilon_acc_scale_vs_non_scale_momentum_bias.pdf)
+
+![epsilon_acc_iid_momentum_bias_sgd_scale_vs_non_scale](epsilon_acc_iid_momentum_bias_sgd_scale_vs_non_scale.png)
+
+[PNG](epsilon_acc_iid_momentum_bias_sgd_scale_vs_non_scale.png) · [PDF](epsilon_acc_iid_momentum_bias_sgd_scale_vs_non_scale.pdf)

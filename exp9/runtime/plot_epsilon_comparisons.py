@@ -1,4 +1,4 @@
-"""Plot existing Exp9 epsilon results without changing frozen experiment code.
+"""Plot existing Exp9 epsilon results and the available Exp12 CV result.
 
 Run from the repository root:
     conda run --no-capture-output -n curve python -B -m exp9.runtime.plot_epsilon_comparisons
@@ -22,6 +22,7 @@ TASKS = {"cv": "CV: CIFAR-100", "nlp": "NLP: SST-2"}
 WORKLOAD_LABELS = {"sgd": "SGD", "momentum": "Momentum", "momentum-bias": "Momentum-Bias"}
 COLORS = ("#0072B2", "#E69F00", "#009E73", "#CC79A7")
 MARKERS = ("o", "s", "^", "D")
+BIAS2 = "exp12-momentum-bias2-bandinvmf"
 
 
 def load_points():
@@ -48,10 +49,28 @@ def load_points():
     return lookup
 
 
-def draw_curve(ax, points, task, method, label, color, marker, linestyle="-"):
-    rows = [points[task, method, epsilon] for epsilon in EPSILONS]
+def load_exp12_points():
+    """Use the same three seeds as Exp9; Exp12 only has CV at epsilon=8."""
+    source = RESULTS.parents[1] / "exp12/results"
+    raw = json.loads((source / "final_results.json").read_text())
+    frozen = json.loads((source / "frozen_configs.json").read_text())
+    runs = sorted((r for r in raw if r["seed"] in FINAL_SEEDS[:3]), key=lambda r: r["seed"])
+    assert [r["seed"] for r in runs] == list(FINAL_SEEDS[:3])
+    for run in runs:
+        assert run["task"] == "cv" and run["epsilon"] == 8
+        assert run["method"] == MF[-1] and run["stage"] == "final"
+        assert run["status"] == "completed" and run["completed_epochs"] == 5
+        assert run["official_evaluation_used"]
+        assert all(run[key] == frozen[key] for key in ("lr", "C", "eps_scale"))
+    values = np.asarray([r["accuracy"] for r in runs])
+    assert np.isfinite(values).all() and ((0 <= values) & (values <= 1)).all()
+    return {("cv", BIAS2, 8): dict(n=3, mean=values.mean(), std=values.std(ddof=1))}
+
+
+def draw_curve(ax, points, task, method, label, color, marker, linestyle="-", epsilons=EPSILONS):
+    rows = [points[task, method, epsilon] for epsilon in epsilons]
     ax.errorbar(
-        EPSILONS, [100 * r["mean"] for r in rows],
+        epsilons, [100 * r["mean"] for r in rows],
         yerr=[100 * r["std"] for r in rows], label=label,
         color=color, marker=marker, linestyle=linestyle, linewidth=2,
         markersize=6, capsize=3.5, elinewidth=1.2, markeredgecolor="white", markeredgewidth=0.6,
@@ -99,18 +118,48 @@ def save_figure(fig, axes, name, legend_columns):
     plt.close(fig)
 
 
+def plot_iid_momentum_bias_sgd(points):
+    """Compare IID with the scaled and non-scaled Momentum-Bias/SGD methods."""
+    curves = (
+        (IID, "IID", COLORS[0], "o", "-"),
+        (MF[-1], "Momentum-Bias", COLORS[3], "D", "-"),
+        (MF[-1] + "-scale", "Momentum-Bias-Scale", "#6F4C9B", "v", "--"),
+        (MF[0], "SGD", COLORS[1], "s", "-"),
+        (MF[0] + "-scale", "SGD-Scale", "#D55E00", "P", "--"),
+    )
+    fig, axes = make_figure(
+        points, "IID, Momentum-Bias and SGD: Scale vs. Non-scale",
+        range_methods=tuple(curve[0] for curve in curves),
+    )
+    axes[0].set_ylim(bottom=20)
+    axes[1].set_ylim(70, 82)
+    fig.subplots_adjust(bottom=0.34)
+    for ax, task in zip(axes, TASKS):
+        for method, label, color, marker, linestyle in curves:
+            draw_curve(ax, points, task, method, label, color, marker, linestyle)
+    name = "epsilon_acc_iid_momentum_bias_sgd_scale_vs_non_scale"
+    save_figure(fig, axes, name, 3)
+    return name
+
+
 def main():
     points = load_points()
+    exp12_points = load_exp12_points()
     plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 11, "pdf.fonttype": 42})
-    fig, axes = make_figure(points, "Non-scale methods", range_methods=(IID, *MF),
+    fig, axes = make_figure({**points, **exp12_points}, "Non-scale methods", range_methods=(IID, *MF, BIAS2),
                             y_limits={"nlp": (71, 81)})
+    fig.subplots_adjust(bottom=0.34)
     labels = ("IID", "SGD (BandInvMF)", "Momentum (BandInvMF)", "Momentum-Bias (BandInvMF)")
     for ax, task in zip(axes, TASKS):
         for method, label, color, marker in zip((IID, *MF), labels, COLORS, MARKERS):
             draw_curve(ax, points, task, method, label, color, marker)
-    save_figure(fig, axes, "epsilon_acc_non_scale", 4)
+    draw_curve(axes[0], exp12_points, "cv", BIAS2, "Momentum-Bias2", "#D55E00", "P",
+               linestyle="none", epsilons=(8,))
+    fig.text(0.5, 0.01, r"Momentum-Bias2: Exp12; CV only, $\epsilon=8$", ha="center",
+             fontsize=9, color="#52606D")
+    save_figure(fig, axes, "epsilon_acc_non_scale", 3)
 
-    filenames = ["epsilon_acc_non_scale"]
+    filenames = ["epsilon_acc_non_scale", plot_iid_momentum_bias_sgd(points)]
     for workload, method in zip(WORKLOADS, MF):
         limits = {"cv": (38, 77), "nlp": (53, 81)} if workload == "sgd" else None
         fig, axes = make_figure(points, f"{WORKLOAD_LABELS[workload]} workload (BandInvMF): Scale vs. Non-scale",
@@ -133,6 +182,9 @@ def main():
                     row = points[task, method, epsilon]
                     writer.writerow(dict(task=task, method=method, epsilon=epsilon, n=row["n"],
                                          acc_mean_percent=100 * row["mean"], acc_std_percent=100 * row["std"]))
+        for (task, method, epsilon), row in exp12_points.items():
+            writer.writerow(dict(task=task, method=method, epsilon=epsilon, n=row["n"],
+                                 acc_mean_percent=100 * row["mean"], acc_std_percent=100 * row["std"]))
 
     lines = [
         "# Exp9 epsilon–ACC comparisons", "",
@@ -141,6 +193,8 @@ def main():
         "including epsilon=8. Error bars show sample standard deviation (ddof=1).",
         "LR/C/eps_scale stay fixed at the configuration selected at epsilon=8.", "",
         "Source: ../privacy_utility.json; all 56 points checked against ../final_results.json and ../sweep_results.json.",
+        "Momentum-Bias2: Exp12 BC2-Naive BandInvMF, from ../../../exp12/results/final_results.json.",
+        "Only CV at epsilon=8 is available; its mean/std use the same three seeds listed above (not all ten Exp12 seeds).",
         "Displayed values: [CSV](epsilon_acc_plot_data.csv).", "",
         "Regenerate from the repository root:", "```bash",
         "conda run --no-capture-output -n curve python -B -m exp9.runtime.plot_epsilon_comparisons", "```", "",
@@ -149,6 +203,8 @@ def main():
         lines.extend([f"![{name}]({name}.png)", "", f"[PNG]({name}.png) · [PDF]({name}.pdf)", ""])
     (RESULTS / "figures/epsilon_acc_comparisons.md").write_text("\n".join(lines))
     print("Validated 56 epsilon/method/task points against 3 common raw seeds each.")
+    row = exp12_points["cv", BIAS2, 8]
+    print(f"Exp12 Momentum-Bias2: CV epsilon=8, n=3, ACC={100 * row['mean']:.4f}% +/- {100 * row['std']:.4f} pp.")
     for name in filenames:
         print(f"Saved {RESULTS / 'figures' / name}.png / .pdf")
 

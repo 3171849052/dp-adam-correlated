@@ -1,0 +1,220 @@
+{
+  "protocol": {
+    "kind": "full",
+    "seeds": [
+      20261111,
+      20261112,
+      20261113,
+      20261114,
+      20261115,
+      20261116,
+      20261117,
+      20261118,
+      20261119,
+      20261120
+    ],
+    "horizons": [
+      225,
+      250,
+      310
+    ],
+    "coordinates": 4096,
+    "holdouts_per_fit": 3,
+    "methods": [
+      "iid",
+      "exp9_momentum_bias",
+      "expected_self_consistent",
+      "actual_self_consistent"
+    ],
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "eps": 1e-08,
+    "epsilon": 8.0,
+    "delta": 1e-05,
+    "epochs": 5,
+    "clip": 1.0,
+    "logical_batch": 1000,
+    "learning_rate": 1.0,
+    "normalization": "mean over T and K; cumulative errors at all prefixes",
+    "optimizer": {
+      "method": "Nelder-Mead",
+      "maxiter": 1600,
+      "xatol": 1e-09,
+      "fatol": 1e-07,
+      "max_inverse_abs": 100000000.0,
+      "starts": [
+        "Exp9 four-band cumulative-momentum BISR",
+        "IID"
+      ]
+    },
+    "dtype": "float64",
+    "innovation_rng": "NumPy PCG64, one fixed draw per seed/horizon",
+    "holdout_rng": "fit_seed + 100000000 + holdout_index*1000000 (index starts at 0)",
+    "task_scope": "pure-noise numerical simulation only",
+    "calibration": "Exp9 GDP, add/remove zero-out, fixed 5 participations, no amplification"
+  },
+  "assignments": {
+    "0": [
+      {
+        "seed": 20261111,
+        "T": 225
+      },
+      {
+        "seed": 20261111,
+        "T": 250
+      },
+      {
+        "seed": 20261111,
+        "T": 310
+      },
+      {
+        "seed": 20261115,
+        "T": 225
+      },
+      {
+        "seed": 20261115,
+        "T": 250
+      },
+      {
+        "seed": 20261115,
+        "T": 310
+      },
+      {
+        "seed": 20261119,
+        "T": 225
+      },
+      {
+        "seed": 20261119,
+        "T": 250
+      },
+      {
+        "seed": 20261119,
+        "T": 310
+      }
+    ],
+    "1": [
+      {
+        "seed": 20261112,
+        "T": 225
+      },
+      {
+        "seed": 20261112,
+        "T": 250
+      },
+      {
+        "seed": 20261112,
+        "T": 310
+      },
+      {
+        "seed": 20261116,
+        "T": 225
+      },
+      {
+        "seed": 20261116,
+        "T": 250
+      },
+      {
+        "seed": 20261116,
+        "T": 310
+      },
+      {
+        "seed": 20261120,
+        "T": 225
+      },
+      {
+        "seed": 20261120,
+        "T": 250
+      },
+      {
+        "seed": 20261120,
+        "T": 310
+      }
+    ],
+    "2": [
+      {
+        "seed": 20261113,
+        "T": 225
+      },
+      {
+        "seed": 20261113,
+        "T": 250
+      },
+      {
+        "seed": 20261113,
+        "T": 310
+      },
+      {
+        "seed": 20261117,
+        "T": 225
+      },
+      {
+        "seed": 20261117,
+        "T": 250
+      },
+      {
+        "seed": 20261117,
+        "T": 310
+      }
+    ],
+    "3": [
+      {
+        "seed": 20261114,
+        "T": 225
+      },
+      {
+        "seed": 20261114,
+        "T": 250
+      },
+      {
+        "seed": 20261114,
+        "T": 310
+      },
+      {
+        "seed": 20261118,
+        "T": 225
+      },
+      {
+        "seed": 20261118,
+        "T": 250
+      },
+      {
+        "seed": 20261118,
+        "T": 310
+      }
+    ]
+  },
+  "source_sha256": {
+    "__init__.py": "01fac55ce63f4d01c444465c59dea3a54f0616b004286d32591b3a553c0d176b",
+    "assets.py": "ab97eadb4478a9d52803c36a329e4a73cd3f48f393cabad16d7a48cbc6626b5b",
+    "io.py": "9884707fe146de07dd4fc47b84fe6dac061de8c152de1cdc1243805281affd6b",
+    "math.py": "4847a3b6c240614c85608b049918b2a75210a04e96c6dad653ecfe27f86ee347",
+    "report.py": "9a74991ddefa60d85415298666788e09ad1d8a1f9b7ece7f54963058ee15c485",
+    "run.py": "465a274425ad1bd122418423866afab8a56a936e426da1ddab2b7a2bee58cd10",
+    "tests/test_math.py": "01b8fff64da6c5f3f50670a1c838ef98c2745149a378737bcc404a0a8523d958",
+    "tests/test_protocol.py": "9033ccd0638d2a8fbe2ed8551f5bcb72abf332a6224f66f35ac67c2c1f6d74db",
+    "verify_smoke.py": "5c0d53746452b600dda6664e8dcc78b99ea74ce4f338d4c56e5bb18304790641"
+  },
+  "assets_sha256": "99ef19e04d1e0e21adaef758abdcd3e9b9da46c83c169515986e94a71fd9f034",
+  "versions": {
+    "python": "3.11.15 (main, Jun 11 2026, 15:20:16) [GCC 14.3.0]",
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "torch": "2.13.0+cu126",
+    "cuda": "12.6"
+  },
+  "launch_command": [
+    "/media/data/data/lt/dp-adam-correlated/exp13/run.py",
+    "--gpus",
+    "0",
+    "1",
+    "2",
+    "3",
+    "--coordinates",
+    "4096",
+    "--holdout-seeds",
+    "3",
+    "--output",
+    "exp13/results/full"
+  ],
+  "output": "/media/data/data/lt/dp-adam-correlated/exp13/results/full"
+}
