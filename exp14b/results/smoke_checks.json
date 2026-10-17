@@ -1,0 +1,30 @@
+[
+  {
+    "method": "dp-adam-iid",
+    "gpu": 0,
+    "steps": 2,
+    "finite": true,
+    "initialization_exact": true
+  },
+  {
+    "method": "dp-adam-sgd-bandinvmf",
+    "gpu": 1,
+    "steps": 2,
+    "finite": true,
+    "initialization_exact": true
+  },
+  {
+    "method": "dp-adam-momentum-bandinvmf",
+    "gpu": 2,
+    "steps": 2,
+    "finite": true,
+    "initialization_exact": true
+  },
+  {
+    "method": "dp-adam-momentum-bias-bandinvmf",
+    "gpu": 3,
+    "steps": 2,
+    "finite": true,
+    "initialization_exact": true
+  }
+]

@@ -1,0 +1,85 @@
+{
+  "status": "passed",
+  "optimizer_all_eps_float64": true,
+  "selection_tiebreak": true,
+  "split": [
+    45000,
+    5000
+  ],
+  "checkpoint": "/media/data/data/lt/dp-adam-correlated/cache/huggingface/hub/models--timm--vit_tiny_patch16_224.augreg_in21k_ft_in1k/snapshots/7d3afdd0cf93ad84d986eb2d6bcc5812ebd0b106/model.safetensors",
+  "checkpoint_sha256": "fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed",
+  "checks": [
+    {
+      "method": "dp-adam-iid",
+      "stage": "search",
+      "steps": 225,
+      "reference": "/media/data/data/lt/dp-adam-correlated/exp9/results/search/cv/35d3f60c1199087c6bc8",
+      "matrix_exact": true,
+      "calibration": true,
+      "noise_exact": true
+    },
+    {
+      "method": "dp-adam-iid",
+      "stage": "final",
+      "steps": 250,
+      "reference": "/media/data/data/lt/dp-adam-correlated/exp9/results/final/cv/b2bf7eb507fc011b9e63",
+      "matrix_exact": true,
+      "calibration": true,
+      "noise_exact": true
+    },
+    {
+      "method": "dp-adam-sgd-bandinvmf",
+      "stage": "search",
+      "steps": 225,
+      "reference": "/media/data/data/lt/dp-adam-correlated/exp9/results/search/cv/177642e45f059536614a",
+      "matrix_exact": true,
+      "calibration": true,
+      "noise_exact": true
+    },
+    {
+      "method": "dp-adam-sgd-bandinvmf",
+      "stage": "final",
+      "steps": 250,
+      "reference": "/media/data/data/lt/dp-adam-correlated/exp9/results/final/cv/a4ca6910ffa4743845f7",
+      "matrix_exact": true,
+      "calibration": true,
+      "noise_exact": true
+    },
+    {
+      "method": "dp-adam-momentum-bandinvmf",
+      "stage": "search",
+      "steps": 225,
+      "reference": "/media/data/data/lt/dp-adam-correlated/exp9/results/search/cv/012be8ce0087bfbaa803",
+      "matrix_exact": true,
+      "calibration": true,
+      "noise_exact": true
+    },
+    {
+      "method": "dp-adam-momentum-bandinvmf",
+      "stage": "final",
+      "steps": 250,
+      "reference": "/media/data/data/lt/dp-adam-correlated/exp9/results/final/cv/5d12753907fdbcabafbd",
+      "matrix_exact": true,
+      "calibration": true,
+      "noise_exact": true
+    },
+    {
+      "method": "dp-adam-momentum-bias-bandinvmf",
+      "stage": "search",
+      "steps": 225,
+      "reference": "/media/data/data/lt/dp-adam-correlated/exp9/results/search/cv/2aa3f034525c08e5b327",
+      "matrix_exact": true,
+      "calibration": true,
+      "noise_exact": true
+    },
+    {
+      "method": "dp-adam-momentum-bias-bandinvmf",
+      "stage": "final",
+      "steps": 250,
+      "reference": "/media/data/data/lt/dp-adam-correlated/exp9/results/final/cv/1c9dfd58a8210743e8cb",
+      "matrix_exact": true,
+      "calibration": true,
+      "noise_exact": true
+    }
+  ]
+}
