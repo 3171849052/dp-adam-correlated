@@ -1,0 +1,79 @@
+{
+  "status": "passed",
+  "optimizer_float64_reference": true,
+  "state_save_restore_exact": true,
+  "checks": [
+    {
+      "task": "cv",
+      "method": "dp-adam-iid",
+      "steps": 250,
+      "matrix_exact": true,
+      "calibration_exact": true,
+      "noise_stream_exact": true,
+      "order_exact": true
+    },
+    {
+      "task": "cv",
+      "method": "dp-adam-sgd-bandinvmf",
+      "steps": 250,
+      "matrix_exact": true,
+      "calibration_exact": true,
+      "noise_stream_exact": true,
+      "order_exact": true
+    },
+    {
+      "task": "cv",
+      "method": "dp-adam-momentum-bandinvmf",
+      "steps": 250,
+      "matrix_exact": true,
+      "calibration_exact": true,
+      "noise_stream_exact": true,
+      "order_exact": true
+    },
+    {
+      "task": "cv",
+      "method": "dp-adam-momentum-bias-bandinvmf",
+      "steps": 250,
+      "matrix_exact": true,
+      "calibration_exact": true,
+      "noise_stream_exact": true,
+      "order_exact": true
+    },
+    {
+      "task": "nlp",
+      "method": "dp-adam-iid",
+      "steps": 310,
+      "matrix_exact": true,
+      "calibration_exact": true,
+      "noise_stream_exact": true,
+      "order_exact": true
+    },
+    {
+      "task": "nlp",
+      "method": "dp-adam-sgd-bandinvmf",
+      "steps": 310,
+      "matrix_exact": true,
+      "calibration_exact": true,
+      "noise_stream_exact": true,
+      "order_exact": true
+    },
+    {
+      "task": "nlp",
+      "method": "dp-adam-momentum-bandinvmf",
+      "steps": 310,
+      "matrix_exact": true,
+      "calibration_exact": true,
+      "noise_stream_exact": true,
+      "order_exact": true
+    },
+    {
+      "task": "nlp",
+      "method": "dp-adam-momentum-bias-bandinvmf",
+      "steps": 310,
+      "matrix_exact": true,
+      "calibration_exact": true,
+      "noise_stream_exact": true,
+      "order_exact": true
+    }
+  ]
+}

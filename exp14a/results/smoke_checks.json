@@ -1,0 +1,66 @@
+[
+  {
+    "task": "cv",
+    "method": "dp-adam-iid",
+    "gpu": 0,
+    "finite": true,
+    "paired_artifacts": true,
+    "steps": 2
+  },
+  {
+    "task": "cv",
+    "method": "dp-adam-sgd-bandinvmf",
+    "gpu": 1,
+    "finite": true,
+    "paired_artifacts": true,
+    "steps": 2
+  },
+  {
+    "task": "cv",
+    "method": "dp-adam-momentum-bandinvmf",
+    "gpu": 2,
+    "finite": true,
+    "paired_artifacts": true,
+    "steps": 2
+  },
+  {
+    "task": "cv",
+    "method": "dp-adam-momentum-bias-bandinvmf",
+    "gpu": 3,
+    "finite": true,
+    "paired_artifacts": true,
+    "steps": 2
+  },
+  {
+    "task": "nlp",
+    "method": "dp-adam-iid",
+    "gpu": 1,
+    "finite": true,
+    "paired_artifacts": true,
+    "steps": 2
+  },
+  {
+    "task": "nlp",
+    "method": "dp-adam-sgd-bandinvmf",
+    "gpu": 3,
+    "finite": true,
+    "paired_artifacts": true,
+    "steps": 2
+  },
+  {
+    "task": "nlp",
+    "method": "dp-adam-momentum-bandinvmf",
+    "gpu": 0,
+    "finite": true,
+    "paired_artifacts": true,
+    "steps": 2
+  },
+  {
+    "task": "nlp",
+    "method": "dp-adam-momentum-bias-bandinvmf",
+    "gpu": 2,
+    "finite": true,
+    "paired_artifacts": true,
+    "steps": 2
+  }
+]

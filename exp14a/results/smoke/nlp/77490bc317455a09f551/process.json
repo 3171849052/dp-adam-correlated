@@ -1,0 +1,10 @@
+{
+  "task": "nlp",
+  "method": "dp-adam-momentum-bias-bandinvmf",
+  "status": "running",
+  "gpu": 2,
+  "pid": 480839,
+  "command": "CUDA_VISIBLE_DEVICES=2 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp14a.train --trial-json '{\"C\": 20.0, \"eps_scale\": null, \"epsilon\": 8.0, \"lr\": 0.005, \"method\": \"dp-adam-momentum-bias-bandinvmf\", \"seed\": 20261111, \"smoke_phase\": \"final\", \"stage\": \"smoke\", \"task\": \"nlp\"}'",
+  "log": "/media/data/data/lt/dp-adam-correlated/exp14a/results/smoke/nlp/77490bc317455a09f551/train.log",
+  "started": 1792227612.4064229
+}

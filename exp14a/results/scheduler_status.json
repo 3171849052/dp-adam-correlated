@@ -1,0 +1,98 @@
+{
+  "75bd57e8121d79afb95a": {
+    "task": "cv",
+    "method": "dp-adam-iid",
+    "status": "completed",
+    "gpu": 0,
+    "pid": 481169,
+    "command": "CUDA_VISIBLE_DEVICES=0 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp14a.train --trial-json '{\"C\": 30.0, \"eps_scale\": null, \"epsilon\": 8.0, \"lr\": 0.0005, \"method\": \"dp-adam-iid\", \"seed\": 20261111, \"smoke_phase\": \"search\", \"stage\": \"final\", \"task\": \"cv\"}'",
+    "log": "/media/data/data/lt/dp-adam-correlated/exp14a/results/final/cv/75bd57e8121d79afb95a/train.log",
+    "started": 1792227650.476479,
+    "exit_code": 0,
+    "ended": 1792228430.5280528
+  },
+  "a9b06e0c5ff5a8fe77ac": {
+    "task": "cv",
+    "method": "dp-adam-sgd-bandinvmf",
+    "status": "completed",
+    "gpu": 1,
+    "pid": 481170,
+    "command": "CUDA_VISIBLE_DEVICES=1 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp14a.train --trial-json '{\"C\": 30.0, \"eps_scale\": null, \"epsilon\": 8.0, \"lr\": 0.003, \"method\": \"dp-adam-sgd-bandinvmf\", \"seed\": 20261111, \"smoke_phase\": \"search\", \"stage\": \"final\", \"task\": \"cv\"}'",
+    "log": "/media/data/data/lt/dp-adam-correlated/exp14a/results/final/cv/a9b06e0c5ff5a8fe77ac/train.log",
+    "started": 1792227650.4781902,
+    "exit_code": 0,
+    "ended": 1792228355.5040112
+  },
+  "48fd29dc9a8f45deb466": {
+    "task": "cv",
+    "method": "dp-adam-momentum-bandinvmf",
+    "status": "completed",
+    "gpu": 2,
+    "pid": 481171,
+    "command": "CUDA_VISIBLE_DEVICES=2 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp14a.train --trial-json '{\"C\": 30.0, \"eps_scale\": null, \"epsilon\": 8.0, \"lr\": 0.005, \"method\": \"dp-adam-momentum-bandinvmf\", \"seed\": 20261111, \"smoke_phase\": \"search\", \"stage\": \"final\", \"task\": \"cv\"}'",
+    "log": "/media/data/data/lt/dp-adam-correlated/exp14a/results/final/cv/48fd29dc9a8f45deb466/train.log",
+    "started": 1792227650.4797792,
+    "exit_code": 0,
+    "ended": 1792228370.5097482
+  },
+  "9cd88bd4f62c608bbbf7": {
+    "task": "cv",
+    "method": "dp-adam-momentum-bias-bandinvmf",
+    "status": "completed",
+    "gpu": 3,
+    "pid": 481172,
+    "command": "CUDA_VISIBLE_DEVICES=3 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp14a.train --trial-json '{\"C\": 30.0, \"eps_scale\": null, \"epsilon\": 8.0, \"lr\": 0.003, \"method\": \"dp-adam-momentum-bias-bandinvmf\", \"seed\": 20261111, \"smoke_phase\": \"search\", \"stage\": \"final\", \"task\": \"cv\"}'",
+    "log": "/media/data/data/lt/dp-adam-correlated/exp14a/results/final/cv/9cd88bd4f62c608bbbf7/train.log",
+    "started": 1792227650.4814374,
+    "exit_code": 0,
+    "ended": 1792228375.5150332
+  },
+  "748f51a15ccd1933d0bf": {
+    "task": "nlp",
+    "method": "dp-adam-iid",
+    "status": "completed",
+    "gpu": 1,
+    "pid": 484589,
+    "command": "CUDA_VISIBLE_DEVICES=1 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp14a.train --trial-json '{\"C\": 0.3, \"eps_scale\": null, \"epsilon\": 8.0, \"lr\": 0.002, \"method\": \"dp-adam-iid\", \"seed\": 20261111, \"smoke_phase\": \"search\", \"stage\": \"final\", \"task\": \"nlp\"}'",
+    "log": "/media/data/data/lt/dp-adam-correlated/exp14a/results/final/nlp/748f51a15ccd1933d0bf/train.log",
+    "started": 1792228355.507456,
+    "exit_code": 0,
+    "ended": 1792228415.5219748
+  },
+  "f9313f6d6b4cedada64d": {
+    "task": "nlp",
+    "method": "dp-adam-sgd-bandinvmf",
+    "status": "completed",
+    "gpu": 2,
+    "pid": 484724,
+    "command": "CUDA_VISIBLE_DEVICES=2 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp14a.train --trial-json '{\"C\": 20.0, \"eps_scale\": null, \"epsilon\": 8.0, \"lr\": 0.005, \"method\": \"dp-adam-sgd-bandinvmf\", \"seed\": 20261111, \"smoke_phase\": \"search\", \"stage\": \"final\", \"task\": \"nlp\"}'",
+    "log": "/media/data/data/lt/dp-adam-correlated/exp14a/results/final/nlp/f9313f6d6b4cedada64d/train.log",
+    "started": 1792228370.5129983,
+    "exit_code": 0,
+    "ended": 1792228430.5294688
+  },
+  "548562e5ce7d3730ad46": {
+    "task": "nlp",
+    "method": "dp-adam-momentum-bandinvmf",
+    "status": "completed",
+    "gpu": 3,
+    "pid": 484769,
+    "command": "CUDA_VISIBLE_DEVICES=3 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp14a.train --trial-json '{\"C\": 10.0, \"eps_scale\": null, \"epsilon\": 8.0, \"lr\": 0.005, \"method\": \"dp-adam-momentum-bandinvmf\", \"seed\": 20261111, \"smoke_phase\": \"search\", \"stage\": \"final\", \"task\": \"nlp\"}'",
+    "log": "/media/data/data/lt/dp-adam-correlated/exp14a/results/final/nlp/548562e5ce7d3730ad46/train.log",
+    "started": 1792228375.518506,
+    "exit_code": 0,
+    "ended": 1792228435.5308971
+  },
+  "aafae3d93c1a4face804": {
+    "task": "nlp",
+    "method": "dp-adam-momentum-bias-bandinvmf",
+    "status": "completed",
+    "gpu": 1,
+    "pid": 485065,
+    "command": "CUDA_VISIBLE_DEVICES=1 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp14a.train --trial-json '{\"C\": 20.0, \"eps_scale\": null, \"epsilon\": 8.0, \"lr\": 0.005, \"method\": \"dp-adam-momentum-bias-bandinvmf\", \"seed\": 20261111, \"smoke_phase\": \"search\", \"stage\": \"final\", \"task\": \"nlp\"}'",
+    "log": "/media/data/data/lt/dp-adam-correlated/exp14a/results/final/nlp/aafae3d93c1a4face804/train.log",
+    "started": 1792228415.5254948,
+    "exit_code": 0,
+    "ended": 1792228480.5340028
+  }
+}
