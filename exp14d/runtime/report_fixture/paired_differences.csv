@@ -1,0 +1,61 @@
+contrast,task,method,n,mean,sample_std,ci95_low,ci95_high
+boundary_updated minus original,cv,MF-SGD + AdaM³,10,0.0,0.0,0.0,0.0
+boundary_updated minus original,cv,MF-Momentum + AdaM³,10,0.0,0.0,0.0,0.0
+boundary_updated minus original,cv,MF-Momentum-Bias + AdaM³,10,0.0,0.0,0.0,0.0
+boundary_updated minus original,nlp,MF-SGD + AdaM³,10,0.0,0.0,0.0,0.0
+boundary_updated minus original,nlp,MF-Momentum + AdaM³,10,0.0,0.0,0.0,0.0
+boundary_updated minus original,nlp,MF-Momentum-Bias + AdaM³,10,0.0,0.0,0.0,0.0
+C1 minus original,cv,IID + Adam,10,0.0,0.0,0.0,0.0
+C1 minus original,cv,MF-SGD + Scale + Adam,10,0.0,0.0,0.0,0.0
+C1 minus original,cv,MF-SGD + Adam,10,0.0,0.0,0.0,0.0
+C1 minus original,cv,MF-SGD + AdaM³,10,0.0,0.0,0.0,0.0
+C1 minus original,cv,MF-Momentum + AdaM³,10,0.0,0.0,0.0,0.0
+C1 minus original,cv,MF-Momentum-Bias + AdaM³,10,0.0,0.0,0.0,0.0
+C1 minus original,nlp,IID + Adam,10,0.0,0.0,0.0,0.0
+C1 minus original,nlp,MF-SGD + Scale + Adam,10,0.0,0.0,0.0,0.0
+C1 minus original,nlp,MF-SGD + Adam,10,0.0,0.0,0.0,0.0
+C1 minus original,nlp,MF-SGD + AdaM³,10,0.0,0.0,0.0,0.0
+C1 minus original,nlp,MF-Momentum + AdaM³,10,0.0,0.0,0.0,0.0
+C1 minus original,nlp,MF-Momentum-Bias + AdaM³,10,0.0,0.0,0.0,0.0
+C1 minus boundary_updated,cv,IID + Adam,10,0.0,0.0,0.0,0.0
+C1 minus boundary_updated,cv,MF-SGD + Scale + Adam,10,0.0,0.0,0.0,0.0
+C1 minus boundary_updated,cv,MF-SGD + Adam,10,0.0,0.0,0.0,0.0
+C1 minus boundary_updated,cv,MF-SGD + AdaM³,10,0.0,0.0,0.0,0.0
+C1 minus boundary_updated,cv,MF-Momentum + AdaM³,10,0.0,0.0,0.0,0.0
+C1 minus boundary_updated,cv,MF-Momentum-Bias + AdaM³,10,0.0,0.0,0.0,0.0
+C1 minus boundary_updated,nlp,IID + Adam,10,0.0,0.0,0.0,0.0
+C1 minus boundary_updated,nlp,MF-SGD + Scale + Adam,10,0.0,0.0,0.0,0.0
+C1 minus boundary_updated,nlp,MF-SGD + Adam,10,0.0,0.0,0.0,0.0
+C1 minus boundary_updated,nlp,MF-SGD + AdaM³,10,0.0,0.0,0.0,0.0
+C1 minus boundary_updated,nlp,MF-Momentum + AdaM³,10,0.0,0.0,0.0,0.0
+C1 minus boundary_updated,nlp,MF-Momentum-Bias + AdaM³,10,0.0,0.0,0.0,0.0
+original: MF-SGD + Adam minus IID + Adam,cv,method comparison,10,0.0,0.0,0.0,0.0
+original: MF-SGD + Scale + Adam minus MF-SGD + Adam,cv,method comparison,10,0.0,0.0,0.0,0.0
+original: MF-SGD + AdaM³ minus MF-SGD + Adam,cv,method comparison,10,0.0,0.0,0.0,0.0
+original: MF-Momentum + AdaM³ minus MF-SGD + AdaM³,cv,method comparison,10,0.0,0.0,0.0,0.0
+original: MF-Momentum-Bias + AdaM³ minus MF-Momentum + AdaM³,cv,method comparison,10,0.0,0.0,0.0,0.0
+original: MF-SGD + Adam minus IID + Adam,nlp,method comparison,10,0.0,0.0,0.0,0.0
+original: MF-SGD + Scale + Adam minus MF-SGD + Adam,nlp,method comparison,10,0.0,0.0,0.0,0.0
+original: MF-SGD + AdaM³ minus MF-SGD + Adam,nlp,method comparison,10,0.0,0.0,0.0,0.0
+original: MF-Momentum + AdaM³ minus MF-SGD + AdaM³,nlp,method comparison,10,0.0,0.0,0.0,0.0
+original: MF-Momentum-Bias + AdaM³ minus MF-Momentum + AdaM³,nlp,method comparison,10,0.0,0.0,0.0,0.0
+boundary_updated: MF-SGD + Adam minus IID + Adam,cv,method comparison,10,0.0,0.0,0.0,0.0
+boundary_updated: MF-SGD + Scale + Adam minus MF-SGD + Adam,cv,method comparison,10,0.0,0.0,0.0,0.0
+boundary_updated: MF-SGD + AdaM³ minus MF-SGD + Adam,cv,method comparison,10,0.0,0.0,0.0,0.0
+boundary_updated: MF-Momentum + AdaM³ minus MF-SGD + AdaM³,cv,method comparison,10,0.0,0.0,0.0,0.0
+boundary_updated: MF-Momentum-Bias + AdaM³ minus MF-Momentum + AdaM³,cv,method comparison,10,0.0,0.0,0.0,0.0
+boundary_updated: MF-SGD + Adam minus IID + Adam,nlp,method comparison,10,0.0,0.0,0.0,0.0
+boundary_updated: MF-SGD + Scale + Adam minus MF-SGD + Adam,nlp,method comparison,10,0.0,0.0,0.0,0.0
+boundary_updated: MF-SGD + AdaM³ minus MF-SGD + Adam,nlp,method comparison,10,0.0,0.0,0.0,0.0
+boundary_updated: MF-Momentum + AdaM³ minus MF-SGD + AdaM³,nlp,method comparison,10,0.0,0.0,0.0,0.0
+boundary_updated: MF-Momentum-Bias + AdaM³ minus MF-Momentum + AdaM³,nlp,method comparison,10,0.0,0.0,0.0,0.0
+C1: MF-SGD + Adam minus IID + Adam,cv,method comparison,10,0.0,0.0,0.0,0.0
+C1: MF-SGD + Scale + Adam minus MF-SGD + Adam,cv,method comparison,10,0.0,0.0,0.0,0.0
+C1: MF-SGD + AdaM³ minus MF-SGD + Adam,cv,method comparison,10,0.0,0.0,0.0,0.0
+C1: MF-Momentum + AdaM³ minus MF-SGD + AdaM³,cv,method comparison,10,0.0,0.0,0.0,0.0
+C1: MF-Momentum-Bias + AdaM³ minus MF-Momentum + AdaM³,cv,method comparison,10,0.0,0.0,0.0,0.0
+C1: MF-SGD + Adam minus IID + Adam,nlp,method comparison,10,0.0,0.0,0.0,0.0
+C1: MF-SGD + Scale + Adam minus MF-SGD + Adam,nlp,method comparison,10,0.0,0.0,0.0,0.0
+C1: MF-SGD + AdaM³ minus MF-SGD + Adam,nlp,method comparison,10,0.0,0.0,0.0,0.0
+C1: MF-Momentum + AdaM³ minus MF-SGD + AdaM³,nlp,method comparison,10,0.0,0.0,0.0,0.0
+C1: MF-Momentum-Bias + AdaM³ minus MF-Momentum + AdaM³,nlp,method comparison,10,0.0,0.0,0.0,0.0

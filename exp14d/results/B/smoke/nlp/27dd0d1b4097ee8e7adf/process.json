@@ -1,0 +1,18 @@
+{
+  "task": "nlp",
+  "method": "dp-adam-sgd-bandinvmf",
+  "lr": 0.001,
+  "C": 1,
+  "eps_scale": null,
+  "seed": 20261111,
+  "epsilon": 8.0,
+  "stage": "smoke",
+  "smoke_phase": "search",
+  "module": "B",
+  "status": "running",
+  "gpu": 2,
+  "pid": 1014544,
+  "command": "CUDA_VISIBLE_DEVICES=2 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp14d.train --trial-json '{\"C\": 1, \"eps_scale\": null, \"epsilon\": 8.0, \"lr\": 0.001, \"method\": \"dp-adam-sgd-bandinvmf\", \"module\": \"B\", \"seed\": 20261111, \"smoke_phase\": \"search\", \"stage\": \"smoke\", \"task\": \"nlp\"}'",
+  "log": "/media/data/data/lt/dp-adam-correlated/exp14d/results/B/smoke/nlp/27dd0d1b4097ee8e7adf/train.log",
+  "started": 1792300914.236359
+}

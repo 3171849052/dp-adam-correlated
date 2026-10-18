@@ -1,0 +1,38 @@
+cv dp-adam-iid search PASS
+cv dp-adam-iid final PASS
+cv dp-adam-sgd-bandinvmf-scale search PASS
+cv dp-adam-sgd-bandinvmf-scale final PASS
+cv dp-adam-sgd-bandinvmf search PASS
+cv dp-adam-sgd-bandinvmf final PASS
+cv dp-adam-sgd-bandinvmf-adam3 search PASS
+cv dp-adam-sgd-bandinvmf-adam3 final PASS
+cv dp-adam-momentum-bandinvmf-adam3 search PASS
+cv dp-adam-momentum-bandinvmf-adam3 final PASS
+cv dp-adam-momentum-bias-bandinvmf-adam3 search PASS
+cv dp-adam-momentum-bias-bandinvmf-adam3 final PASS
+nlp dp-adam-iid search PASS
+nlp dp-adam-iid final PASS
+nlp dp-adam-sgd-bandinvmf-scale search PASS
+nlp dp-adam-sgd-bandinvmf-scale final PASS
+nlp dp-adam-sgd-bandinvmf search PASS
+nlp dp-adam-sgd-bandinvmf final PASS
+nlp dp-adam-sgd-bandinvmf-adam3 search PASS
+nlp dp-adam-sgd-bandinvmf-adam3 final PASS
+nlp dp-adam-momentum-bandinvmf-adam3 search PASS
+nlp dp-adam-momentum-bandinvmf-adam3 final PASS
+nlp dp-adam-momentum-bias-bandinvmf-adam3 search PASS
+nlp dp-adam-momentum-bias-bandinvmf-adam3 final PASS
+/media/data/data/lt/dp-adam-correlated/exp14a/clipping.py:55: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  losses.sum().backward(retain_graph=True)
+/media/data/data/lt/dp-adam-correlated/exp14a/clipping.py:60: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  (losses * coefficients).sum().backward()
+Adam hooks, explicit clipping, fixed grids, provenance and statistics PASS
+/media/data/data/lt/dp-adam-correlated/exp14d/report.py:79: UserWarning: Attempting to set identical low and high ylims makes transformation singular; automatically expanding.
+  if key!='lr':ax.set_yscale('log')
+/media/data/data/lt/dp-adam-correlated/exp14d/report.py:81: UserWarning: Attempting to set identical low and high ylims makes transformation singular; automatically expanding.
+  axes[0,0].legend(fontsize=7);fig.tight_layout();fig.savefig(figs/f'{task}_C1_training.png');plt.close(fig)
+/media/data/data/lt/dp-adam-correlated/exp14d/report.py:79: UserWarning: Attempting to set identical low and high ylims makes transformation singular; automatically expanding.
+  if key!='lr':ax.set_yscale('log')
+/media/data/data/lt/dp-adam-correlated/exp14d/report.py:81: UserWarning: Attempting to set identical low and high ylims makes transformation singular; automatically expanding.
+  axes[0,0].legend(fontsize=7);fig.tight_layout();fig.savefig(figs/f'{task}_C1_training.png');plt.close(fig)
+Report tables, paired statistics, diagnostics and figures PASS
