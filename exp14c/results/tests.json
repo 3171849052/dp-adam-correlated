@@ -1,0 +1,155 @@
+{
+  "status": "passed",
+  "optimizer_reference": true,
+  "checkpoint_resume": true,
+  "splits": true,
+  "all_80_formal_orders_exact": true,
+  "raw_assets": true,
+  "ranking": true,
+  "checks": [
+    {
+      "task": "cv",
+      "method": "dp-adam-iid",
+      "stage": "search",
+      "steps": 225,
+      "matrix_exact": true,
+      "noise_exact": true,
+      "all_C_epsilon8": true
+    },
+    {
+      "task": "cv",
+      "method": "dp-adam-iid",
+      "stage": "final",
+      "steps": 250,
+      "matrix_exact": true,
+      "noise_exact": true,
+      "all_C_epsilon8": true
+    },
+    {
+      "task": "cv",
+      "method": "dp-adam-sgd-bandinvmf",
+      "stage": "search",
+      "steps": 225,
+      "matrix_exact": true,
+      "noise_exact": true,
+      "all_C_epsilon8": true
+    },
+    {
+      "task": "cv",
+      "method": "dp-adam-sgd-bandinvmf",
+      "stage": "final",
+      "steps": 250,
+      "matrix_exact": true,
+      "noise_exact": true,
+      "all_C_epsilon8": true
+    },
+    {
+      "task": "cv",
+      "method": "dp-adam-momentum-bandinvmf",
+      "stage": "search",
+      "steps": 225,
+      "matrix_exact": true,
+      "noise_exact": true,
+      "all_C_epsilon8": true
+    },
+    {
+      "task": "cv",
+      "method": "dp-adam-momentum-bandinvmf",
+      "stage": "final",
+      "steps": 250,
+      "matrix_exact": true,
+      "noise_exact": true,
+      "all_C_epsilon8": true
+    },
+    {
+      "task": "cv",
+      "method": "dp-adam-momentum-bias-bandinvmf",
+      "stage": "search",
+      "steps": 225,
+      "matrix_exact": true,
+      "noise_exact": true,
+      "all_C_epsilon8": true
+    },
+    {
+      "task": "cv",
+      "method": "dp-adam-momentum-bias-bandinvmf",
+      "stage": "final",
+      "steps": 250,
+      "matrix_exact": true,
+      "noise_exact": true,
+      "all_C_epsilon8": true
+    },
+    {
+      "task": "nlp",
+      "method": "dp-adam-iid",
+      "stage": "search",
+      "steps": 310,
+      "matrix_exact": true,
+      "noise_exact": true,
+      "all_C_epsilon8": true
+    },
+    {
+      "task": "nlp",
+      "method": "dp-adam-iid",
+      "stage": "final",
+      "steps": 310,
+      "matrix_exact": true,
+      "noise_exact": true,
+      "all_C_epsilon8": true
+    },
+    {
+      "task": "nlp",
+      "method": "dp-adam-sgd-bandinvmf",
+      "stage": "search",
+      "steps": 310,
+      "matrix_exact": true,
+      "noise_exact": true,
+      "all_C_epsilon8": true
+    },
+    {
+      "task": "nlp",
+      "method": "dp-adam-sgd-bandinvmf",
+      "stage": "final",
+      "steps": 310,
+      "matrix_exact": true,
+      "noise_exact": true,
+      "all_C_epsilon8": true
+    },
+    {
+      "task": "nlp",
+      "method": "dp-adam-momentum-bandinvmf",
+      "stage": "search",
+      "steps": 310,
+      "matrix_exact": true,
+      "noise_exact": true,
+      "all_C_epsilon8": true
+    },
+    {
+      "task": "nlp",
+      "method": "dp-adam-momentum-bandinvmf",
+      "stage": "final",
+      "steps": 310,
+      "matrix_exact": true,
+      "noise_exact": true,
+      "all_C_epsilon8": true
+    },
+    {
+      "task": "nlp",
+      "method": "dp-adam-momentum-bias-bandinvmf",
+      "stage": "search",
+      "steps": 310,
+      "matrix_exact": true,
+      "noise_exact": true,
+      "all_C_epsilon8": true
+    },
+    {
+      "task": "nlp",
+      "method": "dp-adam-momentum-bias-bandinvmf",
+      "stage": "final",
+      "steps": 310,
+      "matrix_exact": true,
+      "noise_exact": true,
+      "all_C_epsilon8": true
+    }
+  ]
+}

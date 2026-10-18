@@ -1,0 +1,122 @@
+[
+  {
+    "trial_id": "1317ed487ba08ff3110d",
+    "task": "cv",
+    "method": "dp-adam-iid",
+    "horizon": 225,
+    "gpu": 0,
+    "steps": 2,
+    "finite": true,
+    "initialization_exact": true
+  },
+  {
+    "trial_id": "d3e4266c0e6e8e04099c",
+    "task": "cv",
+    "method": "dp-adam-iid",
+    "horizon": 250,
+    "gpu": 1,
+    "steps": 2,
+    "finite": true,
+    "initialization_exact": true
+  },
+  {
+    "trial_id": "a9a97ad7e22f66bf53df",
+    "task": "cv",
+    "method": "dp-adam-sgd-bandinvmf",
+    "horizon": 225,
+    "gpu": 2,
+    "steps": 2,
+    "finite": true,
+    "initialization_exact": true
+  },
+  {
+    "trial_id": "476a5b0a1dedb68a5665",
+    "task": "cv",
+    "method": "dp-adam-sgd-bandinvmf",
+    "horizon": 250,
+    "gpu": 3,
+    "steps": 2,
+    "finite": true,
+    "initialization_exact": true
+  },
+  {
+    "trial_id": "7de46a9892e4bef31de8",
+    "task": "cv",
+    "method": "dp-adam-momentum-bandinvmf",
+    "horizon": 225,
+    "gpu": 0,
+    "steps": 2,
+    "finite": true,
+    "initialization_exact": true
+  },
+  {
+    "trial_id": "d1265a98b81ca70cb470",
+    "task": "cv",
+    "method": "dp-adam-momentum-bandinvmf",
+    "horizon": 250,
+    "gpu": 1,
+    "steps": 2,
+    "finite": true,
+    "initialization_exact": true
+  },
+  {
+    "trial_id": "296c21976c617fd915a3",
+    "task": "cv",
+    "method": "dp-adam-momentum-bias-bandinvmf",
+    "horizon": 225,
+    "gpu": 2,
+    "steps": 2,
+    "finite": true,
+    "initialization_exact": true
+  },
+  {
+    "trial_id": "394f9692049eaeb3125c",
+    "task": "cv",
+    "method": "dp-adam-momentum-bias-bandinvmf",
+    "horizon": 250,
+    "gpu": 3,
+    "steps": 2,
+    "finite": true,
+    "initialization_exact": true
+  },
+  {
+    "trial_id": "b577e8e5d0f606a2ccd9",
+    "task": "nlp",
+    "method": "dp-adam-iid",
+    "horizon": 310,
+    "gpu": 0,
+    "steps": 2,
+    "finite": true,
+    "initialization_exact": true
+  },
+  {
+    "trial_id": "6003026e9b34144cb7ce",
+    "task": "nlp",
+    "method": "dp-adam-sgd-bandinvmf",
+    "horizon": 310,
+    "gpu": 2,
+    "steps": 2,
+    "finite": true,
+    "initialization_exact": true
+  },
+  {
+    "trial_id": "8838a095a28d646068ec",
+    "task": "nlp",
+    "method": "dp-adam-momentum-bandinvmf",
+    "horizon": 310,
+    "gpu": 3,
+    "steps": 2,
+    "finite": true,
+    "initialization_exact": true
+  },
+  {
+    "trial_id": "1ef199fb97fddb456d06",
+    "task": "nlp",
+    "method": "dp-adam-momentum-bias-bandinvmf",
+    "horizon": 310,
+    "gpu": 0,
+    "steps": 2,
+    "finite": true,
+    "initialization_exact": true
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "task": "cv",
+    "method": "dp-adam-iid",
+    "lr": 0.0001,
+    "C": 100,
+    "trial_id": "2cb32c5697a1120961d2",
+    "accuracy": 0.5
+  },
+  {
+    "task": "cv",
+    "method": "dp-adam-sgd-bandinvmf",
+    "lr": 0.0004,
+    "C": 30,
+    "trial_id": "0e07017c1bcc2e3e34f7",
+    "accuracy": 0.5
+  },
+  {
+    "task": "cv",
+    "method": "dp-adam-momentum-bandinvmf",
+    "lr": 0.0005,
+    "C": 100,
+    "trial_id": "2d49572dfcdf3e6794d3",
+    "accuracy": 0.5
+  },
+  {
+    "task": "cv",
+    "method": "dp-adam-momentum-bias-bandinvmf",
+    "lr": 0.0006,
+    "C": 100,
+    "trial_id": "092b95e927a09a974473",
+    "accuracy": 0.5
+  },
+  {
+    "task": "nlp",
+    "method": "dp-adam-iid",
+    "lr": 0.0008,
+    "C": 0.3,
+    "trial_id": "0c87e89497a18901a44e",
+    "accuracy": 0.5
+  },
+  {
+    "task": "nlp",
+    "method": "dp-adam-sgd-bandinvmf",
+    "lr": 0.00015,
+    "C": 10,
+    "trial_id": "00a9ea32eafa90c0c97b",
+    "accuracy": 0.5
+  },
+  {
+    "task": "nlp",
+    "method": "dp-adam-momentum-bandinvmf",
+    "lr": 0.0008,
+    "C": 40,
+    "trial_id": "00354c16f6ae0b4d1172",
+    "accuracy": 0.5
+  },
+  {
+    "task": "nlp",
+    "method": "dp-adam-momentum-bias-bandinvmf",
+    "lr": 0.0003,
+    "C": 40,
+    "trial_id": "124e79a2976430232d2d",
+    "accuracy": 0.5
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "scheduler_pid": 548450,
+  "workers": [
+    {
+      "gpu": 0,
+      "pid": 548487,
+      "trial_id": "9d117d7ea15f0693120e",
+      "method": "dp-adam-iid",
+      "lr": 0.0001,
+      "C": 10,
+      "completed_steps": 11,
+      "log": "/media/data/data/lt/dp-adam-correlated/exp14c/results/search/cv/9d117d7ea15f0693120e/train.log"
+    },
+    {
+      "gpu": 1,
+      "pid": 548488,
+      "trial_id": "7d524d04aede0b27188b",
+      "method": "dp-adam-iid",
+      "lr": 0.0001,
+      "C": 30,
+      "completed_steps": 12,
+      "log": "/media/data/data/lt/dp-adam-correlated/exp14c/results/search/cv/7d524d04aede0b27188b/train.log"
+    },
+    {
+      "gpu": 2,
+      "pid": 548489,
+      "trial_id": "2cb32c5697a1120961d2",
+      "method": "dp-adam-iid",
+      "lr": 0.0001,
+      "C": 100,
+      "completed_steps": 12,
+      "log": "/media/data/data/lt/dp-adam-correlated/exp14c/results/search/cv/2cb32c5697a1120961d2/train.log"
+    },
+    {
+      "gpu": 3,
+      "pid": 548493,
+      "trial_id": "93b2b1a2ce8971f03ed6",
+      "method": "dp-adam-iid",
+      "lr": 0.00015,
+      "C": 10,
+      "completed_steps": 11,
+      "log": "/media/data/data/lt/dp-adam-correlated/exp14c/results/search/cv/93b2b1a2ce8971f03ed6/train.log"
+    }
+  ],
+  "counts": {
+    "running": 4,
+    "queued": 56
+  }
+}
