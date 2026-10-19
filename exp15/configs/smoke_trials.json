@@ -1,0 +1,189 @@
+[
+  {
+    "task": "cv",
+    "method": "momentum",
+    "lr": 0.01,
+    "clip": 1.0,
+    "stage": "smoke",
+    "seed": 20261099,
+    "smoke_phase": "search",
+    "epsilon": 8.0,
+    "replicate": "primary"
+  },
+  {
+    "task": "cv",
+    "method": "momentum",
+    "lr": 0.01,
+    "clip": 1.0,
+    "stage": "smoke",
+    "seed": 20261099,
+    "smoke_phase": "final",
+    "epsilon": 8.0,
+    "replicate": "primary"
+  },
+  {
+    "task": "cv",
+    "method": "momentum-bias",
+    "lr": 0.01,
+    "clip": 1.0,
+    "stage": "smoke",
+    "seed": 20261099,
+    "smoke_phase": "search",
+    "epsilon": 8.0,
+    "replicate": "primary"
+  },
+  {
+    "task": "cv",
+    "method": "momentum-bias",
+    "lr": 0.01,
+    "clip": 1.0,
+    "stage": "smoke",
+    "seed": 20261099,
+    "smoke_phase": "final",
+    "epsilon": 8.0,
+    "replicate": "primary"
+  },
+  {
+    "task": "cv",
+    "method": "stpex",
+    "lr": 0.01,
+    "clip": 1.0,
+    "stage": "smoke",
+    "seed": 20261099,
+    "smoke_phase": "search",
+    "epsilon": 8.0,
+    "replicate": "primary"
+  },
+  {
+    "task": "cv",
+    "method": "stpex",
+    "lr": 0.01,
+    "clip": 1.0,
+    "stage": "smoke",
+    "seed": 20261099,
+    "smoke_phase": "final",
+    "epsilon": 8.0,
+    "replicate": "primary"
+  },
+  {
+    "task": "cv",
+    "method": "stpex2",
+    "lr": 0.01,
+    "clip": 1.0,
+    "stage": "smoke",
+    "seed": 20261099,
+    "smoke_phase": "search",
+    "epsilon": 8.0,
+    "replicate": "primary"
+  },
+  {
+    "task": "cv",
+    "method": "stpex2",
+    "lr": 0.01,
+    "clip": 1.0,
+    "stage": "smoke",
+    "seed": 20261099,
+    "smoke_phase": "final",
+    "epsilon": 8.0,
+    "replicate": "primary"
+  },
+  {
+    "task": "cv",
+    "method": "stpex-adam3",
+    "lr": 0.01,
+    "clip": 1.0,
+    "stage": "smoke",
+    "seed": 20261099,
+    "smoke_phase": "search",
+    "epsilon": 8.0,
+    "replicate": "primary"
+  },
+  {
+    "task": "cv",
+    "method": "stpex-adam3",
+    "lr": 0.01,
+    "clip": 1.0,
+    "stage": "smoke",
+    "seed": 20261099,
+    "smoke_phase": "final",
+    "epsilon": 8.0,
+    "replicate": "primary"
+  },
+  {
+    "task": "nlp",
+    "method": "momentum",
+    "lr": 0.01,
+    "clip": 1.0,
+    "stage": "smoke",
+    "seed": 20261099,
+    "smoke_phase": "search",
+    "epsilon": 8.0,
+    "replicate": "primary"
+  },
+  {
+    "task": "nlp",
+    "method": "momentum-bias",
+    "lr": 0.01,
+    "clip": 1.0,
+    "stage": "smoke",
+    "seed": 20261099,
+    "smoke_phase": "search",
+    "epsilon": 8.0,
+    "replicate": "primary"
+  },
+  {
+    "task": "nlp",
+    "method": "stpex",
+    "lr": 0.01,
+    "clip": 1.0,
+    "stage": "smoke",
+    "seed": 20261099,
+    "smoke_phase": "search",
+    "epsilon": 8.0,
+    "replicate": "primary"
+  },
+  {
+    "task": "nlp",
+    "method": "stpex2",
+    "lr": 0.01,
+    "clip": 1.0,
+    "stage": "smoke",
+    "seed": 20261099,
+    "smoke_phase": "search",
+    "epsilon": 8.0,
+    "replicate": "primary"
+  },
+  {
+    "task": "nlp",
+    "method": "stpex-adam3",
+    "lr": 0.01,
+    "clip": 1.0,
+    "stage": "smoke",
+    "seed": 20261099,
+    "smoke_phase": "search",
+    "epsilon": 8.0,
+    "replicate": "primary"
+  },
+  {
+    "task": "cv",
+    "method": "stpex2",
+    "lr": 0.01,
+    "clip": 1.0,
+    "stage": "smoke",
+    "seed": 20261099,
+    "smoke_phase": "search",
+    "epsilon": 8.0,
+    "replicate": "repeat"
+  },
+  {
+    "task": "nlp",
+    "method": "stpex2",
+    "lr": 0.01,
+    "clip": 1.0,
+    "stage": "smoke",
+    "seed": 20261099,
+    "smoke_phase": "search",
+    "epsilon": 8.0,
+    "replicate": "repeat"
+  }
+]

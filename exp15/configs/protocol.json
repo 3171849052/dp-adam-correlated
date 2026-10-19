@@ -1,0 +1,77 @@
+{
+  "example": {
+    "task": "cv",
+    "method": "stpex2",
+    "lr": 0.01,
+    "clip": 1.0,
+    "stage": "smoke",
+    "seed": 20261099,
+    "smoke_phase": "search",
+    "epsilon": 8.0,
+    "replicate": "primary",
+    "epochs": 5,
+    "total_steps": 225,
+    "dataset_size": 45000,
+    "logical_batch_size": 1000,
+    "physical_batch_size": 250,
+    "image_size": 224,
+    "max_length": null,
+    "optimizer": {
+      "name": "stpex2",
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "weight_decay": 0.0,
+      "first_moment_bias_correction": true,
+      "second_moment_bias_correction": true,
+      "second_moment_input": "q_tilde_squared",
+      "clipping_space": "preconditioned",
+      "eps_scale": 0.05,
+      "initial_denominator": 0.05,
+      "update": "-lr * uhat"
+    },
+    "privacy": {
+      "epsilon": 8.0,
+      "delta": 1e-05,
+      "k": 5,
+      "b_participation": 45,
+      "max_grad_norm": 1.0,
+      "adjacency": "add_remove_zero_out",
+      "sampling_amplification": false
+    },
+    "noise": {
+      "family": "four_band_Exp9_momentum_bias",
+      "controlled_filter": true,
+      "momentum_filter_not_individually_optimized": false
+    },
+    "seeds": {
+      "final": [
+        20261111,
+        20261112,
+        20261113,
+        20261114,
+        20261115,
+        20261116,
+        20261117,
+        20261118,
+        20261119,
+        20261120
+      ],
+      "source": "exp9/config.py",
+      "source_sha256": "7306130dba8eb7b57c7fa2551f3901ff1f08749db3f7a292688ce0c983f7f4f6"
+    },
+    "privacy_scope": "single training only; internal validation assumed public; no search/repeat composition claim; raw diagnostics are private audit artifacts"
+  },
+  "formal_seeds": [
+    20261111,
+    20261112,
+    20261113,
+    20261114,
+    20261115,
+    20261116,
+    20261117,
+    20261118,
+    20261119,
+    20261120
+  ],
+  "phase2": "pilot then frozen equal-budget grids; no unrecorded candidates"
+}
