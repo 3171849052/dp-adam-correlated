@@ -1,0 +1,18 @@
+{"stage": "search", "pid": 2544822, "updated": 1792561930.878551, "gpus": [1, 2, 3], "counts": {"search": 63, "private_cv": 17, "private_nlp": 22, "nonprivate": 24}}
+{"stage": "failed", "pid": 2544822, "updated": 1792566286.7997842, "gpus": [1, 2, 3], "error": "RuntimeError: search failed; see /media/data/data/lt/dp-adam-correlated/exp15c/results/search_status.json; no automatic retry", "traceback": "Traceback (most recent call last):\n  File \"/media/data/data/lt/dp-adam-correlated/exp15c/pipeline.py\", line 25, in main\n    finals=search_and_review()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/media/data/data/lt/dp-adam-correlated/exp15c/search.py\", line 101, in search_and_review\n    rows=run_batch('search',jobs)\n         ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/media/data/data/lt/dp-adam-correlated/exp15c/scheduler.py\", line 72, in run_batch\n    if failed and not active:raise RuntimeError(f'{name} failed; see {path}; no automatic retry')\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: search failed; see /media/data/data/lt/dp-adam-correlated/exp15c/results/search_status.json; no automatic retry\n"}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/media/data/data/lt/dp-adam-correlated/exp15c/pipeline.py", line 38, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp15c/pipeline.py", line 25, in main
+    finals=search_and_review()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp15c/search.py", line 101, in search_and_review
+    rows=run_batch('search',jobs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp15c/scheduler.py", line 72, in run_batch
+    if failed and not active:raise RuntimeError(f'{name} failed; see {path}; no automatic retry')
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: search failed; see /media/data/data/lt/dp-adam-correlated/exp15c/results/search_status.json; no automatic retry

@@ -1,0 +1,15 @@
+{
+  "task": "cv",
+  "method": "momentum-no-noise",
+  "lr": 1.0,
+  "clip": null,
+  "stage": "search",
+  "seed": 20261101,
+  "smoke_phase": "search",
+  "replicate": "primary",
+  "trial_id": "fc9900e31d31ed68386a",
+  "status": "non_finite",
+  "error": "FloatingPointError: Nonfinite gradient",
+  "traceback": "Traceback (most recent call last):\n  File \"/media/data/data/lt/dp-adam-correlated/exp15c/train.py\", line 105, in run\n    if logical.finish_microbatch():\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/media/data/data/lt/dp-adam-correlated/exp15c/optimizer.py\", line 51, in finish_microbatch\n    if not all(torch.isfinite(p.grad).all() for p in self.parameters): raise FloatingPointError('Nonfinite gradient')\n                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFloatingPointError: Nonfinite gradient\n",
+  "seconds": 94.29394081002101
+}

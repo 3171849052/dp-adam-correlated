@@ -1,0 +1,64 @@
+{
+  "candidates": {
+    "c742f98776ad8fed1b7a": {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "search",
+      "seed": 20261101,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    "fbbadf68c8244759713a": {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "search",
+      "seed": 20261101,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    "f2284e6fa0ccae560747": {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "search",
+      "seed": 20261101,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    "3458613387588cb9972d": {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "search",
+      "seed": 20261101,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    "0fd3e838ab058076f279": {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "search",
+      "seed": 20261101,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    "74eb1e8dbcb829575b1d": {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "search",
+      "seed": 20261101,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    }
+  }
+}

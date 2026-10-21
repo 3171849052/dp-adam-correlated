@@ -1,0 +1,114 @@
+{
+  "trials": [
+    {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    }
+  ]
+}

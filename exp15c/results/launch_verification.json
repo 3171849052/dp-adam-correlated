@@ -1,0 +1,30 @@
+{
+  "status": "running",
+  "pid": 2544822,
+  "phase": "search",
+  "gpus": [
+    1,
+    2,
+    3
+  ],
+  "workers": [
+    {
+      "pid": 2544826,
+      "gpu": 1,
+      "CUDA_VISIBLE_DEVICES": "1"
+    },
+    {
+      "pid": 2544829,
+      "gpu": 2,
+      "CUDA_VISIBLE_DEVICES": "2"
+    },
+    {
+      "pid": 2544833,
+      "gpu": 3,
+      "CUDA_VISIBLE_DEVICES": "3"
+    }
+  ],
+  "detached_session": true,
+  "tests_passed": 12,
+  "smoke_runs_passed": 15
+}

@@ -1,0 +1,904 @@
+{
+  "grid_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+  "shortlists": {
+    "A:cv:adam-no-noise": [
+      "e9d790472f65d54bdae9",
+      "1f7afb4cc714d1f3f1c0"
+    ],
+    "A:cv:momentum-no-noise": [
+      "fbbadf68c8244759713a",
+      "1bcd39db9b1c3e6a45cc"
+    ],
+    "A:cv:momentum-mf-native": [
+      "f9ec8c068af97c62732b",
+      "2ba5cc9c909d61850c15"
+    ],
+    "A:nlp:adam-no-noise": [
+      "a87d904be5e0c6eb251c",
+      "03a7a59f3fa1be39a099"
+    ],
+    "A:nlp:momentum-no-noise": [
+      "0fd3e838ab058076f279",
+      "cdd4ff0f93873c688021"
+    ],
+    "A:nlp:momentum-mf-native": [
+      "357951f7e8768b1d79cc",
+      "8259ea4519ae200586c0"
+    ],
+    "B:cv:adam-no-noise": [
+      "e9d790472f65d54bdae9",
+      "1f7afb4cc714d1f3f1c0"
+    ],
+    "B:cv:momentum-no-noise": [
+      "fbbadf68c8244759713a",
+      "1bcd39db9b1c3e6a45cc"
+    ],
+    "B:cv:momentum-mf-native": [
+      "f9ec8c068af97c62732b",
+      "2ba5cc9c909d61850c15"
+    ],
+    "B:nlp:adam-no-noise": [
+      "a87d904be5e0c6eb251c",
+      "03a7a59f3fa1be39a099"
+    ],
+    "B:nlp:momentum-no-noise": [
+      "0fd3e838ab058076f279",
+      "cdd4ff0f93873c688021"
+    ],
+    "B:nlp:momentum-mf-native": [
+      "357951f7e8768b1d79cc",
+      "8259ea4519ae200586c0"
+    ]
+  },
+  "single_seed_rankings": {
+    "A:cv:adam-no-noise": [
+      {
+        "trial_id": "e9d790472f65d54bdae9",
+        "rank": 1,
+        "accuracy": 0.8,
+        "validation_loss": 0.19999999999999996
+      },
+      {
+        "trial_id": "1f7afb4cc714d1f3f1c0",
+        "rank": 2,
+        "accuracy": 0.7,
+        "validation_loss": 0.30000000000000004
+      },
+      {
+        "trial_id": "60f449f51166a2929714",
+        "rank": 3,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "6c54e852461fe0b66a38",
+        "rank": 4,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "8e6a867b4d5127318612",
+        "rank": 5,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "c742f98776ad8fed1b7a",
+        "rank": 6,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      }
+    ],
+    "A:cv:momentum-no-noise": [
+      {
+        "trial_id": "fbbadf68c8244759713a",
+        "rank": 1,
+        "accuracy": 0.8,
+        "validation_loss": 0.19999999999999996
+      },
+      {
+        "trial_id": "1bcd39db9b1c3e6a45cc",
+        "rank": 2,
+        "accuracy": 0.7,
+        "validation_loss": 0.30000000000000004
+      },
+      {
+        "trial_id": "80471a848cb3239ab7fa",
+        "rank": 3,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "be8f3be03d1e8ec4961f",
+        "rank": 4,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "f348e0ee0a14fbf4ba1c",
+        "rank": 5,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "fc9900e31d31ed68386a",
+        "rank": 6,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      }
+    ],
+    "A:cv:momentum-mf-native": [
+      {
+        "trial_id": "f9ec8c068af97c62732b",
+        "rank": 1,
+        "accuracy": 0.8,
+        "validation_loss": 0.19999999999999996
+      },
+      {
+        "trial_id": "2ba5cc9c909d61850c15",
+        "rank": 2,
+        "accuracy": 0.7,
+        "validation_loss": 0.30000000000000004
+      },
+      {
+        "trial_id": "3e7184c02506ce59833f",
+        "rank": 3,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "52d3468ced10166af584",
+        "rank": 4,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "d46b5a653067be2c3fea",
+        "rank": 5,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      }
+    ],
+    "A:nlp:adam-no-noise": [
+      {
+        "trial_id": "a87d904be5e0c6eb251c",
+        "rank": 1,
+        "accuracy": 0.8,
+        "validation_loss": 0.19999999999999996
+      },
+      {
+        "trial_id": "03a7a59f3fa1be39a099",
+        "rank": 2,
+        "accuracy": 0.7,
+        "validation_loss": 0.30000000000000004
+      },
+      {
+        "trial_id": "06d04bb2bbb2b7467241",
+        "rank": 3,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "3458613387588cb9972d",
+        "rank": 4,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "3ba6b8a57ec94be7c228",
+        "rank": 5,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "f92e49dc75f93ac9dae8",
+        "rank": 6,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      }
+    ],
+    "A:nlp:momentum-no-noise": [
+      {
+        "trial_id": "0fd3e838ab058076f279",
+        "rank": 1,
+        "accuracy": 0.8,
+        "validation_loss": 0.19999999999999996
+      },
+      {
+        "trial_id": "cdd4ff0f93873c688021",
+        "rank": 2,
+        "accuracy": 0.7,
+        "validation_loss": 0.30000000000000004
+      },
+      {
+        "trial_id": "140a432b32f3875f13b9",
+        "rank": 3,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "c397d81e2e42c20f146d",
+        "rank": 4,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "e56b7e9d2b8916a78b92",
+        "rank": 5,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "e68d54fee1e5f5aa760d",
+        "rank": 6,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      }
+    ],
+    "A:nlp:momentum-mf-native": [
+      {
+        "trial_id": "357951f7e8768b1d79cc",
+        "rank": 1,
+        "accuracy": 0.8,
+        "validation_loss": 0.19999999999999996
+      },
+      {
+        "trial_id": "8259ea4519ae200586c0",
+        "rank": 2,
+        "accuracy": 0.7,
+        "validation_loss": 0.30000000000000004
+      },
+      {
+        "trial_id": "009a6ac47bf389e42dc1",
+        "rank": 3,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "24a5ce8fc67c82dad839",
+        "rank": 4,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "5b5d0751fd5ba610b3c1",
+        "rank": 5,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      }
+    ],
+    "B:cv:adam-no-noise": [
+      {
+        "trial_id": "e9d790472f65d54bdae9",
+        "rank": 1,
+        "accuracy": 0.8,
+        "validation_loss": 0.19999999999999996
+      },
+      {
+        "trial_id": "1f7afb4cc714d1f3f1c0",
+        "rank": 2,
+        "accuracy": 0.7,
+        "validation_loss": 0.30000000000000004
+      },
+      {
+        "trial_id": "60f449f51166a2929714",
+        "rank": 3,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "6c54e852461fe0b66a38",
+        "rank": 4,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "8e6a867b4d5127318612",
+        "rank": 5,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "c742f98776ad8fed1b7a",
+        "rank": 6,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      }
+    ],
+    "B:cv:momentum-no-noise": [
+      {
+        "trial_id": "fbbadf68c8244759713a",
+        "rank": 1,
+        "accuracy": 0.8,
+        "validation_loss": 0.19999999999999996
+      },
+      {
+        "trial_id": "1bcd39db9b1c3e6a45cc",
+        "rank": 2,
+        "accuracy": 0.7,
+        "validation_loss": 0.30000000000000004
+      },
+      {
+        "trial_id": "80471a848cb3239ab7fa",
+        "rank": 3,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "be8f3be03d1e8ec4961f",
+        "rank": 4,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "f348e0ee0a14fbf4ba1c",
+        "rank": 5,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "fc9900e31d31ed68386a",
+        "rank": 6,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      }
+    ],
+    "B:cv:momentum-mf-native": [
+      {
+        "trial_id": "f9ec8c068af97c62732b",
+        "rank": 1,
+        "accuracy": 0.8,
+        "validation_loss": 0.19999999999999996
+      },
+      {
+        "trial_id": "2ba5cc9c909d61850c15",
+        "rank": 2,
+        "accuracy": 0.7,
+        "validation_loss": 0.30000000000000004
+      },
+      {
+        "trial_id": "2ce881e78e8211b4be31",
+        "rank": 3,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "352e8d63cadf98d27811",
+        "rank": 4,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "37c395e603c1b5b39c6f",
+        "rank": 5,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "3e7184c02506ce59833f",
+        "rank": 6,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "44240361ceb8f7ce9b64",
+        "rank": 7,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "52d3468ced10166af584",
+        "rank": 8,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "5f91e9c3c0d09bb7d6ad",
+        "rank": 9,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "6bfb959059dd885da13d",
+        "rank": 10,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "7cca94299ef1040ab7a5",
+        "rank": 11,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "807d8a032d6cf0ac5100",
+        "rank": 12,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "95c8eb43464de8326b36",
+        "rank": 13,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "b60af21f80e65423ae18",
+        "rank": 14,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "d36e44cdb7f60589f9a6",
+        "rank": 15,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "d46b5a653067be2c3fea",
+        "rank": 16,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "dc0e2597efbfc4da535e",
+        "rank": 17,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      }
+    ],
+    "B:nlp:adam-no-noise": [
+      {
+        "trial_id": "a87d904be5e0c6eb251c",
+        "rank": 1,
+        "accuracy": 0.8,
+        "validation_loss": 0.19999999999999996
+      },
+      {
+        "trial_id": "03a7a59f3fa1be39a099",
+        "rank": 2,
+        "accuracy": 0.7,
+        "validation_loss": 0.30000000000000004
+      },
+      {
+        "trial_id": "06d04bb2bbb2b7467241",
+        "rank": 3,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "3458613387588cb9972d",
+        "rank": 4,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "3ba6b8a57ec94be7c228",
+        "rank": 5,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "f92e49dc75f93ac9dae8",
+        "rank": 6,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      }
+    ],
+    "B:nlp:momentum-no-noise": [
+      {
+        "trial_id": "0fd3e838ab058076f279",
+        "rank": 1,
+        "accuracy": 0.8,
+        "validation_loss": 0.19999999999999996
+      },
+      {
+        "trial_id": "cdd4ff0f93873c688021",
+        "rank": 2,
+        "accuracy": 0.7,
+        "validation_loss": 0.30000000000000004
+      },
+      {
+        "trial_id": "140a432b32f3875f13b9",
+        "rank": 3,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "c397d81e2e42c20f146d",
+        "rank": 4,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "e56b7e9d2b8916a78b92",
+        "rank": 5,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "e68d54fee1e5f5aa760d",
+        "rank": 6,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      }
+    ],
+    "B:nlp:momentum-mf-native": [
+      {
+        "trial_id": "357951f7e8768b1d79cc",
+        "rank": 1,
+        "accuracy": 0.8,
+        "validation_loss": 0.19999999999999996
+      },
+      {
+        "trial_id": "8259ea4519ae200586c0",
+        "rank": 2,
+        "accuracy": 0.7,
+        "validation_loss": 0.30000000000000004
+      },
+      {
+        "trial_id": "004ef3298bf033c9b61f",
+        "rank": 3,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "009a6ac47bf389e42dc1",
+        "rank": 4,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "012f214c70659ad7f701",
+        "rank": 5,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "1783efe20778e35d0bbb",
+        "rank": 6,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "1e7a164f1a40ebf074c5",
+        "rank": 7,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "24a5ce8fc67c82dad839",
+        "rank": 8,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "2c3e5da9c50b27552c58",
+        "rank": 9,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "45446834f3d3fae11de2",
+        "rank": 10,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "45486cad8ff1c336c1f2",
+        "rank": 11,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "4e26e80cf431c6f1b732",
+        "rank": 12,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "5b5d0751fd5ba610b3c1",
+        "rank": 13,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "7230738970befe491825",
+        "rank": 14,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "72df391fb0bc3a95f028",
+        "rank": 15,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "808fcdbf13e91a19bc64",
+        "rank": 16,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "a85a6e4d0b5f481a170b",
+        "rank": 17,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "afd58015080df4d2ab59",
+        "rank": 18,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "d1616b4760850afa3edf",
+        "rank": 19,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "e6e22e180ac9d72cce81",
+        "rank": 20,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "f1e9726d219e76616d9f",
+        "rank": 21,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      },
+      {
+        "trial_id": "f37dc523b89f1111ab93",
+        "rank": 22,
+        "accuracy": 0.01,
+        "validation_loss": 0.99
+      }
+    ]
+  },
+  "trials": [
+    {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 1e-05,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 1e-05,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 3e-05,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 3e-05,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.01,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.01,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 1.0,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 1.0,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 3.0,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 3.0,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 1e-05,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 1e-05,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 3e-05,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 3e-05,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.003,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.003,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.01666666667,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.01666666667,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.05,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.05,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    }
+  ],
+  "search_results_sha256": "6333c37c8c9b3674b0aa132ef5d81dcdb95b3668081bbe058cdf600570ddedc6"
+}

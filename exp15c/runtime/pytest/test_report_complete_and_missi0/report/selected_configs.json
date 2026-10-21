@@ -1,0 +1,692 @@
+{
+  "winners": [
+    {
+      "scheme": "A",
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null
+    },
+    {
+      "scheme": "B",
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null
+    },
+    {
+      "scheme": "A",
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null
+    },
+    {
+      "scheme": "B",
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null
+    },
+    {
+      "scheme": "A",
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0
+    },
+    {
+      "scheme": "B",
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0
+    },
+    {
+      "scheme": "A",
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null
+    },
+    {
+      "scheme": "B",
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null
+    },
+    {
+      "scheme": "A",
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null
+    },
+    {
+      "scheme": "B",
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null
+    },
+    {
+      "scheme": "A",
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0
+    },
+    {
+      "scheme": "B",
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0
+    }
+  ],
+  "final_trials": [
+    {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261111,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261112,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261113,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261114,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261115,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261116,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261117,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261118,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261119,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261120,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261111,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261112,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261113,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261114,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261115,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261116,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261117,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261118,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261119,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261120,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261111,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261112,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261113,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261114,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261115,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261116,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261117,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261118,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261119,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261120,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261111,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261112,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261113,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261114,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261115,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261116,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261117,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261118,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261119,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261120,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261111,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261112,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261113,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261114,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261115,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261116,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261117,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261118,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261119,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261120,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261111,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261112,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261113,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261114,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261115,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261116,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261117,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261118,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261119,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.001,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261120,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    }
+  ],
+  "grid_sha256": "6f4f00ba4ae97fb0c6049e5d34242a732d222e9df73fc9df784bca99567391a6",
+  "review_results_sha256": "9aafb6451f47d1924997f662da0986719b322f742f88debea6ec43bc49614b80"
+}

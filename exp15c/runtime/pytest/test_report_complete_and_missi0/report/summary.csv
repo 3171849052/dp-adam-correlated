@@ -1,0 +1,17 @@
+experiment,scheme,task,method,private,epsilon,delta,lr,clip,accuracy_mean,accuracy_std,accuracy_ci95_low,accuracy_ci95_high,cross_entropy_mean,cross_entropy_std,n,clip_fraction_mean,momentum_workload_MSE
+Exp15c,A,cv,adam-no-noise,False,,,0.001,,0.7,0.0,0.7,0.7,0.8,0.0,10,,
+Exp15c,B,cv,adam-no-noise,False,,,0.001,,0.7,0.0,0.7,0.7,0.8,0.0,10,,
+Exp15c,A,cv,momentum-no-noise,False,,,0.001,,0.7,0.0,0.7,0.7,0.8,0.0,10,,
+Exp15c,B,cv,momentum-no-noise,False,,,0.001,,0.7,0.0,0.7,0.7,0.8,0.0,10,,
+Exp15c,A,cv,momentum-mf-native,True,8.0,1e-05,0.001,1.0,0.7,0.0,0.7,0.7,0.8,0.0,10,0.1,1e-05
+Exp15c,B,cv,momentum-mf-native,True,8.0,1e-05,0.001,1.0,0.7,0.0,0.7,0.7,0.8,0.0,10,0.1,1e-05
+Exp15c,A,nlp,adam-no-noise,False,,,0.001,,0.7,0.0,0.7,0.7,0.8,0.0,10,,
+Exp15c,B,nlp,adam-no-noise,False,,,0.001,,0.7,0.0,0.7,0.7,0.8,0.0,10,,
+Exp15c,A,nlp,momentum-no-noise,False,,,0.001,,0.7,0.0,0.7,0.7,0.8,0.0,10,,
+Exp15c,B,nlp,momentum-no-noise,False,,,0.001,,0.7,0.0,0.7,0.7,0.8,0.0,10,,
+Exp15c,A,nlp,momentum-mf-native,True,8.0,1e-05,0.001,1.0,0.7,0.0,0.7,0.7,0.8,0.0,10,0.1,1e-05
+Exp15c,B,nlp,momentum-mf-native,True,8.0,1e-05,0.001,1.0,0.7,0.0,0.7,0.7,0.8,0.0,10,0.1,1e-05
+Exp15b,A,cv,Exp15b-momentum-MF,True,8.0,1e-05,0.001,1.0,0.7,0.0,0.7,0.7,0.8,0.0,10,0.1,1e-05
+Exp15b,B,cv,Exp15b-momentum-MF,True,8.0,1e-05,0.001,1.0,0.7,0.0,0.7,0.7,0.8,0.0,10,0.1,1e-05
+Exp15b,A,nlp,Exp15b-momentum-MF,True,8.0,1e-05,0.001,1.0,0.7,0.0,0.7,0.7,0.8,0.0,10,0.1,1e-05
+Exp15b,B,nlp,Exp15b-momentum-MF,True,8.0,1e-05,0.001,1.0,0.7,0.0,0.7,0.7,0.8,0.0,10,0.1,1e-05
