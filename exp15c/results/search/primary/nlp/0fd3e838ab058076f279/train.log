@@ -1,0 +1,21 @@
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 19224.10it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+{"epoch": 1, "step": 62, "train_loss": 0.6881035707535282, "clip_fraction": null, "epsilon": null, "accuracy": 0.5582351841465695, "validation_loss": 0.6845437358486071, "validation_examples": 5349}
+{"epoch": 2, "step": 124, "train_loss": 0.6829273691485005, "clip_fraction": null, "epsilon": null, "accuracy": 0.5582351841465695, "validation_loss": 0.6803995468701619, "validation_examples": 5349}
+{"epoch": 3, "step": 186, "train_loss": 0.679360095608619, "clip_fraction": null, "epsilon": null, "accuracy": 0.5582351841465695, "validation_loss": 0.6762010728026978, "validation_examples": 5349}
+{"epoch": 4, "step": 248, "train_loss": 0.6757302521736391, "clip_fraction": null, "epsilon": null, "accuracy": 0.5582351841465695, "validation_loss": 0.6724746042288314, "validation_examples": 5349}
+{"epoch": 5, "step": 310, "train_loss": 0.6725436785298009, "clip_fraction": null, "epsilon": null, "accuracy": 0.5617872499532623, "validation_loss": 0.6691550188676111, "validation_examples": 5349}

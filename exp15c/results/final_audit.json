@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "protected_files_unchanged": true,
+  "stage_counts": {
+    "search": {
+      "planned": 63,
+      "completed": 62,
+      "non_finite": 1
+    },
+    "review": {
+      "planned": 30,
+      "completed": 30,
+      "non_finite": 0
+    },
+    "formal": {
+      "planned": 70,
+      "completed": 70,
+      "non_finite": 0
+    }
+  },
+  "excluded_candidates": [
+    {
+      "stage": "search",
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 1.0,
+      "clip": null,
+      "seed": 20261101,
+      "trial_id": "fc9900e31d31ed68386a",
+      "status": "non_finite",
+      "reason": "FloatingPointError: Nonfinite gradient",
+      "source_summary": "exp15c/results/search/primary/cv/fc9900e31d31ed68386a/summary.json"
+    }
+  ],
+  "sources": {
+    "exp15b/results/search_results.json": "5fa5f490a69ed91516d59ca667bb23b8a78c5aedaaacb19c53d310481d267556",
+    "exp15b/results/review_results.json": "23585812e95b2df608f077254c2db08000155e7512662469d8f0288d955e44cb",
+    "exp15b/results/formal_results.json": "ba4dbf0f2f92d1173e2afb9ac237ae40d1d2b7363e7341e2821bae30aed84553"
+  }
+}

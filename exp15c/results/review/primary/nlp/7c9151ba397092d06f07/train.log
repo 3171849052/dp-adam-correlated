@@ -1,0 +1,21 @@
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 19471.24it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+{"epoch": 1, "step": 62, "train_loss": 0.4844429946407195, "clip_fraction": null, "epsilon": null, "accuracy": 0.871377827631333, "validation_loss": 0.3170811023237906, "validation_examples": 5349}
+{"epoch": 2, "step": 124, "train_loss": 0.26770178960984753, "clip_fraction": null, "epsilon": null, "accuracy": 0.8999813049168068, "validation_loss": 0.25638764834800687, "validation_examples": 5349}
+{"epoch": 3, "step": 186, "train_loss": 0.20359699126212827, "clip_fraction": null, "epsilon": null, "accuracy": 0.9087679940175734, "validation_loss": 0.24374708395669295, "validation_examples": 5349}
+{"epoch": 4, "step": 248, "train_loss": 0.16966649849184098, "clip_fraction": null, "epsilon": null, "accuracy": 0.9147504206393718, "validation_loss": 0.23536311962778803, "validation_examples": 5349}
+{"epoch": 5, "step": 310, "train_loss": 0.14728682536463583, "clip_fraction": null, "epsilon": null, "accuracy": 0.9184894372779959, "validation_loss": 0.2345009286908663, "validation_examples": 5349}

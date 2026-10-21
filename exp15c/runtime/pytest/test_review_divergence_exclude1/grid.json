@@ -1,0 +1,38 @@
+{
+  "candidates": {
+    "1bcd39db9b1c3e6a45cc": {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.01,
+      "clip": null,
+      "stage": "search",
+      "seed": 20261101,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    "f4da3705adc113a7bdf4": {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.02,
+      "clip": null,
+      "stage": "search",
+      "seed": 20261101,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    }
+  },
+  "schemes": {
+    "A": {
+      "cv:momentum-no-noise": [
+        "1bcd39db9b1c3e6a45cc",
+        "f4da3705adc113a7bdf4"
+      ]
+    },
+    "B": {
+      "cv:momentum-no-noise": [
+        "1bcd39db9b1c3e6a45cc",
+        "f4da3705adc113a7bdf4"
+      ]
+    }
+  }
+}

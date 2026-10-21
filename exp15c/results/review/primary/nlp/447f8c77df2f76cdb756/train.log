@@ -1,0 +1,21 @@
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 19224.10it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+{"epoch": 1, "step": 62, "train_loss": 0.6694095242408014, "clip_fraction": null, "epsilon": null, "accuracy": 0.6571321742381754, "validation_loss": 0.6248525739674435, "validation_examples": 5349}
+{"epoch": 2, "step": 124, "train_loss": 0.5763825526083669, "clip_fraction": null, "epsilon": null, "accuracy": 0.7582725743129557, "validation_loss": 0.49755688287717514, "validation_examples": 5349}
+{"epoch": 3, "step": 186, "train_loss": 0.49350045087260586, "clip_fraction": null, "epsilon": null, "accuracy": 0.7891194615816041, "validation_loss": 0.4479207648453612, "validation_examples": 5349}
+{"epoch": 4, "step": 248, "train_loss": 0.4557546125842679, "clip_fraction": null, "epsilon": null, "accuracy": 0.8098710039259674, "validation_loss": 0.42073070349972325, "validation_examples": 5349}
+{"epoch": 5, "step": 310, "train_loss": 0.4329280380741242, "clip_fraction": null, "epsilon": null, "accuracy": 0.8166012338754908, "validation_loss": 0.40484888679759706, "validation_examples": 5349}

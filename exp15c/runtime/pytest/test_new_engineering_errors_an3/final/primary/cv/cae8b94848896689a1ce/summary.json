@@ -1,0 +1,14 @@
+{
+  "task": "cv",
+  "method": "momentum-no-noise",
+  "lr": 0.01,
+  "clip": null,
+  "stage": "final",
+  "seed": 20261111,
+  "smoke_phase": "search",
+  "replicate": "primary",
+  "trial_id": "cae8b94848896689a1ce",
+  "status": "non_finite",
+  "error": "FloatingPointError: Nonfinite gradient",
+  "traceback": "fixture traceback"
+}

@@ -1,0 +1,244 @@
+{
+  "rows": [
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.01,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "replicate": "primary",
+      "trial_id": "8773fce2b070363c0c38",
+      "status": "non_finite",
+      "error": "FloatingPointError: Nonfinite gradient",
+      "completed_epochs": 0,
+      "official_evaluation_used": false,
+      "accuracy": null,
+      "validation_loss": null
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.01,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "replicate": "primary",
+      "trial_id": "0d79408e5a65312c21e7",
+      "status": "non_finite",
+      "error": "FloatingPointError: Nonfinite gradient",
+      "completed_epochs": 0,
+      "official_evaluation_used": false,
+      "accuracy": null,
+      "validation_loss": null
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.02,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "replicate": "primary",
+      "trial_id": "93665fc7d0ee79987920",
+      "status": "completed",
+      "error": null,
+      "completed_epochs": 5,
+      "official_evaluation_used": false,
+      "accuracy": 0.8,
+      "validation_loss": 0.5
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.02,
+      "clip": null,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "replicate": "primary",
+      "trial_id": "c33dd2cc1a3ae69f9279",
+      "status": "completed",
+      "error": null,
+      "completed_epochs": 5,
+      "official_evaluation_used": false,
+      "accuracy": 0.8,
+      "validation_loss": 0.5
+    }
+  ],
+  "rankings": {
+    "A:cv:momentum-no-noise": {
+      "ranked": [
+        {
+          "trial_id": "f4da3705adc113a7bdf4",
+          "lr": 0.02,
+          "clip": null,
+          "valid": true,
+          "accuracy_mean": 0.8000000000000002,
+          "accuracy_std": 1.3597399555105182e-16,
+          "loss_mean": 0.5,
+          "seeds": [
+            {
+              "seed": 20261101,
+              "status": "completed",
+              "accuracy": 0.8,
+              "loss": 0.5,
+              "error": null
+            },
+            {
+              "seed": 20261102,
+              "status": "completed",
+              "accuracy": 0.8,
+              "loss": 0.5,
+              "error": null
+            },
+            {
+              "seed": 20261103,
+              "status": "completed",
+              "accuracy": 0.8,
+              "loss": 0.5,
+              "error": null
+            }
+          ]
+        }
+      ],
+      "excluded": [
+        {
+          "trial_id": "1bcd39db9b1c3e6a45cc",
+          "lr": 0.01,
+          "clip": null,
+          "valid": false,
+          "accuracy_mean": null,
+          "accuracy_std": null,
+          "loss_mean": null,
+          "seeds": [
+            {
+              "seed": 20261101,
+              "status": "completed",
+              "accuracy": 0.9,
+              "loss": 0.5,
+              "error": null
+            },
+            {
+              "seed": 20261102,
+              "status": "non_finite",
+              "accuracy": null,
+              "loss": null,
+              "error": "FloatingPointError: Nonfinite gradient"
+            },
+            {
+              "seed": 20261103,
+              "status": "non_finite",
+              "accuracy": null,
+              "loss": null,
+              "error": "FloatingPointError: Nonfinite gradient"
+            }
+          ]
+        }
+      ]
+    },
+    "B:cv:momentum-no-noise": {
+      "ranked": [
+        {
+          "trial_id": "f4da3705adc113a7bdf4",
+          "lr": 0.02,
+          "clip": null,
+          "valid": true,
+          "accuracy_mean": 0.8000000000000002,
+          "accuracy_std": 1.3597399555105182e-16,
+          "loss_mean": 0.5,
+          "seeds": [
+            {
+              "seed": 20261101,
+              "status": "completed",
+              "accuracy": 0.8,
+              "loss": 0.5,
+              "error": null
+            },
+            {
+              "seed": 20261102,
+              "status": "completed",
+              "accuracy": 0.8,
+              "loss": 0.5,
+              "error": null
+            },
+            {
+              "seed": 20261103,
+              "status": "completed",
+              "accuracy": 0.8,
+              "loss": 0.5,
+              "error": null
+            }
+          ]
+        }
+      ],
+      "excluded": [
+        {
+          "trial_id": "1bcd39db9b1c3e6a45cc",
+          "lr": 0.01,
+          "clip": null,
+          "valid": false,
+          "accuracy_mean": null,
+          "accuracy_std": null,
+          "loss_mean": null,
+          "seeds": [
+            {
+              "seed": 20261101,
+              "status": "completed",
+              "accuracy": 0.9,
+              "loss": 0.5,
+              "error": null
+            },
+            {
+              "seed": 20261102,
+              "status": "non_finite",
+              "accuracy": null,
+              "loss": null,
+              "error": "FloatingPointError: Nonfinite gradient"
+            },
+            {
+              "seed": 20261103,
+              "status": "non_finite",
+              "accuracy": null,
+              "loss": null,
+              "error": "FloatingPointError: Nonfinite gradient"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "single_seed_rankings": {
+    "A:cv:momentum-no-noise": [
+      {
+        "trial_id": "1bcd39db9b1c3e6a45cc",
+        "rank": 1,
+        "accuracy": 0.9,
+        "validation_loss": 0.5
+      },
+      {
+        "trial_id": "f4da3705adc113a7bdf4",
+        "rank": 2,
+        "accuracy": 0.8,
+        "validation_loss": 0.5
+      }
+    ],
+    "B:cv:momentum-no-noise": [
+      {
+        "trial_id": "1bcd39db9b1c3e6a45cc",
+        "rank": 1,
+        "accuracy": 0.9,
+        "validation_loss": 0.5
+      },
+      {
+        "trial_id": "f4da3705adc113a7bdf4",
+        "rank": 2,
+        "accuracy": 0.8,
+        "validation_loss": 0.5
+      }
+    ]
+  }
+}

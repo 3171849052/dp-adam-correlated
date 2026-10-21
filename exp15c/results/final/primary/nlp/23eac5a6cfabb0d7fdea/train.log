@@ -1,0 +1,21 @@
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 29034.05it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+{"epoch": 1, "step": 62, "train_loss": 0.6039658921764743, "clip_fraction": null, "epsilon": null, "accuracy": 0.6846330275229358, "validation_loss": 0.5800121071141794, "validation_examples": 872}
+{"epoch": 2, "step": 124, "train_loss": 0.466809819867534, "clip_fraction": null, "epsilon": null, "accuracy": 0.7408256880733946, "validation_loss": 0.50434194354836, "validation_examples": 872}
+{"epoch": 3, "step": 186, "train_loss": 0.43348604657573087, "clip_fraction": null, "epsilon": null, "accuracy": 0.7775229357798165, "validation_loss": 0.4643916383795782, "validation_examples": 872}
+{"epoch": 4, "step": 248, "train_loss": 0.37888785085370463, "clip_fraction": null, "epsilon": null, "accuracy": 0.7821100917431193, "validation_loss": 0.45094949827281705, "validation_examples": 872}
+{"epoch": 5, "step": 310, "train_loss": 0.3576059329125189, "clip_fraction": null, "epsilon": null, "accuracy": 0.783256880733945, "validation_loss": 0.4624281454523769, "validation_examples": 872}

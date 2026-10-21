@@ -1,12 +1,10 @@
 {
-  "stage": "failed",
-  "pid": 2544822,
-  "updated": 1792566286.7997842,
+  "stage": "completed",
+  "pid": 2580176,
+  "updated": 1792577857.5633798,
   "gpus": [
     1,
     2,
     3
-  ],
-  "error": "RuntimeError: search failed; see /media/data/data/lt/dp-adam-correlated/exp15c/results/search_status.json; no automatic retry",
-  "traceback": "Traceback (most recent call last):\n  File \"/media/data/data/lt/dp-adam-correlated/exp15c/pipeline.py\", line 25, in main\n    finals=search_and_review()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/media/data/data/lt/dp-adam-correlated/exp15c/search.py\", line 101, in search_and_review\n    rows=run_batch('search',jobs)\n         ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/media/data/data/lt/dp-adam-correlated/exp15c/scheduler.py\", line 72, in run_batch\n    if failed and not active:raise RuntimeError(f'{name} failed; see {path}; no automatic retry')\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: search failed; see /media/data/data/lt/dp-adam-correlated/exp15c/results/search_status.json; no automatic retry\n"
+  ]
 }

@@ -1,12 +1,13 @@
 """One subprocess per idle GPU, durable status, fail closed, resumable successes."""
 import json
+import math
 import os
 import shlex
 import subprocess
 import sys
 import time
 from exp15c import ROOT, RESULTS
-from exp15c.config import save_json, file_hash
+from exp15c.config import save_json, file_hash, json_hash
 
 
 def event(row):
@@ -19,16 +20,48 @@ def idle(gpu):
     return int(memory.strip())<256
 
 
+def valid_metrics(row):
+    return (row['status']=='completed'
+        and all(isinstance(row.get(k),(int,float)) and math.isfinite(row[k]) for k in ('accuracy','validation_loss'))
+        and 0 <= row['accuracy'] <= 1 and row['validation_loss'] >= 0)
+
+
+def verify_config(cfg,row):
+    if row['trial_id']!=cfg.id or any(row[k]!=v for k,v in cfg.values().items()):
+        raise ValueError('Wrong result identity/configuration')
+    resolved=json.loads((cfg.output/'config.json').read_text())
+    digest=resolved.pop('config_sha256')
+    if json_hash(resolved)!=digest: raise ValueError('Resolved configuration hash mismatch')
+    if any(resolved[k]!=v for k,v in cfg.protocol().items()): raise ValueError('Trial protocol mismatch')
+    from exp15c.support import code_hashes
+    current=code_hashes()
+    if any(current[k]!=resolved['code_sha256'][k] for k in CORE):
+        raise ValueError('Training core changed since trial')
+    if row['status']=='completed':
+        if row['config_sha256']!=digest or any(current[k]!=row['code_sha256'][k] for k in CORE):
+            raise ValueError('Summary configuration/core hash mismatch')
+
+
+def non_finite(cfg):
+    """Only explicit numerical divergence in search/review is an exclusion."""
+    path=cfg.output/'summary.json'
+    if not path.exists(): return False
+    row=json.loads(path.read_text())
+    if row['status']!='non_finite': return False
+    verify_config(cfg,row)
+    if cfg.stage not in ('search','review'): return False
+    if not row.get('error','').startswith('FloatingPointError:'):
+        raise ValueError(f'Nonfinite result lacks explicit numerical failure: {path}')
+    return True
+
+
 def completed(cfg):
     p=cfg.output/'summary.json'
     if not p.exists():return False
     r=json.loads(p.read_text())
     if r['status']!='completed':raise RuntimeError(f'Failed run requires inspection: {p}')
-    if r['trial_id']!=cfg.id:raise ValueError('Wrong result identity')
-    from exp15c.support import code_hashes
-    current=code_hashes()
-    for key,value in r['code_sha256'].items():
-        if key in CORE and current.get(key)!=value:raise ValueError(f'Code changed since trial: {key}')
+    verify_config(cfg,r)
+    if not valid_metrics(r): raise ValueError(f'Invalid completed metrics: {p}')
     for name,h in r['file_sha256'].items():
         if file_hash(cfg.output/name)!=h:raise ValueError(f'Result artifact changed: {cfg.output/name}')
     return True
@@ -42,8 +75,11 @@ def run_batch(name,jobs):
     status={};pending=[];active={};failed=False
     for c in jobs:
         key=f'{c.id}:{c.replicate}'
-        existing=c.output/'summary.json'
-        if completed(c):status[key]=dict(**c.values(),status='completed',reused=True)
+        if non_finite(c):
+            row=json.loads((c.output/'summary.json').read_text())
+            status[key]=dict(**c.values(),status='non_finite',reused=True,error=row['error'],
+                traceback=row['traceback'],log=str(c.output/'train.log'))
+        elif completed(c):status[key]=dict(**c.values(),status='completed',reused=True)
         else:
             pending.append(c);status[key]=dict(**c.values(),status='pending')
     path=RESULTS/f'{name}_status.json';save_json(path,status)
@@ -64,11 +100,14 @@ def run_batch(name,jobs):
             rc=process.poll()
             if rc is None:continue
             log.close();del active[gpu];key=f'{c.id}:{c.replicate}'
-            summary=c.output/'summary.json'
-            okay=rc==0 and completed(c)
-            status[key].update(status='completed' if okay else 'failed',exit_code=rc,ended=time.time())
+            excluded=non_finite(c)
+            okay=not excluded and rc==0 and completed(c)
+            status[key].update(status='non_finite' if excluded else 'completed' if okay else 'failed',exit_code=rc,ended=time.time())
+            if excluded:
+                row=json.loads((c.output/'summary.json').read_text())
+                status[key].update(error=row['error'],traceback=row['traceback'])
             event(dict(batch=name,event='finished',**status[key]));save_json(path,status)
-            failed|=not okay
+            failed|=not (okay or excluded)
         if failed and not active:raise RuntimeError(f'{name} failed; see {path}; no automatic retry')
         if pending or active:time.sleep(3)
     return [json.loads((c.output/'summary.json').read_text()) for c in jobs]

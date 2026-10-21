@@ -5,7 +5,7 @@ import numpy as np
 from exp15c import RESULTS
 from exp15c.config import Trial, METHODS, SEARCH_SEED, FINAL_SEEDS, file_hash, json_hash, save_json
 from exp15c import ROOT
-from exp15c.scheduler import run_batch, CORE
+from exp15c.scheduler import run_batch, CORE, valid_metrics
 from exp15c.support import code_hashes, result_dir
 from exp15c.support import read
 
@@ -16,7 +16,7 @@ REVIEW_SEEDS = (20261102,20261103)
 
 
 def rank(rows):
-    return sorted((r for r in rows if r['status']=='completed'),
+    return sorted((r for r in rows if valid_metrics(r)),
                   key=lambda r:(-r['accuracy'],r['validation_loss'],r['trial_id']))
 
 
@@ -26,8 +26,13 @@ def cfg_of(row):
 
 def require_phase1():
     r=read(RESULTS/'phase1_acceptance.json')
-    if r['status']!='passed' or r['code_sha256']!=code_hashes(): raise ValueError('Tests/smoke required for current code')
-    if file_hash(RESULTS/'tests.log')!=r['tests_log_sha256']: raise ValueError('Test log changed')
+    current=code_hashes()
+    if r['status']!='passed' or any(r['code_sha256'][k]!=current[k] for k in CORE):
+        raise ValueError('Passing smoke required for unchanged training core')
+    tests=read(RESULTS/'test_results.json')
+    if tests['status']!='passed' or tests['code_sha256']!=current:
+        raise ValueError('Passing tests required for current orchestration code')
+    if file_hash(RESULTS/'tests.log')!=tests['log_sha256']: raise ValueError('Test log changed')
 
 
 def extension_trials():
@@ -127,7 +132,7 @@ def search_and_review():
         for trial_id in ids:
             source=by_id[trial_id];c=cfg_of(source)
             measurements=[lookup[(task,method,c.lr,c.clip,seed)] for seed in (SEARCH_SEED,)+REVIEW_SEEDS]
-            valid=all(r['status']=='completed' and r['completed_epochs']==5 and not r['official_evaluation_used'] for r in measurements)
+            valid=all(valid_metrics(r) and r['completed_epochs']==5 and not r['official_evaluation_used'] for r in measurements)
             aggregates.append(dict(trial_id=trial_id,lr=c.lr,clip=c.clip,valid=valid,
                 accuracy_mean=float(np.mean([r['accuracy'] for r in measurements])) if valid else None,
                 accuracy_std=float(np.std([r['accuracy'] for r in measurements],ddof=1)) if valid else None,

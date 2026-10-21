@@ -1,0 +1,181 @@
+{
+  "grid_sha256": "2cb4390018b01be7322c4324097ed2768624276ab5f244630af20c38a93ba1cb",
+  "winners": [
+    {
+      "scheme": "A",
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "trial_id": "f4da3705adc113a7bdf4",
+      "lr": 0.02,
+      "clip": null,
+      "valid": true,
+      "accuracy_mean": 0.8000000000000002,
+      "accuracy_std": 1.3597399555105182e-16,
+      "loss_mean": 0.5,
+      "seeds": [
+        {
+          "seed": 20261101,
+          "status": "completed",
+          "accuracy": 0.8,
+          "loss": 0.5,
+          "error": null
+        },
+        {
+          "seed": 20261102,
+          "status": "completed",
+          "accuracy": 0.8,
+          "loss": 0.5,
+          "error": null
+        },
+        {
+          "seed": 20261103,
+          "status": "completed",
+          "accuracy": 0.8,
+          "loss": 0.5,
+          "error": null
+        }
+      ]
+    },
+    {
+      "scheme": "B",
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "trial_id": "f4da3705adc113a7bdf4",
+      "lr": 0.02,
+      "clip": null,
+      "valid": true,
+      "accuracy_mean": 0.8000000000000002,
+      "accuracy_std": 1.3597399555105182e-16,
+      "loss_mean": 0.5,
+      "seeds": [
+        {
+          "seed": 20261101,
+          "status": "completed",
+          "accuracy": 0.8,
+          "loss": 0.5,
+          "error": null
+        },
+        {
+          "seed": 20261102,
+          "status": "completed",
+          "accuracy": 0.8,
+          "loss": 0.5,
+          "error": null
+        },
+        {
+          "seed": 20261103,
+          "status": "completed",
+          "accuracy": 0.8,
+          "loss": 0.5,
+          "error": null
+        }
+      ]
+    }
+  ],
+  "final_trials": [
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.02,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261111,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.02,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261112,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.02,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261113,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.02,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261114,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.02,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261115,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.02,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261116,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.02,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261117,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.02,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261118,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.02,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261119,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.02,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261120,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    }
+  ],
+  "deduplicated_formal_count": 10,
+  "maximum_formal_count": 80,
+  "review_results_sha256": "f08329487b63de5d09822ed3e2250e113f39465c51997dc4d47bad6d2beab1d0",
+  "official_evaluation_used_for_selection": false
+}

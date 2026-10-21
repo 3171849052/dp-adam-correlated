@@ -1,0 +1,36 @@
+[
+  {
+    "task": "cv",
+    "method": "momentum-no-noise",
+    "lr": 0.01,
+    "clip": null,
+    "stage": "search",
+    "seed": 20261101,
+    "smoke_phase": "search",
+    "replicate": "primary",
+    "trial_id": "1bcd39db9b1c3e6a45cc",
+    "status": "completed",
+    "error": null,
+    "completed_epochs": 5,
+    "official_evaluation_used": false,
+    "accuracy": 0.9,
+    "validation_loss": 0.5
+  },
+  {
+    "task": "cv",
+    "method": "momentum-no-noise",
+    "lr": 0.02,
+    "clip": null,
+    "stage": "search",
+    "seed": 20261101,
+    "smoke_phase": "search",
+    "replicate": "primary",
+    "trial_id": "f4da3705adc113a7bdf4",
+    "status": "completed",
+    "error": null,
+    "completed_epochs": 5,
+    "official_evaluation_used": false,
+    "accuracy": 0.8,
+    "validation_loss": 0.5
+  }
+]

@@ -16,3 +16,8 @@ Traceback (most recent call last):
     if failed and not active:raise RuntimeError(f'{name} failed; see {path}; no automatic retry')
                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 RuntimeError: search failed; see /media/data/data/lt/dp-adam-correlated/exp15c/results/search_status.json; no automatic retry
+{"stage": "search", "pid": 2580176, "updated": 1792568332.2354832, "gpus": [1, 2, 3], "counts": {"search": 63, "private_cv": 17, "private_nlp": 22, "nonprivate": 24}}
+{"stage": "review", "pid": 2580176, "updated": 1792569515.4317696, "gpus": [1, 2, 3], "deduplicated_count": 30}
+{"stage": "formal", "pid": 2580176, "updated": 1792572046.1805243, "gpus": [1, 2, 3], "deduplicated_formal_count": 70}
+{"stage": "report", "pid": 2580176, "updated": 1792577838.113795, "gpus": [1, 2, 3]}
+{"stage": "completed", "pid": 2580176, "updated": 1792577857.5633798, "gpus": [1, 2, 3]}

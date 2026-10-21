@@ -7,7 +7,7 @@ from scipy.stats import t
 from exp15c import ROOT,RESULTS
 from exp15c.config import Trial,FINAL_SEEDS,SEARCH_SEED,file_hash,save_json
 from exp15c.support import read,write_csv,result_dir,protected_snapshot
-from exp15c.scheduler import completed
+from exp15c.scheduler import completed, non_finite, valid_metrics
 from exp15c.search import cfg_of,load_frozen
 
 
@@ -61,18 +61,45 @@ def historical_rows(stage):
     return rows
 
 
+def audit_trials(stage,values,rows):
+    if (len(rows)!=len(values) or len({r['trial_id'] for r in rows})!=len(rows)
+        or {Trial(**v).id for v in values}!={r['trial_id'] for r in rows}):
+        raise ValueError('Missing planned training or duplicate result')
+    exclusions=[]
+    for row in rows:
+        cfg=cfg_of(row)
+        if row['status']=='non_finite':
+            if stage not in ('search','review') or not non_finite(cfg):
+                raise ValueError(f'Invalid exclusion in {stage}: {cfg.id}')
+            if row!=read(cfg.output/'summary.json'): raise ValueError('Exclusion summary changed')
+            exclusions.append(dict(stage=stage,task=cfg.task,method=cfg.method,lr=cfg.lr,clip=cfg.clip,
+                seed=cfg.seed,trial_id=cfg.id,status='non_finite',reason=row['error'],
+                source_summary=str((cfg.output/'summary.json').relative_to(ROOT))))
+        else:
+            if not completed(cfg) or not valid_metrics(row) or row['completed_epochs']!=5:
+                raise ValueError('Incomplete or invalid result')
+            if row['method']=='momentum-mf-native' and abs(row['actual_epsilon']-8.)>1e-7:
+                raise ValueError('Wrong epsilon')
+    return dict(planned=len(values),completed=len(rows)-len(exclusions),non_finite=len(exclusions)),exclusions
+
+
 def main():
     frozen=load_frozen();selected=read(RESULTS/'selected_configs.json')
     search=read(RESULTS/'search_results.json');review=read(RESULTS/'review_results.json')['rows'];formal=read(RESULTS/'formal_results.json')
     plan=read(RESULTS/'review_plan.json')
     if selected['grid_sha256']!=file_hash(RESULTS/'extended_grid.json') or selected['review_results_sha256']!=file_hash(RESULTS/'review_results.json'):
         raise ValueError('Decision provenance changed')
-    for values,rows in ((list(frozen['candidates'].values()),search),(plan['trials'],review),(selected['final_trials'],formal)):
-        if {Trial(**v).id for v in values}!={r['trial_id'] for r in rows}: raise ValueError('Missing planned training')
-        for r in rows:
-            if not completed(cfg_of(r)) or r['completed_epochs']!=5: raise ValueError('Incomplete result')
-            if r['method']=='momentum-mf-native' and abs(r['actual_epsilon']-8.)>1e-7: raise ValueError('Wrong epsilon')
+    stage_counts={};exclusions=[]
+    for stage,values,rows in (('search',list(frozen['candidates'].values()),search),('review',plan['trials'],review),('formal',selected['final_trials'],formal)):
+        stage_counts[stage],excluded=audit_trials(stage,values,rows);exclusions.extend(excluded)
+    # Keep every planned outcome in the result JSONs, but use only successes below.
+    search=[r for r in search if valid_metrics(r)];review=[r for r in review if valid_metrics(r)]
     if any(r['official_evaluation_used'] for r in search+review): raise ValueError('Official evaluation used for selection')
+    lookup={(r['task'],r['method'],r['lr'],r['clip'],r['seed']):r for r in search+review}
+    for w in selected['winners']:
+        for seed in (SEARCH_SEED,20261102,20261103):
+            if (w['task'],w['method'],w['lr'],w['clip'],seed) not in lookup:
+                raise ValueError('Selected configuration has an excluded or missing validation seed')
     historical={s:historical_rows(s) for s in ('search','review','formal')}
     old_selected=read(ROOT/'exp15b/results/selected_configs.json')
     summaries=[];pairs=[];groups={};cache={}
@@ -155,7 +182,14 @@ def main():
         if matching:
             improvements=sum(r['difference']>0 for r in matching)
             lines.append(f"- {task} 相同 LR/C 的单种子搜索对照：{len(matching)} 对中有 {improvements} 对提高准确率；差值范围 [{100*min(r['difference'] for r in matching):.3f}, {100*max(r['difference'] for r in matching):.3f}] 个百分点。这些配置并非独立重复，不据此计算十种子 CI。")
-    lines+=['','历史 MF 仅从 Exp15b 读取，没有创建或重训历史方法。','']
+    lines+=['','历史 MF 仅从 Exp15b 读取，没有创建或重训历史方法。','',
+        '任务验收：搜索/复核仅排除明确记录的非有限值，正式训练不排除任何种子。','',
+        '|阶段|计划数|完成数|发散排除数|','|---|---:|---:|---:|']
+    for stage,counts in stage_counts.items():
+        lines.append(f"|{stage}|{counts['planned']}|{counts['completed']}|{counts['non_finite']}|")
+    lines+=['','排除原因（原始 summary、traceback 和训练日志全部保留）：','']
+    for row in exclusions:
+        lines.append(f"- {row['stage']} {row['task']} {row['method']} LR={row['lr']:g}, C={row['clip']}, seed={row['seed']}：{row['reason']}；`{row['source_summary']}`。")
     with (RESULTS/'mf_comparison.csv').open() as f:
         for r in csv.DictReader(f):
             lines.append(f"- {r['task']} T={r['total_steps']}：在相同 Momentum workload 上，重新校准后的理论 MSE 降低 {100*float(r['relative_reduction']):.5f}%。")
@@ -166,6 +200,7 @@ def main():
     if protected_snapshot()!=read(RESULTS/'protected_before.json'):raise ValueError('Protected files changed')
     (RESULTS/'final_report.md').write_text('\n'.join(lines)+'\n')
     save_json(RESULTS/'final_audit.json',dict(status='passed',protected_files_unchanged=True,
+        stage_counts=stage_counts,excluded_candidates=exclusions,
         sources={str(p.relative_to(ROOT)):file_hash(p) for p in [ROOT/f'exp15b/results/{s}_results.json' for s in ('search','review','formal')]}))
 
 

@@ -1,0 +1,40 @@
+{
+  "status": "running",
+  "pid": 2580176,
+  "stage": "search",
+  "counts": {
+    "completed": 23,
+    "non_finite": 1,
+    "running": 3,
+    "pending": 36
+  },
+  "reused_successful_trials": 23,
+  "reused_non_finite_trials": 1,
+  "workers": [
+    {
+      "pid": 2580201,
+      "gpu": 1,
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 3e-05,
+      "visibility": "CUDA_VISIBLE_DEVICES=1"
+    },
+    {
+      "pid": 2580205,
+      "gpu": 2,
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.0001,
+      "visibility": "CUDA_VISIBLE_DEVICES=2"
+    },
+    {
+      "pid": 2580209,
+      "gpu": 3,
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.0003,
+      "visibility": "CUDA_VISIBLE_DEVICES=3"
+    }
+  ],
+  "detached_session": true
+}

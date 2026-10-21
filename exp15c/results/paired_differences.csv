@@ -1,0 +1,55 @@
+scheme,task,left,right,metric,comparison,difference,n,mean,sample_std,ci95_low,ci95_high
+A,cv,adam-no-noise,momentum-no-noise,accuracy,independently_tuned_official_evaluation,right minus left,10,0.008420000000000006,0.0031382231349036667,0.006175050407969758,0.010664949592030253
+A,cv,adam-no-noise,momentum-no-noise,validation_loss,independently_tuned_official_evaluation,right minus left,10,-0.04178280555725097,0.008870891580019132,-0.048128659111134675,-0.03543695200336726
+A,cv,adam-no-noise,momentum-mf-native,accuracy,independently_tuned_official_evaluation,right minus left,10,-0.04368000000000001,0.0033917547081120216,-0.04610631515380646,-0.04125368484619356
+A,cv,adam-no-noise,momentum-mf-native,validation_loss,independently_tuned_official_evaluation,right minus left,10,0.22172335283279415,0.012908139470170344,0.21248942611957528,0.23095727954601303
+A,cv,adam-no-noise,Exp15b-momentum-MF,accuracy,independently_tuned_official_evaluation,right minus left,10,-0.05108999999999999,0.0032095170976332433,-0.053385950220622855,-0.048794049779377124
+A,cv,adam-no-noise,Exp15b-momentum-MF,validation_loss,independently_tuned_official_evaluation,right minus left,10,0.25320908832550054,0.011565347566803023,0.24493573707363697,0.2614824395773641
+A,cv,momentum-no-noise,momentum-mf-native,accuracy,independently_tuned_official_evaluation,right minus left,10,-0.052100000000000014,0.0018991226044325741,-0.05345855047036585,-0.05074144952963418
+A,cv,momentum-no-noise,momentum-mf-native,validation_loss,independently_tuned_official_evaluation,right minus left,10,0.26350615839004515,0.014318665660209312,0.25326320202572944,0.27374911475436087
+A,cv,momentum-no-noise,Exp15b-momentum-MF,accuracy,independently_tuned_official_evaluation,right minus left,10,-0.05950999999999999,0.002024543844370335,-0.06095827142051071,-0.058061728579489276
+A,cv,momentum-no-noise,Exp15b-momentum-MF,validation_loss,independently_tuned_official_evaluation,right minus left,10,0.2949918938827515,0.012152606297296626,0.28629844304243773,0.30368534472306524
+A,cv,momentum-mf-native,Exp15b-momentum-MF,accuracy,independently_tuned_official_evaluation,right minus left,10,-0.0074099999999999834,0.0015659218087475378,-0.00853019298009761,-0.006289807019902358
+A,cv,momentum-mf-native,Exp15b-momentum-MF,validation_loss,independently_tuned_official_evaluation,right minus left,10,0.03148573549270629,0.004525501557858326,0.028248386700311337,0.03472308428510125
+A,nlp,adam-no-noise,momentum-no-noise,accuracy,independently_tuned_official_evaluation,right minus left,10,-0.00561926605504588,0.009260710653827497,-0.01224397937545749,0.0010054472653657298
+A,nlp,adam-no-noise,momentum-no-noise,validation_loss,independently_tuned_official_evaluation,right minus left,10,-0.2931217878236683,0.060462130616161305,-0.33637379050963967,-0.24986978513769698
+A,nlp,adam-no-noise,momentum-mf-native,accuracy,independently_tuned_official_evaluation,right minus left,10,-0.042660550458715606,0.00912320115607113,-0.04918689541027064,-0.03613420550716057
+A,nlp,adam-no-noise,momentum-mf-native,validation_loss,independently_tuned_official_evaluation,right minus left,10,0.42983658029398786,0.06260755456627466,0.38504983376906804,0.4746233268189077
+A,nlp,adam-no-noise,Exp15b-momentum-MF,accuracy,independently_tuned_official_evaluation,right minus left,10,-0.042660550458715606,0.009234638559130048,-0.04926661292613227,-0.03605448799129894
+A,nlp,adam-no-noise,Exp15b-momentum-MF,validation_loss,independently_tuned_official_evaluation,right minus left,10,0.4299514368039752,0.06172711720449886,0.3857945172260763,0.4741083563818741
+A,nlp,momentum-no-noise,momentum-mf-native,accuracy,independently_tuned_official_evaluation,right minus left,10,-0.03704128440366973,0.013537184383539916,-0.046725202739833244,-0.027357366067506217
+A,nlp,momentum-no-noise,momentum-mf-native,validation_loss,independently_tuned_official_evaluation,right minus left,10,0.722958368117656,0.03894196271524966,0.69510096615725,0.750815770078062
+A,nlp,momentum-no-noise,Exp15b-momentum-MF,accuracy,independently_tuned_official_evaluation,right minus left,10,-0.03704128440366973,0.013493937936840717,-0.04669426609552828,-0.027388302711811183
+A,nlp,momentum-no-noise,Exp15b-momentum-MF,validation_loss,independently_tuned_official_evaluation,right minus left,10,0.7230732246276436,0.03715206546572435,0.6964962380256634,0.7496502112296237
+A,nlp,momentum-mf-native,Exp15b-momentum-MF,accuracy,independently_tuned_official_evaluation,right minus left,10,0.0,0.001529051987767575,-0.001093817899037707,0.001093817899037707
+A,nlp,momentum-mf-native,Exp15b-momentum-MF,validation_loss,independently_tuned_official_evaluation,right minus left,10,0.00011485650998734886,0.002250980691446722,-0.0014953980728456856,0.0017251110928203832
+B,cv,adam-no-noise,momentum-no-noise,accuracy,independently_tuned_official_evaluation,right minus left,10,0.008420000000000006,0.0031382231349036667,0.006175050407969758,0.010664949592030253
+B,cv,adam-no-noise,momentum-no-noise,validation_loss,independently_tuned_official_evaluation,right minus left,10,-0.04178280555725097,0.008870891580019132,-0.048128659111134675,-0.03543695200336726
+B,cv,adam-no-noise,momentum-mf-native,accuracy,independently_tuned_official_evaluation,right minus left,10,-0.04368000000000001,0.0033917547081120216,-0.04610631515380646,-0.04125368484619356
+B,cv,adam-no-noise,momentum-mf-native,validation_loss,independently_tuned_official_evaluation,right minus left,10,0.22172335283279415,0.012908139470170344,0.21248942611957528,0.23095727954601303
+B,cv,adam-no-noise,Exp15b-momentum-MF,accuracy,independently_tuned_official_evaluation,right minus left,10,-0.04834999999999997,0.0033566683217473568,-0.0507512158650149,-0.045948784134985036
+B,cv,adam-no-noise,Exp15b-momentum-MF,validation_loss,independently_tuned_official_evaluation,right minus left,10,0.1913159642601013,0.010102742962037746,0.18408889731296108,0.19854303120724154
+B,cv,momentum-no-noise,momentum-mf-native,accuracy,independently_tuned_official_evaluation,right minus left,10,-0.052100000000000014,0.0018991226044325741,-0.05345855047036585,-0.05074144952963418
+B,cv,momentum-no-noise,momentum-mf-native,validation_loss,independently_tuned_official_evaluation,right minus left,10,0.26350615839004515,0.014318665660209312,0.25326320202572944,0.27374911475436087
+B,cv,momentum-no-noise,Exp15b-momentum-MF,accuracy,independently_tuned_official_evaluation,right minus left,10,-0.05676999999999997,0.0016872396918570145,-0.057976978565597706,-0.05556302143440224
+B,cv,momentum-no-noise,Exp15b-momentum-MF,validation_loss,independently_tuned_official_evaluation,right minus left,10,0.23309876981735228,0.010282174785264622,0.2257433450763158,0.24045419455838876
+B,cv,momentum-mf-native,Exp15b-momentum-MF,accuracy,independently_tuned_official_evaluation,right minus left,10,-0.004669999999999963,0.0017101331981911744,-0.005893355593455719,-0.0034466444065442076
+B,cv,momentum-mf-native,Exp15b-momentum-MF,validation_loss,independently_tuned_official_evaluation,right minus left,10,-0.030407388572692862,0.007711436467739298,-0.035923817904844196,-0.02489095924054153
+B,nlp,adam-no-noise,momentum-no-noise,accuracy,independently_tuned_official_evaluation,right minus left,10,-0.00561926605504588,0.009260710653827497,-0.01224397937545749,0.0010054472653657298
+B,nlp,adam-no-noise,momentum-no-noise,validation_loss,independently_tuned_official_evaluation,right minus left,10,-0.2931217878236683,0.060462130616161305,-0.33637379050963967,-0.24986978513769698
+B,nlp,adam-no-noise,momentum-mf-native,accuracy,independently_tuned_official_evaluation,right minus left,10,-0.009403669724770636,0.014331549056429775,-0.019655842315545038,0.0008485028660037662
+B,nlp,adam-no-noise,momentum-mf-native,validation_loss,independently_tuned_official_evaluation,right minus left,10,-0.2006711955464214,0.056554319233207535,-0.24112771837236602,-0.1602146727204768
+B,nlp,adam-no-noise,Exp15b-momentum-MF,accuracy,independently_tuned_official_evaluation,right minus left,10,-0.006192660550458706,0.01129067973950925,-0.014269526275219713,0.0018842051743023008
+B,nlp,adam-no-noise,Exp15b-momentum-MF,validation_loss,independently_tuned_official_evaluation,right minus left,10,-0.20816788804640468,0.07889117241869474,-0.2646032330562404,-0.15173254303656897
+B,nlp,momentum-no-noise,momentum-mf-native,accuracy,independently_tuned_official_evaluation,right minus left,10,-0.003784403669724756,0.018092390938771,-0.016726920473295666,0.009158113133846155
+B,nlp,momentum-no-noise,momentum-mf-native,validation_loss,independently_tuned_official_evaluation,right minus left,10,0.0924505922772469,0.04423751599650199,0.06080497970616146,0.12409620484833235
+B,nlp,momentum-no-noise,Exp15b-momentum-MF,accuracy,independently_tuned_official_evaluation,right minus left,10,-0.0005733944954128267,0.01592023273926516,-0.011962042930106428,0.010815253939280775
+B,nlp,momentum-no-noise,Exp15b-momentum-MF,validation_loss,independently_tuned_official_evaluation,right minus left,10,0.08495389977726371,0.04524415842815136,0.05258817859085478,0.11731962096367264
+B,nlp,momentum-mf-native,Exp15b-momentum-MF,accuracy,independently_tuned_official_evaluation,right minus left,10,0.0032110091743119294,0.00946901786262445,-0.003562718146476054,0.009984736495099913
+B,nlp,momentum-mf-native,Exp15b-momentum-MF,validation_loss,independently_tuned_official_evaluation,right minus left,10,-0.007496692499983204,0.036534806276545685,-0.03363211847821055,0.01863873347824414
+"fixed lr=2.0, C=1.0",cv,Exp15b-momentum-MF,momentum-mf-native,accuracy,fixed_hyperparameters_official_evaluation,right minus left,10,0.0074099999999999834,0.0015659218087475378,0.006289807019902358,0.00853019298009761
+"fixed lr=2.0, C=1.0",cv,Exp15b-momentum-MF,momentum-mf-native,validation_loss,fixed_hyperparameters_official_evaluation,right minus left,10,-0.03148573549270629,0.004525501557858326,-0.03472308428510125,-0.028248386700311337
+"fixed lr=0.3, C=1.0",nlp,Exp15b-momentum-MF,momentum-mf-native,accuracy,fixed_hyperparameters_official_evaluation,right minus left,10,0.0,0.001529051987767575,-0.001093817899037707,0.001093817899037707
+"fixed lr=0.3, C=1.0",nlp,Exp15b-momentum-MF,momentum-mf-native,validation_loss,fixed_hyperparameters_official_evaluation,right minus left,10,-0.00011485650998734886,0.002250980691446722,-0.0017251110928203832,0.0014953980728456856
+"fixed lr=0.3, C=20.0",nlp,Exp15b-momentum-MF,momentum-mf-native,accuracy,fixed_hyperparameters_official_evaluation,right minus left,10,-0.0032110091743119294,0.00946901786262445,-0.009984736495099913,0.003562718146476054
+"fixed lr=0.3, C=20.0",nlp,Exp15b-momentum-MF,momentum-mf-native,validation_loss,fixed_hyperparameters_official_evaluation,right minus left,10,0.007496692499983204,0.036534806276545685,-0.01863873347824414,0.03363211847821055

@@ -1,0 +1,1131 @@
+{
+  "grid_sha256": "72f9380272dbd37619b5c7ab552b433ed880dbfc294c84321ebedce9e49c7967",
+  "winners": [
+    {
+      "scheme": "A",
+      "task": "cv",
+      "method": "adam-no-noise",
+      "trial_id": "8e6a867b4d5127318612",
+      "lr": 0.0003,
+      "clip": null,
+      "valid": true,
+      "accuracy_mean": 0.8300666666666666,
+      "accuracy_std": 0.005001333155602944,
+      "loss_mean": 0.5484990542093913,
+      "seeds": [
+        {
+          "seed": 20261101,
+          "status": "completed",
+          "accuracy": 0.8266,
+          "loss": 0.5495310661315917,
+          "error": null
+        },
+        {
+          "seed": 20261102,
+          "status": "completed",
+          "accuracy": 0.8358,
+          "loss": 0.5297857437133789,
+          "error": null
+        },
+        {
+          "seed": 20261103,
+          "status": "completed",
+          "accuracy": 0.8278,
+          "loss": 0.5661803527832031,
+          "error": null
+        }
+      ]
+    },
+    {
+      "scheme": "A",
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "trial_id": "be8f3be03d1e8ec4961f",
+      "lr": 0.05,
+      "clip": null,
+      "valid": true,
+      "accuracy_mean": 0.8450000000000001,
+      "accuracy_std": 0.004014971979976952,
+      "loss_mean": 0.5039778452555339,
+      "seeds": [
+        {
+          "seed": 20261101,
+          "status": "completed",
+          "accuracy": 0.8408,
+          "loss": 0.5122607109069824,
+          "error": null
+        },
+        {
+          "seed": 20261102,
+          "status": "completed",
+          "accuracy": 0.8454,
+          "loss": 0.49392105865478514,
+          "error": null
+        },
+        {
+          "seed": 20261103,
+          "status": "completed",
+          "accuracy": 0.8488,
+          "loss": 0.505751766204834,
+          "error": null
+        }
+      ]
+    },
+    {
+      "scheme": "A",
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "trial_id": "d46b5a653067be2c3fea",
+      "lr": 2.0,
+      "clip": 1.0,
+      "valid": true,
+      "accuracy_mean": 0.7882000000000001,
+      "accuracy_std": 0.005632051136131457,
+      "loss_mean": 0.7703205416361492,
+      "seeds": [
+        {
+          "seed": 20261101,
+          "status": "completed",
+          "accuracy": 0.7904,
+          "loss": 0.7720002471923828,
+          "error": null
+        },
+        {
+          "seed": 20261102,
+          "status": "completed",
+          "accuracy": 0.7924,
+          "loss": 0.758111986541748,
+          "error": null
+        },
+        {
+          "seed": 20261103,
+          "status": "completed",
+          "accuracy": 0.7818,
+          "loss": 0.7808493911743164,
+          "error": null
+        }
+      ]
+    },
+    {
+      "scheme": "A",
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "trial_id": "3458613387588cb9972d",
+      "lr": 0.001,
+      "clip": null,
+      "valid": true,
+      "accuracy_mean": 0.9216676014208263,
+      "accuracy_std": 0.002529023978027467,
+      "loss_mean": 0.25833020264050327,
+      "seeds": [
+        {
+          "seed": 20261101,
+          "status": "completed",
+          "accuracy": 0.9192372406057207,
+          "loss": 0.2711963054509358,
+          "error": null
+        },
+        {
+          "seed": 20261102,
+          "status": "completed",
+          "accuracy": 0.9214806505888952,
+          "loss": 0.2569897627246605,
+          "error": null
+        },
+        {
+          "seed": 20261103,
+          "status": "completed",
+          "accuracy": 0.9242849130678632,
+          "loss": 0.24680453974591346,
+          "error": null
+        }
+      ]
+    },
+    {
+      "scheme": "A",
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "trial_id": "e56b7e9d2b8916a78b92",
+      "lr": 0.1,
+      "clip": null,
+      "valid": true,
+      "accuracy_mean": 0.8412787436904096,
+      "accuracy_std": 0.012242068082815392,
+      "loss_mean": 0.35999106469388814,
+      "seeds": [
+        {
+          "seed": 20261101,
+          "status": "completed",
+          "accuracy": 0.854739203589456,
+          "loss": 0.34225889695517525,
+          "error": null
+        },
+        {
+          "seed": 20261102,
+          "status": "completed",
+          "accuracy": 0.8308094971022622,
+          "loss": 0.37602866816953046,
+          "error": null
+        },
+        {
+          "seed": 20261103,
+          "status": "completed",
+          "accuracy": 0.8382875303795102,
+          "loss": 0.3616856289569586,
+          "error": null
+        }
+      ]
+    },
+    {
+      "scheme": "A",
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "trial_id": "009a6ac47bf389e42dc1",
+      "lr": 0.3,
+      "clip": 1.0,
+      "valid": true,
+      "accuracy_mean": 0.7773415591699383,
+      "accuracy_std": 0.0027917712699697377,
+      "loss_mean": 1.0157036131443231,
+      "seeds": [
+        {
+          "seed": 20261101,
+          "status": "completed",
+          "accuracy": 0.7752851000186951,
+          "loss": 1.01310001843264,
+          "error": null
+        },
+        {
+          "seed": 20261102,
+          "status": "completed",
+          "accuracy": 0.7805197233127688,
+          "loss": 1.013031410934725,
+          "error": null
+        },
+        {
+          "seed": 20261103,
+          "status": "completed",
+          "accuracy": 0.776219854178351,
+          "loss": 1.0209794100656044,
+          "error": null
+        }
+      ]
+    },
+    {
+      "scheme": "B",
+      "task": "cv",
+      "method": "adam-no-noise",
+      "trial_id": "8e6a867b4d5127318612",
+      "lr": 0.0003,
+      "clip": null,
+      "valid": true,
+      "accuracy_mean": 0.8300666666666666,
+      "accuracy_std": 0.005001333155602944,
+      "loss_mean": 0.5484990542093913,
+      "seeds": [
+        {
+          "seed": 20261101,
+          "status": "completed",
+          "accuracy": 0.8266,
+          "loss": 0.5495310661315917,
+          "error": null
+        },
+        {
+          "seed": 20261102,
+          "status": "completed",
+          "accuracy": 0.8358,
+          "loss": 0.5297857437133789,
+          "error": null
+        },
+        {
+          "seed": 20261103,
+          "status": "completed",
+          "accuracy": 0.8278,
+          "loss": 0.5661803527832031,
+          "error": null
+        }
+      ]
+    },
+    {
+      "scheme": "B",
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "trial_id": "be8f3be03d1e8ec4961f",
+      "lr": 0.05,
+      "clip": null,
+      "valid": true,
+      "accuracy_mean": 0.8450000000000001,
+      "accuracy_std": 0.004014971979976952,
+      "loss_mean": 0.5039778452555339,
+      "seeds": [
+        {
+          "seed": 20261101,
+          "status": "completed",
+          "accuracy": 0.8408,
+          "loss": 0.5122607109069824,
+          "error": null
+        },
+        {
+          "seed": 20261102,
+          "status": "completed",
+          "accuracy": 0.8454,
+          "loss": 0.49392105865478514,
+          "error": null
+        },
+        {
+          "seed": 20261103,
+          "status": "completed",
+          "accuracy": 0.8488,
+          "loss": 0.505751766204834,
+          "error": null
+        }
+      ]
+    },
+    {
+      "scheme": "B",
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "trial_id": "d46b5a653067be2c3fea",
+      "lr": 2.0,
+      "clip": 1.0,
+      "valid": true,
+      "accuracy_mean": 0.7882000000000001,
+      "accuracy_std": 0.005632051136131457,
+      "loss_mean": 0.7703205416361492,
+      "seeds": [
+        {
+          "seed": 20261101,
+          "status": "completed",
+          "accuracy": 0.7904,
+          "loss": 0.7720002471923828,
+          "error": null
+        },
+        {
+          "seed": 20261102,
+          "status": "completed",
+          "accuracy": 0.7924,
+          "loss": 0.758111986541748,
+          "error": null
+        },
+        {
+          "seed": 20261103,
+          "status": "completed",
+          "accuracy": 0.7818,
+          "loss": 0.7808493911743164,
+          "error": null
+        }
+      ]
+    },
+    {
+      "scheme": "B",
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "trial_id": "3458613387588cb9972d",
+      "lr": 0.001,
+      "clip": null,
+      "valid": true,
+      "accuracy_mean": 0.9216676014208263,
+      "accuracy_std": 0.002529023978027467,
+      "loss_mean": 0.25833020264050327,
+      "seeds": [
+        {
+          "seed": 20261101,
+          "status": "completed",
+          "accuracy": 0.9192372406057207,
+          "loss": 0.2711963054509358,
+          "error": null
+        },
+        {
+          "seed": 20261102,
+          "status": "completed",
+          "accuracy": 0.9214806505888952,
+          "loss": 0.2569897627246605,
+          "error": null
+        },
+        {
+          "seed": 20261103,
+          "status": "completed",
+          "accuracy": 0.9242849130678632,
+          "loss": 0.24680453974591346,
+          "error": null
+        }
+      ]
+    },
+    {
+      "scheme": "B",
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "trial_id": "e56b7e9d2b8916a78b92",
+      "lr": 0.1,
+      "clip": null,
+      "valid": true,
+      "accuracy_mean": 0.8412787436904096,
+      "accuracy_std": 0.012242068082815392,
+      "loss_mean": 0.35999106469388814,
+      "seeds": [
+        {
+          "seed": 20261101,
+          "status": "completed",
+          "accuracy": 0.854739203589456,
+          "loss": 0.34225889695517525,
+          "error": null
+        },
+        {
+          "seed": 20261102,
+          "status": "completed",
+          "accuracy": 0.8308094971022622,
+          "loss": 0.37602866816953046,
+          "error": null
+        },
+        {
+          "seed": 20261103,
+          "status": "completed",
+          "accuracy": 0.8382875303795102,
+          "loss": 0.3616856289569586,
+          "error": null
+        }
+      ]
+    },
+    {
+      "scheme": "B",
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "trial_id": "a85a6e4d0b5f481a170b",
+      "lr": 0.3,
+      "clip": 20.0,
+      "valid": true,
+      "accuracy_mean": 0.851000186950832,
+      "accuracy_std": 0.0018412521596179047,
+      "loss_mean": 0.39162225569342723,
+      "seeds": [
+        {
+          "seed": 20261101,
+          "status": "completed",
+          "accuracy": 0.8515610394466255,
+          "loss": 0.39847320617972454,
+          "error": null
+        },
+        {
+          "seed": 20261102,
+          "status": "completed",
+          "accuracy": 0.8524957936062816,
+          "loss": 0.3728688411744739,
+          "error": null
+        },
+        {
+          "seed": 20261103,
+          "status": "completed",
+          "accuracy": 0.8489437277995887,
+          "loss": 0.4035247197260833,
+          "error": null
+        }
+      ]
+    }
+  ],
+  "final_trials": [
+    {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.0003,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261111,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.0003,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261112,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.0003,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261113,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.0003,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261114,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.0003,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261115,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.0003,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261116,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.0003,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261117,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.0003,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261118,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.0003,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261119,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "adam-no-noise",
+      "lr": 0.0003,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261120,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.05,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261111,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.05,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261112,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.05,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261113,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.05,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261114,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.05,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261115,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.05,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261116,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.05,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261117,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.05,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261118,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.05,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261119,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-no-noise",
+      "lr": 0.05,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261120,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 2.0,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261111,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 2.0,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261112,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 2.0,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261113,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 2.0,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261114,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 2.0,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261115,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 2.0,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261116,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 2.0,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261117,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 2.0,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261118,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 2.0,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261119,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-native",
+      "lr": 2.0,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261120,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261111,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261112,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261113,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261114,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261115,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261116,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261117,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261118,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261119,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "adam-no-noise",
+      "lr": 0.001,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261120,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.1,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261111,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.1,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261112,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.1,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261113,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.1,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261114,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.1,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261115,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.1,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261116,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.1,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261117,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.1,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261118,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.1,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261119,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-no-noise",
+      "lr": 0.1,
+      "clip": null,
+      "stage": "final",
+      "seed": 20261120,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.3,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261111,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.3,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261112,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.3,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261113,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.3,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261114,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.3,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261115,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.3,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261116,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.3,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261117,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.3,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261118,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.3,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261119,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.3,
+      "clip": 1.0,
+      "stage": "final",
+      "seed": 20261120,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.3,
+      "clip": 20.0,
+      "stage": "final",
+      "seed": 20261111,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.3,
+      "clip": 20.0,
+      "stage": "final",
+      "seed": 20261112,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.3,
+      "clip": 20.0,
+      "stage": "final",
+      "seed": 20261113,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.3,
+      "clip": 20.0,
+      "stage": "final",
+      "seed": 20261114,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.3,
+      "clip": 20.0,
+      "stage": "final",
+      "seed": 20261115,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.3,
+      "clip": 20.0,
+      "stage": "final",
+      "seed": 20261116,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.3,
+      "clip": 20.0,
+      "stage": "final",
+      "seed": 20261117,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.3,
+      "clip": 20.0,
+      "stage": "final",
+      "seed": 20261118,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.3,
+      "clip": 20.0,
+      "stage": "final",
+      "seed": 20261119,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-mf-native",
+      "lr": 0.3,
+      "clip": 20.0,
+      "stage": "final",
+      "seed": 20261120,
+      "smoke_phase": "search",
+      "replicate": "primary"
+    }
+  ],
+  "deduplicated_formal_count": 70,
+  "maximum_formal_count": 80,
+  "review_results_sha256": "01599232b5d0b40bed480d8bfc7a9304f1d06b4720dd2b5ea0371af5dda8e585",
+  "official_evaluation_used_for_selection": false
+}
