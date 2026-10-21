@@ -1,0 +1,57 @@
+{
+  "tasks": {
+    "cv": {
+      "dataset": "CIFAR-100",
+      "model": "ViT-Tiny",
+      "search_steps": 225,
+      "formal_steps": 250,
+      "physical_batch": 250,
+      "stpex_eps": 0.05
+    },
+    "nlp": {
+      "dataset": "SST-2",
+      "model": "BERT-Tiny",
+      "search_steps": 310,
+      "formal_steps": 310,
+      "physical_batch": 1000,
+      "stpex_eps": 0.01
+    }
+  },
+  "epochs": 5,
+  "logical_batch": 1000,
+  "beta1": 0.9,
+  "beta2": 0.999,
+  "weight_decay": 0,
+  "epsilon": 8,
+  "delta": 1e-05,
+  "adjacency": "add_remove_zero_out",
+  "participation": "one fixed batch position per epoch, five epochs",
+  "sampling_amplification": false,
+  "gpus": [
+    0,
+    1,
+    2
+  ],
+  "reserved_gpu": 3,
+  "search_seed": 20261101,
+  "review_seeds": [
+    20261102,
+    20261103
+  ],
+  "formal_seeds": [
+    20261111,
+    20261112,
+    20261113,
+    20261114,
+    20261115,
+    20261116,
+    20261117,
+    20261118,
+    20261119,
+    20261120
+  ],
+  "historical_results_read_only": true,
+  "controlled_comparison_scope": "matching grid/seed internal validation; ten-seed official controlled comparison only if selected configs coincide",
+  "new_blind_evaluation": false,
+  "privacy_claim": "single training only"
+}

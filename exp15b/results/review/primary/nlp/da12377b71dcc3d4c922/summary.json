@@ -1,0 +1,169 @@
+{
+  "task": "nlp",
+  "method": "stpex-adam3",
+  "lr": 0.3,
+  "clip": 10.0,
+  "stage": "review",
+  "seed": 20261103,
+  "smoke_phase": "search",
+  "epsilon": 8.0,
+  "replicate": "primary",
+  "trial_id": "da12377b71dcc3d4c922",
+  "status": "completed",
+  "finite": true,
+  "optimizer_steps": 310,
+  "noise_draws": 310,
+  "physical_batches": 310,
+  "completed_epochs": 5,
+  "planned_total_steps": 310,
+  "accuracy": 0.8375397270517854,
+  "validation_loss": 1.0634738047070806,
+  "evaluation_scope": "internal validation",
+  "official_evaluation_used": false,
+  "epochs": [
+    {
+      "epoch": 1,
+      "step": 62,
+      "train_loss": 1.5842567187893775,
+      "clip_fraction": 0.6212096774193548,
+      "epsilon": 3.054089440266451,
+      "accuracy": 0.7719199850439334,
+      "validation_loss": 1.3096427325556983,
+      "validation_examples": 5349
+    },
+    {
+      "epoch": 2,
+      "step": 124,
+      "train_loss": 1.2480718383789062,
+      "clip_fraction": 0.36820967741935484,
+      "epsilon": 4.610238743691153,
+      "accuracy": 0.8179098896990091,
+      "validation_loss": 1.1560284294888648,
+      "validation_examples": 5349
+    },
+    {
+      "epoch": 3,
+      "step": 186,
+      "train_loss": 1.1094127088977443,
+      "clip_fraction": 0.2983387096774194,
+      "epsilon": 5.873890881586911,
+      "accuracy": 0.8300616937745373,
+      "validation_loss": 1.0530479190103985,
+      "validation_examples": 5349
+    },
+    {
+      "epoch": 4,
+      "step": 248,
+      "train_loss": 1.039382082047001,
+      "clip_fraction": 0.2617741935483871,
+      "epsilon": 6.985551657770655,
+      "accuracy": 0.8349224154047485,
+      "validation_loss": 1.0724921812184793,
+      "validation_examples": 5349
+    },
+    {
+      "epoch": 5,
+      "step": 310,
+      "train_loss": 1.0151962378717239,
+      "clip_fraction": 0.24566129032258063,
+      "epsilon": 8.000000000000005,
+      "accuracy": 0.8375397270517854,
+      "validation_loss": 1.0634738047070806,
+      "validation_examples": 5349
+    }
+  ],
+  "calibration": {
+    "target_mu": 1.6660305978457184,
+    "sensitivity": 4.18402302431354,
+    "innovation_std_sum": 25.113722579427673,
+    "adjacency": "add_remove_zero_out",
+    "k": 5,
+    "b_participation": 62,
+    "sampling_amplification": false,
+    "verified_full_epsilon": 8.000000000000005,
+    "delta": 1e-05,
+    "target_epsilon": 8.0,
+    "clip_space": "preconditioned"
+  },
+  "mechanism": {
+    "source": "exp9/results/search/nlp/0cca10b47413f6d994c6/matrices.npz",
+    "source_sha256": "a9f17ef90a27049b6008d9ea33f5cb4b6164b39fc7db901a069b98ca9ad3725c",
+    "coefficients_sha256": "c6d82142b64263729c1608d8b2b240b5bf425286f4abc15d3fa81a61e6f92563",
+    "strategy_sha256": "906e33e97e371c46a0811d8ba9e2d6e45441f94bf4abfe06414a145c024cfcc5",
+    "filter_design_workload_sha256": "33a2029532b7d93a1b9ddb0e22c084af5c81bafdbc24613b029a3d979ed81af2",
+    "actual_workload_sha256": "7a3ee6938410e6ba28c3e281eae50c58c18fdeccbe01e0f0de48b6a74c4fc9ce",
+    "workload_factor_omitted_by_Exp9": 0.1,
+    "controlled_filter": true,
+    "individually_optimized_for_momentum": false
+  },
+  "config_sha256": "a8bf62b3524a93c6201045f9e6b01ea54dcd762802f2371a7956335c6464e83a",
+  "code_sha256": {
+    "exp15b/__init__.py": "d44918050857fcc82c2a416486d23c0a4d8141560fe7e5dba65a3a3248c6bdad",
+    "exp15b/audit.py": "fcaadc392205a6cf618c71a7d0c77e15f37846183c947ed78c492ddb897a688b",
+    "exp15b/bandinvmf.py": "ece5bf68a4353053082a62502e0043844cf924d1bfb28fbaf1f95b9710dfa80b",
+    "exp15b/checks.py": "32df41d61b3a90e007f55cf00d64dd5033a3e594f24714c7436956dbbf1ed8e9",
+    "exp15b/clipping.py": "775ca8f18d3025b845702762c515613b9aa0c5a2d886713a86c176ad4ef4a266",
+    "exp15b/config.py": "aa70c68b3240c7d34a3f25d0fccb551149748ef68578bd795eea51db1167effc",
+    "exp15b/cv_model.py": "de7b23603dc94b1f5b6000a85d8f8b4485a5a81b1e9fcfdabf96daa21cf4d38c",
+    "exp15b/data.py": "7d4d9412cf738dafd3f3d87718de65fb9746594c430e71a99d7cc31ffe88888e",
+    "exp15b/nlp_model.py": "c398e83dd10d6946a20789fd4d9723332fe6771260b9d37e7ca04ff6d33d100a",
+    "exp15b/noise.py": "de6241eaba3ca673175c9fd83a573caf039cabbbc7b28e0f2ae79a27f7be0f8b",
+    "exp15b/optimizer.py": "d147a933786595e05c88a5eed19359ba2200fd7c2555956d7b1ee8348852eb3a",
+    "exp15b/pipeline.py": "72fab82214e21700dd6761af7c77d2ae5d1ff89ba1c5e8ac3c8e93e0f24d43ef",
+    "exp15b/privacy.py": "6e37e95ccb496245174249f30f9c3237fb809b30a031a5092e462debf2d9ac5a",
+    "exp15b/report.py": "c066da1b45efae22697aaf6fd82512e20bd95b9a7c6f348b161aba8b5fe28307",
+    "exp15b/scheduler.py": "50bc1029c4fcbd405354cc50e452294922792177cec76ada558c51734d299d66",
+    "exp15b/search.py": "86caed7a47177203765ce44a14b1608f7454447222d3be5fd254a8492c5f2428",
+    "exp15b/smoke.py": "fb55aa1058e9347d4892a9c966548467d929c4515bd84b5560135e522ba94da3",
+    "exp15b/start_background.py": "0cd5a4b92716aceae41436193897401f1efffdd758c972ad8f660b49e105a060",
+    "exp15b/support.py": "10972111e0dd74aeb87179e7da8eb156eabaf1d7aabf400795d6f3b964af3eb1",
+    "exp15b/tests/test_iid.py": "3c1a372b711ded4ffb6175e20ea957a549bfc60d9d95b26ad05b3b3b8edbc397",
+    "exp15b/tests/test_platform.py": "4060a5f5b15239877aa72dd4edb6ab4aaa6e28f37322379b8d9bab37eaa3e288",
+    "exp15b/tests/test_reporting.py": "14ebbde8e7341c6e6814d8d427e61c89b3d0e9fff0b28618878de6a2e474d9bd",
+    "exp15b/tests/test_workflow.py": "2be662fe20212cbeaa7309fd13fe224f8f32dee01b4f27844d3012b9e1f4d177",
+    "exp15b/train.py": "333304d591292b698c5d1cc544a6e635cda3d7c768cc65b7f27ee5982c6b91a9"
+  },
+  "git_commit": "c492c16497868d69da4ec6ab3e1bd086d767d46e",
+  "file_sha256": {
+    "config.json": "729a2bb9ef642e41f125fed6e776ec2010f3bbe374cf70e96a9d62492f490159",
+    "checkpoint.pt": "ac4d6892310725634af6f7d96ff4835f3da6d4d778ce2cdd884c157ed802f327",
+    "matrices.npz": "19a625d449749392b820e0bbf434f5355f35ea7e187bd7f15930529c42ab576c",
+    "train_order.npy": "46ca5e8085a7db7a3741699516de2decc83e98acb9358801b8ea9238f62d2dd5",
+    "metrics.csv": "f736d22bffe8cae8a704e50eb83db1628724bd6827e7c03b7019acfafef19168",
+    "diagnostics.jsonl": "5070d14d76c47c0f6d57f81635ca06348f6912eea7786b008525540b6bf32ea3"
+  },
+  "initialization_sha256": "b202f7f8d1e304ae2c801090ab826e11564dec9a881a8d35fd571be41d26bc4f",
+  "classifier_initialization_sha256": "c7b2d0da6a5473076a9d26fc90c4f20b97d70d3aeb6b460de104995461d68ff4",
+  "train_order_sha256": "5433bc795c0da91e058471835eb21e82bafae709be121c4ac0d2290c5d34eee9",
+  "rng_trace": [
+    [
+      20361103,
+      20361164
+    ],
+    [
+      20361165,
+      20361226
+    ],
+    [
+      20361227,
+      20361288
+    ],
+    [
+      20361289,
+      20361350
+    ],
+    [
+      20361351,
+      20361412
+    ]
+  ],
+  "noise_rng_start": "93a5c5fe1b2dc38cb92007d2e494895f0b980a4923a5dbcbee34f8fc9584c557",
+  "noise_rng_end": "559deeeaa15c9815d909287f13f4737d40b5fd734090d4c19e9fbf392fe9d56e",
+  "actual_epsilon": 8.000000000000005,
+  "seconds": 53.30175887997029,
+  "train_seconds": 46.20823999622371,
+  "peak_allocated_bytes": 4060888576,
+  "peak_reserved_bytes": 4217372672,
+  "device": "NVIDIA GeForce RTX 3080 Ti",
+  "physical_gpu": 1
+}

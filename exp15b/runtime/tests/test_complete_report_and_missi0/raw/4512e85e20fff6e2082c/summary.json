@@ -1,0 +1,26 @@
+{
+  "task": "nlp",
+  "method": "momentum+iid",
+  "lr": 0.01,
+  "clip": 1.0,
+  "stage": "final",
+  "seed": 20261118,
+  "smoke_phase": "search",
+  "epsilon": 8.0,
+  "replicate": "primary",
+  "trial_id": "4512e85e20fff6e2082c",
+  "status": "completed",
+  "completed_epochs": 5,
+  "actual_epsilon": 8.0,
+  "accuracy": 0.7,
+  "validation_loss": 0.8,
+  "initialization_sha256": "init",
+  "classifier_initialization_sha256": "head",
+  "train_order_sha256": "order",
+  "rng_trace": [
+    "paired"
+  ],
+  "noise_rng_start": "start",
+  "noise_rng_end": "end",
+  "evaluation_scope": "official evaluation"
+}

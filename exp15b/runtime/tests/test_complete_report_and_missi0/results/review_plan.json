@@ -1,0 +1,270 @@
+{
+  "grid_sha256": "74a9ce7180416bf19597e1c63408e1796f3dfeedefc1367cdba788d635b688e3",
+  "search_results_sha256": "77fee34d2d140cf70ab56470cfe6af8872f3c61423c2059163e9e167c16ec73d",
+  "trials": [
+    {
+      "task": "cv",
+      "method": "momentum",
+      "lr": 0.01,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "epsilon": 8.0,
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum",
+      "lr": 0.01,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "epsilon": 8.0,
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum+iid",
+      "lr": 0.01,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "epsilon": 8.0,
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum+iid",
+      "lr": 0.01,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "epsilon": 8.0,
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-bias",
+      "lr": 0.01,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "epsilon": 8.0,
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "momentum-bias",
+      "lr": 0.01,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "epsilon": 8.0,
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "stpex",
+      "lr": 0.01,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "epsilon": 8.0,
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "stpex",
+      "lr": 0.01,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "epsilon": 8.0,
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "stpex2",
+      "lr": 0.01,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "epsilon": 8.0,
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "stpex2",
+      "lr": 0.01,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "epsilon": 8.0,
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "stpex-adam3",
+      "lr": 0.01,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "epsilon": 8.0,
+      "replicate": "primary"
+    },
+    {
+      "task": "cv",
+      "method": "stpex-adam3",
+      "lr": 0.01,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "epsilon": 8.0,
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum",
+      "lr": 0.01,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "epsilon": 8.0,
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum",
+      "lr": 0.01,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "epsilon": 8.0,
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum+iid",
+      "lr": 0.01,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "epsilon": 8.0,
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum+iid",
+      "lr": 0.01,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "epsilon": 8.0,
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-bias",
+      "lr": 0.01,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "epsilon": 8.0,
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-bias",
+      "lr": 0.01,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "epsilon": 8.0,
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "stpex",
+      "lr": 0.01,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "epsilon": 8.0,
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "stpex",
+      "lr": 0.01,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "epsilon": 8.0,
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "stpex2",
+      "lr": 0.01,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "epsilon": 8.0,
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "stpex2",
+      "lr": 0.01,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "epsilon": 8.0,
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "stpex-adam3",
+      "lr": 0.01,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261102,
+      "smoke_phase": "search",
+      "epsilon": 8.0,
+      "replicate": "primary"
+    },
+    {
+      "task": "nlp",
+      "method": "stpex-adam3",
+      "lr": 0.01,
+      "clip": 1.0,
+      "stage": "review",
+      "seed": 20261103,
+      "smoke_phase": "search",
+      "epsilon": 8.0,
+      "replicate": "primary"
+    }
+  ]
+}

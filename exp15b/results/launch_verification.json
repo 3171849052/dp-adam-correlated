@@ -1,0 +1,44 @@
+{
+  "status": "running",
+  "pipeline_pid": 1921738,
+  "gpus": [
+    0,
+    1,
+    2
+  ],
+  "gpu3_memory_mib": 0,
+  "frozen_grid_sha256": "989d8c30b06d3f536f80344e31f87328e4bec4bd13578d747f3fb97998a007f5",
+  "tests_passed": 37,
+  "smoke_runs_passed": 20,
+  "active": [
+    {
+      "gpu": 0,
+      "pid": 1921819,
+      "task": "cv",
+      "method": "momentum",
+      "lr": 2.0,
+      "clip": 0.3,
+      "log": "/media/data/data/lt/dp-adam-correlated/exp15b/results/search/primary/cv/8cb7b00da6afc8ac0d9b/train.log"
+    },
+    {
+      "gpu": 1,
+      "pid": 1921823,
+      "task": "cv",
+      "method": "momentum",
+      "lr": 3.0,
+      "clip": 0.3,
+      "log": "/media/data/data/lt/dp-adam-correlated/exp15b/results/search/primary/cv/5221d8c094e59778e4bc/train.log"
+    },
+    {
+      "gpu": 2,
+      "pid": 1921826,
+      "task": "cv",
+      "method": "momentum",
+      "lr": 4.0,
+      "clip": 0.3,
+      "log": "/media/data/data/lt/dp-adam-correlated/exp15b/results/search/primary/cv/2c57f8e5ff52b3f66a0a/train.log"
+    }
+  ],
+  "reused_search": 90,
+  "new_search_total": 134
+}
