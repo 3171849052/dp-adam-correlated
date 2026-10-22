@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "equivalent_sources": {
+    "optimizer": "exact source after package rename",
+    "data": "exact source after package rename",
+    "cv_model": "exact source after package rename",
+    "nlp_model": "exact source after package rename",
+    "clipping": "exact source after package rename",
+    "noise": "exact source after package rename",
+    "privacy": "exact source after package rename",
+    "bandinvmf": "exact source after package rename",
+    "support": "exact source after package rename"
+  },
+  "assets": {
+    "manifest_sha256": "432c7eadf1ac3eae7af7664de6b951b0fa66502f808e84b50090ea4abfd04818",
+    "files": {
+      "data/cifar-100-python/train": "735e79b04f092ca3d2e6d07f368c0a7d70d48c48d28865950cc24454cf45129b",
+      "data/sst2/train.parquet": "66a253e67968acfabcbe49dbe9da964b42ac1c851c40ab760e8c8942efdb3229",
+      "exp9/results/nlp_tokens_128.pt": "8bc80358e62658803e15f0ddbfaa447d18b54974916a8afed8fc7f5d047ae56b",
+      "cache/huggingface/hub/models--timm--vit_tiny_patch16_224.augreg_in21k_ft_in1k/snapshots/7d3afdd0cf93ad84d986eb2d6bcc5812ebd0b106/model.safetensors": "fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed",
+      "cache/bert-tiny/pytorch_model.bin": "dab2c2bddcfb48ea430ef63fd76d46d67d704487844d967256a50dd7d7fd0a66",
+      "cache/bert-tiny/config.json": "cf3179684f7c360dd6185962d480e7d426ceb8fe49f5db7b64bdc15dba0b8798",
+      "cache/bert-tiny/vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "exp9/results/cv_split.npz": "205005831d63a9aa17091038faefc8e87c3cf38b5b99e24c8782c50b2614744e",
+      "exp9/results/nlp_split.npz": "fe7597fa24b465bb5f28300ddc34cb76265b19e098f587b1c0b6bb288d127e6a"
+    }
+  },
+  "historical_sha256": {
+    "exp15b/results/phase1_acceptance.json": "8d726c8ef13cab8f0e7d4b42f1f344dc9470f52396c13befc811bfe37233ff4e",
+    "exp15b/results/historical_equivalence.json": "140d71fdb0ed41c3c1fc31c777533104eb6e478db0566d812223f0210c16caeb",
+    "exp15b/results/formal_results.json": "ba4dbf0f2f92d1173e2afb9ac237ae40d1d2b7363e7341e2821bae30aed84553",
+    "exp15b/results/extended_grid.json": "989d8c30b06d3f536f80344e31f87328e4bec4bd13578d747f3fb97998a007f5",
+    "exp15b/results/search_results.json": "5fa5f490a69ed91516d59ca667bb23b8a78c5aedaaacb19c53d310481d267556",
+    "exp15b/results/review_status.json": "5ea4cb3e9ae14b6d47e75408ce47b8d4f41d9c7b3295d2a76b4b2ad30e49274e",
+    "exp15b/results/report_sources.json": "1fc693e8b2fcb37336412e29626d3e15e67e619485de15477b177943707154e7",
+    "exp15b/results/formal_status.json": "64dd006a1d501a43280d02e17f6194a0f7391ea63d56f33b0cc453e5096fabfa",
+    "exp15b/results/review_results.json": "23585812e95b2df608f077254c2db08000155e7512662469d8f0288d955e44cb",
+    "exp15b/results/test_results.json": "ae16783cd44c418ffa8f122affbc79c3618390adea89928e6e54c1c10aec5eb4",
+    "exp15b/results/source_audit.json": "56b612d8070907630734c7b218214b59a51b12134d9c470e1b06fc4928347c84",
+    "exp15b/results/background.json": "17f5dcd401e1237898f28237ef89ae8f7fa32bfef3b72b42edf381970967618c",
+    "exp15b/results/selected_configs.json": "cd772ffe980b708edd567b0ad26a02db27342dfc6423ee0353d1b0722dbb8983",
+    "exp15b/results/launch_verification.json": "e0ff29b91c08238cee9486750c528ccac71dbc2f77d8d66c6e7175d5ef3143bb",
+    "exp15b/results/pipeline_status.json": "beb768adb875e71d965c2909dd598897e9ce5f5ee02c64cc71a1e0a6223335a8",
+    "exp15b/results/search_status.json": "0dcfce82ea1e68674a4e7d759a1c672b0c9c7e038eca6ac1a8d34a43a9e6c6b4",
+    "exp15b/results/protected_before.json": "59e790e76873fa62fbf642c879ac43589f1837f9562a25468d1f931c44ba9835",
+    "exp15b/results/smoke_status.json": "39f324933e8b5ded4ca573eefcfb3406479b483f7ea76dac139d8c1f39d69961",
+    "exp15b/results/final_audit.json": "1b29f5084a7ec989a4d2a7c18f5946f749a7250f5e9cb2a0d841c0266bd3062a",
+    "exp15b/results/review_plan.json": "3fa6fcdba1024419515f22a67ed93a40a11d162cc89d0c4cae51fa8f2eb68888",
+    "exp15b/results/statistics.json": "5007871477d85347be808241a22c1e50fbdf2b9abbb181318a1e6f9fe41f6814"
+  },
+  "reuse": false,
+  "reason": "All Exp15d trainings rerun; no full historical result equivalence certification required"
+}

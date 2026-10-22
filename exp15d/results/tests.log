@@ -1,0 +1,16 @@
+.............................................................            [100%]
+=============================== warnings summary ===============================
+exp15d/tests/test_numerics.py::test_explicit_clipping_accumulation_previous_state[stpex]
+exp15d/tests/test_numerics.py::test_explicit_clipping_accumulation_previous_state[stpex2]
+exp15d/tests/test_numerics.py::test_explicit_clipping_accumulation_previous_state[stpex-adam3]
+  /media/data/data/lt/dp-adam-correlated/exp15d/clipping.py:35: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    losses.sum().backward(retain_graph=True)
+
+exp15d/tests/test_numerics.py::test_explicit_clipping_accumulation_previous_state[stpex]
+exp15d/tests/test_numerics.py::test_explicit_clipping_accumulation_previous_state[stpex2]
+exp15d/tests/test_numerics.py::test_explicit_clipping_accumulation_previous_state[stpex-adam3]
+  /media/data/data/lt/dp-adam-correlated/exp15d/clipping.py:41: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    (losses * coefficients).sum().backward()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+61 passed, 6 warnings in 5.97s
