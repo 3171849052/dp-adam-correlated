@@ -1,0 +1,69 @@
+{
+  "optimizer": "L-BFGS-B (unbounded L-BFGS with feasibility rejection)",
+  "maxiter": 1000,
+  "iterations": 1,
+  "success": true,
+  "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+  "lambda_barrier": 0.0,
+  "initial_parameters": [
+    -0.95,
+    -0.001249999999999769,
+    -0.0011875000000010868
+  ],
+  "selected_parameters": [
+    -0.95,
+    -0.001249999999999769,
+    -0.0011875000000010868
+  ],
+  "selected": "iterate",
+  "initial_error": 21.380564626089075,
+  "selected_error": 21.380564626089075,
+  "iid_error": 561.6922991689634,
+  "trace": [
+    {
+      "iteration": 0,
+      "error": 21.380564626089075,
+      "barrier": 0.0,
+      "objective": 21.380564626089075
+    },
+    {
+      "iteration": 1,
+      "error": 21.380564626089075,
+      "barrier": 0.0,
+      "objective": 21.380564626089075
+    },
+    {
+      "iteration": 2,
+      "error": 21.380564626089075,
+      "barrier": 0.0,
+      "objective": 21.380564626089075
+    }
+  ],
+  "bandwidth": 4,
+  "P": null,
+  "Q": null,
+  "theta": null,
+  "omega": null,
+  "audit": {
+    "inverse_max_abs": 5.486991453223518e-17,
+    "factorization_max_abs": 1.4432899320127035e-15,
+    "sensitivity": 7.852751308631807,
+    "absolute_column_upper_bound": 7.852751308631805,
+    "aligned_lower_bound": 7.852751308631806,
+    "nonnegative_strategy": true,
+    "mean_workload_error": 0.3467172763138825,
+    "objective": 21.38056462608908,
+    "sigma_sum_clip1": 4.713449632189172,
+    "mu": 1.6660305978457184,
+    "epsilon": 8.000000000000005,
+    "delta": 1e-05,
+    "covariance_sha256": "9e8b68aee76be6f003bbedbc9ad290ae8fac838025dc4ed03d2b04b0eb7796fd",
+    "mean_gradient_noise_MSE_clip1": 4.21869590812797e-05,
+    "workload_noise_MSE_clip1": 7.702881618861831e-06
+  },
+  "seconds": 0.03814339602831751,
+  "workload": "momentum",
+  "mechanism": "bandinvmf",
+  "total_steps": 250,
+  "sha256": "750d346de3517eb4c5de9cd70af59879511c72e502b9455a45155b6fd5aeed6b"
+}

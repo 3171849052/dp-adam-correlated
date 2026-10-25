@@ -1,0 +1,25 @@
+{
+  "optimizer": "none",
+  "audit": {
+    "inverse_max_abs": 0.0,
+    "factorization_max_abs": 0.0,
+    "sensitivity": 2.23606797749979,
+    "absolute_column_upper_bound": 2.23606797749979,
+    "aligned_lower_bound": 2.23606797749979,
+    "nonnegative_strategy": true,
+    "mean_workload_error": 1.0,
+    "objective": 5.000000000000001,
+    "sigma_sum_clip1": 1.3421530075084847,
+    "mu": 1.6660305978457184,
+    "epsilon": 8.000000000000007,
+    "delta": 1e-05,
+    "covariance_sha256": "60707777f9d5d8dcb59b173f8dda90c901604d6e8b567ceda161d1f653f5613f",
+    "mean_gradient_noise_MSE_clip1": 1.8013746955640712e-06,
+    "workload_noise_MSE_clip1": 1.8013746955640704e-06
+  },
+  "seconds": 0.01558366499375552,
+  "workload": "identity",
+  "mechanism": "iid",
+  "total_steps": 225,
+  "sha256": "aeecc368a2174723eb5083ea6ec7308b593e1bf4b15cdc177ed93a3df4e47354"
+}

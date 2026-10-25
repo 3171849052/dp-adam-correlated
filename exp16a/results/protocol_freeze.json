@@ -1,0 +1,210 @@
+{
+  "methods": [
+    "adam",
+    "adam-iid",
+    "adam-mf-sgd-bandinvmf",
+    "adam-mf-sgd-b2lt",
+    "adam-mf-sgd-dtc",
+    "adam-mf-momentum-bandinvmf",
+    "adam-mf-momentum-b2lt",
+    "adam-mf-momentum-dtc",
+    "adam-mf-momentum-bias-bandinvmf",
+    "adam-mf-momentum-bias-b2lt",
+    "adam-mf-momentum-bias-dtc",
+    "adam-mf-sgd-stp-bandinvmf",
+    "adam-mf-sgd-stp-b2lt",
+    "adam-mf-sgd-stp-dtc"
+  ],
+  "coarse_grids": {
+    "cv": {
+      "adam": {
+        "lr": [
+          0.0001,
+          0.0003,
+          0.001
+        ]
+      },
+      "iid": {
+        "lr": [
+          0.0003,
+          0.0005,
+          0.001
+        ],
+        "clip": [
+          10.0,
+          30.0,
+          100.0
+        ]
+      },
+      "mf": {
+        "lr": [
+          0.001,
+          0.003,
+          0.007
+        ],
+        "clip": [
+          10.0,
+          30.0,
+          100.0
+        ]
+      },
+      "stp": {
+        "lr": [
+          0.001,
+          0.003,
+          0.007
+        ],
+        "clip": [
+          30.0,
+          200.0,
+          300.0
+        ],
+        "eps_scale": [
+          0.01,
+          0.05,
+          0.3
+        ]
+      }
+    },
+    "nlp": {
+      "adam": {
+        "lr": [
+          0.0003,
+          0.001,
+          0.002
+        ]
+      },
+      "iid": {
+        "lr": [
+          0.0005,
+          0.002,
+          0.003
+        ],
+        "clip": [
+          0.1,
+          0.3,
+          1.0
+        ]
+      },
+      "mf": {
+        "lr": [
+          0.001,
+          0.003,
+          0.007
+        ],
+        "clip": [
+          1.0,
+          10.0,
+          40.0
+        ]
+      },
+      "stp": {
+        "lr": [
+          0.001,
+          0.003,
+          0.007
+        ],
+        "clip": [
+          100.0,
+          300.0,
+          500.0
+        ],
+        "eps_scale": [
+          0.003,
+          0.01,
+          0.1
+        ]
+      }
+    }
+  },
+  "coarse_training_count": 348,
+  "fine_grid": {
+    "rounds": 1,
+    "budget_per_method": {
+      "adam": 3,
+      "iid": 9,
+      "mf": 9,
+      "stp": 27
+    },
+    "rule": "log half-intervals; boundaries extend outward by half the adjacent log interval; retain winner exactly; 12 significant digit new endpoints"
+  },
+  "review": {
+    "top": 2,
+    "search_seed": 20261101,
+    "extra_seeds": [
+      20261102,
+      20261103
+    ],
+    "selection": "mean accuracy descending; mean validation loss ascending; canonical search trial ID ascending"
+  },
+  "formal": {
+    "configurations": 28,
+    "seeds": [
+      20261111,
+      20261112,
+      20261113,
+      20261114,
+      20261115,
+      20261116,
+      20261117,
+      20261118,
+      20261119,
+      20261120
+    ],
+    "trainings": 280
+  },
+  "adam": {
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "eps": 1e-08,
+    "weight_decay": 0
+  },
+  "stp": "Exp9 Scale: s=1/(sqrt(previous completed vhat)+eps_scale); clip s*g; add noise in scaled sum space; undo scaling; divide by1000; standard Adam",
+  "workload": {
+    "sgd": "1 for j<=t",
+    "momentum": "1-beta1**(t-j+1)",
+    "momentum_bias": "sum(beta1**(s-j)/(1-beta1**s),s=j..t)",
+    "indexing": "1-based; no extra workload constants"
+  },
+  "matrices": {
+    "horizons": [
+      225,
+      250,
+      310
+    ],
+    "bandinvmf": "4 inverse Toeplitz bands, BISR initialization (bias uses momentum BISR), full A objective, L-BFGS",
+    "b2lt": "PDF section5 exact finite exponential mix, P=K=T/5,Q=5, exact log barrier, accepted-iterate raw E2 selection",
+    "dtc": "PDF section7 directly optimize all T-1 monotone nonnegative C coefficients, linear initial c, exact gap barrier, accepted-iterate raw E2 selection including IID",
+    "solver": {
+      "method": "L-BFGS",
+      "memory": 20,
+      "maxiter": 1000,
+      "line_search": "feasible Armijo; 60 halvings; c1=1e-4",
+      "lambda_barrier": "1e-4 * initial_E2 / number_of_variables, fixed throughout each solve; zero for BandInvMF",
+      "gradient_tolerance": "maxabs gradient / initial_E2 < 1e-7",
+      "relative_tolerance": "relative improvement <=1e-12 plus normalized maxabs gradient<1e-5",
+      "selection": "minimum raw E2 among feasible accepted iterates, DTC also IID; iteration cap/stall recorded without claiming convergence"
+    },
+    "objective": "Sens(C)^2 * ||A C^-1||_F^2 / T; fixed-epoch absolute Gram bound over every offset j=0..K-1"
+  },
+  "privacy": {
+    "epsilon": 8.0,
+    "delta": 1e-05,
+    "participations": 5,
+    "adjacency": "add/remove zero-out",
+    "sampling_amplification": false,
+    "calibration": "GDP delta(mu,eps)=Phi(-eps/mu+mu/2)-exp(eps)Phi(-eps/mu-mu/2); sigma_sum=clip*Sens(C)/mu; gradient mean covariance=sigma_sum^2 D D^T/1000^2",
+    "pdf_calibration": "PDF conservative sigma formula is deliberately not used",
+    "scope": "per training only; internal validation assumed public; no tuning or repetition composition guarantee"
+  },
+  "datasets": {
+    "cv": "Exp9 45000/5000 stratified split seed20261008; search/review225 steps; formal50000 train+10000 official test250 steps; ViT Tiny224; logical1000 physical250; five epochs FP32",
+    "nlp": "Exp9 62000/5349 split and tokenizer maxlen128; BERT Tiny dropout.1; official872 after freeze; T310; logical=physical1000; five epochs FP32"
+  },
+  "rng": "Exp9 initialization/order/augmentations; same order every epoch; noise independent seed+1; dropout seed+100000+step",
+  "scheduling": "physical0/1/2/3; CV exclusive1; otherwise NLP at most2 independent workers; CUDA_VISIBLE_DEVICES; no DDP or batch/precision fallbacks",
+  "failures": "no silent retry; OOM/engineering/calibration/hash failure stops new launches, active workers finish; explicit non_finite search/review excluded with evidence, formal any failure stops",
+  "recovery": "reuse only identity/protocol/core/input/matrix/config/artifact hash matching successful runs; partial/engineering failures require explicit inspection; no automatic checkpoint continuation",
+  "read_only": "all generated files under exp16a; every other repository file size/mtime snapshot verified before/after; data/cache offline",
+  "report": "10 paired seeds; mean/sample SD; t95% CIs and all pairwise differences; utility/matrixerror/sensitivity/runtime/memory separate files; no blind-test claim"
+}

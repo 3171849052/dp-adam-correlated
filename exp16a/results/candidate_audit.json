@@ -1,0 +1,221 @@
+{
+  "status": "passed",
+  "matrices": [
+    {
+      "matrix": "momentum-bias_b2lt_T225.json",
+      "candidates": 1001,
+      "selected": "iterate",
+      "selected_objective": 6670.5167046956385,
+      "solver_status": "iteration limit",
+      "selection_verified": true
+    },
+    {
+      "matrix": "momentum-bias_b2lt_T250.json",
+      "candidates": 1001,
+      "selected": "iterate",
+      "selected_objective": 6764.170258976721,
+      "solver_status": "iteration limit",
+      "selection_verified": true
+    },
+    {
+      "matrix": "momentum-bias_b2lt_T310.json",
+      "candidates": 1001,
+      "selected": "iterate",
+      "selected_objective": 6959.07621842817,
+      "solver_status": "iteration limit",
+      "selection_verified": true
+    },
+    {
+      "matrix": "momentum-bias_bandinvmf_T225.json",
+      "candidates": 23,
+      "selected": "iterate",
+      "selected_objective": 6827.808335539181,
+      "solver_status": "relative objective and gradient tolerance",
+      "selection_verified": true
+    },
+    {
+      "matrix": "momentum-bias_bandinvmf_T250.json",
+      "candidates": 23,
+      "selected": "iterate",
+      "selected_objective": 6973.708848664385,
+      "solver_status": "relative objective and gradient tolerance",
+      "selection_verified": true
+    },
+    {
+      "matrix": "momentum-bias_bandinvmf_T310.json",
+      "candidates": 22,
+      "selected": "iterate",
+      "selected_objective": 7305.7385033951305,
+      "solver_status": "relative objective and gradient tolerance",
+      "selection_verified": true
+    },
+    {
+      "matrix": "momentum-bias_dtc_T225.json",
+      "candidates": 1002,
+      "selected": "iid",
+      "selected_objective": 62205.972856596854,
+      "solver_status": "iteration limit",
+      "selection_verified": true
+    },
+    {
+      "matrix": "momentum-bias_dtc_T250.json",
+      "candidates": 1002,
+      "selected": "iid",
+      "selected_objective": 68497.95787941093,
+      "solver_status": "iteration limit",
+      "selection_verified": true
+    },
+    {
+      "matrix": "momentum-bias_dtc_T310.json",
+      "candidates": 1002,
+      "selected": "iid",
+      "selected_objective": 83571.09308080409,
+      "solver_status": "iteration limit",
+      "selection_verified": true
+    },
+    {
+      "matrix": "momentum_b2lt_T225.json",
+      "candidates": 496,
+      "selected": "iterate",
+      "selected_objective": 20.070075939254725,
+      "solver_status": "feasible line search stalled",
+      "selection_verified": true
+    },
+    {
+      "matrix": "momentum_b2lt_T250.json",
+      "candidates": 1001,
+      "selected": "iterate",
+      "selected_objective": 20.7058278606848,
+      "solver_status": "iteration limit",
+      "selection_verified": true
+    },
+    {
+      "matrix": "momentum_b2lt_T310.json",
+      "candidates": 1001,
+      "selected": "iterate",
+      "selected_objective": 22.052272850491182,
+      "solver_status": "iteration limit",
+      "selection_verified": true
+    },
+    {
+      "matrix": "momentum_bandinvmf_T225.json",
+      "candidates": 28,
+      "selected": "iterate",
+      "selected_objective": 20.03925055497381,
+      "solver_status": "relative objective and gradient tolerance",
+      "selection_verified": true
+    },
+    {
+      "matrix": "momentum_bandinvmf_T250.json",
+      "candidates": 26,
+      "selected": "iterate",
+      "selected_objective": 20.68727732897055,
+      "solver_status": "relative objective and gradient tolerance",
+      "selection_verified": true
+    },
+    {
+      "matrix": "momentum_bandinvmf_T310.json",
+      "candidates": 32,
+      "selected": "iterate",
+      "selected_objective": 22.047374234761755,
+      "solver_status": "relative objective and gradient tolerance",
+      "selection_verified": true
+    },
+    {
+      "matrix": "momentum_dtc_T225.json",
+      "candidates": 1002,
+      "selected": "iterate",
+      "selected_objective": 45.9527931310368,
+      "solver_status": "iteration limit",
+      "selection_verified": true
+    },
+    {
+      "matrix": "momentum_dtc_T250.json",
+      "candidates": 1002,
+      "selected": "iterate",
+      "selected_objective": 55.75888126861648,
+      "solver_status": "iteration limit",
+      "selection_verified": true
+    },
+    {
+      "matrix": "momentum_dtc_T310.json",
+      "candidates": 1002,
+      "selected": "iterate",
+      "selected_objective": 67.86715828053332,
+      "solver_status": "iteration limit",
+      "selection_verified": true
+    },
+    {
+      "matrix": "sgd_b2lt_T225.json",
+      "candidates": 1001,
+      "selected": "iterate",
+      "selected_objective": 43.510609774515096,
+      "solver_status": "iteration limit",
+      "selection_verified": true
+    },
+    {
+      "matrix": "sgd_b2lt_T250.json",
+      "candidates": 1001,
+      "selected": "iterate",
+      "selected_objective": 44.4990735350087,
+      "solver_status": "iteration limit",
+      "selection_verified": true
+    },
+    {
+      "matrix": "sgd_b2lt_T310.json",
+      "candidates": 318,
+      "selected": "iterate",
+      "selected_objective": 46.55290910041035,
+      "solver_status": "feasible line search stalled",
+      "selection_verified": true
+    },
+    {
+      "matrix": "sgd_bandinvmf_T225.json",
+      "candidates": 24,
+      "selected": "iterate",
+      "selected_objective": 45.779780029495505,
+      "solver_status": "relative objective and gradient tolerance",
+      "selection_verified": true
+    },
+    {
+      "matrix": "sgd_bandinvmf_T250.json",
+      "candidates": 22,
+      "selected": "iterate",
+      "selected_objective": 47.31474707915759,
+      "solver_status": "relative objective and gradient tolerance",
+      "selection_verified": true
+    },
+    {
+      "matrix": "sgd_bandinvmf_T310.json",
+      "candidates": 21,
+      "selected": "iterate",
+      "selected_objective": 50.74528080554238,
+      "solver_status": "relative objective and gradient tolerance",
+      "selection_verified": true
+    },
+    {
+      "matrix": "sgd_dtc_T225.json",
+      "candidates": 1002,
+      "selected": "iterate",
+      "selected_objective": 471.75431758693566,
+      "solver_status": "iteration limit",
+      "selection_verified": true
+    },
+    {
+      "matrix": "sgd_dtc_T250.json",
+      "candidates": 1002,
+      "selected": "iterate",
+      "selected_objective": 533.3031023171718,
+      "solver_status": "iteration limit",
+      "selection_verified": true
+    },
+    {
+      "matrix": "sgd_dtc_T310.json",
+      "candidates": 1002,
+      "selected": "iterate",
+      "selected_objective": 776.4502661275515,
+      "solver_status": "iteration limit",
+      "selection_verified": true
+    }
+  ]
+}

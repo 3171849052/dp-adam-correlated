@@ -1,0 +1,4279 @@
+{
+  "trials": [
+    {
+      "task": "cv",
+      "method": "adam",
+      "lr": 0.000173205080757,
+      "clip": null,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam",
+      "lr": 0.0003,
+      "clip": null,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam",
+      "lr": 0.000547722557505,
+      "clip": null,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-iid",
+      "lr": 0.000387298334621,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-iid",
+      "lr": 0.000387298334621,
+      "clip": 30.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-iid",
+      "lr": 0.000387298334621,
+      "clip": 54.7722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-iid",
+      "lr": 0.0005,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-iid",
+      "lr": 0.0005,
+      "clip": 30.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-iid",
+      "lr": 0.0005,
+      "clip": 54.7722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-iid",
+      "lr": 0.000707106781187,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-iid",
+      "lr": 0.000707106781187,
+      "clip": 30.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-iid",
+      "lr": 0.000707106781187,
+      "clip": 54.7722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-bandinvmf",
+      "lr": 0.00173205080757,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-bandinvmf",
+      "lr": 0.00173205080757,
+      "clip": 30.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-bandinvmf",
+      "lr": 0.00173205080757,
+      "clip": 54.7722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-bandinvmf",
+      "lr": 0.003,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-bandinvmf",
+      "lr": 0.003,
+      "clip": 30.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-bandinvmf",
+      "lr": 0.003,
+      "clip": 54.7722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 30.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 54.7722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-b2lt",
+      "lr": 0.00173205080757,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-b2lt",
+      "lr": 0.00173205080757,
+      "clip": 30.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-b2lt",
+      "lr": 0.00173205080757,
+      "clip": 54.7722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-b2lt",
+      "lr": 0.003,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-b2lt",
+      "lr": 0.003,
+      "clip": 30.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-b2lt",
+      "lr": 0.003,
+      "clip": 54.7722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 30.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 54.7722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-dtc",
+      "lr": 0.00458257569496,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-dtc",
+      "lr": 0.00458257569496,
+      "clip": 30.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-dtc",
+      "lr": 0.00458257569496,
+      "clip": 54.7722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-dtc",
+      "lr": 0.007,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-dtc",
+      "lr": 0.007,
+      "clip": 30.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-dtc",
+      "lr": 0.007,
+      "clip": 54.7722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-dtc",
+      "lr": 0.0106926766216,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-dtc",
+      "lr": 0.0106926766216,
+      "clip": 30.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-dtc",
+      "lr": 0.0106926766216,
+      "clip": 54.7722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 30.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 54.7722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bandinvmf",
+      "lr": 0.007,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bandinvmf",
+      "lr": 0.007,
+      "clip": 30.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bandinvmf",
+      "lr": 0.007,
+      "clip": 54.7722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bandinvmf",
+      "lr": 0.0106926766216,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bandinvmf",
+      "lr": 0.0106926766216,
+      "clip": 30.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bandinvmf",
+      "lr": 0.0106926766216,
+      "clip": 54.7722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 5.7735026919,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 10.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-b2lt",
+      "lr": 0.007,
+      "clip": 5.7735026919,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-b2lt",
+      "lr": 0.007,
+      "clip": 10.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-b2lt",
+      "lr": 0.007,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-b2lt",
+      "lr": 0.0106926766216,
+      "clip": 5.7735026919,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-b2lt",
+      "lr": 0.0106926766216,
+      "clip": 10.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-b2lt",
+      "lr": 0.0106926766216,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-dtc",
+      "lr": 0.00458257569496,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-dtc",
+      "lr": 0.00458257569496,
+      "clip": 30.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-dtc",
+      "lr": 0.00458257569496,
+      "clip": 54.7722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-dtc",
+      "lr": 0.007,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-dtc",
+      "lr": 0.007,
+      "clip": 30.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-dtc",
+      "lr": 0.007,
+      "clip": 54.7722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-dtc",
+      "lr": 0.0106926766216,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-dtc",
+      "lr": 0.0106926766216,
+      "clip": 30.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-dtc",
+      "lr": 0.0106926766216,
+      "clip": 54.7722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-bandinvmf",
+      "lr": 0.00173205080757,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-bandinvmf",
+      "lr": 0.00173205080757,
+      "clip": 30.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-bandinvmf",
+      "lr": 0.00173205080757,
+      "clip": 54.7722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-bandinvmf",
+      "lr": 0.003,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-bandinvmf",
+      "lr": 0.003,
+      "clip": 30.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-bandinvmf",
+      "lr": 0.003,
+      "clip": 54.7722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 30.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 54.7722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-b2lt",
+      "lr": 0.00173205080757,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-b2lt",
+      "lr": 0.00173205080757,
+      "clip": 30.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-b2lt",
+      "lr": 0.00173205080757,
+      "clip": 54.7722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-b2lt",
+      "lr": 0.003,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-b2lt",
+      "lr": 0.003,
+      "clip": 30.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-b2lt",
+      "lr": 0.003,
+      "clip": 54.7722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 30.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 54.7722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-dtc",
+      "lr": 0.00057735026919,
+      "clip": 5.7735026919,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-dtc",
+      "lr": 0.00057735026919,
+      "clip": 10.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-dtc",
+      "lr": 0.00057735026919,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-dtc",
+      "lr": 0.001,
+      "clip": 5.7735026919,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-dtc",
+      "lr": 0.001,
+      "clip": 10.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-dtc",
+      "lr": 0.001,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-dtc",
+      "lr": 0.00173205080757,
+      "clip": 5.7735026919,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-dtc",
+      "lr": 0.00173205080757,
+      "clip": 10.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-dtc",
+      "lr": 0.00173205080757,
+      "clip": 17.3205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00173205080757,
+      "clip": 77.4596669241,
+      "eps_scale": 0.022360679775,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00173205080757,
+      "clip": 77.4596669241,
+      "eps_scale": 0.05,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00173205080757,
+      "clip": 77.4596669241,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00173205080757,
+      "clip": 200.0,
+      "eps_scale": 0.022360679775,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00173205080757,
+      "clip": 200.0,
+      "eps_scale": 0.05,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00173205080757,
+      "clip": 200.0,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00173205080757,
+      "clip": 244.948974278,
+      "eps_scale": 0.022360679775,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00173205080757,
+      "clip": 244.948974278,
+      "eps_scale": 0.05,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00173205080757,
+      "clip": 244.948974278,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.003,
+      "clip": 77.4596669241,
+      "eps_scale": 0.022360679775,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.003,
+      "clip": 77.4596669241,
+      "eps_scale": 0.05,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.003,
+      "clip": 77.4596669241,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.003,
+      "clip": 200.0,
+      "eps_scale": 0.022360679775,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.003,
+      "clip": 200.0,
+      "eps_scale": 0.05,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.003,
+      "clip": 200.0,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.003,
+      "clip": 244.948974278,
+      "eps_scale": 0.022360679775,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.003,
+      "clip": 244.948974278,
+      "eps_scale": 0.05,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.003,
+      "clip": 244.948974278,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 77.4596669241,
+      "eps_scale": 0.022360679775,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 77.4596669241,
+      "eps_scale": 0.05,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 77.4596669241,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 200.0,
+      "eps_scale": 0.022360679775,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 200.0,
+      "eps_scale": 0.05,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 200.0,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 244.948974278,
+      "eps_scale": 0.022360679775,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 244.948974278,
+      "eps_scale": 0.05,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 244.948974278,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00173205080757,
+      "clip": 77.4596669241,
+      "eps_scale": 0.022360679775,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00173205080757,
+      "clip": 77.4596669241,
+      "eps_scale": 0.05,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00173205080757,
+      "clip": 77.4596669241,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00173205080757,
+      "clip": 200.0,
+      "eps_scale": 0.022360679775,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00173205080757,
+      "clip": 200.0,
+      "eps_scale": 0.05,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00173205080757,
+      "clip": 200.0,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00173205080757,
+      "clip": 244.948974278,
+      "eps_scale": 0.022360679775,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00173205080757,
+      "clip": 244.948974278,
+      "eps_scale": 0.05,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00173205080757,
+      "clip": 244.948974278,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.003,
+      "clip": 77.4596669241,
+      "eps_scale": 0.022360679775,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.003,
+      "clip": 77.4596669241,
+      "eps_scale": 0.05,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.003,
+      "clip": 77.4596669241,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.003,
+      "clip": 200.0,
+      "eps_scale": 0.022360679775,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.003,
+      "clip": 200.0,
+      "eps_scale": 0.05,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.003,
+      "clip": 200.0,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.003,
+      "clip": 244.948974278,
+      "eps_scale": 0.022360679775,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.003,
+      "clip": 244.948974278,
+      "eps_scale": 0.05,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.003,
+      "clip": 244.948974278,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 77.4596669241,
+      "eps_scale": 0.022360679775,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 77.4596669241,
+      "eps_scale": 0.05,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 77.4596669241,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 200.0,
+      "eps_scale": 0.022360679775,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 200.0,
+      "eps_scale": 0.05,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 200.0,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 244.948974278,
+      "eps_scale": 0.022360679775,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 244.948974278,
+      "eps_scale": 0.05,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 244.948974278,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.00458257569496,
+      "clip": 11.6189500386,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.00458257569496,
+      "clip": 11.6189500386,
+      "eps_scale": 0.3,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.00458257569496,
+      "clip": 11.6189500386,
+      "eps_scale": 0.734846922835,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.00458257569496,
+      "clip": 30.0,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.00458257569496,
+      "clip": 30.0,
+      "eps_scale": 0.3,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.00458257569496,
+      "clip": 30.0,
+      "eps_scale": 0.734846922835,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.00458257569496,
+      "clip": 77.4596669241,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.00458257569496,
+      "clip": 77.4596669241,
+      "eps_scale": 0.3,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.00458257569496,
+      "clip": 77.4596669241,
+      "eps_scale": 0.734846922835,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.007,
+      "clip": 11.6189500386,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.007,
+      "clip": 11.6189500386,
+      "eps_scale": 0.3,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.007,
+      "clip": 11.6189500386,
+      "eps_scale": 0.734846922835,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.007,
+      "clip": 30.0,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.007,
+      "clip": 30.0,
+      "eps_scale": 0.3,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.007,
+      "clip": 30.0,
+      "eps_scale": 0.734846922835,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.007,
+      "clip": 77.4596669241,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.007,
+      "clip": 77.4596669241,
+      "eps_scale": 0.3,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.007,
+      "clip": 77.4596669241,
+      "eps_scale": 0.734846922835,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.0106926766216,
+      "clip": 11.6189500386,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.0106926766216,
+      "clip": 11.6189500386,
+      "eps_scale": 0.3,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.0106926766216,
+      "clip": 11.6189500386,
+      "eps_scale": 0.734846922835,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.0106926766216,
+      "clip": 30.0,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.0106926766216,
+      "clip": 30.0,
+      "eps_scale": 0.3,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.0106926766216,
+      "clip": 30.0,
+      "eps_scale": 0.734846922835,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.0106926766216,
+      "clip": 77.4596669241,
+      "eps_scale": 0.122474487139,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.0106926766216,
+      "clip": 77.4596669241,
+      "eps_scale": 0.3,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.0106926766216,
+      "clip": 77.4596669241,
+      "eps_scale": 0.734846922835,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam",
+      "lr": 0.000164316767252,
+      "clip": null,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam",
+      "lr": 0.0003,
+      "clip": null,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam",
+      "lr": 0.000547722557505,
+      "clip": null,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-iid",
+      "lr": 0.001,
+      "clip": 0.173205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-iid",
+      "lr": 0.001,
+      "clip": 0.3,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-iid",
+      "lr": 0.001,
+      "clip": 0.547722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-iid",
+      "lr": 0.002,
+      "clip": 0.173205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-iid",
+      "lr": 0.002,
+      "clip": 0.3,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-iid",
+      "lr": 0.002,
+      "clip": 0.547722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-iid",
+      "lr": 0.00244948974278,
+      "clip": 0.173205080757,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-iid",
+      "lr": 0.00244948974278,
+      "clip": 0.3,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-iid",
+      "lr": 0.00244948974278,
+      "clip": 0.547722557505,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 0.316227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 1.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 3.16227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-bandinvmf",
+      "lr": 0.007,
+      "clip": 0.316227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-bandinvmf",
+      "lr": 0.007,
+      "clip": 1.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-bandinvmf",
+      "lr": 0.007,
+      "clip": 3.16227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-bandinvmf",
+      "lr": 0.0106926766216,
+      "clip": 0.316227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-bandinvmf",
+      "lr": 0.0106926766216,
+      "clip": 1.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-bandinvmf",
+      "lr": 0.0106926766216,
+      "clip": 3.16227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 20.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 40.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 80.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-b2lt",
+      "lr": 0.007,
+      "clip": 20.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-b2lt",
+      "lr": 0.007,
+      "clip": 40.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-b2lt",
+      "lr": 0.007,
+      "clip": 80.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-b2lt",
+      "lr": 0.0106926766216,
+      "clip": 20.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-b2lt",
+      "lr": 0.0106926766216,
+      "clip": 40.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-b2lt",
+      "lr": 0.0106926766216,
+      "clip": 80.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-dtc",
+      "lr": 0.00458257569496,
+      "clip": 3.16227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-dtc",
+      "lr": 0.00458257569496,
+      "clip": 10.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-dtc",
+      "lr": 0.00458257569496,
+      "clip": 20.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-dtc",
+      "lr": 0.007,
+      "clip": 3.16227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-dtc",
+      "lr": 0.007,
+      "clip": 10.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-dtc",
+      "lr": 0.007,
+      "clip": 20.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-dtc",
+      "lr": 0.0106926766216,
+      "clip": 3.16227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-dtc",
+      "lr": 0.0106926766216,
+      "clip": 10.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-dtc",
+      "lr": 0.0106926766216,
+      "clip": 20.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 3.16227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 10.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 20.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bandinvmf",
+      "lr": 0.007,
+      "clip": 3.16227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bandinvmf",
+      "lr": 0.007,
+      "clip": 10.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bandinvmf",
+      "lr": 0.007,
+      "clip": 20.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bandinvmf",
+      "lr": 0.0106926766216,
+      "clip": 3.16227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bandinvmf",
+      "lr": 0.0106926766216,
+      "clip": 10.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bandinvmf",
+      "lr": 0.0106926766216,
+      "clip": 20.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 3.16227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 10.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 20.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-b2lt",
+      "lr": 0.007,
+      "clip": 3.16227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-b2lt",
+      "lr": 0.007,
+      "clip": 10.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-b2lt",
+      "lr": 0.007,
+      "clip": 20.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-b2lt",
+      "lr": 0.0106926766216,
+      "clip": 3.16227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-b2lt",
+      "lr": 0.0106926766216,
+      "clip": 10.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-b2lt",
+      "lr": 0.0106926766216,
+      "clip": 20.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-dtc",
+      "lr": 0.00458257569496,
+      "clip": 3.16227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-dtc",
+      "lr": 0.00458257569496,
+      "clip": 10.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-dtc",
+      "lr": 0.00458257569496,
+      "clip": 20.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-dtc",
+      "lr": 0.007,
+      "clip": 3.16227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-dtc",
+      "lr": 0.007,
+      "clip": 10.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-dtc",
+      "lr": 0.007,
+      "clip": 20.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-dtc",
+      "lr": 0.0106926766216,
+      "clip": 3.16227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-dtc",
+      "lr": 0.0106926766216,
+      "clip": 10.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-dtc",
+      "lr": 0.0106926766216,
+      "clip": 20.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 0.316227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 1.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 3.16227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-bandinvmf",
+      "lr": 0.007,
+      "clip": 0.316227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-bandinvmf",
+      "lr": 0.007,
+      "clip": 1.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-bandinvmf",
+      "lr": 0.007,
+      "clip": 3.16227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-bandinvmf",
+      "lr": 0.0106926766216,
+      "clip": 0.316227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-bandinvmf",
+      "lr": 0.0106926766216,
+      "clip": 1.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-bandinvmf",
+      "lr": 0.0106926766216,
+      "clip": 3.16227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 20.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 40.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 80.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-b2lt",
+      "lr": 0.007,
+      "clip": 20.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-b2lt",
+      "lr": 0.007,
+      "clip": 40.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-b2lt",
+      "lr": 0.007,
+      "clip": 80.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-b2lt",
+      "lr": 0.0106926766216,
+      "clip": 20.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-b2lt",
+      "lr": 0.0106926766216,
+      "clip": 40.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-b2lt",
+      "lr": 0.0106926766216,
+      "clip": 80.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-dtc",
+      "lr": 0.00057735026919,
+      "clip": 3.16227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-dtc",
+      "lr": 0.00057735026919,
+      "clip": 10.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-dtc",
+      "lr": 0.00057735026919,
+      "clip": 20.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-dtc",
+      "lr": 0.001,
+      "clip": 3.16227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-dtc",
+      "lr": 0.001,
+      "clip": 10.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-dtc",
+      "lr": 0.001,
+      "clip": 20.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-dtc",
+      "lr": 0.00173205080757,
+      "clip": 3.16227766017,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-dtc",
+      "lr": 0.00173205080757,
+      "clip": 10.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-momentum-bias-dtc",
+      "lr": 0.00173205080757,
+      "clip": 20.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 387.298334621,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 387.298334621,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 387.298334621,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 500.0,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 500.0,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 500.0,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 645.497224368,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 645.497224368,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.00458257569496,
+      "clip": 645.497224368,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.007,
+      "clip": 387.298334621,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.007,
+      "clip": 387.298334621,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.007,
+      "clip": 387.298334621,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.007,
+      "clip": 500.0,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.007,
+      "clip": 500.0,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.007,
+      "clip": 500.0,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.007,
+      "clip": 645.497224368,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.007,
+      "clip": 645.497224368,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.007,
+      "clip": 645.497224368,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.0106926766216,
+      "clip": 387.298334621,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.0106926766216,
+      "clip": 387.298334621,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.0106926766216,
+      "clip": 387.298334621,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.0106926766216,
+      "clip": 500.0,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.0106926766216,
+      "clip": 500.0,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.0106926766216,
+      "clip": 500.0,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.0106926766216,
+      "clip": 645.497224368,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.0106926766216,
+      "clip": 645.497224368,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-bandinvmf",
+      "lr": 0.0106926766216,
+      "clip": 645.497224368,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 387.298334621,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 387.298334621,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 387.298334621,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 500.0,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 500.0,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 500.0,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 645.497224368,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 645.497224368,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.00458257569496,
+      "clip": 645.497224368,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.007,
+      "clip": 387.298334621,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.007,
+      "clip": 387.298334621,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.007,
+      "clip": 387.298334621,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.007,
+      "clip": 500.0,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.007,
+      "clip": 500.0,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.007,
+      "clip": 500.0,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.007,
+      "clip": 645.497224368,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.007,
+      "clip": 645.497224368,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.007,
+      "clip": 645.497224368,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.0106926766216,
+      "clip": 387.298334621,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.0106926766216,
+      "clip": 387.298334621,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.0106926766216,
+      "clip": 387.298334621,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.0106926766216,
+      "clip": 500.0,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.0106926766216,
+      "clip": 500.0,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.0106926766216,
+      "clip": 500.0,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.0106926766216,
+      "clip": 645.497224368,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.0106926766216,
+      "clip": 645.497224368,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-b2lt",
+      "lr": 0.0106926766216,
+      "clip": 645.497224368,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.00458257569496,
+      "clip": 57.735026919,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.00458257569496,
+      "clip": 57.735026919,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.00458257569496,
+      "clip": 57.735026919,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.00458257569496,
+      "clip": 100.0,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.00458257569496,
+      "clip": 100.0,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.00458257569496,
+      "clip": 100.0,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.00458257569496,
+      "clip": 173.205080757,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.00458257569496,
+      "clip": 173.205080757,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.00458257569496,
+      "clip": 173.205080757,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.007,
+      "clip": 57.735026919,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.007,
+      "clip": 57.735026919,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.007,
+      "clip": 57.735026919,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.007,
+      "clip": 100.0,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.007,
+      "clip": 100.0,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.007,
+      "clip": 100.0,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.007,
+      "clip": 173.205080757,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.007,
+      "clip": 173.205080757,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.007,
+      "clip": 173.205080757,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.0106926766216,
+      "clip": 57.735026919,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.0106926766216,
+      "clip": 57.735026919,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.0106926766216,
+      "clip": 57.735026919,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.0106926766216,
+      "clip": 100.0,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.0106926766216,
+      "clip": 100.0,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.0106926766216,
+      "clip": 100.0,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.0106926766216,
+      "clip": 173.205080757,
+      "eps_scale": 0.00164316767252,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.0106926766216,
+      "clip": 173.205080757,
+      "eps_scale": 0.003,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-mf-sgd-stp-dtc",
+      "lr": 0.0106926766216,
+      "clip": 173.205080757,
+      "eps_scale": 0.00547722557505,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    }
+  ],
+  "basis": {
+    "cv": {
+      "adam": {
+        "coarse_winner": "ea27c8d17eeb9c429e2b",
+        "grid": {
+          "lr": [
+            0.000173205080757,
+            0.0003,
+            0.000547722557505
+          ]
+        }
+      },
+      "adam-iid": {
+        "coarse_winner": "3920e9781c443c5473f6",
+        "grid": {
+          "lr": [
+            0.000387298334621,
+            0.0005,
+            0.000707106781187
+          ],
+          "clip": [
+            17.3205080757,
+            30.0,
+            54.7722557505
+          ]
+        }
+      },
+      "adam-mf-sgd-bandinvmf": {
+        "coarse_winner": "f921fd7ccebb03e512ef",
+        "grid": {
+          "lr": [
+            0.00173205080757,
+            0.003,
+            0.00458257569496
+          ],
+          "clip": [
+            17.3205080757,
+            30.0,
+            54.7722557505
+          ]
+        }
+      },
+      "adam-mf-sgd-b2lt": {
+        "coarse_winner": "7fbce95ac0ce9fe5f62b",
+        "grid": {
+          "lr": [
+            0.00173205080757,
+            0.003,
+            0.00458257569496
+          ],
+          "clip": [
+            17.3205080757,
+            30.0,
+            54.7722557505
+          ]
+        }
+      },
+      "adam-mf-sgd-dtc": {
+        "coarse_winner": "8b568a3ef8c4bd366514",
+        "grid": {
+          "lr": [
+            0.00458257569496,
+            0.007,
+            0.0106926766216
+          ],
+          "clip": [
+            17.3205080757,
+            30.0,
+            54.7722557505
+          ]
+        }
+      },
+      "adam-mf-momentum-bandinvmf": {
+        "coarse_winner": "ada76a031c38ecfa4735",
+        "grid": {
+          "lr": [
+            0.00458257569496,
+            0.007,
+            0.0106926766216
+          ],
+          "clip": [
+            17.3205080757,
+            30.0,
+            54.7722557505
+          ]
+        }
+      },
+      "adam-mf-momentum-b2lt": {
+        "coarse_winner": "c8a394485a5c1338e2cc",
+        "grid": {
+          "lr": [
+            0.00458257569496,
+            0.007,
+            0.0106926766216
+          ],
+          "clip": [
+            5.7735026919,
+            10.0,
+            17.3205080757
+          ]
+        }
+      },
+      "adam-mf-momentum-dtc": {
+        "coarse_winner": "dfdc963a106519cf4bcc",
+        "grid": {
+          "lr": [
+            0.00458257569496,
+            0.007,
+            0.0106926766216
+          ],
+          "clip": [
+            17.3205080757,
+            30.0,
+            54.7722557505
+          ]
+        }
+      },
+      "adam-mf-momentum-bias-bandinvmf": {
+        "coarse_winner": "006cd912d1523f64b7d0",
+        "grid": {
+          "lr": [
+            0.00173205080757,
+            0.003,
+            0.00458257569496
+          ],
+          "clip": [
+            17.3205080757,
+            30.0,
+            54.7722557505
+          ]
+        }
+      },
+      "adam-mf-momentum-bias-b2lt": {
+        "coarse_winner": "8e8ed531ce7a1f084048",
+        "grid": {
+          "lr": [
+            0.00173205080757,
+            0.003,
+            0.00458257569496
+          ],
+          "clip": [
+            17.3205080757,
+            30.0,
+            54.7722557505
+          ]
+        }
+      },
+      "adam-mf-momentum-bias-dtc": {
+        "coarse_winner": "f9db658415b1583c95a3",
+        "grid": {
+          "lr": [
+            0.00057735026919,
+            0.001,
+            0.00173205080757
+          ],
+          "clip": [
+            5.7735026919,
+            10.0,
+            17.3205080757
+          ]
+        }
+      },
+      "adam-mf-sgd-stp-bandinvmf": {
+        "coarse_winner": "0b84bd849d225a43e4d8",
+        "grid": {
+          "lr": [
+            0.00173205080757,
+            0.003,
+            0.00458257569496
+          ],
+          "clip": [
+            77.4596669241,
+            200.0,
+            244.948974278
+          ],
+          "eps_scale": [
+            0.022360679775,
+            0.05,
+            0.122474487139
+          ]
+        }
+      },
+      "adam-mf-sgd-stp-b2lt": {
+        "coarse_winner": "c9ecf2cff8d85aae07ce",
+        "grid": {
+          "lr": [
+            0.00173205080757,
+            0.003,
+            0.00458257569496
+          ],
+          "clip": [
+            77.4596669241,
+            200.0,
+            244.948974278
+          ],
+          "eps_scale": [
+            0.022360679775,
+            0.05,
+            0.122474487139
+          ]
+        }
+      },
+      "adam-mf-sgd-stp-dtc": {
+        "coarse_winner": "188c0e5b3dd898880862",
+        "grid": {
+          "lr": [
+            0.00458257569496,
+            0.007,
+            0.0106926766216
+          ],
+          "clip": [
+            11.6189500386,
+            30.0,
+            77.4596669241
+          ],
+          "eps_scale": [
+            0.122474487139,
+            0.3,
+            0.734846922835
+          ]
+        }
+      }
+    },
+    "nlp": {
+      "adam": {
+        "coarse_winner": "d5d82beeff59c2c10212",
+        "grid": {
+          "lr": [
+            0.000164316767252,
+            0.0003,
+            0.000547722557505
+          ]
+        }
+      },
+      "adam-iid": {
+        "coarse_winner": "dc9dec67546b368934b2",
+        "grid": {
+          "lr": [
+            0.001,
+            0.002,
+            0.00244948974278
+          ],
+          "clip": [
+            0.173205080757,
+            0.3,
+            0.547722557505
+          ]
+        }
+      },
+      "adam-mf-sgd-bandinvmf": {
+        "coarse_winner": "ca80be84ed440d050137",
+        "grid": {
+          "lr": [
+            0.00458257569496,
+            0.007,
+            0.0106926766216
+          ],
+          "clip": [
+            0.316227766017,
+            1.0,
+            3.16227766017
+          ]
+        }
+      },
+      "adam-mf-sgd-b2lt": {
+        "coarse_winner": "a029386ca8e5dafebb31",
+        "grid": {
+          "lr": [
+            0.00458257569496,
+            0.007,
+            0.0106926766216
+          ],
+          "clip": [
+            20.0,
+            40.0,
+            80.0
+          ]
+        }
+      },
+      "adam-mf-sgd-dtc": {
+        "coarse_winner": "6eb7b9888c67a36c6b45",
+        "grid": {
+          "lr": [
+            0.00458257569496,
+            0.007,
+            0.0106926766216
+          ],
+          "clip": [
+            3.16227766017,
+            10.0,
+            20.0
+          ]
+        }
+      },
+      "adam-mf-momentum-bandinvmf": {
+        "coarse_winner": "ca145a30dcbb8a4c5136",
+        "grid": {
+          "lr": [
+            0.00458257569496,
+            0.007,
+            0.0106926766216
+          ],
+          "clip": [
+            3.16227766017,
+            10.0,
+            20.0
+          ]
+        }
+      },
+      "adam-mf-momentum-b2lt": {
+        "coarse_winner": "84ee77c5aeb1c4a9f533",
+        "grid": {
+          "lr": [
+            0.00458257569496,
+            0.007,
+            0.0106926766216
+          ],
+          "clip": [
+            3.16227766017,
+            10.0,
+            20.0
+          ]
+        }
+      },
+      "adam-mf-momentum-dtc": {
+        "coarse_winner": "73e26af3042086515306",
+        "grid": {
+          "lr": [
+            0.00458257569496,
+            0.007,
+            0.0106926766216
+          ],
+          "clip": [
+            3.16227766017,
+            10.0,
+            20.0
+          ]
+        }
+      },
+      "adam-mf-momentum-bias-bandinvmf": {
+        "coarse_winner": "01324c0cdf1f666bb112",
+        "grid": {
+          "lr": [
+            0.00458257569496,
+            0.007,
+            0.0106926766216
+          ],
+          "clip": [
+            0.316227766017,
+            1.0,
+            3.16227766017
+          ]
+        }
+      },
+      "adam-mf-momentum-bias-b2lt": {
+        "coarse_winner": "c567da484b23af38c13c",
+        "grid": {
+          "lr": [
+            0.00458257569496,
+            0.007,
+            0.0106926766216
+          ],
+          "clip": [
+            20.0,
+            40.0,
+            80.0
+          ]
+        }
+      },
+      "adam-mf-momentum-bias-dtc": {
+        "coarse_winner": "dde995f0c9e605feddc6",
+        "grid": {
+          "lr": [
+            0.00057735026919,
+            0.001,
+            0.00173205080757
+          ],
+          "clip": [
+            3.16227766017,
+            10.0,
+            20.0
+          ]
+        }
+      },
+      "adam-mf-sgd-stp-bandinvmf": {
+        "coarse_winner": "3be9ef6f6b1726fbde2f",
+        "grid": {
+          "lr": [
+            0.00458257569496,
+            0.007,
+            0.0106926766216
+          ],
+          "clip": [
+            387.298334621,
+            500.0,
+            645.497224368
+          ],
+          "eps_scale": [
+            0.00164316767252,
+            0.003,
+            0.00547722557505
+          ]
+        }
+      },
+      "adam-mf-sgd-stp-b2lt": {
+        "coarse_winner": "547a04a28e340c58263d",
+        "grid": {
+          "lr": [
+            0.00458257569496,
+            0.007,
+            0.0106926766216
+          ],
+          "clip": [
+            387.298334621,
+            500.0,
+            645.497224368
+          ],
+          "eps_scale": [
+            0.00164316767252,
+            0.003,
+            0.00547722557505
+          ]
+        }
+      },
+      "adam-mf-sgd-stp-dtc": {
+        "coarse_winner": "cf2570e1372893145c77",
+        "grid": {
+          "lr": [
+            0.00458257569496,
+            0.007,
+            0.0106926766216
+          ],
+          "clip": [
+            57.735026919,
+            100.0,
+            173.205080757
+          ],
+          "eps_scale": [
+            0.00164316767252,
+            0.003,
+            0.00547722557505
+          ]
+        }
+      }
+    }
+  },
+  "rounds": 1
+}

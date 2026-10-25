@@ -1,0 +1,17 @@
+{
+  "task": "nlp",
+  "method": "adam-mf-momentum-bias-b2lt",
+  "lr": 0.0106926766216,
+  "clip": 20.0,
+  "eps_scale": null,
+  "seed": 20261102,
+  "stage": "review",
+  "smoke_phase": "search",
+  "replicate": 0,
+  "status": "running",
+  "gpu": 3,
+  "pid": 4065694,
+  "started": 1792816764.6442375,
+  "log": "/media/data/data/lt/dp-adam-correlated/exp16a/results/review/nlp/13da08ca8df958309495/train.log",
+  "command": "CUDA_VISIBLE_DEVICES=3 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp16a.train --trial-json '{\"clip\": 20.0, \"eps_scale\": null, \"lr\": 0.0106926766216, \"method\": \"adam-mf-momentum-bias-b2lt\", \"replicate\": 0, \"seed\": 20261102, \"smoke_phase\": \"search\", \"stage\": \"review\", \"task\": \"nlp\"}'"
+}

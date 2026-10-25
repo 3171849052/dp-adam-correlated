@@ -1,0 +1,21 @@
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 17267.80it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+{"epoch": 1, "step": 62, "train_loss": 0.4208147179388231, "clip_fraction": null, "epsilon": null, "accuracy": 0.8142201834862385, "validation_loss": 0.4220746329071325, "validation_examples": 872}
+{"epoch": 2, "step": 124, "train_loss": 0.22687115232406124, "clip_fraction": null, "epsilon": null, "accuracy": 0.8142201834862385, "validation_loss": 0.4416608854171333, "validation_examples": 872}
+{"epoch": 3, "step": 186, "train_loss": 0.17118607404155117, "clip_fraction": null, "epsilon": null, "accuracy": 0.8142201834862385, "validation_loss": 0.5213289567089956, "validation_examples": 872}
+{"epoch": 4, "step": 248, "train_loss": 0.13835095645535378, "clip_fraction": null, "epsilon": null, "accuracy": 0.8073394495412844, "validation_loss": 0.6122417056232418, "validation_examples": 872}
+{"epoch": 5, "step": 310, "train_loss": 0.1150108411235194, "clip_fraction": null, "epsilon": null, "accuracy": 0.786697247706422, "validation_loss": 0.6934384643484693, "validation_examples": 872}

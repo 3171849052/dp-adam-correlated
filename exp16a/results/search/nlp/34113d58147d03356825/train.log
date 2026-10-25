@@ -1,0 +1,36 @@
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 29111.56it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/media/data/data/lt/dp-adam-correlated/exp16a/train.py", line 169, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp16a/train.py", line 166, in main
+    cfg=Trial(**json.loads(parser.parse_args().trial_json));run(cfg)
+                                                            ^^^^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp16a/train.py", line 115, in run
+    if logical.finish_microbatch():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp16a/optimizer.py", line 30, in finish_microbatch
+    if not all(torch.isfinite(p).all() and torch.isfinite(self.optimizer.state[p]['exp_avg_sq']).all() for p in self.parameters):raise FloatingPointError('Nonfinite Adam state')
+                                                                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FloatingPointError: Nonfinite Adam state

@@ -1,0 +1,22 @@
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 11746.22it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+{"epoch": 1, "step": 62, "train_loss": 0.6376519302860383, "clip_fraction": 0.5218225806451613, "epsilon": 2.741265603702362, "accuracy": 0.7599551318003365, "validation_loss": 0.6627198470866799, "validation_examples": 5349}
+{"epoch": 2, "step": 124, "train_loss": 0.6490582757765248, "clip_fraction": 0.4519032258064516, "epsilon": 4.401079341767809, "accuracy": 0.7894933632454665, "validation_loss": 0.6139414072883622, "validation_examples": 5349}
+{"epoch": 3, "step": 186, "train_loss": 0.5840084622290826, "clip_fraction": 0.3975967741935484, "epsilon": 5.751821668111442, "accuracy": 0.8059450364554123, "validation_loss": 0.5546771762838629, "validation_examples": 5349}
+{"epoch": 4, "step": 248, "train_loss": 0.5330438306254726, "clip_fraction": 0.35754838709677417, "epsilon": 6.930547559364686, "accuracy": 0.8164142830435596, "validation_loss": 0.5049749190037575, "validation_examples": 5349}
+{"epoch": 5, "step": 310, "train_loss": 0.504515370522776, "clip_fraction": 0.3276612903225806, "epsilon": 8.000000000000005, "accuracy": 0.8253879229762573, "validation_loss": 0.4976065502498368, "validation_examples": 5349}

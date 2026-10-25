@@ -1,0 +1,525 @@
+{
+  "status": "passed",
+  "code_sha256": {
+    "exp16a/__init__.py": "c8c8d3cfef18fbc8fab7c7ff819b26688d4810d29377885dc86dc41e7cc350cf",
+    "exp16a/config.py": "ab80dffe165adecc89da26a72022dda88e8bd4b838e3fe1a3d71de5a16752937",
+    "exp16a/train.py": "ad7157984a1b852dfa2625db6af0b466b226e1566a709d7ffa7bedf6d3b66fe8",
+    "exp16a/data.py": "3efcfbf8dfab2179170a37aeea37ee998d694bb5254d14b40435eb08647d946e",
+    "exp16a/cv_model.py": "de7b23603dc94b1f5b6000a85d8f8b4485a5a81b1e9fcfdabf96daa21cf4d38c",
+    "exp16a/nlp_model.py": "6afc598b6be4c3b93d76e390822c885537866e6c0df863282e1dc240e9b0d42d",
+    "exp16a/optimizer.py": "86a04ea3aeadbffc82046c9fd0c5fccefa2f2d3c0482185cf2c861bb63e93d5f",
+    "exp16a/clipping.py": "a17abb8a2a88729e662185578c915750d2c506e31316cde415b6f8ccc5e17999",
+    "exp16a/privacy.py": "6e37e95ccb496245174249f30f9c3237fb809b30a031a5092e462debf2d9ac5a",
+    "exp16a/noise.py": "e689e3a04deae96832678a1c8abf4942ae148af50b536f8387fe9a437a09fb45",
+    "exp16a/matrices.py": "907e44b2107308d806d7c10b8c6cd773d6341de5fd2b5a80e19dbd75e0cd03d3",
+    "exp16a/support.py": "33ef0183a8c6d4dfecfb70e6598cf3a46938b6806461e41ab65096f366972525"
+  },
+  "stages": {
+    "coarse": {
+      "planned": 348,
+      "reused": 0,
+      "completed": 321,
+      "excluded": [
+        {
+          "trial_id": "ba06db36dae46359ec5d",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/nlp/ba06db36dae46359ec5d"
+        },
+        {
+          "trial_id": "8428c9910068bcfd4bac",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/nlp/8428c9910068bcfd4bac"
+        },
+        {
+          "trial_id": "88884378aa19feb25740",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/nlp/88884378aa19feb25740"
+        },
+        {
+          "trial_id": "a361d3ff7a46ab5fc3d9",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/cv/a361d3ff7a46ab5fc3d9"
+        },
+        {
+          "trial_id": "6cd326dfbc2fe5affe07",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/nlp/6cd326dfbc2fe5affe07"
+        },
+        {
+          "trial_id": "2c443496451b410d08e3",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/cv/2c443496451b410d08e3"
+        },
+        {
+          "trial_id": "2a58c22238324f48d9cd",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/nlp/2a58c22238324f48d9cd"
+        },
+        {
+          "trial_id": "c4c1dc1a079807178e09",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/cv/c4c1dc1a079807178e09"
+        },
+        {
+          "trial_id": "1cda93dbaa73c3941be9",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/nlp/1cda93dbaa73c3941be9"
+        },
+        {
+          "trial_id": "a9700911e0b188e47d72",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/nlp/a9700911e0b188e47d72"
+        },
+        {
+          "trial_id": "326a9e67ba2ab38818b4",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/nlp/326a9e67ba2ab38818b4"
+        },
+        {
+          "trial_id": "a61d979a3fdbeee5caee",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/nlp/a61d979a3fdbeee5caee"
+        },
+        {
+          "trial_id": "43220ba2dc4fd822bd54",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/cv/43220ba2dc4fd822bd54"
+        },
+        {
+          "trial_id": "7102148d9861784f649b",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/nlp/7102148d9861784f649b"
+        },
+        {
+          "trial_id": "f868a1c73f64519e0c51",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/cv/f868a1c73f64519e0c51"
+        },
+        {
+          "trial_id": "a1e8af848ed991ca8831",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/nlp/a1e8af848ed991ca8831"
+        },
+        {
+          "trial_id": "e83d66fc28d3b972b0d9",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/cv/e83d66fc28d3b972b0d9"
+        },
+        {
+          "trial_id": "4e892d65f5fc053691a3",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/nlp/4e892d65f5fc053691a3"
+        },
+        {
+          "trial_id": "c1c3e0989fc3039d07fb",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/nlp/c1c3e0989fc3039d07fb"
+        },
+        {
+          "trial_id": "39d8cdf25e9fc245d809",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/nlp/39d8cdf25e9fc245d809"
+        },
+        {
+          "trial_id": "32f20639f72941794d82",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/nlp/32f20639f72941794d82"
+        },
+        {
+          "trial_id": "a83405c6037368d2c294",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/cv/a83405c6037368d2c294"
+        },
+        {
+          "trial_id": "350d31a19ec666b482e1",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/nlp/350d31a19ec666b482e1"
+        },
+        {
+          "trial_id": "be90089ebb194cb784ef",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/cv/be90089ebb194cb784ef"
+        },
+        {
+          "trial_id": "c09d1d29da5d6dbfc0e5",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/nlp/c09d1d29da5d6dbfc0e5"
+        },
+        {
+          "trial_id": "63efa778150d517a8c57",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/cv/63efa778150d517a8c57"
+        },
+        {
+          "trial_id": "34113d58147d03356825",
+          "reason": "FloatingPointError: Nonfinite Adam state",
+          "path": "/media/data/data/lt/dp-adam-correlated/exp16a/results/search/nlp/34113d58147d03356825"
+        }
+      ]
+    },
+    "fine": {
+      "planned": 348,
+      "reused": 28,
+      "completed": 348,
+      "excluded": []
+    },
+    "review": {
+      "planned": 112,
+      "reused": 0,
+      "completed": 112,
+      "excluded": []
+    },
+    "formal": {
+      "planned": 280,
+      "reused": 0,
+      "completed": 280,
+      "excluded": []
+    }
+  },
+  "formal": 280,
+  "configurations": 28,
+  "matrix_audits": {
+    "/media/data/data/lt/dp-adam-correlated/exp16a/results/matrices/identity_iid_T250.npz": {
+      "inverse_max_abs": 0.0,
+      "factorization_max_abs": 0.0,
+      "sensitivity": 2.23606797749979,
+      "absolute_column_upper_bound": 2.23606797749979,
+      "aligned_lower_bound": 2.23606797749979,
+      "nonnegative_strategy": true,
+      "mean_workload_error": 1.0,
+      "objective": 5.000000000000001,
+      "sigma_sum_clip1": 1.3421530075084847,
+      "mu": 1.6660305978457184,
+      "epsilon": 8.000000000000007,
+      "delta": 1e-05,
+      "covariance_sha256": "69f86f279a48b2f2a368c910d6ecb56cf3162d431a40f1013359c49bcb8826bb",
+      "mean_gradient_noise_MSE_clip1": 1.8013746955640708e-06,
+      "workload_noise_MSE_clip1": 1.8013746955640704e-06
+    },
+    "/media/data/data/lt/dp-adam-correlated/exp16a/results/matrices/sgd_bandinvmf_T250.npz": {
+      "inverse_max_abs": 3.72900953241886e-17,
+      "factorization_max_abs": 4.440892098500626e-16,
+      "sensitivity": 4.0984168397259735,
+      "absolute_column_upper_bound": 4.0984168397259735,
+      "aligned_lower_bound": 4.0984168397259735,
+      "nonnegative_strategy": true,
+      "mean_workload_error": 2.816853549686751,
+      "objective": 47.31474707915759,
+      "sigma_sum_clip1": 2.45998893719328,
+      "mu": 1.6660305978457184,
+      "epsilon": 8.000000000000005,
+      "delta": 1e-05,
+      "covariance_sha256": "ea9af50101a143cabfa0d0f23e38d0f478f50c2507231c5823afb785ffffa118",
+      "mean_gradient_noise_MSE_clip1": 8.013082606421887e-06,
+      "workload_noise_MSE_clip1": 1.7046317623081698e-05
+    },
+    "/media/data/data/lt/dp-adam-correlated/exp16a/results/matrices/sgd_b2lt_T250.npz": {
+      "inverse_max_abs": 3.122502256758253e-17,
+      "factorization_max_abs": 6.661338147750939e-16,
+      "sensitivity": 3.8235029338064797,
+      "absolute_column_upper_bound": 3.82350293380648,
+      "aligned_lower_bound": 3.82350293380648,
+      "nonnegative_strategy": true,
+      "mean_workload_error": 3.043884110721674,
+      "objective": 44.4990735350087,
+      "sigma_sum_clip1": 2.294977618508632,
+      "mu": 1.6660305978457184,
+      "epsilon": 8.000000000000005,
+      "delta": 1e-05,
+      "covariance_sha256": "38c8b8dfd7b9bc24508e4f69ff62965a19fde3fb3e813fba72db10de3af9b53b",
+      "mean_gradient_noise_MSE_clip1": 6.784158106762034e-06,
+      "workload_noise_MSE_clip1": 1.6031901008401897e-05
+    },
+    "/media/data/data/lt/dp-adam-correlated/exp16a/results/matrices/sgd_dtc_T250.npz": {
+      "inverse_max_abs": 3.469446951953614e-18,
+      "factorization_max_abs": 1.3322676295501878e-15,
+      "sensitivity": 22.808863812419567,
+      "absolute_column_upper_bound": 22.80886381241957,
+      "aligned_lower_bound": 22.808863812419574,
+      "nonnegative_strategy": true,
+      "mean_workload_error": 1.0251013508394662,
+      "objective": 533.3031023171717,
+      "sigma_sum_clip1": 13.690543164040836,
+      "mu": 1.6660305978457184,
+      "epsilon": 8.000000000000005,
+      "delta": 1e-05,
+      "covariance_sha256": "dcf3025b36f0819085bd89357e2827ad00a92a26f1b6c03699fe13a9839f8195",
+      "mean_gradient_noise_MSE_clip1": 0.0003766238319421887,
+      "workload_noise_MSE_clip1": 0.0001921357427159939
+    },
+    "/media/data/data/lt/dp-adam-correlated/exp16a/results/matrices/momentum_bandinvmf_T250.npz": {
+      "inverse_max_abs": 5.551115123125783e-17,
+      "factorization_max_abs": 1.2212453270876722e-15,
+      "sensitivity": 9.77206176721812,
+      "absolute_column_upper_bound": 9.772061767218121,
+      "aligned_lower_bound": 9.77206176721812,
+      "nonnegative_strategy": true,
+      "mean_workload_error": 0.216636150419061,
+      "objective": 20.687277328970552,
+      "sigma_sum_clip1": 5.865475568008178,
+      "mu": 1.6660305978457184,
+      "epsilon": 8.000000000000005,
+      "delta": 1e-05,
+      "covariance_sha256": "dac6a9fceaff91fc1fba31f99d5a5448e9ededd1717038890022ad1e29244e05",
+      "mean_gradient_noise_MSE_clip1": 6.612025064626214e-05,
+      "workload_noise_MSE_clip1": 7.453107580104765e-06
+    },
+    "/media/data/data/lt/dp-adam-correlated/exp16a/results/matrices/momentum_b2lt_T250.npz": {
+      "inverse_max_abs": 5.478096188822486e-17,
+      "factorization_max_abs": 9.992007221626409e-16,
+      "sensitivity": 9.100435781314381,
+      "absolute_column_upper_bound": 9.10043578131438,
+      "aligned_lower_bound": 9.100435781314381,
+      "nonnegative_strategy": true,
+      "mean_workload_error": 0.2500162405436254,
+      "objective": 20.705827860684803,
+      "sigma_sum_clip1": 5.462346125624471,
+      "mu": 1.6660305978457184,
+      "epsilon": 8.000000000000005,
+      "delta": 1e-05,
+      "covariance_sha256": "fa6905332d34cca01256ace1ffef5704baf64e49d9bb4fe1857dca3858ffc7bc",
+      "mean_gradient_noise_MSE_clip1": 5.5856505977803596e-05,
+      "workload_noise_MSE_clip1": 7.459790871788627e-06
+    },
+    "/media/data/data/lt/dp-adam-correlated/exp16a/results/matrices/momentum_dtc_T250.npz": {
+      "inverse_max_abs": 8.673617379884035e-19,
+      "factorization_max_abs": 1.1102230246251565e-15,
+      "sensitivity": 31.128954023912474,
+      "absolute_column_upper_bound": 31.128954023912478,
+      "aligned_lower_bound": 31.128954023912478,
+      "nonnegative_strategy": true,
+      "mean_workload_error": 0.057542005679084796,
+      "objective": 55.75888126861648,
+      "sigma_sum_clip1": 18.684503192296802,
+      "mu": 1.6660305978457184,
+      "epsilon": 8.000000000000005,
+      "delta": 1e-05,
+      "covariance_sha256": "e0ea899d993471e9e363543980b0d6b1f92bec1becd52a7003c2f6f78d7f16e5",
+      "mean_gradient_noise_MSE_clip1": 0.0006969685432597629,
+      "workload_noise_MSE_clip1": 2.0088527554049434e-05
+    },
+    "/media/data/data/lt/dp-adam-correlated/exp16a/results/matrices/momentum-bias_bandinvmf_T250.npz": {
+      "inverse_max_abs": 3.626741983046194e-17,
+      "factorization_max_abs": 5.3290705182007514e-14,
+      "sensitivity": 4.065608056299466,
+      "absolute_column_upper_bound": 4.0656080562994665,
+      "aligned_lower_bound": 4.0656080562994665,
+      "nonnegative_strategy": true,
+      "mean_workload_error": 421.9031764143052,
+      "objective": 6973.708848664383,
+      "sigma_sum_clip1": 2.440296151557211,
+      "mu": 1.6660305978457184,
+      "epsilon": 8.000000000000005,
+      "delta": 1e-05,
+      "covariance_sha256": "66654160f3df9479e10b1f5b26fbfeda062270c402e5932ad810fa2e95e16801",
+      "mean_gradient_noise_MSE_clip1": 8.127067243959834e-06,
+      "workload_noise_MSE_clip1": 0.002512452530843054
+    },
+    "/media/data/data/lt/dp-adam-correlated/exp16a/results/matrices/momentum-bias_b2lt_T250.npz": {
+      "inverse_max_abs": 3.8163916471489756e-17,
+      "factorization_max_abs": 4.263256414560601e-14,
+      "sensitivity": 3.834979407196671,
+      "absolute_column_upper_bound": 3.834979407196671,
+      "aligned_lower_bound": 3.834979407196671,
+      "nonnegative_strategy": true,
+      "mean_workload_error": 459.9265260921363,
+      "objective": 6764.170258976721,
+      "sigma_sum_clip1": 2.301866131483743,
+      "mu": 1.6660305978457184,
+      "epsilon": 8.000000000000005,
+      "delta": 1e-05,
+      "covariance_sha256": "f9f21b677729d5327f75a4a183bc7991fc21d72591ae0ba247b8f7b0ed5b8ace",
+      "mean_gradient_noise_MSE_clip1": 7.1404708512418905e-06,
+      "workload_noise_MSE_clip1": 0.0024369610282015466
+    },
+    "/media/data/data/lt/dp-adam-correlated/exp16a/results/matrices/momentum-bias_dtc_T250.npz": {
+      "inverse_max_abs": 0.0,
+      "factorization_max_abs": 0.0,
+      "sensitivity": 2.23606797749979,
+      "absolute_column_upper_bound": 2.23606797749979,
+      "aligned_lower_bound": 2.23606797749979,
+      "nonnegative_strategy": true,
+      "mean_workload_error": 13699.591575882185,
+      "objective": 68497.95787941094,
+      "sigma_sum_clip1": 1.3421530075084847,
+      "mu": 1.6660305978457184,
+      "epsilon": 8.000000000000007,
+      "delta": 1e-05,
+      "covariance_sha256": "69f86f279a48b2f2a368c910d6ecb56cf3162d431a40f1013359c49bcb8826bb",
+      "mean_gradient_noise_MSE_clip1": 1.8013746955640708e-06,
+      "workload_noise_MSE_clip1": 0.024678097604356873
+    },
+    "/media/data/data/lt/dp-adam-correlated/exp16a/results/matrices/identity_iid_T310.npz": {
+      "inverse_max_abs": 0.0,
+      "factorization_max_abs": 0.0,
+      "sensitivity": 2.23606797749979,
+      "absolute_column_upper_bound": 2.23606797749979,
+      "aligned_lower_bound": 2.23606797749979,
+      "nonnegative_strategy": true,
+      "mean_workload_error": 1.0,
+      "objective": 5.000000000000001,
+      "sigma_sum_clip1": 1.3421530075084847,
+      "mu": 1.6660305978457184,
+      "epsilon": 8.000000000000007,
+      "delta": 1e-05,
+      "covariance_sha256": "633f0eb4ff6f0f3b20a29f58001d0126ac449e9bf730bcaa730987a538f582cd",
+      "mean_gradient_noise_MSE_clip1": 1.8013746955640712e-06,
+      "workload_noise_MSE_clip1": 1.8013746955640704e-06
+    },
+    "/media/data/data/lt/dp-adam-correlated/exp16a/results/matrices/sgd_bandinvmf_T310.npz": {
+      "inverse_max_abs": 3.378150377764965e-17,
+      "factorization_max_abs": 8.881784197001252e-16,
+      "sensitivity": 4.237566660747396,
+      "absolute_column_upper_bound": 4.237566660747395,
+      "aligned_lower_bound": 4.237566660747394,
+      "nonnegative_strategy": true,
+      "mean_workload_error": 2.8259376388292865,
+      "objective": 50.7452808055424,
+      "sigma_sum_clip1": 2.5435107051616184,
+      "mu": 1.6660305978457184,
+      "epsilon": 8.000000000000005,
+      "delta": 1e-05,
+      "covariance_sha256": "d2149fbe106d49fba57389d24beea904ba4722b0124bd28e468bec0e377c0210",
+      "mean_gradient_noise_MSE_clip1": 8.586167621316748e-06,
+      "workload_noise_MSE_clip1": 1.828225295247944e-05
+    },
+    "/media/data/data/lt/dp-adam-correlated/exp16a/results/matrices/sgd_b2lt_T310.npz": {
+      "inverse_max_abs": 4.163336342344337e-17,
+      "factorization_max_abs": 1.1102230246251565e-15,
+      "sensitivity": 3.8740809431498557,
+      "absolute_column_upper_bound": 3.8740809431498566,
+      "aligned_lower_bound": 3.874080943149856,
+      "nonnegative_strategy": true,
+      "mean_workload_error": 3.1017689520733334,
+      "objective": 46.552909100410346,
+      "sigma_sum_clip1": 2.325336010130477,
+      "mu": 1.6660305978457184,
+      "epsilon": 8.000000000000005,
+      "delta": 1e-05,
+      "covariance_sha256": "eec4bd11c50c10d4fb2c3d84a76cced844db24d161631191f2fabe823783eb32",
+      "mean_gradient_noise_MSE_clip1": 6.951214827150857e-06,
+      "workload_noise_MSE_clip1": 1.6771846491674708e-05
+    },
+    "/media/data/data/lt/dp-adam-correlated/exp16a/results/matrices/sgd_dtc_T310.npz": {
+      "inverse_max_abs": 8.673617379884035e-19,
+      "factorization_max_abs": 1.7763568394002505e-15,
+      "sensitivity": 27.66263608597398,
+      "absolute_column_upper_bound": 27.662636085973983,
+      "aligned_lower_bound": 27.662636085973983,
+      "nonnegative_strategy": true,
+      "mean_workload_error": 1.0146739628369394,
+      "objective": 776.4502661275515,
+      "sigma_sum_clip1": 16.603918392461395,
+      "mu": 1.6660305978457184,
+      "epsilon": 8.000000000000005,
+      "delta": 1e-05,
+      "covariance_sha256": "786f1271b6630d0d3c600d8abd02079b8be03cf012c4dc36a3b429a77d3e6f4f",
+      "mean_gradient_noise_MSE_clip1": 0.0005214120364584819,
+      "workload_noise_MSE_clip1": 0.0002797355723532319
+    },
+    "/media/data/data/lt/dp-adam-correlated/exp16a/results/matrices/momentum_bandinvmf_T310.npz": {
+      "inverse_max_abs": 5.5299813991704303e-17,
+      "factorization_max_abs": 1.3322676295501878e-15,
+      "sensitivity": 9.947142475969436,
+      "absolute_column_upper_bound": 9.947142475969434,
+      "aligned_lower_bound": 9.947142475969434,
+      "nonnegative_strategy": true,
+      "mean_workload_error": 0.22282309224404773,
+      "objective": 22.04737423476175,
+      "sigma_sum_clip1": 5.970564099381916,
+      "mu": 1.6660305978457184,
+      "epsilon": 8.000000000000005,
+      "delta": 1e-05,
+      "covariance_sha256": "a840ef22a5a18940cfb4fcc4d959fde529f7e64c2e5c94ac169324ae1050455b",
+      "mean_gradient_noise_MSE_clip1": 6.820905839314111e-05,
+      "workload_noise_MSE_clip1": 7.943116410026218e-06
+    },
+    "/media/data/data/lt/dp-adam-correlated/exp16a/results/matrices/momentum_b2lt_T310.npz": {
+      "inverse_max_abs": 5.046882849678731e-17,
+      "factorization_max_abs": 1.5543122344752192e-15,
+      "sensitivity": 9.531557559539234,
+      "absolute_column_upper_bound": 9.531557559539232,
+      "aligned_lower_bound": 9.531557559539234,
+      "nonnegative_strategy": true,
+      "mean_workload_error": 0.24273120261775927,
+      "objective": 22.05227285049118,
+      "sigma_sum_clip1": 5.721117950573136,
+      "mu": 1.6660305978457184,
+      "epsilon": 8.000000000000007,
+      "delta": 1e-05,
+      "covariance_sha256": "c650264838f86c5c892545799f828a2fd46fb899d0090d34c1ad394aa9965c5d",
+      "mean_gradient_noise_MSE_clip1": 6.0550984739949985e-05,
+      "workload_noise_MSE_clip1": 7.944881258509874e-06
+    },
+    "/media/data/data/lt/dp-adam-correlated/exp16a/results/matrices/momentum_dtc_T310.npz": {
+      "inverse_max_abs": 6.505213034913027e-19,
+      "factorization_max_abs": 1.6653345369377348e-15,
+      "sensitivity": 34.61095884786373,
+      "absolute_column_upper_bound": 34.610958847863735,
+      "aligned_lower_bound": 34.61095884786373,
+      "nonnegative_strategy": true,
+      "mean_workload_error": 0.056654238035370494,
+      "objective": 67.86715828053332,
+      "sigma_sum_clip1": 20.774503717169335,
+      "mu": 1.6660305978457184,
+      "epsilon": 8.000000000000005,
+      "delta": 1e-05,
+      "covariance_sha256": "92d0e8af4261e3eeb01021f4e17bdbdd42ae390cd3b71df77ca36611f51273ed",
+      "mean_gradient_noise_MSE_clip1": 0.0008617786392533998,
+      "workload_noise_MSE_clip1": 2.4450836317278855e-05
+    },
+    "/media/data/data/lt/dp-adam-correlated/exp16a/results/matrices/momentum-bias_bandinvmf_T310.npz": {
+      "inverse_max_abs": 4.003655369935048e-17,
+      "factorization_max_abs": 4.263256414560601e-14,
+      "sensitivity": 4.184023059982905,
+      "absolute_column_upper_bound": 4.184023059982903,
+      "aligned_lower_bound": 4.184023059982903,
+      "nonnegative_strategy": true,
+      "mean_workload_error": 417.32652052948254,
+      "objective": 7305.7385033951305,
+      "sigma_sum_clip1": 2.511372279352557,
+      "mu": 1.6660305978457184,
+      "epsilon": 8.000000000000005,
+      "delta": 1e-05,
+      "covariance_sha256": "74965568e36ac7fc1347e4c0ddb4ed2c2a671cdabccbf3cd21aeb0a504eb7bf1",
+      "mean_gradient_noise_MSE_clip1": 8.591890069652616e-06,
+      "workload_noise_MSE_clip1": 0.0026320744944848223
+    },
+    "/media/data/data/lt/dp-adam-correlated/exp16a/results/matrices/momentum-bias_b2lt_T310.npz": {
+      "inverse_max_abs": 2.7755575615628914e-17,
+      "factorization_max_abs": 5.684341886080802e-14,
+      "sensitivity": 3.873884598946475,
+      "absolute_column_upper_bound": 3.873884598946474,
+      "aligned_lower_bound": 3.873884598946474,
+      "nonnegative_strategy": true,
+      "mean_workload_error": 463.722570688334,
+      "objective": 6959.076218428171,
+      "sigma_sum_clip1": 2.3252181586314498,
+      "mu": 1.6660305978457184,
+      "epsilon": 8.000000000000007,
+      "delta": 1e-05,
+      "covariance_sha256": "7804d394f26ba2b8cf26c35e87ad71aa2d23cd71d30da410fcf1bbd6da760f19",
+      "mean_gradient_noise_MSE_clip1": 7.283137910730109e-06,
+      "workload_noise_MSE_clip1": 0.0025071807608756424
+    },
+    "/media/data/data/lt/dp-adam-correlated/exp16a/results/matrices/momentum-bias_dtc_T310.npz": {
+      "inverse_max_abs": 0.0,
+      "factorization_max_abs": 0.0,
+      "sensitivity": 2.23606797749979,
+      "absolute_column_upper_bound": 2.23606797749979,
+      "aligned_lower_bound": 2.23606797749979,
+      "nonnegative_strategy": true,
+      "mean_workload_error": 16714.218616160815,
+      "objective": 83571.0930808041,
+      "sigma_sum_clip1": 1.3421530075084847,
+      "mu": 1.6660305978457184,
+      "epsilon": 8.000000000000007,
+      "delta": 1e-05,
+      "covariance_sha256": "633f0eb4ff6f0f3b20a29f58001d0126ac449e9bf730bcaa730987a538f582cd",
+      "mean_gradient_noise_MSE_clip1": 1.8013746955640712e-06,
+      "workload_noise_MSE_clip1": 0.030108570471278007
+    }
+  },
+  "final_freeze_sha256": "6188e3113ffb39e256921aa1a91f4a87a1327536f48f3ba8a3f2dc9525a2911a",
+  "read_only_snapshot_verified": true
+}

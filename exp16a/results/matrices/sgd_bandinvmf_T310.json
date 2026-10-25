@@ -1,0 +1,177 @@
+{
+  "optimizer": "L-BFGS; memory=20; feasible Armijo backtracking",
+  "maxiter": 1000,
+  "iterations": 20,
+  "success": true,
+  "message": "relative objective and gradient tolerance",
+  "lambda_barrier": 0.0,
+  "initial_parameters": [
+    -0.5,
+    -0.125,
+    -0.0625
+  ],
+  "selected_parameters": [
+    -0.46553336780866394,
+    -0.13113990181505938,
+    -0.308216991103585
+  ],
+  "selected": "iterate",
+  "initial_error": 132.08331429563893,
+  "selected_error": 50.74528080554238,
+  "iid_error": 777.5,
+  "trace": [
+    {
+      "iteration": 0,
+      "error": 132.08331429563893,
+      "barrier": 0.0,
+      "objective": 132.08331429563893
+    },
+    {
+      "iteration": 1,
+      "error": 56.59587990464681,
+      "barrier": 0.0,
+      "objective": 56.59587990464681
+    },
+    {
+      "iteration": 2,
+      "error": 52.252392599263615,
+      "barrier": 0.0,
+      "objective": 52.252392599263615
+    },
+    {
+      "iteration": 3,
+      "error": 52.20718663093244,
+      "barrier": 0.0,
+      "objective": 52.20718663093244
+    },
+    {
+      "iteration": 4,
+      "error": 52.175267533471064,
+      "barrier": 0.0,
+      "objective": 52.175267533471064
+    },
+    {
+      "iteration": 5,
+      "error": 52.16556239610616,
+      "barrier": 0.0,
+      "objective": 52.16556239610616
+    },
+    {
+      "iteration": 6,
+      "error": 51.912915762677905,
+      "barrier": 0.0,
+      "objective": 51.912915762677905
+    },
+    {
+      "iteration": 7,
+      "error": 51.59826544161211,
+      "barrier": 0.0,
+      "objective": 51.59826544161211
+    },
+    {
+      "iteration": 8,
+      "error": 51.166488550138695,
+      "barrier": 0.0,
+      "objective": 51.166488550138695
+    },
+    {
+      "iteration": 9,
+      "error": 50.842930256481395,
+      "barrier": 0.0,
+      "objective": 50.842930256481395
+    },
+    {
+      "iteration": 10,
+      "error": 50.76709420040463,
+      "barrier": 0.0,
+      "objective": 50.76709420040463
+    },
+    {
+      "iteration": 11,
+      "error": 50.764718859895936,
+      "barrier": 0.0,
+      "objective": 50.764718859895936
+    },
+    {
+      "iteration": 12,
+      "error": 50.76454943779765,
+      "barrier": 0.0,
+      "objective": 50.76454943779765
+    },
+    {
+      "iteration": 13,
+      "error": 50.76418889415811,
+      "barrier": 0.0,
+      "objective": 50.76418889415811
+    },
+    {
+      "iteration": 14,
+      "error": 50.751885497370175,
+      "barrier": 0.0,
+      "objective": 50.751885497370175
+    },
+    {
+      "iteration": 15,
+      "error": 50.74570829857017,
+      "barrier": 0.0,
+      "objective": 50.74570829857017
+    },
+    {
+      "iteration": 16,
+      "error": 50.74528497319353,
+      "barrier": 0.0,
+      "objective": 50.74528497319353
+    },
+    {
+      "iteration": 17,
+      "error": 50.74528086924841,
+      "barrier": 0.0,
+      "objective": 50.74528086924841
+    },
+    {
+      "iteration": 18,
+      "error": 50.74528080572725,
+      "barrier": 0.0,
+      "objective": 50.74528080572725
+    },
+    {
+      "iteration": 19,
+      "error": 50.74528080554243,
+      "barrier": 0.0,
+      "objective": 50.74528080554243
+    },
+    {
+      "iteration": 20,
+      "error": 50.74528080554238,
+      "barrier": 0.0,
+      "objective": 50.74528080554238
+    }
+  ],
+  "bandwidth": 4,
+  "P": null,
+  "Q": null,
+  "theta": null,
+  "omega": null,
+  "audit": {
+    "inverse_max_abs": 3.378150377764965e-17,
+    "factorization_max_abs": 8.881784197001252e-16,
+    "sensitivity": 4.237566660747396,
+    "absolute_column_upper_bound": 4.237566660747395,
+    "aligned_lower_bound": 4.237566660747394,
+    "nonnegative_strategy": true,
+    "mean_workload_error": 2.8259376388292865,
+    "objective": 50.7452808055424,
+    "sigma_sum_clip1": 2.5435107051616184,
+    "mu": 1.6660305978457184,
+    "epsilon": 8.000000000000005,
+    "delta": 1e-05,
+    "covariance_sha256": "d2149fbe106d49fba57389d24beea904ba4722b0124bd28e468bec0e377c0210",
+    "mean_gradient_noise_MSE_clip1": 8.586167621316748e-06,
+    "workload_noise_MSE_clip1": 1.828225295247944e-05
+  },
+  "seconds": 0.22333726100623608,
+  "workload": "sgd",
+  "mechanism": "bandinvmf",
+  "total_steps": 310,
+  "sha256": "231e70a8d8c310ec8f047e4bb7de3e5f5ea36fbcbd153ba399553f79c2c9254f"
+}

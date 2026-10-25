@@ -1,0 +1,93 @@
+{
+  "task": "cv",
+  "method": "adam-iid",
+  "lr": 0.0003,
+  "clip": 10.0,
+  "eps_scale": null,
+  "seed": 20261099,
+  "stage": "smoke",
+  "smoke_phase": "search",
+  "replicate": 0,
+  "trial_id": "737cca55723cf128f637",
+  "status": "completed",
+  "finite": true,
+  "optimizer_steps": 2,
+  "noise_draws": 2,
+  "physical_batches": 8,
+  "completed_epochs": 0,
+  "planned_total_steps": 225,
+  "accuracy": 0.015625,
+  "validation_loss": 5.23783016204834,
+  "evaluation_scope": "64 internal validation examples, smoke only",
+  "official_evaluation_used": false,
+  "epochs": [
+    {
+      "epoch": 1,
+      "step": 2,
+      "train_loss": 5.2757066650390625,
+      "clip_fraction": 1.0,
+      "epsilon": 3.1232925162148586,
+      "accuracy": 0.015625,
+      "validation_loss": 5.23783016204834,
+      "validation_examples": 64
+    }
+  ],
+  "calibration": {
+    "target_mu": 1.6660305978457184,
+    "sensitivity": 2.23606797749979,
+    "innovation_std_sum": 13.421530075084847,
+    "adjacency": "add_remove_zero_out",
+    "k": 5,
+    "b_participation": 45,
+    "sampling_amplification": false,
+    "private": true,
+    "verified_full_epsilon": 8.000000000000005,
+    "delta": 1e-05,
+    "target_epsilon": 8.0,
+    "clip_space": "original"
+  },
+  "mechanism": {
+    "source": "exp16a/results/matrices/identity_iid_T225.npz",
+    "matrix_sha256": "eed777f586217de2da6db1b98ff877b2a79ca773d51792531ea9a2af1cb5437d"
+  },
+  "config_sha256": "41ba79bf50b6e618db103f7b1cb9097b4ca9dcb9125aaf42ae8092d50042b534",
+  "code_sha256": {
+    "exp16a/__init__.py": "c8c8d3cfef18fbc8fab7c7ff819b26688d4810d29377885dc86dc41e7cc350cf",
+    "exp16a/config.py": "ab80dffe165adecc89da26a72022dda88e8bd4b838e3fe1a3d71de5a16752937",
+    "exp16a/train.py": "ad7157984a1b852dfa2625db6af0b466b226e1566a709d7ffa7bedf6d3b66fe8",
+    "exp16a/data.py": "3efcfbf8dfab2179170a37aeea37ee998d694bb5254d14b40435eb08647d946e",
+    "exp16a/cv_model.py": "de7b23603dc94b1f5b6000a85d8f8b4485a5a81b1e9fcfdabf96daa21cf4d38c",
+    "exp16a/nlp_model.py": "6afc598b6be4c3b93d76e390822c885537866e6c0df863282e1dc240e9b0d42d",
+    "exp16a/optimizer.py": "86a04ea3aeadbffc82046c9fd0c5fccefa2f2d3c0482185cf2c861bb63e93d5f",
+    "exp16a/clipping.py": "a17abb8a2a88729e662185578c915750d2c506e31316cde415b6f8ccc5e17999",
+    "exp16a/privacy.py": "6e37e95ccb496245174249f30f9c3237fb809b30a031a5092e462debf2d9ac5a",
+    "exp16a/noise.py": "e689e3a04deae96832678a1c8abf4942ae148af50b536f8387fe9a437a09fb45",
+    "exp16a/matrices.py": "907e44b2107308d806d7c10b8c6cd773d6341de5fd2b5a80e19dbd75e0cd03d3",
+    "exp16a/support.py": "33ef0183a8c6d4dfecfb70e6598cf3a46938b6806461e41ab65096f366972525"
+  },
+  "git_commit": "73f6caa258f1a3a1a8da22debc4fd04c11764497",
+  "file_sha256": {
+    "config.json": "d9cf652197b341cc58bc7e48e4de04ed001ead7f3ee5ddea51344c362fc05504",
+    "checkpoint.pt": "e80e6d9728641e023142118144fa4c1cf0b65cbf4f42c42818bfedc50521a602",
+    "train_order.npy": "cd16d543ed26e95d6441e019f1adf0519faffbb31920993b32fe10be0d915ba7",
+    "metrics.csv": "abb872445f88250bd9d8171276b3e683a06963dce86df199ef108fbab37fd8fe",
+    "diagnostics.jsonl": "641eadbce928b6e25d35494fdf8d09be8b251610753e665a44c48a010fc697d7",
+    "matrices.npz": "5c851f2e5dcd57991f0dceb98bacc638e11f72599a375a85badccf9ad44cc937"
+  },
+  "initialization_sha256": "54527a949f5fcf6c5204bf65ad26fe8b292a20bff924457a9e8ff1d0ea87945d",
+  "classifier_initialization_sha256": "fed12a4bec8c350990b091fe60e62a67fd0ae9ee803b793b7f99c029527071d7",
+  "train_order_sha256": "99181700676ee6fc05393daf6411c0ed0c1d48f0efa662585bfec8ae0fbba824",
+  "rng_trace": [
+    "b6fa1f306db5795fad54a6f45338b4ce75e71dabcf4b9b413129ec931df841bb"
+  ],
+  "noise_rng_start": "707de08bb577c3fc864df9f0363c9e0aa7e45c6f0a9cbf7f53e7c3e9df6ce2aa",
+  "noise_rng_end": "d2d69dba2c060b424f6c2016e0e1dbf88df0d3ef7b0b976b8cdaf170dcc03401",
+  "actual_epsilon": 3.1232925162148586,
+  "seconds": 19.48879334900994,
+  "train_seconds": 4.959229406900704,
+  "cpu_peak_rss_bytes": 3495624704,
+  "peak_allocated_bytes": 8331626496,
+  "peak_reserved_bytes": 8734638080,
+  "device": "NVIDIA GeForce RTX 3080 Ti",
+  "physical_gpu": 2
+}

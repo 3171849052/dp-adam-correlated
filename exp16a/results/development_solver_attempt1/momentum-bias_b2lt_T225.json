@@ -1,0 +1,95 @@
+{
+  "optimizer": "L-BFGS-B (unbounded L-BFGS with feasibility rejection)",
+  "maxiter": 1000,
+  "iterations": 1,
+  "success": true,
+  "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+  "lambda_barrier": 0.20067758322562873,
+  "initial_parameters": [
+    0.16666666666666666,
+    0.3333333333333333,
+    0.5,
+    0.6666666666666666,
+    0.8333333333333334,
+    -0.08333333333333334,
+    -0.06666666666666668,
+    -0.05,
+    -0.03333333333333334,
+    -0.016666666666666663
+  ],
+  "selected_parameters": [
+    0.16666666666666666,
+    0.3333333333333333,
+    0.5,
+    0.6666666666666666,
+    0.8333333333333334,
+    -0.08333333333333334,
+    -0.06666666666666668,
+    -0.05,
+    -0.03333333333333334,
+    -0.016666666666666663
+  ],
+  "selected": "iterate",
+  "initial_error": 20067.75832256287,
+  "selected_error": 20067.75832256287,
+  "iid_error": 62205.972856596854,
+  "trace": [
+    {
+      "iteration": 0,
+      "error": 20067.75832256287,
+      "barrier": 26.799430997284695,
+      "objective": 20073.136367607225
+    },
+    {
+      "iteration": 1,
+      "error": 20067.75832256287,
+      "barrier": 26.799430997284695,
+      "objective": 20073.136367607225
+    },
+    {
+      "iteration": 2,
+      "error": 20067.75832256287,
+      "barrier": 26.799430997284695,
+      "objective": 20073.136367607225
+    }
+  ],
+  "bandwidth": 45,
+  "P": 45,
+  "Q": 5,
+  "theta": [
+    0.16666666666666666,
+    0.3333333333333333,
+    0.5,
+    0.6666666666666666,
+    0.8333333333333334
+  ],
+  "omega": [
+    -0.08333333333333334,
+    -0.06666666666666668,
+    -0.05,
+    -0.03333333333333334,
+    -0.016666666666666663
+  ],
+  "audit": {
+    "inverse_max_abs": 1.3877787807814457e-17,
+    "factorization_max_abs": 4.973799150320701e-14,
+    "sensitivity": 2.3677777300120564,
+    "absolute_column_upper_bound": 2.3677777300120555,
+    "aligned_lower_bound": 2.367777730012056,
+    "nonnegative_strategy": true,
+    "mean_workload_error": 3579.4557596841264,
+    "objective": 20067.758322562877,
+    "sigma_sum_clip1": 1.421209030058476,
+    "mu": 1.6660305978457184,
+    "epsilon": 8.000000000000005,
+    "delta": 1e-05,
+    "covariance_sha256": "68eeee4b79f3d7464bd05553a076625d5e0b480727c0c108e50187d64082facb",
+    "mean_gradient_noise_MSE_clip1": 2.172204859978329e-06,
+    "workload_noise_MSE_clip1": 0.007229910407792009
+  },
+  "seconds": 0.03343731304630637,
+  "workload": "momentum-bias",
+  "mechanism": "b2lt",
+  "total_steps": 225,
+  "sha256": "dd6a880a2bd813058af977fe19ccae0128aa0a7feb0f30c167462d322bd5e99d"
+}

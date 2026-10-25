@@ -1,0 +1,8 @@
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+{"epoch": 1, "step": 45, "train_loss": 4.559484290907118, "clip_fraction": 0.9999777777777777, "epsilon": 1.3996596352855284, "accuracy": 0.075, "validation_loss": 4.205836157226562, "validation_examples": 5000}
+{"epoch": 2, "step": 90, "train_loss": 3.946136762152778, "clip_fraction": 1.0, "epsilon": 2.9963391107329778, "accuracy": 0.2044, "validation_loss": 3.4362752685546876, "validation_examples": 5000}
+{"epoch": 3, "step": 135, "train_loss": 3.306417258029514, "clip_fraction": 0.9992666666666666, "epsilon": 4.73302555985092, "accuracy": 0.3312, "validation_loss": 2.7647760986328125, "validation_examples": 5000}
+{"epoch": 4, "step": 180, "train_loss": 2.8187190171983505, "clip_fraction": 0.9897555555555556, "epsilon": 6.4460652677324, "accuracy": 0.4382, "validation_loss": 2.291097619628906, "validation_examples": 5000}
+{"epoch": 5, "step": 225, "train_loss": 2.4832140462239582, "clip_fraction": 0.9673777777777778, "epsilon": 8.000000000000005, "accuracy": 0.5048, "validation_loss": 1.9606669067382811, "validation_examples": 5000}
