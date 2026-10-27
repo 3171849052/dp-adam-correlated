@@ -2,3 +2,7 @@
   entry = pickle.load(f, encoding="latin1")
 sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
 {"epoch": 1, "step": 45, "train_loss": 3.4327038818359377, "clip_fraction": 1.0, "epsilon": 2.96616890502308, "accuracy": 0.5102, "validation_loss": 1.8660566955566407, "validation_examples": 5000}
+{"epoch": 2, "step": 90, "train_loss": 1.9267354404025607, "clip_fraction": 0.9962222222222222, "epsilon": 4.553747164268474, "accuracy": 0.6676, "validation_loss": 1.176069158935547, "validation_examples": 5000}
+{"epoch": 3, "step": 135, "train_loss": 1.5923276902940537, "clip_fraction": 0.9648, "epsilon": 5.841281487477978, "accuracy": 0.7114, "validation_loss": 0.9814134338378906, "validation_examples": 5000}
+{"epoch": 4, "step": 180, "train_loss": 1.5021616997612848, "clip_fraction": 0.9123555555555556, "epsilon": 6.9708762256583645, "accuracy": 0.7372, "validation_loss": 0.9253364501953125, "validation_examples": 5000}
+{"epoch": 5, "step": 225, "train_loss": 1.459479010687934, "clip_fraction": 0.8700888888888889, "epsilon": 8.000000000000005, "accuracy": 0.7626, "validation_loss": 0.8894932983398437, "validation_examples": 5000}

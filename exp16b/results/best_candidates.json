@@ -32,5 +32,39 @@
       "eps_scale": "upper"
     },
     "provisional": true
+  },
+  "nlp/stpex-mf-momentum-bias-bandinvmf": {
+    "candidate": {
+      "trial_id": "10a2792f942eade83b14",
+      "lr": 0.15,
+      "clip": 20.0,
+      "eps_scale": 0.001,
+      "status": "completed",
+      "accuracy": 0.8429613011777902,
+      "validation_loss": 1.3278005260867614
+    },
+    "boundary": {
+      "lr": "interior",
+      "clip": "interior",
+      "eps_scale": "interior"
+    },
+    "provisional": true
+  },
+  "nlp/stpex-mf-momentum-bias-b2lt": {
+    "candidate": {
+      "trial_id": "acfbaadd6204d0f35034",
+      "lr": 0.15,
+      "clip": 20.0,
+      "eps_scale": 0.001,
+      "status": "completed",
+      "accuracy": 0.8440830061693775,
+      "validation_loss": 1.3233135649145686
+    },
+    "boundary": {
+      "lr": "interior",
+      "clip": "interior",
+      "eps_scale": "interior"
+    },
+    "provisional": true
   }
 }
