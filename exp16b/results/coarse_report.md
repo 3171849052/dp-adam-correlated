@@ -1,6 +1,6 @@
 # exp16b 粗搜索进度与分析
 
-{'completed': 37, 'pending': 71}
+{'completed': 37, 'running': 2, 'pending': 69}
 
 仅单种子内部验证；不冻结正式最优配置，不生成细网格、复核或正式训练。
 

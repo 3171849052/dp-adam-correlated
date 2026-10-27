@@ -21,10 +21,10 @@ Accuracy values are fractions; confidence intervals use Student-t across ten see
 
 ## Audit and interpretation
 
-{"coarse": 144, "fine": 48, "review": 16, "final": 40}
+{"coarse": 144, "fine": 48, "review": 16, "final": 40, "ablation": 20}
 Opacus RDP per run only. Validation is assumed public; tuning, repeated runs, raw training diagnostics and checkpoints have no joint epsilon=8 release guarantee.
 LC is conditional on fixed preceding states. HC fourth-order bias reasoning applies to fixed clipped-gradient paths with fixed positive smoothing, not adaptive training. Scaling lambda2 with nu2 is not a uniform fourth-order guarantee near zero.
 Official test was opened only after all four final configs were frozen. Historical experiments have used this test set; this is not a newly blinded benchmark.
 Detailed validation repetition counts: final_freeze.json. Per-step losses, corrections, cosine and norm diagnostics: training_curves.csv. Runtime, memory and cross entropy: runs.csv/utility.csv.
 Calibration and environment: protocol_freeze.json. Monte Carlo bias/variance/MSE and measured slopes: monte_carlo.json.
-Ablations: pending; no ablation conclusions yet.
+Ablations: completed; see ablations.csv (20 additional trainings, excluded from main rankings).
