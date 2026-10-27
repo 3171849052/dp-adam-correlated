@@ -1,0 +1,114 @@
+{
+  "timestamp": "2026-10-26T18:42:12.564562+08:00",
+  "reason": "User requested termination of GPU 0 experiment; prepare restart, do not restart now",
+  "cwd": "/media/data/data/lt/dp-adam-correlated",
+  "scheduler_pid": 862590,
+  "process_group": 862590,
+  "argv": [
+    "/home/longt29/miniconda3/envs/curve/bin/python",
+    "-B",
+    "-m",
+    "exp16b.run_locked",
+    "--lock-fd",
+    "3"
+  ],
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "0",
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2",
+    "HF_HOME": "/media/data/data/lt/dp-adam-correlated/exp16b/runtime/hf_home",
+    "HF_DATASETS_CACHE": "/media/data/data/lt/dp-adam-correlated/exp16b/runtime/hf_datasets_cache",
+    "TORCH_HOME": "/media/data/data/lt/dp-adam-correlated/exp16b/runtime/torch_home",
+    "TMPDIR": "/media/data/data/lt/dp-adam-correlated/exp16b/runtime/tmpdir",
+    "XDG_CACHE_HOME": "/media/data/data/lt/dp-adam-correlated/exp16b/runtime/xdg_cache_home",
+    "MPLCONFIGDIR": "/media/data/data/lt/dp-adam-correlated/exp16b/runtime/mplconfigdir",
+    "CUDA_CACHE_PATH": "/media/data/data/lt/dp-adam-correlated/exp16b/runtime/cuda_cache_path",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "HF_DATASETS_OFFLINE": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "TOKENIZERS_PARALLELISM": "false",
+    "JAX_PLATFORMS": "cpu",
+    "JAX_ENABLE_X64": "true"
+  },
+  "processes": [
+    {
+      "pid": 862590,
+      "argv": [
+        "/home/longt29/miniconda3/envs/curve/bin/python",
+        "-B",
+        "-m",
+        "exp16b.run_locked",
+        "--lock-fd",
+        "3"
+      ],
+      "starttime": "85062786"
+    },
+    {
+      "pid": 2602899,
+      "argv": [
+        "/home/longt29/miniconda3/envs/curve/bin/python",
+        "-B",
+        "-m",
+        "exp16b.train",
+        "--trial-json",
+        "{\"clip\": 1.0, \"eps_scale\": 0.1, \"lr\": 1.5, \"method\": \"stpex-mf-momentum-bias-b2lt\", \"replicate\": 0, \"seed\": 20261101, \"smoke_phase\": \"search\", \"stage\": \"search\", \"task\": \"cv\"}"
+      ],
+      "starttime": "87358792"
+    },
+    {
+      "pid": 2602965,
+      "argv": [
+        "/home/longt29/miniconda3/envs/curve/bin/python",
+        "-B",
+        "-c",
+        "from multiprocessing.resource_tracker import main;main(50)"
+      ],
+      "starttime": "87359457"
+    },
+    {
+      "pid": 2602966,
+      "argv": [
+        "/home/longt29/miniconda3/envs/curve/bin/python",
+        "-B",
+        "-c",
+        "from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=51, pipe_handle=55)",
+        "--multiprocessing-fork"
+      ],
+      "starttime": "87359491"
+    },
+    {
+      "pid": 2603013,
+      "argv": [
+        "/home/longt29/miniconda3/envs/curve/bin/python",
+        "-B",
+        "-c",
+        "from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=51, pipe_handle=59)",
+        "--multiprocessing-fork"
+      ],
+      "starttime": "87359988"
+    }
+  ],
+  "other_gpu_pids": [
+    2599780,
+    2600846,
+    2596883
+  ],
+  "terminated_pids": [
+    862590,
+    2602899,
+    2602965,
+    2602966,
+    2603013
+  ],
+  "stopped_at": "2026-10-26T18:42:12.815675+08:00",
+  "interrupted_trial_id": "359aaae1240908c02cb6",
+  "interrupted_trial_archive": "/media/data/data/lt/dp-adam-correlated/exp16b/runtime/stopped_gpu0_20261026_184212/interrupted_trials/cv/359aaae1240908c02cb6",
+  "interrupted_last_recorded_step": 28,
+  "interrupted_trial_resume": "rerun from step 0; no step-level checkpoint exists",
+  "restart_script": "/media/data/data/lt/dp-adam-correlated/exp16b/resume_gpu0.sh",
+  "restart_command": "bash exp16b/resume_gpu0.sh",
+  "restart_check": "bash exp16b/resume_gpu0.sh --check",
+  "restart_launched": false
+}

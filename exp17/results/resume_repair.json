@@ -1,0 +1,19 @@
+{
+  "adapters": {
+    "exp17/runtime/resume_gpus_2_3.py": "8b0cd697cdb1896cc34a546a093917ebb160c9fee24793cc1854939134121ff3",
+    "exp17/runtime/train_resume_compat.py": "1af98eb991e86fe89cccdc63a17a56313a5d404530c95bb61549a5c94f51a593"
+  },
+  "checkpoint_sha256": "38310c5fdf810c637e7548c9f185ebbc79718df9dd93e7fafe5ef55ba4ebc36b",
+  "failure_archive": "exp17/runtime/revisions/metadata_resume_failure",
+  "freeze_sha256": "7135de4f854e4d66e276b57ce849e19e5d4bf05a3756d4df54f49c2c13e3656f",
+  "reason": "JSON list versus runtime tuple in mean/std; representation-only compatibility adapter",
+  "resume_step": 150,
+  "trial": "search_hc_2996d91608a62e6c",
+  "validation": {
+    "checkpoint_config_identity_matches": true,
+    "frozen_source_unchanged": true,
+    "initialization_matches": true,
+    "metadata_normalized_matches": true,
+    "real_metadata_change_rejected": true
+  }
+}

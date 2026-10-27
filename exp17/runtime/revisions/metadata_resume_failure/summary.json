@@ -1,0 +1,14 @@
+{
+  "config": {
+    "lr": 1e-05,
+    "method": "hc",
+    "r": 0.001,
+    "round": "coarse",
+    "seed": 20261101,
+    "stage": "search"
+  },
+  "error": "RuntimeError('Checkpoint config/input mismatch')",
+  "identity": "7135de4f854e4d66e276b57ce849e19e5d4bf05a3756d4df54f49c2c13e3656f",
+  "status": "failed",
+  "traceback": "Traceback (most recent call last):\n  File \"/media/data/data/lt/dp-adam-correlated/exp17/train.py\", line 89, in run\n    raise RuntimeError('Checkpoint config/input mismatch')\nRuntimeError: Checkpoint config/input mismatch\n"
+}

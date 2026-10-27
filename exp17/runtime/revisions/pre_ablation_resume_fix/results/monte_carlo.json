@@ -1,0 +1,234 @@
+{
+  "assumptions": "Fixed clipped path and fixed lambda2>0. LC fixes past observations. No claim for adaptive training or uniform lambda2=r*nu2 limit. Noise pairs are independent; antithetic/control variates used only for bias estimates.",
+  "fixed_path": [
+    0.6,
+    0.9,
+    0.7,
+    1.0
+  ],
+  "rows": [
+    {
+      "bias": -0.002388329341782724,
+      "bias_standard_error": 6.409101780686135e-08,
+      "empirical_bias": -0.00241353821215029,
+      "estimator": "raw",
+      "lambda2": 0.4,
+      "method": "lc",
+      "mse": 0.00026977113709822554,
+      "samples": 200000,
+      "sd": 0.16,
+      "variance": 0.0002639459703967163
+    },
+    {
+      "bias": -6.495399865083219e-06,
+      "bias_standard_error": 2.8032090106651455e-08,
+      "empirical_bias": -3.170427023257982e-05,
+      "estimator": "corrected",
+      "lambda2": 0.4,
+      "method": "lc",
+      "mse": 0.0002531200348295402,
+      "samples": 200000,
+      "sd": 0.16,
+      "variance": 0.0002531190296687924
+    },
+    {
+      "bias": -0.0005982169740703596,
+      "bias_standard_error": 3.514014457708535e-09,
+      "empirical_bias": -0.0006045191916623782,
+      "estimator": "raw",
+      "lambda2": 0.4,
+      "method": "lc",
+      "mse": 6.209399465771722e-05,
+      "samples": 200000,
+      "sd": 0.08,
+      "variance": 6.172855120462913e-05
+    },
+    {
+      "bias": -3.520779526775186e-07,
+      "bias_standard_error": 1.6463901770888176e-09,
+      "empirical_bias": -6.654295544583633e-06,
+      "estimator": "corrected",
+      "lambda2": 0.4,
+      "method": "lc",
+      "mse": 6.102030951568802e-05,
+      "samples": 200000,
+      "sd": 0.08,
+      "variance": 6.102026523603891e-05
+    },
+    {
+      "bias": -0.0001496187985505271,
+      "bias_standard_error": 2.1151041370217959e-10,
+      "empirical_bias": -0.0001511943529485249,
+      "estimator": "raw",
+      "lambda2": 0.4,
+      "method": "lc",
+      "mse": 1.5186245764840475e-05,
+      "samples": 200000,
+      "sd": 0.04,
+      "variance": 1.5163386032476884e-05
+    },
+    {
+      "bias": -2.1106824861455432e-08,
+      "bias_standard_error": 1.0250797828737036e-10,
+      "empirical_bias": -1.5966612226803178e-06,
+      "estimator": "corrected",
+      "lambda2": 0.4,
+      "method": "lc",
+      "mse": 1.5118653779427712e-05,
+      "samples": 200000,
+      "sd": 0.04,
+      "variance": 1.5118651230100761e-05
+    },
+    {
+      "bias": -3.740863048424948e-05,
+      "bias_standard_error": 1.3091057457585645e-11,
+      "empirical_bias": -3.780251908369614e-05,
+      "estimator": "raw",
+      "lambda2": 0.4,
+      "method": "lc",
+      "mse": 3.7754424260641173e-06,
+      "samples": 200000,
+      "sd": 0.02,
+      "variance": 3.7740133956150406e-06
+    },
+    {
+      "bias": -1.3049212982130242e-09,
+      "bias_standard_error": 6.406588328551156e-12,
+      "empirical_bias": -3.95193520796866e-07,
+      "estimator": "corrected",
+      "lambda2": 0.4,
+      "method": "lc",
+      "mse": 3.771210449590798e-06,
+      "samples": 200000,
+      "sd": 0.02,
+      "variance": 3.77121029341288e-06
+    },
+    {
+      "bias": -0.009643368436556606,
+      "bias_standard_error": 8.889362477545687e-07,
+      "empirical_bias": -0.009637487987371185,
+      "estimator": "raw",
+      "lambda2": 0.4,
+      "method": "hc",
+      "mse": 0.001158414991237286,
+      "samples": 200000,
+      "sd": 0.16,
+      "variance": 0.0010655338165305621
+    },
+    {
+      "bias": -0.0001247852830587252,
+      "bias_standard_error": 3.9020901445894815e-07,
+      "empirical_bias": -0.00011890483387311246,
+      "estimator": "corrected",
+      "lambda2": 0.4,
+      "method": "hc",
+      "mse": 0.0010067801247715196,
+      "samples": 200000,
+      "sd": 0.16,
+      "variance": 0.0010067659864119957
+    },
+    {
+      "bias": -0.002434008998824204,
+      "bias_standard_error": 5.746323697188769e-08,
+      "empirical_bias": -0.0024325388865279463,
+      "estimator": "raw",
+      "lambda2": 0.4,
+      "method": "hc",
+      "mse": 0.0002520024937175723,
+      "samples": 200000,
+      "sd": 0.08,
+      "variance": 0.00024608524828310436
+    },
+    {
+      "bias": -7.80006477792323e-06,
+      "bias_standard_error": 2.4285101088015274e-08,
+      "empirical_bias": -6.329952481509693e-06,
+      "estimator": "corrected",
+      "lambda2": 0.4,
+      "method": "hc",
+      "mse": 0.0002421326803990011,
+      "samples": 200000,
+      "sd": 0.08,
+      "variance": 0.0002421326403307021
+    },
+    {
+      "bias": -0.0006099498967282203,
+      "bias_standard_error": 3.622608719495031e-09,
+      "empirical_bias": -0.0006095823686542712,
+      "estimator": "raw",
+      "lambda2": 0.4,
+      "method": "hc",
+      "mse": 6.0591157833010275e-05,
+      "samples": 200000,
+      "sd": 0.04,
+      "variance": 6.021956716883651e-05
+    },
+    {
+      "bias": -4.874388914445682e-07,
+      "bias_standard_error": 1.5170644454815562e-09,
+      "empirical_bias": -1.199108172755814e-07,
+      "estimator": "corrected",
+      "lambda2": 0.4,
+      "method": "hc",
+      "mse": 5.9968198879549804e-05,
+      "samples": 200000,
+      "sd": 0.04,
+      "variance": 5.9968198865171176e-05
+    },
+    {
+      "bias": -0.0001525779407172284,
+      "bias_standard_error": 2.2690556703251321e-10,
+      "empirical_bias": -0.00015248605869866427,
+      "estimator": "raw",
+      "lambda2": 0.4,
+      "method": "hc",
+      "mse": 1.499628028888298e-05,
+      "samples": 200000,
+      "sd": 0.02,
+      "variance": 1.4973028290785485e-05
+    },
+    {
+      "bias": -3.046360764821898e-08,
+      "bias_standard_error": 9.480874298116329e-11,
+      "empirical_bias": 6.141841091267253e-08,
+      "estimator": "corrected",
+      "lambda2": 0.4,
+      "method": "hc",
+      "mse": 1.4957250297600213e-05,
+      "samples": 200000,
+      "sd": 0.02,
+      "variance": 1.49572502938279e-05
+    }
+  ],
+  "scaling": [
+    {
+      "estimator": "raw",
+      "expected_local_order": 2,
+      "measured_bias_log_slope": 1.9988837891794602,
+      "method": "lc",
+      "resolved_at_smallest_noise": true
+    },
+    {
+      "estimator": "corrected",
+      "expected_local_order": 4,
+      "measured_bias_log_slope": 4.090383290156672,
+      "method": "lc",
+      "resolved_at_smallest_noise": true
+    },
+    {
+      "estimator": "raw",
+      "expected_local_order": 2,
+      "measured_bias_log_slope": 1.9942328459162906,
+      "method": "hc",
+      "resolved_at_smallest_noise": true
+    },
+    {
+      "estimator": "corrected",
+      "expected_local_order": 4,
+      "measured_bias_log_slope": 4.0000412952238245,
+      "method": "hc",
+      "resolved_at_smallest_noise": true
+    }
+  ],
+  "status": "measured"
+}

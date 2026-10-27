@@ -1,0 +1,23 @@
+test_clipping_variable_microbatches (test_mechanism.MechanismTests.test_clipping_variable_microbatches) ... /media/data/data/lt/dp-adam-correlated/exp17/clipping.py:8: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  losses.sum().backward(retain_graph=True)
+/media/data/data/lt/dp-adam-correlated/exp17/clipping.py:13: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  (losses * coefficients).sum().backward()
+ok
+test_independent_membership (test_mechanism.MechanismTests.test_independent_membership) ... ok
+test_noise_empty_and_fixed_denominator (test_mechanism.MechanismTests.test_noise_empty_and_fixed_denominator) ... ok
+test_clipping (test_models.ModelTests.test_clipping) ... ok
+test_mapping (test_models.ModelTests.test_mapping) ... ok
+test_adam (test_optimizer.OptimizerTests.test_adam) ... ok
+test_bc_negative (test_optimizer.OptimizerTests.test_bc_negative) ... ok
+test_hc_autodiff_and_recurrence (test_optimizer.OptimizerTests.test_hc_autodiff_and_recurrence) ... ok
+test_lc_autodiff (test_optimizer.OptimizerTests.test_lc_autodiff) ... ok
+test_stability_and_checkpoint (test_optimizer.OptimizerTests.test_stability_and_checkpoint) ... ok
+test_both_horizons_and_empty_step (test_privacy.PrivacyTests.test_both_horizons_and_empty_step) ... /home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+ok
+test_grid_all_boundaries (test_workflow.WorkflowTests.test_grid_all_boundaries) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 4.606s
+
+OK

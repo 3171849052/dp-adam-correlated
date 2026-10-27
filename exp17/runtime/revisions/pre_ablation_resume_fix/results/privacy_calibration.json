@@ -1,0 +1,22 @@
+{
+  "search": {
+    "stage": "search",
+    "population": 45000,
+    "steps": 225,
+    "sample_rate": 0.022222222222222223,
+    "noise_multiplier": 0.6417465209960938,
+    "actual_epsilon": 7.999685605892361,
+    "delta": 1e-05,
+    "nu_squared": 0.00037065473748953075
+  },
+  "final": {
+    "stage": "final",
+    "population": 50000,
+    "steps": 250,
+    "sample_rate": 0.02,
+    "noise_multiplier": 0.6313705444335938,
+    "actual_epsilon": 7.999352550400695,
+    "delta": 1e-05,
+    "nu_squared": 0.0003587658879405354
+  }
+}

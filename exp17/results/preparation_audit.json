@@ -1,0 +1,27 @@
+{
+  "reason": "Corrected pipeline recovery when an ablation plan exists but is incomplete. No optimizer/data/privacy/search changes.",
+  "archived_initial_smoke_runs": 8,
+  "aborted_preliminary_search_trials": [
+    {
+      "trial": "search_adam_11241aeff17229e8",
+      "last_observed_step": 19,
+      "complete": false,
+      "artifacts": "exp17/runtime/revisions/pre_ablation_resume_fix/results/trials/search_adam_11241aeff17229e8"
+    },
+    {
+      "trial": "search_adam_63bc792a7a429098",
+      "last_observed_step": 18,
+      "complete": false,
+      "artifacts": "exp17/runtime/revisions/pre_ablation_resume_fix/results/trials/search_adam_63bc792a7a429098"
+    },
+    {
+      "trial": "search_adam_a8c5aff2913d81c6",
+      "last_observed_step": 18,
+      "complete": false,
+      "artifacts": "exp17/runtime/revisions/pre_ablation_resume_fix/results/trials/search_adam_a8c5aff2913d81c6"
+    }
+  ],
+  "reused_preliminary_search_trials": 0,
+  "current_acceptance": "results/acceptance.json",
+  "note": "Current full plan remains 248 completed main trainings plus 20 ablations. Preliminary partial trainings are extra and retained, not counted as completed trials."
+}

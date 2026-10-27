@@ -1,0 +1,29 @@
+test_cv_uses_both_assigned_gpus (__main__.QueueTests.test_cv_uses_both_assigned_gpus) ... coarse: GPU 2 cv example pid=10000
+coarse: GPU 3 cv example pid=10001
+coarse: GPU 2 cv example pid=10002
+coarse: GPU 3 cv example pid=10003
+coarse: GPU 2 cv example pid=10004
+ok
+test_external_gpu_occupancy_is_respected (__main__.QueueTests.test_external_gpu_occupancy_is_respected) ... coarse: GPU 3 cv example pid=10000
+coarse: GPU 3 cv example pid=10001
+coarse: GPU 3 cv example pid=10002
+ok
+test_failure_stops_new_launches_without_retry (__main__.QueueTests.test_failure_stops_new_launches_without_retry) ... coarse: GPU 2 cv example pid=10000
+coarse: GPU 3 cv example pid=10001
+ok
+test_idle_gpu_stays_blocked_until_dependency_completes (__main__.QueueTests.test_idle_gpu_stays_blocked_until_dependency_completes) ... ok
+test_nlp_capacity_remains_two_per_gpu (__main__.QueueTests.test_nlp_capacity_remains_two_per_gpu) ... coarse: GPU 2 nlp example pid=10000
+coarse: GPU 2 nlp example pid=10001
+coarse: GPU 3 nlp example pid=10002
+coarse: GPU 3 nlp example pid=10003
+coarse: GPU 2 nlp example pid=10004
+coarse: GPU 2 nlp example pid=10005
+coarse: GPU 3 nlp example pid=10006
+ok
+test_waits_for_entire_pipeline_and_scheduler_exit (__main__.QueueTests.test_waits_for_entire_pipeline_and_scheduler_exit) ... ok
+test_worker_accepts_only_one_isolated_gpu_2_or_3 (__main__.QueueTests.test_worker_accepts_only_one_isolated_gpu_2_or_3) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 4.746s
+
+OK

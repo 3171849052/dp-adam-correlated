@@ -1,0 +1,54 @@
+coarse: GPU 0 cv stpex-mf-momentum-bias-bandinvmf pid=862597
+coarse: GPU 0 cv stpex-mf-momentum-bias-b2lt pid=867269
+coarse: GPU 0 cv stpex-mf-momentum-bias-bandinvmf pid=872047
+coarse: GPU 0 cv stpex-mf-momentum-bias-b2lt pid=876872
+coarse: GPU 0 cv stpex-mf-momentum-bias-bandinvmf pid=882519
+coarse: GPU 0 cv stpex-mf-momentum-bias-b2lt pid=887280
+coarse: GPU 0 cv stpex-mf-momentum-bias-bandinvmf pid=893020
+coarse: GPU 0 cv stpex-mf-momentum-bias-b2lt pid=898923
+coarse: GPU 0 cv stpex-mf-momentum-bias-bandinvmf pid=904954
+coarse: GPU 0 cv stpex-mf-momentum-bias-b2lt pid=910512
+coarse: GPU 0 cv stpex-mf-momentum-bias-bandinvmf pid=915907
+coarse: GPU 0 cv stpex-mf-momentum-bias-b2lt pid=921754
+coarse: GPU 0 cv stpex-mf-momentum-bias-bandinvmf pid=927678
+coarse: GPU 0 cv stpex-mf-momentum-bias-b2lt pid=932048
+coarse: GPU 0 cv stpex-mf-momentum-bias-bandinvmf pid=936480
+coarse: GPU 0 cv stpex-mf-momentum-bias-b2lt pid=940923
+coarse: GPU 0 cv stpex-mf-momentum-bias-bandinvmf pid=946452
+coarse: GPU 0 cv stpex-mf-momentum-bias-b2lt pid=952470
+coarse: GPU 0 cv stpex-mf-momentum-bias-bandinvmf pid=958620
+coarse: GPU 0 cv stpex-mf-momentum-bias-b2lt pid=963883
+coarse: GPU 0 cv stpex-mf-momentum-bias-bandinvmf pid=968517
+coarse: GPU 0 cv stpex-mf-momentum-bias-b2lt pid=973156
+coarse: GPU 0 cv stpex-mf-momentum-bias-bandinvmf pid=977969
+coarse: GPU 0 cv stpex-mf-momentum-bias-b2lt pid=982554
+coarse: GPU 0 cv stpex-mf-momentum-bias-bandinvmf pid=987649
+coarse: GPU 0 cv stpex-mf-momentum-bias-b2lt pid=992099
+coarse: GPU 0 cv stpex-mf-momentum-bias-bandinvmf pid=996621
+coarse: GPU 0 cv stpex-mf-momentum-bias-b2lt pid=1001099
+coarse: GPU 0 cv stpex-mf-momentum-bias-bandinvmf pid=1005705
+coarse: GPU 0 cv stpex-mf-momentum-bias-b2lt pid=1011016
+coarse: GPU 0 cv stpex-mf-momentum-bias-bandinvmf pid=1173490
+coarse: GPU 0 cv stpex-mf-momentum-bias-b2lt pid=2228089
+coarse: GPU 0 cv stpex-mf-momentum-bias-bandinvmf pid=2574685
+coarse: GPU 0 cv stpex-mf-momentum-bias-b2lt pid=2581731
+coarse: GPU 0 cv stpex-mf-momentum-bias-bandinvmf pid=2586834
+coarse: GPU 0 cv stpex-mf-momentum-bias-b2lt pid=2592045
+coarse: GPU 0 cv stpex-mf-momentum-bias-bandinvmf pid=2597661
+coarse: GPU 0 cv stpex-mf-momentum-bias-b2lt pid=2602899
+Preflight passed: {'completed': 37, 'pending': 71}; assigned physical GPUs (2, 3)
+Waiting for exp17 to finish: {'active': [{'gpu': 3, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/final_hc_d43b8216cc5b97ed/worker.log', 'pid': 3035086, 'trial': 'final_hc_d43b8216cc5b97ed'}, {'gpu': 2, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/final_adam_22d9623097874552/worker.log', 'pid': 3040925, 'trial': 'final_adam_22d9623097874552'}], 'completed': 27, 'failure': None, 'pending': 11, 'phase': 'final', 'pid': 2617441, 'planned': 40, 'time': 1793067685.9023974}
+Waiting for exp17 to finish: {'active': [{'gpu': 2, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/final_adam_22d9623097874552/worker.log', 'pid': 3040925, 'trial': 'final_adam_22d9623097874552'}, {'gpu': 3, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/final_bc_bb2008337f86b200/worker.log', 'pid': 3042711, 'trial': 'final_bc_bb2008337f86b200'}], 'completed': 28, 'failure': None, 'pending': 10, 'phase': 'final', 'pid': 2617441, 'planned': 40, 'time': 1793067742.3956857}
+Waiting for exp17 to finish: {'active': [{'gpu': 3, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/final_bc_bb2008337f86b200/worker.log', 'pid': 3042711, 'trial': 'final_bc_bb2008337f86b200'}, {'gpu': 2, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/final_lc_2db48e3b54c08472/worker.log', 'pid': 3049066, 'trial': 'final_lc_2db48e3b54c08472'}], 'completed': 29, 'failure': None, 'pending': 9, 'phase': 'final', 'pid': 2617441, 'planned': 40, 'time': 1793068524.92575}
+Waiting for exp17 to finish: {'active': [{'gpu': 2, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/final_lc_2db48e3b54c08472/worker.log', 'pid': 3049066, 'trial': 'final_lc_2db48e3b54c08472'}, {'gpu': 3, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/final_hc_5da1f47c6cf2671f/worker.log', 'pid': 3050384, 'trial': 'final_hc_5da1f47c6cf2671f'}], 'completed': 30, 'failure': None, 'pending': 8, 'phase': 'final', 'pid': 2617441, 'planned': 40, 'time': 1793068703.895067}
+Waiting for exp17 to finish: {'active': [{'gpu': 3, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/final_hc_5da1f47c6cf2671f/worker.log', 'pid': 3050384, 'trial': 'final_hc_5da1f47c6cf2671f'}, {'gpu': 2, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/final_adam_b1608bd95469bb2b/worker.log', 'pid': 3055116, 'trial': 'final_adam_b1608bd95469bb2b'}], 'completed': 31, 'failure': None, 'pending': 7, 'phase': 'final', 'pid': 2617441, 'planned': 40, 'time': 1793069497.2754066}
+Waiting for exp17 to finish: {'active': [{'gpu': 2, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/final_adam_b1608bd95469bb2b/worker.log', 'pid': 3055116, 'trial': 'final_adam_b1608bd95469bb2b'}, {'gpu': 3, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/final_bc_ff5b67fcfc4336ab/worker.log', 'pid': 3055869, 'trial': 'final_bc_ff5b67fcfc4336ab'}], 'completed': 32, 'failure': None, 'pending': 6, 'phase': 'final', 'pid': 2617441, 'planned': 40, 'time': 1793069651.04418}
+Waiting for exp17 to finish: {'active': [{'gpu': 3, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/final_bc_ff5b67fcfc4336ab/worker.log', 'pid': 3055869, 'trial': 'final_bc_ff5b67fcfc4336ab'}, {'gpu': 2, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/final_lc_a09d4d9fd367ae48/worker.log', 'pid': 3060589, 'trial': 'final_lc_a09d4d9fd367ae48'}], 'completed': 33, 'failure': None, 'pending': 5, 'phase': 'final', 'pid': 2617441, 'planned': 40, 'time': 1793070475.3352518}
+Waiting for exp17 to finish: {'active': [{'gpu': 2, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/final_lc_a09d4d9fd367ae48/worker.log', 'pid': 3060589, 'trial': 'final_lc_a09d4d9fd367ae48'}, {'gpu': 3, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/final_hc_cf618b2f34dd592c/worker.log', 'pid': 3061783, 'trial': 'final_hc_cf618b2f34dd592c'}], 'completed': 34, 'failure': None, 'pending': 4, 'phase': 'final', 'pid': 2617441, 'planned': 40, 'time': 1793070608.4456382}
+Waiting for exp17 to finish: {'active': [{'gpu': 3, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/final_hc_cf618b2f34dd592c/worker.log', 'pid': 3061783, 'trial': 'final_hc_cf618b2f34dd592c'}, {'gpu': 2, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/final_adam_2b8bca6071118763/worker.log', 'pid': 3068242, 'trial': 'final_adam_2b8bca6071118763'}], 'completed': 35, 'failure': None, 'pending': 3, 'phase': 'final', 'pid': 2617441, 'planned': 40, 'time': 1793071436.8541362}
+Waiting for exp17 to finish: {'active': [{'gpu': 2, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/final_adam_2b8bca6071118763/worker.log', 'pid': 3068242, 'trial': 'final_adam_2b8bca6071118763'}, {'gpu': 3, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/final_bc_85051b54e3aef82f/worker.log', 'pid': 3069449, 'trial': 'final_bc_85051b54e3aef82f'}], 'completed': 36, 'failure': None, 'pending': 2, 'phase': 'final', 'pid': 2617441, 'planned': 40, 'time': 1793071585.2486513}
+Waiting for exp17 to finish: {'active': [{'gpu': 3, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/final_bc_85051b54e3aef82f/worker.log', 'pid': 3069449, 'trial': 'final_bc_85051b54e3aef82f'}, {'gpu': 2, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/final_lc_7228f608319033bf/worker.log', 'pid': 3075422, 'trial': 'final_lc_7228f608319033bf'}], 'completed': 37, 'failure': None, 'pending': 1, 'phase': 'final', 'pid': 2617441, 'planned': 40, 'time': 1793072378.255385}
+Waiting for exp17 to finish: {'active': [{'gpu': 2, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/final_lc_7228f608319033bf/worker.log', 'pid': 3075422, 'trial': 'final_lc_7228f608319033bf'}, {'gpu': 3, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/final_hc_fc9a4c4fb873f29c/worker.log', 'pid': 3076718, 'trial': 'final_hc_fc9a4c4fb873f29c'}], 'completed': 38, 'failure': None, 'pending': 0, 'phase': 'final', 'pid': 2617441, 'planned': 40, 'time': 1793072531.7591157}
+Waiting for exp17 to finish: {'active': [{'gpu': 3, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/final_hc_fc9a4c4fb873f29c/worker.log', 'pid': 3076718, 'trial': 'final_hc_fc9a4c4fb873f29c'}], 'completed': 39, 'failure': None, 'pending': 0, 'phase': 'final', 'pid': 2617441, 'planned': 40, 'time': 1793073324.2593265}
+Waiting for exp17 to finish: {'active': [], 'completed': 40, 'failure': None, 'pending': 0, 'phase': 'final', 'pid': 2617441, 'planned': 40, 'time': 1793073528.9963012}
+Waiting for exp17 to finish: {'active': [{'gpu': 2, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/ablation_lc_4ee641bf5d85bb3e/worker.log', 'pid': 3084696, 'trial': 'ablation_lc_4ee641bf5d85bb3e'}, {'gpu': 3, 'log': '/media/data/data/lt/dp-adam-correlated/exp17/results/trials/ablation_hc_ac9be48244d34372/worker.log', 'pid': 3084697, 'trial': 'ablation_hc_ac9be48244d34372'}], 'completed': 0, 'failure': None, 'pending': 18, 'phase': 'ablation', 'pid': 2617441, 'planned': 20, 'time': 1793073563.8597417}

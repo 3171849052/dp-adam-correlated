@@ -1,0 +1,4 @@
+{
+  "pid": 2606047,
+  "traceback": "Traceback (most recent call last):\n  File \"/media/data/data/lt/dp-adam-correlated/exp17/pipeline.py\", line 41, in <module>\n    try: run()\n         ^^^^^\n  File \"/media/data/data/lt/dp-adam-correlated/exp17/pipeline.py\", line 14, in run\n    c=run_phase('coarse',coarse())\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/media/data/data/lt/dp-adam-correlated/exp17/scheduler.py\", line 41, in run_phase\n    if failure and not active: raise RuntimeError(failure)\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Worker failed: search_hc_2996d91608a62e6c\n"
+}

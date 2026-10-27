@@ -1,0 +1,36 @@
+{
+  "cv/stpex-mf-momentum-bias-bandinvmf": {
+    "candidate": {
+      "trial_id": "912edc42891f112b074b",
+      "lr": 0.15,
+      "clip": 10.0,
+      "eps_scale": 3.0,
+      "status": "completed",
+      "accuracy": 0.7778,
+      "validation_loss": 0.7698626495361328
+    },
+    "boundary": {
+      "lr": "lower",
+      "clip": "upper",
+      "eps_scale": "upper"
+    },
+    "provisional": true
+  },
+  "cv/stpex-mf-momentum-bias-b2lt": {
+    "candidate": {
+      "trial_id": "1887a8f8199991f85d12",
+      "lr": 0.15,
+      "clip": 10.0,
+      "eps_scale": 3.0,
+      "status": "completed",
+      "accuracy": 0.7794,
+      "validation_loss": 0.7661413452148438
+    },
+    "boundary": {
+      "lr": "lower",
+      "clip": "upper",
+      "eps_scale": "upper"
+    },
+    "provisional": true
+  }
+}

@@ -1,0 +1,15 @@
+smoke: GPU 0 cv stpex-mf-momentum-bias-bandinvmf pid=860704
+smoke: GPU 0 cv stpex-mf-momentum-bias-b2lt pid=860923
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/media/data/data/lt/dp-adam-correlated/exp16b/stage1.py", line 46, in <module>
+    if __name__=='__main__':run()
+                            ^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp16b/stage1.py", line 31, in run
+    rows=run_batch('smoke',jobs);save_json(RESULTS/'smoke_results.json',rows)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp16b/scheduler.py", line 105, in run_batch
+    if fatal and not active:raise RuntimeError(f'{name} stopped without retry: '+str(fatal))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: smoke stopped without retry: ['Code/config hash mismatch']

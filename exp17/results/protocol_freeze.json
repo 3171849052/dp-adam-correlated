@@ -1,0 +1,139 @@
+{
+  "assets": {
+    "cache/huggingface/hub/models--timm--vit_tiny_patch16_224.augreg_in21k_ft_in1k/snapshots/7d3afdd0cf93ad84d986eb2d6bcc5812ebd0b106/model.safetensors": "fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed",
+    "data/cifar-100-python/meta": "a5d4786345c961390f865e93b434dbd5c6904ce880667e0cb888c97d449f28b9",
+    "data/cifar-100-python/train": "735e79b04f092ca3d2e6d07f368c0a7d70d48c48d28865950cc24454cf45129b",
+    "exp9/results/cv_split.npz": "205005831d63a9aa17091038faefc8e87c3cf38b5b99e24c8782c50b2614744e"
+  },
+  "calibration": {
+    "final": {
+      "actual_epsilon": 7.999352550400695,
+      "delta": 1e-05,
+      "noise_multiplier": 0.6313705444335938,
+      "nu_squared": 0.0003587658879405354,
+      "population": 50000,
+      "sample_rate": 0.02,
+      "stage": "final",
+      "steps": 250
+    },
+    "search": {
+      "actual_epsilon": 7.999685605892361,
+      "delta": 1e-05,
+      "noise_multiplier": 0.6417465209960938,
+      "nu_squared": 0.00037065473748953075,
+      "population": 45000,
+      "sample_rate": 0.022222222222222223,
+      "stage": "search",
+      "steps": 225
+    }
+  },
+  "code": {
+    "__init__.py": "b0f1ea2430d9ec6b7841a00e99c1d51b3b5fabb23a5ee40c03670c729a40735c",
+    "clipping.py": "db2ee7a8818a7249691d14e5dc48342e174460c845b0b9ab3329eb7cd29fa465",
+    "common.py": "97b1a2d51724d74e6cf3b1758f60210bf244cb5a8539902839bdb1a03a4557ab",
+    "cv_model.py": "de7b23603dc94b1f5b6000a85d8f8b4485a5a81b1e9fcfdabf96daa21cf4d38c",
+    "data.py": "1233568e61db5e9a34673aaf44d1ce8d1c57a2fa4239254e1e8cb5cf6e417634",
+    "mechanism.py": "654817b719edef7615a4627ac7945e12f559f4e58152e79de02bbae7d429557d",
+    "monte_carlo.py": "ce4cdad54e3d0ffb28cf8a49be3e24408828b2ddad8adf1284f2590c9c19e8c5",
+    "optimizer.py": "199357afdaa96ea90e67ae39ceadff9ce837481cfb10e8dd4002f5efa6a5cf6d",
+    "pipeline.py": "ec824ea7aef378384e36c2b90a17a3716d88bbbc0961b063053dbc5c07d0f0a4",
+    "privacy.py": "42040440322f66fc7278e2732e5f8a5b2507c28516cd2b3a1bcfc6cdf4154f37",
+    "report.py": "60e1ae45330c9da7c3ea355ae7e5d3def6c78b8091643cc7b07bc55acc1fcd0d",
+    "scheduler.py": "eb843d3a38deaefbea2eb55e1e2367c1d2d1f5f481148f33464e15b17c61270d",
+    "search.py": "2a5a50ade650dc66b0252a920007ee9c80e5cff316c468ebe53688108e391029",
+    "stage1.py": "34f39ccab9d763ec4e95ff5e0bfe6887ae2808d15cc0bdf646b75d96086142b6",
+    "start_background.py": "4e264ed09ddbbd261e8bd0d5a39c46306b9b69ede947dfd6c5a513c58aa1c6ba",
+    "status.py": "d876006b5f85eec1f2fb52575d7e52e24b3b03b6c68cf28fd6950f1ef8f569ca",
+    "tests/test_mechanism.py": "f895b573b857993331065ad1afd75f95fa98ea1bde5df6c9925c8e0d61b99199",
+    "tests/test_models.py": "13a8f6d3b7a9f5e70914e0147c0553d6220253193429704283fddbae6639d61e",
+    "tests/test_optimizer.py": "03ae647914ed3e17dcde512dbfd22c441910f4ebfb2518d29a87b9a51d117c1e",
+    "tests/test_privacy.py": "7c8f4a1eb9ac7a79b2b4d2075e1fcb6b0820258c458f23b894245d6f18829bbc",
+    "tests/test_workflow.py": "7dfe59bf0a6784fc873d68cda666f8911bd042262b151c20c27b07d9b59171ee",
+    "train.py": "95b48ff9375f64cb7c800d9bc07e6276fbe9ffd6e166c66dd80798ac54007d6e"
+  },
+  "environment": {
+    "numpy": "2.4.4",
+    "opacus": "1.6.0",
+    "safetensors": "0.8.0",
+    "scipy": "1.17.1",
+    "timm": "1.0.29",
+    "torch": "2.13.0+cu126",
+    "torchvision": "0.28.0+cu126"
+  },
+  "executable": "/home/longt29/miniconda3/envs/curve/bin/python",
+  "gpu": "index, name, driver_version, memory.total [MiB]\n0, NVIDIA GeForce RTX 3080 Ti, 570.133.20, 12288 MiB\n1, NVIDIA GeForce RTX 3080 Ti, 570.133.20, 12288 MiB\n2, NVIDIA GeForce RTX 3080 Ti, 570.133.20, 12288 MiB\n3, NVIDIA GeForce RTX 3080 Ti, 570.133.20, 12288 MiB\n",
+  "protocol": {
+    "ablation": "Two extra full final runs per paired seed: LC and HC with correction disabled, same frozen lr,r and seeds; 20 extra runs excluded from 248 main runs.",
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "clip": 30.0,
+    "dataset": "CIFAR-100",
+    "delta": 1e-05,
+    "dtype": "float32",
+    "eps": 1e-08,
+    "epsilon": 8.0,
+    "expected_batch": 1000,
+    "final": {
+      "population": 50000,
+      "steps": 250
+    },
+    "final_seeds": [
+      20261111,
+      20261112,
+      20261113,
+      20261114,
+      20261115,
+      20261116,
+      20261117,
+      20261118,
+      20261119,
+      20261120
+    ],
+    "fine_rule": "For each dimension use n log-spaced interior points between the midpoints of the winning coarse log-coordinate and its adjacent coarse coordinates. At boundaries truncate at the global limit. n=4 for lr, n=3 for r. Exclude the coarse winning r when symmetric: replace it by the lower three-eighths interval point. Fine lr never equals coarse lr; all fine pairs are new.",
+    "gpus": [
+      1,
+      2,
+      3
+    ],
+    "lr_range": [
+      1e-05,
+      0.003
+    ],
+    "model": "pretrained ViT-Tiny",
+    "physical_batch": 250,
+    "privacy": "Opacus RDP per run only. Validation is assumed public; tuning, repeated runs, raw training diagnostics and checkpoints have no joint epsilon=8 release guarantee.",
+    "r_ranges": {
+      "bc": [
+        0.0001,
+        1.0
+      ],
+      "hc": [
+        0.001,
+        4.0
+      ],
+      "lc": [
+        0.001,
+        4.0
+      ]
+    },
+    "reuse": "Only matching frozen source/assets/config and SHA256-verified successful artifacts. Interrupted trials resume from last atomic full-state step checkpoint; failures require explicit retry.",
+    "review_seeds": [
+      20261104,
+      20261105
+    ],
+    "schedule": "Constant learning rate, five passes in expectation; evaluation at each 45/50 steps. Independent Bernoulli membership each step, fixed normalization 1000; empty draws update.",
+    "search": {
+      "population": 45000,
+      "steps": 225
+    },
+    "search_seeds": [
+      20261101,
+      20261102,
+      20261103
+    ],
+    "selection": "Rank config means by accuracy descending, cross entropy ascending, config hash ascending. Review top two with two NEW seeds; rerank using ALL actual repetitions.",
+    "theory": "LC is conditional on fixed preceding states. HC fourth-order bias reasoning applies to fixed clipped-gradient paths with fixed positive smoothing, not adaptive training. Scaling lambda2 with nu2 is not a uniform fourth-order guarantee near zero.",
+    "weight_decay": 0.0
+  },
+  "python": "3.11.15 (main, Jun 11 2026, 15:20:16) [GCC 14.3.0]"
+}

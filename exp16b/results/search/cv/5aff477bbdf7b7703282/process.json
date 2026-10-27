@@ -1,0 +1,17 @@
+{
+  "task": "cv",
+  "method": "stpex-mf-momentum-bias-b2lt",
+  "lr": 0.5,
+  "clip": 3.0,
+  "eps_scale": 1.0,
+  "seed": 20261101,
+  "stage": "search",
+  "smoke_phase": "search",
+  "replicate": 0,
+  "status": "running",
+  "gpu": 0,
+  "pid": 1001099,
+  "started": 1793004971.3762276,
+  "log": "/media/data/data/lt/dp-adam-correlated/exp16b/results/search/cv/5aff477bbdf7b7703282/train.log",
+  "command": "CUDA_VISIBLE_DEVICES=0 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp16b.train --trial-json '{\"clip\": 3.0, \"eps_scale\": 1.0, \"lr\": 0.5, \"method\": \"stpex-mf-momentum-bias-b2lt\", \"replicate\": 0, \"seed\": 20261101, \"smoke_phase\": \"search\", \"stage\": \"search\", \"task\": \"cv\"}'"
+}

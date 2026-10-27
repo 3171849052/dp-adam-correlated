@@ -1,0 +1,42 @@
+{
+  "accuracy": 0.7268,
+  "actual_epsilon": 7.999352550400695,
+  "calibration": {
+    "actual_epsilon": 7.999352550400695,
+    "delta": 1e-05,
+    "noise_multiplier": 0.6313705444335938,
+    "nu_squared": 0.0003587658879405354,
+    "population": 50000,
+    "sample_rate": 0.02,
+    "stage": "final",
+    "steps": 250
+  },
+  "config": {
+    "lr": 0.0007208434242404265,
+    "method": "bc",
+    "r": 1.0,
+    "seed": 20261120,
+    "stage": "final"
+  },
+  "device": "NVIDIA GeForce RTX 3080 Ti",
+  "evaluation_scope": "official_test",
+  "examples": 10000,
+  "hashes": {
+    "checkpoint.pt": "1fccd44704047993aa561f73aa3808f9539e5d345710c8b0a6c8d2acb2e22eb1",
+    "config.json": "8c2cfcece3a3e91643ad9f8c3d1dfa87bef6c2519fc32cce69e513b83029f513",
+    "diagnostics.jsonl": "f20e396c52cb12182d6a85412cc7f985d2d361acbfd05085285f08d90a49ebeb",
+    "evaluations.json": "cf233302bd7560912b0ebf11f8514e922c5cba9a252188abbc51ba8b4fbd1d63",
+    "poisson_samples.npz": "c57c8d1d5f2ea33a32159279e989cc34912cfd3eb82c0fe7ae637bae40bb7427",
+    "train_order.npy": "a0c75d903840ce7fddf872e8cb7d1c93c001b2a349aafc51296d078ed4b25b59"
+  },
+  "identity": "7135de4f854e4d66e276b57ce849e19e5d4bf05a3756d4df54f49c2c13e3656f",
+  "peak_allocated_bytes": 8331627008,
+  "peak_reserved_bytes": 8755609600,
+  "physical_gpu": "3",
+  "seconds": 936.6599385869922,
+  "status": "completed",
+  "step": 250,
+  "steps": 250,
+  "train_seconds": 851.7837528868113,
+  "validation_loss": 0.9456015151977539
+}

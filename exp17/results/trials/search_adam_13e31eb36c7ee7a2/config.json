@@ -1,0 +1,40 @@
+{
+  "config": {
+    "lr": 1.6795496290244314e-05,
+    "method": "adam",
+    "round": "coarse",
+    "seed": 20261101,
+    "stage": "search"
+  },
+  "identity": "7135de4f854e4d66e276b57ce849e19e5d4bf05a3756d4df54f49c2c13e3656f",
+  "initialization_sha256": "565ec9ab00337e01ae99fc8a6a12cf8fde5af0d956297b4605bf477c0e3ba8ac",
+  "metadata": {
+    "checkpoint_path": "cache/huggingface/hub/models--timm--vit_tiny_patch16_224.augreg_in21k_ft_in1k/snapshots/7d3afdd0cf93ad84d986eb2d6bcc5812ebd0b106/model.safetensors",
+    "checkpoint_sha256": "fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed",
+    "crop_pct": 0.9,
+    "hf_hub_id": "timm/vit_tiny_patch16_224.augreg_in21k_ft_in1k",
+    "interpolation": "bicubic",
+    "mean": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "std": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  "official_assets": null,
+  "physical_gpu": "2",
+  "privacy": {
+    "actual_epsilon": 7.999685605892361,
+    "delta": 1e-05,
+    "noise_multiplier": 0.6417465209960938,
+    "nu_squared": 0.00037065473748953075,
+    "population": 45000,
+    "sample_rate": 0.022222222222222223,
+    "stage": "search",
+    "steps": 225
+  }
+}
