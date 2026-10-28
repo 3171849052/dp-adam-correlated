@@ -1,0 +1,14 @@
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/media/data/data/lt/dp-adam-correlated/exp17b/prepare.py", line 44, in <module>
+    prepare()
+  File "/media/data/data/lt/dp-adam-correlated/exp17b/prepare.py", line 31, in prepare
+    resumed=run_phase('resume_smoke',[resume_cfg])[0]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp17b/scheduler.py", line 41, in run_phase
+    if failure and not active: raise RuntimeError(failure)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Worker failed: smoke_gh_ed1e3eb3da0150d2

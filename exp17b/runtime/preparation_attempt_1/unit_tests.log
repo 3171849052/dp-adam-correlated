@@ -1,0 +1,41 @@
+...............F.......                                                  [100%]
+=================================== FAILURES ===================================
+_____________________ test_gh_nodes_weights_no_derivative ______________________
+
+    def test_gh_nodes_weights_no_derivative():
+        x=torch.tensor([-.5,0.,.7],dtype=torch.float64);m=torch.zeros_like(x);v=m.clone()
+        with patch('exp17b.optimizer.second_derivative',side_effect=AssertionError):
+            b,c,_,_=directions('gh',x,m,v,1,0.,.09,.5)
+        f=lambda u:scalar_f(u,0.,1.,0.,1.,0.,.09)
+        expected=(1+.5/3)*f(x)-.5/6*(f(x+(3*.09)**.5)+f(x-(3*.09)**.5))
+        torch.testing.assert_close(b-c,expected)
+        nodes=torch.tensor([0.,3**.5,-3**.5],dtype=torch.float64)
+        weights=torch.tensor([2/3,1/6,1/6],dtype=torch.float64)
+>       assert weights.sum()==1
+E       assert tensor(1.0000, dtype=torch.float64) == 1
+E        +  where tensor(1.0000, dtype=torch.float64) = <built-in method sum of Tensor object at 0x7f259efa2170>()
+E        +    where <built-in method sum of Tensor object at 0x7f259efa2170> = tensor([0.6667, 0.1667, 0.1667], dtype=torch.float64).sum
+
+exp17b/tests/test_optimizer.py:43: AssertionError
+=============================== warnings summary ===============================
+exp17b/tests/test_mechanism.py::MechanismTests::test_clipping_variable_microbatches
+exp17b/tests/test_models.py::test_vit_clipping
+exp17b/tests/test_models.py::ModelTests::test_clipping
+  /media/data/data/lt/dp-adam-correlated/exp17b/clipping.py:8: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    losses.sum().backward(retain_graph=True)
+
+exp17b/tests/test_mechanism.py::MechanismTests::test_clipping_variable_microbatches
+exp17b/tests/test_models.py::test_vit_clipping
+exp17b/tests/test_models.py::ModelTests::test_clipping
+  /media/data/data/lt/dp-adam-correlated/exp17b/clipping.py:13: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    (losses * coefficients).sum().backward()
+
+exp17b/tests/test_privacy.py::PrivacyTests::test_both_horizons_and_empty_step
+exp17b/tests/test_workflow.py::test_short_budget_is_not_eight
+  /home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED exp17b/tests/test_optimizer.py::test_gh_nodes_weights_no_derivative - ...
+1 failed, 22 passed, 8 warnings in 7.58s

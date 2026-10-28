@@ -1,0 +1,12 @@
+/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/media/data/data/lt/dp-adam-correlated/exp17b/prepare.py", line 34, in <module>
+    prepare()
+  File "/media/data/data/lt/dp-adam-correlated/exp17b/prepare.py", line 23, in prepare
+    subprocess.run([PYTHON,'-B','-m','pytest','exp17b/tests','-q','-o',f'cache_dir={BASE}/runtime/pytest_cache','--basetemp',str(BASE/'runtime/pytest_tmp')],cwd=ROOT,stdout=log,stderr=subprocess.STDOUT,check=True)
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/longt29/miniconda3/envs/curve/bin/python', '-B', '-m', 'pytest', 'exp17b/tests', '-q', '-o', 'cache_dir=/media/data/data/lt/dp-adam-correlated/exp17b/runtime/pytest_cache', '--basetemp', '/media/data/data/lt/dp-adam-correlated/exp17b/runtime/pytest_tmp']' returned non-zero exit status 1.

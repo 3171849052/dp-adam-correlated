@@ -1,0 +1,98 @@
+[
+  {
+    "accuracy": 0.7,
+    "actual_epsilon": 7.999,
+    "config": {
+      "alpha": 0,
+      "lr": 0.001,
+      "method": "smooth",
+      "r": 2.8312235256706146,
+      "seed": 20261111,
+      "stage": "D",
+      "steps": 250
+    },
+    "peak_allocated_bytes": 1000,
+    "seconds": 10.0,
+    "validation_loss": 1.0
+  },
+  {
+    "accuracy": 0.7,
+    "actual_epsilon": 7.999,
+    "config": {
+      "alpha": 0,
+      "lr": 0.001,
+      "method": "smooth",
+      "r": 2.8312235256706146,
+      "seed": 20261112,
+      "stage": "D",
+      "steps": 250
+    },
+    "peak_allocated_bytes": 1000,
+    "seconds": 10.0,
+    "validation_loss": 1.0
+  },
+  {
+    "accuracy": 0.7,
+    "actual_epsilon": 7.999,
+    "config": {
+      "alpha": 0.5,
+      "lr": 0.001,
+      "method": "lc",
+      "r": 2.8312235256706146,
+      "seed": 20261111,
+      "stage": "D",
+      "steps": 250
+    },
+    "peak_allocated_bytes": 1000,
+    "seconds": 10.0,
+    "validation_loss": 1.1
+  },
+  {
+    "accuracy": 0.7,
+    "actual_epsilon": 7.999,
+    "config": {
+      "alpha": 0.5,
+      "lr": 0.001,
+      "method": "lc",
+      "r": 2.8312235256706146,
+      "seed": 20261112,
+      "stage": "D",
+      "steps": 250
+    },
+    "peak_allocated_bytes": 1000,
+    "seconds": 10.0,
+    "validation_loss": 1.1
+  },
+  {
+    "accuracy": 0.7,
+    "actual_epsilon": 7.999,
+    "config": {
+      "alpha": 0.5,
+      "lr": 0.001,
+      "method": "gh",
+      "r": 2.8312235256706146,
+      "seed": 20261111,
+      "stage": "D",
+      "steps": 250
+    },
+    "peak_allocated_bytes": 1000,
+    "seconds": 10.0,
+    "validation_loss": 1.1
+  },
+  {
+    "accuracy": 0.7,
+    "actual_epsilon": 7.999,
+    "config": {
+      "alpha": 0.5,
+      "lr": 0.001,
+      "method": "gh",
+      "r": 2.8312235256706146,
+      "seed": 20261112,
+      "stage": "D",
+      "steps": 250
+    },
+    "peak_allocated_bytes": 1000,
+    "seconds": 10.0,
+    "validation_loss": 1.1
+  }
+]

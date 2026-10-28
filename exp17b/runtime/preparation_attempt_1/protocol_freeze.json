@@ -1,0 +1,186 @@
+{
+  "assets": {
+    "cache/huggingface/hub/models--timm--vit_tiny_patch16_224.augreg_in21k_ft_in1k/snapshots/7d3afdd0cf93ad84d986eb2d6bcc5812ebd0b106/model.safetensors": "fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed",
+    "data/cifar-100-python/meta": "a5d4786345c961390f865e93b434dbd5c6904ce880667e0cb888c97d449f28b9",
+    "data/cifar-100-python/train": "735e79b04f092ca3d2e6d07f368c0a7d70d48c48d28865950cc24454cf45129b",
+    "exp9/results/cv_split.npz": "205005831d63a9aa17091038faefc8e87c3cf38b5b99e24c8782c50b2614744e"
+  },
+  "calibration": {
+    "final": {
+      "actual_epsilon": 7.999352550400695,
+      "delta": 1e-05,
+      "noise_multiplier": 0.6313705444335938,
+      "nu_squared": 0.0003587658879405354,
+      "population": 50000,
+      "sample_rate": 0.02,
+      "stage": "final",
+      "steps": 250
+    },
+    "search": {
+      "actual_epsilon": 7.999685605892361,
+      "delta": 1e-05,
+      "noise_multiplier": 0.6417465209960938,
+      "nu_squared": 0.00037065473748953075,
+      "population": 45000,
+      "sample_rate": 0.022222222222222223,
+      "stage": "search",
+      "steps": 225
+    }
+  },
+  "code": {
+    "__init__.py": "025309b76258c93b601e6edc2ddcfa51a66690f9eab458250e8d7f179cf9e03a",
+    "clipping.py": "db2ee7a8818a7249691d14e5dc48342e174460c845b0b9ab3329eb7cd29fa465",
+    "common.py": "ff4ef5bd74b274f3f43e34904341e75e7b9c328296ffb478991320c5a3ca7503",
+    "cv_model.py": "de7b23603dc94b1f5b6000a85d8f8b4485a5a81b1e9fcfdabf96daa21cf4d38c",
+    "data.py": "acb8a57f7e8df54a9820219833aac877c7f7b9cc2fc97d7da4ab02ecf2d69a23",
+    "mechanism.py": "654817b719edef7615a4627ac7945e12f559f4e58152e79de02bbae7d429557d",
+    "monte_carlo.py": "0ec28e954ea7daa5edeb7d18af3eefe55d98d499f59c46cb10b533c045216e81",
+    "optimizer.py": "cbdd85a255f3f02b9de910b48a28e43e626f1e8fb87a378046958c72fa47d6fa",
+    "pipeline.py": "6828d2b3b30ec76bd2691dd83ce1e7dd351a0dd8c720309b47dec3d21e41fd3c",
+    "prepare.py": "a5e13339e8f27cf183422c1685025a871e609101f02b04726673711ce188be31",
+    "privacy.py": "42040440322f66fc7278e2732e5f8a5b2507c28516cd2b3a1bcfc6cdf4154f37",
+    "report.py": "b92b77e0ad45e7303bbc3663cbf5643c310f6f92880df2280827f28dd21b9ffa",
+    "scheduler.py": "61a8e4d1508799a69b90d36117fccf469dd64a5e3cc02aefd820325649d53121",
+    "start_background.py": "030f69106b188e121edb88762969f971917566e179f3c548bcc40fddaad2f39f",
+    "status.py": "f3e96fb6cff22161fc76c2658d1555059dd6f1fd612412098f9b5aec87c0e3ee",
+    "tests/test_mechanism.py": "57e41545430ee9b4750cfa09addd2efb0d0fa3af3b50d3474dbb772e0ddbf5c0",
+    "tests/test_models.py": "54c47752359a4d13a48cebed061beea9a28d1a56ca9ccf679e7f9c86feceb787",
+    "tests/test_optimizer.py": "d52d1f5ebe402aa6076ffa6019f0afc6c700b1773a065801477a11ce12392c27",
+    "tests/test_privacy.py": "c3b5362ada16e8ef5a02c8969b99348a9fa711964a1b31025d28de72f56c3f4f",
+    "tests/test_workflow.py": "1598aa38d58f3de582871d9ae35db33932765e325b74ecc2ca6b207c04db0e1a",
+    "train.py": "ca863bfd4a701c9a7abd88340daca8f3fd09e35767662905d636863fda82823f"
+  },
+  "environment": {
+    "numpy": "2.4.4",
+    "opacus": "1.6.0",
+    "safetensors": "0.8.0",
+    "scipy": "1.17.1",
+    "timm": "1.0.29",
+    "torch": "2.13.0+cu126",
+    "torchvision": "0.28.0+cu126"
+  },
+  "executable": "/home/longt29/miniconda3/envs/curve/bin/python",
+  "gpu": "index, name, driver_version, memory.total [MiB]\n0, NVIDIA GeForce RTX 3080 Ti, 570.133.20, 12288 MiB\n1, NVIDIA GeForce RTX 3080 Ti, 570.133.20, 12288 MiB\n2, NVIDIA GeForce RTX 3080 Ti, 570.133.20, 12288 MiB\n3, NVIDIA GeForce RTX 3080 Ti, 570.133.20, 12288 MiB\n",
+  "protocol": {
+    "B": {
+      "configurations": 7,
+      "seeds": [
+        20261101,
+        20261102,
+        20261103
+      ],
+      "steps": 50
+    },
+    "C": {
+      "configurations": 3,
+      "seeds": [
+        20261104,
+        20261105,
+        20261106,
+        20261107,
+        20261108
+      ],
+      "steps": 225
+    },
+    "C2": {
+      "configurations": 4,
+      "r": [
+        0,
+        1
+      ],
+      "seeds": [
+        20261104,
+        20261105,
+        20261106
+      ],
+      "steps": 225
+    },
+    "D": {
+      "configurations": [
+        3,
+        5
+      ],
+      "seeds": [
+        20261111,
+        20261112,
+        20261113,
+        20261114,
+        20261115,
+        20261116,
+        20261117,
+        20261118,
+        20261119,
+        20261120
+      ],
+      "steps": 250
+    },
+    "alphas": [
+      0,
+      0.25,
+      0.5,
+      1
+    ],
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "clip": 30.0,
+    "dataset": "CIFAR-100",
+    "delta": 1e-05,
+    "dtype": "float32",
+    "eps": 1e-08,
+    "epsilon": 8.0,
+    "expected_batch": 1000,
+    "final": {
+      "population": 50000,
+      "steps": 250
+    },
+    "gpus": [
+      2,
+      3
+    ],
+    "interpretation": "Fixed-state Monte Carlo does not establish adaptive training utility. Curvature comparisons must match r, learning rate and seed. Official test has historical exposure.",
+    "lr": 0.001187378144539193,
+    "mc": {
+      "histories": 10,
+      "paths": [
+        "constant",
+        "alternating",
+        "varying",
+        "sparse"
+      ],
+      "r": [
+        0,
+        1,
+        2.8312235256706146
+      ],
+      "samples": 100000,
+      "seed": 17002,
+      "snr": [
+        0,
+        0.25,
+        0.5,
+        1,
+        2,
+        4
+      ],
+      "t": [
+        1,
+        2,
+        10,
+        50,
+        250
+      ]
+    },
+    "model": "pretrained ViT-Tiny",
+    "physical_batch": 250,
+    "privacy": "Each run separately accounted by Opacus RDP. Short runs retain 225-step sigma. No joint epsilon=8 claim for tuning and repetitions. Validation assumed public; raw diagnostics and checkpoints are private audit artifacts.",
+    "r": 2.8312235256706146,
+    "resume": "Atomic full-state checkpoints every 10 steps; source/assets/config and artifact hashes required; no silent retry.",
+    "search": {
+      "population": 45000,
+      "steps": 225
+    },
+    "selection": "B: per method rank by mean validation CE ascending, mean accuracy descending, alpha ascending. C2: choose positive same-r Smooth-minus-GH mean CE improvement exceeding main-r improvement; compare all r on the same three C2 seeds. Largest improvement wins, tie lower r.",
+    "weight_decay": 0.0
+  },
+  "python": "3.11.15 (main, Jun 11 2026, 15:20:16) [GCC 14.3.0]"
+}

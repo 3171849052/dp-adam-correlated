@@ -1,0 +1,84 @@
+.......F................                                                 [100%]
+=================================== FAILURES ===================================
+_________________ test_small_mc_reproducible_and_risk_identity _________________
+
+tmp_path = PosixPath('/media/data/data/lt/dp-adam-correlated/exp17b/runtime/pytest_tmp/test_small_mc_reproducible_and0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f7da40f7cd0>
+
+    def test_small_mc_reproducible_and_risk_identity(tmp_path,monkeypatch):
+        monkeypatch.setattr(mc,'RESULTS',tmp_path)
+        protocol=dict(PROTOCOL,mc=dict(PROTOCOL['mc'],histories=2,samples=1000,t=[1,2],snr=[0,1]))
+        monkeypatch.setattr(mc,'PROTOCOL',protocol)
+        save(tmp_path/'protocol_freeze.json',{'calibration':{'search':{'nu_squared':.01}}})
+>       mc.run()
+
+exp17b/tests/test_monte_carlo.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def run():
+        identity=sha(RESULTS/'protocol_freeze.json')
+        marker=RESULTS/'mc_complete.json'
+        if marker.exists():
+            done=read(marker)
+            assert done['identity']==identity
+            for name,value in done['hashes'].items(): assert sha(RESULTS/name)==value
+            return
+        torch.set_num_threads(2)
+        spec=PROTOCOL['mc'];nu2=read(RESULTS/'protocol_freeze.json')['calibration']['search']['nu_squared'];nu=nu2**.5
+        rows=[];paired=[];histories=[];oracle=[];start=time.monotonic()
+        # Separate generators: no history draw can consume the current-noise stream.
+        history_rng=np.random.default_rng(spec['seed']);current_rng=np.random.default_rng(spec['seed']+1)
+        for path in spec['paths']:
+            for t in spec['t']:
+                for snr in spec['snr']:
+                    g=snr*nu
+                    for h in range(spec['histories']):
+                        j=np.arange(1,t,dtype=float)
+                        clean={'constant':np.full(t-1,g),'alternating':g*(-1.)**(t-j),
+                               'varying':g*(.25+1.5*j/max(t-1,1))+.5*nu*np.sin(j/3),
+                               'sparse':g*(j.astype(int)%5==0)}[path]
+                        historical=clean+history_rng.normal(0,nu,t-1)
+                        m=v=0.
+                        for value in historical: m=.9*m+.1*value;v=.999*v+.001*value*value
+                        scene=dict(path=path,t=t,snr=snr,history=h)
+                        histories.append(dict(**scene,g=g,m=m,v=v,clean=clean.tolist(),private_history=historical.tolist()))
+                        x=torch.from_numpy(g+current_rng.normal(0,nu,spec['samples']))
+                        mt,vt=torch.tensor(m,dtype=torch.float64),torch.tensor(v,dtype=torch.float64)
+                        B,D=.1/(1-.9**t),.001/(1-.999**t)
+                        for r in spec['r']:
+                            target=scalar_f(torch.tensor(g,dtype=torch.float64),.9*m/(1-.9**t),B,.999*v/(1-.999**t),D,r,nu2).item()
+                            base=directions('smooth',x,mt,vt,t,r,nu2,0)[0]
+                            base_err=(base-target).square();baseline=base_err.mean().item()
+                            corrections={method:directions(method,x,mt,vt,t,r,nu2,1)[1] for method in (['gh'] if r==0 else ['lc','gh'])}
+                            for method,c in corrections.items():
+                                denominator=c.square().mean().item()
+                                optimal=((base-target)*c).mean().item()/denominator if denominator else 0.
+                                oracle.append(dict(**scene,r=r,method=method,alpha_unconstrained=optimal,alpha_clipped=float(np.clip(optimal,0,1))))
+                            for method in ['smooth']+list(corrections):
+>                               for alpha in ([0.] if method=='smooth' else spec['alphas']):
+                                                                            ^^^^^^^^^^^^^^
+E                               KeyError: 'alphas'
+
+exp17b/monte_carlo.py:56: KeyError
+=============================== warnings summary ===============================
+exp17b/tests/test_mechanism.py::MechanismTests::test_clipping_variable_microbatches
+exp17b/tests/test_models.py::test_vit_clipping
+exp17b/tests/test_models.py::ModelTests::test_clipping
+  /media/data/data/lt/dp-adam-correlated/exp17b/clipping.py:8: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    losses.sum().backward(retain_graph=True)
+
+exp17b/tests/test_mechanism.py::MechanismTests::test_clipping_variable_microbatches
+exp17b/tests/test_models.py::test_vit_clipping
+exp17b/tests/test_models.py::ModelTests::test_clipping
+  /media/data/data/lt/dp-adam-correlated/exp17b/clipping.py:13: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    (losses * coefficients).sum().backward()
+
+exp17b/tests/test_privacy.py::PrivacyTests::test_both_horizons_and_empty_step
+exp17b/tests/test_workflow.py::test_short_budget_is_not_eight
+  /home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED exp17b/tests/test_monte_carlo.py::test_small_mc_reproducible_and_risk_identity
+1 failed, 23 passed, 8 warnings in 7.28s

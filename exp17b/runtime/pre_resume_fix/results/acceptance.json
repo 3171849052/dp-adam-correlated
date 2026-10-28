@@ -1,0 +1,47 @@
+{
+  "freeze_sha256": "907eff77023d3d9a45dfb8cc7f8d2136f2984c85a576c3a719626b4e448772ba",
+  "smoke": [
+    {
+      "alpha": 0.0,
+      "horizon": "search",
+      "lr": 0.001187378144539193,
+      "method": "smooth",
+      "r": 2.8312235256706146,
+      "seed": 20261028,
+      "stage": "smoke",
+      "steps": 2
+    },
+    {
+      "alpha": 1.0,
+      "horizon": "search",
+      "lr": 0.001187378144539193,
+      "method": "lc",
+      "r": 2.8312235256706146,
+      "seed": 20261028,
+      "stage": "smoke",
+      "steps": 2
+    },
+    {
+      "alpha": 0.5,
+      "horizon": "search",
+      "lr": 0.001187378144539193,
+      "method": "gh",
+      "r": 2.8312235256706146,
+      "seed": 20261028,
+      "stage": "smoke",
+      "steps": 2
+    },
+    {
+      "alpha": 1.0,
+      "horizon": "final",
+      "lr": 0.001187378144539193,
+      "method": "gh",
+      "r": 0.0,
+      "seed": 20261028,
+      "stage": "smoke",
+      "steps": 2
+    }
+  ],
+  "status": "passed",
+  "unit_tests_sha256": "6e6a78e47f6fd0088c041d373e2ca993fb7096618827389e0c103c66c8e45657"
+}
