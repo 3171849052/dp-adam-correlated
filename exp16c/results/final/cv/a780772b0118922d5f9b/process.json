@@ -1,0 +1,17 @@
+{
+  "task": "cv",
+  "method": "momentum-mf-sgd-b2lt",
+  "lr": 0.5,
+  "clip": 3.0,
+  "eps_scale": null,
+  "seed": 20261115,
+  "stage": "final",
+  "smoke_phase": "search",
+  "replicate": 0,
+  "status": "running",
+  "gpu": 3,
+  "pid": 3924527,
+  "started": 1793208856.5542746,
+  "log": "/media/data/data/lt/dp-adam-correlated/exp16c/results/final/cv/a780772b0118922d5f9b/train.log",
+  "command": "CUDA_VISIBLE_DEVICES=3 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp16c.train --trial-json '{\"clip\": 3.0, \"eps_scale\": null, \"lr\": 0.5, \"method\": \"momentum-mf-sgd-b2lt\", \"replicate\": 0, \"seed\": 20261115, \"smoke_phase\": \"search\", \"stage\": \"final\", \"task\": \"cv\"}'"
+}

@@ -1,0 +1,15 @@
+............................                                             [100%]
+=============================== warnings summary ===============================
+exp16c/tests/test_protocol.py::test_clipped_accumulation_matches_per_example[cpu]
+  /media/data/data/lt/dp-adam-correlated/exp16c/clipping.py:55: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    losses.sum().backward(retain_graph=True)
+
+exp16c/tests/test_protocol.py::test_clipped_accumulation_matches_per_example[cpu]
+  /media/data/data/lt/dp-adam-correlated/exp16c/clipping.py:60: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+    (losses * coefficients).sum().backward()
+
+exp16c/tests/test_protocol.py::test_clipped_accumulation_matches_per_example[cuda:0]
+  sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+28 passed, 3 warnings in 7.19s

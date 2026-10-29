@@ -1,0 +1,7 @@
+left,right,direction,metric,units,n,mean,sd,ci95_low,ci95_high
+momentum-iid,momentum-mf-sgd-b2lt,right-minus-left,accuracy,percentage_points,10,1.0000000000000007,2.340555645717801e-16,1.0000000000000004,1.0000000000000009
+momentum-iid,momentum-mf-sgd-b2lt,right-minus-left,validation_loss,cross_entropy,10,0.0,0.0,0.0,0.0
+momentum-iid,momentum-mf-momentum-b2lt,right-minus-left,accuracy,percentage_points,10,2.0000000000000013,4.681111291435602e-16,2.000000000000001,2.0000000000000018
+momentum-iid,momentum-mf-momentum-b2lt,right-minus-left,validation_loss,cross_entropy,10,0.0,0.0,0.0,0.0
+momentum-mf-sgd-b2lt,momentum-mf-momentum-b2lt,right-minus-left,accuracy,percentage_points,10,1.0000000000000007,2.340555645717801e-16,1.0000000000000004,1.0000000000000009
+momentum-mf-sgd-b2lt,momentum-mf-momentum-b2lt,right-minus-left,validation_loss,cross_entropy,10,0.0,0.0,0.0,0.0

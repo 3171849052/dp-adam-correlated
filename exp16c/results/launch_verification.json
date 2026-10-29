@@ -1,0 +1,88 @@
+{
+  "status": "started_not_completed",
+  "pid": 3821350,
+  "session_id": 3821350,
+  "physical_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "active_workers": [
+    {
+      "trial_id": "bc0ef25b2c9678f6b9fe",
+      "method": "adam-mf-sgd-b2lt",
+      "seed": 20261101,
+      "gpu": 0,
+      "pid": 3821650,
+      "logical_steps": 30,
+      "log": "/media/data/data/lt/dp-adam-correlated/exp16c/results/search/cv/bc0ef25b2c9678f6b9fe/train.log"
+    },
+    {
+      "trial_id": "75de8086a1e1574afb42",
+      "method": "adam-mf-sgd-b2lt",
+      "seed": 20261101,
+      "gpu": 1,
+      "pid": 3821651,
+      "logical_steps": 31,
+      "log": "/media/data/data/lt/dp-adam-correlated/exp16c/results/search/cv/75de8086a1e1574afb42/train.log"
+    },
+    {
+      "trial_id": "18407f4130b30e5324dd",
+      "method": "adam-mf-momentum-bias-b2lt",
+      "seed": 20261101,
+      "gpu": 2,
+      "pid": 3821652,
+      "logical_steps": 32,
+      "log": "/media/data/data/lt/dp-adam-correlated/exp16c/results/search/cv/18407f4130b30e5324dd/train.log"
+    },
+    {
+      "trial_id": "7802fadd6d8ae10280c8",
+      "method": "adam-mf-momentum-bias-b2lt",
+      "seed": 20261101,
+      "gpu": 3,
+      "pid": 3821653,
+      "logical_steps": 30,
+      "log": "/media/data/data/lt/dp-adam-correlated/exp16c/results/search/cv/7802fadd6d8ae10280c8/train.log"
+    }
+  ],
+  "unit_tests_passed": 28,
+  "report_fixture_test_passed": 1,
+  "real_model_smokes_passed": 10,
+  "readonly_verified": true,
+  "code_sha256": {
+    "exp16c/__init__.py": "b1cd15dfdf0f5e51b2ef2b20033d086b00d5bd4e5792b6a4f82a61e0ae0c9694",
+    "exp16c/clipping.py": "a17abb8a2a88729e662185578c915750d2c506e31316cde415b6f8ccc5e17999",
+    "exp16c/config.py": "8fe9b23b28b5ee7de2da8555a279b963d90b2225c37f83a7948c31faad52ccb2",
+    "exp16c/cv_model.py": "de7b23603dc94b1f5b6000a85d8f8b4485a5a81b1e9fcfdabf96daa21cf4d38c",
+    "exp16c/data.py": "67c645b1d4f28703707114a1d0fede7b608c4dd413f2c34ded4074f2ede24500",
+    "exp16c/history.py": "d71e12de071efaebb344da4546b9670eb64cef7412e304d05983dab6a7fd9453",
+    "exp16c/matrices.py": "2419e24dfcc8581231c9a961028fffb2ea4ed7aa06b6b731456f7386cbdca4eb",
+    "exp16c/momentum_optimizer.py": "f9f5e354b9e5aa6c7726a52e6c188c02f8a0583b496fcf018c15a4b642e7479d",
+    "exp16c/noise.py": "e689e3a04deae96832678a1c8abf4942ae148af50b536f8387fe9a437a09fb45",
+    "exp16c/optimizer.py": "4c011d4faee7ddaa1e6829dad6a48495757757da2ac95cbc671c5467ec85dee2",
+    "exp16c/pipeline.py": "22a1535eb91455d5525285acc64bca4fc1d4f3384268c0057b2a472bf40c2a58",
+    "exp16c/privacy.py": "6e37e95ccb496245174249f30f9c3237fb809b30a031a5092e462debf2d9ac5a",
+    "exp16c/progress.py": "f5f888a1c800a93884ddce35f3932a2aeefaeb84ddd8818a691d9e74a092e7fb",
+    "exp16c/randomness.py": "f87eca3361d4f05804b18bab92dfb96b344aeac9426404e6430b92db591837c5",
+    "exp16c/report.py": "ad0b14be44b71343ef4d688b37724972efcd6866b9721303461ac6d8302dd503",
+    "exp16c/run_locked.py": "fabc8b57fff05b95b753a8370259e8963c3c2c34c43118b2b2b5b8b25d205f4b",
+    "exp16c/scheduler.py": "f2c43303c281e12d71675b606f6336b5108a8e7ff468c116c5eef93937d4c05d",
+    "exp16c/search.py": "8644151167d5bbec94e3b1b805c02dcd092c7ee8df384829b19a3683a19d1a94",
+    "exp16c/stage1.py": "0b8e7c85bf8529f427a55bb4d2e17726b983faa60c59d5b5afd25f38321687b2",
+    "exp16c/start_background.py": "1c17dba7ed575403c3b154e124d3ca463da2ae1edd11d82e6573a314f1bada66",
+    "exp16c/stpex_optimizer.py": "8ffeaba93dc30b6f59b7da686b0fa48e5137c114a4c7ebcee2f89016d26e1450",
+    "exp16c/support.py": "11844de1c22f3d69518d2ef06285019c32f109e36bab553343d77dc4cdd7f536",
+    "exp16c/train.py": "2350fbf392535e684b3d7140b7fbd3e70f63ce716ad541cfe15719365e5045f5"
+  },
+  "planned_new_search": 25,
+  "planned_new_review_range": [
+    16,
+    24
+  ],
+  "planned_new_formal_range": [
+    40,
+    60
+  ],
+  "final_table_rows": 90
+}

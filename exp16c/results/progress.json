@@ -1,0 +1,66 @@
+{
+  "background": {
+    "pid": 3821350,
+    "session_id": 3821350,
+    "command": "/home/longt29/miniconda3/envs/curve/bin/python -B -m exp16c.run_locked --lock-fd 3",
+    "launch_command": "/home/longt29/miniconda3/envs/curve/bin/python -B -m exp16c.start_background",
+    "log": "/media/data/data/lt/dp-adam-correlated/exp16c/results/pipeline.log",
+    "started": 1793196144.0124817
+  },
+  "pipeline_status": {
+    "stage": "search",
+    "pid": 3821350,
+    "updated": 1793196186.49132,
+    "new_trials": 25
+  },
+  "smoke": {
+    "counts": {
+      "completed": 10
+    },
+    "active": []
+  },
+  "search": {
+    "counts": {
+      "running": 4,
+      "pending": 21
+    },
+    "active": [
+      {
+        "trial_id": "bc0ef25b2c9678f6b9fe",
+        "method": "adam-mf-sgd-b2lt",
+        "seed": 20261101,
+        "gpu": 0,
+        "pid": 3821650,
+        "logical_steps": 30,
+        "log": "/media/data/data/lt/dp-adam-correlated/exp16c/results/search/cv/bc0ef25b2c9678f6b9fe/train.log"
+      },
+      {
+        "trial_id": "75de8086a1e1574afb42",
+        "method": "adam-mf-sgd-b2lt",
+        "seed": 20261101,
+        "gpu": 1,
+        "pid": 3821651,
+        "logical_steps": 31,
+        "log": "/media/data/data/lt/dp-adam-correlated/exp16c/results/search/cv/75de8086a1e1574afb42/train.log"
+      },
+      {
+        "trial_id": "18407f4130b30e5324dd",
+        "method": "adam-mf-momentum-bias-b2lt",
+        "seed": 20261101,
+        "gpu": 2,
+        "pid": 3821652,
+        "logical_steps": 32,
+        "log": "/media/data/data/lt/dp-adam-correlated/exp16c/results/search/cv/18407f4130b30e5324dd/train.log"
+      },
+      {
+        "trial_id": "7802fadd6d8ae10280c8",
+        "method": "adam-mf-momentum-bias-b2lt",
+        "seed": 20261101,
+        "gpu": 3,
+        "pid": 3821653,
+        "logical_steps": 30,
+        "log": "/media/data/data/lt/dp-adam-correlated/exp16c/results/search/cv/7802fadd6d8ae10280c8/train.log"
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "task": "cv",
+  "dataset": "local CIFAR-100",
+  "model": "local ViT-Tiny",
+  "offline": true,
+  "methods": [
+    "adam-mf-sgd-b2lt",
+    "adam-mf-momentum-bias-b2lt",
+    "adam-mf-momentum-b2lt",
+    "adam-mf-sgd-stp-b2lt",
+    "adam-iid",
+    "stpex-mf-momentum-bias-b2lt",
+    "momentum-iid",
+    "momentum-mf-sgd-b2lt",
+    "momentum-mf-momentum-b2lt"
+  ],
+  "epochs": 5,
+  "search_train": 45000,
+  "internal_validation": 5000,
+  "formal_train": 50000,
+  "official_test": 10000,
+  "logical_batch": 1000,
+  "physical_batch": 250,
+  "precision": "FP32",
+  "epsilon": 8,
+  "delta": 1e-05,
+  "participations": 5,
+  "calibration": "GDP",
+  "sampling_amplification": false,
+  "search_seed": 20261101,
+  "review_seeds": [
+    20261102,
+    20261103
+  ],
+  "formal_seeds": [
+    20261111,
+    20261112,
+    20261113,
+    20261114,
+    20261115,
+    20261116,
+    20261117,
+    20261118,
+    20261119,
+    20261120
+  ],
+  "matrix_source": "exp16a/results/matrices",
+  "matrix_horizons": [
+    225,
+    250
+  ],
+  "selection": "three-seed internal accuracy mean descending, loss mean ascending; Adam incumbent retained on exact tie",
+  "new_search": 25,
+  "new_review_range": [
+    16,
+    24
+  ],
+  "new_formal_range": [
+    40,
+    60
+  ],
+  "formal_total_including_reused": 90
+}

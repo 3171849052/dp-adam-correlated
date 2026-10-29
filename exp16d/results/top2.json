@@ -1,0 +1,98 @@
+{
+  "adam3-iid": [
+    {
+      "task": "cv",
+      "method": "adam3-iid",
+      "lr": 0.00015,
+      "clip": 30,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam3-iid",
+      "lr": 0.00015,
+      "clip": 60,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    }
+  ],
+  "adam3-mf-sgd-b2lt": [
+    {
+      "task": "cv",
+      "method": "adam3-mf-sgd-b2lt",
+      "lr": 0.0004,
+      "clip": 20,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam3-mf-sgd-b2lt",
+      "lr": 0.0003,
+      "clip": 20,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    }
+  ],
+  "adam3-mf-momentum-b2lt": [
+    {
+      "task": "cv",
+      "method": "adam3-mf-momentum-b2lt",
+      "lr": 0.0005,
+      "clip": 30,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam3-mf-momentum-b2lt",
+      "lr": 0.0007,
+      "clip": 10,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    }
+  ],
+  "adam3-mf-momentum-bias-b2lt": [
+    {
+      "task": "cv",
+      "method": "adam3-mf-momentum-bias-b2lt",
+      "lr": 0.0004,
+      "clip": 40,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam3-mf-momentum-bias-b2lt",
+      "lr": 0.0004,
+      "clip": 20,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    }
+  ]
+}

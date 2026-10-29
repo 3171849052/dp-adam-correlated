@@ -1,0 +1,195 @@
+{
+  "methods": [
+    "adam3-iid",
+    "adam3-mf-sgd-b2lt",
+    "adam3-mf-momentum-b2lt",
+    "adam3-mf-momentum-bias-b2lt"
+  ],
+  "grid": {
+    "adam3-iid": [
+      [
+        0.0001,
+        10
+      ],
+      [
+        0.00015,
+        30
+      ],
+      [
+        0.0002,
+        30
+      ],
+      [
+        0.00015,
+        60
+      ],
+      [
+        0.0003,
+        30
+      ]
+    ],
+    "adam3-mf-sgd-b2lt": [
+      [
+        0.0001,
+        20
+      ],
+      [
+        0.0002,
+        20
+      ],
+      [
+        0.0003,
+        20
+      ],
+      [
+        0.0002,
+        40
+      ],
+      [
+        0.0004,
+        20
+      ]
+    ],
+    "adam3-mf-momentum-b2lt": [
+      [
+        0.0003,
+        10
+      ],
+      [
+        0.0005,
+        10
+      ],
+      [
+        0.0007,
+        10
+      ],
+      [
+        0.0005,
+        30
+      ],
+      [
+        0.0004,
+        20
+      ]
+    ],
+    "adam3-mf-momentum-bias-b2lt": [
+      [
+        0.0002,
+        20
+      ],
+      [
+        0.0004,
+        20
+      ],
+      [
+        0.0006,
+        20
+      ],
+      [
+        0.0004,
+        40
+      ],
+      [
+        0.0004,
+        10
+      ]
+    ]
+  },
+  "search": {
+    "task": "cv",
+    "method": "adam3-iid",
+    "lr": 0.0001,
+    "clip": 10,
+    "eps_scale": null,
+    "seed": 20261101,
+    "stage": "search",
+    "smoke_phase": "search",
+    "replicate": 0,
+    "epochs": 5,
+    "total_steps": 225,
+    "logical_batch_size": 1000,
+    "physical_batch_size": 250,
+    "optimizer": {
+      "name": "AdaM3",
+      "second_moment": "updated_uncorrected_m_squared",
+      "nesterov": false,
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "lr": 0.0001
+    },
+    "privacy": {
+      "epsilon": 8.0,
+      "delta": 1e-05,
+      "k": 5,
+      "b_participation": 45,
+      "max_grad_norm": 10,
+      "adjacency": "add_remove_zero_out",
+      "sampling_amplification": false
+    },
+    "precision": "FP32",
+    "full_finetuning": true,
+    "stp": null,
+    "evaluation": "internal",
+    "participation": "fixed epoch repeated order",
+    "noise_seed": 20261102,
+    "dropout_seed": "seed+100000+logical_step"
+  },
+  "formal": {
+    "task": "cv",
+    "method": "adam3-iid",
+    "lr": 0.0001,
+    "clip": 10,
+    "eps_scale": null,
+    "seed": 20261111,
+    "stage": "final",
+    "smoke_phase": "search",
+    "replicate": 0,
+    "epochs": 5,
+    "total_steps": 250,
+    "logical_batch_size": 1000,
+    "physical_batch_size": 250,
+    "optimizer": {
+      "name": "AdaM3",
+      "second_moment": "updated_uncorrected_m_squared",
+      "nesterov": false,
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "lr": 0.0001
+    },
+    "privacy": {
+      "epsilon": 8.0,
+      "delta": 1e-05,
+      "k": 5,
+      "b_participation": 50,
+      "max_grad_norm": 10,
+      "adjacency": "add_remove_zero_out",
+      "sampling_amplification": false
+    },
+    "precision": "FP32",
+    "full_finetuning": true,
+    "stp": null,
+    "evaluation": "official",
+    "participation": "fixed epoch repeated order",
+    "noise_seed": 20261112,
+    "dropout_seed": "seed+100000+logical_step"
+  },
+  "coarse_trials": 20,
+  "review_trials": 16,
+  "formal_trials": 40,
+  "extra_controlled_trials": [
+    0,
+    6
+  ],
+  "gpu_smokes": 8,
+  "physical_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "dependency": "exp16c successful completion"
+}

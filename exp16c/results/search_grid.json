@@ -1,0 +1,279 @@
+{
+  "trials": [
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-b2lt",
+      "lr": 0.003,
+      "clip": 12.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-sgd-b2lt",
+      "lr": 0.003,
+      "clip": 24.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-b2lt",
+      "lr": 0.003,
+      "clip": 12.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-mf-momentum-bias-b2lt",
+      "lr": 0.003,
+      "clip": 24.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "stpex-mf-momentum-bias-b2lt",
+      "lr": 0.1,
+      "clip": 10.0,
+      "eps_scale": 3.0,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "stpex-mf-momentum-bias-b2lt",
+      "lr": 0.05,
+      "clip": 10.0,
+      "eps_scale": 3.0,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "stpex-mf-momentum-bias-b2lt",
+      "lr": 0.15,
+      "clip": 20.0,
+      "eps_scale": 3.0,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "stpex-mf-momentum-bias-b2lt",
+      "lr": 0.15,
+      "clip": 10.0,
+      "eps_scale": 6.0,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "stpex-mf-momentum-bias-b2lt",
+      "lr": 0.1,
+      "clip": 20.0,
+      "eps_scale": 3.0,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "stpex-mf-momentum-bias-b2lt",
+      "lr": 0.1,
+      "clip": 20.0,
+      "eps_scale": 6.0,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "momentum-iid",
+      "lr": 0.5,
+      "clip": 3.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "momentum-iid",
+      "lr": 1.0,
+      "clip": 1.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "momentum-iid",
+      "lr": 1.0,
+      "clip": 3.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "momentum-iid",
+      "lr": 2.0,
+      "clip": 0.3,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "momentum-iid",
+      "lr": 2.0,
+      "clip": 1.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-sgd-b2lt",
+      "lr": 0.5,
+      "clip": 3.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-sgd-b2lt",
+      "lr": 1.0,
+      "clip": 1.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-sgd-b2lt",
+      "lr": 1.0,
+      "clip": 3.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-sgd-b2lt",
+      "lr": 2.0,
+      "clip": 0.3,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-sgd-b2lt",
+      "lr": 2.0,
+      "clip": 1.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-momentum-b2lt",
+      "lr": 0.5,
+      "clip": 3.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-momentum-b2lt",
+      "lr": 1.0,
+      "clip": 1.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-momentum-b2lt",
+      "lr": 1.0,
+      "clip": 3.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-momentum-b2lt",
+      "lr": 2.0,
+      "clip": 0.3,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "momentum-mf-momentum-b2lt",
+      "lr": 2.0,
+      "clip": 1.0,
+      "eps_scale": null,
+      "seed": 20261101,
+      "stage": "search",
+      "smoke_phase": "search",
+      "replicate": 0
+    }
+  ]
+}
