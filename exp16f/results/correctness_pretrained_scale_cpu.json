@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "geometry": "scale",
+  "device": "cpu",
+  "architecture": "pretrained",
+  "embedding_repeated_tokens": true,
+  "norm_max_abs_error": 3.814697265625e-06,
+  "coefficient_max_abs_error": 1.4901161193847656e-08,
+  "accumulated_gradient_max_abs_error": 4.284083843231201e-08,
+  "reference": "independent one-sample autograd over all BERT parameters"
+}

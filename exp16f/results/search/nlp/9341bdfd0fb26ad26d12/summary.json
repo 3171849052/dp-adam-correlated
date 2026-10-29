@@ -1,0 +1,16 @@
+{
+  "task": "nlp",
+  "method": "adam-stp-mf-momentum-b2lt",
+  "lr": 0.00801950745,
+  "clip": 600,
+  "eps_scale": 0.00164317,
+  "seed": 20261101,
+  "stage": "search",
+  "smoke_phase": "search",
+  "replicate": 0,
+  "trial_id": "9341bdfd0fb26ad26d12",
+  "status": "non_finite",
+  "error": "FloatingPointError: Nonfinite Adam state",
+  "traceback": "Traceback (most recent call last):\n  File \"/media/data/data/lt/dp-adam-correlated/exp16f/train.py\", line 115, in run\n    if logical.finish_microbatch():\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/media/data/data/lt/dp-adam-correlated/exp16f/optimizer.py\", line 30, in finish_microbatch\n    if not all(torch.isfinite(p).all() and torch.isfinite(self.optimizer.state[p]['exp_avg_sq']).all() for p in self.parameters):raise FloatingPointError('Nonfinite Adam state')\n                                                                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFloatingPointError: Nonfinite Adam state\n",
+  "seconds": 85.41437282715924
+}

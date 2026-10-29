@@ -1,0 +1,17 @@
+{
+  "pid": 49098,
+  "started": 1793250598.6316202,
+  "session_detached": true,
+  "gpus": [
+    1,
+    2,
+    3
+  ],
+  "worker_device": "cuda:0",
+  "cv_max_workers_per_gpu": 1,
+  "nlp_max_workers_per_gpu": 2,
+  "nlp_max_workers": 6,
+  "python": "/home/longt29/miniconda3/envs/curve/bin/python",
+  "resume": "/home/longt29/miniconda3/envs/curve/bin/python -B -m exp16f.start_background",
+  "log": "/media/data/data/lt/dp-adam-correlated/exp16f/results/pipeline.log"
+}

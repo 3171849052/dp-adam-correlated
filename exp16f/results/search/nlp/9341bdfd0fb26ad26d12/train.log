@@ -1,0 +1,40 @@
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 28203.08it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+{"epoch": 1, "step": 62, "train_loss": 0.692820066390499, "clip_fraction": 0.04233870967741935, "epsilon": 2.7371719971574153, "accuracy": 0.6094597120957188, "validation_loss": 0.6747721830558099, "validation_examples": 5349}
+{"epoch": 2, "step": 124, "train_loss": 0.6858648218954763, "clip_fraction": 0.0, "epsilon": 4.397892529539403, "accuracy": 0.4901850813236119, "validation_loss": 0.69942878299527, "validation_examples": 5349}
+{"epoch": 3, "step": 186, "train_loss": 0.706236575218939, "clip_fraction": 0.0, "epsilon": 5.749881112284451, "accuracy": 0.45859039072723873, "validation_loss": 0.7055224299007408, "validation_examples": 5349}
+{"epoch": 4, "step": 248, "train_loss": 0.7032939049505418, "clip_fraction": 0.0, "epsilon": 6.929664239906678, "accuracy": 0.5315012151804076, "validation_loss": 0.6915091847811798, "validation_examples": 5349}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/media/data/data/lt/dp-adam-correlated/exp16f/train.py", line 169, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp16f/train.py", line 166, in main
+    cfg=Trial(**json.loads(parser.parse_args().trial_json));run(cfg)
+                                                            ^^^^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp16f/train.py", line 115, in run
+    if logical.finish_microbatch():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp16f/optimizer.py", line 30, in finish_microbatch
+    if not all(torch.isfinite(p).all() and torch.isfinite(self.optimizer.state[p]['exp_avg_sq']).all() for p in self.parameters):raise FloatingPointError('Nonfinite Adam state')
+                                                                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FloatingPointError: Nonfinite Adam state
