@@ -1,0 +1,822 @@
+{
+  "trials": [
+    {
+      "task": "cv",
+      "method": "adam-stp-mf-momentum-b2lt",
+      "lr": 0.006,
+      "clip": 100,
+      "eps_scale": 0.05,
+      "seed": 20261102,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-stp-mf-momentum-b2lt",
+      "lr": 0.006,
+      "clip": 100,
+      "eps_scale": 0.05,
+      "seed": 20261103,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-stp-mf-momentum-b2lt",
+      "lr": 0.0045000000000000005,
+      "clip": 100,
+      "eps_scale": 0.05,
+      "seed": 20261102,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-stp-mf-momentum-b2lt",
+      "lr": 0.0045000000000000005,
+      "clip": 100,
+      "eps_scale": 0.05,
+      "seed": 20261103,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-stp-mf-momentum-bias-b2lt",
+      "lr": 0.003,
+      "clip": 200,
+      "eps_scale": 0.05,
+      "seed": 20261102,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-stp-mf-momentum-bias-b2lt",
+      "lr": 0.003,
+      "clip": 200,
+      "eps_scale": 0.05,
+      "seed": 20261103,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-stp-mf-momentum-bias-b2lt",
+      "lr": 0.003,
+      "clip": 60.0,
+      "eps_scale": 0.05,
+      "seed": 20261102,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam-stp-mf-momentum-bias-b2lt",
+      "lr": 0.003,
+      "clip": 60.0,
+      "eps_scale": 0.05,
+      "seed": 20261103,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam3-stp-iid",
+      "lr": 0.0002,
+      "clip": 100,
+      "eps_scale": 0.05,
+      "seed": 20261102,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam3-stp-iid",
+      "lr": 0.0002,
+      "clip": 100,
+      "eps_scale": 0.05,
+      "seed": 20261103,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam3-stp-iid",
+      "lr": 0.0001,
+      "clip": 100,
+      "eps_scale": 0.05,
+      "seed": 20261102,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam3-stp-iid",
+      "lr": 0.0001,
+      "clip": 100,
+      "eps_scale": 0.05,
+      "seed": 20261103,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam3-stp-mf-sgd-b2lt",
+      "lr": 0.0004,
+      "clip": 600,
+      "eps_scale": 0.05,
+      "seed": 20261102,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam3-stp-mf-sgd-b2lt",
+      "lr": 0.0004,
+      "clip": 600,
+      "eps_scale": 0.05,
+      "seed": 20261103,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam3-stp-mf-sgd-b2lt",
+      "lr": 0.0004,
+      "clip": 200,
+      "eps_scale": 0.25,
+      "seed": 20261102,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam3-stp-mf-sgd-b2lt",
+      "lr": 0.0004,
+      "clip": 200,
+      "eps_scale": 0.25,
+      "seed": 20261103,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam3-stp-mf-momentum-b2lt",
+      "lr": 0.0006,
+      "clip": 300,
+      "eps_scale": 0.05,
+      "seed": 20261102,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam3-stp-mf-momentum-b2lt",
+      "lr": 0.0006,
+      "clip": 300,
+      "eps_scale": 0.05,
+      "seed": 20261103,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam3-stp-mf-momentum-b2lt",
+      "lr": 0.0006,
+      "clip": 600,
+      "eps_scale": 0.05,
+      "seed": 20261102,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam3-stp-mf-momentum-b2lt",
+      "lr": 0.0006,
+      "clip": 600,
+      "eps_scale": 0.05,
+      "seed": 20261103,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam3-stp-mf-momentum-bias-b2lt",
+      "lr": 0.0004,
+      "clip": 600,
+      "eps_scale": 0.05,
+      "seed": 20261102,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam3-stp-mf-momentum-bias-b2lt",
+      "lr": 0.0004,
+      "clip": 600,
+      "eps_scale": 0.05,
+      "seed": 20261103,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam3-stp-mf-momentum-bias-b2lt",
+      "lr": 0.0004,
+      "clip": 200,
+      "eps_scale": 0.25,
+      "seed": 20261102,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "cv",
+      "method": "adam3-stp-mf-momentum-bias-b2lt",
+      "lr": 0.0004,
+      "clip": 200,
+      "eps_scale": 0.25,
+      "seed": 20261103,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-stp-mf-momentum-b2lt",
+      "lr": 0.0213853532,
+      "clip": 200,
+      "eps_scale": 0.00164317,
+      "seed": 20261102,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-stp-mf-momentum-b2lt",
+      "lr": 0.0213853532,
+      "clip": 200,
+      "eps_scale": 0.00164317,
+      "seed": 20261103,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-stp-mf-momentum-b2lt",
+      "lr": 0.0160390149,
+      "clip": 200,
+      "eps_scale": 0.00164317,
+      "seed": 20261102,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-stp-mf-momentum-b2lt",
+      "lr": 0.0160390149,
+      "clip": 200,
+      "eps_scale": 0.00164317,
+      "seed": 20261103,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-stp-mf-momentum-bias-b2lt",
+      "lr": 0.0106926766,
+      "clip": 500,
+      "eps_scale": 0.000328634,
+      "seed": 20261102,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-stp-mf-momentum-bias-b2lt",
+      "lr": 0.0106926766,
+      "clip": 500,
+      "eps_scale": 0.000328634,
+      "seed": 20261103,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-stp-mf-momentum-bias-b2lt",
+      "lr": 0.0106926766,
+      "clip": 500,
+      "eps_scale": 0.000164317,
+      "seed": 20261102,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam-stp-mf-momentum-bias-b2lt",
+      "lr": 0.0106926766,
+      "clip": 500,
+      "eps_scale": 0.000164317,
+      "seed": 20261103,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam3-stp-iid",
+      "lr": 0.000375,
+      "clip": 100,
+      "eps_scale": 0.00164317,
+      "seed": 20261102,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam3-stp-iid",
+      "lr": 0.000375,
+      "clip": 100,
+      "eps_scale": 0.00164317,
+      "seed": 20261103,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam3-stp-iid",
+      "lr": 0.00075,
+      "clip": 100,
+      "eps_scale": 0.00164317,
+      "seed": 20261102,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam3-stp-iid",
+      "lr": 0.00075,
+      "clip": 100,
+      "eps_scale": 0.00164317,
+      "seed": 20261103,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam3-stp-mf-sgd-b2lt",
+      "lr": 0.0015,
+      "clip": 3000,
+      "eps_scale": 0.00164317,
+      "seed": 20261102,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam3-stp-mf-sgd-b2lt",
+      "lr": 0.0015,
+      "clip": 3000,
+      "eps_scale": 0.00164317,
+      "seed": 20261103,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam3-stp-mf-sgd-b2lt",
+      "lr": 0.0015,
+      "clip": 1500,
+      "eps_scale": 0.00164317,
+      "seed": 20261102,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam3-stp-mf-sgd-b2lt",
+      "lr": 0.0015,
+      "clip": 1500,
+      "eps_scale": 0.00164317,
+      "seed": 20261103,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam3-stp-mf-momentum-b2lt",
+      "lr": 0.002,
+      "clip": 1200,
+      "eps_scale": 0.00164317,
+      "seed": 20261102,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam3-stp-mf-momentum-b2lt",
+      "lr": 0.002,
+      "clip": 1200,
+      "eps_scale": 0.00164317,
+      "seed": 20261103,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam3-stp-mf-momentum-b2lt",
+      "lr": 0.002,
+      "clip": 600,
+      "eps_scale": 0.00164317,
+      "seed": 20261102,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam3-stp-mf-momentum-b2lt",
+      "lr": 0.002,
+      "clip": 600,
+      "eps_scale": 0.00164317,
+      "seed": 20261103,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam3-stp-mf-momentum-bias-b2lt",
+      "lr": 0.0011250000000000001,
+      "clip": 3000,
+      "eps_scale": 0.00164317,
+      "seed": 20261102,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam3-stp-mf-momentum-bias-b2lt",
+      "lr": 0.0011250000000000001,
+      "clip": 3000,
+      "eps_scale": 0.00164317,
+      "seed": 20261103,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam3-stp-mf-momentum-bias-b2lt",
+      "lr": 0.0011250000000000001,
+      "clip": 1500,
+      "eps_scale": 0.00164317,
+      "seed": 20261102,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    },
+    {
+      "task": "nlp",
+      "method": "adam3-stp-mf-momentum-bias-b2lt",
+      "lr": 0.0011250000000000001,
+      "clip": 1500,
+      "eps_scale": 0.00164317,
+      "seed": 20261103,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0
+    }
+  ],
+  "chosen": {
+    "cv/adam-stp-mf-momentum-b2lt": [
+      {
+        "task": "cv",
+        "method": "adam-stp-mf-momentum-b2lt",
+        "lr": 0.006,
+        "clip": 100,
+        "eps_scale": 0.05,
+        "seed": 20261101,
+        "stage": "search",
+        "smoke_phase": "search",
+        "replicate": 0
+      },
+      {
+        "task": "cv",
+        "method": "adam-stp-mf-momentum-b2lt",
+        "lr": 0.0045000000000000005,
+        "clip": 100,
+        "eps_scale": 0.05,
+        "seed": 20261101,
+        "stage": "search",
+        "smoke_phase": "search",
+        "replicate": 0
+      }
+    ],
+    "cv/adam-stp-mf-momentum-bias-b2lt": [
+      {
+        "task": "cv",
+        "method": "adam-stp-mf-momentum-bias-b2lt",
+        "lr": 0.003,
+        "clip": 200,
+        "eps_scale": 0.05,
+        "seed": 20261101,
+        "stage": "search",
+        "smoke_phase": "search",
+        "replicate": 0
+      },
+      {
+        "task": "cv",
+        "method": "adam-stp-mf-momentum-bias-b2lt",
+        "lr": 0.003,
+        "clip": 60.0,
+        "eps_scale": 0.05,
+        "seed": 20261101,
+        "stage": "search",
+        "smoke_phase": "search",
+        "replicate": 0
+      }
+    ],
+    "cv/adam3-stp-iid": [
+      {
+        "task": "cv",
+        "method": "adam3-stp-iid",
+        "lr": 0.0002,
+        "clip": 100,
+        "eps_scale": 0.05,
+        "seed": 20261101,
+        "stage": "search",
+        "smoke_phase": "search",
+        "replicate": 0
+      },
+      {
+        "task": "cv",
+        "method": "adam3-stp-iid",
+        "lr": 0.0001,
+        "clip": 100,
+        "eps_scale": 0.05,
+        "seed": 20261101,
+        "stage": "search",
+        "smoke_phase": "search",
+        "replicate": 0
+      }
+    ],
+    "cv/adam3-stp-mf-sgd-b2lt": [
+      {
+        "task": "cv",
+        "method": "adam3-stp-mf-sgd-b2lt",
+        "lr": 0.0004,
+        "clip": 600,
+        "eps_scale": 0.05,
+        "seed": 20261101,
+        "stage": "search",
+        "smoke_phase": "search",
+        "replicate": 0
+      },
+      {
+        "task": "cv",
+        "method": "adam3-stp-mf-sgd-b2lt",
+        "lr": 0.0004,
+        "clip": 200,
+        "eps_scale": 0.25,
+        "seed": 20261101,
+        "stage": "search",
+        "smoke_phase": "search",
+        "replicate": 0
+      }
+    ],
+    "cv/adam3-stp-mf-momentum-b2lt": [
+      {
+        "task": "cv",
+        "method": "adam3-stp-mf-momentum-b2lt",
+        "lr": 0.0006,
+        "clip": 300,
+        "eps_scale": 0.05,
+        "seed": 20261101,
+        "stage": "search",
+        "smoke_phase": "search",
+        "replicate": 0
+      },
+      {
+        "task": "cv",
+        "method": "adam3-stp-mf-momentum-b2lt",
+        "lr": 0.0006,
+        "clip": 600,
+        "eps_scale": 0.05,
+        "seed": 20261101,
+        "stage": "search",
+        "smoke_phase": "search",
+        "replicate": 0
+      }
+    ],
+    "cv/adam3-stp-mf-momentum-bias-b2lt": [
+      {
+        "task": "cv",
+        "method": "adam3-stp-mf-momentum-bias-b2lt",
+        "lr": 0.0004,
+        "clip": 600,
+        "eps_scale": 0.05,
+        "seed": 20261101,
+        "stage": "search",
+        "smoke_phase": "search",
+        "replicate": 0
+      },
+      {
+        "task": "cv",
+        "method": "adam3-stp-mf-momentum-bias-b2lt",
+        "lr": 0.0004,
+        "clip": 200,
+        "eps_scale": 0.25,
+        "seed": 20261101,
+        "stage": "search",
+        "smoke_phase": "search",
+        "replicate": 0
+      }
+    ],
+    "nlp/adam-stp-mf-momentum-b2lt": [
+      {
+        "task": "nlp",
+        "method": "adam-stp-mf-momentum-b2lt",
+        "lr": 0.0213853532,
+        "clip": 200,
+        "eps_scale": 0.00164317,
+        "seed": 20261101,
+        "stage": "search",
+        "smoke_phase": "search",
+        "replicate": 0
+      },
+      {
+        "task": "nlp",
+        "method": "adam-stp-mf-momentum-b2lt",
+        "lr": 0.0160390149,
+        "clip": 200,
+        "eps_scale": 0.00164317,
+        "seed": 20261101,
+        "stage": "search",
+        "smoke_phase": "search",
+        "replicate": 0
+      }
+    ],
+    "nlp/adam-stp-mf-momentum-bias-b2lt": [
+      {
+        "task": "nlp",
+        "method": "adam-stp-mf-momentum-bias-b2lt",
+        "lr": 0.0106926766,
+        "clip": 500,
+        "eps_scale": 0.000328634,
+        "seed": 20261101,
+        "stage": "search",
+        "smoke_phase": "search",
+        "replicate": 0
+      },
+      {
+        "task": "nlp",
+        "method": "adam-stp-mf-momentum-bias-b2lt",
+        "lr": 0.0106926766,
+        "clip": 500,
+        "eps_scale": 0.000164317,
+        "seed": 20261101,
+        "stage": "search",
+        "smoke_phase": "search",
+        "replicate": 0
+      }
+    ],
+    "nlp/adam3-stp-iid": [
+      {
+        "task": "nlp",
+        "method": "adam3-stp-iid",
+        "lr": 0.000375,
+        "clip": 100,
+        "eps_scale": 0.00164317,
+        "seed": 20261101,
+        "stage": "search",
+        "smoke_phase": "search",
+        "replicate": 0
+      },
+      {
+        "task": "nlp",
+        "method": "adam3-stp-iid",
+        "lr": 0.00075,
+        "clip": 100,
+        "eps_scale": 0.00164317,
+        "seed": 20261101,
+        "stage": "search",
+        "smoke_phase": "search",
+        "replicate": 0
+      }
+    ],
+    "nlp/adam3-stp-mf-sgd-b2lt": [
+      {
+        "task": "nlp",
+        "method": "adam3-stp-mf-sgd-b2lt",
+        "lr": 0.0015,
+        "clip": 3000,
+        "eps_scale": 0.00164317,
+        "seed": 20261101,
+        "stage": "search",
+        "smoke_phase": "search",
+        "replicate": 0
+      },
+      {
+        "task": "nlp",
+        "method": "adam3-stp-mf-sgd-b2lt",
+        "lr": 0.0015,
+        "clip": 1500,
+        "eps_scale": 0.00164317,
+        "seed": 20261101,
+        "stage": "search",
+        "smoke_phase": "search",
+        "replicate": 0
+      }
+    ],
+    "nlp/adam3-stp-mf-momentum-b2lt": [
+      {
+        "task": "nlp",
+        "method": "adam3-stp-mf-momentum-b2lt",
+        "lr": 0.002,
+        "clip": 1200,
+        "eps_scale": 0.00164317,
+        "seed": 20261101,
+        "stage": "search",
+        "smoke_phase": "search",
+        "replicate": 0
+      },
+      {
+        "task": "nlp",
+        "method": "adam3-stp-mf-momentum-b2lt",
+        "lr": 0.002,
+        "clip": 600,
+        "eps_scale": 0.00164317,
+        "seed": 20261101,
+        "stage": "search",
+        "smoke_phase": "search",
+        "replicate": 0
+      }
+    ],
+    "nlp/adam3-stp-mf-momentum-bias-b2lt": [
+      {
+        "task": "nlp",
+        "method": "adam3-stp-mf-momentum-bias-b2lt",
+        "lr": 0.0011250000000000001,
+        "clip": 3000,
+        "eps_scale": 0.00164317,
+        "seed": 20261101,
+        "stage": "search",
+        "smoke_phase": "search",
+        "replicate": 0
+      },
+      {
+        "task": "nlp",
+        "method": "adam3-stp-mf-momentum-bias-b2lt",
+        "lr": 0.0011250000000000001,
+        "clip": 1500,
+        "eps_scale": 0.00164317,
+        "seed": 20261101,
+        "stage": "search",
+        "smoke_phase": "search",
+        "replicate": 0
+      }
+    ]
+  }
+}

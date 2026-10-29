@@ -1,0 +1,6 @@
+{
+  "phase": "failed",
+  "time": 1793264364.7593462,
+  "error": "'official_evaluation_used'",
+  "traceback": "Traceback (most recent call last):\n  File \"/media/data/data/lt/dp-adam-correlated/exp16f/pipeline.py\", line 17, in main\n    extra,decisions=search.boundary(rows);assert len(extra)<=24\n                    ^^^^^^^^^^^^^^^^^^^^^\n  File \"/media/data/data/lt/dp-adam-correlated/exp16f/search.py\", line 26, in boundary\n    best=config(candidates(rows,c)[0]);extra=[]\n                ^^^^^^^^^^^^^^^^^^\n  File \"/media/data/data/lt/dp-adam-correlated/exp16f/search.py\", line 21, in candidates\n    assert all(not r['official_evaluation_used'] for r in rows)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/media/data/data/lt/dp-adam-correlated/exp16f/search.py\", line 21, in <genexpr>\n    assert all(not r['official_evaluation_used'] for r in rows)\n                   ~^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'official_evaluation_used'\n"
+}

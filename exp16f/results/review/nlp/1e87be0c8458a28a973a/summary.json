@@ -1,0 +1,161 @@
+{
+  "task": "nlp",
+  "method": "adam-stp-mf-momentum-b2lt",
+  "lr": 0.0213853532,
+  "clip": 200,
+  "eps_scale": 0.00164317,
+  "seed": 20261102,
+  "stage": "review",
+  "smoke_phase": "search",
+  "replicate": 0,
+  "trial_id": "1e87be0c8458a28a973a",
+  "status": "completed",
+  "finite": true,
+  "optimizer_steps": 310,
+  "noise_draws": 310,
+  "physical_batches": 310,
+  "completed_epochs": 5,
+  "planned_total_steps": 310,
+  "accuracy": 0.8347354645728173,
+  "validation_loss": 0.3741574115364501,
+  "evaluation_scope": "internal validation",
+  "official_evaluation_used": false,
+  "epochs": [
+    {
+      "epoch": 1,
+      "step": 62,
+      "train_loss": 0.886865733485068,
+      "clip_fraction": 0.5920483870967742,
+      "epsilon": 2.737171997157415,
+      "accuracy": 0.7603290334641989,
+      "validation_loss": 0.6574956566223499,
+      "validation_examples": 5349
+    },
+    {
+      "epoch": 2,
+      "step": 124,
+      "train_loss": 0.558536383844191,
+      "clip_fraction": 0.3393225806451613,
+      "epsilon": 4.397892529539403,
+      "accuracy": 0.7999626098336138,
+      "validation_loss": 0.5052070325279842,
+      "validation_examples": 5349
+    },
+    {
+      "epoch": 3,
+      "step": 186,
+      "train_loss": 0.4695406715639176,
+      "clip_fraction": 0.26648387096774195,
+      "epsilon": 5.749881112284444,
+      "accuracy": 0.8154795288839035,
+      "validation_loss": 0.4247505796314467,
+      "validation_examples": 5349
+    },
+    {
+      "epoch": 4,
+      "step": 248,
+      "train_loss": 0.4163235173379221,
+      "clip_fraction": 0.21661290322580645,
+      "epsilon": 6.929664239906679,
+      "accuracy": 0.8280052346232941,
+      "validation_loss": 0.39157764237268905,
+      "validation_examples": 5349
+    },
+    {
+      "epoch": 5,
+      "step": 310,
+      "train_loss": 0.39168377193327875,
+      "clip_fraction": 0.18246774193548387,
+      "epsilon": 8.000000000000005,
+      "accuracy": 0.8347354645728173,
+      "validation_loss": 0.3741574115364501,
+      "validation_examples": 5349
+    }
+  ],
+  "calibration": {
+    "target_mu": 1.6660305978457184,
+    "sensitivity": 9.531557559539234,
+    "innovation_std_sum": 1144.2235901146273,
+    "adjacency": "add_remove_zero_out",
+    "k": 5,
+    "b_participation": 62,
+    "sampling_amplification": false,
+    "private": true,
+    "verified_full_epsilon": 8.000000000000005,
+    "delta": 1e-05,
+    "target_epsilon": 8.0,
+    "clip_space": "scaled"
+  },
+  "mechanism": {
+    "source": "exp16a/results/matrices/momentum_b2lt_T310.npz",
+    "matrix_sha256": "ea9f642d22354c1133a3c75ee1af20721f3f00820d89e91d6e2e9821603e864e"
+  },
+  "config_sha256": "6450cfdcfc6fee2aebea27c36db63c8e61eb014871ff811273c8a1f23e1e84f6",
+  "code_sha256": {
+    "exp16f/__init__.py": "8a41f22c6772bdec9366a14d12bc2a13dc47e90d8ec2ab76f6d73d3deccdfcff",
+    "exp16f/adam3.py": "b4a6085da2c06aabcfe9684505f35d760aabe5654abac4e5ef67286320a8260c",
+    "exp16f/assets.py": "549670acf150132a4c0443ec6dd8ddd13e104f76b7b46d22cd10a9677c4cceee",
+    "exp16f/clipping.py": "a17abb8a2a88729e662185578c915750d2c506e31316cde415b6f8ccc5e17999",
+    "exp16f/config.py": "1dd6b59c74fddb69207e9e60d49ef65d13e750abe3fa544d7e677dadd67d4047",
+    "exp16f/cv_model.py": "de7b23603dc94b1f5b6000a85d8f8b4485a5a81b1e9fcfdabf96daa21cf4d38c",
+    "exp16f/data.py": "a66c5a51cc927a4b82e416c37ae56542baef6a6a01d04da4db04cc7116b22ac0",
+    "exp16f/history.py": "a7aeb4a8930b08110a1769d1ce33051ca94c83c1fc25c6cfcc5694ea3d7251df",
+    "exp16f/matrices.py": "8e8f605c0639e29ae99ef533df9c8f9f8ac62c210b470ab57e3f9b2a257c149f",
+    "exp16f/nlp_model.py": "3e82d3115f04e1e67d675245de73394f0772e5501a9b8a1367a6195cdb2b3368",
+    "exp16f/noise.py": "e689e3a04deae96832678a1c8abf4942ae148af50b536f8387fe9a437a09fb45",
+    "exp16f/optimizer.py": "fcfa896769f79dfec318a88e252d61ff18aefaa8b3a80d1e0d342e7745440cf3",
+    "exp16f/pipeline.py": "7c0cd0685a20306b558e0d722f501474be72a4f0d4769606170d453b4a60e89d",
+    "exp16f/privacy.py": "6e37e95ccb496245174249f30f9c3237fb809b30a031a5092e462debf2d9ac5a",
+    "exp16f/report.py": "579a03b148402987b6858ebcf07bbe689c873545c5ebdfd19d9f5128eafee414",
+    "exp16f/scheduler.py": "49756bec9f836eb26145ac3584e78069d06e5ceb5c1f52d1a70ab05990b454ef",
+    "exp16f/search.py": "bdf9264767046003fdb1846b70fc150ebabd77d803d5719342d11066ddacdfbd",
+    "exp16f/stage1.py": "34d88855bf7ba1a02eeccfe10f12026186747141c97752fcb123c4324f32ce06",
+    "exp16f/start_background.py": "a7be61699bc9f961acf98fd656ef1d7d3ce5f5445c51deacb00d9dd4358329e9",
+    "exp16f/support.py": "718e7aab810966d089e304549d207f44925f1d78ec23706b2558ad8c6948331f",
+    "exp16f/train.py": "e7884057bea52e53268810985314c91ed04405d9a7cec14c1d0453fa4ec66c87"
+  },
+  "git_commit": "f69d805dae2dc00fa5cf1e7d647b962978a2d47f",
+  "file_sha256": {
+    "config.json": "ac593ed3f70b832a718d401daf5bc86d82882c442164b30c2b6d829f011a6f77",
+    "checkpoint.pt": "c664954309cee136a3d6cfefc9b3d3729bfd8034f29b24eb0aa3db4529fd7ede",
+    "train_order.npy": "5924c8af942b770fea068d4ccc38c3c912ce444a29bf910b08d0c9e5899f8fc0",
+    "metrics.csv": "ed775a64d50f994572602c44aa581ab86769ee52c70ac783bc7205d0312e396a",
+    "diagnostics.jsonl": "fb3f712797c5b850f3de03487d17250017b05924f9ffc6b9fb38257fc430fb30",
+    "matrices.npz": "932aa34f61b66ff17051fbf674b44da89fa5351c02dcf94bc23ca4d695240124"
+  },
+  "initialization_sha256": "dda05bba85673a22b1551fb4db3ad37a6fbd236f34db98f45a2bbc4477705fa8",
+  "classifier_initialization_sha256": "3f1afef355b71af2ef8cdd8a18ebc61044c92dae392dac144094346670f6a4b9",
+  "train_order_sha256": "45909f69ed4eded30c8f28d1ad799c2d697b4807061a0a3ea9fe8e44b24c2253",
+  "rng_trace": [
+    [
+      20361102,
+      20361163
+    ],
+    [
+      20361164,
+      20361225
+    ],
+    [
+      20361226,
+      20361287
+    ],
+    [
+      20361288,
+      20361349
+    ],
+    [
+      20361350,
+      20361411
+    ]
+  ],
+  "noise_rng_start": "709653001a26867d70b5c1b480a9cfdc466a00da02c5c64f4a420a22d2e7cbc0",
+  "noise_rng_end": "bf5390ef219e785180b10ed2dc988f6804a3f8d1341b35d1caa587c3c84b2f7e",
+  "actual_epsilon": 8.000000000000005,
+  "seconds": 92.83941393601708,
+  "train_seconds": 82.92231636215001,
+  "cpu_peak_rss_bytes": 2059575296,
+  "peak_allocated_bytes": 4096090624,
+  "peak_reserved_bytes": 4303355904,
+  "device": "NVIDIA GeForce RTX 3080 Ti",
+  "physical_gpu": 1
+}

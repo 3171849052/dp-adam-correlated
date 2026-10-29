@@ -149,3 +149,64 @@ Traceback (most recent call last):
     assert all(not r['official_evaluation_used'] for r in rows)
                    ~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 KeyError: 'official_evaluation_used'
+
+Selection recovery: exclude sealed numerical failures before evaluation-field checks.
+boundary: GPU 1 cv adam-stp-mf-momentum-b2lt pid=211256
+boundary: GPU 2 cv adam3-stp-iid pid=211257
+boundary: GPU 3 cv adam3-stp-mf-sgd-b2lt pid=211258
+boundary: GPU 1 cv adam3-stp-mf-momentum-b2lt pid=215552
+boundary: GPU 2 cv adam3-stp-mf-momentum-bias-b2lt pid=215617
+boundary: GPU 3 nlp adam-stp-mf-momentum-b2lt pid=215696
+boundary: GPU 3 nlp adam-stp-mf-momentum-bias-b2lt pid=215697
+boundary: GPU 3 nlp adam3-stp-iid pid=216385
+boundary: GPU 3 nlp adam3-stp-mf-sgd-b2lt pid=216409
+boundary: GPU 3 nlp adam3-stp-mf-momentum-b2lt pid=217094
+boundary: GPU 3 nlp adam3-stp-mf-momentum-bias-b2lt pid=217104
+review: GPU 1 cv adam-stp-mf-momentum-b2lt pid=218613
+review: GPU 2 cv adam-stp-mf-momentum-b2lt pid=218614
+review: GPU 3 cv adam-stp-mf-momentum-b2lt pid=218615
+review: GPU 1 cv adam-stp-mf-momentum-b2lt pid=223291
+review: GPU 2 cv adam-stp-mf-momentum-bias-b2lt pid=223292
+review: GPU 3 cv adam-stp-mf-momentum-bias-b2lt pid=223400
+review: GPU 2 cv adam-stp-mf-momentum-bias-b2lt pid=228452
+review: GPU 1 cv adam-stp-mf-momentum-bias-b2lt pid=228546
+review: GPU 3 cv adam3-stp-iid pid=228601
+review: GPU 2 cv adam3-stp-iid pid=233612
+review: GPU 1 cv adam3-stp-iid pid=233690
+review: GPU 3 cv adam3-stp-iid pid=233981
+review: GPU 2 cv adam3-stp-mf-sgd-b2lt pid=238984
+review: GPU 1 cv adam3-stp-mf-sgd-b2lt pid=239009
+review: GPU 3 cv adam3-stp-mf-sgd-b2lt pid=239468
+review: GPU 1 cv adam3-stp-mf-sgd-b2lt pid=244390
+review: GPU 2 cv adam3-stp-mf-momentum-b2lt pid=244391
+review: GPU 3 cv adam3-stp-mf-momentum-b2lt pid=244856
+review: GPU 1 cv adam3-stp-mf-momentum-b2lt pid=248289
+review: GPU 2 cv adam3-stp-mf-momentum-b2lt pid=248314
+review: GPU 3 cv adam3-stp-mf-momentum-bias-b2lt pid=248848
+review: GPU 1 cv adam3-stp-mf-momentum-bias-b2lt pid=252198
+review: GPU 2 cv adam3-stp-mf-momentum-bias-b2lt pid=252235
+review: GPU 3 cv adam3-stp-mf-momentum-bias-b2lt pid=252907
+review: GPU 1 nlp adam-stp-mf-momentum-b2lt pid=256219
+review: GPU 1 nlp adam-stp-mf-momentum-b2lt pid=256220
+review: GPU 2 nlp adam-stp-mf-momentum-b2lt pid=256324
+review: GPU 2 nlp adam-stp-mf-momentum-b2lt pid=256325
+review: GPU 1 nlp adam-stp-mf-momentum-bias-b2lt pid=256940
+review: GPU 1 nlp adam-stp-mf-momentum-bias-b2lt pid=256941
+review: GPU 2 nlp adam-stp-mf-momentum-bias-b2lt pid=257034
+review: GPU 2 nlp adam-stp-mf-momentum-bias-b2lt pid=257035
+review: GPU 3 nlp adam3-stp-iid pid=257060
+review: GPU 3 nlp adam3-stp-iid pid=257061
+review: GPU 1 nlp adam3-stp-iid pid=257668
+review: GPU 1 nlp adam3-stp-iid pid=257669
+review: GPU 2 nlp adam3-stp-mf-sgd-b2lt pid=257779
+review: GPU 2 nlp adam3-stp-mf-sgd-b2lt pid=257780
+review: GPU 3 nlp adam3-stp-mf-sgd-b2lt pid=257831
+review: GPU 3 nlp adam3-stp-mf-sgd-b2lt pid=257832
+review: GPU 1 nlp adam3-stp-mf-momentum-b2lt pid=258436
+review: GPU 1 nlp adam3-stp-mf-momentum-b2lt pid=258446
+review: GPU 2 nlp adam3-stp-mf-momentum-b2lt pid=258536
+review: GPU 2 nlp adam3-stp-mf-momentum-b2lt pid=258537
+review: GPU 3 nlp adam3-stp-mf-momentum-bias-b2lt pid=258627
+review: GPU 3 nlp adam3-stp-mf-momentum-bias-b2lt pid=258628
+review: GPU 1 nlp adam3-stp-mf-momentum-bias-b2lt pid=259209
+review: GPU 1 nlp adam3-stp-mf-momentum-bias-b2lt pid=259221

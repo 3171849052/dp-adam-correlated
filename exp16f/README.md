@@ -15,3 +15,5 @@ Launch/resume after acceptance: `bash exp16f/results/resume.sh`
 Progress: `cat exp16f/results/progress.json`; `tail -f exp16f/results/pipeline.log`. Detailed worker PIDs, GPUs, commands and progress appear in `*_status.json`, `scheduler.jsonl`, and each trial's `diagnostics.jsonl`. `background.json` records the detached launcher. A lock prevents duplicate pipelines.
 
 Single-run epsilon=8, delta=1e-5 does not imply that the search, validation, and repeated formal runs jointly satisfy epsilon=8. Theoretical errors describe scaled-space matrix noise, not the adaptive optimizer parameter error.
+
+Recovery: use `bash exp16f/results/resume.sh`, which launches the hash-checked `exp16f.runtime.recover` entry point. It fixes selection of search records containing sealed numerical failures; failed records remain in the search evidence and cannot be ranked. Completed records still require explicit internal-evaluation metadata. The original training code, trial manifests, and logs remain unchanged. Recovery tests and verification evidence are in results/recovery_tests.log and results/recovery_acceptance.json.
