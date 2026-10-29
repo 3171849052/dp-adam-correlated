@@ -1,0 +1,48 @@
+{
+  "old_pid": 4165342,
+  "time": 1793244261.620497,
+  "status": "completed",
+  "active": [
+    {
+      "task": "nlp",
+      "method": "momentum-iid",
+      "lr": 0.3,
+      "clip": 1,
+      "eps_scale": null,
+      "seed": 20261102,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0,
+      "status": "running",
+      "gpu": 1,
+      "pid": 5053,
+      "started": 1793244240.3148522,
+      "log": "/media/data/data/lt/dp-adam-correlated/exp16e/results/review/nlp/6c180f6a1995627d31ef/train.log",
+      "command": "CUDA_VISIBLE_DEVICES=1 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp16e.train --trial-json '{\"clip\": 1, \"eps_scale\": null, \"lr\": 0.3, \"method\": \"momentum-iid\", \"replicate\": 0, \"seed\": 20261102, \"smoke_phase\": \"search\", \"stage\": \"review\", \"task\": \"nlp\"}'"
+    },
+    {
+      "task": "nlp",
+      "method": "momentum-iid",
+      "lr": 0.3,
+      "clip": 1,
+      "eps_scale": null,
+      "seed": 20261103,
+      "stage": "review",
+      "smoke_phase": "search",
+      "replicate": 0,
+      "status": "running",
+      "gpu": 2,
+      "pid": 5157,
+      "started": 1793244251.6011379,
+      "log": "/media/data/data/lt/dp-adam-correlated/exp16e/results/review/nlp/efcc50a944472df90c3d/train.log",
+      "command": "CUDA_VISIBLE_DEVICES=2 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp16e.train --trial-json '{\"clip\": 1, \"eps_scale\": null, \"lr\": 0.3, \"method\": \"momentum-iid\", \"replicate\": 0, \"seed\": 20261103, \"smoke_phase\": \"search\", \"stage\": \"review\", \"task\": \"nlp\"}'"
+    }
+  ],
+  "workers_interrupted": false,
+  "training_source_changed": false,
+  "new_pid": 6111,
+  "new_workers": [
+    6481,
+    6482
+  ]
+}

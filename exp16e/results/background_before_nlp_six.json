@@ -1,0 +1,19 @@
+{
+  "pid": 6111,
+  "started": 1793244381.93669,
+  "session_detached": true,
+  "gpus": [
+    1,
+    2,
+    3
+  ],
+  "worker_device": "cuda:0",
+  "cv_max_workers_per_gpu": 1,
+  "nlp_max_workers_per_gpu": 2,
+  "nlp_max_workers": 2,
+  "python": "/home/longt29/miniconda3/envs/curve/bin/python",
+  "resume": "bash exp16e/results/resume.sh",
+  "log": "/media/data/data/lt/dp-adam-correlated/exp16e/results/pipeline.log",
+  "scheduler_policy_script": "exp16e/runtime/nlp_colocation.py",
+  "scheduler_policy_sha256": "537d80245713b7312704fb0f62b1f793d82b23ad1a25c6f067ace84a24bbb7ce"
+}

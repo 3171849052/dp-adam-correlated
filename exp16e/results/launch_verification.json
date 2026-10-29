@@ -1,0 +1,62 @@
+{
+  "status": "training",
+  "time": 1793246571.2291963,
+  "pid": 15019,
+  "pipeline_pid": 15020,
+  "session_id": 15019,
+  "workers": [
+    {
+      "pid": 23907,
+      "gpu": 3,
+      "task": "nlp",
+      "method": "adam3-iid",
+      "seed": 20261117,
+      "verified_step": 291
+    },
+    {
+      "pid": 24017,
+      "gpu": 3,
+      "task": "nlp",
+      "method": "adam3-iid",
+      "seed": 20261118,
+      "verified_step": 215
+    },
+    {
+      "pid": 24047,
+      "gpu": 2,
+      "task": "nlp",
+      "method": "adam3-iid",
+      "seed": 20261119,
+      "verified_step": 198
+    },
+    {
+      "pid": 24048,
+      "gpu": 2,
+      "task": "nlp",
+      "method": "adam3-iid",
+      "seed": 20261120,
+      "verified_step": 210
+    },
+    {
+      "pid": 24538,
+      "gpu": 1,
+      "task": "nlp",
+      "method": "adam3-mf-sgd-b2lt",
+      "seed": 20261111,
+      "verified_step": 62
+    },
+    {
+      "pid": 24589,
+      "gpu": 1,
+      "task": "nlp",
+      "method": "adam3-mf-sgd-b2lt",
+      "seed": 20261112,
+      "verified_step": 21
+    }
+  ],
+  "cv_max_workers_per_gpu": 1,
+  "nlp_max_workers_per_gpu": 2,
+  "nlp_global_max": 6,
+  "supervisor_sha256": "11795b87cbea2d8f99b4f1d213dcaecfb4c3dd4b9463c93abbf56b27a0586359",
+  "policy_sha256": "bcbce2e0e91b38095b2ad52d1f278ab6085f613c41558948c3e612fb15760e9d"
+}

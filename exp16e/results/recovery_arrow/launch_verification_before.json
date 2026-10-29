@@ -1,0 +1,48 @@
+{
+  "status": "running",
+  "time": 1793244941.832851,
+  "pid": 10358,
+  "session_id": 10358,
+  "workers": [
+    {
+      "pid": 10763,
+      "gpu": 1,
+      "task": "nlp",
+      "method": "adam3-iid"
+    },
+    {
+      "pid": 10764,
+      "gpu": 1,
+      "task": "nlp",
+      "method": "adam3-iid"
+    },
+    {
+      "pid": 10765,
+      "gpu": 2,
+      "task": "nlp",
+      "method": "adam3-iid"
+    },
+    {
+      "pid": 10766,
+      "gpu": 2,
+      "task": "nlp",
+      "method": "adam3-iid"
+    },
+    {
+      "pid": 10767,
+      "gpu": 3,
+      "task": "nlp",
+      "method": "adam3-mf-sgd-b2lt"
+    },
+    {
+      "pid": 10768,
+      "gpu": 3,
+      "task": "nlp",
+      "method": "adam3-mf-sgd-b2lt"
+    }
+  ],
+  "cv_max_workers_per_gpu": 1,
+  "nlp_max_workers_per_gpu": 2,
+  "nlp_global_max": 6,
+  "policy_sha256": "bcbce2e0e91b38095b2ad52d1f278ab6085f613c41558948c3e612fb15760e9d"
+}

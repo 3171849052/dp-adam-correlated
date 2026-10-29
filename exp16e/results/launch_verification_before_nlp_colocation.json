@@ -1,0 +1,43 @@
+{
+  "status": "running",
+  "checked_at": 1793240498.0908206,
+  "pid": 4165342,
+  "session_id": 4165342,
+  "workers": [
+    {
+      "pid": 4165535,
+      "gpu": 1,
+      "method": "momentum-mf-sgd-b2lt",
+      "task": "cv",
+      "cuda_visible_devices": "1"
+    },
+    {
+      "pid": 4165536,
+      "gpu": 2,
+      "method": "momentum-mf-sgd-b2lt",
+      "task": "cv",
+      "cuda_visible_devices": "2"
+    },
+    {
+      "pid": 4165537,
+      "gpu": 3,
+      "method": "momentum-mf-sgd-b2lt",
+      "task": "cv",
+      "cuda_visible_devices": "3"
+    }
+  ],
+  "progress": {
+    "phase": "search",
+    "time": 1793240460.0882015,
+    "planned": 67
+  },
+  "budget": {
+    "requested_search": 67,
+    "new_search": 67,
+    "fixed_review_max": 32,
+    "conditional_review_max": 16,
+    "necessary_formal_max": 80,
+    "conditional_formal_max": 80,
+    "total_upper_bound": 275
+  }
+}

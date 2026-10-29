@@ -1,0 +1,69 @@
+{
+  "status": "formal_training_verified",
+  "previous_pid": 10358,
+  "previous_phase": "frozen",
+  "previous_returncode": null,
+  "kernel_evidence": "kernel_error.log",
+  "native_error": "jemalloc_bg_thd segfault in libarrow.so.2500",
+  "search_completed": 67,
+  "review_completed": 34,
+  "failed_training_trials": 0,
+  "formal_input_examples": 872,
+  "checks": "checks.json",
+  "new_supervisor_pid": 15019,
+  "new_pipeline_pid": 15020,
+  "time": 1793245594.1327746,
+  "workers": [
+    {
+      "pid": 23907,
+      "gpu": 3,
+      "task": "nlp",
+      "method": "adam3-iid",
+      "seed": 20261117,
+      "verified_step": 291
+    },
+    {
+      "pid": 24017,
+      "gpu": 3,
+      "task": "nlp",
+      "method": "adam3-iid",
+      "seed": 20261118,
+      "verified_step": 215
+    },
+    {
+      "pid": 24047,
+      "gpu": 2,
+      "task": "nlp",
+      "method": "adam3-iid",
+      "seed": 20261119,
+      "verified_step": 198
+    },
+    {
+      "pid": 24048,
+      "gpu": 2,
+      "task": "nlp",
+      "method": "adam3-iid",
+      "seed": 20261120,
+      "verified_step": 210
+    },
+    {
+      "pid": 24538,
+      "gpu": 1,
+      "task": "nlp",
+      "method": "adam3-mf-sgd-b2lt",
+      "seed": 20261111,
+      "verified_step": 62
+    },
+    {
+      "pid": 24589,
+      "gpu": 1,
+      "task": "nlp",
+      "method": "adam3-mf-sgd-b2lt",
+      "seed": 20261112,
+      "verified_step": 21
+    }
+  ],
+  "planned_formal_new": 90,
+  "historical_formal": 170,
+  "freeze_sha256": "daea2aef5bce413f8da22c0288b707ea455f5a0d26f81bffda0408531970c94e"
+}

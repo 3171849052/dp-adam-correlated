@@ -1,0 +1,24 @@
+{
+  "status": "running",
+  "time": 1793244443.6652472,
+  "pid": 6111,
+  "session_id": 6111,
+  "workers": [
+    {
+      "pid": 6481,
+      "gpu": 1,
+      "task": "nlp",
+      "method": "momentum-mf-sgd-b2lt"
+    },
+    {
+      "pid": 6482,
+      "gpu": 1,
+      "task": "nlp",
+      "method": "momentum-mf-sgd-b2lt"
+    }
+  ],
+  "cv_max_workers_per_gpu": 1,
+  "nlp_max_workers_per_gpu": 2,
+  "nlp_global_max": 2,
+  "policy_sha256": "537d80245713b7312704fb0f62b1f793d82b23ad1a25c6f067ace84a24bbb7ce"
+}

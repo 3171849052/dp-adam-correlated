@@ -1,0 +1,22 @@
+{
+  "pid": 15019,
+  "pipeline_pid": 15020,
+  "started": 1793245535.7320912,
+  "session_detached": true,
+  "gpus": [
+    1,
+    2,
+    3
+  ],
+  "worker_device": "cuda:0",
+  "cv_max_workers_per_gpu": 1,
+  "nlp_max_workers_per_gpu": 2,
+  "nlp_max_workers": 6,
+  "resume": "bash exp16e/results/resume.sh",
+  "log": "/media/data/data/lt/dp-adam-correlated/exp16e/results/pipeline.log",
+  "scheduler_policy_script": "exp16e/runtime/nlp_six.py",
+  "scheduler_policy_sha256": "bcbce2e0e91b38095b2ad52d1f278ab6085f613c41558948c3e612fb15760e9d",
+  "supervisor_sha256": "11795b87cbea2d8f99b4f1d213dcaecfb4c3dd4b9463c93abbf56b27a0586359",
+  "arrow_memory_pool": "system",
+  "automatic_retry": false
+}
