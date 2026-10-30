@@ -1,0 +1,17 @@
+{
+  "task": "nlp",
+  "method": "adam3-stp-mf-momentum-b2lt",
+  "lr": 0.002,
+  "clip": 1200,
+  "eps_scale": 0.00164317,
+  "seed": 20261117,
+  "stage": "final",
+  "smoke_phase": "search",
+  "replicate": 0,
+  "status": "running",
+  "gpu": 2,
+  "pid": 441232,
+  "started": 1793298421.8548048,
+  "log": "/media/data/data/lt/dp-adam-correlated/exp16f/results/final/nlp/97853744bd4208eb2fdf/train.log",
+  "command": "CUDA_VISIBLE_DEVICES=2 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp16f.train --trial-json '{\"clip\": 1200, \"eps_scale\": 0.00164317, \"lr\": 0.002, \"method\": \"adam3-stp-mf-momentum-b2lt\", \"replicate\": 0, \"seed\": 20261117, \"smoke_phase\": \"search\", \"stage\": \"final\", \"task\": \"nlp\"}'"
+}

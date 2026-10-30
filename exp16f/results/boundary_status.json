@@ -10,13 +10,7 @@
     "smoke_phase": "search",
     "replicate": 0,
     "status": "completed",
-    "gpu": 1,
-    "pid": 211256,
-    "started": 1793268646.5290544,
-    "log": "/media/data/data/lt/dp-adam-correlated/exp16f/results/search/cv/8ce732f4f498c8541e2f/train.log",
-    "command": "CUDA_VISIBLE_DEVICES=1 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp16f.train --trial-json '{\"clip\": 100, \"eps_scale\": 0.05, \"lr\": 0.012, \"method\": \"adam-stp-mf-momentum-b2lt\", \"replicate\": 0, \"seed\": 20261101, \"smoke_phase\": \"search\", \"stage\": \"search\", \"task\": \"cv\"}'",
-    "exit_code": 0,
-    "ended": 1793269206.4767287
+    "reused": true
   },
   "52463647308068cc8dc1": {
     "task": "cv",
@@ -29,13 +23,7 @@
     "smoke_phase": "search",
     "replicate": 0,
     "status": "completed",
-    "gpu": 2,
-    "pid": 211257,
-    "started": 1793268646.532386,
-    "log": "/media/data/data/lt/dp-adam-correlated/exp16f/results/search/cv/52463647308068cc8dc1/train.log",
-    "command": "CUDA_VISIBLE_DEVICES=2 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp16f.train --trial-json '{\"clip\": 100, \"eps_scale\": 0.05, \"lr\": 0.0001, \"method\": \"adam3-stp-iid\", \"replicate\": 0, \"seed\": 20261101, \"smoke_phase\": \"search\", \"stage\": \"search\", \"task\": \"cv\"}'",
-    "exit_code": 0,
-    "ended": 1793269213.2149503
+    "reused": true
   },
   "1e615404263ed5d0e719": {
     "task": "cv",
@@ -48,13 +36,7 @@
     "smoke_phase": "search",
     "replicate": 0,
     "status": "completed",
-    "gpu": 3,
-    "pid": 211258,
-    "started": 1793268646.5354679,
-    "log": "/media/data/data/lt/dp-adam-correlated/exp16f/results/search/cv/1e615404263ed5d0e719/train.log",
-    "command": "CUDA_VISIBLE_DEVICES=3 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp16f.train --trial-json '{\"clip\": 1200, \"eps_scale\": 0.05, \"lr\": 0.0004, \"method\": \"adam3-stp-mf-sgd-b2lt\", \"replicate\": 0, \"seed\": 20261101, \"smoke_phase\": \"search\", \"stage\": \"search\", \"task\": \"cv\"}'",
-    "exit_code": 0,
-    "ended": 1793269222.3291202
+    "reused": true
   },
   "6c5975ebe19c8386293c": {
     "task": "cv",
@@ -67,13 +49,7 @@
     "smoke_phase": "search",
     "replicate": 0,
     "status": "completed",
-    "gpu": 1,
-    "pid": 215552,
-    "started": 1793269206.6433716,
-    "log": "/media/data/data/lt/dp-adam-correlated/exp16f/results/search/cv/6c5975ebe19c8386293c/train.log",
-    "command": "CUDA_VISIBLE_DEVICES=1 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp16f.train --trial-json '{\"clip\": 600, \"eps_scale\": 0.05, \"lr\": 0.0006, \"method\": \"adam3-stp-mf-momentum-b2lt\", \"replicate\": 0, \"seed\": 20261101, \"smoke_phase\": \"search\", \"stage\": \"search\", \"task\": \"cv\"}'",
-    "exit_code": 0,
-    "ended": 1793269779.372497
+    "reused": true
   },
   "5cfc7c852b32de3fd9ad": {
     "task": "cv",
@@ -86,13 +62,7 @@
     "smoke_phase": "search",
     "replicate": 0,
     "status": "completed",
-    "gpu": 2,
-    "pid": 215617,
-    "started": 1793269213.3904097,
-    "log": "/media/data/data/lt/dp-adam-correlated/exp16f/results/search/cv/5cfc7c852b32de3fd9ad/train.log",
-    "command": "CUDA_VISIBLE_DEVICES=2 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp16f.train --trial-json '{\"clip\": 1200, \"eps_scale\": 0.05, \"lr\": 0.0004, \"method\": \"adam3-stp-mf-momentum-bias-b2lt\", \"replicate\": 0, \"seed\": 20261101, \"smoke_phase\": \"search\", \"stage\": \"search\", \"task\": \"cv\"}'",
-    "exit_code": 0,
-    "ended": 1793269790.6781654
+    "reused": true
   },
   "586cd2af2fc8f2ef291a": {
     "task": "nlp",
@@ -105,13 +75,7 @@
     "smoke_phase": "search",
     "replicate": 0,
     "status": "completed",
-    "gpu": 3,
-    "pid": 215696,
-    "started": 1793269222.5259695,
-    "log": "/media/data/data/lt/dp-adam-correlated/exp16f/results/search/nlp/586cd2af2fc8f2ef291a/train.log",
-    "command": "CUDA_VISIBLE_DEVICES=3 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp16f.train --trial-json '{\"clip\": 200, \"eps_scale\": 0.00164317, \"lr\": 0.0427707064, \"method\": \"adam-stp-mf-momentum-b2lt\", \"replicate\": 0, \"seed\": 20261101, \"smoke_phase\": \"search\", \"stage\": \"search\", \"task\": \"nlp\"}'",
-    "exit_code": 0,
-    "ended": 1793269324.5115154
+    "reused": true
   },
   "8fba5571098d679c7bb4": {
     "task": "nlp",
@@ -124,13 +88,7 @@
     "smoke_phase": "search",
     "replicate": 0,
     "status": "completed",
-    "gpu": 3,
-    "pid": 215697,
-    "started": 1793269222.5298862,
-    "log": "/media/data/data/lt/dp-adam-correlated/exp16f/results/search/nlp/8fba5571098d679c7bb4/train.log",
-    "command": "CUDA_VISIBLE_DEVICES=3 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp16f.train --trial-json '{\"clip\": 500, \"eps_scale\": 0.000164317, \"lr\": 0.0106926766, \"method\": \"adam-stp-mf-momentum-bias-b2lt\", \"replicate\": 0, \"seed\": 20261101, \"smoke_phase\": \"search\", \"stage\": \"search\", \"task\": \"nlp\"}'",
-    "exit_code": 0,
-    "ended": 1793269321.9467256
+    "reused": true
   },
   "abd682b1d3f890af24ab": {
     "task": "nlp",
@@ -143,13 +101,7 @@
     "smoke_phase": "search",
     "replicate": 0,
     "status": "completed",
-    "gpu": 3,
-    "pid": 216385,
-    "started": 1793269322.1308813,
-    "log": "/media/data/data/lt/dp-adam-correlated/exp16f/results/search/nlp/abd682b1d3f890af24ab/train.log",
-    "command": "CUDA_VISIBLE_DEVICES=3 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp16f.train --trial-json '{\"clip\": 100, \"eps_scale\": 0.00164317, \"lr\": 0.000375, \"method\": \"adam3-stp-iid\", \"replicate\": 0, \"seed\": 20261101, \"smoke_phase\": \"search\", \"stage\": \"search\", \"task\": \"nlp\"}'",
-    "exit_code": 0,
-    "ended": 1793269424.1006691
+    "reused": true
   },
   "60b2a16f16010be05aa0": {
     "task": "nlp",
@@ -162,13 +114,7 @@
     "smoke_phase": "search",
     "replicate": 0,
     "status": "completed",
-    "gpu": 3,
-    "pid": 216409,
-    "started": 1793269324.6887434,
-    "log": "/media/data/data/lt/dp-adam-correlated/exp16f/results/search/nlp/60b2a16f16010be05aa0/train.log",
-    "command": "CUDA_VISIBLE_DEVICES=3 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp16f.train --trial-json '{\"clip\": 3000, \"eps_scale\": 0.00164317, \"lr\": 0.0015, \"method\": \"adam3-stp-mf-sgd-b2lt\", \"replicate\": 0, \"seed\": 20261101, \"smoke_phase\": \"search\", \"stage\": \"search\", \"task\": \"nlp\"}'",
-    "exit_code": 0,
-    "ended": 1793269426.5429337
+    "reused": true
   },
   "f068f12e1558f3f17305": {
     "task": "nlp",
@@ -181,13 +127,7 @@
     "smoke_phase": "search",
     "replicate": 0,
     "status": "completed",
-    "gpu": 3,
-    "pid": 217094,
-    "started": 1793269424.2979136,
-    "log": "/media/data/data/lt/dp-adam-correlated/exp16f/results/search/nlp/f068f12e1558f3f17305/train.log",
-    "command": "CUDA_VISIBLE_DEVICES=3 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp16f.train --trial-json '{\"clip\": 1200, \"eps_scale\": 0.00164317, \"lr\": 0.002, \"method\": \"adam3-stp-mf-momentum-b2lt\", \"replicate\": 0, \"seed\": 20261101, \"smoke_phase\": \"search\", \"stage\": \"search\", \"task\": \"nlp\"}'",
-    "exit_code": 0,
-    "ended": 1793269529.5385334
+    "reused": true
   },
   "1a75fb674fc7eb3ef072": {
     "task": "nlp",
@@ -200,12 +140,6 @@
     "smoke_phase": "search",
     "replicate": 0,
     "status": "completed",
-    "gpu": 3,
-    "pid": 217104,
-    "started": 1793269426.762833,
-    "log": "/media/data/data/lt/dp-adam-correlated/exp16f/results/search/nlp/1a75fb674fc7eb3ef072/train.log",
-    "command": "CUDA_VISIBLE_DEVICES=3 /home/longt29/miniconda3/envs/curve/bin/python -B -m exp16f.train --trial-json '{\"clip\": 3000, \"eps_scale\": 0.00164317, \"lr\": 0.0011250000000000001, \"method\": \"adam3-stp-mf-momentum-bias-b2lt\", \"replicate\": 0, \"seed\": 20261101, \"smoke_phase\": \"search\", \"stage\": \"search\", \"task\": \"nlp\"}'",
-    "exit_code": 0,
-    "ended": 1793269531.7227166
+    "reused": true
   }
 }

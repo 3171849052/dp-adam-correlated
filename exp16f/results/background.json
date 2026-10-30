@@ -1,6 +1,7 @@
 {
-  "pid": 211075,
-  "started": 1793268624.179419,
+  "pid": 310794,
+  "pipeline_pid": 310796,
+  "started": 1793284479.8924413,
   "session_detached": true,
   "gpus": [
     1,
@@ -11,9 +12,11 @@
   "cv_max_workers_per_gpu": 1,
   "nlp_max_workers_per_gpu": 2,
   "nlp_max_workers": 6,
-  "python": "/home/longt29/miniconda3/envs/curve/bin/python",
   "resume": "bash exp16f/results/resume.sh",
   "log": "/media/data/data/lt/dp-adam-correlated/exp16f/results/pipeline.log",
-  "recovery_source": "exp16f/runtime/recover.py",
-  "recovery_sha256": "246f540442e27e88c293a8bac5cba6df60053bacd34416323fa49121715f4faf"
+  "scheduler_policy_script": "exp16f/runtime/recover.py",
+  "scheduler_policy_sha256": "246f540442e27e88c293a8bac5cba6df60053bacd34416323fa49121715f4faf",
+  "supervisor_sha256": "f2262714c5dc7021c2aa834a1bcf28727c95dfcf9443336757df14a311d85a3a",
+  "arrow_memory_pool": "system",
+  "automatic_retry": false
 }
