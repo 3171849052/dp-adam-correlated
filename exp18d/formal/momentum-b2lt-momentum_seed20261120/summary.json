@@ -1,0 +1,50 @@
+{
+  "config": {
+    "clip": 20,
+    "eps": 1e-08,
+    "group": "momentum",
+    "lr": 0.3,
+    "method": "momentum-b2lt-momentum",
+    "seed": 20261120,
+    "stage": "formal",
+    "steps": 310
+  },
+  "ended": "2026-11-05T18:34:52.156388+08:00",
+  "evaluation": "official_validation",
+  "formal": true,
+  "metrics": {
+    "accuracy": 0.7912844036697247,
+    "examples": 872,
+    "loss": 0.531597259941451
+  },
+  "pairing": {
+    "dropout_seed": "seed+100000+logical_step",
+    "initial_model_sha256": "9182bbdb444db90be206b87ceaf17e786a6adf68eae98fe14746686c98493cc3",
+    "noise_seed": 20261121,
+    "order_sha256": "6a10b4b0240af7782f20f9dac896884ef996d4a13b945de141007e7ed8e4146e"
+  },
+  "peak_allocated_bytes": 3731276288,
+  "peak_reserved_bytes": 4076863488,
+  "privacy": {
+    "T": 310,
+    "adjacency": "add/remove zeroed fixed slot",
+    "calibration": "Exp18 GDP",
+    "clip": 20,
+    "clip_space": "original",
+    "delta": 1e-05,
+    "epsilon": 8.000000000000005,
+    "matrix_sha256": "25656cfbaa8de39cda2450550594ac9b18f972ac8b54571904ab341c30eebfe4",
+    "mu": 1.6660305978457184,
+    "participation_interval": 62,
+    "participations": 5,
+    "sampling_amplification": false,
+    "scope": "one training, not 60-run composition",
+    "sensitivity": 7.348192167335733,
+    "sigma_average": 0.08821197133879059,
+    "sigma_sum": 88.21197133879059
+  },
+  "seconds": 83.23847119300626,
+  "status": "complete",
+  "steps": 310,
+  "train_seconds": 77.73648619418964
+}

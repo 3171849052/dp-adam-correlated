@@ -1,0 +1,1442 @@
+[
+  {
+    "config": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "group": "adam",
+      "lr": 0.002,
+      "method": "adam-iid",
+      "seed": 20261111,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 1,
+    "pid": 3044950,
+    "slot": 0,
+    "time": "2026-11-05T18:15:42.340705+08:00"
+  },
+  {
+    "config": {
+      "clip": 40.0,
+      "eps": 1e-08,
+      "group": "adam",
+      "lr": 0.0106926766216,
+      "method": "adam-b2lt-sgd",
+      "seed": 20261111,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 1,
+    "pid": 3044951,
+    "slot": 1,
+    "time": "2026-11-05T18:15:42.342132+08:00"
+  },
+  {
+    "config": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "group": "momentum",
+      "lr": 2,
+      "method": "momentum-iid",
+      "seed": 20261111,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 2,
+    "pid": 3044952,
+    "slot": 2,
+    "time": "2026-11-05T18:15:42.343724+08:00"
+  },
+  {
+    "config": {
+      "clip": 20,
+      "eps": 1e-08,
+      "group": "momentum",
+      "lr": 0.3,
+      "method": "momentum-b2lt-momentum",
+      "seed": 20261111,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 2,
+    "pid": 3044953,
+    "slot": 3,
+    "time": "2026-11-05T18:15:42.345513+08:00"
+  },
+  {
+    "config": {
+      "clip": 100,
+      "eps": 0.005,
+      "group": "stpex2",
+      "lr": 0.08,
+      "method": "stpex2-iid",
+      "seed": 20261111,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 3,
+    "pid": 3044954,
+    "slot": 4,
+    "time": "2026-11-05T18:15:42.346965+08:00"
+  },
+  {
+    "config": {
+      "clip": 100,
+      "eps": 0.005,
+      "group": "stpex2",
+      "lr": 0.08,
+      "method": "stpex2-b2lt-momentum-bias",
+      "seed": 20261111,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 3,
+    "pid": 3044955,
+    "slot": 5,
+    "time": "2026-11-05T18:15:42.348470+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 2,
+    "pid": 3044952,
+    "slot": 2,
+    "time": "2026-11-05T18:17:09.563211+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 2,
+    "pid": 3044953,
+    "slot": 3,
+    "time": "2026-11-05T18:17:10.827307+08:00"
+  },
+  {
+    "config": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "group": "adam",
+      "lr": 0.002,
+      "method": "adam-iid",
+      "seed": 20261112,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 2,
+    "pid": 3045626,
+    "slot": 2,
+    "time": "2026-11-05T18:17:12.675926+08:00"
+  },
+  {
+    "config": {
+      "clip": 40.0,
+      "eps": 1e-08,
+      "group": "adam",
+      "lr": 0.0106926766216,
+      "method": "adam-b2lt-sgd",
+      "seed": 20261112,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 2,
+    "pid": 3045627,
+    "slot": 3,
+    "time": "2026-11-05T18:17:12.678939+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 1,
+    "pid": 3044950,
+    "slot": 0,
+    "time": "2026-11-05T18:17:12.762411+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 1,
+    "pid": 3044951,
+    "slot": 1,
+    "time": "2026-11-05T18:17:13.652508+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 3,
+    "pid": 3044955,
+    "slot": 5,
+    "time": "2026-11-05T18:17:14.835598+08:00"
+  },
+  {
+    "config": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "group": "momentum",
+      "lr": 2,
+      "method": "momentum-iid",
+      "seed": 20261112,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 1,
+    "pid": 3045691,
+    "slot": 0,
+    "time": "2026-11-05T18:17:16.980080+08:00"
+  },
+  {
+    "config": {
+      "clip": 20,
+      "eps": 1e-08,
+      "group": "momentum",
+      "lr": 0.3,
+      "method": "momentum-b2lt-momentum",
+      "seed": 20261112,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 1,
+    "pid": 3045692,
+    "slot": 1,
+    "time": "2026-11-05T18:17:16.983218+08:00"
+  },
+  {
+    "config": {
+      "clip": 100,
+      "eps": 0.005,
+      "group": "stpex2",
+      "lr": 0.08,
+      "method": "stpex2-iid",
+      "seed": 20261112,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 3,
+    "pid": 3045693,
+    "slot": 5,
+    "time": "2026-11-05T18:17:16.986028+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 3,
+    "pid": 3044954,
+    "slot": 4,
+    "time": "2026-11-05T18:17:17.066668+08:00"
+  },
+  {
+    "config": {
+      "clip": 100,
+      "eps": 0.005,
+      "group": "stpex2",
+      "lr": 0.08,
+      "method": "stpex2-b2lt-momentum-bias",
+      "seed": 20261112,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 3,
+    "pid": 3045718,
+    "slot": 4,
+    "time": "2026-11-05T18:17:19.292158+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 2,
+    "pid": 3045626,
+    "slot": 2,
+    "time": "2026-11-05T18:18:42.507609+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 2,
+    "pid": 3045627,
+    "slot": 3,
+    "time": "2026-11-05T18:18:44.422949+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 1,
+    "pid": 3045691,
+    "slot": 0,
+    "time": "2026-11-05T18:18:46.270308+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 1,
+    "pid": 3045692,
+    "slot": 1,
+    "time": "2026-11-05T18:18:48.177574+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 3,
+    "pid": 3045693,
+    "slot": 5,
+    "time": "2026-11-05T18:18:50.071792+08:00"
+  },
+  {
+    "config": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "group": "adam",
+      "lr": 0.002,
+      "method": "adam-iid",
+      "seed": 20261113,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 1,
+    "pid": 3046490,
+    "slot": 0,
+    "time": "2026-11-05T18:18:53.077901+08:00"
+  },
+  {
+    "config": {
+      "clip": 40.0,
+      "eps": 1e-08,
+      "group": "adam",
+      "lr": 0.0106926766216,
+      "method": "adam-b2lt-sgd",
+      "seed": 20261113,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 1,
+    "pid": 3046491,
+    "slot": 1,
+    "time": "2026-11-05T18:18:53.081449+08:00"
+  },
+  {
+    "config": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "group": "momentum",
+      "lr": 2,
+      "method": "momentum-iid",
+      "seed": 20261113,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 2,
+    "pid": 3046492,
+    "slot": 2,
+    "time": "2026-11-05T18:18:53.084827+08:00"
+  },
+  {
+    "config": {
+      "clip": 20,
+      "eps": 1e-08,
+      "group": "momentum",
+      "lr": 0.3,
+      "method": "momentum-b2lt-momentum",
+      "seed": 20261113,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 2,
+    "pid": 3046493,
+    "slot": 3,
+    "time": "2026-11-05T18:18:53.086754+08:00"
+  },
+  {
+    "config": {
+      "clip": 100,
+      "eps": 0.005,
+      "group": "stpex2",
+      "lr": 0.08,
+      "method": "stpex2-iid",
+      "seed": 20261113,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 3,
+    "pid": 3046494,
+    "slot": 5,
+    "time": "2026-11-05T18:18:53.088255+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 3,
+    "pid": 3045718,
+    "slot": 4,
+    "time": "2026-11-05T18:18:55.181599+08:00"
+  },
+  {
+    "config": {
+      "clip": 100,
+      "eps": 0.005,
+      "group": "stpex2",
+      "lr": 0.08,
+      "method": "stpex2-b2lt-momentum-bias",
+      "seed": 20261113,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 3,
+    "pid": 3046541,
+    "slot": 4,
+    "time": "2026-11-05T18:18:58.482515+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 1,
+    "pid": 3046490,
+    "slot": 0,
+    "time": "2026-11-05T18:20:22.764017+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 1,
+    "pid": 3046491,
+    "slot": 1,
+    "time": "2026-11-05T18:20:26.344019+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 2,
+    "pid": 3046492,
+    "slot": 2,
+    "time": "2026-11-05T18:20:29.332959+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 2,
+    "pid": 3046493,
+    "slot": 3,
+    "time": "2026-11-05T18:20:32.332617+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 3,
+    "pid": 3046494,
+    "slot": 5,
+    "time": "2026-11-05T18:20:35.326066+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 3,
+    "pid": 3046541,
+    "slot": 4,
+    "time": "2026-11-05T18:20:38.432445+08:00"
+  },
+  {
+    "config": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "group": "adam",
+      "lr": 0.002,
+      "method": "adam-iid",
+      "seed": 20261114,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 1,
+    "pid": 3047217,
+    "slot": 0,
+    "time": "2026-11-05T18:20:42.292046+08:00"
+  },
+  {
+    "config": {
+      "clip": 40.0,
+      "eps": 1e-08,
+      "group": "adam",
+      "lr": 0.0106926766216,
+      "method": "adam-b2lt-sgd",
+      "seed": 20261114,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 1,
+    "pid": 3047218,
+    "slot": 1,
+    "time": "2026-11-05T18:20:42.295959+08:00"
+  },
+  {
+    "config": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "group": "momentum",
+      "lr": 2,
+      "method": "momentum-iid",
+      "seed": 20261114,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 2,
+    "pid": 3047219,
+    "slot": 2,
+    "time": "2026-11-05T18:20:42.299510+08:00"
+  },
+  {
+    "config": {
+      "clip": 20,
+      "eps": 1e-08,
+      "group": "momentum",
+      "lr": 0.3,
+      "method": "momentum-b2lt-momentum",
+      "seed": 20261114,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 2,
+    "pid": 3047220,
+    "slot": 3,
+    "time": "2026-11-05T18:20:42.301152+08:00"
+  },
+  {
+    "config": {
+      "clip": 100,
+      "eps": 0.005,
+      "group": "stpex2",
+      "lr": 0.08,
+      "method": "stpex2-iid",
+      "seed": 20261114,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 3,
+    "pid": 3047221,
+    "slot": 4,
+    "time": "2026-11-05T18:20:42.302648+08:00"
+  },
+  {
+    "config": {
+      "clip": 100,
+      "eps": 0.005,
+      "group": "stpex2",
+      "lr": 0.08,
+      "method": "stpex2-b2lt-momentum-bias",
+      "seed": 20261114,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 3,
+    "pid": 3047222,
+    "slot": 5,
+    "time": "2026-11-05T18:20:42.304234+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 1,
+    "pid": 3047217,
+    "slot": 0,
+    "time": "2026-11-05T18:22:15.631173+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 1,
+    "pid": 3047218,
+    "slot": 1,
+    "time": "2026-11-05T18:22:19.574497+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 2,
+    "pid": 3047219,
+    "slot": 2,
+    "time": "2026-11-05T18:22:23.384566+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 2,
+    "pid": 3047220,
+    "slot": 3,
+    "time": "2026-11-05T18:22:27.321537+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 3,
+    "pid": 3047221,
+    "slot": 4,
+    "time": "2026-11-05T18:22:31.185294+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 3,
+    "pid": 3047222,
+    "slot": 5,
+    "time": "2026-11-05T18:22:35.007179+08:00"
+  },
+  {
+    "config": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "group": "adam",
+      "lr": 0.002,
+      "method": "adam-iid",
+      "seed": 20261115,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 1,
+    "pid": 3047773,
+    "slot": 0,
+    "time": "2026-11-05T18:22:39.866137+08:00"
+  },
+  {
+    "config": {
+      "clip": 40.0,
+      "eps": 1e-08,
+      "group": "adam",
+      "lr": 0.0106926766216,
+      "method": "adam-b2lt-sgd",
+      "seed": 20261115,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 1,
+    "pid": 3047774,
+    "slot": 1,
+    "time": "2026-11-05T18:22:39.870322+08:00"
+  },
+  {
+    "config": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "group": "momentum",
+      "lr": 2,
+      "method": "momentum-iid",
+      "seed": 20261115,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 2,
+    "pid": 3047775,
+    "slot": 2,
+    "time": "2026-11-05T18:22:39.874104+08:00"
+  },
+  {
+    "config": {
+      "clip": 20,
+      "eps": 1e-08,
+      "group": "momentum",
+      "lr": 0.3,
+      "method": "momentum-b2lt-momentum",
+      "seed": 20261115,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 2,
+    "pid": 3047776,
+    "slot": 3,
+    "time": "2026-11-05T18:22:39.875847+08:00"
+  },
+  {
+    "config": {
+      "clip": 100,
+      "eps": 0.005,
+      "group": "stpex2",
+      "lr": 0.08,
+      "method": "stpex2-iid",
+      "seed": 20261115,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 3,
+    "pid": 3047777,
+    "slot": 4,
+    "time": "2026-11-05T18:22:39.877681+08:00"
+  },
+  {
+    "config": {
+      "clip": 100,
+      "eps": 0.005,
+      "group": "stpex2",
+      "lr": 0.08,
+      "method": "stpex2-b2lt-momentum-bias",
+      "seed": 20261115,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 3,
+    "pid": 3047778,
+    "slot": 5,
+    "time": "2026-11-05T18:22:39.879477+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 1,
+    "pid": 3047773,
+    "slot": 0,
+    "time": "2026-11-05T18:24:13.180586+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 1,
+    "pid": 3047774,
+    "slot": 1,
+    "time": "2026-11-05T18:24:18.010256+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 2,
+    "pid": 3047775,
+    "slot": 2,
+    "time": "2026-11-05T18:24:23.207056+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 2,
+    "pid": 3047776,
+    "slot": 3,
+    "time": "2026-11-05T18:24:28.380859+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 3,
+    "pid": 3047777,
+    "slot": 4,
+    "time": "2026-11-05T18:24:33.421392+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 3,
+    "pid": 3047778,
+    "slot": 5,
+    "time": "2026-11-05T18:24:38.156050+08:00"
+  },
+  {
+    "config": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "group": "adam",
+      "lr": 0.002,
+      "method": "adam-iid",
+      "seed": 20261116,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 1,
+    "pid": 3048391,
+    "slot": 0,
+    "time": "2026-11-05T18:24:43.811621+08:00"
+  },
+  {
+    "config": {
+      "clip": 40.0,
+      "eps": 1e-08,
+      "group": "adam",
+      "lr": 0.0106926766216,
+      "method": "adam-b2lt-sgd",
+      "seed": 20261116,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 1,
+    "pid": 3048392,
+    "slot": 1,
+    "time": "2026-11-05T18:24:43.814958+08:00"
+  },
+  {
+    "config": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "group": "momentum",
+      "lr": 2,
+      "method": "momentum-iid",
+      "seed": 20261116,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 2,
+    "pid": 3048393,
+    "slot": 2,
+    "time": "2026-11-05T18:24:43.818117+08:00"
+  },
+  {
+    "config": {
+      "clip": 20,
+      "eps": 1e-08,
+      "group": "momentum",
+      "lr": 0.3,
+      "method": "momentum-b2lt-momentum",
+      "seed": 20261116,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 2,
+    "pid": 3048394,
+    "slot": 3,
+    "time": "2026-11-05T18:24:43.821271+08:00"
+  },
+  {
+    "config": {
+      "clip": 100,
+      "eps": 0.005,
+      "group": "stpex2",
+      "lr": 0.08,
+      "method": "stpex2-iid",
+      "seed": 20261116,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 3,
+    "pid": 3048395,
+    "slot": 4,
+    "time": "2026-11-05T18:24:43.824392+08:00"
+  },
+  {
+    "config": {
+      "clip": 100,
+      "eps": 0.005,
+      "group": "stpex2",
+      "lr": 0.08,
+      "method": "stpex2-b2lt-momentum-bias",
+      "seed": 20261116,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 3,
+    "pid": 3048396,
+    "slot": 5,
+    "time": "2026-11-05T18:24:43.826176+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 2,
+    "pid": 3048393,
+    "slot": 2,
+    "time": "2026-11-05T18:26:14.088269+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 2,
+    "pid": 3048394,
+    "slot": 3,
+    "time": "2026-11-05T18:26:19.748695+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 3,
+    "pid": 3048395,
+    "slot": 4,
+    "time": "2026-11-05T18:26:25.579669+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 3,
+    "pid": 3048396,
+    "slot": 5,
+    "time": "2026-11-05T18:26:31.151017+08:00"
+  },
+  {
+    "config": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "group": "adam",
+      "lr": 0.002,
+      "method": "adam-iid",
+      "seed": 20261117,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 2,
+    "pid": 3048936,
+    "slot": 2,
+    "time": "2026-11-05T18:26:37.698420+08:00"
+  },
+  {
+    "config": {
+      "clip": 40.0,
+      "eps": 1e-08,
+      "group": "adam",
+      "lr": 0.0106926766216,
+      "method": "adam-b2lt-sgd",
+      "seed": 20261117,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 2,
+    "pid": 3048937,
+    "slot": 3,
+    "time": "2026-11-05T18:26:37.703130+08:00"
+  },
+  {
+    "config": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "group": "momentum",
+      "lr": 2,
+      "method": "momentum-iid",
+      "seed": 20261117,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 3,
+    "pid": 3048938,
+    "slot": 4,
+    "time": "2026-11-05T18:26:37.707451+08:00"
+  },
+  {
+    "config": {
+      "clip": 20,
+      "eps": 1e-08,
+      "group": "momentum",
+      "lr": 0.3,
+      "method": "momentum-b2lt-momentum",
+      "seed": 20261117,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 3,
+    "pid": 3048939,
+    "slot": 5,
+    "time": "2026-11-05T18:26:37.709494+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 1,
+    "pid": 3048391,
+    "slot": 0,
+    "time": "2026-11-05T18:26:37.792702+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 1,
+    "pid": 3048392,
+    "slot": 1,
+    "time": "2026-11-05T18:26:43.917599+08:00"
+  },
+  {
+    "config": {
+      "clip": 100,
+      "eps": 0.005,
+      "group": "stpex2",
+      "lr": 0.08,
+      "method": "stpex2-iid",
+      "seed": 20261117,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 1,
+    "pid": 3049060,
+    "slot": 0,
+    "time": "2026-11-05T18:26:50.581086+08:00"
+  },
+  {
+    "config": {
+      "clip": 100,
+      "eps": 0.005,
+      "group": "stpex2",
+      "lr": 0.08,
+      "method": "stpex2-b2lt-momentum-bias",
+      "seed": 20261117,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 1,
+    "pid": 3049061,
+    "slot": 1,
+    "time": "2026-11-05T18:26:50.583273+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 2,
+    "pid": 3048936,
+    "slot": 2,
+    "time": "2026-11-05T18:28:06.789146+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 2,
+    "pid": 3048937,
+    "slot": 3,
+    "time": "2026-11-05T18:28:13.239024+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 3,
+    "pid": 3048938,
+    "slot": 4,
+    "time": "2026-11-05T18:28:19.279298+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 3,
+    "pid": 3048939,
+    "slot": 5,
+    "time": "2026-11-05T18:28:25.654866+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 1,
+    "pid": 3049060,
+    "slot": 0,
+    "time": "2026-11-05T18:28:32.118774+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 1,
+    "pid": 3049061,
+    "slot": 1,
+    "time": "2026-11-05T18:28:38.566044+08:00"
+  },
+  {
+    "config": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "group": "adam",
+      "lr": 0.002,
+      "method": "adam-iid",
+      "seed": 20261118,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 1,
+    "pid": 3049538,
+    "slot": 0,
+    "time": "2026-11-05T18:28:45.926758+08:00"
+  },
+  {
+    "config": {
+      "clip": 40.0,
+      "eps": 1e-08,
+      "group": "adam",
+      "lr": 0.0106926766216,
+      "method": "adam-b2lt-sgd",
+      "seed": 20261118,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 1,
+    "pid": 3049539,
+    "slot": 1,
+    "time": "2026-11-05T18:28:45.932129+08:00"
+  },
+  {
+    "config": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "group": "momentum",
+      "lr": 2,
+      "method": "momentum-iid",
+      "seed": 20261118,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 2,
+    "pid": 3049540,
+    "slot": 2,
+    "time": "2026-11-05T18:28:45.937059+08:00"
+  },
+  {
+    "config": {
+      "clip": 20,
+      "eps": 1e-08,
+      "group": "momentum",
+      "lr": 0.3,
+      "method": "momentum-b2lt-momentum",
+      "seed": 20261118,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 2,
+    "pid": 3049541,
+    "slot": 3,
+    "time": "2026-11-05T18:28:45.952084+08:00"
+  },
+  {
+    "config": {
+      "clip": 100,
+      "eps": 0.005,
+      "group": "stpex2",
+      "lr": 0.08,
+      "method": "stpex2-iid",
+      "seed": 20261118,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 3,
+    "pid": 3049542,
+    "slot": 4,
+    "time": "2026-11-05T18:28:45.960627+08:00"
+  },
+  {
+    "config": {
+      "clip": 100,
+      "eps": 0.005,
+      "group": "stpex2",
+      "lr": 0.08,
+      "method": "stpex2-b2lt-momentum-bias",
+      "seed": 20261118,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 3,
+    "pid": 3049543,
+    "slot": 5,
+    "time": "2026-11-05T18:28:45.962875+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 1,
+    "pid": 3049538,
+    "slot": 0,
+    "time": "2026-11-05T18:30:20.239546+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 1,
+    "pid": 3049539,
+    "slot": 1,
+    "time": "2026-11-05T18:30:28.134865+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 2,
+    "pid": 3049540,
+    "slot": 2,
+    "time": "2026-11-05T18:30:35.501062+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 2,
+    "pid": 3049541,
+    "slot": 3,
+    "time": "2026-11-05T18:30:42.793201+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 3,
+    "pid": 3049542,
+    "slot": 4,
+    "time": "2026-11-05T18:30:50.086747+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 3,
+    "pid": 3049543,
+    "slot": 5,
+    "time": "2026-11-05T18:30:57.453707+08:00"
+  },
+  {
+    "config": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "group": "adam",
+      "lr": 0.002,
+      "method": "adam-iid",
+      "seed": 20261119,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 1,
+    "pid": 3050220,
+    "slot": 0,
+    "time": "2026-11-05T18:31:05.772693+08:00"
+  },
+  {
+    "config": {
+      "clip": 40.0,
+      "eps": 1e-08,
+      "group": "adam",
+      "lr": 0.0106926766216,
+      "method": "adam-b2lt-sgd",
+      "seed": 20261119,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 1,
+    "pid": 3050221,
+    "slot": 1,
+    "time": "2026-11-05T18:31:05.778561+08:00"
+  },
+  {
+    "config": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "group": "momentum",
+      "lr": 2,
+      "method": "momentum-iid",
+      "seed": 20261119,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 2,
+    "pid": 3050222,
+    "slot": 2,
+    "time": "2026-11-05T18:31:05.782621+08:00"
+  },
+  {
+    "config": {
+      "clip": 20,
+      "eps": 1e-08,
+      "group": "momentum",
+      "lr": 0.3,
+      "method": "momentum-b2lt-momentum",
+      "seed": 20261119,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 2,
+    "pid": 3050223,
+    "slot": 3,
+    "time": "2026-11-05T18:31:05.784911+08:00"
+  },
+  {
+    "config": {
+      "clip": 100,
+      "eps": 0.005,
+      "group": "stpex2",
+      "lr": 0.08,
+      "method": "stpex2-iid",
+      "seed": 20261119,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 3,
+    "pid": 3050224,
+    "slot": 4,
+    "time": "2026-11-05T18:31:05.787215+08:00"
+  },
+  {
+    "config": {
+      "clip": 100,
+      "eps": 0.005,
+      "group": "stpex2",
+      "lr": 0.08,
+      "method": "stpex2-b2lt-momentum-bias",
+      "seed": 20261119,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 3,
+    "pid": 3050225,
+    "slot": 5,
+    "time": "2026-11-05T18:31:05.789536+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 1,
+    "pid": 3050220,
+    "slot": 0,
+    "time": "2026-11-05T18:32:33.008146+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 1,
+    "pid": 3050221,
+    "slot": 1,
+    "time": "2026-11-05T18:32:41.625523+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 2,
+    "pid": 3050222,
+    "slot": 2,
+    "time": "2026-11-05T18:32:49.956182+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 2,
+    "pid": 3050223,
+    "slot": 3,
+    "time": "2026-11-05T18:32:58.137213+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 3,
+    "pid": 3050224,
+    "slot": 4,
+    "time": "2026-11-05T18:33:06.310563+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 3,
+    "pid": 3050225,
+    "slot": 5,
+    "time": "2026-11-05T18:33:14.527986+08:00"
+  },
+  {
+    "config": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "group": "adam",
+      "lr": 0.002,
+      "method": "adam-iid",
+      "seed": 20261120,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 1,
+    "pid": 3050925,
+    "slot": 0,
+    "time": "2026-11-05T18:33:23.626647+08:00"
+  },
+  {
+    "config": {
+      "clip": 40.0,
+      "eps": 1e-08,
+      "group": "adam",
+      "lr": 0.0106926766216,
+      "method": "adam-b2lt-sgd",
+      "seed": 20261120,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 1,
+    "pid": 3050926,
+    "slot": 1,
+    "time": "2026-11-05T18:33:23.632686+08:00"
+  },
+  {
+    "config": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "group": "momentum",
+      "lr": 2,
+      "method": "momentum-iid",
+      "seed": 20261120,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 2,
+    "pid": 3050927,
+    "slot": 2,
+    "time": "2026-11-05T18:33:23.637727+08:00"
+  },
+  {
+    "config": {
+      "clip": 20,
+      "eps": 1e-08,
+      "group": "momentum",
+      "lr": 0.3,
+      "method": "momentum-b2lt-momentum",
+      "seed": 20261120,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 2,
+    "pid": 3050928,
+    "slot": 3,
+    "time": "2026-11-05T18:33:23.639456+08:00"
+  },
+  {
+    "config": {
+      "clip": 100,
+      "eps": 0.005,
+      "group": "stpex2",
+      "lr": 0.08,
+      "method": "stpex2-iid",
+      "seed": 20261120,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 3,
+    "pid": 3050929,
+    "slot": 4,
+    "time": "2026-11-05T18:33:23.641160+08:00"
+  },
+  {
+    "config": {
+      "clip": 100,
+      "eps": 0.005,
+      "group": "stpex2",
+      "lr": 0.08,
+      "method": "stpex2-b2lt-momentum-bias",
+      "seed": 20261120,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 3,
+    "pid": 3050930,
+    "slot": 5,
+    "time": "2026-11-05T18:33:23.642924+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 1,
+    "pid": 3050925,
+    "slot": 0,
+    "time": "2026-11-05T18:34:53.863286+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 1,
+    "pid": 3050926,
+    "slot": 1,
+    "time": "2026-11-05T18:35:03.155755+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 2,
+    "pid": 3050927,
+    "slot": 2,
+    "time": "2026-11-05T18:35:12.163485+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 2,
+    "pid": 3050928,
+    "slot": 3,
+    "time": "2026-11-05T18:35:21.562374+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 3,
+    "pid": 3050929,
+    "slot": 4,
+    "time": "2026-11-05T18:35:30.696832+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 3,
+    "pid": 3050930,
+    "slot": 5,
+    "time": "2026-11-05T18:35:39.828615+08:00"
+  }
+]

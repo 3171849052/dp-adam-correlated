@@ -1,0 +1,57 @@
+{
+  "active": [
+    {
+      "directory": "formal/adam-iid_seed20261111",
+      "gpu": 1,
+      "method": "adam-iid",
+      "seed": 20261111,
+      "slot": 0,
+      "worker_pid": 3043856
+    },
+    {
+      "directory": "formal/adam-b2lt-sgd_seed20261111",
+      "gpu": 1,
+      "method": "adam-b2lt-sgd",
+      "seed": 20261111,
+      "slot": 1,
+      "worker_pid": 3043857
+    },
+    {
+      "directory": "formal/momentum-iid_seed20261111",
+      "gpu": 2,
+      "method": "momentum-iid",
+      "seed": 20261111,
+      "slot": 2,
+      "worker_pid": 3043858
+    },
+    {
+      "directory": "formal/momentum-b2lt-momentum_seed20261111",
+      "gpu": 2,
+      "method": "momentum-b2lt-momentum",
+      "seed": 20261111,
+      "slot": 3,
+      "worker_pid": 3043859
+    },
+    {
+      "directory": "formal/stpex2-iid_seed20261111",
+      "gpu": 3,
+      "method": "stpex2-iid",
+      "seed": 20261111,
+      "slot": 4,
+      "worker_pid": 3043860
+    },
+    {
+      "directory": "formal/stpex2-b2lt-momentum-bias_seed20261111",
+      "gpu": 3,
+      "method": "stpex2-b2lt-momentum-bias",
+      "seed": 20261111,
+      "slot": 5,
+      "worker_pid": 3043861
+    }
+  ],
+  "completed": 0,
+  "pending": 54,
+  "pid": 3043851,
+  "status": "running",
+  "time": "2026-11-05T18:13:56.874146+08:00"
+}

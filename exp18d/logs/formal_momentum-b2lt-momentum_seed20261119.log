@@ -1,0 +1,23 @@
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 18433.38it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+momentum-b2lt-momentum seed=20261119 step=62 internal={'accuracy': 0.7936062815479529, 'loss': 0.48946735020507537, 'examples': 5349}
+momentum-b2lt-momentum seed=20261119 step=124 internal={'accuracy': 0.8209011030099084, 'loss': 0.43148369502967754, 'examples': 5349}
+momentum-b2lt-momentum seed=20261119 step=186 internal={'accuracy': 0.8225836604972893, 'loss': 0.4162588256790295, 'examples': 5349}
+momentum-b2lt-momentum seed=20261119 step=248 internal={'accuracy': 0.850065432791176, 'loss': 0.3838607972081431, 'examples': 5349}
+momentum-b2lt-momentum seed=20261119 step=310 internal={'accuracy': 0.8504393344550383, 'loss': 0.39434697352117143, 'examples': 5349}
+COMPLETE momentum-b2lt-momentum seed=20261119: {'accuracy': 0.7935779816513762, 'loss': 0.5174376461484017, 'examples': 872}

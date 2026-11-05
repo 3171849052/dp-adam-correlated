@@ -1,0 +1,79 @@
+{
+  "acceptance_sha256": "2e5955cf09fbb161ca483dceaaec7e90e0bc76d7b50babd22a4501fa9926d24c",
+  "all_six_workers_have_training_steps": true,
+  "background_pid": 3044935,
+  "gpu_counts": {
+    "1": 2,
+    "2": 2,
+    "3": 2
+  },
+  "gpu_telemetry": "3044950, GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54, 4156\n3044951, GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54, 4246\n3044952, GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e, 4156\n3044953, GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e, 4246\n3044954, GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa, 4360\n3044955, GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa, 4450\n",
+  "independent_session": true,
+  "passed": true,
+  "previous_interruption": "interrupted_attempts/attempt_001",
+  "process": "3044935       1 3044935 Ssl  /home/longt29/miniconda3/envs/curve/bin/python -B -m exp18d.pipeline",
+  "status": "running",
+  "time": "2026-11-05T18:16:20.230982+08:00",
+  "workers": [
+    {
+      "cuda_visible_devices": "GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54",
+      "directory": "formal/adam-iid_seed20261111",
+      "gpu": 1,
+      "last_verified_step": 122,
+      "method": "adam-iid",
+      "seed": 20261111,
+      "slot": 0,
+      "worker_pid": 3044950
+    },
+    {
+      "cuda_visible_devices": "GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54",
+      "directory": "formal/adam-b2lt-sgd_seed20261111",
+      "gpu": 1,
+      "last_verified_step": 123,
+      "method": "adam-b2lt-sgd",
+      "seed": 20261111,
+      "slot": 1,
+      "worker_pid": 3044951
+    },
+    {
+      "cuda_visible_devices": "GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e",
+      "directory": "formal/momentum-iid_seed20261111",
+      "gpu": 2,
+      "last_verified_step": 124,
+      "method": "momentum-iid",
+      "seed": 20261111,
+      "slot": 2,
+      "worker_pid": 3044952
+    },
+    {
+      "cuda_visible_devices": "GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e",
+      "directory": "formal/momentum-b2lt-momentum_seed20261111",
+      "gpu": 2,
+      "last_verified_step": 119,
+      "method": "momentum-b2lt-momentum",
+      "seed": 20261111,
+      "slot": 3,
+      "worker_pid": 3044953
+    },
+    {
+      "cuda_visible_devices": "GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa",
+      "directory": "formal/stpex2-iid_seed20261111",
+      "gpu": 3,
+      "last_verified_step": 116,
+      "method": "stpex2-iid",
+      "seed": 20261111,
+      "slot": 4,
+      "worker_pid": 3044954
+    },
+    {
+      "cuda_visible_devices": "GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa",
+      "directory": "formal/stpex2-b2lt-momentum-bias_seed20261111",
+      "gpu": 3,
+      "last_verified_step": 114,
+      "method": "stpex2-b2lt-momentum-bias",
+      "seed": 20261111,
+      "slot": 5,
+      "worker_pid": 3044955
+    }
+  ]
+}

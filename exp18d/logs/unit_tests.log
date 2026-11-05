@@ -1,0 +1,13 @@
+test_ghost_clipped_sum_against_independent_bert_autograd (test_experiment.ExperimentTests.test_ghost_clipped_sum_against_independent_bert_autograd) ... /media/data/data/lt/dp-adam-correlated/exp18d/clipping.py:55: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  losses.sum().backward(retain_graph=True)
+/media/data/data/lt/dp-adam-correlated/exp18d/clipping.py:60: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  (losses * coefficients).sum().backward()
+ok
+test_online_noise_matches_dense_full_horizon (test_experiment.ExperimentTests.test_online_noise_matches_dense_full_horizon) ... ok
+test_plan_privacy_and_frozen_sources (test_experiment.ExperimentTests.test_plan_privacy_and_frozen_sources) ... ok
+test_updates_and_adaptive_constraint (test_experiment.ExperimentTests.test_updates_and_adaptive_constraint) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.274s
+
+OK

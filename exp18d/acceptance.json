@@ -1,0 +1,107 @@
+{
+  "code": {
+    "exp18d/__init__.py": "e62654149335a92b6ae6a0956ccbd3791801dc94eaaac3bc236800d986a467dd",
+    "exp18d/accept.py": "70e492aee4fd7bc1cf0ad11c0461054c33ae2f5af1ca62a3ff71b552dbbc440e",
+    "exp18d/assets.json": "433e0518dcbdbf48ce213450d628153d285741db71c2cedfd720444bcab132c5",
+    "exp18d/clipping.py": "a17abb8a2a88729e662185578c915750d2c506e31316cde415b6f8ccc5e17999",
+    "exp18d/common.py": "24a2512ea5e6b8b446269bb88fee7466133ba2508c74f22d6a5f3664e0fe63a7",
+    "exp18d/hyperparameters.json": "1a82a988bc82289b86c8732d856356a9cc42c41c598b6eab6c65d039355e00ba",
+    "exp18d/matrices.py": "9cc23b3122f5329a25e0fa7e7c3981d97544411cbee95ac81d8e339ed8122e42",
+    "exp18d/matrices/momentum-bias.json": "3e0c8d14d123955bb2ea3ec438c60d2b5eefc16ff8c7b9907c0e5159ef7b5b5f",
+    "exp18d/matrices/momentum-bias.npz": "249fc70a5670cb957a1aa659561af9c33db7abddea40619377f37432475622b6",
+    "exp18d/matrices/momentum.json": "defd3bd8ec188a0ec8e1f24ebcbdbaca783e1331f23bde6f5e09195b26ada63e",
+    "exp18d/matrices/momentum.npz": "25656cfbaa8de39cda2450550594ac9b18f972ac8b54571904ab341c30eebfe4",
+    "exp18d/matrices/sgd.json": "6d8cebefa266fa049364d5b1976ad400caabd3ddab7fdf2845dbe9b3dd5fb6db",
+    "exp18d/matrices/sgd.npz": "ef0064a93e716acaefe1280b2f3f7126b71a31d3eeb1ec1f8c91d40eadd25b4b",
+    "exp18d/model.py": "d9bf979cae1dffb906cab9b3fdafbb2b6632720d2b2511d4e3819951bf6974c9",
+    "exp18d/pipeline.py": "8cdcf96498527eb0c37c4bc0ea5f40dbe2c9d9a8f3b0d754181609bc9b4cc99c",
+    "exp18d/privacy_audit.json": "b9e5c9beab0bfcb1ccec183e83943ca659c26fa8cbedb6033106c8bf5d63e458",
+    "exp18d/protocol.json": "dd9ed541a9afd1b71cdaa45ad6fea84b6de2ded7ea93a39d81592c552db65402",
+    "exp18d/report.py": "3dbdfff88ec6e6008a1d27b7ca782f6f8a77ad861ef42b2f8f0e39a2c5ebedbe",
+    "exp18d/scheduler.py": "4a799fdd56f4be4fc0a85ab93d4d4e1af2d7cbda000223e8978700c0c2e13c6f",
+    "exp18d/scheduling.json": "41e1f7b9675aac26cf9ecb408439b19043412a1426336b4dc2b76d1c9ace03b2",
+    "exp18d/setup.py": "d6b16e1f481f0511f46e71825f3fe1939789491e72733d9dcf7ca7f37ad91943",
+    "exp18d/start_background.py": "2a3f9035520dd73811b104a4e89f057b6a38fcfe163906a8b3ccfccd0c0db3d4",
+    "exp18d/start_background.sh": "4da3be8ca82d5407b79786f8dd0238c94d852a6156c795aa360dd768619d88c7",
+    "exp18d/tests/test_experiment.py": "5122a61d7baa0cff3d9248aad3e36e6d1307e43b7610e1f2380a875c7a8a0fbe",
+    "exp18d/train.py": "77614dbc6b9241e8095916cc9d879f2d1755a859695b175f31d4411cd851662a",
+    "exp18d/trial_plan.csv": "b5a56349d94b8438e77d99ee07fce523cb1326deb0a982fabb2aa3953c9a4d8a",
+    "exp18d/upstream_manifest.json": "e4e055cb701eafe2ba0445d3fad7d6ac06304d7556ac42944f6cdad9272d92c2"
+  },
+  "passed": true,
+  "python": "/home/longt29/miniconda3/envs/curve/bin/python",
+  "smoke": {
+    "passed": true,
+    "peak_reserved_bytes": [
+      3982491648,
+      4076863488,
+      3982491648,
+      4076863488,
+      4196401152,
+      4288675840
+    ],
+    "six_process_overlap": [
+      "2026-11-05T18:12:51.144862+08:00",
+      "2026-11-05T18:12:52.209253+08:00",
+      "2026-11-05T18:12:53.268774+08:00"
+    ],
+    "time": "2026-11-05T18:15:40.019620+08:00",
+    "workers": [
+      {
+        "CUDA_VISIBLE_DEVICES": "GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54",
+        "device": "_CudaDeviceProperties(name='NVIDIA GeForce RTX 3080 Ti', major=8, minor=6, total_memory=11921MB, multi_processor_count=80, uuid=015dd2bc-e3fc-8a3a-9ec6-ae5664031a54, pci_bus_id=75, pci_device_id=0, pci_domain_id=0, L2_cache_size=6MB)",
+        "physical_gpu": 1,
+        "pid": 3043294,
+        "python": "/home/longt29/miniconda3/envs/curve/bin/python",
+        "time": "2026-11-05T18:12:51.283485+08:00",
+        "visible_device_count": 1
+      },
+      {
+        "CUDA_VISIBLE_DEVICES": "GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54",
+        "device": "_CudaDeviceProperties(name='NVIDIA GeForce RTX 3080 Ti', major=8, minor=6, total_memory=11921MB, multi_processor_count=80, uuid=015dd2bc-e3fc-8a3a-9ec6-ae5664031a54, pci_bus_id=75, pci_device_id=0, pci_domain_id=0, L2_cache_size=6MB)",
+        "physical_gpu": 1,
+        "pid": 3043295,
+        "python": "/home/longt29/miniconda3/envs/curve/bin/python",
+        "time": "2026-11-05T18:12:51.320701+08:00",
+        "visible_device_count": 1
+      },
+      {
+        "CUDA_VISIBLE_DEVICES": "GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e",
+        "device": "_CudaDeviceProperties(name='NVIDIA GeForce RTX 3080 Ti', major=8, minor=6, total_memory=11921MB, multi_processor_count=80, uuid=9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e, pci_bus_id=177, pci_device_id=0, pci_domain_id=0, L2_cache_size=6MB)",
+        "physical_gpu": 2,
+        "pid": 3043296,
+        "python": "/home/longt29/miniconda3/envs/curve/bin/python",
+        "time": "2026-11-05T18:12:51.309642+08:00",
+        "visible_device_count": 1
+      },
+      {
+        "CUDA_VISIBLE_DEVICES": "GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e",
+        "device": "_CudaDeviceProperties(name='NVIDIA GeForce RTX 3080 Ti', major=8, minor=6, total_memory=11921MB, multi_processor_count=80, uuid=9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e, pci_bus_id=177, pci_device_id=0, pci_domain_id=0, L2_cache_size=6MB)",
+        "physical_gpu": 2,
+        "pid": 3043297,
+        "python": "/home/longt29/miniconda3/envs/curve/bin/python",
+        "time": "2026-11-05T18:12:51.315093+08:00",
+        "visible_device_count": 1
+      },
+      {
+        "CUDA_VISIBLE_DEVICES": "GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa",
+        "device": "_CudaDeviceProperties(name='NVIDIA GeForce RTX 3080 Ti', major=8, minor=6, total_memory=11921MB, multi_processor_count=80, uuid=b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa, pci_bus_id=202, pci_device_id=0, pci_domain_id=0, L2_cache_size=6MB)",
+        "physical_gpu": 3,
+        "pid": 3043298,
+        "python": "/home/longt29/miniconda3/envs/curve/bin/python",
+        "time": "2026-11-05T18:12:51.308760+08:00",
+        "visible_device_count": 1
+      },
+      {
+        "CUDA_VISIBLE_DEVICES": "GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa",
+        "device": "_CudaDeviceProperties(name='NVIDIA GeForce RTX 3080 Ti', major=8, minor=6, total_memory=11921MB, multi_processor_count=80, uuid=b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa, pci_bus_id=202, pci_device_id=0, pci_domain_id=0, L2_cache_size=6MB)",
+        "physical_gpu": 3,
+        "pid": 3043299,
+        "python": "/home/longt29/miniconda3/envs/curve/bin/python",
+        "time": "2026-11-05T18:12:51.260063+08:00",
+        "visible_device_count": 1
+      }
+    ]
+  },
+  "time": "2026-11-05T18:15:40.020436+08:00"
+}

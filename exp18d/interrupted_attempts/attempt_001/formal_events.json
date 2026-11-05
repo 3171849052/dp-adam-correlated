@@ -1,0 +1,104 @@
+[
+  {
+    "config": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "group": "adam",
+      "lr": 0.002,
+      "method": "adam-iid",
+      "seed": 20261111,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 1,
+    "pid": 3043856,
+    "slot": 0,
+    "time": "2026-11-05T18:13:44.850733+08:00"
+  },
+  {
+    "config": {
+      "clip": 40.0,
+      "eps": 1e-08,
+      "group": "adam",
+      "lr": 0.0106926766216,
+      "method": "adam-b2lt-sgd",
+      "seed": 20261111,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 1,
+    "pid": 3043857,
+    "slot": 1,
+    "time": "2026-11-05T18:13:44.852009+08:00"
+  },
+  {
+    "config": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "group": "momentum",
+      "lr": 2,
+      "method": "momentum-iid",
+      "seed": 20261111,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 2,
+    "pid": 3043858,
+    "slot": 2,
+    "time": "2026-11-05T18:13:44.853482+08:00"
+  },
+  {
+    "config": {
+      "clip": 20,
+      "eps": 1e-08,
+      "group": "momentum",
+      "lr": 0.3,
+      "method": "momentum-b2lt-momentum",
+      "seed": 20261111,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 2,
+    "pid": 3043859,
+    "slot": 3,
+    "time": "2026-11-05T18:13:44.855093+08:00"
+  },
+  {
+    "config": {
+      "clip": 100,
+      "eps": 0.005,
+      "group": "stpex2",
+      "lr": 0.08,
+      "method": "stpex2-iid",
+      "seed": 20261111,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 3,
+    "pid": 3043860,
+    "slot": 4,
+    "time": "2026-11-05T18:13:44.856473+08:00"
+  },
+  {
+    "config": {
+      "clip": 100,
+      "eps": 0.005,
+      "group": "stpex2",
+      "lr": 0.08,
+      "method": "stpex2-b2lt-momentum-bias",
+      "seed": 20261111,
+      "stage": "formal",
+      "steps": 310
+    },
+    "event": "start",
+    "gpu": 3,
+    "pid": 3043861,
+    "slot": 5,
+    "time": "2026-11-05T18:13:44.857781+08:00"
+  }
+]

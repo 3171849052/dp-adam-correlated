@@ -1,0 +1,146 @@
+[
+  {
+    "config": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "group": "adam",
+      "lr": 0.002,
+      "method": "adam-iid",
+      "seed": 20261111,
+      "stage": "smoke",
+      "steps": 3
+    },
+    "event": "start",
+    "gpu": 1,
+    "pid": 3043294,
+    "slot": 0,
+    "time": "2026-11-05T18:12:40.765363+08:00"
+  },
+  {
+    "config": {
+      "clip": 40.0,
+      "eps": 1e-08,
+      "group": "adam",
+      "lr": 0.0106926766216,
+      "method": "adam-b2lt-sgd",
+      "seed": 20261111,
+      "stage": "smoke",
+      "steps": 3
+    },
+    "event": "start",
+    "gpu": 1,
+    "pid": 3043295,
+    "slot": 1,
+    "time": "2026-11-05T18:12:40.766507+08:00"
+  },
+  {
+    "config": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "group": "momentum",
+      "lr": 2,
+      "method": "momentum-iid",
+      "seed": 20261111,
+      "stage": "smoke",
+      "steps": 3
+    },
+    "event": "start",
+    "gpu": 2,
+    "pid": 3043296,
+    "slot": 2,
+    "time": "2026-11-05T18:12:40.767907+08:00"
+  },
+  {
+    "config": {
+      "clip": 20,
+      "eps": 1e-08,
+      "group": "momentum",
+      "lr": 0.3,
+      "method": "momentum-b2lt-momentum",
+      "seed": 20261111,
+      "stage": "smoke",
+      "steps": 3
+    },
+    "event": "start",
+    "gpu": 2,
+    "pid": 3043297,
+    "slot": 3,
+    "time": "2026-11-05T18:12:40.769080+08:00"
+  },
+  {
+    "config": {
+      "clip": 100,
+      "eps": 0.005,
+      "group": "stpex2",
+      "lr": 0.08,
+      "method": "stpex2-iid",
+      "seed": 20261111,
+      "stage": "smoke",
+      "steps": 3
+    },
+    "event": "start",
+    "gpu": 3,
+    "pid": 3043298,
+    "slot": 4,
+    "time": "2026-11-05T18:12:40.770295+08:00"
+  },
+  {
+    "config": {
+      "clip": 100,
+      "eps": 0.005,
+      "group": "stpex2",
+      "lr": 0.08,
+      "method": "stpex2-b2lt-momentum-bias",
+      "seed": 20261111,
+      "stage": "smoke",
+      "steps": 3
+    },
+    "event": "start",
+    "gpu": 3,
+    "pid": 3043299,
+    "slot": 5,
+    "time": "2026-11-05T18:12:40.771451+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 1,
+    "pid": 3043294,
+    "slot": 0,
+    "time": "2026-11-05T18:12:54.377861+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 1,
+    "pid": 3043295,
+    "slot": 1,
+    "time": "2026-11-05T18:12:54.477778+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 2,
+    "pid": 3043297,
+    "slot": 3,
+    "time": "2026-11-05T18:12:54.577925+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 3,
+    "pid": 3043298,
+    "slot": 4,
+    "time": "2026-11-05T18:12:54.679589+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 3,
+    "pid": 3043299,
+    "slot": 5,
+    "time": "2026-11-05T18:12:54.785544+08:00"
+  },
+  {
+    "event": "complete",
+    "gpu": 2,
+    "pid": 3043296,
+    "slot": 2,
+    "time": "2026-11-05T18:13:01.369643+08:00"
+  }
+]

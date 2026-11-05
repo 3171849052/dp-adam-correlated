@@ -1,0 +1,50 @@
+{
+  "config": {
+    "clip": 40.0,
+    "eps": 1e-08,
+    "group": "adam",
+    "lr": 0.0106926766216,
+    "method": "adam-b2lt-sgd",
+    "seed": 20261111,
+    "stage": "smoke",
+    "steps": 3
+  },
+  "ended": "2026-11-05T18:12:52.457522+08:00",
+  "evaluation": "internal_smoke64",
+  "formal": false,
+  "metrics": {
+    "accuracy": 0.453125,
+    "examples": 64,
+    "loss": 0.6975619792938232
+  },
+  "pairing": {
+    "dropout_seed": "seed+100000+logical_step",
+    "initial_model_sha256": "5fdab6af248474241a67d1a15086580f90233138483752a84c2ff6242a059700",
+    "noise_seed": 20261112,
+    "order_sha256": "90eecd7f6bdea836658d8104208d3201c08140609ad15a4f66d0851f8d43940c"
+  },
+  "peak_allocated_bytes": 3731276288,
+  "peak_reserved_bytes": 4076863488,
+  "privacy": {
+    "T": 310,
+    "adjacency": "add/remove zeroed fixed slot",
+    "calibration": "Exp18 GDP",
+    "clip": 40.0,
+    "clip_space": "original",
+    "delta": 1e-05,
+    "epsilon": 8.000000000000005,
+    "matrix_sha256": "ef0064a93e716acaefe1280b2f3f7126b71a31d3eeb1ec1f8c91d40eadd25b4b",
+    "mu": 1.6660305978457184,
+    "participation_interval": 62,
+    "participations": 5,
+    "sampling_amplification": false,
+    "scope": "one training, not 60-run composition",
+    "sensitivity": 3.8578634946095147,
+    "sigma_average": 0.09262407304158696,
+    "sigma_sum": 92.62407304158695
+  },
+  "seconds": 5.8562718369066715,
+  "status": "complete",
+  "steps": 3,
+  "train_seconds": 1.0054834159091115
+}

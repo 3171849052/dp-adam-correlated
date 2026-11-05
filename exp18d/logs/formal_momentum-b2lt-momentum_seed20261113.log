@@ -1,0 +1,23 @@
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 18048.97it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+momentum-b2lt-momentum seed=20261113 step=62 internal={'accuracy': 0.7578986726490933, 'loss': 0.5208480372832721, 'examples': 5349}
+momentum-b2lt-momentum seed=20261113 step=124 internal={'accuracy': 0.8113666105814171, 'loss': 0.4380788565974611, 'examples': 5349}
+momentum-b2lt-momentum seed=20261113 step=186 internal={'accuracy': 0.826135726303982, 'loss': 0.4460100080169547, 'examples': 5349}
+momentum-b2lt-momentum seed=20261113 step=248 internal={'accuracy': 0.845578612824827, 'loss': 0.39237886572534914, 'examples': 5349}
+momentum-b2lt-momentum seed=20261113 step=310 internal={'accuracy': 0.8526827444382128, 'loss': 0.38516832873361717, 'examples': 5349}
+COMPLETE momentum-b2lt-momentum seed=20261113: {'accuracy': 0.7878440366972477, 'loss': 0.5244254103494347, 'examples': 872}

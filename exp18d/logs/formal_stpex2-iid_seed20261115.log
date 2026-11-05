@@ -1,0 +1,23 @@
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 25890.77it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+stpex2-iid seed=20261115 step=62 internal={'accuracy': 0.557861282482707, 'loss': 0.6880246667154126, 'examples': 5349}
+stpex2-iid seed=20261115 step=124 internal={'accuracy': 0.5404748551131052, 'loss': 0.6891635018300734, 'examples': 5349}
+stpex2-iid seed=20261115 step=186 internal={'accuracy': 0.5582351841465695, 'loss': 0.6808222658189798, 'examples': 5349}
+stpex2-iid seed=20261115 step=248 internal={'accuracy': 0.557861282482707, 'loss': 0.6980947486305487, 'examples': 5349}
+stpex2-iid seed=20261115 step=310 internal={'accuracy': 0.557861282482707, 'loss': 0.7027288983527422, 'examples': 5349}
+COMPLETE stpex2-iid seed=20261115: {'accuracy': 0.5091743119266054, 'loss': 0.7289695739746094, 'examples': 872}

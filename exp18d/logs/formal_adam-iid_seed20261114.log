@@ -1,0 +1,23 @@
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 10971.75it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+adam-iid seed=20261114 step=62 internal={'accuracy': 0.747429426060946, 'loss': 1.2296205692858222, 'examples': 5349}
+adam-iid seed=20261114 step=124 internal={'accuracy': 0.7786502149934568, 'loss': 1.1688648337269525, 'examples': 5349}
+adam-iid seed=20261114 step=186 internal={'accuracy': 0.7887455599177416, 'loss': 1.129614041439505, 'examples': 5349}
+adam-iid seed=20261114 step=248 internal={'accuracy': 0.7960366423630585, 'loss': 1.0946414817001333, 'examples': 5349}
+adam-iid seed=20261114 step=310 internal={'accuracy': 0.8005234623294074, 'loss': 1.0625142546586175, 'examples': 5349}
+COMPLETE adam-iid seed=20261114: {'accuracy': 0.7763761467889908, 'loss': 1.1806745835400503, 'examples': 872}

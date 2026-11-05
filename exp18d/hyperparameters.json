@@ -1,0 +1,42 @@
+{
+  "frozen": true,
+  "historical_results_used_as_formal": false,
+  "methods": {
+    "adam-b2lt-sgd": {
+      "clip": 40.0,
+      "eps": 1e-08,
+      "lr": 0.0106926766216
+    },
+    "adam-iid": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "lr": 0.002
+    },
+    "momentum-b2lt-momentum": {
+      "clip": 20,
+      "eps": 1e-08,
+      "lr": 0.3
+    },
+    "momentum-iid": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "lr": 2
+    },
+    "stpex2-b2lt-momentum-bias": {
+      "clip": 100,
+      "eps": 0.005,
+      "lr": 0.08
+    },
+    "stpex2-iid": {
+      "clip": 100,
+      "eps": 0.005,
+      "lr": 0.08
+    }
+  },
+  "root_exp18c_selected": true,
+  "sources": [
+    "exp16e/results/final_freeze.json",
+    "exp18c/best_hyperparameters.json"
+  ],
+  "stpex2_transfer": "Root Exp18c frozen MNIST lr=0.08/clip=100/stability=0.005 transferred unchanged; no NLP tuning"
+}

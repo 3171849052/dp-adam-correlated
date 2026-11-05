@@ -1,0 +1,61 @@
+{
+  "checkpoints_and_artifact_hashes_verified": true,
+  "completed_formal_trials": 6,
+  "coordinator_pid": 3044935,
+  "current_workers": [
+    {
+      "directory": "formal/adam-iid_seed20261112",
+      "gpu": 2,
+      "method": "adam-iid",
+      "seed": 20261112,
+      "slot": 2,
+      "worker_pid": 3045626
+    },
+    {
+      "directory": "formal/adam-b2lt-sgd_seed20261112",
+      "gpu": 2,
+      "method": "adam-b2lt-sgd",
+      "seed": 20261112,
+      "slot": 3,
+      "worker_pid": 3045627
+    },
+    {
+      "directory": "formal/momentum-iid_seed20261112",
+      "gpu": 1,
+      "method": "momentum-iid",
+      "seed": 20261112,
+      "slot": 0,
+      "worker_pid": 3045691
+    },
+    {
+      "directory": "formal/momentum-b2lt-momentum_seed20261112",
+      "gpu": 1,
+      "method": "momentum-b2lt-momentum",
+      "seed": 20261112,
+      "slot": 1,
+      "worker_pid": 3045692
+    },
+    {
+      "directory": "formal/stpex2-iid_seed20261112",
+      "gpu": 3,
+      "method": "stpex2-iid",
+      "seed": 20261112,
+      "slot": 5,
+      "worker_pid": 3045693
+    },
+    {
+      "directory": "formal/stpex2-b2lt-momentum-bias_seed20261112",
+      "gpu": 3,
+      "method": "stpex2-b2lt-momentum-bias",
+      "seed": 20261112,
+      "slot": 4,
+      "worker_pid": 3045718
+    }
+  ],
+  "first_seed_six_methods_completed": true,
+  "independent_session": true,
+  "passed": true,
+  "stage_status": "running",
+  "time": "2026-11-05T18:17:51.939607+08:00",
+  "total_formal_trials": 60
+}

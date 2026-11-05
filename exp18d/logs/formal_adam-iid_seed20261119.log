@@ -1,0 +1,23 @@
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 19018.47it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+adam-iid seed=20261119 step=62 internal={'accuracy': 0.7429426060945972, 'loss': 1.333656626252242, 'examples': 5349}
+adam-iid seed=20261119 step=124 internal={'accuracy': 0.7866891007664985, 'loss': 1.142310151966471, 'examples': 5349}
+adam-iid seed=20261119 step=186 internal={'accuracy': 0.7997756590016826, 'loss': 1.0571630110270867, 'examples': 5349}
+adam-iid seed=20261119 step=248 internal={'accuracy': 0.8022060198167882, 'loss': 1.0481004185443905, 'examples': 5349}
+adam-iid seed=20261119 step=310 internal={'accuracy': 0.797345298186577, 'loss': 1.0552352103680667, 'examples': 5349}
+COMPLETE adam-iid seed=20261119: {'accuracy': 0.7568807339449541, 'loss': 1.2897178229935673, 'examples': 872}

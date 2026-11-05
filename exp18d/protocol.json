@@ -1,0 +1,87 @@
+{
+  "B2LT": {
+    "K": 62,
+    "P": 62,
+    "Q": 5,
+    "T": 310,
+    "source": "Exp18 solver with new dimensions, no Exp16 matrices"
+  },
+  "accounting": "Exp18 GDP whole fixed-epoch matrix mechanism; no sampling amplification",
+  "accumulation": 1,
+  "adjacency": "add/remove zero-out fixed slot",
+  "dataset": "SST-2",
+  "delta": 1e-05,
+  "dropout": 0.1,
+  "dropout_seed": "seed+100000+logical_step",
+  "epochs": 5,
+  "epsilon": 8,
+  "evaluation": "Internal validation each epoch; all 872 official validation examples once at final step; no early stopping",
+  "experiment": "Exp18d",
+  "formal_trainings": 60,
+  "full_finetuning": true,
+  "gpu": "Physical 1,2,3, two independent CUDA-isolated processes per GPU",
+  "historical_results": "Reference only; all 60 formal trials train anew",
+  "internal_validation": 5349,
+  "logical_batch": 1000,
+  "max_length": 128,
+  "methods": {
+    "adam-b2lt-sgd": {
+      "clip": 40.0,
+      "eps": 1e-08,
+      "lr": 0.0106926766216
+    },
+    "adam-iid": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "lr": 0.002
+    },
+    "momentum-b2lt-momentum": {
+      "clip": 20,
+      "eps": 1e-08,
+      "lr": 0.3
+    },
+    "momentum-iid": {
+      "clip": 0.3,
+      "eps": 1e-08,
+      "lr": 2
+    },
+    "stpex2-b2lt-momentum-bias": {
+      "clip": 100,
+      "eps": 0.005,
+      "lr": 0.08
+    },
+    "stpex2-iid": {
+      "clip": 100,
+      "eps": 0.005,
+      "lr": 0.08
+    }
+  },
+  "model": "BERT-Tiny",
+  "noise_seed": "seed+1",
+  "official_validation": 872,
+  "optimizer": "Exact exp18.optimizer.Update for Adam/Momentum/STP-Ex2, beta1=.9, beta2=.999, weight_decay=0",
+  "participation": "Same per-seed Exp16e permutation repeated five epochs",
+  "physical_batch": 1000,
+  "precision": "FP32; TF32 disabled",
+  "privacy_scope": "Per training epsilon=8; 60 trainings are not jointly epsilon=8; internal raw losses/clipping diagnostics are not DP releases",
+  "seeds": [
+    20261111,
+    20261112,
+    20261113,
+    20261114,
+    20261115,
+    20261116,
+    20261117,
+    20261118,
+    20261119,
+    20261120
+  ],
+  "selection": "All hyperparameters frozen from specified historical sources before training; no search",
+  "smoke": "Six methods, seed 20261111, 3 steps, batch 1000, length128, internal validation64; separate directories",
+  "split_seed": 20261008,
+  "statistics": "10 seeds, sample SD ddof=1, Student-t 95% CI",
+  "steps_per_epoch": 62,
+  "stpex2": "d0=1; scale by previous completed d; adaptive alpha, 24 bisections, 1e-6 backoff; no final denominator",
+  "total_steps": 310,
+  "train_examples": 62000
+}

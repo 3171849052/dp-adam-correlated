@@ -1,0 +1,23 @@
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 20426.81it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+momentum-b2lt-momentum seed=20261115 step=62 internal={'accuracy': 0.7487380818844643, 'loss': 0.5174820472601753, 'examples': 5349}
+momentum-b2lt-momentum seed=20261115 step=124 internal={'accuracy': 0.8192185455225276, 'loss': 0.41172666615649994, 'examples': 5349}
+momentum-b2lt-momentum seed=20261115 step=186 internal={'accuracy': 0.8388483828753038, 'loss': 0.40224539014552774, 'examples': 5349}
+momentum-b2lt-momentum seed=20261115 step=248 internal={'accuracy': 0.8481959244718639, 'loss': 0.3692221642431978, 'examples': 5349}
+momentum-b2lt-momentum seed=20261115 step=310 internal={'accuracy': 0.8513740886146943, 'loss': 0.36675431826868377, 'examples': 5349}
+COMPLETE momentum-b2lt-momentum seed=20261115: {'accuracy': 0.7809633027522935, 'loss': 0.4955609129109514, 'examples': 872}

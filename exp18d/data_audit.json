@@ -1,0 +1,14 @@
+{
+  "downloads": false,
+  "passed": true,
+  "sizes": [
+    62000,
+    5349,
+    872
+  ],
+  "source": "data/sst2/*.parquet + cache/bert-tiny",
+  "split_equal_exp16e": true,
+  "time": "2026-11-05T18:09:40.404356+08:00",
+  "tokenizer": "BertTokenizer local_files_only=True",
+  "tokens_equal_exp16e": true
+}

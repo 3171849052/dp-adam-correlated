@@ -1,0 +1,23 @@
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 18285.03it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+momentum-b2lt-momentum seed=20261111 step=62 internal={'accuracy': 0.7399513927836979, 'loss': 0.56049781238772, 'examples': 5349}
+momentum-b2lt-momentum seed=20261111 step=124 internal={'accuracy': 0.8123013647410731, 'loss': 0.44434336079105213, 'examples': 5349}
+momentum-b2lt-momentum seed=20261111 step=186 internal={'accuracy': 0.8209011030099084, 'loss': 0.4206988291331241, 'examples': 5349}
+momentum-b2lt-momentum seed=20261111 step=248 internal={'accuracy': 0.8401570386988222, 'loss': 0.38139874673509266, 'examples': 5349}
+momentum-b2lt-momentum seed=20261111 step=310 internal={'accuracy': 0.8513740886146943, 'loss': 0.38056468339607324, 'examples': 5349}
+COMPLETE momentum-b2lt-momentum seed=20261111: {'accuracy': 0.7740825688073395, 'loss': 0.5500832391441415, 'examples': 872}
