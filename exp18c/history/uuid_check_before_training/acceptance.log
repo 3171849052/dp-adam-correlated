@@ -1,0 +1,12 @@
+Local data, five initializations, 90-trial plan, matrices and GDP calibration passed
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/media/data/data/lt/dp-adam-correlated/exp18c/accept.py", line 50, in <module>
+    main()
+  File "/media/data/data/lt/dp-adam-correlated/exp18c/accept.py", line 19, in main
+    rows = execute(configs, "smoke")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp18c/scheduler.py", line 124, in execute
+    raise RuntimeError(f"{len(failures)} trial(s) failed; stopped dispatch, active workers drained")
+RuntimeError: 6 trial(s) failed; stopped dispatch, active workers drained

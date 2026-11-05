@@ -1,0 +1,45 @@
+{
+  "config": {
+    "accumulation": 1,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "clip": 3,
+    "eps": 1e-08,
+    "group": "adam",
+    "logical_batch": 1000,
+    "lr": 0.15,
+    "method": "adam-iid",
+    "physical_batch": 1000,
+    "precision": "FP32",
+    "round": 1,
+    "seed": 20261115,
+    "stage": "grid",
+    "steps": 162,
+    "weight_decay": 0
+  },
+  "ended": "2026-11-05T15:43:54.841195+08:00",
+  "evaluation": "internal_validation",
+  "final_innovation_rng_sha256": "87d6919aa52a8e2313d0dcc6958e1c27537afbf22d442028c12b5ef8b5c8ad86",
+  "metrics": {
+    "accuracy": 0.6013333333333334,
+    "loss": 2.043299560546875,
+    "n": 6000,
+    "step": 162
+  },
+  "pairing": {
+    "first_unit_innovation_sha256": "a7368a5f7b62c78c3c3c3d30486d426f27e37afcc444ae549e1650d0da752690",
+    "initial_tensor_sha256": "fb453e83f08a0b5d726c99dd821215532543eddea09ad80960a6583bc0b9cf8b",
+    "innovation_seed": 21261115,
+    "order_sha256": "e4d2eb51ab0cfed33501ce6d9cc77c7fb76be144f9c227ea0db457f4301db58e"
+  },
+  "peak_memory": 322385408,
+  "peak_reserved": 360710144,
+  "physical_gpu": 0,
+  "seconds": 19.372577894013375,
+  "status": "complete",
+  "steps": 162,
+  "train_loss": 2.031343017578125,
+  "train_seconds": 13.878084286581725,
+  "training_examples_per_second": 11673.080855736884,
+  "validation_seconds": 0.3759465462062508
+}

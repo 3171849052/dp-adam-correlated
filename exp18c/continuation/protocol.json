@@ -1,0 +1,109 @@
+{
+  "experiment": "Exp18c continuation: round-number LR expansion to turnover",
+  "authorization_revision": "2026-11-05: continue until all optimizers turn over; use round learning-rate numbers",
+  "model": "Exp18 CNN: Conv(1,8,5,pad2)-ReLU-AvgPool2-Conv(8,16,5,pad2)-ReLU-AvgPool2-Flatten-Linear(784,10)",
+  "initialization": "Byte-for-byte copies of the five Exp18b CNN initialization files, verified by file and tensor SHA256",
+  "dataset": "Existing MNIST in repository data/, no downloads or rewrites",
+  "split": [
+    54000,
+    6000,
+    10000
+  ],
+  "split_seed": 20261101,
+  "seeds": [
+    20261111,
+    20261112,
+    20261113,
+    20261114,
+    20261115
+  ],
+  "epochs": 3,
+  "steps": 162,
+  "steps_per_epoch": 54,
+  "logical_batch": 1000,
+  "physical_batch": 1000,
+  "accumulation": 1,
+  "precision": "FP32; TF32 disabled",
+  "weight_decay": 0,
+  "epsilon": 3,
+  "delta": 1e-05,
+  "privacy": "GDP whole fixed-epoch matrix mechanism, add/remove zero-out adjacency, no sampling amplification, three participations spaced by 54 steps",
+  "B2LT": {
+    "T": 162,
+    "K": 54,
+    "P": 54,
+    "Q": 5,
+    "source": "Byte-for-byte copies of the three audited Exp18b matrices; no optimization"
+  },
+  "grid": {
+    "adam": {
+      "lr": [
+        0.08,
+        0.1,
+        0.15
+      ],
+      "clip": 3,
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "epsilon": 1e-08
+    },
+    "momentum": {
+      "lr": [
+        1.0,
+        1.5,
+        2.0
+      ],
+      "clip": 4,
+      "beta": 0.9
+    },
+    "stpex2": {
+      "lr": [
+        0.1,
+        0.15,
+        0.2
+      ],
+      "clip": 100,
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "stability": 0.005
+    }
+  },
+  "methods": [
+    "adam-iid",
+    "adam-b2lt-sgd",
+    "momentum-iid",
+    "momentum-b2lt-momentum",
+    "stpex2-iid",
+    "stpex2-b2lt-momentum-bias"
+  ],
+  "algorithm_version": "Exact Exp18 optimizer.Update and noise.OnlineNoise; STP-Ex2 PDF adaptive-alpha third column, d0=1, 24 bisections and 1e-6 backoff; source SHA256 frozen",
+  "pairing": "Same per-seed initialization, fixed permutation repeated each epoch, CUDA innovation generator seed=seed+1000000; no additional trial seeds",
+  "full_trainings": "Adaptive: 30 formal trials per unresolved optimizer per round; no fixed round cap",
+  "validation": "Every finite training: final 6000-record validation at 54,108,162; never open official test during search",
+  "selection": "Across Exp18b, Exp18c and continuation select common IID/B2LT LR by equally averaged final validation accuracy over two noises and five seeds; ties lower validation loss then lower LR",
+  "official_test": "Only after all turnover criteria pass, freeze the pooled selection; evaluate 30 selected checkpoints, reusing hash-matched prior official evaluations without repeating them",
+  "smoke": "Before each round: highest new LR, paired IID/B2LT, seed 20261111, full 162 steps; not formal trials. Numerical divergence is a recorded search boundary, infrastructure errors stop dispatch.",
+  "statistics": "Five-seed mean, sample SD (ddof=1), Student-t 95% CI; B2LT minus IID paired differences, no multiple-comparison adjustment",
+  "release_scope": "Per-training epsilon=3 does not make the 90-run composition epsilon=3; validation treated as public; raw training losses/clipping diagnostics are internal non-DP audit artifacts",
+  "resume": "Reuse complete hash-verified trials and test evaluations; preserve incomplete trials for inspection, archive only after all workers exit, restart whole trial with unchanged config/seed",
+  "comparison": "Report all pooled IID, B2LT and equally averaged validation curves, turnover witnesses, and pooled final common LR; no test results used in continuation decisions",
+  "gpu": "Discover all four physical GPU indices and UUIDs with nvidia-smi; bind workers by UUID; memory-based concurrent independent processes, no DDP",
+  "expansion": {
+    "mantissas": [
+      1,
+      1.5,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8
+    ],
+    "count_per_round": 3,
+    "rule": "For each unresolved optimizer, take the next three members of mantissa*10**integer strictly above its largest evaluated LR; freeze each round plan before smoke/training",
+    "stop": "All three views (IID, B2LT, equal average), for every optimizer: the two highest tested LRs are above the observed valid best LR and both below its accuracy; the highest LR is at least 0.001 absolute accuracy lower. Numerical-divergence endpoints qualify as failed higher candidates; never assign fabricated validation scores.",
+    "min_accuracy_drop": 0.001,
+    "confirmation_points": 2,
+    "interpretation": "Descriptive high-LR turnover, not proof of a global maximum or statistical significance; no additional tuning of non-LR hyperparameters"
+  }
+}

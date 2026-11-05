@@ -1,0 +1,2 @@
+sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+Completed momentum-b2lt-momentum seed=20261111 lr=4.0: {'loss': 0.12424912770589193, 'accuracy': 0.9725, 'n': 6000}

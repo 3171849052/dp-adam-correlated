@@ -1,0 +1,49 @@
+{
+  "discovery_time": "2026-11-05T15:42:46.848105+08:00",
+  "gpu_uuids": {
+    "0": "GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6",
+    "1": "GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54",
+    "2": "GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e",
+    "3": "GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa"
+  },
+  "inventory": [
+    {
+      "index": "0",
+      "memory_total_mib": "12288",
+      "name": "NVIDIA GeForce RTX 3080 Ti",
+      "uuid": "GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6"
+    },
+    {
+      "index": "1",
+      "memory_total_mib": "12288",
+      "name": "NVIDIA GeForce RTX 3080 Ti",
+      "uuid": "GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54"
+    },
+    {
+      "index": "2",
+      "memory_total_mib": "12288",
+      "name": "NVIDIA GeForce RTX 3080 Ti",
+      "uuid": "GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e"
+    },
+    {
+      "index": "3",
+      "memory_total_mib": "12288",
+      "name": "NVIDIA GeForce RTX 3080 Ti",
+      "uuid": "GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa"
+    }
+  ],
+  "oom": "Record failure, stop new dispatch, drain active trials; no batch/precision changes",
+  "parallelism": "One subprocess per trial, CUDA_VISIBLE_DEVICES binds physical GPU, no DDP",
+  "physical_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "reserve_mib": 1536,
+  "smoke_peak_worker_nvml_mib": 708,
+  "source": "Exp18 audited admission_limit; reserve all in-flight slots against current external memory; shrink immediately, restore one slot below 90% utilization",
+  "target_per_gpu": 12,
+  "telemetry_seconds": 2,
+  "worker_budget_mib": 832
+}

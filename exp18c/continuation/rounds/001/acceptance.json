@@ -1,0 +1,54 @@
+{
+  "pairing_verified": true,
+  "passed": true,
+  "physical_gpu_assignments": [
+    {
+      "cuda_memory": 183808,
+      "physical_gpu": 0,
+      "pid": 2982584,
+      "time": "2026-11-05T15:43:05.049204+08:00"
+    },
+    {
+      "cuda_memory": 419328,
+      "physical_gpu": 1,
+      "pid": 2982585,
+      "time": "2026-11-05T15:43:05.040679+08:00"
+    },
+    {
+      "cuda_memory": 183808,
+      "physical_gpu": 2,
+      "pid": 2982586,
+      "time": "2026-11-05T15:43:05.003229+08:00"
+    },
+    {
+      "cuda_memory": 419328,
+      "physical_gpu": 3,
+      "pid": 2982587,
+      "time": "2026-11-05T15:43:05.002360+08:00"
+    },
+    {
+      "cuda_memory": 183808,
+      "physical_gpu": 0,
+      "pid": 2982588,
+      "time": "2026-11-05T15:43:04.994149+08:00"
+    },
+    {
+      "cuda_memory": 419328,
+      "physical_gpu": 1,
+      "pid": 2982589,
+      "time": "2026-11-05T15:43:05.006715+08:00"
+    }
+  ],
+  "plan_sha256": "75af3677c876d33b551336e06ddcf7205d989a8e97c943fe483e9f46b3b81824",
+  "smoke_complete_hashes": {
+    "exp18c/continuation/smoke/001/80243d7a0ebe09bc7ad2": "4b3fec1aad6388ee1c9637340d19be0f75d57cb0b1eba2f3d128e7cbd1f4ce7e",
+    "exp18c/continuation/smoke/001/82a8f6e6e4434ab04c5b": "46559b095780341c56b3b61d4442d6be4884ec55c4794ee9abbb726dffce903a",
+    "exp18c/continuation/smoke/001/a646e29100484429413c": "02ed8ce43a68899ce1e60211d0ff343ec8b2ab6e651def4a5e68c213c25232ee",
+    "exp18c/continuation/smoke/001/bf2948b7329d6a33cc77": "6e9526802e619200925853981c4fba66f6a4b16b1afc3b71a94cd3a768b04559",
+    "exp18c/continuation/smoke/001/c4c14646d966d16f7767": "9189b8f9e4382bdaee6371f6bd2547a7ac6335cf052fd1e8a8d3fa8d133efc1f",
+    "exp18c/continuation/smoke/001/f84e3b4464a2422e2194": "6664888081bee19ad31b73a79f0286084f20fc8fb38bf37d30d8de94e648d58a"
+  },
+  "smoke_divergences": 0,
+  "smoke_trials": 6,
+  "time": "2026-11-05T15:43:20.641251+08:00"
+}

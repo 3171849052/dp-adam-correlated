@@ -1,0 +1,18 @@
+{
+  "accumulation": 1,
+  "beta1": 0.9,
+  "beta2": 0.999,
+  "clip": 4,
+  "eps": 1e-08,
+  "group": "momentum",
+  "logical_batch": 1000,
+  "lr": 4.0,
+  "method": "momentum-iid",
+  "physical_batch": 1000,
+  "precision": "FP32",
+  "round": 2,
+  "seed": 20261111,
+  "stage": "grid",
+  "steps": 162,
+  "weight_decay": 0
+}

@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/media/data/data/lt/dp-adam-correlated/exp18c/train.py", line 154, in <module>
+    run(path)
+  File "/media/data/data/lt/dp-adam-correlated/exp18c/train.py", line 50, in run
+    assert str(torch.cuda.get_device_properties(0).uuid) == os.environ["CUDA_VISIBLE_DEVICES"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

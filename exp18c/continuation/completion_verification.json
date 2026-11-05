@@ -1,0 +1,70 @@
+{
+  "all_nine_views_turned_over": true,
+  "background_pid": 2982835,
+  "detached_session_verified": true,
+  "formal_trials_new": 180,
+  "formal_trials_pooled": 360,
+  "fp32_verified": true,
+  "gpu_allocation": {
+    "0": {
+      "formal_tasks": 43,
+      "peak_memory_mib": 8549,
+      "peak_utilization_percent": 100,
+      "peak_workers": 12
+    },
+    "1": {
+      "formal_tasks": 51,
+      "peak_memory_mib": 8565,
+      "peak_utilization_percent": 100,
+      "peak_workers": 12
+    },
+    "2": {
+      "formal_tasks": 41,
+      "peak_memory_mib": 8551,
+      "peak_utilization_percent": 100,
+      "peak_workers": 12
+    },
+    "3": {
+      "formal_tasks": 45,
+      "peak_memory_mib": 8565,
+      "peak_utilization_percent": 100,
+      "peak_workers": 12
+    }
+  },
+  "initialization_order_innovations_match_exp18b": true,
+  "new_official_evaluations": 20,
+  "official_evaluations": 30,
+  "passed": true,
+  "readonly_files_verified": 8710,
+  "required_artifacts": {
+    "best_hyperparameters.json": "459f26106597fc9cdd864367dbf40feaa8c47369318c817a0f04980e59269c73",
+    "final_report.md": "0810a3f5b8c5c9b5cd343099f2c921f3e525bee7b77ce54efd95d917241e6605",
+    "formal_per_seed.csv": "327cfad6424081bb4bb57a0c0fffee54796aeff83d196e6b39ec7a9941e81e45",
+    "gpu_telemetry.csv": "ef92793f3687d7a4663bbb713e103e514bf68aad83fc53c27113b0122ecdd582",
+    "grid_per_seed.csv": "7b1e8069d836ab7fe284e7066e925c46b6954d3b82688137daadef914c3dd336",
+    "grid_summary.csv": "06eb41b793ce05710a821c0180258430161d41a5213dddd411801f1a918365bf",
+    "learning_rate_curves.pdf": "aea845835bae8681e078e1538eb5a9a2a7647d46c03474665cc106060db31c28",
+    "learning_rate_curves.png": "d25604d037055073f7818df3198c5cc74e3e2f4577ed88f1d8ec1f52f1c8ef37",
+    "paired_differences.csv": "9d00111ba50a4ed6d4aa3d3152740f103aad56c1a57139641084469e7722a449",
+    "privacy_audit.json": "27336bf4c3b532c4e3d4bfcd9727269816260c816d54d53802ac9f05f7bb95e8",
+    "protocol.json": "579ffb0f4a6d61324a1b6ad69ffb0fc60cc59d6fdb3e02069b797f53e98d0ff8",
+    "summary.csv": "50b891eb87968f7edfab49c637d78e1207e25968653e63299576536382919129",
+    "trial_plan.csv": "36aebaba7b5df1ba5ce703f156fea7431da05de5b97b266dc01d2e6b41daccf0"
+  },
+  "reused_official_evaluations": 10,
+  "rounds": 3,
+  "smoke_trials": 12,
+  "status": {
+    "active": [],
+    "finished": "2026-11-05T15:47:12.634388+08:00",
+    "new_formal_trainings": 180,
+    "new_official_tests": 20,
+    "reused_official_tests": 10,
+    "rounds": 3,
+    "selected_test_evaluations": 30,
+    "smoke_trainings": 12,
+    "stage": "complete",
+    "status": "complete"
+  },
+  "time": "2026-11-05T15:48:51.416586+08:00"
+}

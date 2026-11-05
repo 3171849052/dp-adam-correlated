@@ -1,0 +1,23 @@
+test_four_discovered_uuid_bindings (test_extension.ExtensionTests.test_four_discovered_uuid_bindings) ... ok
+test_initializations_matrices_privacy_exactly_reused (test_extension.ExtensionTests.test_initializations_matrices_privacy_exactly_reused) ... ok
+test_only_authorized_protocol_changes (test_extension.ExtensionTests.test_only_authorized_protocol_changes) ... ok
+test_selection_equal_noise_seed_weight_and_loss_tie (test_extension.ExtensionTests.test_selection_equal_noise_seed_weight_and_loss_tie) ... ok
+test_adam_matches_torch_reference (test_protocol.ProtocolTests.test_adam_matches_torch_reference) ... ok
+test_b2lt_stream_matches_full_matrix_through_band_boundary (test_protocol.ProtocolTests.test_b2lt_stream_matches_full_matrix_through_band_boundary) ... ok
+test_dynamic_admission_accounts_for_external_processes (test_protocol.ProtocolTests.test_dynamic_admission_accounts_for_external_processes) ... ok
+test_exact_90_trial_grid (test_protocol.ProtocolTests.test_exact_90_trial_grid) ... ok
+test_exact_exp18_cnn (test_protocol.ProtocolTests.test_exact_exp18_cnn) ... ok
+test_gdp_whole_trajectory_all_clips (test_protocol.ProtocolTests.test_gdp_whole_trajectory_all_clips) ... ok
+test_momentum_workload_includes_one_minus_beta (test_protocol.ProtocolTests.test_momentum_workload_includes_one_minus_beta) ... ok
+test_pdf_alpha_endpoints_and_bisection (test_protocol.ProtocolTests.test_pdf_alpha_endpoints_and_bisection) ... ok
+test_per_sample_gradient_and_scaled_global_clip (test_protocol.ProtocolTests.test_per_sample_gradient_and_scaled_global_clip) ... /media/data/data/lt/dp-adam-correlated/exp18c/tests/test_protocol.py:117: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  torch.nn.functional.cross_entropy(model(x), y, reduction="sum").backward()
+ok
+test_saved_initializations_are_exp18_initializations (test_protocol.ProtocolTests.test_saved_initializations_are_exp18_initializations) ... ok
+test_stpex2_no_second_parameter_denominator (test_protocol.ProtocolTests.test_stpex2_no_second_parameter_denominator) ... ok
+test_student_t_five_seed_statistics (test_protocol.ProtocolTests.test_student_t_five_seed_statistics) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 2.045s
+
+OK

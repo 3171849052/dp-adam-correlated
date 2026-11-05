@@ -1,0 +1,91 @@
+{
+  "experiment": "Exp18c",
+  "authorization_revision": "2026-11-05: Exp18b higher learning-rate extension; only learning rates and four-GPU scheduling change",
+  "model": "Exp18 CNN: Conv(1,8,5,pad2)-ReLU-AvgPool2-Conv(8,16,5,pad2)-ReLU-AvgPool2-Flatten-Linear(784,10)",
+  "initialization": "Byte-for-byte copies of the five Exp18b CNN initialization files, verified by file and tensor SHA256",
+  "dataset": "Existing MNIST in repository data/, no downloads or rewrites",
+  "split": [
+    54000,
+    6000,
+    10000
+  ],
+  "split_seed": 20261101,
+  "seeds": [
+    20261111,
+    20261112,
+    20261113,
+    20261114,
+    20261115
+  ],
+  "epochs": 3,
+  "steps": 162,
+  "steps_per_epoch": 54,
+  "logical_batch": 1000,
+  "physical_batch": 1000,
+  "accumulation": 1,
+  "precision": "FP32; TF32 disabled",
+  "weight_decay": 0,
+  "epsilon": 3,
+  "delta": 1e-05,
+  "privacy": "GDP whole fixed-epoch matrix mechanism, add/remove zero-out adjacency, no sampling amplification, three participations spaced by 54 steps",
+  "B2LT": {
+    "T": 162,
+    "K": 54,
+    "P": 54,
+    "Q": 5,
+    "source": "Byte-for-byte copies of the three audited Exp18b matrices; no optimization"
+  },
+  "grid": {
+    "adam": {
+      "lr": [
+        0.045,
+        0.05,
+        0.06
+      ],
+      "clip": 3,
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "epsilon": 1e-08
+    },
+    "momentum": {
+      "lr": [
+        0.5,
+        0.6,
+        0.8
+      ],
+      "clip": 4,
+      "beta": 0.9
+    },
+    "stpex2": {
+      "lr": [
+        0.05,
+        0.06,
+        0.08
+      ],
+      "clip": 100,
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "stability": 0.005
+    }
+  },
+  "methods": [
+    "adam-iid",
+    "adam-b2lt-sgd",
+    "momentum-iid",
+    "momentum-b2lt-momentum",
+    "stpex2-iid",
+    "stpex2-b2lt-momentum-bias"
+  ],
+  "algorithm_version": "Exact Exp18 optimizer.Update and noise.OnlineNoise; STP-Ex2 PDF adaptive-alpha third column, d0=1, 24 bisections and 1e-6 backoff; source SHA256 frozen",
+  "pairing": "Same per-seed initialization, fixed permutation repeated each epoch, CUDA innovation generator seed=seed+1000000; no additional trial seeds",
+  "full_trainings": 90,
+  "validation": "All 90 trials evaluate 6000 validation records at steps 54,108,162; never evaluate official test during training",
+  "selection": "For each optimizer choose common IID/B2LT LR by final validation accuracy averaged equally over both noises and five seeds; ties: lower averaged validation loss, then lower LR; no early stopping",
+  "official_test": "Freeze best_hyperparameters.json after all 90 complete; evaluate 30 selected checkpoints once each on all 10000 official test records, no retraining",
+  "smoke": "Six highest-LR IID/B2LT trials, seed 20261111, full 162 steps; independent of the 90 formal trials",
+  "statistics": "Five-seed mean, sample SD (ddof=1), Student-t 95% CI; B2LT minus IID paired differences, no multiple-comparison adjustment",
+  "release_scope": "Per-training epsilon=3 does not make the 90-run composition epsilon=3; validation treated as public; raw training losses/clipping diagnostics are internal non-DP audit artifacts",
+  "resume": "Reuse complete hash-verified trials and test evaluations; preserve incomplete trials for inspection, archive only after all workers exit, restart whole trial with unchanged config/seed",
+  "comparison": "Select among the three new LRs per optimizer using validation only; compare all Exp18b and Exp18c validation candidates separately for IID, B2LT and equal average. Combined-grid best is descriptive; official test only for the 30 Exp18c selected checkpoints.",
+  "gpu": "Discover all four physical GPU indices and UUIDs with nvidia-smi; bind workers by UUID; memory-based concurrent independent processes, no DDP"
+}

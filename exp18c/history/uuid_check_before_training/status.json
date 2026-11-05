@@ -1,0 +1,97 @@
+{
+  "active": [],
+  "all_gpu_overlap": true,
+  "capacity": {
+    "0": 2,
+    "1": 2,
+    "2": 2,
+    "3": 2
+  },
+  "completed": 0,
+  "failures": [
+    {
+      "detail": {
+        "message": "",
+        "oom": false,
+        "time": "2026-11-05T15:23:54.265486+08:00",
+        "traceback": "Traceback (most recent call last):\n  File \"/media/data/data/lt/dp-adam-correlated/exp18c/train.py\", line 154, in <module>\n    run(path)\n  File \"/media/data/data/lt/dp-adam-correlated/exp18c/train.py\", line 50, in run\n    assert str(torch.cuda.get_device_properties(0).uuid) == os.environ[\"CUDA_VISIBLE_DEVICES\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "type": "AssertionError"
+      },
+      "physical_gpu": 1,
+      "returncode": 1,
+      "time": "2026-11-05T15:23:55.264554+08:00",
+      "trial_id": "2b1bb85c6a5a56428df0"
+    },
+    {
+      "detail": {
+        "message": "",
+        "oom": false,
+        "time": "2026-11-05T15:23:54.261537+08:00",
+        "traceback": "Traceback (most recent call last):\n  File \"/media/data/data/lt/dp-adam-correlated/exp18c/train.py\", line 154, in <module>\n    run(path)\n  File \"/media/data/data/lt/dp-adam-correlated/exp18c/train.py\", line 50, in run\n    assert str(torch.cuda.get_device_properties(0).uuid) == os.environ[\"CUDA_VISIBLE_DEVICES\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "type": "AssertionError"
+      },
+      "physical_gpu": 2,
+      "returncode": 1,
+      "time": "2026-11-05T15:23:55.265214+08:00",
+      "trial_id": "b6df5d124373010b3ab1"
+    },
+    {
+      "detail": {
+        "message": "",
+        "oom": false,
+        "time": "2026-11-05T15:23:54.224554+08:00",
+        "traceback": "Traceback (most recent call last):\n  File \"/media/data/data/lt/dp-adam-correlated/exp18c/train.py\", line 154, in <module>\n    run(path)\n  File \"/media/data/data/lt/dp-adam-correlated/exp18c/train.py\", line 50, in run\n    assert str(torch.cuda.get_device_properties(0).uuid) == os.environ[\"CUDA_VISIBLE_DEVICES\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "type": "AssertionError"
+      },
+      "physical_gpu": 3,
+      "returncode": 1,
+      "time": "2026-11-05T15:23:55.265610+08:00",
+      "trial_id": "6a7494a5e6121e09ef41"
+    },
+    {
+      "detail": {
+        "message": "",
+        "oom": false,
+        "time": "2026-11-05T15:23:54.178704+08:00",
+        "traceback": "Traceback (most recent call last):\n  File \"/media/data/data/lt/dp-adam-correlated/exp18c/train.py\", line 154, in <module>\n    run(path)\n  File \"/media/data/data/lt/dp-adam-correlated/exp18c/train.py\", line 50, in run\n    assert str(torch.cuda.get_device_properties(0).uuid) == os.environ[\"CUDA_VISIBLE_DEVICES\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "type": "AssertionError"
+      },
+      "physical_gpu": 0,
+      "returncode": 1,
+      "time": "2026-11-05T15:23:55.265969+08:00",
+      "trial_id": "3ead653687a26d5cea75"
+    },
+    {
+      "detail": {
+        "message": "",
+        "oom": false,
+        "time": "2026-11-05T15:23:54.133989+08:00",
+        "traceback": "Traceback (most recent call last):\n  File \"/media/data/data/lt/dp-adam-correlated/exp18c/train.py\", line 154, in <module>\n    run(path)\n  File \"/media/data/data/lt/dp-adam-correlated/exp18c/train.py\", line 50, in run\n    assert str(torch.cuda.get_device_properties(0).uuid) == os.environ[\"CUDA_VISIBLE_DEVICES\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "type": "AssertionError"
+      },
+      "physical_gpu": 1,
+      "returncode": 1,
+      "time": "2026-11-05T15:23:55.266318+08:00",
+      "trial_id": "1b6e9147bf20fb414b3b"
+    },
+    {
+      "detail": {
+        "message": "",
+        "oom": false,
+        "time": "2026-11-05T15:23:54.231266+08:00",
+        "traceback": "Traceback (most recent call last):\n  File \"/media/data/data/lt/dp-adam-correlated/exp18c/train.py\", line 154, in <module>\n    run(path)\n  File \"/media/data/data/lt/dp-adam-correlated/exp18c/train.py\", line 50, in run\n    assert str(torch.cuda.get_device_properties(0).uuid) == os.environ[\"CUDA_VISIBLE_DEVICES\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "type": "AssertionError"
+      },
+      "physical_gpu": 0,
+      "returncode": 1,
+      "time": "2026-11-05T15:24:00.642514+08:00",
+      "trial_id": "e9ddc26a48b2051db35f"
+    }
+  ],
+  "peak_worker_nvml_mib": 0,
+  "pending": 0,
+  "stage": "smoke",
+  "status": "failed",
+  "time": "2026-11-05T15:24:00.643067+08:00",
+  "total": 6
+}

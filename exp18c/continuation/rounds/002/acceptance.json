@@ -1,0 +1,40 @@
+{
+  "pairing_verified": true,
+  "passed": true,
+  "physical_gpu_assignments": [
+    {
+      "cuda_memory": 183808,
+      "physical_gpu": 0,
+      "pid": 2984439,
+      "time": "2026-11-05T15:44:42.048847+08:00"
+    },
+    {
+      "cuda_memory": 419328,
+      "physical_gpu": 1,
+      "pid": 2984440,
+      "time": "2026-11-05T15:44:42.031149+08:00"
+    },
+    {
+      "cuda_memory": 183808,
+      "physical_gpu": 2,
+      "pid": 2984441,
+      "time": "2026-11-05T15:44:42.031703+08:00"
+    },
+    {
+      "cuda_memory": 419328,
+      "physical_gpu": 3,
+      "pid": 2984442,
+      "time": "2026-11-05T15:44:42.009128+08:00"
+    }
+  ],
+  "plan_sha256": "b5acfd4241a61f812443cc1cfeb84bdbe0442643feaae59957ad302fbe84d07f",
+  "smoke_complete_hashes": {
+    "exp18c/continuation/smoke/002/1b4feed1399dec55d8b7": "29dd279c4028809ac4c0ba342a41e163b276fa81a728dac69132cc8660dc7f03",
+    "exp18c/continuation/smoke/002/208e341cc976714e305d": "af4008e5090b65f6fe72cd3387057fa495c893618a8cf7b3c04999b2610e15b9",
+    "exp18c/continuation/smoke/002/7015430a6290d806a2f0": "671661d560b80c95acf0c1d39b27527c1446b208a348a3be5edd1a5ee375cdeb",
+    "exp18c/continuation/smoke/002/d96c7db4d39374c6b860": "e4b7a5455239727eec7d731e05200c73eec79e4d189c42e677f9b9e38a6b0092"
+  },
+  "smoke_divergences": 0,
+  "smoke_trials": 4,
+  "time": "2026-11-05T15:44:55.079088+08:00"
+}

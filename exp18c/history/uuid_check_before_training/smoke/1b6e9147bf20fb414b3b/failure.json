@@ -1,0 +1,7 @@
+{
+  "message": "",
+  "oom": false,
+  "time": "2026-11-05T15:23:54.133989+08:00",
+  "traceback": "Traceback (most recent call last):\n  File \"/media/data/data/lt/dp-adam-correlated/exp18c/train.py\", line 154, in <module>\n    run(path)\n  File \"/media/data/data/lt/dp-adam-correlated/exp18c/train.py\", line 50, in run\n    assert str(torch.cuda.get_device_properties(0).uuid) == os.environ[\"CUDA_VISIBLE_DEVICES\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "type": "AssertionError"
+}

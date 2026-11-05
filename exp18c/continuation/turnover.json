@@ -1,0 +1,201 @@
+{
+  "all_passed": true,
+  "groups": {
+    "adam": {
+      "passed": true,
+      "views": {
+        "average": {
+          "best_accuracy": 0.9323,
+          "best_lr": 0.04,
+          "highest_accuracy": 0.6522166666666667,
+          "highest_drop": 0.28008333333333335,
+          "highest_lr": 0.15,
+          "passed": true,
+          "witnesses": [
+            {
+              "accuracy": 0.8992166666666666,
+              "diverged_trials": 0,
+              "lr": 0.1
+            },
+            {
+              "accuracy": 0.6522166666666667,
+              "diverged_trials": 0,
+              "lr": 0.15
+            }
+          ]
+        },
+        "b2lt": {
+          "best_accuracy": 0.9661666666666667,
+          "best_lr": 0.05,
+          "highest_accuracy": 0.7731999999999999,
+          "highest_drop": 0.19296666666666684,
+          "highest_lr": 0.15,
+          "passed": true,
+          "witnesses": [
+            {
+              "accuracy": 0.9521666666666666,
+              "diverged_trials": 0,
+              "lr": 0.1
+            },
+            {
+              "accuracy": 0.7731999999999999,
+              "diverged_trials": 0,
+              "lr": 0.15
+            }
+          ]
+        },
+        "iid": {
+          "best_accuracy": 0.9164,
+          "best_lr": 0.02,
+          "highest_accuracy": 0.5312333333333333,
+          "highest_drop": 0.38516666666666666,
+          "highest_lr": 0.15,
+          "passed": true,
+          "witnesses": [
+            {
+              "accuracy": 0.8462666666666667,
+              "diverged_trials": 0,
+              "lr": 0.1
+            },
+            {
+              "accuracy": 0.5312333333333333,
+              "diverged_trials": 0,
+              "lr": 0.15
+            }
+          ]
+        }
+      }
+    },
+    "momentum": {
+      "passed": true,
+      "views": {
+        "average": {
+          "best_accuracy": 0.9297333333333334,
+          "best_lr": 3.0,
+          "highest_accuracy": 0.8939499999999999,
+          "highest_drop": 0.0357833333333335,
+          "highest_lr": 10.0,
+          "passed": true,
+          "witnesses": [
+            {
+              "accuracy": 0.9052833333333332,
+              "diverged_trials": 0,
+              "lr": 8.0
+            },
+            {
+              "accuracy": 0.8939499999999999,
+              "diverged_trials": 0,
+              "lr": 10.0
+            }
+          ]
+        },
+        "b2lt": {
+          "best_accuracy": 0.9662,
+          "best_lr": 4.0,
+          "highest_accuracy": 0.9568,
+          "highest_drop": 0.009399999999999964,
+          "highest_lr": 10.0,
+          "passed": true,
+          "witnesses": [
+            {
+              "accuracy": 0.9625666666666668,
+              "diverged_trials": 0,
+              "lr": 8.0
+            },
+            {
+              "accuracy": 0.9568,
+              "diverged_trials": 0,
+              "lr": 10.0
+            }
+          ]
+        },
+        "iid": {
+          "best_accuracy": 0.9010999999999999,
+          "best_lr": 2.0,
+          "highest_accuracy": 0.8311,
+          "highest_drop": 0.06999999999999995,
+          "highest_lr": 10.0,
+          "passed": true,
+          "witnesses": [
+            {
+              "accuracy": 0.8480000000000001,
+              "diverged_trials": 0,
+              "lr": 8.0
+            },
+            {
+              "accuracy": 0.8311,
+              "diverged_trials": 0,
+              "lr": 10.0
+            }
+          ]
+        }
+      }
+    },
+    "stpex2": {
+      "passed": true,
+      "views": {
+        "average": {
+          "best_accuracy": 0.9289333333333334,
+          "best_lr": 0.1,
+          "highest_accuracy": 0.2047333333333333,
+          "highest_drop": 0.7242000000000001,
+          "highest_lr": 0.5,
+          "passed": true,
+          "witnesses": [
+            {
+              "accuracy": 0.312,
+              "diverged_trials": 0,
+              "lr": 0.4
+            },
+            {
+              "accuracy": 0.2047333333333333,
+              "diverged_trials": 0,
+              "lr": 0.5
+            }
+          ]
+        },
+        "b2lt": {
+          "best_accuracy": 0.9563666666666666,
+          "best_lr": 0.15,
+          "highest_accuracy": 0.20536666666666664,
+          "highest_drop": 0.7509999999999999,
+          "highest_lr": 0.5,
+          "passed": true,
+          "witnesses": [
+            {
+              "accuracy": 0.2552333333333333,
+              "diverged_trials": 0,
+              "lr": 0.4
+            },
+            {
+              "accuracy": 0.20536666666666664,
+              "diverged_trials": 0,
+              "lr": 0.5
+            }
+          ]
+        },
+        "iid": {
+          "best_accuracy": 0.9073,
+          "best_lr": 0.08,
+          "highest_accuracy": 0.2041,
+          "highest_drop": 0.7032,
+          "highest_lr": 0.5,
+          "passed": true,
+          "witnesses": [
+            {
+              "accuracy": 0.3687666666666667,
+              "diverged_trials": 0,
+              "lr": 0.4
+            },
+            {
+              "accuracy": 0.2041,
+              "diverged_trials": 0,
+              "lr": 0.5
+            }
+          ]
+        }
+      }
+    }
+  },
+  "time": "2026-11-05T15:46:28.921204+08:00"
+}

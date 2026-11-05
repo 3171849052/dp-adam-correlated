@@ -1,0 +1,2 @@
+sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+Completed adam-iid seed=20261115 lr=0.15: {'loss': 2.043299560546875, 'accuracy': 0.6013333333333334, 'n': 6000}

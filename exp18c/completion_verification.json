@@ -1,0 +1,78 @@
+{
+  "background_pid": 2973075,
+  "command": [
+    "/home/longt29/miniconda3/envs/curve/bin/python",
+    "-B",
+    "-m",
+    "exp18c.pipeline"
+  ],
+  "csv_rows": {
+    "formal_per_seed.csv": 30,
+    "grid_per_seed.csv": 90,
+    "grid_summary.csv": 18,
+    "paired_differences.csv": 30,
+    "summary.csv": 6,
+    "trial_plan.csv": 90
+  },
+  "detached_session_verified": true,
+  "environment": "/home/longt29/miniconda3/envs/curve/bin/python",
+  "final_status": {
+    "active": [],
+    "finished": "2026-11-05T15:27:43.443042+08:00",
+    "full_trainings": 90,
+    "selected_test_evaluations": 30,
+    "stage": "complete",
+    "status": "complete"
+  },
+  "formal_trainings": 90,
+  "frozen_seal_verified": true,
+  "gpu_allocation": {
+    "0": {
+      "formal_tasks": 27,
+      "peak_active_workers": 12,
+      "peak_memory_mib": 7113,
+      "peak_utilization_percent": 100,
+      "uuid": "GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6"
+    },
+    "1": {
+      "formal_tasks": 21,
+      "peak_active_workers": 12,
+      "peak_memory_mib": 7136,
+      "peak_utilization_percent": 100,
+      "uuid": "GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54"
+    },
+    "2": {
+      "formal_tasks": 17,
+      "peak_active_workers": 12,
+      "peak_memory_mib": 8543,
+      "peak_utilization_percent": 99,
+      "uuid": "GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e"
+    },
+    "3": {
+      "formal_tasks": 25,
+      "peak_active_workers": 12,
+      "peak_memory_mib": 7020,
+      "peak_utilization_percent": 100,
+      "uuid": "GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa"
+    }
+  },
+  "official_test_evaluations": 30,
+  "paired_with_exp18b": true,
+  "passed": true,
+  "readonly_files_verified": 7416,
+  "required_artifacts": {
+    "best_hyperparameters.json": "8ae60862c83eca7b8b99a44ae15bd2b86b50faf7e7973d2f7d24dd1c0495cb2f",
+    "final_report.md": "8622d5ca3708077c0930d4f9c79985d590cb920109e009de53bcd561f57e39a4",
+    "formal_per_seed.csv": "53b1e7f2b1f348189cb841dc7be0bda022e8fb72ff7aee50cfe2e246f1f6660c",
+    "gpu_telemetry.csv": "ba62d5f8ba489f79f2bd205b149d5599b5ed3be5353ed71c1b2649849f3ea675",
+    "grid_per_seed.csv": "25789212c6e28a4e2022774d411c9a77523cff90395a66db70f18c7dd5335ee7",
+    "grid_summary.csv": "b6677c7e1ec658fe3bd7bc808763387742de48a5d7de6827f954b5f30833bc50",
+    "paired_differences.csv": "776eb3eb4d27eec0ecabe2403e64b0c358e261a41e58b889310265f2926f2d36",
+    "privacy_audit.json": "27336bf4c3b532c4e3d4bfcd9727269816260c816d54d53802ac9f05f7bb95e8",
+    "protocol.json": "109ff318859fc020e744b94143b5bb664d0c118d9c668f0e1eff70ede4f44a54",
+    "summary.csv": "a5ea4e120c1d2784a95b3164c7085ef5be5a0c3ebdeed83522ecb9db5301bfda",
+    "trial_plan.csv": "490d70d41d145907c66d921a708fd0fb02e0af23a3b57fab45372c37307fc91a"
+  },
+  "smoke_trainings": 6,
+  "time": "2026-11-05T15:28:29.988610+08:00"
+}
