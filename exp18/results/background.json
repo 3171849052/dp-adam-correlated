@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/home/longt29/miniconda3/envs/curve/bin/python",
+    "-B",
+    "-m",
+    "exp18.pipeline"
+  ],
+  "cwd": "/media/data/data/lt/dp-adam-correlated",
+  "initial_processes_per_gpu": 12,
+  "log": "/media/data/data/lt/dp-adam-correlated/exp18/results/pipeline.log",
+  "physical_gpus": [
+    1,
+    2,
+    3
+  ],
+  "pid": 2866495,
+  "resume": "/home/longt29/miniconda3/envs/curve/bin/python -B -m exp18.start_background"
+}

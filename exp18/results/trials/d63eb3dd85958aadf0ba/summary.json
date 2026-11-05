@@ -1,0 +1,22 @@
+{
+  "config": {
+    "clip": 100,
+    "eps": 0.001,
+    "group": "stpex2",
+    "lr": 0.01,
+    "method": "stpex2-iid",
+    "seed": 20261101,
+    "stage": "coarse"
+  },
+  "evaluation": "internal_validation",
+  "metrics": {
+    "accuracy": 0.8718333333333333,
+    "loss": 0.46063494873046873,
+    "n": 6000,
+    "step": 162
+  },
+  "peak_memory": 322393600,
+  "seconds": 5.769488096237183,
+  "status": "complete",
+  "steps": 162
+}

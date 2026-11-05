@@ -1,0 +1,22 @@
+{
+  "config": {
+    "clip": 10,
+    "eps": 0.0003,
+    "group": "stpex2",
+    "lr": 0.0003,
+    "method": "stpex2-b2lt-momentum-bias",
+    "seed": 20261101,
+    "stage": "coarse"
+  },
+  "evaluation": "internal_validation",
+  "metrics": {
+    "accuracy": 0.134,
+    "loss": 2.2782840169270835,
+    "n": 6000,
+    "step": 162
+  },
+  "peak_memory": 322629120,
+  "seconds": 20.00638771057129,
+  "status": "complete",
+  "steps": 162
+}

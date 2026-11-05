@@ -1,0 +1,15 @@
+{
+  "evidence": "results/concurrency/results.jsonl",
+  "first_failure": 17,
+  "measured_max_success": 16,
+  "physical_gpus": [
+    1,
+    2,
+    3
+  ],
+  "recovery": "memory limit decreases immediately; restore one slot when GPU utilization <90%; never exceed 12",
+  "reserve_mib": 1536,
+  "selection": "12 workers leaves memory margin; STP throughput varies 14.35-18.72 trials/min versus 16.62 at 16; no statistically established throughput optimum",
+  "target_per_gpu": 12,
+  "worker_budget_mib": 768
+}

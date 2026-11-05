@@ -1,0 +1,101 @@
+{
+  "background_pid": null,
+  "downloads_performed": false,
+  "environment": {
+    "cuda_available": true,
+    "python": "/home/longt29/miniconda3/envs/curve/bin/python",
+    "torch": "2.13.0+cu126",
+    "visible_device_count": 4
+  },
+  "gpu_inventory": "index, name, memory.total [MiB], memory.used [MiB], utilization.gpu [%]\n0, NVIDIA GeForce RTX 3080 Ti, 12288 MiB, 3 MiB, 0 %\n1, NVIDIA GeForce RTX 3080 Ti, 12288 MiB, 3 MiB, 0 %\n2, NVIDIA GeForce RTX 3080 Ti, 12288 MiB, 3 MiB, 0 %\n3, NVIDIA GeForce RTX 3080 Ti, 12288 MiB, 3 MiB, 0 %\n",
+  "historical_review": {
+    "exp16a": "Simplified STP, not STP-Ex2; GDP calibration and matrix solver potentially reusable. Matrix solver hardcodes five participations and needs adaptation to three epochs.",
+    "exp16b": "Original STP-EX references stp-ex.pdf; cannot establish equivalence to missing STP-Ex2.",
+    "exp16c": "Momentum and original STP-EX implementation; CIFAR-100 and ViT assets.",
+    "exp16f": "Frozen scaling and AdaM3; CIFAR-100/ViT and SST-2/BERT assets."
+  },
+  "inventory": {
+    "cache": [
+      "cache/bert-tiny/config.json",
+      "cache/bert-tiny/pytorch_model.bin",
+      "cache/bert-tiny/tokenizer.json",
+      "cache/bert-tiny/tokenizer_config.json",
+      "cache/bert-tiny/vocab.txt",
+      "cache/huggingface/.agent_harnesses.json",
+      "cache/huggingface/hub/CACHEDIR.TAG",
+      "cache/huggingface/hub/datasets--nyu-mll--glue/.no_exist/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/.huggingface.yaml",
+      "cache/huggingface/hub/datasets--nyu-mll--glue/.no_exist/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/dataset_infos.json",
+      "cache/huggingface/hub/datasets--nyu-mll--glue/.no_exist/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/glue.py",
+      "cache/huggingface/hub/datasets--nyu-mll--glue/blobs/274c0b2c4c5524fe09285a8b7d945fe98a1dfe7a",
+      "cache/huggingface/hub/datasets--nyu-mll--glue/blobs/66a253e67968acfabcbe49dbe9da964b42ac1c851c40ab760e8c8942efdb3229",
+      "cache/huggingface/hub/datasets--nyu-mll--glue/refs/main",
+      "cache/huggingface/hub/datasets--nyu-mll--glue/snapshots/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/README.md",
+      "cache/huggingface/hub/datasets--nyu-mll--glue/snapshots/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/sst2/train-00000-of-00001.parquet",
+      "cache/huggingface/hub/models--timm--vit_tiny_patch16_224.augreg_in21k_ft_in1k/blobs/fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed",
+      "cache/huggingface/hub/models--timm--vit_tiny_patch16_224.augreg_in21k_ft_in1k/refs/main",
+      "cache/huggingface/hub/models--timm--vit_tiny_patch16_224.augreg_in21k_ft_in1k/snapshots/7d3afdd0cf93ad84d986eb2d6bcc5812ebd0b106/model.safetensors",
+      "cache/huggingface/xet/logs/xet_20261001T164756084+0800_1376571.log"
+    ],
+    "data": [
+      "data/cifar-100-python/file.txt~",
+      "data/cifar-100-python/meta",
+      "data/cifar-100-python/test",
+      "data/cifar-100-python/train",
+      "data/huggingface/parquet/default-163fe255002956a6/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb/dataset_info.json",
+      "data/huggingface/parquet/default-163fe255002956a6/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb/parquet-train.arrow",
+      "data/huggingface/parquet/default-24723bcdace7d9ec/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb/dataset_info.json",
+      "data/huggingface/parquet/default-24723bcdace7d9ec/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb/parquet-train.arrow",
+      "data/huggingface/parquet/default-6ac395945e40a644/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb/dataset_info.json",
+      "data/huggingface/parquet/default-6ac395945e40a644/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb/parquet-train.arrow",
+      "data/huggingface/parquet/default-ab148285f3458e01/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb/dataset_info.json",
+      "data/huggingface/parquet/default-ab148285f3458e01/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb/parquet-train.arrow",
+      "data/sst2/train.parquet",
+      "data/sst2/train/data-00000-of-00001.arrow",
+      "data/sst2/train/dataset_info.json",
+      "data/sst2/train/state.json",
+      "data/sst2/validation.parquet"
+    ]
+  },
+  "matrices_optimized": false,
+  "missing_requirements": [
+    "stp-ex2.pdf: repository contains only stp-ex.pdf",
+    "MNIST dataset in data/: only CIFAR-100 and SST-2 assets found",
+    "CNN configuration and weights in cache/: only ViT-Tiny and BERT-Tiny model assets found"
+  ],
+  "next_action": "Provide the exact STP-Ex2 PDF and local MNIST/CNN asset paths before implementation and acceptance.",
+  "pdf_files": [
+    "exp10/results/figures/mechanisms.pdf",
+    "exp10/runtime/report_check/figures/mechanisms.pdf",
+    "exp3b/results/smoke/cancellation/cancellation_curve.pdf",
+    "exp3b/results/smoke/cancellation/cumulative_rmse.pdf",
+    "exp3b/results/smoke/cancellation/relative_to_momentum.pdf",
+    "exp3b/results/smoke_v2_utility_rms/cancellation/cancellation_curve.pdf",
+    "exp3b/results/smoke_v2_utility_rms/cancellation/cumulative_rmse.pdf",
+    "exp3b/results/smoke_v2_utility_rms/cancellation/relative_to_momentum.pdf",
+    "exp3b/results/tests/tmp/test_250_step_outputs_finite_r0/cancellation_curve.pdf",
+    "exp3b/results/tests/tmp/test_250_step_outputs_finite_r0/cumulative_rmse.pdf",
+    "exp3b/results/tests/tmp/test_250_step_outputs_finite_r0/relative_to_momentum.pdf",
+    "exp8a/results/exp8a_summary.pdf",
+    "exp8b/results/final_summary.pdf",
+    "exp8b/results/search/search_curves.pdf",
+    "exp9/results/figures/epsilon_acc_iid_momentum_bias_sgd_scale_vs_non_scale.pdf",
+    "exp9/results/figures/epsilon_acc_non_scale.pdf",
+    "exp9/results/figures/epsilon_acc_scale_vs_non_scale_momentum.pdf",
+    "exp9/results/figures/epsilon_acc_scale_vs_non_scale_momentum_bias.pdf",
+    "exp9/results/figures/epsilon_acc_scale_vs_non_scale_sgd.pdf",
+    "stp-ex.pdf"
+  ],
+  "pipeline_started": false,
+  "protocol_frozen": false,
+  "repository": "/media/data/data/lt/dp-adam-correlated",
+  "requested_physical_gpus": [
+    1,
+    2,
+    3
+  ],
+  "resolution": "User supplied stp-ex2.pdf and authorized MNIST download and CNN from-scratch initialization. See acceptance.json for current verification.",
+  "smoke_tests_run": false,
+  "status": "blocked_before_implementation",
+  "superseded_by": "acceptance.json",
+  "time": "2026-11-05T12:30:16.175591+08:00"
+}

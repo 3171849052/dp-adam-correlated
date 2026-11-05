@@ -1,0 +1,21 @@
+{
+  "config": {
+    "clip": 1,
+    "group": "adam",
+    "lr": 0.001,
+    "method": "adam-b2lt-sgd",
+    "seed": 20261101,
+    "stage": "smoke"
+  },
+  "evaluation": "internal_validation",
+  "metrics": {
+    "accuracy": 0.115,
+    "loss": 2.27833544921875,
+    "n": 1000,
+    "step": 2
+  },
+  "peak_memory": 322629120,
+  "seconds": 0.5343666076660156,
+  "status": "complete",
+  "steps": 2
+}

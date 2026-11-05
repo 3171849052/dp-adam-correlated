@@ -1,0 +1,21 @@
+{
+  "config": {
+    "clip": 0.5,
+    "group": "adam",
+    "lr": 0.001,
+    "method": "adam-iid",
+    "seed": 20261101,
+    "stage": "coarse"
+  },
+  "evaluation": "internal_validation",
+  "metrics": {
+    "accuracy": 0.8481666666666666,
+    "loss": 0.6378018493652344,
+    "n": 6000,
+    "step": 162
+  },
+  "peak_memory": 322393600,
+  "seconds": 6.21441388130188,
+  "status": "complete",
+  "steps": 162
+}

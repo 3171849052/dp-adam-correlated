@@ -1,0 +1,29 @@
+[W1105 12:48:40.120867843 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 157286400 bytes (free: 40304640, total: 12500664320).
+[W1105 12:48:40.128201773 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 157286400 bytes (free: 63373312, total: 12500664320).
+Traceback (most recent call last):
+  File "/media/data/data/lt/dp-adam-correlated/exp18/runtime/concurrency/worker.py", line 18, in <module>
+    try:run(p)
+        ^^^^^^
+  File "/media/data/data/lt/dp-adam-correlated/exp18/train.py", line 56, in run
+    model.zero_grad(set_to_none=True);loss=torch.nn.functional.cross_entropy(model(xx),yy,reduction='sum');loss.backward()
+                                                                                                           ^^^^^^^^^^^^^^^
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/_tensor.py", line 623, in backward
+    torch.autograd.backward(
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/autograd/__init__.py", line 395, in backward
+    _engine_run_backward(
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/autograd/graph.py", line 979, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/torch/utils/hooks.py", line 137, in hook
+    out = hook(self.module, res, self.grad_outputs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/opacus/grad_sample/grad_sample_module.py", line 341, in capture_backprops_hook
+    grad_samples = grad_sampler_fn(module, activations, backprops)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/opacus/grad_sample/conv.py", line 64, in compute_conv_grad_sample
+    activations = unfold2d(
+                  ^^^^^^^^^
+  File "/home/longt29/miniconda3/envs/curve/lib/python3.11/site-packages/opacus/utils/tensor_utils.py", line 172, in unfold2d
+    return out.reshape(input.size(0), -1, H_effective * W_effective)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 150.00 MiB. GPU 0 has a total capacity of 11.64 GiB of which 60.44 MiB is free. Process 2860284 has 708.00 MiB memory in use. Process 2860276 has 522.00 MiB memory in use. Process 2860286 has 532.00 MiB memory in use. Process 2860283 has 532.00 MiB memory in use. Process 2860288 has 684.00 MiB memory in use. Process 2860275 has 532.00 MiB memory in use. Process 2860277 has 492.00 MiB memory in use. Process 2860285 has 708.00 MiB memory in use. Process 2860287 has 708.00 MiB memory in use. Process 2860270 has 708.00 MiB memory in use. Process 2860274 has 532.00 MiB memory in use. Including non-PyTorch memory, this process has 532.00 MiB memory in use. Process 2860273 has 532.00 MiB memory in use. Process 2860282 has 708.00 MiB memory in use. Process 2860279 has 532.00 MiB memory in use. Process 2860281 has 532.00 MiB memory in use. Process 2860269 has 708.00 MiB memory in use. Process 2860271 has 532.00 MiB memory in use. Process 2860278 has 522.00 MiB memory in use. Process 2860272 has 492.00 MiB memory in use. Of the allocated memory 155.29 MiB is allocated by PyTorch, and 14.71 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)

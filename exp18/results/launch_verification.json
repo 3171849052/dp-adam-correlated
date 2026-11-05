@@ -1,0 +1,65 @@
+{
+  "background": {
+    "command": [
+      "/home/longt29/miniconda3/envs/curve/bin/python",
+      "-B",
+      "-m",
+      "exp18.pipeline"
+    ],
+    "cwd": "/media/data/data/lt/dp-adam-correlated",
+    "initial_processes_per_gpu": 2,
+    "log": "/media/data/data/lt/dp-adam-correlated/exp18/results/pipeline.log",
+    "physical_gpus": [
+      1,
+      2,
+      3
+    ],
+    "pid": 2854581,
+    "resume": "/home/longt29/miniconda3/envs/curve/bin/python -B -m exp18.start_background"
+  },
+  "observed_status": {
+    "active": [
+      {
+        "physical_gpu": 1,
+        "pid": 2854597,
+        "trial": "62c1390dd02f82c37297"
+      },
+      {
+        "physical_gpu": 1,
+        "pid": 2854598,
+        "trial": "859beb902c565770e521"
+      },
+      {
+        "physical_gpu": 2,
+        "pid": 2854599,
+        "trial": "7fbbcb308489fcd1a809"
+      },
+      {
+        "physical_gpu": 2,
+        "pid": 2854600,
+        "trial": "cbd4329623676ead0548"
+      },
+      {
+        "physical_gpu": 3,
+        "pid": 2854601,
+        "trial": "64085dde31ca813659ec"
+      },
+      {
+        "physical_gpu": 3,
+        "pid": 2854602,
+        "trial": "7908c1b336ec8633d584"
+      }
+    ],
+    "capacity": {
+      "1": 2,
+      "2": 2,
+      "3": 2
+    },
+    "completed": 0,
+    "failure": null,
+    "pending": 334,
+    "six_process_overlap": true,
+    "stage": "coarse",
+    "time": 1793853599.517706
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "K": 54,
+  "P": 54,
+  "Q": 5,
+  "T": 162,
+  "accumulation": 1,
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "boundary": "at most two per group; dimension priority lr,clip,eps; factor .5 or 2; seed 20261102",
+  "dataset": "MNIST downloaded with user authorization; exp18/data",
+  "delta": 1e-05,
+  "dynamic_capacity": "1-4 workers/GPU based on measured peak memory, free memory and utilization; no protocol changes",
+  "epochs": 3,
+  "epsilon": 3,
+  "fine": "coordinate geometric neighbors around top two; caps 10/10/14; seed 20261102",
+  "formal_seeds": [
+    20261111,
+    20261112,
+    20261113,
+    20261114,
+    20261115
+  ],
+  "initial_gpu_capacity": {
+    "1": 2,
+    "2": 2,
+    "3": 2
+  },
+  "logical_batch": 1000,
+  "max_full_trainings": 486,
+  "model": "CNN Conv(1,8,5,pad2)-ReLU-AvgPool2-Conv(8,16,5,pad2)-ReLU-AvgPool2-Flatten-Linear(784,10); random initialization",
+  "momentum": 0.9,
+  "physical_batch": 1000,
+  "precision": "FP32; TF32 disabled",
+  "privacy": "GDP add/remove zero-out, no sampling amplification; per-training only",
+  "resume": "completed trials with valid hashes reused; incomplete trial preserved, inspect/archive before exact restart",
+  "review": "two candidates per group; pair average over seeds 20261103-20261105 only",
+  "selection": "same hyperparameters for IID/B2LT; rank mean pair validation accuracy, then mean loss, then canonical hash",
+  "split": [
+    54000,
+    6000,
+    10000
+  ],
+  "split_seed": 20261101,
+  "steps": 162,
+  "steps_per_epoch": 54,
+  "stpex2": "PDF adaptive alpha; d0=1; 24 bisections; backoff 1e-6",
+  "validation": "treated as public; tuning has no overall epsilon=3 claim",
+  "weight_decay": 0
+}

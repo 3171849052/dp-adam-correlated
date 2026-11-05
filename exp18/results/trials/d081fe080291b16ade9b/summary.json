@@ -1,0 +1,21 @@
+{
+  "config": {
+    "clip": 4,
+    "group": "momentum",
+    "lr": 0.2,
+    "method": "momentum-iid",
+    "seed": 20261114,
+    "stage": "formal"
+  },
+  "evaluation": "official_test",
+  "metrics": {
+    "accuracy": 0.8856,
+    "loss": 0.5448472290039063,
+    "n": 10000,
+    "step": 162
+  },
+  "peak_memory": 322393600,
+  "seconds": 11.37088131904602,
+  "status": "complete",
+  "steps": 162
+}
