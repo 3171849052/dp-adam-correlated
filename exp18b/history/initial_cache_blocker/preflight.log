@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-11-05T13:42:42.850403+08:00",
+  "status": "blocked",
+  "reason": "No compatible Exp18 CNN checkpoint in cache/",
+  "python": "/home/longt29/miniconda3/envs/curve/bin/python",
+  "torch_version": "2.13.0+cu126",
+  "data": "passed",
+  "cache_checkpoint": "failed",
+  "compatible_checkpoints": [],
+  "loaded_checkpoint": null,
+  "smoke_tests": "not_run",
+  "privacy_calibration": "not_run",
+  "b2lt_matrix_validation": "not_run",
+  "gpu_scheduling_validation": "not_run",
+  "protocol_frozen": false,
+  "launched": false,
+  "background_pid": null,
+  "training_count": 0,
+  "official_test_evaluations": 0,
+  "intended_physical_gpus": [
+    1,
+    2,
+    3
+  ],
+  "actual_gpu_assignment": [],
+  "random_initialization_fallback": false
+}

@@ -1,0 +1,15 @@
+{
+  "oom": "Record failure, stop new dispatch, drain active trials; no batch/precision changes",
+  "parallelism": "One subprocess per trial, CUDA_VISIBLE_DEVICES binds physical GPU, no DDP",
+  "physical_gpus": [
+    1,
+    2,
+    3
+  ],
+  "reserve_mib": 1536,
+  "smoke_peak_worker_nvml_mib": 708,
+  "source": "Exp18 audited admission_limit; reserve all in-flight slots against current external memory; shrink immediately, restore one slot below 90% utilization",
+  "target_per_gpu": 12,
+  "telemetry_seconds": 2,
+  "worker_budget_mib": 832
+}

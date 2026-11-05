@@ -1,0 +1,48 @@
+{
+  "code_seal_verified": true,
+  "current_active_per_gpu": {
+    "1": 1,
+    "2": 1,
+    "3": 1
+  },
+  "detached_session": true,
+  "gpu_uuids": {
+    "0": "bb24c6dd-b3e9-d35e-f544-bb53c11078c6",
+    "1": "015dd2bc-e3fc-8a3a-9ec6-ae5664031a54",
+    "2": "9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e",
+    "3": "b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa"
+  },
+  "initialization": "Five per-seed Exp18 random CNN checkpoints under exp18b/initializations; no pretrained cache weights",
+  "observed_trials_with_cuda": 90,
+  "passed": true,
+  "physical_gpu_bindings_verified": true,
+  "pid": 2925350,
+  "session_id": 2925350,
+  "status_snapshot": {
+    "active": [
+      {
+        "physical_gpu": 1,
+        "pid": 2926858,
+        "trial_id": "019462743e7ef2f6b23d"
+      },
+      {
+        "physical_gpu": 2,
+        "pid": 2926859,
+        "trial_id": "02f487aa8e4bb6355531"
+      },
+      {
+        "physical_gpu": 3,
+        "pid": 2926860,
+        "trial_id": "14ed82e81b63ef7b7a66"
+      }
+    ],
+    "completed": 0,
+    "failures": [],
+    "pending": 27,
+    "stage": "official_test",
+    "status": "running",
+    "time": "2026-11-05T14:26:59.086089+08:00",
+    "total": 30
+  },
+  "time": "2026-11-05T14:26:59.916632+08:00"
+}

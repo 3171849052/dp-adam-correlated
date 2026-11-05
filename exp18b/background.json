@@ -1,0 +1,38 @@
+{
+  "command": [
+    "/home/longt29/miniconda3/envs/curve/bin/python",
+    "-B",
+    "-m",
+    "exp18b.pipeline"
+  ],
+  "cwd": "/media/data/data/lt/dp-adam-correlated",
+  "detached_session": true,
+  "launched": "2026-11-05T14:25:44.873854+08:00",
+  "log": "/media/data/data/lt/dp-adam-correlated/exp18b/pipeline.log",
+  "max_processes_per_gpu": 12,
+  "physical_gpus": [
+    1,
+    2,
+    3
+  ],
+  "pid": 2925350,
+  "recovery": "Only completed hash-verified trials are reused; incomplete trials preserved for inspection",
+  "recovery_command": "/home/longt29/miniconda3/envs/curve/bin/python -B -m exp18b.recover --archive-incomplete",
+  "resume_command": "/home/longt29/miniconda3/envs/curve/bin/python -B -m exp18b.start_background",
+  "scheduling": {
+    "oom": "Record failure, stop new dispatch, drain active trials; no batch/precision changes",
+    "parallelism": "One subprocess per trial, CUDA_VISIBLE_DEVICES binds physical GPU, no DDP",
+    "physical_gpus": [
+      1,
+      2,
+      3
+    ],
+    "reserve_mib": 1536,
+    "smoke_peak_worker_nvml_mib": 708,
+    "source": "Exp18 audited admission_limit; reserve all in-flight slots against current external memory; shrink immediately, restore one slot below 90% utilization",
+    "target_per_gpu": 12,
+    "telemetry_seconds": 2,
+    "worker_budget_mib": 832
+  },
+  "stdin": "/dev/null"
+}

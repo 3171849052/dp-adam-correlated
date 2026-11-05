@@ -1,0 +1,2 @@
+sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+Completed stpex2-b2lt-momentum-bias seed=20261112 lr=0.04: {'loss': 0.3209556986490885, 'accuracy': 0.9051666666666667, 'n': 6000}
