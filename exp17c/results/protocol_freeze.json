@@ -1,0 +1,131 @@
+{
+  "assets": {
+    "cache/huggingface/hub/models--timm--vit_tiny_patch16_224.augreg_in21k_ft_in1k/snapshots/7d3afdd0cf93ad84d986eb2d6bcc5812ebd0b106/model.safetensors": "fecf81b492bd13ee7a5297cb74d1d417aac8bf7e1b7d96aed89c4691984587ed",
+    "data/cifar-100-python/meta": "a5d4786345c961390f865e93b434dbd5c6904ce880667e0cb888c97d449f28b9",
+    "data/cifar-100-python/train": "735e79b04f092ca3d2e6d07f368c0a7d70d48c48d28865950cc24454cf45129b",
+    "exp9/results/cv_split.npz": "205005831d63a9aa17091038faefc8e87c3cf38b5b99e24c8782c50b2614744e"
+  },
+  "calibration": {
+    "final": {
+      "actual_epsilon": 7.999352550400695,
+      "delta": 1e-05,
+      "noise_multiplier": 0.6313705444335938,
+      "nu_squared": 0.0003587658879405354,
+      "population": 50000,
+      "sample_rate": 0.02,
+      "stage": "final",
+      "steps": 250
+    },
+    "search": {
+      "actual_epsilon": 7.999685605892361,
+      "delta": 1e-05,
+      "noise_multiplier": 0.6417465209960938,
+      "nu_squared": 0.00037065473748953075,
+      "population": 45000,
+      "sample_rate": 0.022222222222222223,
+      "stage": "search",
+      "steps": 225
+    }
+  },
+  "code": {
+    "__init__.py": "16dd1a9a48fc2f715f3456bad3d376babec0a3b6dfb8cc3b84035a6677c2f360",
+    "clipping.py": "db2ee7a8818a7249691d14e5dc48342e174460c845b0b9ab3329eb7cd29fa465",
+    "common.py": "b4e21cb9186bfd5df8bbc99200ab4ccfa13abc1d3ac5aa4478c85ad1da7a3dd0",
+    "cv_model.py": "de7b23603dc94b1f5b6000a85d8f8b4485a5a81b1e9fcfdabf96daa21cf4d38c",
+    "data.py": "7ba5d6cef4a6e0985d5b8d68bf6c480b6ad33d84cbecf574f51a6c2c289dda09",
+    "mechanism.py": "654817b719edef7615a4627ac7945e12f559f4e58152e79de02bbae7d429557d",
+    "optimizer.py": "825377f8acd2ba7bd1462e92b918482fefeb2ba96e8bd0631d1cf5b612210e95",
+    "pipeline.py": "2c610437d46e8334c9e90d99a70ecb386093e0db6a037d2a7a943412f13edb6c",
+    "prepare.py": "92dfd99bc4dd06b7f3aedb39391d247fbd4f724b90fffd2267127b9858d65931",
+    "privacy.py": "42040440322f66fc7278e2732e5f8a5b2507c28516cd2b3a1bcfc6cdf4154f37",
+    "report.py": "06b7452398f51ed494e54a2b41a1663c9e66db818ea15ee0494b463ccd4e1304",
+    "scheduler.py": "ee9850d5816eb891c5f878a7c57b590adb51219b9ded07c8b294dde05fab596f",
+    "start_background.py": "87bc7ac3e6011b0fe422f9ca4f17005d29a915778b4697ba1268105973bcb251",
+    "tests/test_mechanism.py": "1760dd8901e1b9a256a8e8a318d828578cb49f5ceecbdf601ccf6308ceaad849",
+    "tests/test_optimizer.py": "3e9ca8488ee108ad24b76538891b2f3d4a14e851406c9e543dc5d91b7b876ef4",
+    "tests/test_pipeline.py": "e1f62e0f78608536366d4d93a671471db8fbc05f01639bf5d59406e805a647c8",
+    "tests/test_privacy.py": "a7f400465050ffe5f2f4a7da87b77cd3ac143c15f7beb7ab65576df8151f9d8f",
+    "train.py": "1326b79c66ab4895cff0c6cd6b5e154a013bf15f720a896c352029cf97905865"
+  },
+  "environment": {
+    "numpy": "2.4.4",
+    "opacus": "1.6.0",
+    "safetensors": "0.8.0",
+    "scipy": "1.17.1",
+    "timm": "1.0.29",
+    "torch": "2.13.0+cu126",
+    "torchvision": "0.28.0+cu126"
+  },
+  "executable": "/home/longt29/miniconda3/envs/curve/bin/python",
+  "gpu": "index, name, driver_version, memory.total [MiB]\n0, NVIDIA GeForce RTX 3080 Ti, 570.133.20, 12288 MiB\n1, NVIDIA GeForce RTX 3080 Ti, 570.133.20, 12288 MiB\n2, NVIDIA GeForce RTX 3080 Ti, 570.133.20, 12288 MiB\n3, NVIDIA GeForce RTX 3080 Ti, 570.133.20, 12288 MiB\n",
+  "protocol": {
+    "B": {
+      "seeds": [
+        1703101,
+        1703102,
+        1703103
+      ],
+      "steps": 50
+    },
+    "C": {
+      "seeds": [
+        1703201,
+        1703202,
+        1703203,
+        1703204,
+        1703205
+      ],
+      "steps": 225
+    },
+    "D": {
+      "seeds": [
+        1703301,
+        1703302,
+        1703303,
+        1703304,
+        1703305,
+        1703306,
+        1703307,
+        1703308,
+        1703309,
+        1703310
+      ],
+      "steps": 250
+    },
+    "alphas": [
+      0,
+      1e-14,
+      3e-14,
+      1e-13,
+      3e-13,
+      1e-12,
+      3e-12,
+      1e-11,
+      3e-11,
+      1e-10
+    ],
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "boundary": "If best positive alpha is a boundary and beats baseline, add one adjacent decade (three seeds, 50 steps); at most one extension before C.",
+    "clip": 30.0,
+    "dataset": "CIFAR-100",
+    "delta": 1e-05,
+    "dtype": "float32",
+    "eps": 1e-08,
+    "epsilon": 8.0,
+    "expected_batch": 1000,
+    "gpus": [
+      1,
+      2,
+      3
+    ],
+    "lr": 0.001187378144539193,
+    "model": "pretrained ViT-Tiny",
+    "physical_batch": 250,
+    "privacy": "Per-run RDP only; repeated tuning does not have joint epsilon=8 guarantee.",
+    "r": 0.0,
+    "resume": "Full state every 10 steps; rerun start_background after interruption.",
+    "selection": "Final validation CE mean ascending, accuracy mean descending, alpha ascending."
+  },
+  "python": "3.11.15 (main, Jun 11 2026, 15:20:16) [GCC 14.3.0]"
+}
