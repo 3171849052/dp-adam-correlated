@@ -1,0 +1,23 @@
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 12061.48it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+stpex2-b2lt-momentum-bias seed=20261122 step=62 internal={'accuracy': 0.7878108057580856, 'loss': 0.46039749069912766, 'examples': 5349}
+stpex2-b2lt-momentum-bias seed=20261122 step=124 internal={'accuracy': 0.8278182837913629, 'loss': 0.4164833169403333, 'examples': 5349}
+stpex2-b2lt-momentum-bias seed=20261122 step=186 internal={'accuracy': 0.8364180220601982, 'loss': 0.3931910015084093, 'examples': 5349}
+stpex2-b2lt-momentum-bias seed=20261122 step=248 internal={'accuracy': 0.8472611703122079, 'loss': 0.37210576907343496, 'examples': 5349}
+stpex2-b2lt-momentum-bias seed=20261122 step=310 internal={'accuracy': 0.8543653019255936, 'loss': 0.36803805981869786, 'examples': 5349}
+COMPLETE stpex2-b2lt-momentum-bias seed=20261122: {'accuracy': 0.8543653019255936, 'loss': 0.36803805981869786, 'examples': 5349}

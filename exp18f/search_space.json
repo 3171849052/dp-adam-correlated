@@ -1,0 +1,72 @@
+{
+  "axes": {
+    "clip": [
+      50,
+      75,
+      100,
+      125,
+      150,
+      200
+    ],
+    "eps": [
+      0.0003,
+      0.0005,
+      0.0007,
+      0.001,
+      0.0015,
+      0.002,
+      0.003,
+      0.005
+    ],
+    "lr": [
+      0.01,
+      0.015,
+      0.02,
+      0.024,
+      0.0282842712474619,
+      0.03,
+      0.032,
+      0.036,
+      0.04,
+      0.048,
+      0.056,
+      0.064,
+      0.08
+    ]
+  },
+  "axis_candidates": 27,
+  "axis_seeds": [
+    20261121,
+    20261122
+  ],
+  "axis_trainings": 108,
+  "baseline": {
+    "clip": 100,
+    "eps": 0.001,
+    "lr": 0.03
+  },
+  "baseline_duplicates": "Keep one baseline entry on EACH axis, as requested; no pooled duplicate-seed statistics",
+  "midpoint": "sqrt(low*high); nonmonotone -> local densification; no bracket -> largest performance-drop gap",
+  "official_validation_used": false,
+  "rounded_lrs": [
+    0.025,
+    0.03,
+    0.035
+  ],
+  "rounded_seeds": [
+    20261131,
+    20261132,
+    20261133,
+    20261134,
+    20261135
+  ],
+  "rounded_trainings_max": 30,
+  "selection": "Complete ten-run candidates only; five-seed paired method mean final accuracy, then loss",
+  "turning_rounds_max": 3,
+  "turning_seeds": [
+    20261123,
+    20261124,
+    20261125
+  ],
+  "turning_trainings_max": 18
+}

@@ -1,0 +1,394 @@
+{
+  "frozen": true,
+  "official_validation_used": false,
+  "parameters": {
+    "clip": 100,
+    "eps": 0.001,
+    "lr": 0.025
+  },
+  "ranking": [
+    {
+      "candidate": "rounded_1",
+      "complete": 10,
+      "failures": 0,
+      "mean_accuracy": 0.8176668536174987,
+      "mean_loss": 0.45364731688614457,
+      "parameters": {
+        "clip": 100,
+        "eps": 0.001,
+        "lr": 0.025
+      },
+      "trials": [
+        {
+          "directory": "search/rounded/rounded_1/stpex2-iid_seed20261131",
+          "method": "stpex2-iid",
+          "metrics": {
+            "accuracy": 0.8085623481024491,
+            "examples": 5349,
+            "loss": 0.4858818396516416
+          },
+          "seed": 20261131,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_1/stpex2-b2lt-momentum-bias_seed20261131",
+          "method": "stpex2-b2lt-momentum-bias",
+          "metrics": {
+            "accuracy": 0.8478220228080015,
+            "examples": 5349,
+            "loss": 0.38482099730270025
+          },
+          "seed": 20261131,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_1/stpex2-iid_seed20261132",
+          "method": "stpex2-iid",
+          "metrics": {
+            "accuracy": 0.7879977565900168,
+            "examples": 5349,
+            "loss": 0.5290129621088182
+          },
+          "seed": 20261132,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_1/stpex2-b2lt-momentum-bias_seed20261132",
+          "method": "stpex2-b2lt-momentum-bias",
+          "metrics": {
+            "accuracy": 0.8437091045055151,
+            "examples": 5349,
+            "loss": 0.3913571159290051
+          },
+          "seed": 20261132,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_1/stpex2-iid_seed20261133",
+          "method": "stpex2-iid",
+          "metrics": {
+            "accuracy": 0.7939801832118153,
+            "examples": 5349,
+            "loss": 0.49751308909708775
+          },
+          "seed": 20261133,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_1/stpex2-b2lt-momentum-bias_seed20261133",
+          "method": "stpex2-b2lt-momentum-bias",
+          "metrics": {
+            "accuracy": 0.836231071228267,
+            "examples": 5349,
+            "loss": 0.4175735059286372
+          },
+          "seed": 20261133,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_1/stpex2-iid_seed20261134",
+          "method": "stpex2-iid",
+          "metrics": {
+            "accuracy": 0.790988969900916,
+            "examples": 5349,
+            "loss": 0.5013857025100842
+          },
+          "seed": 20261134,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_1/stpex2-b2lt-momentum-bias_seed20261134",
+          "method": "stpex2-b2lt-momentum-bias",
+          "metrics": {
+            "accuracy": 0.8470742194802767,
+            "examples": 5349,
+            "loss": 0.38252627004929
+          },
+          "seed": 20261134,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_1/stpex2-iid_seed20261135",
+          "method": "stpex2-iid",
+          "metrics": {
+            "accuracy": 0.8078145447747243,
+            "examples": 5349,
+            "loss": 0.46458836996036057
+          },
+          "seed": 20261135,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_1/stpex2-b2lt-momentum-bias_seed20261135",
+          "method": "stpex2-b2lt-momentum-bias",
+          "metrics": {
+            "accuracy": 0.8124883155730043,
+            "examples": 5349,
+            "loss": 0.48181331632382
+          },
+          "seed": 20261135,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "candidate": "rounded_2",
+      "complete": 10,
+      "failures": 0,
+      "mean_accuracy": 0.81432043372593,
+      "mean_loss": 0.45851389367372253,
+      "parameters": {
+        "clip": 100,
+        "eps": 0.001,
+        "lr": 0.03
+      },
+      "trials": [
+        {
+          "directory": "search/rounded/rounded_2/stpex2-iid_seed20261131",
+          "method": "stpex2-iid",
+          "metrics": {
+            "accuracy": 0.8037016264722378,
+            "examples": 5349,
+            "loss": 0.5017766355242456
+          },
+          "seed": 20261131,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_2/stpex2-b2lt-momentum-bias_seed20261131",
+          "method": "stpex2-b2lt-momentum-bias",
+          "metrics": {
+            "accuracy": 0.8515610394466255,
+            "examples": 5349,
+            "loss": 0.37614946976891855
+          },
+          "seed": 20261131,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_2/stpex2-iid_seed20261132",
+          "method": "stpex2-iid",
+          "metrics": {
+            "accuracy": 0.7790241166573191,
+            "examples": 5349,
+            "loss": 0.5556783114533309
+          },
+          "seed": 20261132,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_2/stpex2-b2lt-momentum-bias_seed20261132",
+          "method": "stpex2-b2lt-momentum-bias",
+          "metrics": {
+            "accuracy": 0.8452047111609646,
+            "examples": 5349,
+            "loss": 0.3818150461667229
+          },
+          "seed": 20261132,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_2/stpex2-iid_seed20261133",
+          "method": "stpex2-iid",
+          "metrics": {
+            "accuracy": 0.7868760515984297,
+            "examples": 5349,
+            "loss": 0.5246459645720414
+          },
+          "seed": 20261133,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_2/stpex2-b2lt-momentum-bias_seed20261133",
+          "method": "stpex2-b2lt-momentum-bias",
+          "metrics": {
+            "accuracy": 0.8343615629089549,
+            "examples": 5349,
+            "loss": 0.41829106410567307
+          },
+          "seed": 20261133,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_2/stpex2-iid_seed20261134",
+          "method": "stpex2-iid",
+          "metrics": {
+            "accuracy": 0.7786502149934568,
+            "examples": 5349,
+            "loss": 0.5121151704301475
+          },
+          "seed": 20261134,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_2/stpex2-b2lt-momentum-bias_seed20261134",
+          "method": "stpex2-b2lt-momentum-bias",
+          "metrics": {
+            "accuracy": 0.8448308094971022,
+            "examples": 5349,
+            "loss": 0.3876569747568224
+          },
+          "seed": 20261134,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_2/stpex2-iid_seed20261135",
+          "method": "stpex2-iid",
+          "metrics": {
+            "accuracy": 0.7962235931949897,
+            "examples": 5349,
+            "loss": 0.47453173532020626
+          },
+          "seed": 20261135,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_2/stpex2-b2lt-momentum-bias_seed20261135",
+          "method": "stpex2-b2lt-momentum-bias",
+          "metrics": {
+            "accuracy": 0.8227706113292205,
+            "examples": 5349,
+            "loss": 0.45247856463911734
+          },
+          "seed": 20261135,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "candidate": "rounded_3",
+      "complete": 10,
+      "failures": 0,
+      "mean_accuracy": 0.8117592073284727,
+      "mean_loss": 0.46222782480892766,
+      "parameters": {
+        "clip": 100,
+        "eps": 0.001,
+        "lr": 0.035
+      },
+      "trials": [
+        {
+          "directory": "search/rounded/rounded_3/stpex2-iid_seed20261131",
+          "method": "stpex2-iid",
+          "metrics": {
+            "accuracy": 0.7964105440269209,
+            "examples": 5349,
+            "loss": 0.5135730259172001
+          },
+          "seed": 20261131,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_3/stpex2-b2lt-momentum-bias_seed20261131",
+          "method": "stpex2-b2lt-momentum-bias",
+          "metrics": {
+            "accuracy": 0.852869695270144,
+            "examples": 5349,
+            "loss": 0.3684166997230973
+          },
+          "seed": 20261131,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_3/stpex2-iid_seed20261132",
+          "method": "stpex2-iid",
+          "metrics": {
+            "accuracy": 0.7721069358758647,
+            "examples": 5349,
+            "loss": 0.5705194542799782
+          },
+          "seed": 20261132,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_3/stpex2-b2lt-momentum-bias_seed20261132",
+          "method": "stpex2-b2lt-momentum-bias",
+          "metrics": {
+            "accuracy": 0.8496915311273135,
+            "examples": 5349,
+            "loss": 0.3710662879594399
+          },
+          "seed": 20261132,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_3/stpex2-iid_seed20261133",
+          "method": "stpex2-iid",
+          "metrics": {
+            "accuracy": 0.7836978874555992,
+            "examples": 5349,
+            "loss": 0.5321291543586518
+          },
+          "seed": 20261133,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_3/stpex2-b2lt-momentum-bias_seed20261133",
+          "method": "stpex2-b2lt-momentum-bias",
+          "metrics": {
+            "accuracy": 0.8263226771359132,
+            "examples": 5349,
+            "loss": 0.4340991610164931
+          },
+          "seed": 20261133,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_3/stpex2-iid_seed20261134",
+          "method": "stpex2-iid",
+          "metrics": {
+            "accuracy": 0.7666853617498598,
+            "examples": 5349,
+            "loss": 0.5277970667575359
+          },
+          "seed": 20261134,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_3/stpex2-b2lt-momentum-bias_seed20261134",
+          "method": "stpex2-b2lt-momentum-bias",
+          "metrics": {
+            "accuracy": 0.8410917928584782,
+            "examples": 5349,
+            "loss": 0.3974377533546629
+          },
+          "seed": 20261134,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_3/stpex2-iid_seed20261135",
+          "method": "stpex2-iid",
+          "metrics": {
+            "accuracy": 0.7902411665731912,
+            "examples": 5349,
+            "loss": 0.5006671384197013
+          },
+          "seed": 20261135,
+          "status": "complete"
+        },
+        {
+          "directory": "search/rounded/rounded_3/stpex2-b2lt-momentum-bias_seed20261135",
+          "method": "stpex2-b2lt-momentum-bias",
+          "metrics": {
+            "accuracy": 0.8384744812114414,
+            "examples": 5349,
+            "loss": 0.406572506302516
+          },
+          "seed": 20261135,
+          "status": "complete"
+        }
+      ]
+    }
+  ],
+  "review_plan_sha256": "7b402d6c72f123b4b7ef8c7dab2926dc4eb32895eaab57a7a344b1489354a8ac",
+  "seeds": [
+    20261131,
+    20261132,
+    20261133,
+    20261134,
+    20261135
+  ],
+  "selection": "ONLY five new paired seeds; pooled final internal accuracy descending, then loss ascending; complete ten-run candidates only",
+  "status": "frozen",
+  "time": "2026-11-06T16:34:26.359879+08:00"
+}

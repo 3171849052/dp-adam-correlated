@@ -1,0 +1,65 @@
+{
+  "B2LT": {
+    "K": 62,
+    "P": 62,
+    "Q": 5,
+    "T": 310,
+    "source": "Byte-identical Exp18e momentum-bias matrix, independently re-audited"
+  },
+  "accounting": "Exp18 GDP whole fixed-epoch matrix mechanism; no sampling amplification",
+  "accumulation": 1,
+  "adjacency": "add/remove zero-out fixed slot",
+  "baseline": {
+    "clip": 100,
+    "eps": 0.001,
+    "lr": 0.03
+  },
+  "dataset": "SST-2",
+  "delta": 1e-05,
+  "dropout": 0.1,
+  "dropout_seed": "seed+100000+logical_step",
+  "epochs": 5,
+  "eps_definition": "optimizer stability coefficient, NOT privacy epsilon",
+  "epsilon": 8,
+  "evaluation": "Internal validation only, every epoch; official validation never loaded",
+  "experiment": "Exp18f",
+  "full_finetuning": true,
+  "gpu": "Exactly three selected UUIDs; dynamic memory admission; <=2 workers each; <=6 total; no DDP",
+  "internal_validation": 5349,
+  "logical_batch": 1000,
+  "max_length": 128,
+  "methods": [
+    "stpex2-iid",
+    "stpex2-b2lt-momentum-bias"
+  ],
+  "model": "BERT-Tiny",
+  "noise_seed": "seed+1",
+  "official_validation": 872,
+  "optimizer": "Exact exp18.optimizer.Update for Adam/Momentum/STP-Ex2, beta1=.9, beta2=.999, weight_decay=0",
+  "participation": "Same per-seed Exp16e permutation repeated five epochs",
+  "physical_batch": 1000,
+  "precision": "FP32; TF32 disabled",
+  "privacy_scope": "Per-training epsilon=8,delta=1e-5; combined search/review is NOT epsilon=8; no sampling amplification",
+  "smoke": "Six methods, seed 20261111, 3 steps, batch 1000, length128, internal validation64; separate directories",
+  "split_seed": 20261008,
+  "stability": {
+    "alpha": "decay alone never failure",
+    "baseline_unavailable": "absolute accuracy .55 and loss 1.0 thresholds only if no baseline trial succeeds",
+    "censored": "never invent an unobserved stable/unstable endpoint",
+    "nonmonotonic": "any unstable-to-stable return triggers local densification",
+    "numerical": "NaN/Inf loss, clipping norm, noisy gradient, alpha, optimizer state or model parameter; terminal numerical_failure",
+    "predictive": "finite but final mean accuracy < baseline - .05 OR mean loss > max(1.0,1.5*baseline loss)"
+  },
+  "stage_limits": [
+    108,
+    18,
+    30
+  ],
+  "statistics": "seed is observational unit; ddof=1 sample SD and Student-t 95% CI; paired method differences",
+  "steps_per_epoch": 62,
+  "stpex2": "d0=1; scale by previous completed d; adaptive alpha, 24 bisections, 1e-6 backoff; no final denominator",
+  "stpex2_parameters": "Shared triplet frozen ONLY after five fresh review seeds",
+  "total_steps": 310,
+  "total_training_limit": 156,
+  "train_examples": 62000
+}

@@ -1,0 +1,1568 @@
+[
+  {
+    "candidate": "clip_01",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.8265096279678444,
+    "mean_loss": 0.46580415334539294,
+    "parameters": {
+      "clip": 75,
+      "eps": 0.001,
+      "lr": 0.03
+    },
+    "trials": [
+      {
+        "directory": "search/axis/clip_01/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.8106188072536923,
+          "examples": 5349,
+          "loss": 0.5169745531009055
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/clip_01/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8433352028416526,
+          "examples": 5349,
+          "loss": 0.41493496633641275
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/clip_01/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.8033277248083754,
+          "examples": 5349,
+          "loss": 0.5181758643132679
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/clip_01/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8487567769676575,
+          "examples": 5349,
+          "loss": 0.4131312296309857
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "lr_02",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.8256216115161712,
+    "mean_loss": 0.4319427850915463,
+    "parameters": {
+      "clip": 100,
+      "eps": 0.001,
+      "lr": 0.02
+    },
+    "trials": [
+      {
+        "directory": "search/axis/lr_02/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.8074406431108618,
+          "examples": 5349,
+          "loss": 0.48154589848599494
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_02/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8422134978500654,
+          "examples": 5349,
+          "loss": 0.3854839576696944
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_02/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.8096840530940362,
+          "examples": 5349,
+          "loss": 0.46874419701034764
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_02/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8431482520097214,
+          "examples": 5349,
+          "loss": 0.3919970872001484
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "clip_00",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.8244064311086184,
+    "mean_loss": 0.567215159354332,
+    "parameters": {
+      "clip": 50,
+      "eps": 0.001,
+      "lr": 0.03
+    },
+    "trials": [
+      {
+        "directory": "search/axis/clip_00/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.8147317255561787,
+          "examples": 5349,
+          "loss": 0.6031364980067554
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/clip_00/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8364180220601982,
+          "examples": 5349,
+          "loss": 0.5119162195975545
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/clip_00/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.8096840530940362,
+          "examples": 5349,
+          "loss": 0.6436489288506942
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/clip_00/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8367919237240605,
+          "examples": 5349,
+          "loss": 0.510158990962324
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "lr_03",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.8229108244531689,
+    "mean_loss": 0.43302544470612503,
+    "parameters": {
+      "clip": 100,
+      "eps": 0.001,
+      "lr": 0.024
+    },
+    "trials": [
+      {
+        "directory": "search/axis/lr_03/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.8014582164890633,
+          "examples": 5349,
+          "loss": 0.4878978608010706
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_03/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8440830061693775,
+          "examples": 5349,
+          "loss": 0.37650307166641017
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_03/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.804823331463825,
+          "examples": 5349,
+          "loss": 0.47725882024759664
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_03/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8412787436904094,
+          "examples": 5349,
+          "loss": 0.39044202610942264
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "lr_04",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.8223499719573752,
+    "mean_loss": 0.43617665538121037,
+    "parameters": {
+      "clip": 100,
+      "eps": 0.001,
+      "lr": 0.0282842712474619
+    },
+    "trials": [
+      {
+        "directory": "search/axis/lr_04/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7979061506823706,
+          "examples": 5349,
+          "loss": 0.5045611327508829
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_04/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8437091045055151,
+          "examples": 5349,
+          "loss": 0.3742373294085069
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_04/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7954757898672649,
+          "examples": 5349,
+          "loss": 0.4930499624729067
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_04/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8523088427743504,
+          "examples": 5349,
+          "loss": 0.3728581968925449
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "eps_00",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.8216021686296504,
+    "mean_loss": 0.4344960779848668,
+    "parameters": {
+      "clip": 100,
+      "eps": 0.0003,
+      "lr": 0.03
+    },
+    "trials": [
+      {
+        "directory": "search/axis/eps_00/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7999626098336138,
+          "examples": 5349,
+          "loss": 0.49412913883171433
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/eps_00/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8429613011777902,
+          "examples": 5349,
+          "loss": 0.37977200870225086
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/eps_00/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7891194615816041,
+          "examples": 5349,
+          "loss": 0.49604510458680395
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/eps_00/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8543653019255936,
+          "examples": 5349,
+          "loss": 0.36803805981869786
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "clip_02",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.8216021686296504,
+    "mean_loss": 0.4383235216631045,
+    "parameters": {
+      "clip": 100,
+      "eps": 0.001,
+      "lr": 0.03
+    },
+    "trials": [
+      {
+        "directory": "search/axis/clip_02/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7979061506823706,
+          "examples": 5349,
+          "loss": 0.5155827965685577
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/clip_02/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8452047111609646,
+          "examples": 5349,
+          "loss": 0.37352812840662664
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/clip_02/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7885586090858104,
+          "examples": 5349,
+          "loss": 0.4961932487723136
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/clip_02/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.854739203589456,
+          "examples": 5349,
+          "loss": 0.36798991290492017
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "eps_03",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.8216021686296504,
+    "mean_loss": 0.4383235216631045,
+    "parameters": {
+      "clip": 100,
+      "eps": 0.001,
+      "lr": 0.03
+    },
+    "trials": [
+      {
+        "directory": "search/axis/eps_03/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7979061506823706,
+          "examples": 5349,
+          "loss": 0.5155827965685577
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/eps_03/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8452047111609646,
+          "examples": 5349,
+          "loss": 0.37352812840662664
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/eps_03/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7885586090858104,
+          "examples": 5349,
+          "loss": 0.4961932487723136
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/eps_03/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.854739203589456,
+          "examples": 5349,
+          "loss": 0.36798991290492017
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "lr_05",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.8216021686296504,
+    "mean_loss": 0.4383235216631045,
+    "parameters": {
+      "clip": 100,
+      "eps": 0.001,
+      "lr": 0.03
+    },
+    "trials": [
+      {
+        "directory": "search/axis/lr_05/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7979061506823706,
+          "examples": 5349,
+          "loss": 0.5155827965685577
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_05/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8452047111609646,
+          "examples": 5349,
+          "loss": 0.37352812840662664
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_05/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7885586090858104,
+          "examples": 5349,
+          "loss": 0.4961932487723136
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_05/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.854739203589456,
+          "examples": 5349,
+          "loss": 0.36798991290492017
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "lr_01",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.8207141521779772,
+    "mean_loss": 0.44310424733014836,
+    "parameters": {
+      "clip": 100,
+      "eps": 0.001,
+      "lr": 0.015
+    },
+    "trials": [
+      {
+        "directory": "search/axis/lr_01/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.8093101514301738,
+          "examples": 5349,
+          "loss": 0.47034911089555015
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_01/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8280052346232941,
+          "examples": 5349,
+          "loss": 0.41096131443687633
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_01/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.8100579547578987,
+          "examples": 5349,
+          "loss": 0.4798950459895167
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_01/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8354832679005422,
+          "examples": 5349,
+          "loss": 0.41121151799865024
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "eps_01",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.8206674144699944,
+    "mean_loss": 0.4364658807856855,
+    "parameters": {
+      "clip": 100,
+      "eps": 0.0005,
+      "lr": 0.03
+    },
+    "trials": [
+      {
+        "directory": "search/axis/eps_01/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7962235931949897,
+          "examples": 5349,
+          "loss": 0.5009390887511648
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/eps_01/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8420265470181343,
+          "examples": 5349,
+          "loss": 0.37997675717579
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/eps_01/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.790988969900916,
+          "examples": 5349,
+          "loss": 0.49743512599885875
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/eps_01/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8534305477659375,
+          "examples": 5349,
+          "loss": 0.3675125512169285
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "eps_06",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.8202467750981491,
+    "mean_loss": 0.4326114372842489,
+    "parameters": {
+      "clip": 100,
+      "eps": 0.003,
+      "lr": 0.03
+    },
+    "trials": [
+      {
+        "directory": "search/axis/eps_06/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7924845765563657,
+          "examples": 5349,
+          "loss": 0.4975717608383558
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/eps_06/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8457655636567583,
+          "examples": 5349,
+          "loss": 0.3720476286369833
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/eps_06/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7887455599177416,
+          "examples": 5349,
+          "loss": 0.4914958448939556
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/eps_06/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8539914002617311,
+          "examples": 5349,
+          "loss": 0.3693305147677008
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "eps_02",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.8202467750981491,
+    "mean_loss": 0.4351754132376182,
+    "parameters": {
+      "clip": 100,
+      "eps": 0.0007,
+      "lr": 0.03
+    },
+    "trials": [
+      {
+        "directory": "search/axis/eps_02/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7962235931949897,
+          "examples": 5349,
+          "loss": 0.4983500211255353
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/eps_02/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8422134978500654,
+          "examples": 5349,
+          "loss": 0.3775816400556124
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/eps_02/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7885586090858104,
+          "examples": 5349,
+          "loss": 0.4972142233628383
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/eps_02/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8539914002617311,
+          "examples": 5349,
+          "loss": 0.36755576840648696
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "eps_04",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.8202467750981491,
+    "mean_loss": 0.43534707399055567,
+    "parameters": {
+      "clip": 100,
+      "eps": 0.0015,
+      "lr": 0.03
+    },
+    "trials": [
+      {
+        "directory": "search/axis/eps_04/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7913628715647785,
+          "examples": 5349,
+          "loss": 0.5037490265639971
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/eps_04/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8453916619928958,
+          "examples": 5349,
+          "loss": 0.37181718283935133
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/eps_04/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7894933632454665,
+          "examples": 5349,
+          "loss": 0.4974478216879077
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/eps_04/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.854739203589456,
+          "examples": 5349,
+          "loss": 0.3683742648709665
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "eps_05",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.8199196111422695,
+    "mean_loss": 0.43534600576478133,
+    "parameters": {
+      "clip": 100,
+      "eps": 0.002,
+      "lr": 0.03
+    },
+    "trials": [
+      {
+        "directory": "search/axis/eps_05/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7915498223967097,
+          "examples": 5349,
+          "loss": 0.5007975580625879
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/eps_05/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8446438586651711,
+          "examples": 5349,
+          "loss": 0.37542167773400986
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/eps_05/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7893064124135353,
+          "examples": 5349,
+          "loss": 0.4964387158764525
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/eps_05/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8541783510936624,
+          "examples": 5349,
+          "loss": 0.3687260713860752
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "lr_06",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.8190315946905964,
+    "mean_loss": 0.4364290421065671,
+    "parameters": {
+      "clip": 100,
+      "eps": 0.001,
+      "lr": 0.032
+    },
+    "trials": [
+      {
+        "directory": "search/axis/lr_06/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7919237240605721,
+          "examples": 5349,
+          "loss": 0.5069862336483062
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_06/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8463264161525519,
+          "examples": 5349,
+          "loss": 0.3721103550541354
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_06/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7818283791362871,
+          "examples": 5349,
+          "loss": 0.5023009884488941
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_06/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8560478594129743,
+          "examples": 5349,
+          "loss": 0.36431859127493255
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "eps_07",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.8185174799027854,
+    "mean_loss": 0.43576570955876615,
+    "parameters": {
+      "clip": 100,
+      "eps": 0.005,
+      "lr": 0.03
+    },
+    "trials": [
+      {
+        "directory": "search/axis/eps_07/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7908020190689848,
+          "examples": 5349,
+          "loss": 0.5042745176933261
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/eps_07/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8459525144886895,
+          "examples": 5349,
+          "loss": 0.3723802086927664
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/eps_07/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7866891007664985,
+          "examples": 5349,
+          "loss": 0.4984626099648354
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/eps_07/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8506262852869695,
+          "examples": 5349,
+          "loss": 0.36794550188413666
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "lr_07",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.8161338567956626,
+    "mean_loss": 0.4393045578209746,
+    "parameters": {
+      "clip": 100,
+      "eps": 0.001,
+      "lr": 0.036
+    },
+    "trials": [
+      {
+        "directory": "search/axis/lr_07/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7803327724808375,
+          "examples": 5349,
+          "loss": 0.5217205018367828
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_07/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8532435969340063,
+          "examples": 5349,
+          "loss": 0.36687899874981195
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_07/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7750981491867639,
+          "examples": 5349,
+          "loss": 0.5067572145289094
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_07/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8558609085810431,
+          "examples": 5349,
+          "loss": 0.3618615161683943
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "lr_00",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.8133763320246776,
+    "mean_loss": 0.46560386096813855,
+    "parameters": {
+      "clip": 100,
+      "eps": 0.001,
+      "lr": 0.01
+    },
+    "trials": [
+      {
+        "directory": "search/axis/lr_00/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.8035146756403067,
+          "examples": 5349,
+          "loss": 0.4909921197896584
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_00/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8218358571695644,
+          "examples": 5349,
+          "loss": 0.4277430998095621
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_00/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.8089362497663115,
+          "examples": 5349,
+          "loss": 0.49403445603446794
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_00/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8192185455225276,
+          "examples": 5349,
+          "loss": 0.44964576823886565
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "lr_08",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.8115535614133483,
+    "mean_loss": 0.44813439333008753,
+    "parameters": {
+      "clip": 100,
+      "eps": 0.001,
+      "lr": 0.04
+    },
+    "trials": [
+      {
+        "directory": "search/axis/lr_08/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7721069358758647,
+          "examples": 5349,
+          "loss": 0.529151923992095
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_08/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8467003178164143,
+          "examples": 5349,
+          "loss": 0.38158347749736826
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_08/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7691157225649654,
+          "examples": 5349,
+          "loss": 0.5174627377176133
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_08/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8582912693961489,
+          "examples": 5349,
+          "loss": 0.3643394341132734
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "clip_03",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.8094503645541222,
+    "mean_loss": 0.4267279225034031,
+    "parameters": {
+      "clip": 125,
+      "eps": 0.001,
+      "lr": 0.03
+    },
+    "trials": [
+      {
+        "directory": "search/axis/clip_03/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7728547392035895,
+          "examples": 5349,
+          "loss": 0.49659210892565164
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/clip_03/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8440830061693775,
+          "examples": 5349,
+          "loss": 0.36920035186271216
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/clip_03/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7704243783884839,
+          "examples": 5349,
+          "loss": 0.48545565010565733
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/clip_03/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8504393344550383,
+          "examples": 5349,
+          "loss": 0.35566357911959123
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "lr_09",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.8011777902411665,
+    "mean_loss": 0.4617849582822596,
+    "parameters": {
+      "clip": 100,
+      "eps": 0.001,
+      "lr": 0.048
+    },
+    "trials": [
+      {
+        "directory": "search/axis/lr_09/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7498597868760516,
+          "examples": 5349,
+          "loss": 0.5553104894855219
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_09/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8524957936062816,
+          "examples": 5349,
+          "loss": 0.36482243405076625
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_09/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7489250327163955,
+          "examples": 5349,
+          "loss": 0.5593345885990847
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_09/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8534305477659375,
+          "examples": 5349,
+          "loss": 0.3676723209936656
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "lr_10",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.7808468872686484,
+    "mean_loss": 0.4881900805004247,
+    "parameters": {
+      "clip": 100,
+      "eps": 0.001,
+      "lr": 0.056
+    },
+    "trials": [
+      {
+        "directory": "search/axis/lr_10/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.6990091605907647,
+          "examples": 5349,
+          "loss": 0.6240981689099397
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_10/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8511871377827631,
+          "examples": 5349,
+          "loss": 0.3724151225508117
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_10/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7236866704056834,
+          "examples": 5349,
+          "loss": 0.5792014442396779
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_10/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8495045802953823,
+          "examples": 5349,
+          "loss": 0.37704558630126905
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "clip_04",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.773882968779211,
+    "mean_loss": 0.4625143745409526,
+    "parameters": {
+      "clip": 150,
+      "eps": 0.001,
+      "lr": 0.03
+    },
+    "trials": [
+      {
+        "directory": "search/axis/clip_04/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7111609646662927,
+          "examples": 5349,
+          "loss": 0.5580324253917387
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/clip_04/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8330529070854366,
+          "examples": 5349,
+          "loss": 0.3752313283341558
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/clip_04/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.7186389979435408,
+          "examples": 5349,
+          "loss": 0.5406775133122593
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/clip_04/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8326790054215741,
+          "examples": 5349,
+          "loss": 0.3761162311256567
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "lr_11",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.7448121144139092,
+    "mean_loss": 0.5231033492074946,
+    "parameters": {
+      "clip": 100,
+      "eps": 0.001,
+      "lr": 0.064
+    },
+    "trials": [
+      {
+        "directory": "search/axis/lr_11/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.6221723686670406,
+          "examples": 5349,
+          "loss": 0.6551585758171431
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_11/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8281921854552253,
+          "examples": 5349,
+          "loss": 0.4069651013379856
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_11/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.6907833239857918,
+          "examples": 5349,
+          "loss": 0.6253323236744657
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_11/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.838100579547579,
+          "examples": 5349,
+          "loss": 0.4049573960003841
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "clip_05",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.6859226023555806,
+    "mean_loss": 0.5473726240134189,
+    "parameters": {
+      "clip": 200,
+      "eps": 0.001,
+      "lr": 0.03
+    },
+    "trials": [
+      {
+        "directory": "search/axis/clip_05/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.5659001682557487,
+          "examples": 5349,
+          "loss": 0.681585076189995
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/clip_05/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8102449055898299,
+          "examples": 5349,
+          "loss": 0.41043789361342914
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/clip_05/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.5617872499532623,
+          "examples": 5349,
+          "loss": 0.6833606405466778
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/clip_05/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.8057580856234811,
+          "examples": 5349,
+          "loss": 0.4141068857035741
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "candidate": "lr_12",
+    "complete": 4,
+    "failures": 0,
+    "mean_accuracy": 0.6141334828939988,
+    "mean_loss": 0.6305463785188268,
+    "parameters": {
+      "clip": 100,
+      "eps": 0.001,
+      "lr": 0.08
+    },
+    "trials": [
+      {
+        "directory": "search/axis/lr_12/stpex2-iid_seed20261121",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.5576743316507758,
+          "examples": 5349,
+          "loss": 0.6835011018505942
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_12/stpex2-b2lt-momentum-bias_seed20261121",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.557861282482707,
+          "examples": 5349,
+          "loss": 0.6853329217596619
+        },
+        "seed": 20261121,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_12/stpex2-iid_seed20261122",
+        "method": "stpex2-iid",
+        "metrics": {
+          "accuracy": 0.5602916432978127,
+          "examples": 5349,
+          "loss": 0.6851558895685178
+        },
+        "seed": 20261122,
+        "status": "complete"
+      },
+      {
+        "directory": "search/axis/lr_12/stpex2-b2lt-momentum-bias_seed20261122",
+        "method": "stpex2-b2lt-momentum-bias",
+        "metrics": {
+          "accuracy": 0.7807066741447,
+          "examples": 5349,
+          "loss": 0.4681956008965333
+        },
+        "seed": 20261122,
+        "status": "complete"
+      }
+    ]
+  }
+]

@@ -1,0 +1,174 @@
+{
+  "controller_alive": true,
+  "exp18e_unchanged": true,
+  "full_tasks_verified": 6,
+  "gpu_processes": "gpu_uuid, pid, used_gpu_memory [MiB]\nGPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6, 3485447, 4450 MiB\nGPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6, 3485501, 4360 MiB\nGPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54, 3485430, 4360 MiB\nGPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54, 3485502, 4450 MiB\nGPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e, 3485448, 4360 MiB\nGPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e, 3485464, 4450 MiB\n",
+  "launcher_alive": true,
+  "status": {
+    "launch": {
+      "command": [
+        "conda",
+        "run",
+        "--no-capture-output",
+        "-n",
+        "curve",
+        "python",
+        "-B",
+        "-m",
+        "exp18f.pipeline"
+      ],
+      "cwd": "/media/data/data/lt/dp-adam-correlated",
+      "detached": true,
+      "log": "/media/data/data/lt/dp-adam-correlated/exp18f/logs/pipeline.log",
+      "mechanism": "setsid/start_new_session with redirected stdin/stdout/stderr",
+      "pid": 3484573,
+      "process_group": 3484573,
+      "time": "2026-11-06T15:53:32.737174+08:00"
+    },
+    "pipeline": {
+      "pid": 3484597,
+      "stage": "axis",
+      "status": "running",
+      "time": "2026-11-06T15:53:36.643453+08:00"
+    },
+    "stages": [
+      {
+        "active": [
+          {
+            "config": {
+              "candidate": "lr_01",
+              "clip": 100,
+              "eps": 0.001,
+              "group": "stpex2",
+              "lr": 0.015,
+              "method": "stpex2-iid",
+              "seed": 20261122,
+              "stage": "axis",
+              "steps": 310
+            },
+            "directory": "search/axis/lr_01/stpex2-iid_seed20261122",
+            "gpu": 1,
+            "step": 102,
+            "uuid": "GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54",
+            "worker_pid": 3485430
+          },
+          {
+            "config": {
+              "candidate": "lr_01",
+              "clip": 100,
+              "eps": 0.001,
+              "group": "stpex2",
+              "lr": 0.015,
+              "method": "stpex2-b2lt-momentum-bias",
+              "seed": 20261122,
+              "stage": "axis",
+              "steps": 310
+            },
+            "directory": "search/axis/lr_01/stpex2-b2lt-momentum-bias_seed20261122",
+            "gpu": 0,
+            "step": 63,
+            "uuid": "GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6",
+            "worker_pid": 3485447
+          },
+          {
+            "config": {
+              "candidate": "lr_02",
+              "clip": 100,
+              "eps": 0.001,
+              "group": "stpex2",
+              "lr": 0.02,
+              "method": "stpex2-iid",
+              "seed": 20261121,
+              "stage": "axis",
+              "steps": 310
+            },
+            "directory": "search/axis/lr_02/stpex2-iid_seed20261121",
+            "gpu": 2,
+            "step": 61,
+            "uuid": "GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e",
+            "worker_pid": 3485448
+          },
+          {
+            "config": {
+              "candidate": "lr_02",
+              "clip": 100,
+              "eps": 0.001,
+              "group": "stpex2",
+              "lr": 0.02,
+              "method": "stpex2-b2lt-momentum-bias",
+              "seed": 20261121,
+              "stage": "axis",
+              "steps": 310
+            },
+            "directory": "search/axis/lr_02/stpex2-b2lt-momentum-bias_seed20261121",
+            "gpu": 2,
+            "step": 45,
+            "uuid": "GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e",
+            "worker_pid": 3485464
+          },
+          {
+            "config": {
+              "candidate": "lr_02",
+              "clip": 100,
+              "eps": 0.001,
+              "group": "stpex2",
+              "lr": 0.02,
+              "method": "stpex2-iid",
+              "seed": 20261122,
+              "stage": "axis",
+              "steps": 310
+            },
+            "directory": "search/axis/lr_02/stpex2-iid_seed20261122",
+            "gpu": 0,
+            "step": 37,
+            "uuid": "GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6",
+            "worker_pid": 3485501
+          },
+          {
+            "config": {
+              "candidate": "lr_02",
+              "clip": 100,
+              "eps": 0.001,
+              "group": "stpex2",
+              "lr": 0.02,
+              "method": "stpex2-b2lt-momentum-bias",
+              "seed": 20261122,
+              "stage": "axis",
+              "steps": 310
+            },
+            "directory": "search/axis/lr_02/stpex2-b2lt-momentum-bias_seed20261122",
+            "gpu": 1,
+            "step": 30,
+            "uuid": "GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54",
+            "worker_pid": 3485502
+          }
+        ],
+        "completed": 6,
+        "numerical_failures": 0,
+        "pending": 96,
+        "pid": 3484597,
+        "reservation_mib": 5200,
+        "stage": "axis",
+        "status": "running",
+        "terminal": 6,
+        "time": "2026-11-06T15:55:34.868864+08:00",
+        "total": 108
+      },
+      {
+        "active": [],
+        "completed": 6,
+        "numerical_failures": 0,
+        "pending": 0,
+        "pid": 3483312,
+        "reservation_mib": 5200,
+        "stage": "smoke",
+        "status": "complete",
+        "terminal": 6,
+        "time": "2026-11-06T15:50:58.022317+08:00",
+        "total": 6
+      }
+    ]
+  },
+  "three_gpus_verified": true,
+  "verified": "2026-11-06T15:55:36.578326+08:00"
+}

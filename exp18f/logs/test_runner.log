@@ -1,0 +1,30 @@
+/media/data/data/lt/dp-adam-correlated/exp18f/clipping.py:55: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  losses.sum().backward(retain_graph=True)
+/media/data/data/lt/dp-adam-correlated/exp18f/clipping.py:60: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  (losses * coefficients).sum().backward()
+START smoke gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=100 {'stage': 'smoke', 'candidate': 'test0', 'method': 'stpex2-iid', 'group': 'stpex2', 'seed': 0, 'steps': 3, 'lr': 0.03, 'clip': 100, 'eps': 0.001}
+START smoke gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=101 {'stage': 'smoke', 'candidate': 'test1', 'method': 'stpex2-iid', 'group': 'stpex2', 'seed': 1, 'steps': 3, 'lr': 0.03, 'clip': 100, 'eps': 0.001}
+NUMERICAL_FAILURE smoke 1/2 {'stage': 'smoke', 'candidate': 'test0', 'method': 'stpex2-iid', 'group': 'stpex2', 'seed': 0, 'steps': 3, 'lr': 0.03, 'clip': 100, 'eps': 0.001}
+COMPLETE smoke 2/2 {'stage': 'smoke', 'candidate': 'test1', 'method': 'stpex2-iid', 'group': 'stpex2', 'seed': 1, 'steps': 3, 'lr': 0.03, 'clip': 100, 'eps': 0.001}
+START smoke gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=100 {'stage': 'smoke', 'candidate': 'test0', 'method': 'stpex2-iid', 'group': 'stpex2', 'seed': 0, 'steps': 3, 'lr': 0.03, 'clip': 100, 'eps': 0.001}
+START smoke gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=101 {'stage': 'smoke', 'candidate': 'test1', 'method': 'stpex2-iid', 'group': 'stpex2', 'seed': 1, 'steps': 3, 'lr': 0.03, 'clip': 100, 'eps': 0.001}
+test_ghost_clipped_sum_against_independent_bert_autograd (test_numerics.NumericalTests.test_ghost_clipped_sum_against_independent_bert_autograd) ... ok
+test_online_noise_matches_dense_full_horizon (test_numerics.NumericalTests.test_online_noise_matches_dense_full_horizon) ... ok
+test_statistics_use_sample_sd_and_student_t (test_numerics.NumericalTests.test_statistics_use_sample_sd_and_student_t) ... ok
+test_updates_and_adaptive_constraint (test_numerics.NumericalTests.test_updates_and_adaptive_constraint) ... ok
+test_axis_and_fresh_seed_budgets (test_protocol.ProtocolTests.test_axis_and_fresh_seed_budgets) ... ok
+test_each_axis_clip_calibration (test_protocol.ProtocolTests.test_each_axis_clip_calibration) ... ok
+test_full_three_stage_orchestration_and_review_only_freeze (test_protocol.ProtocolTests.test_full_three_stage_orchestration_and_review_only_freeze) ... ok
+test_monotonic_geometric_search (test_protocol.ProtocolTests.test_monotonic_geometric_search) ... ok
+test_nonmonotonic_local_search_and_censoring (test_protocol.ProtocolTests.test_nonmonotonic_local_search_and_censoring) ... ok
+test_numeric_terminal_and_integrity (test_protocol.ProtocolTests.test_numeric_terminal_and_integrity) ... ok
+test_numeric_vs_predictive_and_alpha (test_protocol.ProtocolTests.test_numeric_vs_predictive_and_alpha) ... ok
+test_scheduler_continues_after_numerical_failure (test_protocol.ProtocolTests.test_scheduler_continues_after_numerical_failure) ... ok
+test_scheduler_stops_on_infrastructure_failure (test_protocol.ProtocolTests.test_scheduler_stops_on_infrastructure_failure) ... ok
+test_statistics_and_descriptive_comparison (test_protocol.ProtocolTests.test_statistics_and_descriptive_comparison) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 10.307s
+
+OK
+

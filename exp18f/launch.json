@@ -1,0 +1,20 @@
+{
+  "command": [
+    "conda",
+    "run",
+    "--no-capture-output",
+    "-n",
+    "curve",
+    "python",
+    "-B",
+    "-m",
+    "exp18f.pipeline"
+  ],
+  "cwd": "/media/data/data/lt/dp-adam-correlated",
+  "detached": true,
+  "log": "/media/data/data/lt/dp-adam-correlated/exp18f/logs/pipeline.log",
+  "mechanism": "setsid/start_new_session with redirected stdin/stdout/stderr",
+  "pid": 3484573,
+  "process_group": 3484573,
+  "time": "2026-11-06T15:53:32.737174+08:00"
+}

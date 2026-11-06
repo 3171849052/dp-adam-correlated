@@ -1,0 +1,51 @@
+{
+  "gpu_uuids": {
+    "0": "GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6",
+    "1": "GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54",
+    "2": "GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e"
+  },
+  "headroom_mib": 700,
+  "initial_inventory": {
+    "0": {
+      "free_mib": 11922,
+      "name": "NVIDIA GeForce RTX 3080 Ti",
+      "total_mib": 12288,
+      "used_mib": 0,
+      "utilization": 0,
+      "uuid": "GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6"
+    },
+    "1": {
+      "free_mib": 11922,
+      "name": "NVIDIA GeForce RTX 3080 Ti",
+      "total_mib": 12288,
+      "used_mib": 0,
+      "utilization": 0,
+      "uuid": "GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54"
+    },
+    "2": {
+      "free_mib": 11922,
+      "name": "NVIDIA GeForce RTX 3080 Ti",
+      "total_mib": 12288,
+      "used_mib": 0,
+      "utilization": 2,
+      "uuid": "GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e"
+    },
+    "3": {
+      "free_mib": 11922,
+      "name": "NVIDIA GeForce RTX 3080 Ti",
+      "total_mib": 12288,
+      "used_mib": 0,
+      "utilization": 0,
+      "uuid": "GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa"
+    }
+  },
+  "max_per_gpu": 2,
+  "max_processes": 6,
+  "peak_margin_mib": 500,
+  "physical_gpus": [
+    0,
+    1,
+    2
+  ],
+  "worker_reservation_mib": 5200
+}

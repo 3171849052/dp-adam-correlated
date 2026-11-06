@@ -1,0 +1,12 @@
+START smoke gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3483344 {'candidate': 'gpu_pair_0', 'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.03, 'method': 'stpex2-iid', 'seed': 20261121, 'stage': 'smoke', 'steps': 3}
+START smoke gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3483345 {'candidate': 'gpu_pair_0', 'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.03, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261121, 'stage': 'smoke', 'steps': 3}
+START smoke gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3483346 {'candidate': 'gpu_pair_1', 'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.03, 'method': 'stpex2-iid', 'seed': 20261121, 'stage': 'smoke', 'steps': 3}
+START smoke gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3483396 {'candidate': 'gpu_pair_1', 'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.03, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261121, 'stage': 'smoke', 'steps': 3}
+START smoke gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3483397 {'candidate': 'gpu_pair_2', 'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.03, 'method': 'stpex2-iid', 'seed': 20261121, 'stage': 'smoke', 'steps': 3}
+START smoke gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3483398 {'candidate': 'gpu_pair_2', 'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.03, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261121, 'stage': 'smoke', 'steps': 3}
+COMPLETE smoke 1/6 {'candidate': 'gpu_pair_0', 'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.03, 'method': 'stpex2-iid', 'seed': 20261121, 'stage': 'smoke', 'steps': 3}
+COMPLETE smoke 2/6 {'candidate': 'gpu_pair_0', 'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.03, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261121, 'stage': 'smoke', 'steps': 3}
+COMPLETE smoke 3/6 {'candidate': 'gpu_pair_1', 'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.03, 'method': 'stpex2-iid', 'seed': 20261121, 'stage': 'smoke', 'steps': 3}
+COMPLETE smoke 4/6 {'candidate': 'gpu_pair_1', 'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.03, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261121, 'stage': 'smoke', 'steps': 3}
+COMPLETE smoke 5/6 {'candidate': 'gpu_pair_2', 'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.03, 'method': 'stpex2-iid', 'seed': 20261121, 'stage': 'smoke', 'steps': 3}
+COMPLETE smoke 6/6 {'candidate': 'gpu_pair_2', 'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.03, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261121, 'stage': 'smoke', 'steps': 3}
