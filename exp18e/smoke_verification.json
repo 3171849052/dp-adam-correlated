@@ -1,0 +1,147 @@
+{
+  "passed": true,
+  "processes": [
+    {
+      "CUDA_VISIBLE_DEVICES": "GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6",
+      "device": "_CudaDeviceProperties(name='NVIDIA GeForce RTX 3080 Ti', major=8, minor=6, total_memory=11921MB, multi_processor_count=80, uuid=bb24c6dd-b3e9-d35e-f544-bb53c11078c6, pci_bus_id=49, pci_device_id=0, pci_domain_id=0, L2_cache_size=6MB)",
+      "physical_gpu": 0,
+      "pid": 3417700,
+      "python": "/home/longt29/miniconda3/envs/curve/bin/python",
+      "time": "2026-11-06T13:39:14.356866+08:00",
+      "visible_device_count": 1
+    },
+    {
+      "CUDA_VISIBLE_DEVICES": "GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54",
+      "device": "_CudaDeviceProperties(name='NVIDIA GeForce RTX 3080 Ti', major=8, minor=6, total_memory=11921MB, multi_processor_count=80, uuid=015dd2bc-e3fc-8a3a-9ec6-ae5664031a54, pci_bus_id=75, pci_device_id=0, pci_domain_id=0, L2_cache_size=6MB)",
+      "physical_gpu": 1,
+      "pid": 3417701,
+      "python": "/home/longt29/miniconda3/envs/curve/bin/python",
+      "time": "2026-11-06T13:39:14.318476+08:00",
+      "visible_device_count": 1
+    },
+    {
+      "CUDA_VISIBLE_DEVICES": "GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e",
+      "device": "_CudaDeviceProperties(name='NVIDIA GeForce RTX 3080 Ti', major=8, minor=6, total_memory=11921MB, multi_processor_count=80, uuid=9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e, pci_bus_id=177, pci_device_id=0, pci_domain_id=0, L2_cache_size=6MB)",
+      "physical_gpu": 2,
+      "pid": 3417702,
+      "python": "/home/longt29/miniconda3/envs/curve/bin/python",
+      "time": "2026-11-06T13:39:14.309643+08:00",
+      "visible_device_count": 1
+    },
+    {
+      "CUDA_VISIBLE_DEVICES": "GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa",
+      "device": "_CudaDeviceProperties(name='NVIDIA GeForce RTX 3080 Ti', major=8, minor=6, total_memory=11921MB, multi_processor_count=80, uuid=b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa, pci_bus_id=202, pci_device_id=0, pci_domain_id=0, L2_cache_size=6MB)",
+      "physical_gpu": 3,
+      "pid": 3417703,
+      "python": "/home/longt29/miniconda3/envs/curve/bin/python",
+      "time": "2026-11-06T13:39:14.398459+08:00",
+      "visible_device_count": 1
+    },
+    {
+      "CUDA_VISIBLE_DEVICES": "GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6",
+      "device": "_CudaDeviceProperties(name='NVIDIA GeForce RTX 3080 Ti', major=8, minor=6, total_memory=11921MB, multi_processor_count=80, uuid=bb24c6dd-b3e9-d35e-f544-bb53c11078c6, pci_bus_id=49, pci_device_id=0, pci_domain_id=0, L2_cache_size=6MB)",
+      "physical_gpu": 0,
+      "pid": 3417755,
+      "python": "/home/longt29/miniconda3/envs/curve/bin/python",
+      "time": "2026-11-06T13:39:18.242627+08:00",
+      "visible_device_count": 1
+    },
+    {
+      "CUDA_VISIBLE_DEVICES": "GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54",
+      "device": "_CudaDeviceProperties(name='NVIDIA GeForce RTX 3080 Ti', major=8, minor=6, total_memory=11921MB, multi_processor_count=80, uuid=015dd2bc-e3fc-8a3a-9ec6-ae5664031a54, pci_bus_id=75, pci_device_id=0, pci_domain_id=0, L2_cache_size=6MB)",
+      "physical_gpu": 1,
+      "pid": 3417756,
+      "python": "/home/longt29/miniconda3/envs/curve/bin/python",
+      "time": "2026-11-06T13:39:19.051820+08:00",
+      "visible_device_count": 1
+    }
+  ],
+  "results": [
+    {
+      "config": {
+        "clip": 1,
+        "eps": 1e-08,
+        "group": "adam",
+        "lr": 0.002,
+        "method": "adam-iid",
+        "seed": 20261111,
+        "stage": "smoke",
+        "steps": 3
+      },
+      "peak_reserved_bytes": 3982491648,
+      "seconds": 8.001165178837255
+    },
+    {
+      "config": {
+        "clip": 40,
+        "eps": 1e-08,
+        "group": "adam",
+        "lr": 0.01,
+        "method": "adam-b2lt-sgd",
+        "seed": 20261111,
+        "stage": "smoke",
+        "steps": 3
+      },
+      "peak_reserved_bytes": 4076863488,
+      "seconds": 7.826559462118894
+    },
+    {
+      "config": {
+        "clip": 1,
+        "eps": 1e-08,
+        "group": "momentum",
+        "lr": 2.0,
+        "method": "momentum-iid",
+        "seed": 20261111,
+        "stage": "smoke",
+        "steps": 3
+      },
+      "peak_reserved_bytes": 3982491648,
+      "seconds": 7.585447049001232
+    },
+    {
+      "config": {
+        "clip": 20,
+        "eps": 1e-08,
+        "group": "momentum",
+        "lr": 0.3,
+        "method": "momentum-b2lt-momentum",
+        "seed": 20261111,
+        "stage": "smoke",
+        "steps": 3
+      },
+      "peak_reserved_bytes": 4076863488,
+      "seconds": 7.071716248057783
+    },
+    {
+      "config": {
+        "clip": 100,
+        "eps": 0.005,
+        "group": "stpex2",
+        "lr": 0.08,
+        "method": "stpex2-iid",
+        "seed": 20261111,
+        "stage": "smoke",
+        "steps": 3
+      },
+      "peak_reserved_bytes": 4196401152,
+      "seconds": 2.665397304808721
+    },
+    {
+      "config": {
+        "clip": 100,
+        "eps": 0.005,
+        "group": "stpex2",
+        "lr": 0.08,
+        "method": "stpex2-b2lt-momentum-bias",
+        "seed": 20261111,
+        "stage": "smoke",
+        "steps": 3
+      },
+      "peak_reserved_bytes": 4288675840,
+      "seconds": 1.543504383182153
+    }
+  ],
+  "six_simultaneous": true,
+  "time": "2026-11-06T13:40:14.862305+08:00"
+}

@@ -1,0 +1,36 @@
+{
+  "frozen": true,
+  "methods": {
+    "adam-b2lt-sgd": {
+      "clip": 40,
+      "eps": 1e-08,
+      "lr": 0.01
+    },
+    "adam-iid": {
+      "clip": 1,
+      "eps": 1e-08,
+      "lr": 0.002
+    },
+    "momentum-b2lt-momentum": {
+      "clip": 20,
+      "eps": 1e-08,
+      "lr": 0.3
+    },
+    "momentum-iid": {
+      "clip": 1,
+      "eps": 1e-08,
+      "lr": 2.0
+    },
+    "stpex2-b2lt-momentum-bias": {
+      "clip": 100,
+      "eps": 0.001,
+      "lr": 0.0282842712474619
+    },
+    "stpex2-iid": {
+      "clip": 100,
+      "eps": 0.001,
+      "lr": 0.0282842712474619
+    }
+  },
+  "selection_sha256": "8aa4ec6c27d3e055d5442c2a3040b3b73f4fafa4b2b6e74c9b183ca3b7787ce8"
+}

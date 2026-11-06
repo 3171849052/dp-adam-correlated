@@ -1,0 +1,23 @@
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 24583.39it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+adam-b2lt-sgd seed=20261112 step=62 internal={'accuracy': 0.7590203776406805, 'loss': 0.4965581129055911, 'examples': 5349}
+adam-b2lt-sgd seed=20261112 step=124 internal={'accuracy': 0.7874369040942232, 'loss': 0.47533791514061663, 'examples': 5349}
+adam-b2lt-sgd seed=20261112 step=186 internal={'accuracy': 0.8192185455225276, 'loss': 0.4267265528780341, 'examples': 5349}
+adam-b2lt-sgd seed=20261112 step=248 internal={'accuracy': 0.8207141521779772, 'loss': 0.42706092082801145, 'examples': 5349}
+adam-b2lt-sgd seed=20261112 step=310 internal={'accuracy': 0.8384744812114414, 'loss': 0.387963994771972, 'examples': 5349}
+COMPLETE adam-b2lt-sgd seed=20261112: {'accuracy': 0.7821100917431193, 'loss': 0.48234047583483775, 'examples': 872}

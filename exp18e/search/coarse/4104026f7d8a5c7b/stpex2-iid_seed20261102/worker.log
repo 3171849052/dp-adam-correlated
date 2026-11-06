@@ -1,0 +1,23 @@
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 28169.08it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+stpex2-iid seed=20261102 step=62 internal={'accuracy': 0.44830809497102264, 'loss': 0.7022720132950065, 'examples': 5349}
+stpex2-iid seed=20261102 step=124 internal={'accuracy': 0.4658814731725556, 'loss': 0.6982277474195673, 'examples': 5349}
+stpex2-iid seed=20261102 step=186 internal={'accuracy': 0.49598055711347916, 'loss': 0.6951304057933032, 'examples': 5349}
+stpex2-iid seed=20261102 step=248 internal={'accuracy': 0.5363619368106188, 'loss': 0.6929657629971906, 'examples': 5349}
+stpex2-iid seed=20261102 step=310 internal={'accuracy': 0.559730790802019, 'loss': 0.6917545449111947, 'examples': 5349}
+COMPLETE stpex2-iid seed=20261102: {'accuracy': 0.559730790802019, 'loss': 0.6917545449111947, 'examples': 5349}

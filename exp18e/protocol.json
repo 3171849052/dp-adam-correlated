@@ -1,0 +1,115 @@
+{
+  "B2LT": {
+    "K": 62,
+    "P": 62,
+    "Q": 5,
+    "T": 310,
+    "source": "Byte-identical copy of audited Exp18d matrices; independently re-audited"
+  },
+  "accounting": "Exp18 GDP whole fixed-epoch matrix mechanism; no sampling amplification",
+  "accumulation": 1,
+  "adjacency": "add/remove zero-out fixed slot",
+  "dataset": "SST-2",
+  "delta": 1e-05,
+  "dropout": 0.1,
+  "dropout_seed": "seed+100000+logical_step",
+  "epochs": 5,
+  "epsilon": 8,
+  "evaluation": "Internal validation each epoch; all 872 official validation examples once at final step; no early stopping",
+  "experiment": "Exp18e",
+  "formal_trainings": 30,
+  "full_finetuning": true,
+  "gpu": "All four physical GPUs, UUID isolation, free-memory-aware scheduler, <=2 workers per GPU, no DDP",
+  "historical_results": "No historical checkpoints, metrics or seeds used as formal results",
+  "internal_validation": 5349,
+  "logical_batch": 1000,
+  "max_length": 128,
+  "methods": {
+    "adam-b2lt-sgd": {
+      "clip": 40,
+      "eps": 1e-08,
+      "lr": 0.01
+    },
+    "adam-iid": {
+      "clip": 1,
+      "eps": 1e-08,
+      "lr": 0.002
+    },
+    "momentum-b2lt-momentum": {
+      "clip": 20,
+      "eps": 1e-08,
+      "lr": 0.3
+    },
+    "momentum-iid": {
+      "clip": 1,
+      "eps": 1e-08,
+      "lr": 2.0
+    }
+  },
+  "model": "BERT-Tiny",
+  "noise_seed": "seed+1",
+  "official_validation": 872,
+  "optimizer": "Exact exp18.optimizer.Update for Adam/Momentum/STP-Ex2, beta1=.9, beta2=.999, weight_decay=0",
+  "participation": "Same per-seed Exp16e permutation repeated five epochs",
+  "physical_batch": 1000,
+  "precision": "FP32; TF32 disabled",
+  "privacy_scope": "epsilon=8,delta=1e-5 per training; composition of search and formal runs is not jointly epsilon=8; raw internal diagnostics are not DP releases",
+  "seeds": [
+    20261111,
+    20261112,
+    20261113,
+    20261114,
+    20261115
+  ],
+  "selection": {
+    "boundary": "After fine ranking: if best is at current observed min/max, multiply that coordinate by 0.5/2; choose at most two in deterministic lr,clip,eps order.",
+    "boundary_max": 2,
+    "coarse": {
+      "clip": [
+        3,
+        10,
+        30,
+        100
+      ],
+      "eps": [
+        0.0001,
+        0.0003,
+        0.001,
+        0.003,
+        0.01,
+        0.03
+      ],
+      "lr": [
+        0.0001,
+        0.0003,
+        0.001,
+        0.003,
+        0.01
+      ]
+    },
+    "coarse_seed": 20261102,
+    "fine": "From each of top two coarse winners, one coordinate at a time, geometric midpoint to each adjacent observed coordinate; deduplicate; at most 14.",
+    "fine_max": 14,
+    "historical": {
+      "clip": 100,
+      "eps": 0.005,
+      "lr": 0.08
+    },
+    "official_validation": "No search worker loads official tokens; only formal workers after freeze.",
+    "ranking": "final-step internal accuracy mean over both methods/seeds descending, then loss mean ascending",
+    "review": "Top two after coarse/fine/boundary; final selection uses ONLY review-seed means over both methods.",
+    "review_seeds": [
+      20261103,
+      20261104,
+      20261105
+    ]
+  },
+  "smoke": "Six methods, seed 20261111, 3 steps, batch 1000, length128, internal validation64; separate directories",
+  "split_seed": 20261008,
+  "statistics": "5 paired seeds; sample SD ddof=1, Student-t 95% CI for accuracy and loss and paired differences",
+  "steps_per_epoch": 62,
+  "stpex2": "d0=1; scale by previous completed d; adaptive alpha, 24 bisections, 1e-6 backoff; no final denominator",
+  "stpex2_parameters": "Pending common NLP search; both STP methods share one frozen triplet",
+  "total_steps": 310,
+  "train_examples": 62000
+}

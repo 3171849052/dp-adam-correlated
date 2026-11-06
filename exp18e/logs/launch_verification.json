@@ -1,0 +1,81 @@
+{
+  "allocation": {
+    "0": 2,
+    "1": 2,
+    "2": 2,
+    "3": 2
+  },
+  "coarse_completed": 0,
+  "coarse_pending": 234,
+  "coordinator_pid": 3418446,
+  "coordinator_session": 3418446,
+  "gpu_inventory": "index, uuid, memory.used [MiB], utilization.gpu [%]\n0, GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6, 8734 MiB, 96 %\n1, GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54, 8914 MiB, 100 %\n2, GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e, 8734 MiB, 93 %\n3, GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa, 8914 MiB, 97 %\n",
+  "passed": true,
+  "status": {
+    "pid": 3418446,
+    "stage": "search",
+    "status": "running",
+    "time": "2026-11-06T13:40:33.938469+08:00"
+  },
+  "survives_parent_shell": true,
+  "time": "2026-11-06T13:41:10.668927+08:00",
+  "upstream_and_accepted_code_unchanged": true,
+  "workers": [
+    {
+      "directory": "search/coarse/d3b963a573def17c/stpex2-iid_seed20261102",
+      "gpu": 0,
+      "last_step": 119,
+      "pid": 3418493,
+      "uuid": "GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6"
+    },
+    {
+      "directory": "search/coarse/d3b963a573def17c/stpex2-b2lt-momentum-bias_seed20261102",
+      "gpu": 1,
+      "last_step": 114,
+      "pid": 3418494,
+      "uuid": "GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54"
+    },
+    {
+      "directory": "search/coarse/fea6bed515471c6d/stpex2-iid_seed20261102",
+      "gpu": 2,
+      "last_step": 122,
+      "pid": 3418495,
+      "uuid": "GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e"
+    },
+    {
+      "directory": "search/coarse/fea6bed515471c6d/stpex2-b2lt-momentum-bias_seed20261102",
+      "gpu": 3,
+      "last_step": 113,
+      "pid": 3418496,
+      "uuid": "GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa"
+    },
+    {
+      "directory": "search/coarse/10a24d049cac5867/stpex2-iid_seed20261102",
+      "gpu": 0,
+      "last_step": 72,
+      "pid": 3418548,
+      "uuid": "GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6"
+    },
+    {
+      "directory": "search/coarse/10a24d049cac5867/stpex2-b2lt-momentum-bias_seed20261102",
+      "gpu": 1,
+      "last_step": 70,
+      "pid": 3418549,
+      "uuid": "GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54"
+    },
+    {
+      "directory": "search/coarse/9ec74de6df4d1ac3/stpex2-iid_seed20261102",
+      "gpu": 2,
+      "last_step": 73,
+      "pid": 3418550,
+      "uuid": "GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e"
+    },
+    {
+      "directory": "search/coarse/9ec74de6df4d1ac3/stpex2-b2lt-momentum-bias_seed20261102",
+      "gpu": 3,
+      "last_step": 69,
+      "pid": 3418551,
+      "uuid": "GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa"
+    }
+  ]
+}

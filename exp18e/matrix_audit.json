@@ -1,0 +1,44 @@
+{
+  "matrices": {
+    "momentum": {
+      "audit": {
+        "delta": 1e-05,
+        "epsilon": 8.000000000000005,
+        "inverse_error": 6.938893903907228e-17,
+        "mu": 1.6660305978457184,
+        "objective": 22.395497775421955,
+        "sensitivity": 7.348192167335733,
+        "sigma_sum_clip1": 4.410598566939529
+      },
+      "sha256": "25656cfbaa8de39cda2450550594ac9b18f972ac8b54571904ab341c30eebfe4",
+      "source": "exp18d/matrices/momentum.npz"
+    },
+    "momentum-bias": {
+      "audit": {
+        "delta": 1e-05,
+        "epsilon": 8.000000000000005,
+        "inverse_error": 2.7755575615628914e-17,
+        "mu": 1.6660305978457184,
+        "objective": 69.73300391836867,
+        "sensitivity": 3.8205632041017217,
+        "sigma_sum_clip1": 2.2932131072754296
+      },
+      "sha256": "249fc70a5670cb957a1aa659561af9c33db7abddea40619377f37432475622b6",
+      "source": "exp18d/matrices/momentum-bias.npz"
+    },
+    "sgd": {
+      "audit": {
+        "delta": 1e-05,
+        "epsilon": 8.000000000000005,
+        "inverse_error": 2.7755575615628914e-17,
+        "mu": 1.6660305978457184,
+        "objective": 46.62066221050898,
+        "sensitivity": 3.8578634946095147,
+        "sigma_sum_clip1": 2.3156018260396736
+      },
+      "sha256": "ef0064a93e716acaefe1280b2f3f7126b71a31d3eeb1ec1f8c91d40eadd25b4b",
+      "source": "exp18d/matrices/sgd.npz"
+    }
+  },
+  "passed": true
+}

@@ -1,0 +1,43 @@
+{
+  "boundary": "After fine ranking: if best is at current observed min/max, multiply that coordinate by 0.5/2; choose at most two in deterministic lr,clip,eps order.",
+  "boundary_max": 2,
+  "coarse": {
+    "clip": [
+      3,
+      10,
+      30,
+      100
+    ],
+    "eps": [
+      0.0001,
+      0.0003,
+      0.001,
+      0.003,
+      0.01,
+      0.03
+    ],
+    "lr": [
+      0.0001,
+      0.0003,
+      0.001,
+      0.003,
+      0.01
+    ]
+  },
+  "coarse_seed": 20261102,
+  "fine": "From each of top two coarse winners, one coordinate at a time, geometric midpoint to each adjacent observed coordinate; deduplicate; at most 14.",
+  "fine_max": 14,
+  "historical": {
+    "clip": 100,
+    "eps": 0.005,
+    "lr": 0.08
+  },
+  "official_validation": "No search worker loads official tokens; only formal workers after freeze.",
+  "ranking": "final-step internal accuracy mean over both methods/seeds descending, then loss mean ascending",
+  "review": "Top two after coarse/fine/boundary; final selection uses ONLY review-seed means over both methods.",
+  "review_seeds": [
+    20261103,
+    20261104,
+    20261105
+  ]
+}

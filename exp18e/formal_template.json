@@ -1,0 +1,34 @@
+{
+  "count": 30,
+  "methods": {
+    "adam-b2lt-sgd": {
+      "clip": 40,
+      "eps": 1e-08,
+      "lr": 0.01
+    },
+    "adam-iid": {
+      "clip": 1,
+      "eps": 1e-08,
+      "lr": 0.002
+    },
+    "momentum-b2lt-momentum": {
+      "clip": 20,
+      "eps": 1e-08,
+      "lr": 0.3
+    },
+    "momentum-iid": {
+      "clip": 1,
+      "eps": 1e-08,
+      "lr": 2.0
+    },
+    "stpex2-b2lt-momentum-bias": "shared selection_freeze.json parameters",
+    "stpex2-iid": "shared selection_freeze.json parameters"
+  },
+  "seeds": [
+    20261111,
+    20261112,
+    20261113,
+    20261114,
+    20261115
+  ]
+}

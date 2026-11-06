@@ -1,0 +1,51 @@
+{
+  "config": {
+    "clip": 20,
+    "eps": 1e-08,
+    "group": "momentum",
+    "lr": 0.3,
+    "method": "momentum-b2lt-momentum",
+    "seed": 20261111,
+    "stage": "formal",
+    "steps": 310
+  },
+  "ended": "2026-11-06T14:36:08.431588+08:00",
+  "evaluation": "official_validation",
+  "formal": true,
+  "gpu_uuid": "GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa",
+  "metrics": {
+    "accuracy": 0.7740825688073395,
+    "examples": 872,
+    "loss": 0.5500832391441415
+  },
+  "pairing": {
+    "dropout_seed": "seed+100000+logical_step",
+    "initial_model_sha256": "5fdab6af248474241a67d1a15086580f90233138483752a84c2ff6242a059700",
+    "noise_seed": 20261112,
+    "order_sha256": "90eecd7f6bdea836658d8104208d3201c08140609ad15a4f66d0851f8d43940c"
+  },
+  "peak_allocated_bytes": 3731276288,
+  "peak_reserved_bytes": 4076863488,
+  "physical_gpu": 3,
+  "privacy": {
+    "T": 310,
+    "adjacency": "add/remove zeroed fixed slot",
+    "clip": 20,
+    "clip_space": "original",
+    "delta": 1e-05,
+    "epsilon": 8.000000000000005,
+    "matrix_sha256": "25656cfbaa8de39cda2450550594ac9b18f972ac8b54571904ab341c30eebfe4",
+    "mu": 1.6660305978457184,
+    "participation_interval": 62,
+    "participations": 5,
+    "sampling_amplification": false,
+    "scope": "one full training; not composition of search/formal trials",
+    "sensitivity": 7.348192167335733,
+    "sigma_average": 0.08821197133879059,
+    "sigma_sum": 88.21197133879059
+  },
+  "seconds": 83.79175077704713,
+  "status": "complete",
+  "steps": 310,
+  "train_seconds": 79.95467231562361
+}

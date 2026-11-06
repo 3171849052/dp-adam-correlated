@@ -1,0 +1,51 @@
+{
+  "config": {
+    "clip": 1,
+    "eps": 1e-08,
+    "group": "momentum",
+    "lr": 2.0,
+    "method": "momentum-iid",
+    "seed": 20261112,
+    "stage": "formal",
+    "steps": 310
+  },
+  "ended": "2026-11-06T14:37:29.869191+08:00",
+  "evaluation": "official_validation",
+  "formal": true,
+  "gpu_uuid": "GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e",
+  "metrics": {
+    "accuracy": 0.7419724770642202,
+    "examples": 872,
+    "loss": 1.0652991303610146
+  },
+  "pairing": {
+    "dropout_seed": "seed+100000+logical_step",
+    "initial_model_sha256": "43fe6db4faf80267f73aa33408bbbcd64cf14f4084f485d991021ce14d3a805b",
+    "noise_seed": 20261113,
+    "order_sha256": "2d398bc2683a3fb1a3070df3035000d4e4e70f3fc903f620ae7a14254bf5c7b1"
+  },
+  "peak_allocated_bytes": 3643156992,
+  "peak_reserved_bytes": 3982491648,
+  "physical_gpu": 2,
+  "privacy": {
+    "T": 310,
+    "adjacency": "add/remove zeroed fixed slot",
+    "clip": 1,
+    "clip_space": "original",
+    "delta": 1e-05,
+    "epsilon": 8.000000000000007,
+    "matrix_sha256": null,
+    "mu": 1.6660305978457184,
+    "participation_interval": 62,
+    "participations": 5,
+    "sampling_amplification": false,
+    "scope": "one full training; not composition of search/formal trials",
+    "sensitivity": 2.23606797749979,
+    "sigma_average": 0.0013421530075084847,
+    "sigma_sum": 1.3421530075084847
+  },
+  "seconds": 75.99312968086451,
+  "status": "complete",
+  "steps": 310,
+  "train_seconds": 70.19339972641319
+}

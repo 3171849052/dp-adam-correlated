@@ -1,0 +1,23 @@
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 18289.12it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+adam-b2lt-sgd seed=20261114 step=62 internal={'accuracy': 0.7769676575060759, 'loss': 0.46621097700910985, 'examples': 5349}
+adam-b2lt-sgd seed=20261114 step=124 internal={'accuracy': 0.8100579547578987, 'loss': 0.42465421698387146, 'examples': 5349}
+adam-b2lt-sgd seed=20261114 step=186 internal={'accuracy': 0.8266965787997756, 'loss': 0.402575662056293, 'examples': 5349}
+adam-b2lt-sgd seed=20261114 step=248 internal={'accuracy': 0.8319312020938493, 'loss': 0.38987068016521503, 'examples': 5349}
+adam-b2lt-sgd seed=20261114 step=310 internal={'accuracy': 0.8424004486819966, 'loss': 0.37673777360785987, 'examples': 5349}
+COMPLETE adam-b2lt-sgd seed=20261114: {'accuracy': 0.7935779816513762, 'loss': 0.48686830275649323, 'examples': 872}

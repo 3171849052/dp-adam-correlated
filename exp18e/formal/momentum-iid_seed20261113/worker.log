@@ -1,0 +1,23 @@
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 18139.04it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+momentum-iid seed=20261113 step=62 internal={'accuracy': 0.7700504767246215, 'loss': 1.0189494384206508, 'examples': 5349}
+momentum-iid seed=20261113 step=124 internal={'accuracy': 0.7838848382875304, 'loss': 0.9532958555052182, 'examples': 5349}
+momentum-iid seed=20261113 step=186 internal={'accuracy': 0.7850065432791176, 'loss': 0.902271829156881, 'examples': 5349}
+momentum-iid seed=20261113 step=248 internal={'accuracy': 0.792858478220228, 'loss': 0.910775194437309, 'examples': 5349}
+momentum-iid seed=20261113 step=310 internal={'accuracy': 0.7934193307160217, 'loss': 0.8999311761290899, 'examples': 5349}
+COMPLETE momentum-iid seed=20261113: {'accuracy': 0.7465596330275229, 'loss': 1.0690767568185788, 'examples': 872}

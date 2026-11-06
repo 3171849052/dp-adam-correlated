@@ -1,0 +1,610 @@
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3418493 {'clip': 3, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3418494 {'clip': 3, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3418495 {'clip': 3, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3418496 {'clip': 3, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3418548 {'clip': 3, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3418549 {'clip': 3, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3418550 {'clip': 3, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3418551 {'clip': 3, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (1/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3419365 {'clip': 3, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (2/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3419370 {'clip': 3, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (3/242)
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (4/242)
+COMPLETE coarse stpex2-iid seed=20261102 (5/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3419393 {'clip': 3, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3419394 {'clip': 3, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3419395 {'clip': 10, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (6/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3419408 {'clip': 10, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (7/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3419462 {'clip': 10, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (8/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3419489 {'clip': 10, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (9/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3419963 {'clip': 10, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (10/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3419977 {'clip': 10, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (11/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3419984 {'clip': 10, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (12/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3420049 {'clip': 10, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (13/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3420070 {'clip': 10, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (14/242)
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (15/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3420102 {'clip': 10, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (16/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3420121 {'clip': 10, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3420190 {'clip': 10, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (17/242)
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (18/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3420724 {'clip': 30, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3420725 {'clip': 30, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (19/242)
+COMPLETE coarse stpex2-iid seed=20261102 (20/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3420901 {'clip': 30, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3420921 {'clip': 30, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (21/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3420935 {'clip': 30, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (22/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3420957 {'clip': 30, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (23/242)
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (24/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3421004 {'clip': 30, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3421005 {'clip': 30, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (25/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3421330 {'clip': 30, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (26/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3421423 {'clip': 30, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (27/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3421501 {'clip': 30, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (28/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3421523 {'clip': 30, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (29/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3421532 {'clip': 100, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (30/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3421574 {'clip': 100, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (31/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3421656 {'clip': 100, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (32/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3421666 {'clip': 100, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (33/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3421909 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (34/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3422011 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (35/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3422094 {'clip': 100, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (36/242)
+COMPLETE coarse stpex2-iid seed=20261102 (37/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3422114 {'clip': 100, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3422115 {'clip': 100, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (38/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3422172 {'clip': 100, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (39/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3422294 {'clip': 100, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (40/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3422308 {'clip': 100, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.0001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (41/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3422514 {'clip': 3, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (42/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3422671 {'clip': 3, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (43/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3422704 {'clip': 3, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (44/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3422765 {'clip': 3, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (45/242)
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (46/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3422817 {'clip': 3, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3422818 {'clip': 3, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (47/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3422928 {'clip': 3, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (48/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3423019 {'clip': 3, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (49/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3423059 {'clip': 3, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (50/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3423213 {'clip': 3, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (51/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3423245 {'clip': 3, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (52/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3423346 {'clip': 3, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (53/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3423370 {'clip': 10, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (54/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3423429 {'clip': 10, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (55/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3423535 {'clip': 10, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (56/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3423618 {'clip': 10, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (57/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3423667 {'clip': 10, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (58/242)
+COMPLETE coarse stpex2-iid seed=20261102 (59/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3423808 {'clip': 10, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3423809 {'clip': 10, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (60/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3423934 {'clip': 10, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (61/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3423959 {'clip': 10, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (62/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3424036 {'clip': 10, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (63/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3424131 {'clip': 10, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (64/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3424195 {'clip': 10, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (65/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3424276 {'clip': 30, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (66/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3424369 {'clip': 30, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (67/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3424391 {'clip': 30, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (68/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3424516 {'clip': 30, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (69/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3424528 {'clip': 30, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (70/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3424629 {'clip': 30, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (71/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3424738 {'clip': 30, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (72/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3424796 {'clip': 30, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (73/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3424867 {'clip': 30, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (74/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3424941 {'clip': 30, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (75/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3424969 {'clip': 30, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (76/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3425107 {'clip': 30, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (77/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3425112 {'clip': 100, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (78/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3425217 {'clip': 100, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (79/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3425337 {'clip': 100, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (80/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3425363 {'clip': 100, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (81/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3425463 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (82/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3425548 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (83/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3425558 {'clip': 100, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (84/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3425665 {'clip': 100, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (85/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3425686 {'clip': 100, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (86/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3425841 {'clip': 100, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (87/242)
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (88/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3426000 {'clip': 100, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3426001 {'clip': 100, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.0003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (89/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3426073 {'clip': 3, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (90/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3426140 {'clip': 3, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (91/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3426212 {'clip': 3, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (92/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3426304 {'clip': 3, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (93/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3426321 {'clip': 3, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (94/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3426453 {'clip': 3, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (95/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3426574 {'clip': 3, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (96/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3426594 {'clip': 3, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (97/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3426629 {'clip': 3, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (98/242)
+COMPLETE coarse stpex2-iid seed=20261102 (99/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3426770 {'clip': 3, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3426771 {'clip': 3, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (100/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3426950 {'clip': 3, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (101/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3426976 {'clip': 10, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (102/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3427144 {'clip': 10, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (103/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3427281 {'clip': 10, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (104/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3427346 {'clip': 10, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (105/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3427376 {'clip': 10, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (106/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3427601 {'clip': 10, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (107/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3427655 {'clip': 10, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (108/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3427728 {'clip': 10, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (109/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3427743 {'clip': 10, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (110/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3427915 {'clip': 10, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (111/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3427998 {'clip': 10, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (112/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3428067 {'clip': 10, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (113/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3428108 {'clip': 30, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (114/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3428197 {'clip': 30, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (115/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3428272 {'clip': 30, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (116/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3428312 {'clip': 30, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (117/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3428365 {'clip': 30, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (118/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3428510 {'clip': 30, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (119/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3428570 {'clip': 30, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (120/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3428680 {'clip': 30, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (121/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3428720 {'clip': 30, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (122/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3428822 {'clip': 30, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (123/242)
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (124/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3428889 {'clip': 30, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3428890 {'clip': 30, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (125/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3428920 {'clip': 100, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (126/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3429102 {'clip': 100, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (127/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3429122 {'clip': 100, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (128/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3429286 {'clip': 100, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (129/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3429316 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (130/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3429423 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (131/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3429445 {'clip': 100, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (132/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3429501 {'clip': 100, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (133/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3429521 {'clip': 100, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (134/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3429678 {'clip': 100, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (135/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3429685 {'clip': 100, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (136/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3429881 {'clip': 100, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.001, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (137/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3429918 {'clip': 3, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (138/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3430022 {'clip': 3, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (139/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3430043 {'clip': 3, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (140/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3430125 {'clip': 3, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (141/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3430132 {'clip': 3, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (142/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3430232 {'clip': 3, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (143/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3430291 {'clip': 3, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (144/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3430539 {'clip': 3, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (145/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3430625 {'clip': 3, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (146/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3430736 {'clip': 3, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (147/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3430767 {'clip': 3, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (148/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3430861 {'clip': 3, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (149/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3430928 {'clip': 10, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (150/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3431008 {'clip': 10, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (151/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3431071 {'clip': 10, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (152/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3431378 {'clip': 10, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (153/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3431444 {'clip': 10, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (154/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3431504 {'clip': 10, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (155/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3431515 {'clip': 10, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (156/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3431594 {'clip': 10, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (157/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3431719 {'clip': 10, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (158/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3431751 {'clip': 10, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (159/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3431797 {'clip': 10, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (160/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3432110 {'clip': 10, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (161/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3432193 {'clip': 30, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (162/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3432250 {'clip': 30, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (163/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3432313 {'clip': 30, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (164/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3432391 {'clip': 30, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (165/242)
+COMPLETE coarse stpex2-iid seed=20261102 (166/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3432496 {'clip': 30, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3432497 {'clip': 30, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (167/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3432521 {'clip': 30, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (168/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3432819 {'clip': 30, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (169/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3432931 {'clip': 30, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (170/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3432971 {'clip': 30, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (171/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3432993 {'clip': 30, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (172/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3433110 {'clip': 30, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (173/242)
+COMPLETE coarse stpex2-iid seed=20261102 (174/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3433307 {'clip': 100, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3433308 {'clip': 100, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (175/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3433325 {'clip': 100, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (176/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3433637 {'clip': 100, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (177/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3433735 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (178/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3433742 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (179/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3433785 {'clip': 100, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (180/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3433810 {'clip': 100, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (181/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3433960 {'clip': 100, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (182/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3433974 {'clip': 100, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (183/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3434006 {'clip': 100, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (184/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3434356 {'clip': 100, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.003, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (185/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3434521 {'clip': 3, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (186/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3434641 {'clip': 3, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (187/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3434662 {'clip': 3, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (188/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3434699 {'clip': 3, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (189/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3434939 {'clip': 3, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (190/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3435038 {'clip': 3, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (191/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3435065 {'clip': 3, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (192/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3435422 {'clip': 3, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (193/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3435507 {'clip': 3, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (194/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3435588 {'clip': 3, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (195/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3435662 {'clip': 3, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (196/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3435763 {'clip': 3, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (197/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3435810 {'clip': 10, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (198/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3436184 {'clip': 10, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (199/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3436274 {'clip': 10, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (200/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3436616 {'clip': 10, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (201/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3436687 {'clip': 10, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (202/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3436750 {'clip': 10, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (203/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3436793 {'clip': 10, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (204/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3436929 {'clip': 10, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (205/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3437052 {'clip': 10, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (206/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3437092 {'clip': 10, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (207/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3437194 {'clip': 10, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (208/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3437366 {'clip': 10, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (209/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3437403 {'clip': 30, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (210/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3437476 {'clip': 30, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (211/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3437519 {'clip': 30, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (212/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3437678 {'clip': 30, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (213/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3437833 {'clip': 30, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (214/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3437878 {'clip': 30, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (215/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3438008 {'clip': 30, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (216/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3438092 {'clip': 30, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (217/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3438180 {'clip': 30, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (218/242)
+COMPLETE coarse stpex2-iid seed=20261102 (219/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3438355 {'clip': 30, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3438430 {'clip': 30, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (220/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3438632 {'clip': 30, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (221/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3438742 {'clip': 100, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (222/242)
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3438966 {'clip': 100, 'eps': 0.0001, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (223/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3438988 {'clip': 100, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (224/242)
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (225/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3439099 {'clip': 100, 'eps': 0.0003, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3439170 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (226/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3439236 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (227/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3439251 {'clip': 100, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (228/242)
+COMPLETE coarse stpex2-iid seed=20261102 (229/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3439487 {'clip': 100, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3439488 {'clip': 100, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (230/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3439820 {'clip': 100, 'eps': 0.01, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (231/242)
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (232/242)
+START coarse gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3439995 {'clip': 100, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+START coarse gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3439996 {'clip': 100, 'eps': 0.03, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (233/242)
+START coarse gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3440057 {'clip': 100, 'eps': 0.005, 'group': 'stpex2', 'lr': 0.08, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (234/242)
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (235/242)
+START coarse gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3440177 {'clip': 100, 'eps': 0.005, 'group': 'stpex2', 'lr': 0.08, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'coarse', 'steps': 310}
+COMPLETE coarse stpex2-iid seed=20261102 (236/242)
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (237/242)
+COMPLETE coarse stpex2-iid seed=20261102 (238/242)
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (239/242)
+COMPLETE coarse stpex2-iid seed=20261102 (240/242)
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (241/242)
+COMPLETE coarse stpex2-b2lt-momentum-bias seed=20261102 (242/242)
+START fine gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3441259 {'clip': 100, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.005477225575051661, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'fine', 'steps': 310}
+START fine gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3441260 {'clip': 100, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.005477225575051661, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'fine', 'steps': 310}
+START fine gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3441261 {'clip': 100, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.0282842712474619, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'fine', 'steps': 310}
+START fine gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3441262 {'clip': 100, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.0282842712474619, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'fine', 'steps': 310}
+START fine gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3441312 {'clip': 54.772255750516614, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'fine', 'steps': 310}
+START fine gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3441313 {'clip': 54.772255750516614, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'fine', 'steps': 310}
+START fine gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3441314 {'clip': 100, 'eps': 0.0017320508075688774, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'fine', 'steps': 310}
+START fine gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3441315 {'clip': 100, 'eps': 0.0017320508075688774, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'fine', 'steps': 310}
+COMPLETE fine stpex2-iid seed=20261102 (1/18)
+COMPLETE fine stpex2-iid seed=20261102 (2/18)
+START fine gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3442337 {'clip': 100, 'eps': 0.003872983346207417, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'fine', 'steps': 310}
+START fine gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3442342 {'clip': 100, 'eps': 0.003872983346207417, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'fine', 'steps': 310}
+COMPLETE fine stpex2-b2lt-momentum-bias seed=20261102 (3/18)
+COMPLETE fine stpex2-b2lt-momentum-bias seed=20261102 (4/18)
+COMPLETE fine stpex2-b2lt-momentum-bias seed=20261102 (5/18)
+COMPLETE fine stpex2-b2lt-momentum-bias seed=20261102 (6/18)
+START fine gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3442387 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.005477225575051661, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'fine', 'steps': 310}
+START fine gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3442388 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.005477225575051661, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'fine', 'steps': 310}
+COMPLETE fine stpex2-iid seed=20261102 (7/18)
+START fine gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3442435 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0282842712474619, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'fine', 'steps': 310}
+START fine gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3442436 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0282842712474619, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'fine', 'steps': 310}
+START fine gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3442437 {'clip': 54.772255750516614, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'fine', 'steps': 310}
+COMPLETE fine stpex2-iid seed=20261102 (8/18)
+START fine gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3442631 {'clip': 54.772255750516614, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'fine', 'steps': 310}
+COMPLETE fine stpex2-iid seed=20261102 (9/18)
+START fine gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3443308 {'clip': 100, 'eps': 0.0005477225575051661, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'fine', 'steps': 310}
+COMPLETE fine stpex2-iid seed=20261102 (10/18)
+START fine gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3443318 {'clip': 100, 'eps': 0.0005477225575051661, 'group': 'stpex2', 'lr': 0.01, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'fine', 'steps': 310}
+COMPLETE fine stpex2-b2lt-momentum-bias seed=20261102 (11/18)
+COMPLETE fine stpex2-iid seed=20261102 (12/18)
+COMPLETE fine stpex2-iid seed=20261102 (13/18)
+COMPLETE fine stpex2-b2lt-momentum-bias seed=20261102 (14/18)
+COMPLETE fine stpex2-b2lt-momentum-bias seed=20261102 (15/18)
+COMPLETE fine stpex2-b2lt-momentum-bias seed=20261102 (16/18)
+COMPLETE fine stpex2-iid seed=20261102 (17/18)
+COMPLETE fine stpex2-b2lt-momentum-bias seed=20261102 (18/18)
+START boundary gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3444173 {'clip': 200.0, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0282842712474619, 'method': 'stpex2-iid', 'seed': 20261102, 'stage': 'boundary', 'steps': 310}
+START boundary gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3444174 {'clip': 200.0, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0282842712474619, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261102, 'stage': 'boundary', 'steps': 310}
+COMPLETE boundary stpex2-iid seed=20261102 (1/2)
+COMPLETE boundary stpex2-b2lt-momentum-bias seed=20261102 (2/2)
+START review gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3445107 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0282842712474619, 'method': 'stpex2-iid', 'seed': 20261103, 'stage': 'review', 'steps': 310}
+START review gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3445109 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0282842712474619, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261103, 'stage': 'review', 'steps': 310}
+START review gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3445110 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0282842712474619, 'method': 'stpex2-iid', 'seed': 20261104, 'stage': 'review', 'steps': 310}
+START review gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3445111 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0282842712474619, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261104, 'stage': 'review', 'steps': 310}
+START review gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3445169 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0282842712474619, 'method': 'stpex2-iid', 'seed': 20261105, 'stage': 'review', 'steps': 310}
+START review gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3445170 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.0282842712474619, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261105, 'stage': 'review', 'steps': 310}
+START review gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3445171 {'clip': 100, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.0282842712474619, 'method': 'stpex2-iid', 'seed': 20261103, 'stage': 'review', 'steps': 310}
+START review gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3445172 {'clip': 100, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.0282842712474619, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261103, 'stage': 'review', 'steps': 310}
+COMPLETE review stpex2-iid seed=20261104 (1/12)
+COMPLETE review stpex2-iid seed=20261103 (2/12)
+START review gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3446052 {'clip': 100, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.0282842712474619, 'method': 'stpex2-iid', 'seed': 20261104, 'stage': 'review', 'steps': 310}
+COMPLETE review stpex2-b2lt-momentum-bias seed=20261103 (3/12)
+COMPLETE review stpex2-b2lt-momentum-bias seed=20261105 (4/12)
+START review gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3446072 {'clip': 100, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.0282842712474619, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261104, 'stage': 'review', 'steps': 310}
+START review gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3446073 {'clip': 100, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.0282842712474619, 'method': 'stpex2-iid', 'seed': 20261105, 'stage': 'review', 'steps': 310}
+COMPLETE review stpex2-b2lt-momentum-bias seed=20261104 (5/12)
+COMPLETE review stpex2-b2lt-momentum-bias seed=20261103 (6/12)
+START review gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3446083 {'clip': 100, 'eps': 0.003, 'group': 'stpex2', 'lr': 0.0282842712474619, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261105, 'stage': 'review', 'steps': 310}
+COMPLETE review stpex2-iid seed=20261103 (7/12)
+COMPLETE review stpex2-iid seed=20261105 (8/12)
+COMPLETE review stpex2-b2lt-momentum-bias seed=20261104 (9/12)
+COMPLETE review stpex2-b2lt-momentum-bias seed=20261105 (10/12)
+COMPLETE review stpex2-iid seed=20261104 (11/12)
+COMPLETE review stpex2-iid seed=20261105 (12/12)
+FROZEN shared STP-Ex2 parameters: {'lr': 0.0282842712474619, 'clip': 100, 'eps': 0.001}; 30 new formal trainings
+START formal gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3447349 {'stage': 'formal', 'method': 'adam-iid', 'group': 'adam', 'seed': 20261111, 'steps': 310, 'lr': 0.002, 'clip': 1, 'eps': 1e-08}
+START formal gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3447350 {'stage': 'formal', 'method': 'adam-b2lt-sgd', 'group': 'adam', 'seed': 20261111, 'steps': 310, 'lr': 0.01, 'clip': 40, 'eps': 1e-08}
+START formal gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3447351 {'stage': 'formal', 'method': 'momentum-iid', 'group': 'momentum', 'seed': 20261111, 'steps': 310, 'lr': 2.0, 'clip': 1, 'eps': 1e-08}
+START formal gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3447352 {'stage': 'formal', 'method': 'momentum-b2lt-momentum', 'group': 'momentum', 'seed': 20261111, 'steps': 310, 'lr': 0.3, 'clip': 20, 'eps': 1e-08}
+START formal gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3447402 {'stage': 'formal', 'method': 'stpex2-iid', 'group': 'stpex2', 'seed': 20261111, 'steps': 310, 'clip': 100, 'eps': 0.001, 'lr': 0.0282842712474619}
+START formal gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3447403 {'stage': 'formal', 'method': 'stpex2-b2lt-momentum-bias', 'group': 'stpex2', 'seed': 20261111, 'steps': 310, 'clip': 100, 'eps': 0.001, 'lr': 0.0282842712474619}
+START formal gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3447404 {'stage': 'formal', 'method': 'adam-iid', 'group': 'adam', 'seed': 20261112, 'steps': 310, 'lr': 0.002, 'clip': 1, 'eps': 1e-08}
+START formal gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3447405 {'stage': 'formal', 'method': 'adam-b2lt-sgd', 'group': 'adam', 'seed': 20261112, 'steps': 310, 'lr': 0.01, 'clip': 40, 'eps': 1e-08}
+COMPLETE formal momentum-iid seed=20261111 (1/30)
+COMPLETE formal adam-iid seed=20261112 (2/30)
+START formal gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3448190 {'stage': 'formal', 'method': 'momentum-iid', 'group': 'momentum', 'seed': 20261112, 'steps': 310, 'lr': 2.0, 'clip': 1, 'eps': 1e-08}
+COMPLETE formal momentum-b2lt-momentum seed=20261111 (3/30)
+COMPLETE formal stpex2-b2lt-momentum-bias seed=20261111 (4/30)
+COMPLETE formal adam-b2lt-sgd seed=20261112 (5/30)
+START formal gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3448211 {'stage': 'formal', 'method': 'momentum-b2lt-momentum', 'group': 'momentum', 'seed': 20261112, 'steps': 310, 'lr': 0.3, 'clip': 20, 'eps': 1e-08}
+START formal gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3448212 {'stage': 'formal', 'method': 'stpex2-iid', 'group': 'stpex2', 'seed': 20261112, 'steps': 310, 'clip': 100, 'eps': 0.001, 'lr': 0.0282842712474619}
+START formal gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3448213 {'stage': 'formal', 'method': 'stpex2-b2lt-momentum-bias', 'group': 'stpex2', 'seed': 20261112, 'steps': 310, 'clip': 100, 'eps': 0.001, 'lr': 0.0282842712474619}
+COMPLETE formal adam-iid seed=20261111 (6/30)
+COMPLETE formal adam-b2lt-sgd seed=20261111 (7/30)
+START formal gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3448235 {'stage': 'formal', 'method': 'adam-iid', 'group': 'adam', 'seed': 20261113, 'steps': 310, 'lr': 0.002, 'clip': 1, 'eps': 1e-08}
+START formal gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3448236 {'stage': 'formal', 'method': 'adam-b2lt-sgd', 'group': 'adam', 'seed': 20261113, 'steps': 310, 'lr': 0.01, 'clip': 40, 'eps': 1e-08}
+START formal gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3448237 {'stage': 'formal', 'method': 'momentum-iid', 'group': 'momentum', 'seed': 20261113, 'steps': 310, 'lr': 2.0, 'clip': 1, 'eps': 1e-08}
+COMPLETE formal stpex2-iid seed=20261111 (8/30)
+START formal gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3448461 {'stage': 'formal', 'method': 'momentum-b2lt-momentum', 'group': 'momentum', 'seed': 20261113, 'steps': 310, 'lr': 0.3, 'clip': 20, 'eps': 1e-08}
+COMPLETE formal momentum-iid seed=20261112 (9/30)
+START formal gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3449010 {'stage': 'formal', 'method': 'stpex2-iid', 'group': 'stpex2', 'seed': 20261113, 'steps': 310, 'clip': 100, 'eps': 0.001, 'lr': 0.0282842712474619}
+COMPLETE formal momentum-iid seed=20261113 (10/30)
+START formal gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3449099 {'stage': 'formal', 'method': 'stpex2-b2lt-momentum-bias', 'group': 'stpex2', 'seed': 20261113, 'steps': 310, 'clip': 100, 'eps': 0.001, 'lr': 0.0282842712474619}
+COMPLETE formal stpex2-iid seed=20261112 (11/30)
+COMPLETE formal stpex2-b2lt-momentum-bias seed=20261112 (12/30)
+COMPLETE formal adam-iid seed=20261113 (13/30)
+COMPLETE formal adam-b2lt-sgd seed=20261113 (14/30)
+START formal gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3449158 {'stage': 'formal', 'method': 'adam-iid', 'group': 'adam', 'seed': 20261114, 'steps': 310, 'lr': 0.002, 'clip': 1, 'eps': 1e-08}
+START formal gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3449159 {'stage': 'formal', 'method': 'adam-b2lt-sgd', 'group': 'adam', 'seed': 20261114, 'steps': 310, 'lr': 0.01, 'clip': 40, 'eps': 1e-08}
+COMPLETE formal momentum-b2lt-momentum seed=20261112 (15/30)
+START formal gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3449186 {'stage': 'formal', 'method': 'momentum-iid', 'group': 'momentum', 'seed': 20261114, 'steps': 310, 'lr': 2.0, 'clip': 1, 'eps': 1e-08}
+START formal gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3449187 {'stage': 'formal', 'method': 'momentum-b2lt-momentum', 'group': 'momentum', 'seed': 20261114, 'steps': 310, 'lr': 0.3, 'clip': 20, 'eps': 1e-08}
+START formal gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3449188 {'stage': 'formal', 'method': 'stpex2-iid', 'group': 'stpex2', 'seed': 20261114, 'steps': 310, 'clip': 100, 'eps': 0.001, 'lr': 0.0282842712474619}
+COMPLETE formal momentum-b2lt-momentum seed=20261113 (16/30)
+START formal gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3449416 {'stage': 'formal', 'method': 'stpex2-b2lt-momentum-bias', 'group': 'stpex2', 'seed': 20261114, 'steps': 310, 'clip': 100, 'eps': 0.001, 'lr': 0.0282842712474619}
+COMPLETE formal stpex2-iid seed=20261113 (17/30)
+START formal gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3449861 {'stage': 'formal', 'method': 'adam-iid', 'group': 'adam', 'seed': 20261115, 'steps': 310, 'lr': 0.002, 'clip': 1, 'eps': 1e-08}
+COMPLETE formal stpex2-iid seed=20261114 (18/30)
+START formal gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3450174 {'stage': 'formal', 'method': 'adam-b2lt-sgd', 'group': 'adam', 'seed': 20261115, 'steps': 310, 'lr': 0.01, 'clip': 40, 'eps': 1e-08}
+COMPLETE formal adam-iid seed=20261114 (19/30)
+COMPLETE formal momentum-iid seed=20261114 (20/30)
+START formal gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3450207 {'stage': 'formal', 'method': 'momentum-iid', 'group': 'momentum', 'seed': 20261115, 'steps': 310, 'lr': 2.0, 'clip': 1, 'eps': 1e-08}
+COMPLETE formal adam-b2lt-sgd seed=20261114 (21/30)
+COMPLETE formal momentum-b2lt-momentum seed=20261114 (22/30)
+START formal gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3450511 {'stage': 'formal', 'method': 'momentum-b2lt-momentum', 'group': 'momentum', 'seed': 20261115, 'steps': 310, 'lr': 0.3, 'clip': 20, 'eps': 1e-08}
+START formal gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3450512 {'stage': 'formal', 'method': 'stpex2-iid', 'group': 'stpex2', 'seed': 20261115, 'steps': 310, 'clip': 100, 'eps': 0.001, 'lr': 0.0282842712474619}
+COMPLETE formal stpex2-b2lt-momentum-bias seed=20261113 (23/30)
+START formal gpu=3 uuid=GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa pid=3450562 {'stage': 'formal', 'method': 'stpex2-b2lt-momentum-bias', 'group': 'stpex2', 'seed': 20261115, 'steps': 310, 'clip': 100, 'eps': 0.001, 'lr': 0.0282842712474619}
+COMPLETE formal stpex2-b2lt-momentum-bias seed=20261114 (24/30)
+COMPLETE formal adam-iid seed=20261115 (25/30)
+COMPLETE formal adam-b2lt-sgd seed=20261115 (26/30)
+COMPLETE formal momentum-iid seed=20261115 (27/30)
+COMPLETE formal stpex2-iid seed=20261115 (28/30)
+COMPLETE formal momentum-b2lt-momentum seed=20261115 (29/30)
+COMPLETE formal stpex2-b2lt-momentum-bias seed=20261115 (30/30)
+Exp18e COMPLETE: search, common freeze, 30 fresh formal trainings, paired statistics and report

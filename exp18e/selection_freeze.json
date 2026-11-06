@@ -1,0 +1,56 @@
+{
+  "frozen": true,
+  "official_validation_used": false,
+  "parameters": {
+    "clip": 100,
+    "eps": 0.001,
+    "lr": 0.0282842712474619
+  },
+  "plans": {
+    "boundary": "bfa7bba19fbc7b663f8bc09573e5fdfe41b7d1edda3979a4024208070239a238",
+    "coarse": "5a19b7c3e35408f078a49076480fa0d285a96921422ccb5dd83f34382704a396",
+    "fine": "047f5c28124da2a88c0471d0004accbb727f3dca5fe58fc9448e1749f736b8a6",
+    "review": "c17093dae9c7f0b15044b307a04f15ac39c96dbd009371bcaa54594ea40677d0"
+  },
+  "primary": "review-only mean final internal accuracy across two methods and three seeds",
+  "ranking": [
+    {
+      "candidate": "dd1d56904c8aa967",
+      "mean_accuracy": 0.8180033651149747,
+      "mean_loss": 0.44706341407154476,
+      "parameters": {
+        "clip": 100,
+        "eps": 0.001,
+        "lr": 0.0282842712474619
+      },
+      "trials": [
+        "search/review/dd1d56904c8aa967/stpex2-iid_seed20261103",
+        "search/review/dd1d56904c8aa967/stpex2-b2lt-momentum-bias_seed20261103",
+        "search/review/dd1d56904c8aa967/stpex2-iid_seed20261104",
+        "search/review/dd1d56904c8aa967/stpex2-b2lt-momentum-bias_seed20261104",
+        "search/review/dd1d56904c8aa967/stpex2-iid_seed20261105",
+        "search/review/dd1d56904c8aa967/stpex2-b2lt-momentum-bias_seed20261105"
+      ]
+    },
+    {
+      "candidate": "adc455b4dae44738",
+      "mean_accuracy": 0.8174425126191811,
+      "mean_loss": 0.45001082201349313,
+      "parameters": {
+        "clip": 100,
+        "eps": 0.003,
+        "lr": 0.0282842712474619
+      },
+      "trials": [
+        "search/review/adc455b4dae44738/stpex2-iid_seed20261103",
+        "search/review/adc455b4dae44738/stpex2-b2lt-momentum-bias_seed20261103",
+        "search/review/adc455b4dae44738/stpex2-iid_seed20261104",
+        "search/review/adc455b4dae44738/stpex2-b2lt-momentum-bias_seed20261104",
+        "search/review/adc455b4dae44738/stpex2-iid_seed20261105",
+        "search/review/adc455b4dae44738/stpex2-b2lt-momentum-bias_seed20261105"
+      ]
+    }
+  ],
+  "secondary": "review-only mean final internal loss",
+  "time": "2026-11-06T14:34:35.642234+08:00"
+}
