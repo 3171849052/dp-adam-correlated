@@ -1,0 +1,50 @@
+{
+  "baseline_source": "exp18e/hyperparameters.json",
+  "frozen": true,
+  "methods": {
+    "adam-b2lt-sgd": {
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "clip": 40,
+      "eps": 1e-08,
+      "lr": 0.01
+    },
+    "adam-iid": {
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "clip": 1,
+      "eps": 1e-08,
+      "lr": 0.002
+    },
+    "momentum-b2lt-momentum": {
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "clip": 20,
+      "eps": 1e-08,
+      "lr": 0.3
+    },
+    "momentum-iid": {
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "clip": 1,
+      "eps": 1e-08,
+      "lr": 2.0
+    },
+    "stpex2-b2lt-momentum-bias": {
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "clip": 100,
+      "eps": 0.001,
+      "lr": 0.025
+    },
+    "stpex2-iid": {
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "clip": 100,
+      "eps": 0.001,
+      "lr": 0.025
+    }
+  },
+  "stpex2_freeze": "exp18f/rounded_freeze.json",
+  "stpex2_freeze_sha256": "876acdfc82d055f0242746c298a3fd086ca5ca61ac33d5fc2eb1aa825e0ed2f6"
+}

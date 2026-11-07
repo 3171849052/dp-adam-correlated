@@ -1,0 +1,33 @@
+START smoke gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3521580 {'clip': 100, 'eps': 0.001, 'gpu_pair': 0, 'group': 'stpex2', 'lr': 0.025, 'method': 'stpex2-iid', 'seed': 20261110, 'stage': 'smoke', 'steps': 3}
+START smoke gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3521581 {'clip': 100, 'eps': 0.001, 'gpu_pair': 1, 'group': 'stpex2', 'lr': 0.025, 'method': 'stpex2-iid', 'seed': 20261110, 'stage': 'smoke', 'steps': 3}
+START smoke gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3521582 {'clip': 100, 'eps': 0.001, 'gpu_pair': 2, 'group': 'stpex2', 'lr': 0.025, 'method': 'stpex2-iid', 'seed': 20261110, 'stage': 'smoke', 'steps': 3}
+START smoke gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3521658 {'clip': 100, 'eps': 0.001, 'gpu_pair': 0, 'group': 'stpex2', 'lr': 0.025, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261110, 'stage': 'smoke', 'steps': 3}
+START smoke gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3521659 {'clip': 100, 'eps': 0.001, 'gpu_pair': 1, 'group': 'stpex2', 'lr': 0.025, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261110, 'stage': 'smoke', 'steps': 3}
+START smoke gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3521660 {'clip': 100, 'eps': 0.001, 'gpu_pair': 2, 'group': 'stpex2', 'lr': 0.025, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261110, 'stage': 'smoke', 'steps': 3}
+COMPLETE smoke stpex2-iid seed=20261110 (1/6)
+COMPLETE smoke stpex2-iid seed=20261110 (2/6)
+COMPLETE smoke stpex2-iid seed=20261110 (3/6)
+COMPLETE smoke stpex2-b2lt-momentum-bias seed=20261110 (4/6)
+COMPLETE smoke stpex2-b2lt-momentum-bias seed=20261110 (5/6)
+COMPLETE smoke stpex2-b2lt-momentum-bias seed=20261110 (6/6)
+START formal gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3521856 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.025, 'method': 'stpex2-iid', 'seed': 20261111, 'stage': 'formal', 'steps': 310}
+START formal gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3521857 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.025, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261111, 'stage': 'formal', 'steps': 310}
+START formal gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3521858 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.025, 'method': 'stpex2-iid', 'seed': 20261112, 'stage': 'formal', 'steps': 310}
+START formal gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3521900 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.025, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261112, 'stage': 'formal', 'steps': 310}
+START formal gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3521901 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.025, 'method': 'stpex2-iid', 'seed': 20261113, 'stage': 'formal', 'steps': 310}
+START formal gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3521902 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.025, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261113, 'stage': 'formal', 'steps': 310}
+COMPLETE formal stpex2-iid seed=20261112 (1/10)
+START formal gpu=2 uuid=GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e pid=3522451 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.025, 'method': 'stpex2-iid', 'seed': 20261114, 'stage': 'formal', 'steps': 310}
+COMPLETE formal stpex2-iid seed=20261111 (2/10)
+START formal gpu=0 uuid=GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6 pid=3522460 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.025, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261114, 'stage': 'formal', 'steps': 310}
+COMPLETE formal stpex2-b2lt-momentum-bias seed=20261113 (3/10)
+COMPLETE formal stpex2-b2lt-momentum-bias seed=20261111 (4/10)
+START formal gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3522519 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.025, 'method': 'stpex2-iid', 'seed': 20261115, 'stage': 'formal', 'steps': 310}
+COMPLETE formal stpex2-b2lt-momentum-bias seed=20261112 (5/10)
+COMPLETE formal stpex2-iid seed=20261113 (6/10)
+START formal gpu=1 uuid=GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54 pid=3522542 {'clip': 100, 'eps': 0.001, 'group': 'stpex2', 'lr': 0.025, 'method': 'stpex2-b2lt-momentum-bias', 'seed': 20261115, 'stage': 'formal', 'steps': 310}
+COMPLETE formal stpex2-iid seed=20261114 (7/10)
+COMPLETE formal stpex2-b2lt-momentum-bias seed=20261114 (8/10)
+COMPLETE formal stpex2-iid seed=20261115 (9/10)
+COMPLETE formal stpex2-b2lt-momentum-bias seed=20261115 (10/10)
+REPORT COMPLETE: 10 new formal runs, 20 reused baseline results, 15 paired comparisons

@@ -1,0 +1,17 @@
+{
+  "gpu_uuids": {
+    "0": "GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6",
+    "1": "GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54",
+    "2": "GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e"
+  },
+  "headroom_mib": 700,
+  "inventory": "0, GPU-bb24c6dd-b3e9-d35e-f544-bb53c11078c6, NVIDIA GeForce RTX 3080 Ti, 12288, 0\n1, GPU-015dd2bc-e3fc-8a3a-9ec6-ae5664031a54, NVIDIA GeForce RTX 3080 Ti, 12288, 0\n2, GPU-9cee712b-b39b-6d0a-29fb-1aaeb8bffa8e, NVIDIA GeForce RTX 3080 Ti, 12288, 0\n3, GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa, NVIDIA GeForce RTX 3080 Ti, 12288, 0\n",
+  "max_per_gpu": 2,
+  "max_processes": 6,
+  "physical_gpus": [
+    0,
+    1,
+    2
+  ],
+  "worker_reservation_mib": 5200
+}

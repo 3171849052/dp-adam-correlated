@@ -1,0 +1,9 @@
+/media/data/data/lt/dp-adam-correlated/exp18f/final_official/clipping.py:55: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  losses.sum().backward(retain_graph=True)
+/media/data/data/lt/dp-adam-correlated/exp18f/final_official/clipping.py:60: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  (losses * coefficients).sum().backward()
+...
+----------------------------------------------------------------------
+Ran 3 tests in 1.419s
+
+OK
