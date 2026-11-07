@@ -1,0 +1,271 @@
+{
+  "comparisons": [
+    {
+      "accuracy": {
+        "ci95_high": 0.044083059620277656,
+        "ci95_low": 0.014173821113667318,
+        "mean": 0.029128440366972486,
+        "sd": 0.01204401454414323
+      },
+      "direction": "STP-B2LT minus reference",
+      "loss": {
+        "ci95_high": -0.41356011439980095,
+        "ci95_low": -0.5413034365037996,
+        "mean": -0.47743177545180027,
+        "sd": 0.05144037448488349
+      },
+      "per_seed": [
+        {
+          "accuracy_difference": 0.028669724770642224,
+          "loss_difference": -0.5066708118543714,
+          "seed": 20261111
+        },
+        {
+          "accuracy_difference": 0.025229357798165153,
+          "loss_difference": -0.5081692551254133,
+          "seed": 20261112
+        },
+        {
+          "accuracy_difference": 0.04816513761467889,
+          "loss_difference": -0.5277636816742224,
+          "seed": 20261113
+        },
+        {
+          "accuracy_difference": 0.028669724770642224,
+          "loss_difference": -0.4314279687514,
+          "seed": 20261114
+        },
+        {
+          "accuracy_difference": 0.014908256880733939,
+          "loss_difference": -0.41312715985359405,
+          "seed": 20261115
+        }
+      ],
+      "reference": "adam-iid"
+    },
+    {
+      "accuracy": {
+        "ci95_high": 0.018588777050184593,
+        "ci95_low": -0.007120887141927792,
+        "mean": 0.005733944954128401,
+        "sd": 0.010352907158983796
+      },
+      "direction": "STP-B2LT minus reference",
+      "loss": {
+        "ci95_high": 0.0865069060701723,
+        "ci95_low": 0.0447067554386503,
+        "mean": 0.0656068307544113,
+        "sd": 0.016832311596370525
+      },
+      "per_seed": [
+        {
+          "accuracy_difference": -0.008027522935779796,
+          "loss_difference": 0.0821918435052994,
+          "seed": 20261111
+        },
+        {
+          "accuracy_difference": 0.005733944954128378,
+          "loss_difference": 0.06498290639404858,
+          "seed": 20261112
+        },
+        {
+          "accuracy_difference": 0.020642201834862317,
+          "loss_difference": 0.07757384186490957,
+          "seed": 20261113
+        },
+        {
+          "accuracy_difference": 0.008027522935779796,
+          "loss_difference": 0.038901976489145784,
+          "seed": 20261114
+        },
+        {
+          "accuracy_difference": 0.002293577981651307,
+          "loss_difference": 0.0643835855186532,
+          "seed": 20261115
+        }
+      ],
+      "reference": "adam-b2lt-sgd"
+    },
+    {
+      "accuracy": {
+        "ci95_high": 0.053367581484884595,
+        "ci95_low": 0.032870950625207125,
+        "mean": 0.04311926605504586,
+        "sd": 0.00825369459424153
+      },
+      "direction": "STP-B2LT minus reference",
+      "loss": {
+        "ci95_high": -0.48477177241929775,
+        "ci95_low": -0.5696070529521209,
+        "mean": -0.5271894126857093,
+        "sd": 0.03416193135000646
+      },
+      "per_seed": [
+        {
+          "accuracy_difference": 0.05160550458715596,
+          "loss_difference": -0.5822725208527452,
+          "seed": 20261111
+        },
+        {
+          "accuracy_difference": 0.04587155963302747,
+          "loss_difference": -0.5179757481321283,
+          "seed": 20261112
+        },
+        {
+          "accuracy_difference": 0.04931192660550454,
+          "loss_difference": -0.4883768624121989,
+          "seed": 20261113
+        },
+        {
+          "accuracy_difference": 0.03555045871559637,
+          "loss_difference": -0.5266439061646068,
+          "seed": 20261114
+        },
+        {
+          "accuracy_difference": 0.03325688073394495,
+          "loss_difference": -0.5206780258668672,
+          "seed": 20261115
+        }
+      ],
+      "reference": "momentum-iid"
+    },
+    {
+      "accuracy": {
+        "ci95_high": 0.01973443424880719,
+        "ci95_low": -0.0013858103955961994,
+        "mean": 0.009174311926605495,
+        "sd": 0.008504814778779402
+      },
+      "direction": "STP-B2LT minus reference",
+      "loss": {
+        "ci95_high": 0.08803956022163704,
+        "ci95_low": -0.024015757525619047,
+        "mean": 0.032011901348009,
+        "sd": 0.04512304371768826
+      },
+      "per_seed": [
+        {
+          "accuracy_difference": 0.017201834862385246,
+          "loss_difference": 0.024157961574169495,
+          "seed": 20261111
+        },
+        {
+          "accuracy_difference": 0.014908256880733939,
+          "loss_difference": -0.010435277168903911,
+          "seed": 20261112
+        },
+        {
+          "accuracy_difference": 0.008027522935779796,
+          "loss_difference": 0.05627448405694524,
+          "seed": 20261113
+        },
+        {
+          "accuracy_difference": 0.010321100917431214,
+          "loss_difference": -0.006704859777328154,
+          "seed": 20261114
+        },
+        {
+          "accuracy_difference": -0.004587155963302725,
+          "loss_difference": 0.09676719805516232,
+          "seed": 20261115
+        }
+      ],
+      "reference": "momentum-b2lt-momentum"
+    },
+    {
+      "accuracy": {
+        "ci95_high": 0.052120445853704386,
+        "ci95_low": 0.010723590843543285,
+        "mean": 0.031422018348623834,
+        "sd": 0.016669910326000948
+      },
+      "direction": "STP-B2LT minus reference",
+      "loss": {
+        "ci95_high": -0.002443109307246786,
+        "ci95_low": -0.053681433524034136,
+        "mean": -0.02806227141564046,
+        "sd": 0.02063292657712173
+      },
+      "per_seed": [
+        {
+          "accuracy_difference": 0.05160550458715596,
+          "loss_difference": -0.05720062430845485,
+          "seed": 20261111
+        },
+        {
+          "accuracy_difference": 0.012614678899082521,
+          "loss_difference": -0.010623741587367563,
+          "seed": 20261112
+        },
+        {
+          "accuracy_difference": 0.044724770642201817,
+          "loss_difference": -0.0072730703091402615,
+          "seed": 20261113
+        },
+        {
+          "accuracy_difference": 0.01834862385321101,
+          "loss_difference": -0.02643341099450358,
+          "seed": 20261114
+        },
+        {
+          "accuracy_difference": 0.029816513761467878,
+          "loss_difference": -0.03878050987873605,
+          "seed": 20261115
+        }
+      ],
+      "reference": "stpex2-iid"
+    },
+    {
+      "accuracy": {
+        "ci95_high": 0.015938601066617673,
+        "ci95_low": -0.009975298314324097,
+        "mean": 0.002981651376146788,
+        "sd": 0.010435149693648905
+      },
+      "direction": "STP-B2LT minus reference",
+      "loss": {
+        "ci95_high": 0.08331929052915248,
+        "ci95_low": 0.00772322021219507,
+        "mean": 0.04552125537067377,
+        "sd": 0.030441436019050812
+      },
+      "per_seed": [
+        {
+          "accuracy_difference": 0.0034403669724770714,
+          "loss_difference": 0.049937077618520176,
+          "seed": 20261111
+        },
+        {
+          "accuracy_difference": -0.0034403669724770714,
+          "loss_difference": 0.03350067357404518,
+          "seed": 20261112
+        },
+        {
+          "accuracy_difference": 0.019495412844036664,
+          "loss_difference": 0.06156312872510439,
+          "seed": 20261113
+        },
+        {
+          "accuracy_difference": 0.0034403669724770714,
+          "loss_difference": 0.0009926743463638532,
+          "seed": 20261114
+        },
+        {
+          "accuracy_difference": -0.008027522935779796,
+          "loss_difference": 0.08161272258933527,
+          "seed": 20261115
+        }
+      ],
+      "reference": "stpex2-b2lt-momentum-bias"
+    }
+  ],
+  "confidence": "two-sided Student-t(df=4); descriptive intervals; no multiplicity correction",
+  "seeds": [
+    20261111,
+    20261112,
+    20261113,
+    20261114,
+    20261115
+  ],
+  "units": "accuracy fraction; cross entropy"
+}

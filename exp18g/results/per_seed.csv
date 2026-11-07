@@ -1,0 +1,36 @@
+method,seed,lr,clip,eps_scale,optimizer_eps,beta1,beta2,weight_decay,accuracy,loss,steps,evaluation,examples,source,directory
+adam-iid,20261111,0.002,1.0,,1e-08,0.9,0.999,0,0.7626146788990825,1.0809120125726823,310,official_validation,872,Exp18f final official reused,exp18e/formal/adam-iid_seed20261111
+adam-iid,20261112,0.002,1.0,,1e-08,0.9,0.999,0,0.7626146788990825,1.0554926373542997,310,official_validation,872,Exp18f final official reused,exp18e/formal/adam-iid_seed20261112
+adam-iid,20261113,0.002,1.0,,1e-08,0.9,0.999,0,0.7477064220183486,1.1084635760806023,310,official_validation,872,Exp18f final official reused,exp18e/formal/adam-iid_seed20261113
+adam-iid,20261114,0.002,1.0,,1e-08,0.9,0.999,0,0.7729357798165137,0.957198247997039,310,official_validation,872,Exp18f final official reused,exp18e/formal/adam-iid_seed20261114
+adam-iid,20261115,0.002,1.0,,1e-08,0.9,0.999,0,0.7614678899082569,1.0054552708197078,310,official_validation,872,Exp18f final official reused,exp18e/formal/adam-iid_seed20261115
+adam-b2lt-sgd,20261111,0.01,40.0,,1e-08,0.9,0.999,0,0.7993119266055045,0.4920493572130116,310,official_validation,872,Exp18f final official reused,exp18e/formal/adam-b2lt-sgd_seed20261111
+adam-b2lt-sgd,20261112,0.01,40.0,,1e-08,0.9,0.999,0,0.7821100917431193,0.48234047583483775,310,official_validation,872,Exp18f final official reused,exp18e/formal/adam-b2lt-sgd_seed20261112
+adam-b2lt-sgd,20261113,0.01,40.0,,1e-08,0.9,0.999,0,0.7752293577981652,0.5031260525414704,310,official_validation,872,Exp18f final official reused,exp18e/formal/adam-b2lt-sgd_seed20261113
+adam-b2lt-sgd,20261114,0.01,40.0,,1e-08,0.9,0.999,0,0.7935779816513762,0.48686830275649323,310,official_validation,872,Exp18f final official reused,exp18e/formal/adam-b2lt-sgd_seed20261114
+adam-b2lt-sgd,20261115,0.01,40.0,,1e-08,0.9,0.999,0,0.7740825688073395,0.5279445254474605,310,official_validation,872,Exp18f final official reused,exp18e/formal/adam-b2lt-sgd_seed20261115
+momentum-iid,20261111,2.0,1.0,,1e-08,0.9,0.999,0,0.7396788990825688,1.1565137215710561,310,official_validation,872,Exp18f final official reused,exp18e/formal/momentum-iid_seed20261111
+momentum-iid,20261112,2.0,1.0,,1e-08,0.9,0.999,0,0.7419724770642202,1.0652991303610146,310,official_validation,872,Exp18f final official reused,exp18e/formal/momentum-iid_seed20261112
+momentum-iid,20261113,2.0,1.0,,1e-08,0.9,0.999,0,0.7465596330275229,1.0690767568185788,310,official_validation,872,Exp18f final official reused,exp18e/formal/momentum-iid_seed20261113
+momentum-iid,20261114,2.0,1.0,,1e-08,0.9,0.999,0,0.7660550458715596,1.0524141854102458,310,official_validation,872,Exp18f final official reused,exp18e/formal/momentum-iid_seed20261114
+momentum-iid,20261115,2.0,1.0,,1e-08,0.9,0.999,0,0.7431192660550459,1.1130061368329809,310,official_validation,872,Exp18f final official reused,exp18e/formal/momentum-iid_seed20261115
+momentum-b2lt-momentum,20261111,0.3,20.0,,1e-08,0.9,0.999,0,0.7740825688073395,0.5500832391441415,310,official_validation,872,Exp18f final official reused,exp18e/formal/momentum-b2lt-momentum_seed20261111
+momentum-b2lt-momentum,20261112,0.3,20.0,,1e-08,0.9,0.999,0,0.7729357798165137,0.5577586593977902,310,official_validation,872,Exp18f final official reused,exp18e/formal/momentum-b2lt-momentum_seed20261112
+momentum-b2lt-momentum,20261113,0.3,20.0,,1e-08,0.9,0.999,0,0.7878440366972477,0.5244254103494347,310,official_validation,872,Exp18f final official reused,exp18e/formal/momentum-b2lt-momentum_seed20261113
+momentum-b2lt-momentum,20261114,0.3,20.0,,1e-08,0.9,0.999,0,0.7912844036697247,0.5324751390229672,310,official_validation,872,Exp18f final official reused,exp18e/formal/momentum-b2lt-momentum_seed20261114
+momentum-b2lt-momentum,20261115,0.3,20.0,,1e-08,0.9,0.999,0,0.7809633027522935,0.4955609129109514,310,official_validation,872,Exp18f final official reused,exp18e/formal/momentum-b2lt-momentum_seed20261115
+stpex2-iid,20261111,0.025,100.0,,0.001,0.9,0.999,0,0.7396788990825688,0.6314418250267658,310,official_validation,872,Exp18f final official reused,exp18f/final_official/formal/stpex2-iid_seed20261111
+stpex2-iid,20261112,0.025,100.0,,0.001,0.9,0.999,0,0.7752293577981652,0.5579471238162539,310,official_validation,872,Exp18f final official reused,exp18f/final_official/formal/stpex2-iid_seed20261112
+stpex2-iid,20261113,0.025,100.0,,0.001,0.9,0.999,0,0.7511467889908257,0.5879729647155202,310,official_validation,872,Exp18f final official reused,exp18f/final_official/formal/stpex2-iid_seed20261113
+stpex2-iid,20261114,0.025,100.0,,0.001,0.9,0.999,0,0.783256880733945,0.5522036902401426,310,official_validation,872,Exp18f final official reused,exp18f/final_official/formal/stpex2-iid_seed20261114
+stpex2-iid,20261115,0.025,100.0,,0.001,0.9,0.999,0,0.7465596330275229,0.6311086208448498,310,official_validation,872,Exp18f final official reused,exp18f/final_official/formal/stpex2-iid_seed20261115
+stpex2-b2lt-momentum-bias,20261111,0.025,100.0,,0.001,0.9,0.999,0,0.7878440366972477,0.5243041230997908,310,official_validation,872,Exp18f final official reused,exp18f/final_official/formal/stpex2-b2lt-momentum-bias_seed20261111
+stpex2-b2lt-momentum-bias,20261112,0.025,100.0,,0.001,0.9,0.999,0,0.7912844036697247,0.5138227086548411,310,official_validation,872,Exp18f final official reused,exp18f/final_official/formal/stpex2-b2lt-momentum-bias_seed20261112
+stpex2-b2lt-momentum-bias,20261113,0.025,100.0,,0.001,0.9,0.999,0,0.7763761467889908,0.5191367656812755,310,official_validation,872,Exp18f final official reused,exp18f/final_official/formal/stpex2-b2lt-momentum-bias_seed20261113
+stpex2-b2lt-momentum-bias,20261114,0.025,100.0,,0.001,0.9,0.999,0,0.7981651376146789,0.5247776048992752,310,official_validation,872,Exp18f final official reused,exp18f/final_official/formal/stpex2-b2lt-momentum-bias_seed20261114
+stpex2-b2lt-momentum-bias,20261115,0.025,100.0,,0.001,0.9,0.999,0,0.7844036697247706,0.5107153883767784,310,official_validation,872,Exp18f final official reused,exp18f/final_official/formal/stpex2-b2lt-momentum-bias_seed20261115
+adam-mf-sgd-stp-b2lt,20261111,0.01,500,0.001,1e-08,0.9,0.999,0,0.7912844036697247,0.574241200718311,310,official_validation,872,Exp18g new formal,exp18g/formal/seed20261111
+adam-mf-sgd-stp-b2lt,20261112,0.01,500,0.001,1e-08,0.9,0.999,0,0.7878440366972477,0.5473233822288863,310,official_validation,872,Exp18g new formal,exp18g/formal/seed20261112
+adam-mf-sgd-stp-b2lt,20261113,0.01,500,0.001,1e-08,0.9,0.999,0,0.7958715596330275,0.5806998944063799,310,official_validation,872,Exp18g new formal,exp18g/formal/seed20261113
+adam-mf-sgd-stp-b2lt,20261114,0.01,500,0.001,1e-08,0.9,0.999,0,0.801605504587156,0.525770279245639,310,official_validation,872,Exp18g new formal,exp18g/formal/seed20261114
+adam-mf-sgd-stp-b2lt,20261115,0.01,500,0.001,1e-08,0.9,0.999,0,0.7763761467889908,0.5923281109661137,310,official_validation,872,Exp18g new formal,exp18g/formal/seed20261115

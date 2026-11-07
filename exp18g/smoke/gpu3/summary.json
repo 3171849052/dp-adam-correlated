@@ -1,0 +1,64 @@
+{
+  "checkpoint_sha256": "0a2369262e86440eeaa13be7d2792728933e1c5201f59bfa160e33a55e3e1a93",
+  "config": {
+    "adam_eps": 1e-08,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "clip": 500,
+    "eps_scale": 0.001,
+    "gpu": 3,
+    "lr": 0.01,
+    "method": "adam-mf-sgd-stp-b2lt",
+    "seed": 20261111,
+    "stage": "smoke",
+    "steps": 3,
+    "weight_decay": 0
+  },
+  "ended": "2026-11-07T11:25:49.840821+08:00",
+  "evaluation": "internal_smoke64",
+  "formal": false,
+  "gpu_uuid": "GPU-b3ecad2a-94d8-b1d0-dad1-627eaa34f4fa",
+  "internal_metrics": {
+    "accuracy": 0.578125,
+    "examples": 64,
+    "loss": 1.1018226146697998
+  },
+  "metrics": {
+    "accuracy": 0.578125,
+    "examples": 64,
+    "loss": 1.1018226146697998
+  },
+  "pairing": {
+    "dropout_seed": "seed+100000+logical_step",
+    "initial_model_sha256": "5fdab6af248474241a67d1a15086580f90233138483752a84c2ff6242a059700",
+    "noise_seed": 20261112,
+    "order_sha256": "90eecd7f6bdea836658d8104208d3201c08140609ad15a4f66d0851f8d43940c"
+  },
+  "peak_allocated_bytes": 4046283264,
+  "peak_reserved_bytes": 4232052736,
+  "physical_gpu": 3,
+  "privacy": {
+    "T": 310,
+    "adjacency": "add/remove zeroed fixed slot",
+    "clip": 500,
+    "clip_space": "previous Adam vhat STP scaled space",
+    "delta": 1e-05,
+    "epsilon": 8.000000000000007,
+    "matrix_sha256": "ef0064a93e716acaefe1280b2f3f7126b71a31d3eeb1ec1f8c91d40eadd25b4b",
+    "mu": 1.6660305978457184,
+    "participation_interval": 62,
+    "participations": 5,
+    "passed": true,
+    "sampling_amplification": false,
+    "scope": "One full training only; five-training composition is NOT epsilon=8",
+    "seed": 20261111,
+    "sensitivity": 3.8578634946095147,
+    "sigma_average": 1.1578009130198368,
+    "sigma_sum": 1157.8009130198368,
+    "workload": "sgd"
+  },
+  "seconds": 2.587081041187048,
+  "status": "complete",
+  "steps": 3,
+  "train_seconds": 0.9288742537610233
+}

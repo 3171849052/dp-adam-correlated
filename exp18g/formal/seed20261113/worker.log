@@ -1,0 +1,23 @@
+Loading weights:   0%|          | 0/39 [00:00<?, ?it/s]Loading weights: 100%|██████████| 39/39 [00:00<00:00, 20065.98it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: /media/data/data/lt/dp-adam-correlated/cache/bert-tiny
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+sys:1: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+adam-mf-sgd-stp-b2lt seed=20261113 step=62 internal={'accuracy': 0.8078145447747243, 'loss': 0.5333767218954386, 'examples': 5349}
+adam-mf-sgd-stp-b2lt seed=20261113 step=124 internal={'accuracy': 0.8281921854552253, 'loss': 0.45757453377881124, 'examples': 5349}
+adam-mf-sgd-stp-b2lt seed=20261113 step=186 internal={'accuracy': 0.8412787436904094, 'loss': 0.44967228926371405, 'examples': 5349}
+adam-mf-sgd-stp-b2lt seed=20261113 step=248 internal={'accuracy': 0.8489437277995887, 'loss': 0.4389409393122272, 'examples': 5349}
+adam-mf-sgd-stp-b2lt seed=20261113 step=310 internal={'accuracy': 0.8554870069171808, 'loss': 0.4103151507902689, 'examples': 5349}
+COMPLETE adam-mf-sgd-stp-b2lt seed=20261113: {'accuracy': 0.7958715596330275, 'loss': 0.5806998944063799, 'examples': 872}

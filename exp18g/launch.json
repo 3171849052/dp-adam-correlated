@@ -1,0 +1,17 @@
+{
+  "command": [
+    "nohup",
+    "conda",
+    "run",
+    "--no-capture-output",
+    "-n",
+    "curve",
+    "python",
+    "-B",
+    "-m",
+    "exp18g.pipeline"
+  ],
+  "log": "exp18g/logs/pipeline.log",
+  "pid": 3887233,
+  "time": "2026-11-07T11:26:24.199798+08:00"
+}

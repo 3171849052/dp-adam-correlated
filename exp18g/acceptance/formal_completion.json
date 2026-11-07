@@ -1,0 +1,26 @@
+{
+  "all_seeds_paired": true,
+  "formal_runs": 5,
+  "four_gpus": true,
+  "gpu_snapshot": "pid, gpu_uuid, used_gpu_memory [MiB]\n",
+  "input_and_code_integrity": true,
+  "max_parallel": 4,
+  "max_per_gpu": 1,
+  "official_accuracy": {
+    "20261111": 0.7912844036697247,
+    "20261112": 0.7878440366972477,
+    "20261113": 0.7958715596330275,
+    "20261114": 0.801605504587156,
+    "20261115": 0.7763761467889908
+  },
+  "passed": true,
+  "steps_each": 310,
+  "time": "2026-11-07T11:28:55.241142+08:00",
+  "worker_pids": [
+    3887296,
+    3887297,
+    3887298,
+    3887299,
+    3888353
+  ]
+}

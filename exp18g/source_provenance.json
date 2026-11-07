@@ -1,0 +1,8 @@
+{
+  "clipping": "byte-identical exp16a/clipping.py",
+  "model": "exp18f/final_official/model.py",
+  "noise": "exp18f/final_official/noise.py",
+  "optimizer": "exp16a/optimizer.py, identical Adam path in exp16e",
+  "scheduler": "exp18f/final_official/scheduler.py, 4 GPUs x 1 worker",
+  "training": "exp18f/final_official/train.py, STP logical batch substituted"
+}

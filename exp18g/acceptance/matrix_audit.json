@@ -1,0 +1,20 @@
+{
+  "K": 62,
+  "P": 62,
+  "Q": 5,
+  "T": 310,
+  "endpoint_projected_gradient_inf": 1.0926551885503955e-09,
+  "first_order_pass": true,
+  "first_order_scope": "Solver barrier-objective endpoint; selected matrix minimizes unpenalized E along trace",
+  "inverse_error": 2.7755575615628914e-17,
+  "objective": 46.62066221050898,
+  "passed": true,
+  "selected_is_endpoint": false,
+  "selected_projected_gradient_inf": 2.2130839845924122e-05,
+  "sensitivity": 3.8578634946095147,
+  "sha256": "ef0064a93e716acaefe1280b2f3f7126b71a31d3eeb1ec1f8c91d40eadd25b4b",
+  "solver_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+  "solver_success": true,
+  "source": "exp18d/matrices/sgd.npz",
+  "workload": "sgd"
+}
